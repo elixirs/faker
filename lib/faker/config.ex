@@ -5,4 +5,8 @@ defmodule Faker.Config do
       :undefined -> :en
     end
   end
+
+  def locale(lang) when is_atom(lang) do
+    :application.set_env(:faker, :locale, lang)
+  end
 end
