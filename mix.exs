@@ -4,7 +4,7 @@ defmodule Faker.Mixfile do
   def project do
     [ app: :faker,
       version: "0.0.1",
-      elixir: "~> 0.12.5",
+      elixir: ">= 0.13.0-dev",
       deps: deps ]
   end
 
@@ -23,7 +23,7 @@ defmodule Faker.Mixfile do
   # { :barbat, "~> 0.1", github: "elixir-lang/barbat" }
   defp deps do
     [
-      { :jsex, github: "talentdeficit/jsex" }
+      { :jsex, github: "igas/jsex", branch: "elixir13" }
     ]
   end
 end

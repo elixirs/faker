@@ -1,0 +1,2 @@
+%{"jsex": {:git, "git://github.com/igas/jsex.git", "0b62e515b0521b79b129f90acdde14f8822d9e41", [branch: "elixir13"]},
+  "jsx": {:git, "git://github.com/talentdeficit/jsx.git", "e50af6e109cb03bd26acf715cbc77de746507d1d", [tag: "v1.4.3"]}}
