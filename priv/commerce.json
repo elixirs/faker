@@ -1,0 +1,18 @@
+{
+  "en": {
+    "functions": {
+      "product_name": [
+        "#{product_name_adjective} #{product_name_material} #{product_name_product}",
+        "#{product_name_adjective} #{product_name_product}",
+        "#{product_name_material} #{product_name_product}"
+      ]
+    },
+    "values": {
+      "color": ["azure", "black", "blue", "cyan", "fuchsia", "gold", "green", "grey", "indigo", "ivory", "lavender", "lime", "magenta", "maroon", "mint green", "olive", "orange", "orchid", "pink", "plum", "purple", "red", "salmon", "silver", "sky blue", "tan", "teal", "turquoise", "violet", "white", "yellow"],
+      "department": ["Books", "Movies, Music & Games", "Electronics & Computers", "Home, Garden & Tools", "Grocery, Health & Beauty", "Toys, Kids & Baby", "Clothing, Shoes & Jewelery", "Sports & Outdoors", "Automotive & Industrial"],
+      "product_name_adjective": ["Small", "Ergonomic", "Rustic", "Intelligent", "Gorgeous", "Incredible", "Fantastic", "Practical", "Sleek", "Awesome"],
+      "product_name_material": ["Steel", "Wooden", "Concrete", "Plastic", "Cotton", "Granite", "Rubber"],
+      "product_name_product": ["Chair", "Car", "Computer", "Gloves", "Pants", "Shirt", "Table", "Shoes", "Hat"]
+    }
+  }
+}
