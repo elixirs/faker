@@ -30,6 +30,11 @@ data. Made for ***experiments*** and inspired by:
   * `time_zone()`
   * `zip()`
   * `zip_code()`
+* **Avatar**
+  * `image_url()`
+  * `image_url(slug)`
+  * `image_url(width, height)`
+  * `image_url(slug, width, height)`
 * **Lorem**
   * `characters(range \\ 15..255)`
   * `characters(num)`
