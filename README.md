@@ -35,6 +35,11 @@ data. Made for ***experiments*** and inspired by:
   * `image_url(slug)`
   * `image_url(width, height)`
   * `image_url(slug, width, height)`
+* **Code**
+  * `isbn()`
+  * `isbn10()`
+  * `isbn13()`
+  * `issn()`
 * **Lorem**
   * `characters(range \\ 15..255)`
   * `characters(num)`
