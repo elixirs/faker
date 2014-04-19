@@ -17,29 +17,30 @@ defmodule Faker.Lorem do
     end
   end
 
-  defp word_count(_), do: word_count(:en)
-
-  defp get_word(_, n), do: get_word(:en, n)
-
-  def word do
-    get_word(locale, :crypto.rand_uniform(1, word_count(locale)+1))
-  end
-
-  def words({ Range, min, max } \\ { Range, 3, 6 }) do
-    words(:crypto.rand_uniform(min, max+1))
-  end
-
-  def words(num) do
-    Stream.repeatedly(&word/0)
-    |> Enum.take(num)
-  end
-
   def characters({ Range, min, max } \\ { Range, 15, 255 }) do
     characters(:crypto.rand_uniform(min, max+1))
   end
 
   def characters(num) do
     Stream.repeatedly(&character/0)
+    |> Enum.take(num)
+  end
+
+  def paragraph({ Range, min, max } \\ { Range, 2, 5 }) do
+    paragraph(:crypto.rand_uniform(min, max+1))
+  end
+
+  def paragraph(num) do
+    sentences(num)
+    |> Enum.join(" ")
+  end
+
+  def paragraphs({ Range, min, max } \\ { Range, 2, 5 }) do
+    paragraphs(:crypto.rand_uniform(min, max+1))
+  end
+
+  def paragraphs(num) do
+    Stream.repeatedly(&paragraph/0)
     |> Enum.take(num)
   end
 
@@ -63,21 +64,16 @@ defmodule Faker.Lorem do
     |> Enum.take(num)
   end
 
-  def paragraph({ Range, min, max } \\ { Range, 2, 5 }) do
-    paragraph(:crypto.rand_uniform(min, max+1))
+  def word do
+    get_word(locale, :crypto.rand_uniform(1, word_count(locale)+1))
   end
 
-  def paragraph(num) do
-    sentences(num)
-    |> Enum.join(" ")
+  def words({ Range, min, max } \\ { Range, 3, 6 }) do
+    words(:crypto.rand_uniform(min, max+1))
   end
 
-  def paragraphs({ Range, min, max } \\ { Range, 2, 5 }) do
-    paragraphs(:crypto.rand_uniform(min, max+1))
-  end
-
-  def paragraphs(num) do
-    Stream.repeatedly(&paragraph/0)
+  def words(num) do
+    Stream.repeatedly(&word/0)
     |> Enum.take(num)
   end
 
@@ -85,4 +81,6 @@ defmodule Faker.Lorem do
     alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
     Enum.at(alphabet, :crypto.rand_uniform(0, Enum.count(alphabet)))
   end
+  defp get_word(_, n), do: get_word(:en, n)
+  defp word_count(_), do: word_count(:en)
 end

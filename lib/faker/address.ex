@@ -1,7 +1,7 @@
 defmodule Faker.Address do
   import Faker.Config, only: [locale: 0]
-  defdelegate zip, to: Faker.Address, as: :zip_code
   defdelegate postcode, to: Faker.Address, as: :zip_code
+  defdelegate zip, to: Faker.Address, as: :zip_code
 
   data_path = Path.expand(Path.join(__DIR__, "../../priv/address.json"))
   json = File.read!(data_path) |> JSEX.decode!
@@ -63,7 +63,6 @@ defmodule Faker.Address do
     ((:random.uniform * 360) - 180)
   end
 
-  def street_address(true) do
-    street_address <> " " <> secondary_address
-  end
+  def street_address(true), do: street_address <> " " <> secondary_address
+  def street_address(_), do: street_address
 end
