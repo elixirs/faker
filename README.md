@@ -68,6 +68,7 @@ data. Made for ***experiments*** and inspired by:
 
 # TODO
 
+* Add *check digit* to Faker.Code.isbn
 * Add more generators
 * Check performance
 * Add tests
