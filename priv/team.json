@@ -1,0 +1,10 @@
+{
+  "en": {
+    "functions": {
+      "name": ["#{Faker.Address.state} #{creature}"]
+    },
+    "values": {
+      "creature": ["ants", "banshees", "bats", "bears", "bees", "birds", "black cats", "buffalo", "cats", "cattle", "chickens", "chimeras", "conspirators", "crows", "dogs", "dolphins", "dragons", "druids", "ducks", "dwarves", "elephants", "elves", "enchanters", "exorcists", "fishes", "foes", "foxes", "frogs", "geese", "ghosts", "giants", "gnomes", "goats", "goblins", "gooses", "griffins", "horses", "kangaroos", "lions", "lycanthropes", "monkeys", "nemesis", "ogres", "oracles", "owls", "oxen", "penguins", "people", "pigs", "prophets", "rabbits", "sheep", "sons", "sorcerors", "spiders", "spirits", "tigers", "vampires", "vixens", "warlocks", "werewolves", "whales", "witches", "wolves", "worshipers", "zebras", "zombies"]
+    }
+  }
+}
