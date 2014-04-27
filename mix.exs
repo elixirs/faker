@@ -15,8 +15,10 @@ defmodule Faker.Mixfile do
   # Configuration for the OTP application
   def application do
     [
+      applications: [:crypto],
+      env: [],
       mod: { Faker, [] },
-      env: []
+      registered: [:faker]
     ]
   end
 
