@@ -15,8 +15,8 @@ defmodule Faker.Lorem do
     end
   end
 
-  def characters({ Range, min, max } \\ { Range, 15, 255 }) do
-    characters(:crypto.rand_uniform(min, max+1))
+  def characters(%Range{first: first, last: last} \\ %Range{first: 15, last: 255}) do
+    characters(:crypto.rand_uniform(first, last+1))
   end
 
   def characters(num) do
@@ -24,8 +24,8 @@ defmodule Faker.Lorem do
     |> Enum.take(num)
   end
 
-  def paragraph({ Range, min, max } \\ { Range, 2, 5 }) do
-    paragraph(:crypto.rand_uniform(min, max+1))
+  def paragraph(%Range{first: first, last: last} \\ %Range{first: 2, last: 5}) do
+    paragraph(:crypto.rand_uniform(first, last+1))
   end
 
   def paragraph(num) do
@@ -33,8 +33,8 @@ defmodule Faker.Lorem do
     |> Enum.join(" ")
   end
 
-  def paragraphs({ Range, min, max } \\ { Range, 2, 5 }) do
-    paragraphs(:crypto.rand_uniform(min, max+1))
+  def paragraphs(%Range{first: first, last: last} \\ %Range{first: 2, last: 5}) do
+    paragraphs(:crypto.rand_uniform(first, last+1))
   end
 
   def paragraphs(num) do
@@ -42,8 +42,12 @@ defmodule Faker.Lorem do
     |> Enum.take(num)
   end
 
-  def sentence({ Range, min, max } \\ { Range, 4, 10 }) do
-    sentence(:crypto.rand_uniform(min, max+1), hd(Enum.shuffle([".", ".", ".", "!", "?"])))
+  def sentence(%Range{first: first, last: last} \\ %Range{first: 4, last: 10}) do
+    sentence(:crypto.rand_uniform(first, last+1), hd(Enum.shuffle([".", ".", ".", "!", "?"])))
+  end
+
+  def sentence(num) do
+    sentence(num, hd(Enum.shuffle([".", ".", ".", "!", "?"])))
   end
 
   def sentence(num, mark) when is_integer(num) and is_binary(mark) do
@@ -53,8 +57,8 @@ defmodule Faker.Lorem do
     tmp <> mark
   end
 
-  def sentences({ Range, min, max } \\ { Range, 2, 5 }) do
-    sentences(:crypto.rand_uniform(min, max+1))
+  def sentences(%Range{first: first, last: last} \\ %Range{first: 2, last: 5}) do
+    sentences(:crypto.rand_uniform(first, last+1))
   end
 
   def sentences(num) do
@@ -66,8 +70,8 @@ defmodule Faker.Lorem do
     get_word(Faker.locale, :crypto.rand_uniform(1, word_count(Faker.locale)+1))
   end
 
-  def words({ Range, min, max } \\ { Range, 3, 6 }) do
-    words(:crypto.rand_uniform(min, max+1))
+  def words(%Range{first: first, last: last} \\ %Range{first: 3, last: 6}) do
+    words(:crypto.rand_uniform(first, last+1))
   end
 
   def words(num) do
@@ -79,6 +83,8 @@ defmodule Faker.Lorem do
     alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
     Enum.at(alphabet, :crypto.rand_uniform(0, Enum.count(alphabet)))
   end
+
   defp get_word(_, n), do: get_word(:en, n)
+
   defp word_count(_), do: word_count(:en)
 end
