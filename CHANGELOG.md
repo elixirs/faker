@@ -2,6 +2,18 @@
 
 * Elixir v0.14 support
 * Add Travis CI
+* Added `Faker.Internet`
+  * `domain_name/0`
+  * `domain_suffix/0`
+  * `domain_word/0`
+  * `email/0`
+  * `free_email/0`
+  * `free_email_service/0`
+  * `ip_v4_address/0`
+  * `ip_v6_address/0`
+  * `mac_address/0`
+  * `safe_email/0`
+  * `user_name/0`
 * Added `Faker.Company`
   * `bs/0`
   * `bullshit/0`

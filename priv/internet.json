@@ -1,0 +1,29 @@
+{
+  "en": {
+    "functions": {
+      "email": [
+        "#{user_name}@#{domain_name}"
+      ],
+      "free_email": [
+        "#{user_name}@#{free_email_service}"
+      ],
+      "user_name": [
+        "#{Faker.Name.first_name |> String.replace(~s( ), ~s()) |> String.downcase}#{:crypto.rand_uniform(1900, 2100)}",
+        "#{:random.seed(:erlang.now); [ Faker.Name.first_name, Faker.Name.last_name ] |> Enum.map_join(hd(Enum.shuffle(~w(. _))), &(String.replace(&1, ~s( ), ~s()))) |> String.downcase}"
+      ],
+      "safe_email": [
+        "#{user_name}@example.#{:random.seed(:erlang.now);hd(Enum.shuffle(~w(org com net)))}"
+      ],
+      "domain_word": [
+        "#{Faker.Name.last_name |> String.split |> Enum.join |> String.downcase}"
+      ],
+      "domain_name": [
+        "#{domain_word}.#{domain_suffix}"
+      ]
+    },
+    "values": {
+      "domain_suffix": ["com", "biz", "info", "name", "net", "org"],
+      "free_email_service": ["gmail.com", "yahoo.com", "hotmail.com"]
+    }
+  }
+}
