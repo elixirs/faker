@@ -1,12 +1,4 @@
 defmodule Faker do
-  use Application.Behaviour
-
-  # See http://elixir-lang.org/docs/stable/Application.Behaviour.html
-  # for more information on OTP Applications
-  def start(_type, _args) do
-    Faker.Supervisor.start_link
-  end
-
   def format(str) when is_binary(str) do
     format(str, "")
   end
@@ -34,5 +26,13 @@ defmodule Faker do
   defp letter do
     alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
     Enum.at(alphabet, :crypto.rand_uniform(0, Enum.count(alphabet)))
+  end
+
+  def locale do
+    Application.get_env(:faker, :locale)
+  end
+
+  def locale(lang) when is_atom(lang) do
+    Application.put_env(:faker, :locale, lang)
   end
 end

@@ -1,6 +1,4 @@
 defmodule Faker.Name do
-  import Faker.Config, only: [locale: 0]
-
   data_path = Path.expand(Path.join(__DIR__, "../../priv/name.json"))
   {:ok, json} = File.read(data_path)
   {:ok, json} = JSEX.decode(json, [{:labels, :binary}])
@@ -18,11 +16,11 @@ defmodule Faker.Name do
   end
 
   def first_name do
-    get_first_name(locale, :crypto.rand_uniform(1, first_name_count(locale)+1))
+    get_first_name(Faker.locale, :crypto.rand_uniform(1, first_name_count(Faker.locale)+1))
   end
 
   def last_name do
-    get_last_name(locale, :crypto.rand_uniform(1, last_name_count(locale)+1))
+    get_last_name(Faker.locale, :crypto.rand_uniform(1, last_name_count(Faker.locale)+1))
   end
 
   def name do
@@ -30,11 +28,11 @@ defmodule Faker.Name do
   end
 
   def prefix do
-    get_prefix(locale, :crypto.rand_uniform(1, prefix_count(locale)+1))
+    get_prefix(Faker.locale, :crypto.rand_uniform(1, prefix_count(Faker.locale)+1))
   end
 
   def suffix do
-    get_suffix(locale, :crypto.rand_uniform(1, suffix_count(locale)+1))
+    get_suffix(Faker.locale, :crypto.rand_uniform(1, suffix_count(Faker.locale)+1))
   end
 
   def title do
@@ -58,14 +56,14 @@ defmodule Faker.Name do
   end
 
   defp title_descriptor do
-    get_title_descriptor(locale, :crypto.rand_uniform(1, title_descriptor_count(locale)+1))
+    get_title_descriptor(Faker.locale, :crypto.rand_uniform(1, title_descriptor_count(Faker.locale)+1))
   end
 
   defp title_level do
-    get_title_level(locale, :crypto.rand_uniform(1, title_level_count(locale)+1))
+    get_title_level(Faker.locale, :crypto.rand_uniform(1, title_level_count(Faker.locale)+1))
   end
 
   defp title_job do
-    get_title_job(locale, :crypto.rand_uniform(1, title_job_count(locale)+1))
+    get_title_job(Faker.locale, :crypto.rand_uniform(1, title_job_count(Faker.locale)+1))
   end
 end

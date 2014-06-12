@@ -1,5 +1,4 @@
 defmodule Faker.Address do
-  import Faker.Config, only: [locale: 0]
   defdelegate postcode, to: Faker.Address, as: :zip_code
   defdelegate zip, to: Faker.Address, as: :zip_code
 
@@ -11,7 +10,7 @@ defmodule Faker.Address do
       {"values", values} ->
         Enum.each values, fn({fun, list}) ->
           def unquote(binary_to_atom(fun))() do
-            unquote(binary_to_atom("get_#{fun}"))(locale, :crypto.rand_uniform(0, unquote(binary_to_atom("#{fun}_count"))(locale)))
+            unquote(binary_to_atom("get_#{fun}"))(Faker.locale, :crypto.rand_uniform(0, unquote(binary_to_atom("#{fun}_count"))(Faker.locale)))
           end
           defp unquote(binary_to_atom("#{fun}_count"))(unquote(binary_to_atom(lang))) do
             unquote(Enum.count(list))
@@ -25,7 +24,7 @@ defmodule Faker.Address do
       {"formats", values} ->
         Enum.each values, fn({fun, list}) ->
           def unquote(binary_to_atom(fun))() do
-            unquote(binary_to_atom("format_#{fun}"))(locale, :crypto.rand_uniform(0, unquote(binary_to_atom("#{fun}_count"))(locale)))
+            unquote(binary_to_atom("format_#{fun}"))(Faker.locale, :crypto.rand_uniform(0, unquote(binary_to_atom("#{fun}_count"))(Faker.locale)))
           end
           Enum.with_index(list) |> Enum.each fn({el, index}) ->
             defp unquote(binary_to_atom("format_#{fun}"))(unquote(binary_to_atom(lang)), unquote(index)) do
@@ -39,7 +38,7 @@ defmodule Faker.Address do
       {"functions", values} ->
         Enum.each values, fn({fun, list}) ->
           def unquote(binary_to_atom(fun))() do
-            unquote(binary_to_atom(fun))(locale, :crypto.rand_uniform(0, unquote(binary_to_atom("#{fun}_count"))(locale)))
+            unquote(binary_to_atom(fun))(Faker.locale, :crypto.rand_uniform(0, unquote(binary_to_atom("#{fun}_count"))(Faker.locale)))
           end
           Enum.with_index(list) |> Enum.each fn({el, index}) ->
             defp unquote(binary_to_atom(fun))(unquote(binary_to_atom(lang)), unquote(index)) do

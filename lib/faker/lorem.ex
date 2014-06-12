@@ -1,6 +1,4 @@
 defmodule Faker.Lorem do
-  import Faker.Config, only: [locale: 0]
-
   data_path = Path.expand(Path.join(__DIR__, "../../priv/lorem.json"))
   {:ok, json} = File.read(data_path)
   {:ok, json} = JSEX.decode(json, [{:labels, :binary}])
@@ -65,7 +63,7 @@ defmodule Faker.Lorem do
   end
 
   def word do
-    get_word(locale, :crypto.rand_uniform(1, word_count(locale)+1))
+    get_word(Faker.locale, :crypto.rand_uniform(1, word_count(Faker.locale)+1))
   end
 
   def words({ Range, min, max } \\ { Range, 3, 6 }) do

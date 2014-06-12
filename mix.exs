@@ -1,5 +1,3 @@
-Code.ensure_loaded?(Hex) and Hex.start
-
 defmodule Faker.Mixfile do
   use Mix.Project
 
@@ -12,30 +10,22 @@ defmodule Faker.Mixfile do
       deps: deps ]
   end
 
-  # Configuration for the OTP application
   def application do
     [
       applications: [:crypto],
-      env: [],
-      mod: { Faker, [] },
-      registered: [:faker]
+      env: [locale: :en]
     ]
   end
 
-  # Returns the list of dependencies in the format:
-  # { :foobar, git: "https://github.com/elixir-lang/foobar.git", tag: "0.1" }
-  #
-  # To specify particular versions, regardless of the tag, do:
-  # { :barbat, "~> 0.1", github: "elixir-lang/barbat" }
   defp deps do
     [
-      { :jsex, github: "igas/jsex", branch: "elixir13" }
+      { :jsex, "~> 2.0.0" }
     ]
   end
 
   defp package do
     [
-      files: ["lib", "priv", "mix.exs"],
+      files: ["lib", "priv", "mix.exs", "mix.lock"],
       contributors: ["Igor Kapkov"],
       licenses: ["MIT"],
       links: [ { "Github", "https://github.com/igas/faker" } ]
