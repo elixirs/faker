@@ -1,6 +1,7 @@
 # 0.3.0
 
 * Elixir v0.14 support
+* Add Travis CI
 
 # 0.2.0
 
