@@ -2,6 +2,9 @@
 
 * Elixir v0.14 support
 * Add Travis CI
+* Remove `Faker.Config`
+* Remove `Faker.Supervisor`
+* Change dependency to hex packages
 * Added `Faker.Internet`
   * `domain_name/0`
   * `domain_suffix/0`
