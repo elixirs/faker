@@ -4,11 +4,11 @@ defmodule Faker.Lorem do
   {:ok, json} = JSEX.decode(json, [{:labels, :binary}])
   Enum.each json, fn({lang, functions}) ->
     Enum.each functions, fn({fun, list}) ->
-      defp unquote(binary_to_atom("#{fun}_count"))(unquote(binary_to_atom(lang))) do
+      defp unquote(String.to_atom("#{fun}_count"))(unquote(String.to_atom(lang))) do
         unquote(Enum.count(list))
       end
       Enum.each Enum.with_index(list), fn({el, index}) ->
-        defp unquote(binary_to_atom("get_#{fun}"))(unquote(binary_to_atom(lang)), unquote(index+1)) do
+        defp unquote(String.to_atom("get_#{fun}"))(unquote(String.to_atom(lang)), unquote(index+1)) do
           unquote(el)
         end
       end

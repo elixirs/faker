@@ -3,7 +3,7 @@ defmodule AddressTest do
 
   test "building_number/0" do
     assert is_binary(Faker.Address.building_number)
-    assert size(Faker.Address.building_number) in 1..5
+    assert String.length(Faker.Address.building_number) in 1..5
   end
 
   test "city/0" do
