@@ -2,7 +2,7 @@ defmodule Faker.Address do
   defdelegate postcode, to: Faker.Address, as: :zip_code
   defdelegate zip, to: Faker.Address, as: :zip_code
 
-  json = Faker.Core.decode_dict "address"
+  json = Faker.decode_dict "address"
   Enum.each json, fn(el) ->
     {lang, data} = el
     Enum.each data, fn

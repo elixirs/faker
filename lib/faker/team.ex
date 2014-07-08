@@ -1,5 +1,5 @@
 defmodule Faker.Team do
-  json = Faker.Core.decode_dict "team"
+  json = Faker.decode_dict "team"
   Enum.each json, fn(el) ->
     {lang, data} = el
     Enum.each data, fn

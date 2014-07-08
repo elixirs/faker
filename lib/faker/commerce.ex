@@ -1,5 +1,5 @@
 defmodule Faker.Commerce do
-  json = Faker.Core.decode_dict "commerce"
+  json = Faker.decode_dict "commerce"
   Enum.each json, fn(el) ->
     {lang, data} = el
     Enum.each data, fn

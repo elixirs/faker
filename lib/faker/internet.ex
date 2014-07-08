@@ -1,5 +1,5 @@
 defmodule Faker.Internet do
-  json = Faker.Core.decode_dict "internet"
+  json = Faker.decode_dict "internet"
   Enum.each json, fn(el) ->
     {lang, data} = el
     Enum.each data, fn
