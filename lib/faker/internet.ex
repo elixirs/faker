@@ -1,6 +1,5 @@
 defmodule Faker.Internet do
-  data_path = Path.expand(Path.join(__DIR__, "../../priv/internet.json"))
-  json = File.read!(data_path) |> JSEX.decode!
+  json = Faker.decode_dict "internet"
   Enum.each json, fn(el) ->
     {lang, data} = el
     Enum.each data, fn

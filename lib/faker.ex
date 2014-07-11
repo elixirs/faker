@@ -35,4 +35,14 @@ defmodule Faker do
   def locale(lang) when is_atom(lang) do
     Application.put_env(:faker, :locale, lang)
   end
+
+  def decode_dict(file_basename) do
+    dict_path(file_basename) |> File.read! |> JSEX.decode!
+  end
+
+  defp dict_path(file_basename) do
+    Path.expand(
+      Path.join(__DIR__, "../priv/#{file_basename}.json")
+    )
+  end
 end
