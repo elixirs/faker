@@ -17,34 +17,31 @@ defmodule Faker.Code do
     Faker.format("####-###") <> hd(Enum.shuffle(["#", "X"]))
   end
 
-  def last_digit(sequence) do
-    mult = fn({e, i}) -> digit(e) * (i + 1) end
+  defp last_digit(sequence) do
+    calc_function = fn({e, i}) -> grapheme_to_digit(e) * (i + 1) end
 
-    graphemes = String.graphemes(sequence)
-    reversed_graphemes_with_index = Enum.reverse(graphemes) |> Stream.with_index
-    checksum = reversed_graphemes_with_index |> Stream.map(mult) |> Enum.sum
-    rem = rem(checksum, 11)
-    if rem == 0 do
-      "0"
-    else
-      d = 11 - rem
-      digit_to_code_binary d
-    end
+    graphemes = String.graphemes(sequence) |> Enum.reverse |> Stream.with_index
+    checksum = graphemes |> Stream.map(calc_function) |> Enum.sum
+    digit_to_grapheme(11 - rem(checksum, 11))
   end
 
-  defp digit_to_code_binary(10) do
+  defp digit_to_grapheme(10) do
     "X"
   end
 
-  defp digit_to_code_binary(digit) do
+  defp digit_to_grapheme(11) do
+    "0"
+  end
+
+  defp digit_to_grapheme(digit) do
     Integer.to_string(digit)
   end
 
-  def digit("X") do
+  defp grapheme_to_digit("X") do
     10
   end
 
-  def digit(str) when str !== "X" do
+  defp grapheme_to_digit(str) when str !== "X" do
     {1, digit} = {String.length(str), String.to_integer(str)}
     digit
   end
