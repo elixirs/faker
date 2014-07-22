@@ -2,7 +2,7 @@ defmodule CodeTest do
   use ExUnit.Case, async: true
 
   defp reverse_codepoints_with_index(str) do
-    String.codepoints(str) |> Enum.reverse |> Stream.with_index
+    String.reverse(str) |> String.graphemes |> Stream.with_index
   end
 
   defp grapheme_to_digit("X"), do: 10

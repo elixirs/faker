@@ -19,7 +19,7 @@ defmodule Faker.Code do
   end
 
   defp last_digit(sequence, calc_function, size) do
-    graphemes = String.graphemes(sequence) |> Enum.reverse |> Stream.with_index
+    graphemes = String.reverse(sequence) |> String.graphemes |> Stream.with_index
     checksum = graphemes |> Stream.map(calc_function) |> Enum.sum
     grapheme_for_last(checksum, size)
   end
