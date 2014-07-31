@@ -2,17 +2,17 @@ defmodule CodeTest do
   use ExUnit.Case, async: true
 
   defp reverse_codepoints_with_index(str) do
-    String.reverse(str) |> String.graphemes |> Stream.with_index
   end
 
   defp grapheme_to_digit("X"), do: 10
-  defp grapheme_to_digit(str) when str !== "X" do
-    {1, digit} = {String.length(str), String.to_integer(str)}
-    digit
-  end
+  defp grapheme_to_digit(str), do: String.to_integer(str)
 
   defp checksum(isbn, calc_function) do
-    reverse_codepoints_with_index(isbn) |> Stream.map(calc_function) |> Enum.sum
+    String.reverse(isbn)
+    |> String.graphemes
+    |> Stream.with_index
+    |> Stream.map(calc_function)
+    |> Enum.sum
   end
 
   defp calc_function10 do
@@ -20,9 +20,8 @@ defmodule CodeTest do
   end
 
   defp calc_function13 do
-    require Integer
     fn({e, i}) ->
-      if Integer.odd?(i) do
+      if rem(i,2) == 1 do
         grapheme_to_digit(e) * 3
       else
         grapheme_to_digit(e)

@@ -19,9 +19,12 @@ defmodule Faker.Code do
   end
 
   defp last_digit(sequence, calc_function, size) do
-    graphemes = String.reverse(sequence) |> String.graphemes |> Stream.with_index
-    checksum = graphemes |> Stream.map(calc_function) |> Enum.sum
-    grapheme_for_last(checksum, size)
+    String.reverse(sequence)
+    |> String.graphemes
+    |> Stream.with_index
+    |> Stream.map(calc_function)
+    |> Enum.sum
+    |> grapheme_for_last(size)
   end
 
   defp grapheme_for_last(checksum, size) do
@@ -33,9 +36,8 @@ defmodule Faker.Code do
   end
 
   defp calc_function13 do
-    require Integer
     fn({e, i}) ->
-      if Integer.odd?(i) do
+      if rem(i, 2) == 1 do
         grapheme_to_digit(e) * 3
       else
         grapheme_to_digit(e)
@@ -48,8 +50,5 @@ defmodule Faker.Code do
   defp digit_to_grapheme(digit, _), do: Integer.to_string(digit)
 
   defp grapheme_to_digit("X"), do: 10
-  defp grapheme_to_digit(str) when str !== "X" do
-    {1, digit} = {String.length(str), String.to_integer(str)}
-    digit
-  end
+  defp grapheme_to_digit(str), do: String.to_integer(str)
 end
