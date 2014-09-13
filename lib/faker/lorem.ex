@@ -1,7 +1,7 @@
 defmodule Faker.Lorem do
   data_path = Path.expand(Path.join(__DIR__, "../../priv/lorem.json"))
   {:ok, json} = File.read(data_path)
-  {:ok, json} = JSEX.decode(json, [{:labels, :binary}])
+  {:ok, json} = Poison.Parser.parse(json, [{:labels, :binary}])
   Enum.each json, fn({lang, functions}) ->
     Enum.each functions, fn({fun, list}) ->
       defp unquote(String.to_atom("#{fun}_count"))(unquote(String.to_atom(lang))) do

@@ -21,7 +21,7 @@ defmodule Faker.Mixfile do
 
   defp deps do
     [
-      { :jsex, "~> 2.0.0" }
+      { :poison, "~> 1.1.1" }
     ]
   end
 
