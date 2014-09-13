@@ -1,3 +1,17 @@
+# 0.4.0
+
+* Elixir 1.0.0
+* ISBN check digit algorithm (@vforvova)
+* Move from JSEX to Poison
+
+# 0.3.2
+
+* Fixed function heads (@jarednorman)
+
+# 0.3.1
+
+* Elixir 0.14.2
+
 # 0.3.0
 
 * Elixir v0.14 support
