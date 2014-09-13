@@ -70,10 +70,8 @@ Inspired by:
 
 # TODO
 
-* Add *check digit* to Faker.Code.isbn
 * Add more generators
 * Check performance
-* Add tests
 * Add documentation
 * Promote library
 * ...
