@@ -1,4 +1,4 @@
-# Faker [![Build Status](https://travis-ci.org/igas/faker.svg?branch=master)](https://travis-ci.org/igas/faker)
+# Faker [![Build Status](https://travis-ci.org/igas/faker.svg?branch=master)](https://travis-ci.org/igas/faker) [![Donation](http://img.shields.io/gratipay/igas.svg)](https://gratipay.com/igas/)
 
 **Faker** is pure [Elixir](http://elixir-lang.org/) library for generating fake
 data.
