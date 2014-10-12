@@ -74,8 +74,6 @@ Inspired by:
 * Check performance
 * Add documentation
 * Promote library
-* ...
-* Profit!
 
 # [License](https://github.com/igas/faker/blob/master/LICENSE)
 
