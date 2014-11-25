@@ -12,6 +12,29 @@ Inspired by:
 * Python [faker](https://github.com/joke2k/Faker)
 * Erlang [fakerl](https://github.com/mawuli-ypa/fakerl)
 
+# Install
+
+In your mix.exs, add the `:faker` project to your dependencies (optionally include the version):
+
+~~~elixir
+  defp deps do
+    [ {:shouldi, env: :test}, 
+      {:faker, "~> 0.4.0"} ]
+  end
+~~~
+
+Next, you'll need to add :faker  to your applications, so mix will know to start `Faker`:
+
+~~~elixir
+  def application do
+    [applications: [:logger, :faker],
+      env: [locale: :en]]
+  end
+~~~
+
+Do a `mix deps.get` to fetch the dependency. That's it. 
+
+
 # Generators / Providers
 
 * **Address**
@@ -74,6 +97,20 @@ Inspired by:
 * Check performance
 * Add documentation
 * Promote library
+
+# Troubleshooting
+
+* If you get a message like the one below when you call `Faker.Address.city`, you need to add `:faker` to your application's mix file, in the `applications` function, as above. 
+* 
+~~~
+** (FunctionClauseError) no function clause matching in Faker.Address.city_count/1
+    lib/faker/address.ex:48: Faker.Address.city_count(nil)
+    lib/faker/address.ex:41: Faker.Address.city/0
+~~~
+
+# Templating
+
+You can build templates for testing purposes with the [Blacksmith](https://github.com/batate/blacksmith/) project . See the Blacksmith [readme](https://github.com/batate/blacksmith/blob/master/README.md) for details. 
 
 # [License](https://github.com/igas/faker/blob/master/LICENSE)
 
