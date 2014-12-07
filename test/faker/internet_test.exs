@@ -47,4 +47,13 @@ defmodule InternetTest do
   test "user_name/0" do
     assert is_binary(Faker.Internet.user_name)
   end
+
+  test "url/0" do
+    assert is_binary(Faker.Internet.url)
+    assert Regex.match?(~r/^http[s]?:\/\/\w+\.\w+$/, Faker.Internet.url)
+  end
+
+  test "image_url/0" do
+    assert is_binary(Faker.Internet.image_url)
+  end
 end
