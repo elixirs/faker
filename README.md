@@ -90,7 +90,7 @@ Do a `mix deps.get` to fetch the dependency. That's it.
 
 # Thanks
 
-* To the [Evil Martians](http://evilmartians.com/) you are the best team ever.
+[![Sponsored by Evil Martians](https://evilmartians.com/badges/sponsored-by-evil-martians.svg)](http://evilmartians.com/)
 
 # TODO
 
