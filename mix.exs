@@ -21,7 +21,7 @@ defmodule Faker.Mixfile do
 
   defp deps do
     [
-      { :poison, "~> 1.1.1" }
+      { :poison, "~> 1.3" }
     ]
   end
 
