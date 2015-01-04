@@ -10,6 +10,7 @@ Inspired by:
 * PHP [Faker](https://github.com/fzaninotto/Faker)
 * Python [faker](https://github.com/joke2k/Faker)
 * Erlang [fakerl](https://github.com/mawuli-ypa/fakerl)
+* Haskell [faker](https://github.com/gazay/faker)
 
 # Install
 
