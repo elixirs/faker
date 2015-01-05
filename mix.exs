@@ -21,7 +21,7 @@ defmodule Faker.Mixfile do
 
   defp deps do
     [
-      { :poison, "~> 1.3.0" }
+      {:poison, "~> 1.3.0"}
     ]
   end
 
@@ -30,7 +30,7 @@ defmodule Faker.Mixfile do
       files: ["lib", "priv", "mix.exs", "mix.lock"],
       contributors: ["Igor Kapkov"],
       licenses: ["MIT"],
-      links: %{ "Github" => "https://github.com/igas/faker" }
+      links: %{"Github" => "https://github.com/igas/faker"}
     ]
   end
 end

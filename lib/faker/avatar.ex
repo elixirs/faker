@@ -20,11 +20,11 @@ defmodule Faker.Avatar do
 
   defp bg do
     :random.seed(:erlang.now)
-    hd(Enum.shuffle(["", "/bgset_bg1", "/bgset_bg2"]))
+    ~w(/bgset_bg1 /bgset_bg2) |> Enum.shuffle |> List.first
   end
 
   defp set do
     :random.seed(:erlang.now)
-    hd(Enum.shuffle(["/set_set1", "/set_set2", "/set_set3"]))
+    ~w(/set_set1 /set_set2 /set_set3) |> Enum.shuffle |> List.first
   end
 end
