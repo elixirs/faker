@@ -6,7 +6,7 @@ defmodule Faker.Mixfile do
       app: :faker,
       version: "0.4.1",
       elixir: "~> 1.0.0",
-      description: "Faker is pure Elixir library for generating fake data.",
+      description: "Faker is a pure Elixir library for generating fake data.",
       package: package,
       deps: deps
     ]
@@ -30,7 +30,7 @@ defmodule Faker.Mixfile do
       files: ["lib", "priv", "mix.exs", "mix.lock"],
       contributors: ["Igor Kapkov"],
       licenses: ["MIT"],
-      links: %{"Github" => "https://github.com/igas/faker"}
+      links: %{"GitHub" => "https://github.com/igas/faker"}
     ]
   end
 end
