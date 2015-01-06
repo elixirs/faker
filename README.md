@@ -1,7 +1,7 @@
 # Faker [![Version](https://img.shields.io/hexpm/v/faker.svg?style=flat-square)](https://hex.pm/packages/faker)[![License](https://img.shields.io/hexpm/l/faker.svg?style=flat-square)](https://github.com/igas/faker/blob/master/LICENSE)[![Build Status](https://img.shields.io/travis/igas/faker.svg?style=flat-square)](https://travis-ci.org/igas/faker)[![Issues](https://img.shields.io/github/issues/igas/faker.svg?style=flat-square)](https://github.com/igas/faker/issues)[![Downloads](https://img.shields.io/hexpm/dt/faker.svg?style=flat-square)](https://hex.pm/packages/faker)[![Donation](https://img.shields.io/gratipay/igas.svg?style=flat-square)](https://gratipay.com/igas/)
 
-**Faker** is pure [Elixir](http://elixir-lang.org/) library for generating fake
-data.
+**Faker** is a pure [Elixir](http://elixir-lang.org/) library for generating
+fake data.
 
 Inspired by:
 
@@ -12,32 +12,32 @@ Inspired by:
 * Erlang [fakerl](https://github.com/mawuli-ypa/fakerl)
 * Haskell [faker](https://github.com/gazay/faker)
 
-# Install
+## Install
 
-In your mix.exs, add the `:faker` project to your dependencies (optionally
-include the version):
+In your `mix.exs` file, add the `:faker` project to your dependencies
+(optionally include the version):
 
-~~~elixir
+``` elixir
   defp deps do
-    [ {:faker, "~> 0.4.0"} ]
+    [{:faker, "~> 0.4.0"}]
   end
-~~~
+```
 
-Next, you'll need to add :faker  to your applications, so mix will know to
-start `Faker`:
+Do a `mix deps.get` to fetch the dependency. That's it.
 
-~~~elixir
+Next, you'll need to add `:faker` to the list of applications, so that Mix will
+know to start `Faker`:
+
+``` elixir
   def application do
     [
       applications: [:logger, :faker],
       env: [locale: :en]
     ]
   end
-~~~
+```
 
-Do a `mix deps.get` to fetch the dependency. That's it.
-
-# Generators / Providers
+## Generators / Providers
 
 * **Address**
   * `building_number()`
@@ -89,29 +89,30 @@ Do a `mix deps.get` to fetch the dependency. That's it.
   * `suffix()`
   * `title()`
 
-# Thanks
+## Thanks
 
 [![Sponsored by Evil Martians](https://evilmartians.com/badges/sponsored-by-evil-martians.svg)](http://evilmartians.com/)
 
-# TODO
+## TODO
 
 * Add more generators
 * Check performance
 * Add documentation
 * Promote library
 
-# Troubleshooting
+## Troubleshooting
 
 * If you get a message like the one below when you call `Faker.Address.city`,
 you need to add `:faker` to your application's mix file, in the `applications`
 function, as above.
-~~~
+
+``` elixir
 ** (FunctionClauseError) no function clause matching in Faker.Address.city_count/1
     lib/faker/address.ex:48: Faker.Address.city_count(nil)
     lib/faker/address.ex:41: Faker.Address.city/0
-~~~
+```
 
-# Tools
+## Tools
 
 Faker designed as lightweight library, because of it it can be easily used with
 other tools.

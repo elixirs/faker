@@ -50,6 +50,6 @@ defmodule Faker.Commerce do
   end
 
   def price do
-    :crypto.rand_uniform(1, 10001)/100.0
+    :crypto.rand_uniform(1, 10001) / 100.0
   end
 end
