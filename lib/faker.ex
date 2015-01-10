@@ -4,6 +4,24 @@ defmodule Faker do
   """
 
   @doc """
+  Starts Faker with default locale.
+  """
+  @spec start() :: :ok
+  def start do
+    :application.start(:faker)
+  end
+
+  @doc """
+  Starts Faker with `lang` locale.
+  """
+  @spec start(atom) :: :ok
+  def start(lang) when is_atom(lang) do
+    :application.start(:faker)
+    Faker.locale(lang)
+    :ok
+  end
+
+  @doc """
   Internal function to format string.
 
   It replaces `"#"` to random number and `"?"` to random latin letter.
