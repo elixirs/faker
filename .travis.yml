@@ -10,6 +10,10 @@ before_install:
   - mix local.hex --force
 install: mix deps.get
 script: mix test
+after_script:
+  - mix hex.config username $HEX_USERNAME
+  - mix hex.config key $HEX_KEY
+  - mix hex.docs
 notifications:
   recipients:
     - igasgeek@me.com
