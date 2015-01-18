@@ -1,9 +1,6 @@
 defmodule CodeTest do
   use ExUnit.Case, async: true
 
-  defp reverse_codepoints_with_index(str) do
-  end
-
   defp grapheme_to_digit("X"), do: 10
   defp grapheme_to_digit(str), do: String.to_integer(str)
 
