@@ -71,6 +71,17 @@ use any function decribed below. For example, if you nead random name use
   * `product_name_adjective()`
   * `product_name_material()`
   * `product_name_product()`
+* **Company**
+  * `bs()`
+  * `bullshit()`
+  * `bullshit_prefix()`
+  * `bullshit_suffix()`
+  * `buzzword()`
+  * `buzzword_prefix()`
+  * `buzzword_suffix()`
+  * `catch_phrase()`
+  * `name()`
+  * `suffix()`
 * **Lorem**
   * `characters(range \\ 15..255)`
   * `characters(num)`
