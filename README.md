@@ -63,6 +63,14 @@ use any function decribed below. For example, if you nead random name use
   * `isbn10()`
   * `isbn13()`
   * `issn()`
+* **Commerce**
+  * `color()`
+  * `department()`
+  * `price()`
+  * `product_name()`
+  * `product_name_adjective()`
+  * `product_name_material()`
+  * `product_name_product()`
 * **Lorem**
   * `characters(range \\ 15..255)`
   * `characters(num)`
