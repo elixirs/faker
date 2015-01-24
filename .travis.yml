@@ -1,8 +1,8 @@
 language: erlang
 otp_release:
   - 17.0
-  - 17.1 
-  - 17.3 
+  - 17.1
+  - 17.3
 before_install:
   - wget -O elixir.zip http://s3.hex.pm/builds/elixir/v1.0.2.zip
   - unzip -d elixir elixir.zip
@@ -10,10 +10,6 @@ before_install:
   - mix local.hex --force
 install: mix deps.get
 script: mix test
-after_script:
-  - mix hex.config username $HEX_USERNAME
-  - mix hex.config key $HEX_KEY
-  - mix hex.docs
 notifications:
   recipients:
     - igasgeek@me.com
