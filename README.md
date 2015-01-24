@@ -117,6 +117,9 @@ use any function decribed below. For example, if you nead random name use
   * `prefix()`
   * `suffix()`
   * `title()`
+* **Team**
+  * `creature()`
+  * `name()`
 
 ## Thanks
 
