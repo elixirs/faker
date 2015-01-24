@@ -82,6 +82,20 @@ use any function decribed below. For example, if you nead random name use
   * `catch_phrase()`
   * `name()`
   * `suffix()`
+* **Internet**
+  * `domain_name()`
+  * `domain_suffix()`
+  * `domain_word()`
+  * `email()`
+  * `free_email()`
+  * `free_email_service()`
+  * `image_url()`
+  * `ip_v4_address()`
+  * `ip_v6_address()`
+  * `mac_address()`
+  * `safe_email()`
+  * `url()`
+  * `user_name()`
 * **Lorem**
   * `characters(range \\ 15..255)`
   * `characters(num)`
