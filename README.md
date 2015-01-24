@@ -25,17 +25,13 @@ In your `mix.exs` file, add the `:faker` project to your dependencies
 
 Do a `mix deps.get` to fetch the dependency. That's it.
 
-Next, you'll need to add `:faker` to the list of applications, so that Mix will
-know to start `Faker`:
+## Usage
 
-``` elixir
-  def application do
-    [
-      applications: [:logger, :faker],
-      env: [locale: :en]
-    ]
-  end
-```
+You nead to start `:faker` application. Cause of many usages of fake data can be
+(seed database, tests, etc) it's no right place to start it. For example, if you
+want to use it in tests, just add `Faker.start` to `test/test_helper.exs`, and
+use any function decribed below. For example, if you nead random name use
+`Faker.Name.name`.
 
 ## Generators / Providers
 
