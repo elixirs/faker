@@ -3,6 +3,8 @@ otp_release:
   - 17.0
   - 17.1
   - 17.3
+  - 17.4
+  - 17.4_1
 before_install:
   - wget -O elixir.zip http://s3.hex.pm/builds/elixir/v1.0.2.zip
   - unzip -d elixir elixir.zip
