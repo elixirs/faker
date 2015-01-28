@@ -15,7 +15,7 @@
         "#{user_name}@example.#{:random.seed(:erlang.now);hd(Enum.shuffle(~w(org com net)))}"
       ],
       "domain_word": [
-        "#{Faker.Name.last_name |> String.split |> Enum.join |> String.downcase}"
+        "#{Faker.Name.last_name |> String.split([\" \", \",\"]) |> Enum.join |> String.downcase}"
       ],
       "domain_name": [
         "#{domain_word}.#{domain_suffix}"
