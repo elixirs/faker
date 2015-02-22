@@ -19,11 +19,13 @@ In your `mix.exs` file, add the `:faker` project to your dependencies
 
 ``` elixir
   defp deps do
-    [{:faker, "~> 0.4.0"}]
+    [{:faker, "~> 0.5", only: :test}]
   end
 ```
 
 Do a `mix deps.get` to fetch the dependency. That's it.
+
+If you want to use `faker` outside tests remove `, only: :test` part.
 
 ## Usage
 
