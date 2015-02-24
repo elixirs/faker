@@ -1,18 +1,39 @@
 defmodule Faker.Avatar do
+  @moduledoc """
+  Functions for generate random urls for avatars.
+  """
+
+  @doc """
+  Return avatar url with random set and background.
+  """
+  @spec image_url() :: binary
   def image_url do
     "http://robohash.org#{set}#{bg}/#{Faker.Lorem.characters(1..20)}"
   end
 
+  @doc """
+  Return avatar url for given `slug`.
+  """
+  @spec image_url(binary) :: binary
   def image_url(slug) do
     "http://robohash.org/#{slug}"
   end
 
+  @doc """
+  Return avatar url with random set and background, with size `width` x `height`
+  pixels.
+  """
+  @spec image_url(integer, integer) :: binary
   def image_url(width, height)
   when is_integer(width) and is_integer(height) do
     slug = Faker.Lorem.characters(1..20)
     "http://robohash.org#{set}#{bg}/#{slug}?size=#{width}x#{height}"
   end
 
+  @doc """
+  Return avatar url for given `slug`, with size `width` x `height` pixels.
+  """
+  @spec image_url(binary, integer, integer) :: binary
   def image_url(slug, width, height)
   when is_integer(width) and is_integer(height) do
     "http://robohash.org/#{slug}?size=#{width}x#{height}"
