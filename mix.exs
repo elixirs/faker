@@ -23,7 +23,7 @@ defmodule Faker.Mixfile do
 
   defp deps do
     [
-      {:poison, "~> 1.3.0"},
+      {:poison, ">= 1.0.0"},
       {:ex_doc, "~> 0.6", only: :dev},
       {:earmark, ">= 0.0.0", only: :dev}
     ]
