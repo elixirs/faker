@@ -4,13 +4,13 @@ defmodule Faker.Code do
   def isbn10 do
     :random.seed(:erlang.now)
     sequence = Faker.format("#########")
-    sequence <> last_digit(sequence <> "0", calc_function10, 11)
+    sequence <> check_digit(sequence <> "0", &calc_isbn10/1, 11)
   end
 
   def isbn13 do
     :random.seed(:erlang.now)
     sequence = hd(Enum.shuffle(["978", "979"])) <> Faker.format("#########")
-    sequence <> last_digit(sequence <> "0", calc_function13, 10)
+    sequence <> check_digit(sequence <> "0", &calc_isbn13/1, 10)
   end
 
   def issn do
@@ -18,7 +18,7 @@ defmodule Faker.Code do
     Faker.format("####-###") <> hd(Enum.shuffle(["#", "X"]))
   end
 
-  defp last_digit(sequence, calc_function, size) do
+  defp check_digit(sequence, calc_function, size) do
     String.reverse(sequence)
     |> String.graphemes
     |> Stream.with_index
@@ -31,19 +31,9 @@ defmodule Faker.Code do
     digit_to_grapheme(size - rem(checksum, size), size)
   end
 
-  defp calc_function10 do
-    fn({e, i}) -> grapheme_to_digit(e) * (i + 1) end
-  end
-
-  defp calc_function13 do
-    fn({e, i}) ->
-      if rem(i, 2) == 1 do
-        grapheme_to_digit(e) * 3
-      else
-        grapheme_to_digit(e)
-      end
-    end
-  end
+  defp calc_isbn10({e, i}), do: grapheme_to_digit(e) * (i + 1)
+  defp calc_isbn13({e, i}) when rem(i, 2) == 1, do: grapheme_to_digit(e) * 3
+  defp calc_isbn13({e, i}), do: grapheme_to_digit(e)
 
   defp digit_to_grapheme(10, 11), do: "X"
   defp digit_to_grapheme(digit, size) when digit == size, do: "0"
