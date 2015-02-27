@@ -49,6 +49,7 @@ defmodule CodeTest do
 
   test "issn/0" do
     assert is_binary(Faker.Code.issn)
-    assert String.length(Faker.Code.issn) == 9
+    assert String.length(Faker.Code.issn) == 8
+    assert Regex.match?(~r/^\d{7}[\dX]$/, Faker.Code.issn)
   end
 end
