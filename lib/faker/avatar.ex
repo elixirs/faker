@@ -40,12 +40,12 @@ defmodule Faker.Avatar do
   end
 
   defp bg do
-    :random.seed(:erlang.now)
+    :random.seed(:os.timestamp)
     ~w(/bgset_bg1 /bgset_bg2) |> Enum.shuffle |> List.first
   end
 
   defp set do
-    :random.seed(:erlang.now)
+    :random.seed(:os.timestamp)
     ~w(/set_set1 /set_set2 /set_set3) |> Enum.shuffle |> List.first
   end
 end
