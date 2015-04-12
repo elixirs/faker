@@ -6,6 +6,9 @@
 # 0.5.0
 
 * Add Faker.start/0 and Faker.start/1
+
+# 0.4.1
+
 * Add Faker.Internet.url/0 and Faker.Internet.image_url/0 functions
 
 # 0.4.0
