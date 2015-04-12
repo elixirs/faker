@@ -1,3 +1,13 @@
+# 0.5.1
+
+* Add erlang 18 support
+* Add issn check digit
+
+# 0.5.0
+
+* Add Faker.start/0 and Faker.start/1
+* Add Faker.Internet.url/0 and Faker.Internet.image_url/0 functions
+
 # 0.4.0
 
 * Elixir 1.0.0
