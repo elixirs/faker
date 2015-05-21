@@ -1,3 +1,7 @@
+# 0.6.0-dev
+
+* Add Faker.Address.country_code/0
+
 # 0.5.1
 
 * Add erlang 18 support

@@ -39,22 +39,23 @@ use any function decribed below. For example, if you nead random name use
 
 * **Address**
   * `building_number()`
-  * `city()`
   * `city_prefix()`
   * `city_suffix()`
+  * `city()`
   * `country()`
+  * `country_code()`
   * `latitude()`
   * `longitude()`
   * `postcode()`
   * `secondary_address()`
-  * `state()`
   * `state_abbr()`
+  * `state()`
   * `street_address(secondary_address \\ false)`
   * `street_name()`
   * `street_suffix()`
   * `time_zone()`
-  * `zip()`
   * `zip_code()`
+  * `zip()`
 * **Avatar**
   * `image_url()`
   * `image_url(slug)`
