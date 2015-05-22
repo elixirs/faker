@@ -1,5 +1,6 @@
 # 0.6.0-dev
 
+* Add Faker.App with author/0, name/0 and version/0
 * Add Faker.Address.country_code/0
 
 # 0.5.1

@@ -56,6 +56,10 @@ use any function decribed below. For example, if you nead random name use
   * `time_zone()`
   * `zip_code()`
   * `zip()`
+* **App**
+  * `author()`
+  * `name()`
+  * `version()`
 * **Avatar**
   * `image_url()`
   * `image_url(slug)`
