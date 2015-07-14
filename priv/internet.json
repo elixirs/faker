@@ -25,10 +25,9 @@
         "https://#{domain_name}"
       ],
       "image_url": [
-        "http://placekitten.com/#{:crypto.rand_uniform(1, 1024)}/#{:crypto.rand_uniform(1, 1024)}",
-        "http://placehold.it/#{:crypto.rand_uniform(1, 1024)}x#{:crypto.rand_uniform(1, 1024)}",
-        "http://www.lorempixum.com/#{:crypto.rand_uniform(1, 1024)}/#{:crypto.rand_uniform(1, 1024)}",
-        "http://dummyimage.com/#{:crypto.rand_uniform(1, 1024)}x#{:crypto.rand_uniform(1, 1024)}"
+        "https://placekitten.com/#{:crypto.rand_uniform(1, 1024)}/#{:crypto.rand_uniform(1, 1024)}",
+        "https://placehold.it/#{:crypto.rand_uniform(1, 1024)}x#{:crypto.rand_uniform(1, 1024)}",
+        "https://dummyimage.com/#{:crypto.rand_uniform(1, 1024)}x#{:crypto.rand_uniform(1, 1024)}"
       ]
     },
     "values": {
