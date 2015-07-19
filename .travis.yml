@@ -1,14 +1,6 @@
 language: elixir
 elixir:
-  - 1.0.0
-  - 1.0.3
-  - 1.0.4
-otp_release:
-  - 17.0
-  - 17.1
-  - 17.3
-  - 17.4
-sudo: required
+  - 1.0
 notifications:
   recipients:
     - igasgeek@me.com
