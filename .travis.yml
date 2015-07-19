@@ -1,6 +1,7 @@
 language: elixir
+sudo: false
 elixir:
-  - 1.0
+  - 1.0.5
 notifications:
   recipients:
     - igasgeek@me.com
