@@ -53,12 +53,12 @@ defmodule Faker.Address do
   end
 
   def latitude do
-    :random.seed(:os.timestamp)
+    :random.seed(:erlang.timestamp)
     ((:random.uniform * 180) - 90)
   end
 
   def longitude do
-    :random.seed(:os.timestamp)
+    :random.seed(:erlang.timestamp)
     ((:random.uniform * 360) - 180)
   end
 
