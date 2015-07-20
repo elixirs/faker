@@ -9,10 +9,10 @@
       ],
       "user_name": [
         "#{Faker.Name.first_name |> String.replace(~s( ), ~s()) |> String.downcase}#{:crypto.rand_uniform(1900, 2100)}",
-        "#{:random.seed(:erlang.timestamp); [ Faker.Name.first_name, Faker.Name.last_name ] |> Enum.map_join(hd(Enum.shuffle(~w(. _))), &(String.replace(&1, ~s( ), ~s()))) |> String.downcase}"
+        "#{:random.seed(:os.timestamp); [ Faker.Name.first_name, Faker.Name.last_name ] |> Enum.map_join(hd(Enum.shuffle(~w(. _))), &(String.replace(&1, ~s( ), ~s()))) |> String.downcase}"
       ],
       "safe_email": [
-        "#{user_name}@example.#{:random.seed(:erlang.timestamp);hd(Enum.shuffle(~w(org com net)))}"
+        "#{user_name}@example.#{:random.seed(:os.timestamp);hd(Enum.shuffle(~w(org com net)))}"
       ],
       "domain_word": [
         "#{Faker.Name.last_name |> String.split([\" \", \",\"]) |> Enum.join |> String.downcase}"
