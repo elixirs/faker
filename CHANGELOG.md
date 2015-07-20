@@ -3,6 +3,7 @@
 * Add Faker.App with author/0, name/0 and version/0
 * Add Faker.Address.country_code/0
 * Add Faker.Bitcoin with address/0 and address/1
+* Add Faker.Color with rgb_hex/0 and rgb_decimal/0
 
 # 0.5.1
 
