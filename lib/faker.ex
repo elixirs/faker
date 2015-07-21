@@ -26,7 +26,7 @@ defmodule Faker do
 
   It replaces `"#"` to random number and `"?"` to random latin letter.
   """
-  @spec format(binary) :: binary
+  @spec format(String.t) :: String.t
   def format(str) when is_binary(str) do
     format(str, "")
   end
