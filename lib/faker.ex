@@ -1,6 +1,6 @@
 defmodule Faker do
   @moduledoc """
-  Faker is a pure Elixir library for generating fake data.
+  Main module to start application with some helper functions.
   """
 
   @doc """

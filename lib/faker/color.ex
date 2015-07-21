@@ -15,7 +15,7 @@ defmodule Faker.Color do
   @doc """
   Return random RGB decimal value.
   """
-  @spec rgb_decimal() :: {0..255, 0..255, 0..255}
+  @spec rgb_decimal() :: {byte, byte, byte}
   def rgb_decimal do
     {
       :crypto.rand_uniform(0, 256),

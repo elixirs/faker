@@ -1,4 +1,8 @@
 defmodule Faker.Address do
+  @moduledoc """
+  Functions for generating addresses.
+  """
+
   defdelegate postcode, to: Faker.Address, as: :zip_code
   defdelegate zip, to: Faker.Address, as: :zip_code
 
@@ -52,11 +56,19 @@ defmodule Faker.Address do
     end
   end
 
+  @doc """
+  Return random latitude.
+  """
+  @spec latitude() :: float
   def latitude do
     :random.seed(:os.timestamp)
     ((:random.uniform * 180) - 90)
   end
 
+  @doc """
+  Return random longitude.
+  """
+  @spec longitude() :: float
   def longitude do
     :random.seed(:os.timestamp)
     ((:random.uniform * 360) - 180)
