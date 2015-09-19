@@ -1,4 +1,4 @@
-defmodule Shakespeare do
+defmodule Faker.Shakespeare do
 
   def hamlet_quote do
 	Enum.at(hamlet, :crypto.rand_uniform(0, Enum.count(hamlet)))
