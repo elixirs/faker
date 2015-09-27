@@ -73,5 +73,4 @@ defmodule Faker.Shakespeare do
 	   "Not stepping o'er the bounds of modesty."]
   end
   
- end
-  
+end
