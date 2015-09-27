@@ -1,51 +1,36 @@
 defmodule Faker.App do
-  data_path = Path.expand(Path.join(__DIR__, "../../priv/app.json"))
-  json = File.read!(data_path) |> Poison.Parser.parse!
-  Enum.each json, fn(el) ->
-    {lang, data} = el
-    Enum.each data, fn
-      {"values", values} ->
-        Enum.each values, fn({fun, list}) ->
-          def unquote(String.to_atom(fun))() do
-            unquote(String.to_atom("get_#{fun}"))(Faker.locale, :crypto.rand_uniform(0, unquote(String.to_atom("#{fun}_count"))(Faker.locale)))
-          end
-          defp unquote(String.to_atom("#{fun}_count"))(unquote(String.to_atom(lang))) do
-            unquote(Enum.count(list))
-          end
-          Enum.with_index(list) |> Enum.each fn({el, index}) ->
-            defp unquote(String.to_atom("get_#{fun}"))(unquote(String.to_atom(lang)), unquote(index)) do
-              unquote(el)
-            end
-          end
-        end
-      {"formats", values} ->
-        Enum.each values, fn({fun, list}) ->
-          def unquote(String.to_atom(fun))() do
-            unquote(String.to_atom("format_#{fun}"))(Faker.locale, :crypto.rand_uniform(0, unquote(String.to_atom("#{fun}_count"))(Faker.locale)))
-          end
-          Enum.with_index(list) |> Enum.each fn({el, index}) ->
-            defp unquote(String.to_atom("format_#{fun}"))(unquote(String.to_atom(lang)), unquote(index)) do
-              Faker.format(unquote(el))
-            end
-          end
-          defp unquote(String.to_atom("#{fun}_count"))(unquote(String.to_atom(lang))) do
-            unquote(Enum.count(list))
-          end
-        end
-      {"functions", values} ->
-        Enum.each values, fn({fun, list}) ->
-          def unquote(String.to_atom(fun))() do
-            unquote(String.to_atom(fun))(Faker.locale, :crypto.rand_uniform(0, unquote(String.to_atom("#{fun}_count"))(Faker.locale)))
-          end
-          Enum.with_index(list) |> Enum.each fn({el, index}) ->
-            defp unquote(String.to_atom(fun))(unquote(String.to_atom(lang)), unquote(index)) do
-              unquote(Code.string_to_quoted!('"#{el}"'))
-            end
-          end
-          defp unquote(String.to_atom("#{fun}_count"))(unquote(String.to_atom(lang))) do
-            unquote(Enum.count(list))
-          end
-        end
-    end
+  @moduledoc """
+  Functions for generating app specific properties.
+  """
+
+  @doc """
+  Return random version number.
+  """
+  @spec version() :: String.t
+  def version do
+    ["0.#.#", "0.##", "#.##", "#.#", "#.#.#"]
+    |> Enum.at(:crypto.rand_uniform(0, 5))
+    |> Faker.format
   end
+
+  @data ["Redhold", "Treeflex", "Trippledex", "Kanlam", "Bigtax", "Daltfresh", "Toughjoyfax", "Mat Lam Tam", "Otcom", "Tres-Zap", "Y-Solowarm", "Tresom", "Voltsillam", "Biodex", "Greenlam", "Viva", "Matsoft", "Temp", "Zoolab", "Subin", "Rank", "Job", "Stringtough", "Tin", "It", "Home Ing", "Zamit", "Sonsing", "Konklab", "Alpha", "Latlux", "Voyatouch", "Alphazap", "Holdlamis", "Zaam-Dox", "Sub-Ex", "Quo Lux", "Bamity", "Ventosanzap", "Lotstring", "Hatity", "Tempsoft", "Overhold", "Fixflex", "Konklux", "Zontrax", "Tampflex", "Span", "Namfix", "Transcof", "Stim", "Fix San", "Sonair", "Stronghold", "Fintone", "Y-find", "Opela", "Lotlux", "Ronstring", "Zathin", "Duobam", "Keylex"]
+  @data_count Enum.count(@data)
+  @doc """
+  Return app name.
+  """
+  @spec name() :: String.t
+  def name do
+    Enum.at(@data, :crypto.rand_uniform(0, @data_count))
+  end
+
+  @doc """
+  Return author name.
+  """
+  @spec author() :: String.t
+  def author do
+    author(:crypto.rand_uniform(0, 2))
+  end
+
+  defp author(0), do: Faker.Name.name
+  defp author(1), do: Faker.Company.name
 end
