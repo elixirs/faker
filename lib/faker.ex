@@ -53,6 +53,14 @@ defmodule Faker do
   end
 
   @doc """
+  Returns application locale ready for module constract.
+  """
+  @spec mlocale() :: String.t
+  def mlocale do
+    String.capitalize(to_string(Faker.locale))
+  end
+
+  @doc """
   Returns application locale.
   """
   @spec locale() :: atom
