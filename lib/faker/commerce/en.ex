@@ -33,7 +33,7 @@ defmodule Faker.Commerce.En do
 
   defp product_name(0), do: "#{product_name_adjective} #{product_name_material} #{product_name_product}"
   defp product_name(1), do: "#{product_name_adjective} #{product_name_product}"
-  defp product_name(3), do: "#{product_name_material} #{product_name_product}"
+  defp product_name(2), do: "#{product_name_material} #{product_name_product}"
 
   @data ["Small", "Ergonomic", "Rustic", "Intelligent", "Gorgeous", "Incredible", "Fantastic", "Practical", "Sleek", "Awesome"]
   @data_count Enum.count(@data)
