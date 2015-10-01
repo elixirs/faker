@@ -4,7 +4,7 @@ defmodule Faker.Name do
   """
 
   @doc """
-  Return a random complete name
+  Returns a random complete name
   """
   @spec name() :: String.t
   def name do
@@ -12,7 +12,7 @@ defmodule Faker.Name do
   end
 
   @doc """
-  Return a random first name
+  Returns a random first name
   """
   @spec first_name() :: String.t
   def first_name do 
@@ -20,7 +20,7 @@ defmodule Faker.Name do
   end
 
   @doc """
-  Return a random last name
+  Returns a random last name
   """
   @spec last_name() :: String.t
   def last_name do 
@@ -28,7 +28,7 @@ defmodule Faker.Name do
   end
 
   @doc """
-  Return a random name related title
+  Returns a random name related title
   """
   @spec title() :: String.t
   def title do
@@ -36,7 +36,7 @@ defmodule Faker.Name do
   end
 
   @doc """
-  Return a random name related suffix
+  Returns a random name related suffix
   """
   @spec suffix() :: String.t
   def suffix do
@@ -44,7 +44,7 @@ defmodule Faker.Name do
   end
 
   @doc """
-  Return a random name related prefix
+  Returns a random name related prefix
   """
   @spec prefix() :: String.t 
   def prefix do 

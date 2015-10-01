@@ -4,7 +4,7 @@ defmodule Faker.Team do
   """
   
   @doc """
-  Return a string of the form [state] [creature]
+  Returns a string of the form [state] [creature]
   """
   @spec creature() :: String.t
   def creature do
@@ -12,7 +12,7 @@ defmodule Faker.Team do
   end
 
   @doc"""
-  Return a random creature name
+  Returns a random creature name
   """
   @spec name() :: String.t
   def name do 
