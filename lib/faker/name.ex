@@ -1,69 +1,53 @@
 defmodule Faker.Name do
-  data_path = Path.expand(Path.join(__DIR__, "../../priv/name.json"))
-  {:ok, json} = File.read(data_path)
-  {:ok, json} = Poison.Parser.parse(json, [{:labels, :binary}])
-  Enum.each json, fn({lang, functions}) ->
-    Enum.each functions, fn({fun, list}) ->
-      defp unquote(String.to_atom("#{fun}_count"))(unquote(String.to_atom(lang))) do
-        unquote(Enum.count(list))
-      end
-      Enum.each Enum.with_index(list), fn({el, index}) ->
-        defp unquote(String.to_atom("get_#{fun}"))(unquote(String.to_atom(lang)), unquote(index+1)) do
-          unquote(el)
-        end
-      end
-    end
-  end
+  @moduledoc """
+  Functions for generating names
+  """
 
-  def first_name do
-    get_first_name(Faker.locale, :crypto.rand_uniform(1, first_name_count(Faker.locale)+1))
-  end
-
-  def last_name do
-    get_last_name(Faker.locale, :crypto.rand_uniform(1, last_name_count(Faker.locale)+1))
-  end
-
+  @doc """
+  Returns a random complete name
+  """
+  @spec name() :: String.t
   def name do
-    name(:crypto.rand_uniform(1, 11))
+    Module.concat(__MODULE__, Faker.mlocale).name
   end
 
-  def prefix do
-    get_prefix(Faker.locale, :crypto.rand_uniform(1, prefix_count(Faker.locale)+1))
+  @doc """
+  Returns a random first name
+  """
+  @spec first_name() :: String.t
+  def first_name do 
+    Module.concat(__MODULE__, Faker.mlocale).first_name
   end
 
-  def suffix do
-    get_suffix(Faker.locale, :crypto.rand_uniform(1, suffix_count(Faker.locale)+1))
+  @doc """
+  Returns a random last name
+  """
+  @spec last_name() :: String.t
+  def last_name do 
+    Module.concat(__MODULE__, Faker.mlocale).last_name
   end
 
+  @doc """
+  Returns a random name related title
+  """
+  @spec title() :: String.t
   def title do
-    "#{title_descriptor} #{title_level} #{title_job}"
+    Module.concat(__MODULE__, Faker.mlocale).title
   end
 
-  defp name(1) do
-    "#{prefix} #{first_name} #{last_name} #{suffix}"
+  @doc """
+  Returns a random name related suffix
+  """
+  @spec suffix() :: String.t
+  def suffix do
+    Module.concat(__MODULE__, Faker.mlocale).suffix
   end
 
-  defp name(2) do
-    "#{prefix} #{first_name} #{last_name}"
-  end
-
-  defp name(3) do
-    "#{first_name} #{last_name} #{suffix}"
-  end
-
-  defp name(n) when is_integer(n) do
-    "#{first_name} #{last_name}"
-  end
-
-  defp title_descriptor do
-    get_title_descriptor(Faker.locale, :crypto.rand_uniform(1, title_descriptor_count(Faker.locale)+1))
-  end
-
-  defp title_level do
-    get_title_level(Faker.locale, :crypto.rand_uniform(1, title_level_count(Faker.locale)+1))
-  end
-
-  defp title_job do
-    get_title_job(Faker.locale, :crypto.rand_uniform(1, title_job_count(Faker.locale)+1))
+  @doc """
+  Returns a random name related prefix
+  """
+  @spec prefix() :: String.t 
+  def prefix do 
+    Module.concat(__MODULE__, Faker.mlocale).prefix
   end
 end

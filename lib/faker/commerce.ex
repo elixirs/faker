@@ -4,7 +4,7 @@ defmodule Faker.Commerce do
   """
 
   @doc """
-  Return a random color
+  Returns a random color
   """
   @spec color() :: String.t
   def color do 
@@ -12,7 +12,7 @@ defmodule Faker.Commerce do
   end
   
   @doc """
-  Return a random department
+  Returns a random department
   """
   @spec department() :: String.t
   def department do
@@ -20,7 +20,7 @@ defmodule Faker.Commerce do
   end
 
   @doc """
-  Return a random number that represents a price
+  Returns a random number that represents a price
   """
   @spec price() :: float
   def price do 
@@ -36,7 +36,7 @@ defmodule Faker.Commerce do
   end
 
   @doc """
-  Return a random adjective for a product
+  Returns a random adjective for a product
   """
   @spec product_name_adjective() :: String.t
   def product_name_adjective do 
@@ -44,7 +44,7 @@ defmodule Faker.Commerce do
   end
 
   @doc """
-  Return a random product material
+  Returns a random product material
   """
   @spec product_name_material() :: String.t
   def product_name_material do 
@@ -52,7 +52,7 @@ defmodule Faker.Commerce do
   end
 
   @doc """
-  Return a random product name
+  Returns a random product name
   """
   @spec product_name_product() :: String.t
   def product_name_product do 
