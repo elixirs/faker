@@ -1,46 +1,112 @@
 defmodule Faker.Internet do
-  data_path = Path.expand(Path.join(__DIR__, "../../priv/internet.json"))
-  json = File.read!(data_path) |> Poison.Parser.parse!
-  Enum.each json, fn(el) ->
-    {lang, data} = el
-    Enum.each data, fn
-      {"values", values} ->
-        Enum.each values, fn({fun, list}) ->
-          def unquote(String.to_atom(fun))() do
-            unquote(String.to_atom("get_#{fun}"))(Faker.locale, :crypto.rand_uniform(0, unquote(String.to_atom("#{fun}_count"))(Faker.locale)))
-          end
-          defp unquote(String.to_atom("#{fun}_count"))(unquote(String.to_atom(lang))) do
-            unquote(Enum.count(list))
-          end
-          Enum.with_index(list) |> Enum.each fn({el, index}) ->
-            defp unquote(String.to_atom("get_#{fun}"))(unquote(String.to_atom(lang)), unquote(index)) do
-              unquote(el)
-            end
-          end
-        end
-      {"functions", values} ->
-        Enum.each values, fn({fun, list}) ->
-          def unquote(String.to_atom(fun))() do
-            unquote(String.to_atom(fun))(Faker.locale, :crypto.rand_uniform(0, unquote(String.to_atom("#{fun}_count"))(Faker.locale)))
-          end
-          Enum.with_index(list) |> Enum.each fn({el, index}) ->
-            defp unquote(String.to_atom(fun))(unquote(String.to_atom(lang)), unquote(index)) do
-              unquote(Code.string_to_quoted!('"#{el}"'))
-            end
-          end
-          defp unquote(String.to_atom("#{fun}_count"))(unquote(String.to_atom(lang))) do
-            unquote(Enum.count(list))
-          end
-        end
-    end
+  @moduledoc """
+  Functions for generating internet related data
+  """
+
+  @doc """
+  Returns a complete random domain name
+  """
+  @spec domain_name() :: String.t
+  def domain_name do
+    "#{domain_word}.#{domain_suffix}"
   end
 
+  @doc """
+  Returns a random domain suffix
+  """
+  @spec domain_suffix() :: String.t
+  def domain_suffix do
+    Module.concat(__MODULE__, Faker.mlocale).domain_suffix
+  end
+
+  @doc """
+  Returns a random username
+  """
+  @spec user_name() :: String.t
+  def user_name do
+    user_name(:crypto.rand_uniform(0, 2))
+  end
+
+  defp user_name(0), do: "#{Faker.Name.first_name |> String.replace(~s(  ), ~s()) |> String.downcase}#{:crypto.rand_uniform(1900, 2100)}"
+  defp user_name(1), do: "#{:random.seed(:os.timestamp); [ Faker.Name.first_name, Faker.Name.last_name  ] |> Enum.map_join(hd(Enum.shuffle(~w(. _))), &(String.replace(&1, ~s(  ), ~s()))) |> String.downcase}"
+  @doc """
+  Returns a random domain word
+  """
+  @spec domain_word() :: String.t
+  def domain_word do
+    "#{Faker.Name.last_name |> String.split(["'"]) |> Enum.join |> String.downcase}"
+  end
+
+  @doc """
+  Returns a complete email based on a domain name
+  """
+  @spec email() :: String.t
+  def email do
+    "#{user_name}@#{domain_name}"
+  end
+
+  @doc """
+  Returns a complete free email based on a free email service [gmail, yahoo, hotmail]
+  """
+  @spec free_email() :: String.t
+  def free_email do
+    "#{user_name}@#{free_email_service}"
+  end
+
+  @doc """
+  Returns a safe email
+  """
+  @spec safe_email() :: String.t
+  def safe_email do
+    "#{user_name}@example.#{:random.seed(:os.timestamp);hd(Enum.shuffle(~w(org com net)))}"
+  end
+
+  @doc """
+  Returns a free email service
+  """
+  @spec free_email_service() :: String.t
+  def free_email_service do 
+    Module.concat(__MODULE__, Faker.mlocale).free_email_service
+  end
+
+  @doc """
+  Returns a random url
+  """
+  @spec url() :: String.t
+  def url do
+    url(:crypto.rand_uniform(0, 2))
+  end
+
+  defp url(0), do: "http://#{domain_name}"
+  defp url(1), do: "https://#{domain_name}"
+
+  @doc"""
+  Returns a random image url from placekitten.com | placehold.it | dummyimage.com
+  """
+  @spec image_url() :: String.t
+  def image_url do
+    image_url(:crypto.rand_uniform(0, 3))
+  end
+
+  defp image_url(0), do: "https://placekitten.com/#{:crypto.rand_uniform(1, 1024)}/#{:crypto.rand_uniform(1, 1024)}"
+  defp image_url(1), do: "https://placehold.it/#{:crypto.rand_uniform(1, 1024)}x#{:crypto.rand_uniform(1, 1024)}"
+  defp image_url(2), do: "https://dummyimage.com/#{:crypto.rand_uniform(1, 1024)}x#{:crypto.rand_uniform(1, 1024)}"
+
+  @doc """
+  Generates an ipv4 address
+  """
+  @spec ip_v4_address() :: String.t
   def ip_v4_address do
     Enum.map_join 1..4, ".", fn(_part) ->
       :crypto.rand_uniform(0, 255)
     end
   end
 
+
+  @doc """
+  Generates an ipv6 address
+  """
+  @spec ip_v6_address() :: String.t
   def ip_v6_address do
     Enum.map_join 1..8, ":", fn(_part) ->
       Integer.to_string(:crypto.rand_uniform(0, 65536), 16)
@@ -48,6 +114,10 @@ defmodule Faker.Internet do
     end
   end
 
+  @doc """
+  Generates a mac address
+  """
+  @spec mac_address() :: String.t
   def mac_address do
     Enum.map_join(1..6, ":", fn(_part) ->
       Integer.to_string(:crypto.rand_uniform(0, 256), 16)
