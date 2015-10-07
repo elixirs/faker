@@ -24,12 +24,12 @@ defmodule AddressTest do
 
   test "latitude/0" do
     assert is_float(Faker.Address.latitude)
-    assert Faker.Address.latitude in -90..90
+    assert cover?(-90, Faker.Address.latitude, 90)
   end
 
   test "longitude/0" do
     assert is_float(Faker.Address.longitude)
-    assert Faker.Address.longitude in -180..180
+    assert cover?(-180, Faker.Address.longitude, 180)
   end
 
   test "postcode/0" do
@@ -80,5 +80,9 @@ defmodule AddressTest do
   test "country_code/0" do
     assert is_binary(Faker.Address.country_code)
     assert String.length(Faker.Address.country_code) == 2
+  end
+
+  def cover?(left, value, right) do
+    left <= value and value <= right
   end
 end
