@@ -1,4 +1,4 @@
-defmodule Faker.Team.En do 
+defmodule Faker.Team.En do
   @moduledoc """
   Functions for generating team related data in English
   """
@@ -15,7 +15,7 @@ defmodule Faker.Team.En do
   Returns a random creature name
   """
   @spec creature() :: String.t
-  def creature do 
+  def creature do
     Enum.at(@data, :crypto.rand_uniform(0, @data_count))
   end
 end

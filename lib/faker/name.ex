@@ -15,7 +15,7 @@ defmodule Faker.Name do
   Returns a random first name
   """
   @spec first_name() :: String.t
-  def first_name do 
+  def first_name do
     Module.concat(__MODULE__, Faker.mlocale).first_name
   end
 
@@ -23,7 +23,7 @@ defmodule Faker.Name do
   Returns a random last name
   """
   @spec last_name() :: String.t
-  def last_name do 
+  def last_name do
     Module.concat(__MODULE__, Faker.mlocale).last_name
   end
 
@@ -46,8 +46,8 @@ defmodule Faker.Name do
   @doc """
   Returns a random name related prefix
   """
-  @spec prefix() :: String.t 
-  def prefix do 
+  @spec prefix() :: String.t
+  def prefix do
     Module.concat(__MODULE__, Faker.mlocale).prefix
   end
 end

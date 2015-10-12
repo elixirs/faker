@@ -9,7 +9,7 @@ defmodule Faker.Commerce.En do
   Returns a random color
   """
   @spec color() :: String.t
-  def color do 
+  def color do
     Enum.at(@data, :crypto.rand_uniform(0, @data_count))
   end
 
@@ -19,7 +19,7 @@ defmodule Faker.Commerce.En do
   Returns a random department
   """
   @spec department() :: String.t
-  def department do 
+  def department do
     Enum.at(@data, :crypto.rand_uniform(0, @data_count))
   end
 
@@ -44,7 +44,7 @@ defmodule Faker.Commerce.En do
   def product_name_adjective do
     Enum.at(@data, :crypto.rand_uniform(0, @data_count))
   end
-  
+
   @data ["Steel", "Wooden", "Concrete", "Plastic", "Cotton", "Granite", "Rubber"]
   @data_count Enum.count(@data)
   @doc """

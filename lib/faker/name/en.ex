@@ -2,7 +2,7 @@ defmodule Faker.Name.En do
   @moduledoc """
   Functions for name data in English
   """
-  
+
   @doc """
   Returns a complete name (may include a suffix/prefix or both)
   """
@@ -11,7 +11,7 @@ defmodule Faker.Name.En do
   defp name(1), do: "#{prefix} #{first_name} #{last_name} #{suffix}"
   defp name(2), do: "#{prefix} #{first_name} #{last_name}"
   defp name(3), do: "#{first_name} #{last_name} #{suffix}"
-  defp name(n) when is_integer(n) do 
+  defp name(n) when is_integer(n) do
     "#{first_name} #{last_name}"
   end
 
@@ -41,17 +41,17 @@ defmodule Faker.Name.En do
   Returns a random prefix
   """
   @spec prefix() :: String.t
-  def prefix do 
+  def prefix do
     Enum.at(@data, :crypto.rand_uniform(0, @data_count))
   end
-  
+
   @data ["Jr.", "Sr.", "I", "II", "III", "IV", "V", "MD", "DDS", "PhD", "DVM"]
   @data_count Enum.count(@data)
   @doc """
   Returns a random suffix
   """
-  @spec suffix() :: String.t 
-  def suffix do 
+  @spec suffix() :: String.t
+  def suffix do
     Enum.at(@data, :crypto.rand_uniform(0, @data_count))
   end
 
@@ -59,7 +59,7 @@ defmodule Faker.Name.En do
   Reuturns a random complete job title
   """
   @spec title() :: String.t
-  def title do 
+  def title do
     "#{title_descriptor} #{title_level} #{title_job}"
   end
 
@@ -76,7 +76,7 @@ defmodule Faker.Name.En do
   @data ["Supervisor", "Associate", "Executive", "Liason", "Officer", "Manager", "Engineer", "Specialist", "Director", "Coordinator", "Administrator", "Architect", "Analyst", "Designer", "Planner", "Orchestrator", "Technician", "Developer", "Producer", "Consultant", "Assistant", "Facilitator", "Agent", "Representative", "Strategist"]
   @data_count Enum.count(@data)
   @doc """
-  Returns a random job title name 
+  Returns a random job title name
   """
   @spec title_job() :: String.t
   defp title_job do
@@ -86,10 +86,10 @@ defmodule Faker.Name.En do
   @data ["Solutions", "Program", "Brand", "Security", "Research", "Marketing", "Directives", "Implementation", "Integration", "Functionality", "Response", "Paradigm", "Tactics", "Identity", "Markets", "Group", "Division", "Applications", "Optimization", "Operations", "Infrastructure", "Intranet", "Communications", "Web", "Branding", "Quality", "Assurance", "Mobility", "Accounts", "Data", "Creative", "Configuration", "Accountability", "Interactions", "Factors", "Usability", "Metrics"]
   @data_count Enum.count(@data)
   @doc """
-  Returns a random job title level 
+  Returns a random job title level
   """
   @spec title_level() :: String.t
-  defp title_level do 
+  defp title_level do
     Enum.at(@data, :crypto.rand_uniform(0, @data_count))
   end
 end
