@@ -1,5 +1,5 @@
 defmodule Faker.Commerce.En do
-  import Faker.Sampler
+  import Faker, only: [sampler: 2]
 
   @moduledoc """
   Fuctions for generating commerce related data in English

@@ -1,5 +1,5 @@
 defmodule Faker.Lorem do
-  import Faker.Sampler
+  import Faker, only: [sampler: 2]
 
   @moduledoc """
   Functions for generating Lorem Ipsum data

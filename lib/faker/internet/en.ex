@@ -1,5 +1,5 @@
 defmodule Faker.Internet.En do
-  import Faker.Sampler
+  import Faker, only: [sampler: 2]
 
   @moduledoc"""
   Generating internet related data in English

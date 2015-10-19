@@ -75,4 +75,15 @@ defmodule Faker do
   def locale(lang) when is_atom(lang) do
     Application.put_env(:faker, :locale, lang)
   end
+
+  defmacro sampler(name, data) do
+    count = Enum.count(data)
+
+    quote do
+      def unquote(name)() do
+        unquote(data)
+        |> Enum.at(:crypto.rand_uniform(0, unquote(count)))
+      end
+    end
+  end
 end

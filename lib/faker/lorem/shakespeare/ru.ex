@@ -1,5 +1,5 @@
 defmodule Faker.Lorem.Shakespeare.Ru do
-  import Faker.Sampler
+  import Faker, only: [sampler: 2]
 
   @moduledoc """
   Random quotes from William Shakespeare's plays, sonnets and poems in Russian.

@@ -1,5 +1,5 @@
 defmodule Faker.Address do
-  import Faker.Sampler
+  import Faker, only: [sampler: 2]
 
   @moduledoc """
   Functions for generating addresses.

@@ -1,5 +1,5 @@
 defmodule Faker.Team.En do
-  import Faker.Sampler
+  import Faker, only: [sampler: 2]
 
   @moduledoc """
   Functions for generating team related data in English
