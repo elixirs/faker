@@ -1,5 +1,11 @@
-# 0.6.0-dev
+# 0.6.0
 
+* Most of functions covered by specs and docs now
+* Removed JSON programming and poison dependency [@saulecabrera, @vforvova]
+* Add Faker.Shakespeare [@adam-wanninger]
+* Fix SSL issues in Internet.image_url/0 [@zmoshansky]
+* Improve tests [@lowks]
+* Elixir 1.1 support
 * Add Faker.App with author/0, name/0 and version/0
 * Add Faker.Address.country_code/0
 * Add Faker.Bitcoin with address/0 and address/1

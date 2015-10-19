@@ -35,103 +35,6 @@ want to use it in tests, just add `Faker.start` to `test/test_helper.exs`, and
 use any function decribed below. For example, if you nead random name use
 `Faker.Name.name`.
 
-## Generators / Providers
-
-* **Address**
-  * `building_number()`
-  * `city_prefix()`
-  * `city_suffix()`
-  * `city()`
-  * `country()`
-  * `country_code()`
-  * `latitude()`
-  * `longitude()`
-  * `postcode()`
-  * `secondary_address()`
-  * `state_abbr()`
-  * `state()`
-  * `street_address(secondary_address \\ false)`
-  * `street_name()`
-  * `street_suffix()`
-  * `time_zone()`
-  * `zip_code()`
-  * `zip()`
-* **App**
-  * `author()`
-  * `name()`
-  * `version()`
-* **Avatar**
-  * `image_url()`
-  * `image_url(slug)`
-  * `image_url(width, height)`
-  * `image_url(slug, width, height)`
-* **Code**
-  * `isbn()`
-  * `isbn10()`
-  * `isbn13()`
-  * `issn()`
-* **Commerce**
-  * `color()`
-  * `department()`
-  * `price()`
-  * `product_name()`
-  * `product_name_adjective()`
-  * `product_name_material()`
-  * `product_name_product()`
-* **Company**
-  * `bs()`
-  * `bullshit()`
-  * `bullshit_prefix()`
-  * `bullshit_suffix()`
-  * `buzzword()`
-  * `buzzword_prefix()`
-  * `buzzword_suffix()`
-  * `catch_phrase()`
-  * `name()`
-  * `suffix()`
-* **Internet**
-  * `domain_name()`
-  * `domain_suffix()`
-  * `domain_word()`
-  * `email()`
-  * `free_email()`
-  * `free_email_service()`
-  * `image_url()`
-  * `ip_v4_address()`
-  * `ip_v6_address()`
-  * `mac_address()`
-  * `safe_email()`
-  * `url()`
-  * `user_name()`
-* **Lorem**
-  * `characters(range \\ 15..255)`
-  * `characters(num)`
-  * `paragraph(range \\ 2..5)`
-  * `paragraph(num)`
-  * `paragraphs(range \\ 2..5)`
-  * `paragraphs(num)`
-  * `sentence(range \\ 4..10)`
-  * `sentence(num, mark)`
-  * `sentences(range \\ 2..5)`
-  * `sentences(num)`
-  * `word()`
-  * `sentences(range \\ 3..6)`
-  * `sentences(num)`
-* **Name**
-  * `first_name()`
-  * `last_name()`
-  * `name()`
-  * `prefix()`
-  * `suffix()`
-  * `title()`
-* **Team**
-  * `creature()`
-  * `name()`
-
-## Thanks
-
-[![Sponsored by Evil Martians](https://evilmartians.com/badges/sponsored-by-evil-martians.svg)](http://evilmartians.com/)
-
 ## TODO
 
 * Add more generators
@@ -160,6 +63,10 @@ other tools.
 
 You can build templates for testing purposes with the
 [Blacksmith](https://github.com/batate/blacksmith) project. See the Blacksmith
+
+## Thanks
+
+[![Sponsored by Evil Martians](https://evilmartians.com/badges/sponsored-by-evil-martians.svg)](http://evilmartians.com/)
 [readme](https://github.com/batate/blacksmith#readme) for details.
 
 # [License](https://github.com/igas/faker/blob/master/LICENSE)
