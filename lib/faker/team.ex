@@ -2,7 +2,7 @@ defmodule Faker.Team do
   @moduledoc """
   Functions for generating team related data
   """
-  
+
   @doc """
   Returns a string of the form [state] [creature]
   """
@@ -15,7 +15,7 @@ defmodule Faker.Team do
   Returns a random creature name
   """
   @spec name() :: String.t
-  def name do 
+  def name do
     Module.concat(__MODULE__, Faker.mlocale).name
   end
 end

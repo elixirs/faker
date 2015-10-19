@@ -65,7 +65,7 @@ defmodule Faker.Internet do
   Returns a free email service
   """
   @spec free_email_service() :: String.t
-  def free_email_service do 
+  def free_email_service do
     Module.concat(__MODULE__, Faker.mlocale).free_email_service
   end
 
