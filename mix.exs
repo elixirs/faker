@@ -31,7 +31,7 @@ defmodule Faker.Mixfile do
   defp package do
     [
       files: ["lib", "mix.exs", "mix.lock"],
-      contributors: ["Igor Kapkov"],
+      maintainers: ["Igor Kapkov"],
       licenses: ["MIT"],
       links: %{"GitHub" => "https://github.com/igas/faker"}
     ]
