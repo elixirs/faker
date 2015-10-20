@@ -29,11 +29,11 @@ If you want to use `faker` outside tests remove `, only: :test` part.
 
 ## Usage
 
-You nead to start `:faker` application. Cause of many usages of fake data can be
-(seed database, tests, etc) it's no right place to start it. For example, if you
+You need to start `:faker` application, but due to the many usages of fake data,
+(seed database, tests, etc) there's no right place to do it. For example, if you
 want to use it in tests, just add `Faker.start` to `test/test_helper.exs`, and
-use any function decribed below. For example, if you nead random name use
-`Faker.Name.name`.
+use any function decribed below. For example, if you need a random name use
+`Faker.Name.name`
 
 ## TODO
 
@@ -56,18 +56,18 @@ function, as above.
 
 ## Tools
 
-Faker designed as lightweight library, because of it it can be easily used with
+Faker was designed as a lightweight library, that's why it can be easily used with
 other tools.
 
 ## Templating
 
 You can build templates for testing purposes with the
 [Blacksmith](https://github.com/batate/blacksmith) project. See the Blacksmith
+[readme](https://github.com/batate/blacksmith#readme) for details.
 
 ## Thanks
 
 [![Sponsored by Evil Martians](https://evilmartians.com/badges/sponsored-by-evil-martians.svg)](http://evilmartians.com/)
-[readme](https://github.com/batate/blacksmith#readme) for details.
 
 # [License](https://github.com/igas/faker/blob/master/LICENSE)
 
