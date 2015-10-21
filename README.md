@@ -31,9 +31,9 @@ If you want to use `faker` outside tests remove `, only: :test` part.
 
 You need to start `:faker` application, but due to the many usages of fake data,
 (seed database, tests, etc) there's no right place to do it. For example, if you
-want to use it in tests, just add `Faker.start` to `test/test_helper.exs`, and
-use any function decribed below. For example, if you need a random name use
-`Faker.Name.name`
+want to use it in tests, just add `Faker.start` to `test/test_helper.exs`, then,
+use any function described in the [documentation](http://hexdocs.pm/faker), like `Faker.Name.name`
+to generate a random name.
 
 ## TODO
 
