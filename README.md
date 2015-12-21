@@ -6,10 +6,10 @@ fake data.
 Inspired by:
 
 * Ruby [faker](https://github.com/stympy/faker)
-* Ruby [ffaker](https://github.com/EmmanuelOga/ffaker)
+* Ruby [ffaker](https://github.com/ffaker/ffaker)
 * PHP [Faker](https://github.com/fzaninotto/Faker)
 * Python [faker](https://github.com/joke2k/Faker)
-* Erlang [fakerl](https://github.com/mawuli-ypa/fakerl)
+* Erlang [fakerl](https://github.com/piesie/fakerl)
 * Haskell [faker](https://github.com/gazay/faker)
 
 ## Install
@@ -32,7 +32,7 @@ If you want to use `faker` outside tests remove `, only: :test` part.
 You need to start `:faker` application, but due to the many usages of fake data,
 (seed database, tests, etc) there's no right place to do it. For example, if you
 want to use it in tests, just add `Faker.start` to `test/test_helper.exs`, then,
-use any function described in the [documentation](http://hexdocs.pm/faker), like `Faker.Name.name`
+use any function described in the [documentation](http://hexdocs.pm/faker/), like `Faker.Name.name`
 to generate a random name.
 
 ## TODO
@@ -67,7 +67,7 @@ You can build templates for testing purposes with the
 
 ## Thanks
 
-[![Sponsored by Evil Martians](https://evilmartians.com/badges/sponsored-by-evil-martians.svg)](http://evilmartians.com/)
+[![Sponsored by Evil Martians](https://evilmartians.com/badges/sponsored-by-evil-martians.svg)](https://evilmartians.com/)
 
 # [License](https://github.com/igas/faker/blob/master/LICENSE)
 
