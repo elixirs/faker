@@ -14,4 +14,13 @@ defmodule Faker.ColorTest do
     assert String.length(rgb_hex) == 6
     assert Regex.match?(~r/^[0-9A-F]{6}$/, rgb_hex)
   end
+
+  test "name/0" do
+    assert is_binary(name)
+  end
+
+  test "fancy_name/0" do
+    assert is_binary(fancy_name)
+  end
+
 end

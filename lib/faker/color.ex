@@ -23,4 +23,23 @@ defmodule Faker.Color do
       :crypto.rand_uniform(0, 256)
     }
   end
+
+  @doc """
+  Return a random color name
+  """
+  @spec name() :: String.t
+  def name do
+    localised_module.name
+  end
+
+  @doc """
+  Return a random fancy color name
+  """
+  @spec fancy_name() :: String.t
+  def fancy_name do
+    localised_module.fancy_name
+  end
+
+  defp localised_module, do: Module.concat(__MODULE__, Faker.mlocale)
+
 end
