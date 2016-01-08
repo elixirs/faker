@@ -1,3 +1,14 @@
+# Change Log
+All notable changes to this project will be documented in this file.
+
+This project adheres to [Semantic Versioning](http://semver.org/).
+
+Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
+
+## [Unreleased]
+### Added
+- `Faker.Color.name/0` & `Faker.Color.fancy_name/0` (En) [@efexen]
+
 # 0.6.0
 
 * Most of functions covered by specs and docs now
@@ -74,3 +85,5 @@
 * Added `Faker.Team`
   * `name/0`
   * `creature/0`
+
+[@efexen]: https://github.com/efexen
