@@ -10,3 +10,7 @@ otp_release:
 notifications:
   recipients:
     - igasgeek@me.com
+matrix:
+  exclude:
+    - otp_release: 17.3
+      elixir: 1.2.0
