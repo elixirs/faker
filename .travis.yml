@@ -4,6 +4,9 @@ elixir:
   - 1.0.5
   - 1.1.1
   - 1.2.0
+otp_release:
+  - 17.3
+  - 18.1
 notifications:
   recipients:
     - igasgeek@me.com
