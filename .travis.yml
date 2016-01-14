@@ -3,6 +3,7 @@ sudo: false
 elixir:
   - 1.0.5
   - 1.1.1
+  - 1.2.0
 notifications:
   recipients:
     - igasgeek@me.com
