@@ -1,5 +1,4 @@
 defmodule Faker.Phone.EnGb do
-  import Faker, only: [format: 1]
 
   @moduledoc """
   Functions for contact data in English
