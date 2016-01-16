@@ -8,10 +8,11 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 ## [Unreleased]
 ### Added
 - `Faker.Color.En.name/0` & `Faker.Color.En.fancy_name/0` [@efexen]
-- `Faker.Phone.EnGb.landline_number/0` [@johnhamelink]
-- `Faker.Phone.EnGb.number/0` [@igas]
 - `Faker.Phone.EnGb.cell_number/0` [@igas]
+- `Faker.Phone.EnGb.landline_number/0` [@johnhamelink]
 - `Faker.Phone.EnGb.mobile_number/0` [@igas]
+- `Faker.Phone.EnGb.number/0` [@igas]
+- `Faker.Phone.EnUs.number_number/0` [@devshane]
 
 # 0.6.0
 
@@ -90,6 +91,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
   * `name/0`
   * `creature/0`
 
-[@igas]: https://github.com/igas
+[@devshane]: https://github.com/devshane
 [@efexen]: https://github.com/efexen
+[@igas]: https://github.com/igas
 [@johnhamelink]: https://github.com/johnhamelink
