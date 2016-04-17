@@ -3,7 +3,7 @@ sudo: false
 elixir:
   - 1.0.5
   - 1.1.1
-  - 1.2.0
+  - 1.2.4
 otp_release:
   - 17.3
   - 18.1
