@@ -5,7 +5,7 @@ elixir:
   - 1.1.1
   - 1.2.4
 otp_release:
-  - 17.3
+  - 17.5
   - 18.0
   - 18.1
   - 18.2
@@ -15,5 +15,5 @@ notifications:
     - igasgeek@me.com
 matrix:
   exclude:
-    - otp_release: 17.3
+    - otp_release: 17.5
       elixir: 1.2.4
