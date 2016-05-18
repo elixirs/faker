@@ -41,24 +41,24 @@ defmodule Faker.Internet do
   Returns a complete email based on a domain name
   """
   @spec email() :: String.t
-  def email do
-    "#{user_name}@#{domain_name}"
+  def email(name \\ user_name) do
+    "#{String.downcase(name)}@#{domain_name}"
   end
 
   @doc """
   Returns a complete free email based on a free email service [gmail, yahoo, hotmail]
   """
   @spec free_email() :: String.t
-  def free_email do
-    "#{user_name}@#{free_email_service}"
+  def free_email(name \\ user_name) do
+    "#{String.downcase(name)}@#{free_email_service}"
   end
 
   @doc """
   Returns a safe email
   """
   @spec safe_email() :: String.t
-  def safe_email do
-    "#{user_name}@example.#{:random.seed(:os.timestamp);hd(Enum.shuffle(~w(org com net)))}"
+  def safe_email(name \\ user_name) do
+    "#{String.downcase(name)}@example.#{:random.seed(:os.timestamp);hd(Enum.shuffle(~w(org com net)))}"
   end
 
   @doc """
