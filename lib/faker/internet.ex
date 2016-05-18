@@ -42,7 +42,7 @@ defmodule Faker.Internet do
   """
   @spec email() :: String.t
   def email(name \\ user_name) do
-    "#{name}@#{domain_name}"
+    "#{String.downcase(name)}@#{domain_name}"
   end
 
   @doc """
@@ -50,7 +50,7 @@ defmodule Faker.Internet do
   """
   @spec free_email() :: String.t
   def free_email(name \\ user_name) do
-    "#{name}@#{free_email_service}"
+    "#{String.downcase(name)}@#{free_email_service}"
   end
 
   @doc """
@@ -58,7 +58,7 @@ defmodule Faker.Internet do
   """
   @spec safe_email() :: String.t
   def safe_email(name \\ user_name) do
-    "#{name}@example.#{:random.seed(:os.timestamp);hd(Enum.shuffle(~w(org com net)))}"
+    "#{String.downcase(name)}@example.#{:random.seed(:os.timestamp);hd(Enum.shuffle(~w(org com net)))}"
   end
 
   @doc """
