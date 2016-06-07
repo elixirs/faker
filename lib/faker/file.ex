@@ -1,4 +1,9 @@
 defmodule Faker.File do
+
+  @moduledoc """
+  Functions for generating file related data
+  """
+
   @extensions %{
     image: ~w(bmp gif jpeg jpg png tiff),
     audio: ~w(flac mp3 wav),
@@ -21,32 +26,60 @@ defmodule Faker.File do
   @categories_extensions Map.keys(@extensions)
   @categories_mimes Map.keys(@mimes)
 
-  def file_extension(category) do
-    get_extensions_from_category(category) |> pick
-  end
-
+  @doc """
+  Returns a random file extension
+  """
+  @spec file_extension() :: String.t
   def file_extension do
     @categories_extensions 
       |> pick
       |> file_extension
   end
 
+  @doc """
+  Returns a random file extension from the category given
+  Available categories: :audio, :image, :text, :video, :office
+  """
+  @spec file_extension(:atom) :: String.t 
+  def file_extension(category) do
+    get_extensions_from_category(category) |> pick
+  end
+
+
+  @doc """
+  Returns a random file name
+  """
+  @spec file_name() :: String.t
   def file_name do
     Faker.Lorem.word <> "." <> file_extension()
   end
 
+  @doc """
+  Returns a random file name from the category given
+  Available categories: :audio, :image, :text, :video, :office
+  """
+  @spec file_name(:atom) :: String.t 
   def file_name(category) do
     Faker.Lorem.word <> "." <> file_extension(category)
   end
 
-  def mime_type(category) do
-    get_mimes_from_category(category) |> pick
-  end
-
+  @doc """
+  Returns a random mime type
+  """
+  @spec mime_type :: String.t 
   def mime_type do
     @categories_mimes
       |> pick
       |> mime_type
+  end
+
+  @doc """
+  Returns a random mime type from the category given
+  Available categories: :application, :audio, :image, :message, :model, :multipart, :text, :video
+  """
+  @spec mime_type(:atom) :: String.t 
+  def mime_type(category) do
+    get_mimes_from_category(category) |> pick
   end
 
   defp get_mimes_from_category(category) do
