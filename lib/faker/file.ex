@@ -91,7 +91,8 @@ defmodule Faker.File do
   end
 
   defp pick(list) do
-    list |> Enum.random
+    list
+    |> Enum.at(:crypto.rand_uniform(0, Enum.count(list)))
   end
 
 end
