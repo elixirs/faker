@@ -43,6 +43,7 @@ to generate a random name.
 - [Faker.Color](#fakercolor)
 - [Faker.Commerce](#fakercommerce)
 - [Faker.Company](#fakercompany)
+- [Faker.File](#fakerfile)
 - [Faker.Internet](#fakerinternet)
 - [Faker.Lorem](#fakerlorem)
 - [Faker.Lorem.Shakespeare](#fakerloremshakespeare)
@@ -224,6 +225,25 @@ Faker.Company.catch_phrase #=> "Profound stable strategy""
 Faker.Company.name #=> "Erdman, Rogahn and Bailey""
 
 Faker.Company.suffix #=> "Group"
+
+```
+
+### Faker.File
+-----------------
+
+```elixir
+
+Faker.File.file_extension #=> "mp3"
+
+Faker.File.file_extension(:video) #=> "webm"
+
+Faker.File.file_name #=> "voluptaes.jpg"
+
+Faker.File.file_name(:text) #=> "reo.json"
+
+Faker.File.mime_type #=> "application/atom+xml"
+
+Faker.File.mime_type(:image) #=> "image/gif"
 
 ```
 
