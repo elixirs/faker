@@ -10,6 +10,7 @@ otp_release:
   - 18.1
   - 18.2
   - 18.3
+  - 19.0
 notifications:
   recipients:
     - igasgeek@me.com
