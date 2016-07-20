@@ -57,8 +57,8 @@ defmodule Faker.Address do
   """
   @spec latitude() :: float
   def latitude do
-    :random.seed(:os.timestamp)
-    ((:random.uniform * 180) - 90)
+    :rand.seed(:exs64, :os.timestamp)
+    ((:rand.uniform * 180) - 90)
   end
 
   @doc """
@@ -66,8 +66,8 @@ defmodule Faker.Address do
   """
   @spec longitude() :: float
   def longitude do
-    :random.seed(:os.timestamp)
-    ((:random.uniform * 360) - 180)
+    :rand.seed(:exs64, :os.timestamp)
+    ((:rand.uniform * 360) - 180)
   end
 
   @doc """

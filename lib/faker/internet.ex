@@ -28,7 +28,7 @@ defmodule Faker.Internet do
   end
 
   defp user_name(0), do: "#{Faker.Name.first_name |> String.replace(~s(  ), ~s()) |> String.downcase}#{:crypto.rand_uniform(1900, 2100)}"
-  defp user_name(1), do: "#{:random.seed(:os.timestamp); [ Faker.Name.first_name, Faker.Name.last_name  ] |> Enum.map_join(hd(Enum.shuffle(~w(. _))), &(String.replace(&1, ~s(  ), ~s()))) |> String.downcase}"
+  defp user_name(1), do: "#{:rand.seed(:exs64, :os.timestamp); [ Faker.Name.first_name, Faker.Name.last_name  ] |> Enum.map_join(hd(Enum.shuffle(~w(. _))), &(String.replace(&1, ~s(  ), ~s()))) |> String.downcase}"
   @doc """
   Returns a random domain word
   """
@@ -58,7 +58,7 @@ defmodule Faker.Internet do
   """
   @spec safe_email() :: String.t
   def safe_email do
-    "#{user_name}@example.#{:random.seed(:os.timestamp);hd(Enum.shuffle(~w(org com net)))}"
+    "#{user_name}@example.#{:rand.seed(:exs64, :os.timestamp);hd(Enum.shuffle(~w(org com net)))}"
   end
 
   @doc """
