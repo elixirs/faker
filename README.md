@@ -27,6 +27,10 @@ Do a `mix deps.get` to fetch the dependency. That's it.
 
 If you want to use `faker` outside tests remove `, only: :test` part.
 
+### Requirements
+
+* OTP18+
+
 ## Usage
 
 You need to start `:faker` application, but due to the many usages of fake data,

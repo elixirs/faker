@@ -6,12 +6,13 @@ elixir:
   - 1.2.4
   - 1.3.2
 otp_release:
-  - 17.5
   - 18.0
   - 18.1
   - 18.2
   - 18.3
   - 19.0
+before_script:
+  - kerl list installations
 notifications:
   recipients:
     - igasgeek@me.com
