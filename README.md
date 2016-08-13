@@ -30,6 +30,7 @@ If you want to use `faker` outside tests remove `, only: :test` part.
 ### Requirements
 
 * OTP18+
+* Elixir 1.1+
 
 ## Usage
 
