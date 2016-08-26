@@ -3,7 +3,12 @@
 **Faker** is a pure [Elixir](http://elixir-lang.org/) library for generating
 fake data.
 
-Inspired by: Ruby [faker](https://github.com/stympy/faker) & [ffaker](https://github.com/ffaker/ffaker), PHP [Faker](https://github.com/fzaninotto/Faker), Python [faker](https://github.com/joke2k/Faker), Erlang [fakerl](https://github.com/piesie/fakerl), and Haskell [faker](https://github.com/gazay/faker).
+Inspired by: Ruby [faker](https://github.com/stympy/faker) &
+[ffaker](https://github.com/ffaker/ffaker),
+PHP [Faker](https://github.com/fzaninotto/Faker),
+Python [faker](https://github.com/joke2k/Faker),
+Erlang [fakerl](https://github.com/piesie/fakerl), and
+Haskell [faker](https://github.com/gazay/faker).
 
 ## Install
 
@@ -22,20 +27,20 @@ If you want to use `faker` outside tests remove `, only: :test` part.
 
 ### Requirements
 
-* OTP18+
-* Elixir 1.1+
+*   OTP18+
+*   Elixir 1.1+
 
 ## Usage
 
 You need to start `:faker` application, but due to the many usages of fake data,
 (seed database, tests, etc) there's no right place to do it. For example, if you
 want to use it in tests, just add `Faker.start` to `test/test_helper.exs`, then,
-use any function described in the [documentation](http://hexdocs.pm/faker/) or in
-[usage examples](https://github.com/igas/faker/blob/master/USAGE.md).
+use any function described in the [documentation](http://hexdocs.pm/faker/) or
+in [usage examples](https://github.com/igas/faker/blob/master/USAGE.md).
 
 ## Troubleshooting
 
-* If you get a message like the one below when you call `Faker.Address.city`,
+*   If you get a message like the one below when you call `Faker.Address.city`,
 you need to add `:faker` to your application's mix file, in the `applications`
 function, as above.
 
@@ -47,8 +52,8 @@ function, as above.
 
 ## Tools
 
-Faker was designed as a lightweight library, that's why it can be easily used with
-other tools.
+Faker was designed as a lightweight library, that's why it can be easily used
+with other tools.
 
 ## Templating
 
@@ -60,6 +65,6 @@ You can build templates for testing purposes with the
 
 [![Sponsored by Evil Martians](https://evilmartians.com/badges/sponsored-by-evil-martians.svg)](https://evilmartians.com/)
 
-# [License](https://github.com/igas/faker/blob/master/LICENSE)
+## [License](https://github.com/igas/faker/blob/master/LICENSE)
 
 Released under the MIT License.
