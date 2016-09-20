@@ -12,6 +12,7 @@
 - [Faker.Lorem.Shakespeare](#fakerloremshakespeare)
 - [Faker.Name](#fakername)
 - [Faker.Team](#fakerteam)
+- [Faker.Pokemon](#fakerpokemon)
 
 ### Faker.Address
 
@@ -256,4 +257,12 @@ Faker.Name.title #=> "Chief Brand Planner"
 Faker.Team.creature #=> "chickens"
 
 Faker.Team.name #=> "Delaware ants"
+```
+
+### Faker.Pokemon
+
+```elixir
+Faker.Pokemon.name #=> "Pikachu"
+
+Faker.Pokemon.location #=> "Pallet Town"
 ```
