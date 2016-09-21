@@ -37,7 +37,7 @@ defmodule Faker.Pokemon.En do
     sampler :location, ["Accumula Town", "Ambrette Town", "Anistar City", "Anville Town",
     "Aquacorde Town", "Aspertia City", "Azalea Town", "Black City", "Blackthorn City",
     "Camphrier Town", "Canalave City", "Castelia City", "Celadon City", "Celestic Town",
-    "Cerulean City", "Cherrygrove City", "Cianwood City", "Cinnabar Island", nil,
+    "Cerulean City", "Cherrygrove City", "Cianwood City", "Cinnabar Island",
     "Coumarine City", "Couriway Town", "Cyllage City", "Dendemille Town", "Dewford Town",
     "Driftveil City", "Ecruteak City", "Eterna City", "Ever Grande City", "Fallarbor Town",
     "Fight Area", "Five Island", "Floaroma Town", "Floccesy Town", "Fortree City",
