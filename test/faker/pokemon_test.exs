@@ -5,8 +5,7 @@ defmodule PokemonTest do
     assert is_binary(Faker.Pokemon.name)
   end
 
-    test "location/0" do
-      assert is_binary(Faker.Pokemon.location)
-    end
-
+  test "location/0" do
+    assert is_binary(Faker.Pokemon.location)
+  end
 end
