@@ -20,4 +20,16 @@ defmodule BeerTest do
   test "style/0" do
     assert is_binary(Faker.Beer.style)
   end
+
+  test "ibu/0" do
+    assert is_binary(Faker.Beer.ibu)
+  end
+
+  test "alcohol/0" do
+    assert is_binary(Faker.Beer.alcohol)
+  end
+
+  test "blg/0" do
+    assert is_binary(Faker.Beer.blg)
+  end
 end
