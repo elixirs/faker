@@ -4,3 +4,6 @@ erl_crash.dump
 *.ez
 doc
 *.swp
+
+.idea
+*.iml
