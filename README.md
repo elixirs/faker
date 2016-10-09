@@ -3,12 +3,24 @@
 **Faker** is a pure [Elixir](http://elixir-lang.org/) library for generating
 fake data.
 
-Inspired by: Ruby [faker](https://github.com/stympy/faker) &
-[ffaker](https://github.com/ffaker/ffaker),
-PHP [Faker](https://github.com/fzaninotto/Faker),
-Python [faker](https://github.com/joke2k/Faker),
-Erlang [fakerl](https://github.com/piesie/fakerl), and
-Haskell [faker](https://github.com/gazay/faker).
+## Quickstart
+
+* add `{:faker, "~> 0.7"}` to your deps in `mix.exs`;
+* add `:faker` to list of your applications;
+
+Example `mix.exs`:
+
+```elixir
+...
+  def application do
+    [applications: [:logger, :faker]]
+  end
+...
+  defp deps do
+    [{:faker, "~> 0.7"}]
+  end
+...
+```
 
 ## Install
 
