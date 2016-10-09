@@ -7,6 +7,7 @@ fake data.
 
 * add `{:faker, "~> 0.7"}` to your deps in `mix.exs`;
 * add `:faker` to list of your applications;
+* jump to [usage examples](https://github.com/igas/faker/blob/master/USAGE.md).
 
 Example `mix.exs`:
 
