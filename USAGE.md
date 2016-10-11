@@ -106,15 +106,6 @@ Faker.Color.rgb_decimal #=> {55, 2, 76}
 Faker.Code.rgb_hex #=> "07E026"
 ```
 
-### Faker.Color
-
-```elixir
-Faker.Color.rgb_decimal #=> {55, 2, 76}
-
-Faker.Code.rgb_hex #=> "07E026"
-```
-
-
 ### Faker.Commerce
 
 ```elixir
