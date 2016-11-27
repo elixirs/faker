@@ -1,4 +1,6 @@
 defmodule Faker.Internet do
+  alias Faker.Name.En, as: Name
+
   @moduledoc """
   Functions for generating internet related data
   """
@@ -27,14 +29,14 @@ defmodule Faker.Internet do
     user_name(:crypto.rand_uniform(0, 2))
   end
 
-  defp user_name(0), do: "#{Faker.Name.first_name |> String.replace(~s(  ), ~s()) |> String.downcase}#{:crypto.rand_uniform(1900, 2100)}"
-  defp user_name(1), do: "#{:rand.seed(:exs64, :os.timestamp); [ Faker.Name.first_name, Faker.Name.last_name  ] |> Enum.map_join(hd(Enum.shuffle(~w(. _))), &(String.replace(&1, ~s(  ), ~s()))) |> String.downcase}"
+  defp user_name(0), do: "#{Name.first_name |> String.replace(~s(  ), ~s()) |> String.downcase}#{:crypto.rand_uniform(1900, 2100)}"
+  defp user_name(1), do: "#{:rand.seed(:exs64, :os.timestamp); [ Name.first_name, Name.last_name  ] |> Enum.map_join(hd(Enum.shuffle(~w(. _))), &(String.replace(&1, ~s(  ), ~s()))) |> String.downcase}"
   @doc """
   Returns a random domain word
   """
   @spec domain_word() :: String.t
   def domain_word do
-    "#{Faker.Name.last_name |> String.split(["'"]) |> Enum.join |> String.downcase}"
+    "#{Name.last_name |> String.split(["'"]) |> Enum.join |> String.downcase}"
   end
 
   @doc """
@@ -107,9 +109,10 @@ defmodule Faker.Internet do
   Generates an ipv6 address
   """
   @spec ip_v6_address() :: String.t
+  @lint {Credo.Check.Refactor.PipeChainStart, false}
   def ip_v6_address do
     Enum.map_join 1..8, ":", fn(_part) ->
-      Integer.to_string(:crypto.rand_uniform(0, 65536), 16)
+      Integer.to_string(:crypto.rand_uniform(0, 65_536), 16)
       |> String.rjust(4, ?0)
     end
   end
@@ -118,6 +121,7 @@ defmodule Faker.Internet do
   Generates a mac address
   """
   @spec mac_address() :: String.t
+  @lint {Credo.Check.Refactor.PipeChainStart, false}
   def mac_address do
     Enum.map_join(1..6, ":", fn(_part) ->
       Integer.to_string(:crypto.rand_uniform(0, 256), 16)

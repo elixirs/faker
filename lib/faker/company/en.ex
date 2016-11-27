@@ -1,6 +1,8 @@
 defmodule Faker.Company.En do
   import Faker, only: [sampler: 2]
 
+  alias Faker.Name.En, as: Name
+
   @moduledoc """
   Functions for company data in English
   """
@@ -58,10 +60,10 @@ defmodule Faker.Company.En do
   """
   @spec name() :: String.t
   def name, do: name(:crypto.rand_uniform 0, 3)
-  defp name(0), do: "#{Faker.Name.last_name} #{suffix}"
-  defp name(1), do: "#{Faker.Name.last_name}-#{Faker.Name.last_name}"
+  defp name(0), do: "#{Name.last_name} #{suffix}"
+  defp name(1), do: "#{Name.last_name}-#{Name.last_name}"
   defp name(2) do
-    "#{Faker.Name.last_name}, #{Faker.Name.last_name} and #{Faker.Name.last_name}"
+    "#{Name.last_name}, #{Name.last_name} and #{Name.last_name}"
   end
 
   @doc """

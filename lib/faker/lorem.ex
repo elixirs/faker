@@ -19,67 +19,74 @@ defmodule Faker.Lorem do
   def characters(range \\ %Range{first: 15, last: 255})
 
   def characters(%Range{first: first, last: last}) do
-    characters(:crypto.rand_uniform(first, last+1))
+    characters(:crypto.rand_uniform(first, last + 1))
   end
 
   @doc """
   Returns a character list. It's length is determined by the parameter provided
   """
   @spec characters(integer) :: [char]
+  @lint {Credo.Check.Refactor.PipeChainStart, false}
   def characters(num) do
     Stream.repeatedly(&character/0)
     |> Enum.take(num)
   end
 
   @doc """
-  Returns a string with a random amount of sentences (in between the specified range)
+  Returns a string with a random amount of sentences (in between the specified
+  range)
   If no range is specified it defaults to 2..5
   """
-  @spec paragraph(Range.t) :: String.t
+  @spec paragraph(integer | Range.t) :: String.t
   def paragraph(range \\ %Range{first: 2, last: 5})
 
   def paragraph(%Range{first: first, last: last}) do
-    paragraph(:crypto.rand_uniform(first, last+1))
+    paragraph(:crypto.rand_uniform(first, last + 1))
   end
 
   @doc """
   Returns a string with an amount of sentences equal to the parameter provided
   """
-  @spec paragraph(integer) :: String.t
   def paragraph(num) do
-    sentences(num)
+    num
+    |> sentences()
     |> Enum.join(" ")
   end
 
   @doc """
-  Returns a string with a random amount of paragraphs (in between the specified range)
+  Returns a string with a random amount of paragraphs (in between the specified
+  range)
   If no range is specified it defaults to 2..5
   """
   @spec paragraphs(Range.t) :: String.t
   def paragraphs(range \\ %Range{first: 2, last: 5})
 
   def paragraphs(%Range{first: first, last: last}) do
-    paragraphs(:crypto.rand_uniform(first, last+1))
+    paragraphs(:crypto.rand_uniform(first, last + 1))
   end
 
   @doc """
   Returns a string with an amount of paragraphs equal to the parameter provided
   """
   @spec paragraphs(integer) :: String.t
+  @lint {Credo.Check.Refactor.PipeChainStart, false}
   def paragraphs(num) do
     Stream.repeatedly(&paragraph/0)
     |> Enum.take(num)
   end
 
   @doc """
-  Returns a string with a random amount of words (in between the specified range)
+  Returns a string with a random amount of words (in between the specified
+  range)
   If no range is specified it defaults to 4..10
   """
   @spec sentence(Range.t) :: String.t
   def sentence(range \\ %Range{first: 4, last: 10})
 
   def sentence(%Range{first: first, last: last}) do
-    sentence(:crypto.rand_uniform(first, last+1), hd(Enum.shuffle([".", ".", ".", "!", "?"])))
+    first
+    |> :crypto.rand_uniform(last + 1)
+    |> sentence(hd(Enum.shuffle([".", ".", ".", "!", "?"])))
   end
 
   @doc """
@@ -96,7 +103,8 @@ defmodule Faker.Lorem do
   """
   @spec sentence(integer, binary) :: String.t
   def sentence(num, mark) when is_integer(num) and is_binary(mark) do
-    tmp = words(num)
+    tmp = num
+    |> words()
     |> Enum.join(" ")
     |> String.capitalize
     tmp <> mark
@@ -111,13 +119,14 @@ defmodule Faker.Lorem do
   def sentences(range \\ %Range{first: 2, last: 5})
 
   def sentences(%Range{first: first, last: last}) do
-    sentences(:crypto.rand_uniform(first, last+1))
+    sentences(:crypto.rand_uniform(first, last + 1))
   end
 
   @doc """
   Returns a list of strings of length equal to the parameter provided
   """
   @spec sentences(integer) :: [String.t]
+  @lint {Credo.Check.Refactor.PipeChainStart, false}
   def sentences(num) do
     Stream.repeatedly(&sentence/0)
     |> Enum.take(num)
@@ -132,7 +141,7 @@ defmodule Faker.Lorem do
   def words(range \\ %Range{first: 3, last: 6})
 
   def words(%Range{first: first, last: last}) do
-    words(:crypto.rand_uniform(first, last+1))
+    words(:crypto.rand_uniform(first, last + 1))
   end
 
   @doc """
@@ -140,6 +149,7 @@ defmodule Faker.Lorem do
   The length of the list equals the parameter provided
   """
   @spec words(integer) :: [String.t]
+  @lint {Credo.Check.Refactor.PipeChainStart, false}
   def words(num) do
     Stream.repeatedly(&word/0)
     |> Enum.take(num)

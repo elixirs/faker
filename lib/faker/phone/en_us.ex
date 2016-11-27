@@ -31,13 +31,14 @@ defmodule Faker.Phone.EnUs do
   """
   @spec phone() :: String.t
   def phone do
-    case digit(0, 3) do
-      0 -> "(#{area_code}) #{exchange_code}-#{subscriber_number}"
-      1 -> "#{area_code}/#{exchange_code}-#{subscriber_number}"
-      _ ->
-        sep = std_separator
-        "#{area_code}#{sep}#{exchange_code}#{sep}#{subscriber_number}"
-    end
+    phone(digit(0, 3))
+  end
+
+  defp phone(0), do: "(#{area_code}) #{exchange_code}-#{subscriber_number}"
+  defp phone(1), do: "#{area_code}/#{exchange_code}-#{subscriber_number}"
+  defp phone(_) do
+    sep = std_separator
+    "#{area_code}#{sep}#{exchange_code}#{sep}#{subscriber_number}"
   end
 
   @doc """

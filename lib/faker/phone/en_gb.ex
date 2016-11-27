@@ -6,23 +6,25 @@ defmodule Faker.Phone.EnGb do
   [Telephone numbers in the United Kingdom](https://en.wikipedia.org/wiki/Telephone_numbers_in_the_United_Kingdom).
   """
 
-  @prefixes %{"International dialling" => ["0"],
-              "Geographic numbers with area codes - for list see telephone area codes" => ["1"],
-              "Geographic numbers with area codes - for list see telephone area codes" => ["2"],
-              "Geographic rate numbers - used by public sector and not-for-profit bodies" => ["30"],
-              "Geographic rate numbers - new allocations" => ["33"],
-              "Geographic rate numbers - migrating numbers from matching 084 numbers" => ["34"],
-              "Geographic rate numbers - migrating numbers from matching 087 numbers" => ["37"],
-              "Corporate numbers" => ["55"],
-              "Location independent electronic communications service (VoIP)" => ["56"],
-              "Personal numbering service" => ["70"],
-              "Radiopaging services" => ["76"],
-              "Freephone numbers" => ["80"],
-              "Internet for schools" => ["82"],
-              "Basic revenue share numbers" => ["84"],
-              "Higher rate revenue share numbers" => ["87"],
-              "Premium Rate Services (PRS) revenue share numbers" => ["90", "91"],
-              "Sexual Entertainment Services (SES) revenue share at a premium rate" => ["908", "909", "98"]}
+  @prefixes %{
+    "International dialling" => ["0"],
+    "Geographic numbers with area codes - for list see telephone area codes" => ["1"],
+    "Geographic numbers with area codes - for list see telephone area codes" => ["2"],
+    "Geographic rate numbers - used by public sector and not-for-profit bodies" => ["30"],
+    "Geographic rate numbers - new allocations" => ["33"],
+    "Geographic rate numbers - migrating numbers from matching 084 numbers" => ["34"],
+    "Geographic rate numbers - migrating numbers from matching 087 numbers" => ["37"],
+    "Corporate numbers" => ["55"],
+    "Location independent electronic communications service (VoIP)" => ["56"],
+    "Personal numbering service" => ["70"],
+    "Radiopaging services" => ["76"],
+    "Freephone numbers" => ["80"],
+    "Internet for schools" => ["82"],
+    "Basic revenue share numbers" => ["84"],
+    "Higher rate revenue share numbers" => ["87"],
+    "Premium Rate Services (PRS) revenue share numbers" => ["90", "91"],
+    "Sexual Entertainment Services (SES) revenue share at a premium rate" => ["908", "909", "98"]
+  }
 
   @doc """
   Returns a random UK phone number

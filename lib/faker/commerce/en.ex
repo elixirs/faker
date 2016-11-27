@@ -18,14 +18,17 @@ defmodule Faker.Commerce.En do
   sampler :department, ["Books", "Movies, Music & Games", "Electronics & Computers", "Home, Garden & Tools", "Grocery, Health & Beauty", "Toys, Kids & Baby", "Clothing, Shoes & Jewelery", "Sports & Outdoors", "Automotive & Industrial"]
 
   @doc """
-  Returns a complete product name, based on product adjectives, product materials, product names
+  Returns a complete product name, based on product adjectives, product
+  materials, product names
   """
   @spec product_name() :: String.t
   def product_name do
     product_name(:crypto.rand_uniform(0, 3))
   end
 
-  defp product_name(0), do: "#{product_name_adjective} #{product_name_material} #{product_name_product}"
+  defp product_name(0) do
+    "#{product_name_adjective} #{product_name_material} #{product_name_product}"
+  end
   defp product_name(1), do: "#{product_name_adjective} #{product_name_product}"
   defp product_name(2), do: "#{product_name_material} #{product_name_product}"
 

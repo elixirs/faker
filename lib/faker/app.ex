@@ -1,6 +1,8 @@
 defmodule Faker.App do
   import Faker, only: [sampler: 2]
 
+  alias Faker.{Name,Company}
+
   @moduledoc """
   Functions for generating app specific properties.
   """
@@ -29,6 +31,6 @@ defmodule Faker.App do
     author(:crypto.rand_uniform(0, 2))
   end
 
-  defp author(0), do: Faker.Name.name
-  defp author(1), do: Faker.Company.name
+  defp author(0), do: Name.name
+  defp author(1), do: Company.name
 end

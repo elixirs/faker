@@ -28,7 +28,8 @@ defmodule Faker.Commerce do
   end
 
   @doc """
-  Returns a complete product name, based on product adjectives, product materials, product names
+  Returns a complete product name, based on product adjectives, product
+  materials, product names
   """
   @spec product_name() :: String.t
   def product_name do

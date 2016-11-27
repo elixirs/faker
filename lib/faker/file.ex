@@ -1,4 +1,5 @@
 defmodule Faker.File do
+  alias Faker.Lorem
 
   @moduledoc """
   Functions for generating file related data
@@ -22,7 +23,7 @@ defmodule Faker.File do
     text: ~w(text/cmd text/css text/csv text/html text/javascript text/plain text/vcard text/xml),
     video: ~w(video/mpeg video/mp4 video/ogg video/quicktime video/webm video/x-matroska video/x-ms-wmv video/x-flv)
   }
- 
+
   @categories_extensions Map.keys(@extensions)
   @categories_mimes Map.keys(@mimes)
 
@@ -31,7 +32,7 @@ defmodule Faker.File do
   """
   @spec file_extension() :: String.t
   def file_extension do
-    @categories_extensions 
+    @categories_extensions
       |> pick
       |> file_extension
   end
@@ -40,9 +41,11 @@ defmodule Faker.File do
   Returns a random file extension from the category given
   Available categories: :audio, :image, :text, :video, :office
   """
-  @spec file_extension(:atom) :: String.t 
+  @spec file_extension(:atom) :: String.t
   def file_extension(category) do
-    get_extensions_from_category(category) |> pick
+    category
+    |> get_extensions_from_category()
+    |> pick()
   end
 
 
@@ -51,22 +54,22 @@ defmodule Faker.File do
   """
   @spec file_name() :: String.t
   def file_name do
-    Faker.Lorem.word <> "." <> file_extension()
+    Lorem.word <> "." <> file_extension()
   end
 
   @doc """
   Returns a random file name from the category given
   Available categories: :audio, :image, :text, :video, :office
   """
-  @spec file_name(:atom) :: String.t 
+  @spec file_name(:atom) :: String.t
   def file_name(category) do
-    Faker.Lorem.word <> "." <> file_extension(category)
+    Lorem.word <> "." <> file_extension(category)
   end
 
   @doc """
   Returns a random mime type
   """
-  @spec mime_type :: String.t 
+  @spec mime_type :: String.t
   def mime_type do
     @categories_mimes
       |> pick
@@ -75,11 +78,14 @@ defmodule Faker.File do
 
   @doc """
   Returns a random mime type from the category given
-  Available categories: :application, :audio, :image, :message, :model, :multipart, :text, :video
+  Available categories: :application, :audio, :image, :message, :model,
+  :multipart, :text, :video
   """
-  @spec mime_type(:atom) :: String.t 
+  @spec mime_type(:atom) :: String.t
   def mime_type(category) do
-    get_mimes_from_category(category) |> pick
+    category
+    |> get_mimes_from_category()
+    |> pick()
   end
 
   defp get_mimes_from_category(category) do
@@ -94,5 +100,4 @@ defmodule Faker.File do
     list
     |> Enum.at(:crypto.rand_uniform(0, Enum.count(list)))
   end
-
 end

@@ -8,7 +8,8 @@ defmodule Faker.Color do
   """
   @spec rgb_hex() :: binary
   def rgb_hex do
-    :io_lib.format("~2.16.0B~2.16.0B~2.16.0B", Tuple.to_list(rgb_decimal))
+    "~2.16.0B~2.16.0B~2.16.0B"
+    |> :io_lib.format(Tuple.to_list(rgb_decimal))
     |> :erlang.iolist_to_binary
   end
 
@@ -41,5 +42,4 @@ defmodule Faker.Color do
   end
 
   defp localised_module, do: Module.concat(__MODULE__, Faker.mlocale)
-
 end

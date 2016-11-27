@@ -1,4 +1,8 @@
 defmodule Faker.Code do
+  @moduledoc """
+  Functions for generate common codes.
+  """
+
   defdelegate isbn, to: Faker.Code, as: :isbn10
 
   def isbn10 do
@@ -20,11 +24,12 @@ defmodule Faker.Code do
   end
 
   defp check_digit(sequence, calc_function, size) do
-    String.reverse(sequence <> "0")
-    |> String.graphemes
-    |> Stream.with_index
+    sequence <> "0"
+    |> String.reverse()
+    |> String.graphemes()
+    |> Stream.with_index()
     |> Stream.map(calc_function)
-    |> Enum.sum
+    |> Enum.sum()
     |> grapheme_for_last(size)
   end
 

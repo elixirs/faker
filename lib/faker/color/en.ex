@@ -16,5 +16,4 @@ defmodule Faker.Color.En do
   """
   @spec fancy_name() :: String.t
   sampler :fancy_name, ["Cesious", "Citrine", "Damson", "Greige", "Luteous", "Ochre", "Tawny", "Watchet"]
-
 end

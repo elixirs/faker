@@ -18,7 +18,7 @@ defmodule Faker.Bitcoin do
   end
 
   defp base58(hash) do
-    hash <> :binary.part(:crypto.hash(:sha256, :crypto.hash(:sha256, hash)), {0,4})
+    hash <> :binary.part(:crypto.hash(:sha256, :crypto.hash(:sha256, hash)), {0, 4})
     |> :binary.bin_to_list
     |> Enum.reverse
     |> Enum.with_index

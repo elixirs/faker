@@ -1,4 +1,6 @@
 defmodule Faker.Avatar do
+  alias Faker.Lorem
+
   @moduledoc """
   Functions for generate random urls for avatars.
   """
@@ -8,7 +10,7 @@ defmodule Faker.Avatar do
   """
   @spec image_url() :: String.t
   def image_url do
-    "http://robohash.org#{set}#{bg}/#{Faker.Lorem.characters(1..20)}"
+    "http://robohash.org#{set}#{bg}/#{Lorem.characters(1..20)}"
   end
 
   @doc """
@@ -26,7 +28,7 @@ defmodule Faker.Avatar do
   @spec image_url(integer, integer) :: String.t
   def image_url(width, height)
   when is_integer(width) and is_integer(height) do
-    slug = Faker.Lorem.characters(1..20)
+    slug = Lorem.characters(1..20)
     "http://robohash.org#{set}#{bg}/#{slug}?size=#{width}x#{height}"
   end
 
