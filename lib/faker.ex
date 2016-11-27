@@ -78,22 +78,24 @@ defmodule Faker do
 
   defmacro sampler(name, data) do
     count = Enum.count(data)
+    mapped_data = data |> Enum.with_index |> Enum.into(%{}, fn({k, v}) -> {v, k} end) |> Macro.escape()
 
     quote do
       def unquote(name)() do
-        unquote(data)
-        |> Enum.at(:crypto.rand_uniform(0, unquote(count)))
+        unquote(mapped_data)
+        |> Map.get(:crypto.rand_uniform(0, unquote(count)))
       end
     end
   end
 
   defmacro samplerp(name, data) do
     count = Enum.count(data)
+    mapped_data = data |> Enum.with_index |> Enum.into(%{}, fn({k, v}) -> {v, k} end) |> Macro.escape()
 
     quote do
       defp unquote(name)() do
-        unquote(data)
-        |> Enum.at(:crypto.rand_uniform(0, unquote(count)))
+        unquote(mapped_data)
+        |> Map.get(:crypto.rand_uniform(0, unquote(count)))
       end
     end
   end
