@@ -10,8 +10,6 @@ otp_release:
   - 18.2
   - 18.3
   - 19.0
-script:
-  - mix test && mix credo --strict
 before_script:
   - kerl list installations
 notifications:
