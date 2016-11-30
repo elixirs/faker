@@ -82,6 +82,13 @@ defmodule AddressTest do
     assert String.length(Faker.Address.country_code) == 2
   end
 
+  test "country matches with seed" do
+    :random.seed({0,0,0})
+    assert Faker.Address.country_code == "AI"
+    :random.seed({0,0,0})
+    assert Faker.Address.country == "Anguilla"
+  end
+
   def cover?(left, value, right) do
     left <= value and value <= right
   end

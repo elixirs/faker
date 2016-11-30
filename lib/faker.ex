@@ -82,7 +82,7 @@ defmodule Faker do
     quote do
       def unquote(name)() do
         unquote(data)
-        |> Enum.at(:crypto.rand_uniform(0, unquote(count)))
+        |> Enum.at(:random.uniform(unquote(count))-1)
       end
     end
   end
@@ -93,7 +93,7 @@ defmodule Faker do
     quote do
       defp unquote(name)() do
         unquote(data)
-        |> Enum.at(:crypto.rand_uniform(0, unquote(count)))
+        |> Enum.at(:random.uniform(unquote(count))-1)
       end
     end
   end
