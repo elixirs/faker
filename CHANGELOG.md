@@ -8,6 +8,30 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ## Unreleased
 
+### Added
+
+* `Faker.Beer` [@orieken][]
+* `Faker.Nato` [@petehamilton][]
+* `Faker.Pokemon` [@orieken][]
+* credo [@igas][]
+
+### Changed
+
+* Underlaying data structure changed to maps to improve performance [@igas][]
+* Improved `Faker.Beer` usage [@tbash][]
+
+### Deprecated
+
+### Removed
+
+* Usage docs duplication [@piton4eg][]
+
+### Fixed
+
+* Elixir 1.4 deprecation warnings [@igas][]
+
+### Security
+
 ## 0.7.0
 
 * Upgrade to latest versions [@belaustegui][]
@@ -145,15 +169,19 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
   * `creature/0`
 
-[@GesJeremie]: https://github.com/GesJeremie
 [@adam-wanninger]: https://github.com/adam-wanninger
 [@belaustegui]: https://github.com/belaustegui
 [@devshane]: https://github.com/devshane
 [@efexen]: https://github.com/efexen
+[@GesJeremie]: https://github.com/GesJeremie
 [@igas]: https://github.com/igas
 [@jarednorman]: https://github.com/jarednorman
 [@johnhamelink]: https://github.com/johnhamelink
 [@lowks]: https://github.com/lowks
+[@orieken]: https://github.com/orieken
+[@petehamilton]: https://github.com/petehamilton
+[@piton4eg]: https://github.com/piton4eg
 [@saulecabrera]: https://github.com/saulecabrera
+[@tbash]: https://github.com/tbash
 [@vforvova]: https://github.com/vforvova
 [@zmoshansky]: https://github.com/zmoshansky
