@@ -34,11 +34,11 @@ defmodule Faker.Phone.EnUs do
     phone(digit(0, 3))
   end
 
-  defp phone(0), do: "(#{area_code}) #{exchange_code}-#{subscriber_number}"
-  defp phone(1), do: "#{area_code}/#{exchange_code}-#{subscriber_number}"
+  defp phone(0), do: "(#{area_code()}) #{exchange_code()}-#{subscriber_number()}"
+  defp phone(1), do: "#{area_code()}/#{exchange_code()}-#{subscriber_number()}"
   defp phone(_) do
-    sep = std_separator
-    "#{area_code}#{sep}#{exchange_code}#{sep}#{subscriber_number}"
+    sep = std_separator()
+    "#{area_code()}#{sep}#{exchange_code()}#{sep}#{subscriber_number()}"
   end
 
   @doc """

@@ -32,9 +32,9 @@ defmodule Faker.Phone.EnGb do
   @spec number() :: String.t
   def number do
     if :crypto.rand_uniform(0, 2) == 0 do
-      landline_number
+      landline_number()
     else
-      cell_number
+      cell_number()
     end
   end
 
@@ -43,7 +43,7 @@ defmodule Faker.Phone.EnGb do
   """
   @spec landline_number() :: String.t
   def landline_number do
-    "+44#{number_prefix}"
+    "+44#{number_prefix()}"
     |> random_numbers_until(12)
   end
 
@@ -53,7 +53,7 @@ defmodule Faker.Phone.EnGb do
   """
   @spec cell_number() :: String.t
   def cell_number do
-    Faker.format(cell_number_format)
+    Faker.format(cell_number_format())
   end
 
   @doc """

@@ -41,15 +41,15 @@ defmodule Faker.Nato do
   end
 
   defp format(<<"#" :: utf8, tail :: binary>>, acc) do
-    format(tail, <<acc :: binary, "#{digit_code_word}">>)
+    format(tail, <<acc :: binary, "#{digit_code_word()}">>)
   end
 
   defp format(<<"?" :: utf8, tail :: binary>>, acc) do
-    format(tail, <<acc :: binary, "#{letter_code_word}">>)
+    format(tail, <<acc :: binary, "#{letter_code_word()}">>)
   end
 
   defp format(<<"." :: utf8, tail :: binary>>, acc) do
-    format(tail, <<acc :: binary, "#{stop_code_word}">>)
+    format(tail, <<acc :: binary, "#{stop_code_word()}">>)
   end
 
   defp format(<<other :: utf8, tail :: binary>>, acc) do

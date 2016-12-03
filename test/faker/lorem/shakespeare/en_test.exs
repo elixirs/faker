@@ -3,22 +3,22 @@ defmodule Faker.Shakespeare.EnTest do
   import Faker.Lorem.Shakespeare.En
 
   test "hamlet/0" do
-    assert String.length(hamlet) != 0
-    assert Regex.match?(~r/.+/, hamlet)
+    assert String.length(hamlet()) != 0
+    assert Regex.match?(~r/.+/, hamlet())
   end
 
   test "as_you_like_it/0" do
-    assert String.length(as_you_like_it) != 0
-    assert Regex.match?(~r/.+/, as_you_like_it)
+    assert String.length(as_you_like_it()) != 0
+    assert Regex.match?(~r/.+/, as_you_like_it())
   end
 
   test "king_richard_iii/0" do
-    assert String.length(king_richard_iii) != 0
-    assert Regex.match?(~r/.+/, king_richard_iii)
+    assert String.length(king_richard_iii()) != 0
+    assert Regex.match?(~r/.+/, king_richard_iii())
   end
 
   test "romeo_and_juliet/0" do
-    assert String.length(romeo_and_juliet) != 0
-    assert Regex.match?(~r/.+/, romeo_and_juliet)
+    assert String.length(romeo_and_juliet()) != 0
+    assert Regex.match?(~r/.+/, romeo_and_juliet())
   end
 end

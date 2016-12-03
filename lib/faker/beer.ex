@@ -56,7 +56,7 @@ defmodule Faker.Beer do
   """
   @spec alcohol :: String.t
   def alcohol do
-    random_float <> "%"
+    random_float() <> "%"
   end
 
   @doc """
@@ -64,7 +64,7 @@ defmodule Faker.Beer do
   """
   @spec blg :: String.t
   def blg do
-    random_float <> "°Blg"
+    random_float() <> "°Blg"
   end
 
   defp random_float do

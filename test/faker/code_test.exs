@@ -29,21 +29,21 @@ defmodule CodeTest do
   test "isbn/0" do
     assert is_binary(Faker.Code.isbn)
     assert String.length(Faker.Code.isbn) == 10
-    checksum10 = checksum(Faker.Code.isbn10, calc_function10)
+    checksum10 = checksum(Faker.Code.isbn10, calc_function10())
     assert rem(checksum10, 11) == 0
   end
 
   test "isbn10/0" do
     assert is_binary(Faker.Code.isbn10)
     assert String.length(Faker.Code.isbn10) == 10
-    checksum10 = checksum(Faker.Code.isbn10, calc_function10)
+    checksum10 = checksum(Faker.Code.isbn10, calc_function10())
     assert rem(checksum10, 11) == 0
   end
 
   test "isbn13/0" do
     assert is_binary(Faker.Code.isbn13)
     assert String.length(Faker.Code.isbn13) == 13
-    checksum13 = checksum Faker.Code.isbn13, calc_function13
+    checksum13 = checksum Faker.Code.isbn13, calc_function13()
     assert rem(checksum13, 10) == 0
   end
 

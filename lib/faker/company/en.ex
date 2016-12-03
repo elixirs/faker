@@ -11,7 +11,7 @@ defmodule Faker.Company.En do
   Returns a random complete english business related bullshit
   """
   @spec bs() :: String.t
-  def bs, do: "#{bullshit_prefix} #{bullshit} #{bullshit_suffix}"
+  def bs, do: "#{bullshit_prefix()} #{bullshit()} #{bullshit_suffix()}"
 
   @doc """
   Returns a random english business related bullshit
@@ -53,14 +53,14 @@ defmodule Faker.Company.En do
   Returns a random complete english catch phrase
   """
   @spec catch_phrase() :: String.t
-  def catch_phrase, do: "#{buzzword_prefix} #{buzzword} #{buzzword_suffix}"
+  def catch_phrase, do: "#{buzzword_prefix()} #{buzzword()} #{buzzword_suffix()}"
 
   @doc """
   Returns complete english company name
   """
   @spec name() :: String.t
   def name, do: name(:crypto.rand_uniform 0, 3)
-  defp name(0), do: "#{Name.last_name} #{suffix}"
+  defp name(0), do: "#{Name.last_name} #{suffix()}"
   defp name(1), do: "#{Name.last_name}-#{Name.last_name}"
   defp name(2) do
     "#{Name.last_name}, #{Name.last_name} and #{Name.last_name}"

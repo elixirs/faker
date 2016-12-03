@@ -10,7 +10,7 @@ defmodule Faker.Team.En do
   Returns a string of the form [state] [creature]
   """
   @spec name() :: String.t
-  def name, do: "#{Address.state} #{creature}"
+  def name, do: "#{Address.state} #{creature()}"
 
   @doc """
   Returns a random creature name

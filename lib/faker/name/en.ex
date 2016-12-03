@@ -10,11 +10,11 @@ defmodule Faker.Name.En do
   """
   @spec name() :: String.t
   def name, do: name(:crypto.rand_uniform(1, 11))
-  defp name(1), do: "#{prefix} #{first_name} #{last_name} #{suffix}"
-  defp name(2), do: "#{prefix} #{first_name} #{last_name}"
-  defp name(3), do: "#{first_name} #{last_name} #{suffix}"
+  defp name(1), do: "#{prefix()} #{first_name()} #{last_name()} #{suffix()}"
+  defp name(2), do: "#{prefix()} #{first_name()} #{last_name()}"
+  defp name(3), do: "#{first_name()} #{last_name()} #{suffix()}"
   defp name(n) when is_integer(n) do
-    "#{first_name} #{last_name}"
+    "#{first_name()} #{last_name()}"
   end
 
   @doc """
@@ -46,7 +46,7 @@ defmodule Faker.Name.En do
   """
   @spec title() :: String.t
   def title do
-    "#{title_descriptor} #{title_level} #{title_job}"
+    "#{title_descriptor()} #{title_level()} #{title_job()}"
   end
 
   @doc """

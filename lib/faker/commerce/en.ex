@@ -27,10 +27,10 @@ defmodule Faker.Commerce.En do
   end
 
   defp product_name(0) do
-    "#{product_name_adjective} #{product_name_material} #{product_name_product}"
+    "#{product_name_adjective()} #{product_name_material()} #{product_name_product()}"
   end
-  defp product_name(1), do: "#{product_name_adjective} #{product_name_product}"
-  defp product_name(2), do: "#{product_name_material} #{product_name_product}"
+  defp product_name(1), do: "#{product_name_adjective()} #{product_name_product()}"
+  defp product_name(2), do: "#{product_name_material()} #{product_name_product()}"
 
   @doc """
   Returns a random adjective for a product

@@ -25,10 +25,10 @@ defmodule Faker.Address do
     city(:crypto.rand_uniform(0, 4))
   end
 
-  defp city(0), do: "#{city_prefix} #{Name.first_name}#{city_suffix}"
-  defp city(1), do: "#{city_prefix} #{Name.first_name}"
-  defp city(2), do: "#{Name.first_name}#{city_suffix}"
-  defp city(3), do: "#{Name.last_name}#{city_suffix}"
+  defp city(0), do: "#{city_prefix()} #{Name.first_name}#{city_suffix()}"
+  defp city(1), do: "#{city_prefix()} #{Name.first_name}"
+  defp city(2), do: "#{Name.first_name}#{city_suffix()}"
+  defp city(3), do: "#{Name.last_name}#{city_suffix()}"
 
   @doc """
   Return city prefix.
@@ -105,15 +105,15 @@ defmodule Faker.Address do
   """
   @spec street_address() :: String.t
   def street_address do
-    "#{building_number} #{street_name}"
+    "#{building_number()} #{street_name()}"
   end
 
   @doc """
   Return `street_address/0` or if argument is `true` adds `secondary_address/0`.
   """
   @spec street_address(true | any) :: String.t
-  def street_address(true), do: street_address <> " " <> secondary_address
-  def street_address(_), do: street_address
+  def street_address(true), do: street_address() <> " " <> secondary_address()
+  def street_address(_), do: street_address()
 
   @doc """
   Return street name.
@@ -123,8 +123,8 @@ defmodule Faker.Address do
     street_name(:crypto.rand_uniform(0, 2))
   end
 
-  defp street_name(0), do: "#{Name.first_name} #{street_suffix}"
-  defp street_name(1), do: "#{Name.last_name} #{street_suffix}"
+  defp street_name(0), do: "#{Name.first_name} #{street_suffix()}"
+  defp street_name(1), do: "#{Name.last_name} #{street_suffix()}"
 
   @doc """
   Return street suffix.

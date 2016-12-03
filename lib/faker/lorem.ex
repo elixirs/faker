@@ -26,7 +26,6 @@ defmodule Faker.Lorem do
   Returns a character list. It's length is determined by the parameter provided
   """
   @spec characters(integer) :: [char]
-  @lint {Credo.Check.Refactor.PipeChainStart, false}
   def characters(num) do
     Stream.repeatedly(&character/0)
     |> Enum.take(num)
@@ -69,7 +68,6 @@ defmodule Faker.Lorem do
   Returns a string with an amount of paragraphs equal to the parameter provided
   """
   @spec paragraphs(integer) :: String.t
-  @lint {Credo.Check.Refactor.PipeChainStart, false}
   def paragraphs(num) do
     Stream.repeatedly(&paragraph/0)
     |> Enum.take(num)
@@ -126,7 +124,6 @@ defmodule Faker.Lorem do
   Returns a list of strings of length equal to the parameter provided
   """
   @spec sentences(integer) :: [String.t]
-  @lint {Credo.Check.Refactor.PipeChainStart, false}
   def sentences(num) do
     Stream.repeatedly(&sentence/0)
     |> Enum.take(num)
@@ -149,7 +146,6 @@ defmodule Faker.Lorem do
   The length of the list equals the parameter provided
   """
   @spec words(integer) :: [String.t]
-  @lint {Credo.Check.Refactor.PipeChainStart, false}
   def words(num) do
     Stream.repeatedly(&word/0)
     |> Enum.take(num)

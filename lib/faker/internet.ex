@@ -10,7 +10,7 @@ defmodule Faker.Internet do
   """
   @spec domain_name() :: String.t
   def domain_name do
-    "#{domain_word}.#{domain_suffix}"
+    "#{domain_word()}.#{domain_suffix()}"
   end
 
   @doc """
@@ -44,7 +44,7 @@ defmodule Faker.Internet do
   """
   @spec email() :: String.t
   def email do
-    "#{user_name}@#{domain_name}"
+    "#{user_name()}@#{domain_name()}"
   end
 
   @doc """
@@ -52,7 +52,7 @@ defmodule Faker.Internet do
   """
   @spec free_email() :: String.t
   def free_email do
-    "#{user_name}@#{free_email_service}"
+    "#{user_name()}@#{free_email_service()}"
   end
 
   @doc """
@@ -60,7 +60,7 @@ defmodule Faker.Internet do
   """
   @spec safe_email() :: String.t
   def safe_email do
-    "#{user_name}@example.#{:rand.seed(:exs64, :os.timestamp);hd(Enum.shuffle(~w(org com net)))}"
+    "#{user_name()}@example.#{:rand.seed(:exs64, :os.timestamp);hd(Enum.shuffle(~w(org com net)))}"
   end
 
   @doc """
@@ -79,8 +79,8 @@ defmodule Faker.Internet do
     url(:crypto.rand_uniform(0, 2))
   end
 
-  defp url(0), do: "http://#{domain_name}"
-  defp url(1), do: "https://#{domain_name}"
+  defp url(0), do: "http://#{domain_name()}"
+  defp url(1), do: "https://#{domain_name()}"
 
   @doc"""
   Returns a random image url from placekitten.com | placehold.it | dummyimage.com
@@ -109,7 +109,6 @@ defmodule Faker.Internet do
   Generates an ipv6 address
   """
   @spec ip_v6_address() :: String.t
-  @lint {Credo.Check.Refactor.PipeChainStart, false}
   def ip_v6_address do
     Enum.map_join 1..8, ":", fn(_part) ->
       Integer.to_string(:crypto.rand_uniform(0, 65_536), 16)
@@ -121,7 +120,6 @@ defmodule Faker.Internet do
   Generates a mac address
   """
   @spec mac_address() :: String.t
-  @lint {Credo.Check.Refactor.PipeChainStart, false}
   def mac_address do
     Enum.map_join(1..6, ":", fn(_part) ->
       Integer.to_string(:crypto.rand_uniform(0, 256), 16)

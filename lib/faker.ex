@@ -36,7 +36,7 @@ defmodule Faker do
   end
 
   defp format(<<"?" :: utf8, tail :: binary>>, acc) do
-    format(tail, <<acc :: binary, letter>>)
+    format(tail, <<acc :: binary, letter()>>)
   end
 
   defp format(<<other :: utf8, tail :: binary>>, acc) do
