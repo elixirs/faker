@@ -7,12 +7,30 @@ if Version.match?(System.version(), ">= 1.3.0") do
     @seconds_per_day 86400
 
     @doc """
-    Returns a random date of birth for a person aged between ~12 to ~99
+    Returns a random date of birth for a person aged between 18 and 99
     """
     @spec date_of_birth() :: Date.t
-    def date_of_birth do
-      {{ current_year, _month, _date }, _time } = :calendar.local_time()
-      { :ok, date } = Date.new current_year - :crypto.rand_uniform(12, 99), :crypto.rand_uniform(1, 12), :crypto.rand_uniform(1, 28)
+    def date_of_birth(age_or_range \\ 18..99)
+
+    @doc """
+    Returns a random date of birth for a person aged exactly N years
+    """
+    @spec date_of_birth(integer) :: Date.t
+    def date_of_birth(age) when is_integer(age) do
+      date_of_birth(%Range{first: age, last: age + 1})
+    end
+
+    @doc """
+    Returns a random date of birth for a person aged between the given range
+    """
+    @spec date_of_birth(Range.t) :: Date.t
+    def date_of_birth(%Range{first: first, last: last}) do
+      {{ current_year, current_month, current_day }, _time } = :calendar.local_time()
+      random_month = :crypto.rand_uniform(1, 13)
+      random_day = :crypto.rand_uniform(1, 29)
+      already_aged_this_year = current_month > random_month || current_month == random_month && random_day >= current_day
+      random_year = current_year - :crypto.rand_uniform(first, last) + (if already_aged_this_year, do: 1, else: 0)
+      { :ok, date } = Date.new random_year, random_month, random_day
       date
     end
 
