@@ -184,5 +184,6 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 [@piton4eg]: https://github.com/piton4eg
 [@saulecabrera]: https://github.com/saulecabrera
 [@tbash]: https://github.com/tbash
+[@tobyhinloopen]: https://github.com/tobyhinloopen
 [@vforvova]: https://github.com/vforvova
 [@zmoshansky]: https://github.com/zmoshansky
