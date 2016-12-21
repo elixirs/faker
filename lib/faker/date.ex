@@ -7,22 +7,22 @@ if Version.match?(System.version(), ">= 1.3.0") do
     @seconds_per_day 86400
 
     @doc """
-    Returns a random date of birth for a person aged between 18 and 99
+    Returns a random date of birth for a person with an age specified by a number or range
+
+    ## Examples
+
+        date_of_birth #=> ~D[1961-05-09]
+        date_of_birth(1) #=> ~D[2015-12-06]
+        date_of_birth(10..19) #=> ~D[2004-05-15]
     """
     @spec date_of_birth() :: Date.t
     def date_of_birth(age_or_range \\ 18..99)
 
-    @doc """
-    Returns a random date of birth for a person aged exactly N years
-    """
     @spec date_of_birth(integer) :: Date.t
     def date_of_birth(age) when is_integer(age) do
       date_of_birth(%Range{first: age, last: age + 1})
     end
 
-    @doc """
-    Returns a random date of birth for a person aged between the given range
-    """
     @spec date_of_birth(Range.t) :: Date.t
     def date_of_birth(%Range{first: first, last: last}) do
       {{ current_year, current_month, current_day }, _time } = :calendar.local_time()
