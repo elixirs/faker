@@ -6,6 +6,7 @@
 - [Faker.Color](#fakercolor)
 - [Faker.Commerce](#fakercommerce)
 - [Faker.Company](#fakercompany)
+- [Faker.Date](#fakerdate)
 - [Faker.File](#fakerfile)
 - [Faker.Internet](#fakerinternet)
 - [Faker.Lorem](#fakerlorem)
@@ -150,6 +151,20 @@ Faker.Company.name #=> "Erdman, Rogahn and Bailey""
 Faker.Company.suffix #=> "Group"
 ```
 
+### Faker.Date
+
+```elixir
+Faker.Date.date_of_birth #=> ~D[1961-05-09]
+
+Faker.Date.date_of_birth(1) #=> ~D[2015-12-06]
+
+Faker.Date.date_of_birth(10..19) #=> ~D[2004-05-15]
+
+Faker.Date.forward(4) #=> ~D[2016-12-25]
+
+Faker.Date.backward(4) #=> ~D[2016-12-20]
+```
+
 ### Faker.File
 
 ```elixir
@@ -245,7 +260,7 @@ Faker.Name.title #=> "Chief Brand Planner"
 ```
 
 ### Faker.Phone
-Note: Some numbers are replaced with x's to prevent any tomfoolery. 
+Note: Some numbers are replaced with x's to prevent any tomfoolery.
 
 ```elixir
 Faker.Phone.EnUs.phone #=> "555-555-xxxx"
