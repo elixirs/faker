@@ -8,6 +8,7 @@
 - [Faker.Company](#fakercompany)
 - [Faker.Date](#fakerdate)
 - [Faker.File](#fakerfile)
+- [Faker.Iban](#fakeriban)
 - [Faker.Internet](#fakerinternet)
 - [Faker.Lorem](#fakerlorem)
 - [Faker.Lorem.Shakespeare](#fakerloremshakespeare)
@@ -179,6 +180,18 @@ Faker.File.file_name(:text) #=> "reo.json"
 Faker.File.mime_type #=> "application/atom+xml"
 
 Faker.File.mime_type(:image) #=> "image/gif"
+```
+
+### Faker.Iban
+
+```elixir
+Faker.Iban.iban #=> "IT34K5534420705QL3FT3SE7OTG"
+
+Faker.Iban.iban "NL" #=> "NL90FWAC8717013067"
+
+Faker.Iban.iban ["NL", "BE"] #=> "BE22587804301223"
+
+Faker.Iban.iban "NL", ["ABNA"] #=> "NL39ABNA4314302905"
 ```
 
 ### Faker.Internet
