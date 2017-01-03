@@ -10,9 +10,9 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Added
 
+* `Faker.Bank` [@tobyhinloopen][]
 * `Faker.Beer` [@orieken][]
 * `Faker.Date` [@tobyhinloopen][]
-* `Faker.Iban` [@tobyhinloopen][]
 * `Faker.Nato` [@petehamilton][]
 * `Faker.Pokemon` [@orieken][]
 * credo [@igas][]
