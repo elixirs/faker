@@ -1,4 +1,4 @@
-defmodule Faker.Bank do
+defmodule Faker.Code.Iban do
   @moduledoc """
   Functions for generating IBANs (International Bank Account Numbers).
 
@@ -10,10 +10,10 @@ defmodule Faker.Bank do
 
   ## Examples
 
-      Faker.Bank.iban #=> "IT34K5534420705QL3FT3SE7OTG"
-      Faker.Bank.iban "NL" #=> "NL90FWAC8717013067"
-      Faker.Bank.iban ["NL", "BE"] #=> "BE22587804301223"
-      Faker.Bank.iban "NL", ["ABNA"] #=> "NL39ABNA4314302905"
+      iban #=> "IT34K5534420705QL3FT3SE7OTG"
+      iban "NL" #=> "NL90FWAC8717013067"
+      iban ["NL", "BE"] #=> "BE22587804301223"
+      iban "NL", ["ABNA"] #=> "NL39ABNA4314302905"
   """
 
   @alpha ~w(A B C D E F G H I J K L M N O P Q R S T U V W X Y Z)

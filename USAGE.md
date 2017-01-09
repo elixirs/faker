@@ -1,7 +1,6 @@
 - [Faker.Address](#fakeraddress)
 - [Faker.App](#fakerapp)
 - [Faker.Avatar](#fakeravatar)
-- [Faker.Bank](#fakerbank)
 - [Faker.Bitcoin](#fakerbitcoin)
 - [Faker.Code](#fakercode)
 - [Faker.Color](#fakercolor)
@@ -82,18 +81,6 @@ Faker.Avatar.image_url(200, 200) #=> "http://robohash.org/set_set1/bgset_bg2/4sA
 Faker.Avatar.image_url('a-simple-slug', 200, 200) #=> "http://robohash.org/a-simple-slug?size=200x200"
 ```
 
-### Faker.Bank
-
-```elixir
-Faker.Bank.iban #=> "IT34K5534420705QL3FT3SE7OTG"
-
-Faker.Bank.iban "NL" #=> "NL90FWAC8717013067"
-
-Faker.Bank.iban ["NL", "BE"] #=> "BE22587804301223"
-
-Faker.Bank.iban "NL", ["ABNA"] #=> "NL39ABNA4314302905"
-```
-
 ### Faker.Bitcoin
 
 ```elixir
@@ -105,6 +92,14 @@ Faker.Bitcoin.address(:testnet) #=> "n1nEhSeHJiURtEymbtrV1Kv97C8BN6mBUP"
 ### Faker.Code
 
 ```elixir
+Faker.Code.iban #=> "IT34K5534420705QL3FT3SE7OTG"
+
+Faker.Code.iban "NL" #=> "NL90FWAC8717013067"
+
+Faker.Code.iban ["NL", "BE"] #=> "BE22587804301223"
+
+Faker.Code.iban "NL", ["ABNA"] #=> "NL39ABNA4314302905"
+
 Faker.Code.isbn #=> "462033670X"
 
 Faker.Code.isbn10 #=> "0762633026"
