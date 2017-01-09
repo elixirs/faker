@@ -23,6 +23,10 @@ defmodule Faker.Code do
     sequence <> check_digit(sequence, &calc_digit_x_index/1, 11)
   end
 
+  defdelegate iban(), to: Faker.Code.Iban
+  defdelegate iban(country_code_or_codes), to: Faker.Code.Iban
+  defdelegate iban(country_code, prefix_components), to: Faker.Code.Iban
+
   defp check_digit(sequence, calc_function, size) do
     sequence <> "0"
     |> String.reverse()
