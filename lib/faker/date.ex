@@ -35,7 +35,7 @@ if Version.match?(System.version(), ">= 1.3.0") do
     end
 
     @doc """
-    Returns a random date in the past up to N days
+    Returns a random date in the past up to N days, today not included
     """
     @spec backward(integer) :: Date.t
     def backward(days) do
@@ -43,7 +43,7 @@ if Version.match?(System.version(), ">= 1.3.0") do
     end
 
     @doc """
-    Returns a random date in the future up to N days
+    Returns a random date in the future up to N days, today not included
     """
     @spec forward(integer) :: Date.t
     def forward(days) do
@@ -53,7 +53,7 @@ if Version.match?(System.version(), ">= 1.3.0") do
 
       sign = if days < 0, do: -1, else: 1
 
-      unix_now + sign * :crypto.rand_uniform(0, @seconds_per_day * abs(days))
+      unix_now + sign * @seconds_per_day * :crypto.rand_uniform(1, abs(days))
       |> DateTime.from_unix!()
       |> DateTime.to_date()
     end
