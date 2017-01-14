@@ -16,6 +16,7 @@
 - [Faker.Team](#fakerteam)
 - [Faker.Pokemon](#fakerpokemon)
 - [Faker.Beer](#fakerbeer)
+- [Faker.Superhero](#fakersuperhero)
 
 ### Faker.Address
 
@@ -326,4 +327,12 @@ Faker.Beer.ibu #=> "40 IBU"
 Faker.Beer.alcohol #=> "6.3%"
 
 Faker.Beer.blg #=> "18.5°Blg"
+```
+
+### Faker.Superhero
+
+```elixir
+Faker.Superhero.name #=> "Magnificent Shatterstar"
+
+Faker.Superhero.power #=> "Photokinesis"
 ```
