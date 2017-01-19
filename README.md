@@ -30,7 +30,7 @@ In your `mix.exs` file, add the `:faker` project to your dependencies
 
 ``` elixir
   defp deps do
-    [{:faker, "~> 0.5", only: :test}]
+    [{:faker, "~> 0.7", only: :test}]
   end
 ```
 
