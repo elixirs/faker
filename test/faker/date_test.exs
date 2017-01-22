@@ -17,17 +17,17 @@ if Version.match?(System.version(), ">= 1.3.0") do
     test "forward/1" do
       forwarded_date = Faker.Date.forward(10)
       assert %Date{year: year, month: month, day: day} = forwarded_date
-      assert now.year < year || now.month < month || now.day < day
+      assert now().year < year || now().month < month || now().day < day
     end
 
     test "backward/1" do
       backward_date = Faker.Date.backward(10)
       assert %Date{year: year, month: month, day: day} = backward_date
-      assert now.year > year || now.month > month || now.day > day
+      assert now().year > year || now().month > month || now().day > day
     end
 
     defp age(%Date{year: year, month: month, day: day}) do
-      %Date{ year: current_year, month: current_month, day: current_day } = now
+      %Date{ year: current_year, month: current_month, day: current_day } = now()
       already_aged_this_year = current_month > month || current_month == month && day >= current_day
       current_year - year + (if already_aged_this_year, do: 1, else: 0)
     end
