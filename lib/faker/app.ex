@@ -24,14 +24,14 @@ defmodule Faker.App do
   ## Options:
 
   * `:allow_pre` - when `true`, a pre-release identifier (e.g.: `-dev`)
-    will be appended (default: `true`)
+    will be appended (default: `false`)
   * `:allow_build` - when `true`, a build identifier (e.g.: `+001`)
-    will be appended (default: `true`)
+    will be appended (default: `false`)
   """
   @spec semver(Keyword.t) :: String.t
   def semver(opts \\ []) do
-    allow_pre = Keyword.get(opts, :allow_pre, true)
-    allow_build = Keyword.get(opts, :allow_build, true)
+    allow_pre = Keyword.get(opts, :allow_pre, false)
+    allow_build = Keyword.get(opts, :allow_build, false)
     pre =
       ~w(dev alpha beta rc.0 rc.1)
       |> Enum.at(:crypto.rand_uniform(0, 5))
