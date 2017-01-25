@@ -12,4 +12,8 @@ defmodule AppTest do
   test "version/0" do
     assert is_binary(Faker.App.version)
   end
+
+  test "semver/0" do
+    assert is_binary(Faker.App.semver)
+  end
 end
