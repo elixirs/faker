@@ -67,7 +67,11 @@ Faker.App.author #=> "Angie Graham IV"
 
 Faker.App.name #=> "Fixflex"
 
-Faker.App.version #=> "4.3.3"
+Faker.App.version #=> "4.3"
+
+Faker.App.semver #=> "1.0.0-rc.1+001"
+
+Faker.App.semver(allow_pre: false, allow_build: false) #=> "0.10.2"
 ```
 
 ### Faker.Avatar
