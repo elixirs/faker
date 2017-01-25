@@ -28,7 +28,7 @@ defmodule Faker.App do
   * `:allow_build` - when `true`, a build identifier (e.g.: `+001`)
     will be appended (default: `true`)
   """
-  @spec semver() :: String.t
+  @spec semver(Keyword.t) :: String.t
   def semver(opts \\ []) do
     allow_pre = Keyword.get(opts, :allow_pre, true)
     allow_build = Keyword.get(opts, :allow_build, true)
