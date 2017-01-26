@@ -59,11 +59,16 @@ if Version.match?(System.version(), ">= 1.3.0") do
       diff = NaiveDateTime.utc_now
       |> NaiveDateTime.diff(date_naive)
 
-      unix_now = DateTime.utc_now
+      utc_now = DateTime.utc_now
+      unix_now = utc_now
       |> DateTime.to_unix
 
-      :crypto.rand_uniform(unix_now - diff, unix_now)
-      |> DateTime.from_unix!
+      case diff do
+        0 -> utc_now
+        _ ->
+          :crypto.rand_uniform(unix_now - diff, unix_now)
+          |> DateTime.from_unix!
+      end
     end
 
     @doc """
