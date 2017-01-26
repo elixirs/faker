@@ -16,6 +16,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 * `Faker.Date` [@tobyhinloopen][]
 * `Faker.Nato` [@petehamilton][]
 * `Faker.Pokemon` [@orieken][]
+* `Faker.App.semver` [@wojtekmach][]
 * credo [@igas][]
 
 ### Changed
@@ -188,4 +189,5 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 [@tbash]: https://github.com/tbash
 [@tobyhinloopen]: https://github.com/tobyhinloopen
 [@vforvova]: https://github.com/vforvova
+[@wojtekmach]: https://github.com/wojtekmach
 [@zmoshansky]: https://github.com/zmoshansky
