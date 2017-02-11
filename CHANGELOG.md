@@ -10,6 +10,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Added
 
+* `Faker.Internet.UserAgent` [@devshane][]
 * `Faker.Superhero` [@orieken][]
 * `Faker.Code.iban` [@tobyhinloopen][]
 * `Faker.Beer` [@orieken][]
