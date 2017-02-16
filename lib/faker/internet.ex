@@ -132,7 +132,7 @@ defmodule Faker.Internet do
   @doc """
   Generates a slug
   If no words are provided it will generate 2 to 5 random words
-  If not glue is provied it will use one of -, _ or .
+  If no glue is provied it will use one of -, _ or .
   """
   @spec slug([String.t], [String.t]) :: String.t
   def slug(words \\ nil, glue \\ nil) do
