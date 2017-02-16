@@ -223,6 +223,8 @@ Faker.Internet.safe_email #=> "arvel1966@example.org"
 Faker.Internet.url #=> "http://rohan.net"
 
 Faker.Internet.user_name #=> "dee.ebert"
+
+Faker.Internet.slug #=> "lorem-ipsum"
 ```
 
 ### Faker.Internet.UserAgent
