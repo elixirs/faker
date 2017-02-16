@@ -18,6 +18,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 * `Faker.Nato` [@petehamilton][]
 * `Faker.Pokemon` [@orieken][]
 * `Faker.App.semver` [@wojtekmach][]
+* `Faker.Internet.slug` [@anthonator][]
 * credo [@igas][]
 
 ### Changed
