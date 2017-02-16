@@ -56,4 +56,23 @@ defmodule InternetTest do
   test "image_url/0" do
     assert is_binary(Faker.Internet.image_url)
   end
+
+  test "slug/0" do
+    assert is_binary(Faker.Internet.slug)
+    assert Regex.match?(~r/\A([a-z0-9]+[-\._]?)*[a-z0-9]+\z/, Faker.Internet.slug)
+  end
+
+  test "slug/1" do
+    slug = Faker.Internet.slug(["hello", "world"])
+
+    assert is_binary(slug)
+    assert Regex.match?(~r/\A((hello|world)[-\._]?)*(hello|world)+\z/, slug)
+  end
+
+  test "slug/2" do
+    slug = Faker.Internet.slug(["hello", "world"], ["-"])
+
+    assert is_binary(slug)
+    assert Regex.match?(~r/\A((hello|world)[-]?)*(hello|world)+\z/, slug)
+  end
 end

@@ -128,4 +128,18 @@ defmodule Faker.Internet do
       |> String.rjust(2, ?0)
     end) |> String.downcase
   end
+
+  @doc """
+  Generates a slug
+  """
+  @spec slug([String.t], [String.t]) :: String.t
+  def slug(words \\ nil, glue \\ nil) do
+    words = words || Faker.Lorem.words(%Range{first: 2, last: 5})
+    glue  = glue || ["-", "_", "."]
+
+    words
+    |> Enum.take_random(length(words))
+    |> Enum.join(Enum.random(glue))
+    |> String.downcase
+  end
 end
