@@ -136,7 +136,7 @@ defmodule Faker.Internet do
   """
   @spec slug([String.t], [String.t]) :: String.t
   def slug(words \\ nil, glue \\ nil) do
-    words = words || Faker.Lorem.words(%Range{first: 2, last: 5})
+    words = words || Faker.Lorem.words(2..5)
     glue  = glue || ["-", "_", "."]
 
     words
