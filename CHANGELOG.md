@@ -193,3 +193,4 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 [@vforvova]: https://github.com/vforvova
 [@wojtekmach]: https://github.com/wojtekmach
 [@zmoshansky]: https://github.com/zmoshansky
+[@anthonator]: https://github.com/anthonator
