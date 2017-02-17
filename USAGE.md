@@ -225,6 +225,10 @@ Faker.Internet.url #=> "http://rohan.net"
 Faker.Internet.user_name #=> "dee.ebert"
 
 Faker.Internet.slug #=> "lorem-ipsum"
+
+Faker.Internet.slug(["foo", "bar"]) #=> "foo-bar"
+
+Faker.Internet.slug(["foo", "bar"], ["."]) #=> "foo.bar"
 ```
 
 ### Faker.Internet.UserAgent
