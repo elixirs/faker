@@ -10,6 +10,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Added
 
+* `Faker.Internet.UserAgent` [@devshane][]
 * `Faker.Superhero` [@orieken][]
 * `Faker.Code.iban` [@tobyhinloopen][]
 * `Faker.Beer` [@orieken][]
@@ -17,6 +18,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 * `Faker.Nato` [@petehamilton][]
 * `Faker.Pokemon` [@orieken][]
 * `Faker.App.semver` [@wojtekmach][]
+* `Faker.Internet.slug` [@anthonator][]
 * credo [@igas][]
 
 ### Changed
@@ -191,3 +193,4 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 [@vforvova]: https://github.com/vforvova
 [@wojtekmach]: https://github.com/wojtekmach
 [@zmoshansky]: https://github.com/zmoshansky
+[@anthonator]: https://github.com/anthonator

@@ -1,4 +1,6 @@
 defmodule Faker.Internet do
+  import Faker, only: [sampler: 2]
+
   alias Faker.Name.En, as: Name
 
   @moduledoc """
@@ -125,5 +127,21 @@ defmodule Faker.Internet do
       Integer.to_string(:crypto.rand_uniform(0, 256), 16)
       |> String.rjust(2, ?0)
     end) |> String.downcase
+  end
+
+  @doc """
+  Generates a slug
+  If no words are provided it will generate 2 to 5 random words
+  If no glue is provied it will use one of -, _ or .
+  """
+  @spec slug([String.t], [String.t]) :: String.t
+  def slug(words \\ nil, glue \\ nil) do
+    words = words || Faker.Lorem.words(2..5)
+    glue  = glue || ["-", "_", "."]
+
+    words
+    |> Enum.take_random(length(words))
+    |> Enum.join(Enum.random(glue))
+    |> String.downcase
   end
 end
