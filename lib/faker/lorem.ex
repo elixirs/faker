@@ -53,11 +53,11 @@ defmodule Faker.Lorem do
   end
 
   @doc """
-  Returns a string with a random amount of paragraphs (in between the specified
+  Returns a list with a random amount of paragraphs (in between the specified
   range)
   If no range is specified it defaults to 2..5
   """
-  @spec paragraphs(Range.t) :: String.t
+  @spec paragraphs(Range.t) :: list(String.t)
   def paragraphs(range \\ %Range{first: 2, last: 5})
 
   def paragraphs(%Range{first: first, last: last}) do
@@ -65,9 +65,9 @@ defmodule Faker.Lorem do
   end
 
   @doc """
-  Returns a string with an amount of paragraphs equal to the parameter provided
+  Returns a list with an amount of paragraphs equal to the parameter provided
   """
-  @spec paragraphs(integer) :: String.t
+  @spec paragraphs(integer) :: list(String.t)
   def paragraphs(num) do
     Stream.repeatedly(&paragraph/0)
     |> Enum.take(num)
