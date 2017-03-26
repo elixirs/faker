@@ -10,7 +10,7 @@ defmodule Faker.Avatar do
   """
   @spec image_url() :: String.t
   def image_url do
-    "http://robohash.org#{set()}#{bg()}/#{Lorem.characters(1..20)}"
+    "https://robohash.org#{set()}#{bg()}/#{Lorem.characters(1..20)}"
   end
 
   @doc """
@@ -18,7 +18,7 @@ defmodule Faker.Avatar do
   """
   @spec image_url(binary) :: String.t
   def image_url(slug) do
-    "http://robohash.org/#{slug}"
+    "https://robohash.org/#{slug}"
   end
 
   @doc """
@@ -29,7 +29,7 @@ defmodule Faker.Avatar do
   def image_url(width, height)
   when is_integer(width) and is_integer(height) do
     slug = Lorem.characters(1..20)
-    "http://robohash.org#{set()}#{bg()}/#{slug}?size=#{width}x#{height}"
+    "https://robohash.org#{set()}#{bg()}/#{slug}?size=#{width}x#{height}"
   end
 
   @doc """
@@ -38,7 +38,7 @@ defmodule Faker.Avatar do
   @spec image_url(binary, integer, integer) :: String.t
   def image_url(slug, width, height)
   when is_integer(width) and is_integer(height) do
-    "http://robohash.org/#{slug}?size=#{width}x#{height}"
+    "https://robohash.org/#{slug}?size=#{width}x#{height}"
   end
 
   defp bg do
