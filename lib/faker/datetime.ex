@@ -27,15 +27,26 @@ if Version.match?(System.version(), ">= 1.3.0") do
     @doc """
     Returns a random date between two dates, today included
     """
+    @spec between(Date.t, Date.t) :: DateTime.t
+    def between(%Date{} = from, %Date{} = to) do
+      between(to_datetime(from), to_datetime(to))
+    end
+
+    @doc """
+    Returns a random date between two dates, today included
+    """
     @spec between(DateTime.t, DateTime.t) :: DateTime.t
     def between(from, to) do
-      unix_from = to_timestamp(from)
-      unix_to = to_timestamp(to)
-
-      unix_between(unix_from, unix_to)
+      unix_between(to_timestamp(from), to_timestamp(to))
     end
 
     # private
+
+    defp to_datetime(date) do
+      %DateTime{calendar: Calendar.ISO, day: date.day, hour: 0, minute: 0,
+                month: date.month, second: 0, time_zone: "Etc/UTC",
+                utc_offset: 0, std_offset: 0, year: date.year, zone_abbr: "UTC"}
+    end
 
     defp to_timestamp(datetime) do
       DateTime.to_unix(datetime, :microseconds)

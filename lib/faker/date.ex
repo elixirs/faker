@@ -55,16 +55,8 @@ if Version.match?(System.version(), ">= 1.3.0") do
     """
     @spec between(Date.t, Date.t) :: Date.t
     def between(from, to) do
-      Faker.DateTime.between(to_datetime(from), to_datetime(to))
+      Faker.DateTime.between(from, to)
       |> DateTime.to_date
-    end
-
-    # private
-
-    defp to_datetime(date) do
-      %DateTime{calendar: Calendar.ISO, day: date.day, hour: 0, minute: 0,
-                month: date.month, second: 0, time_zone: "Etc/UTC",
-                utc_offset: 0, std_offset: 0, year: date.year, zone_abbr: "UTC"}
     end
   end
 end
