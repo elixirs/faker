@@ -5,7 +5,7 @@ if Version.match?(System.version(), ">= 1.3.0") do
     @microseconds_per_day 86400000000
 
     test "forward/1" do
-      now = now()
+      now = DateTime.utc_now()
       forwarded_date = Faker.DateTime.forward(10)
       assert %DateTime{year: year, month: month, day: day, second: second, microsecond: microsecond}
         = forwarded_date
@@ -14,7 +14,7 @@ if Version.match?(System.version(), ">= 1.3.0") do
     end
 
     test "backward/1" do
-      now = now()
+      now = DateTime.utc_now()
       backward_date = Faker.DateTime.backward(10)
       assert %DateTime{year: year, month: month, day: day, second: second, microsecond: microsecond}
         = backward_date
@@ -23,7 +23,7 @@ if Version.match?(System.version(), ">= 1.3.0") do
     end
 
     test "between/2" do
-      from_date = now()
+      from_date = DateTime.utc_now()
       to_date = add_days(from_date, 10)
       between_date = Faker.DateTime.between(from_date, to_date)
       assert %DateTime{year: year, month: month, day: day, second: second, microsecond: microsecond}
@@ -32,10 +32,6 @@ if Version.match?(System.version(), ">= 1.3.0") do
         || from_date.second < second || from_date.microsecond < microsecond
       assert to_date.year > year || to_date.month > month || to_date.day > day
         || to_date.second > second || to_date.microsecond > microsecond
-    end
-
-    defp now do
-      DateTime.utc_now()
     end
 
     defp add_days(date, days) do
