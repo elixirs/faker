@@ -9,8 +9,8 @@ if Version.match?(System.version(), ">= 1.3.0") do
       forwarded_date = Faker.DateTime.forward(10)
       assert %DateTime{year: year, month: month, day: day, second: second, microsecond: microsecond}
         = forwarded_date
-      assert now.year > year || now.month > month || now.day > day
-        || now.second > second || now.microsecond > microsecond
+      assert now.year < year || now.month < month || now.day < day
+        || now.second < second || now.microsecond < microsecond
     end
 
     test "backward/1" do
