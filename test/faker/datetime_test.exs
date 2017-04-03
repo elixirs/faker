@@ -5,19 +5,21 @@ if Version.match?(System.version(), ">= 1.3.0") do
     @microseconds_per_day 86400000000
 
     test "forward/1" do
+      now = now()
       forwarded_date = Faker.DateTime.forward(10)
       assert %DateTime{year: year, month: month, day: day, second: second, microsecond: microsecond}
         = forwarded_date
-      assert now().year > year || now().month > month || now().day > day
-        || now().second > second || now().microsecond > microsecond
+      assert now.year > year || now.month > month || now.day > day
+        || now.second > second || now.microsecond > microsecond
     end
 
     test "backward/1" do
+      now = now()
       backward_date = Faker.DateTime.backward(10)
       assert %DateTime{year: year, month: month, day: day, second: second, microsecond: microsecond}
         = backward_date
-      assert now().year > year || now().month > month || now().day > day
-        || now().second > second || now().microsecond > microsecond
+      assert now.year > year || now.month > month || now.day > day
+        || now.second > second || now.microsecond > microsecond
     end
 
     test "between/2" do
