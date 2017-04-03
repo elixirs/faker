@@ -31,8 +31,8 @@ if Version.match?(System.version(), ">= 1.3.0") do
       to_date = ~D[2017-01-10]
       between_date = Faker.Date.between(from_date, to_date)
       assert %Date{year: year, month: month, day: day} = between_date
-      assert from_date.year < year || from_date.month < month || from_date.day < day
-      assert to_date.year > year || from_date.month > month || to_date.day > day
+      assert from_date.year <= year || from_date.month <= month || from_date.day <= day
+      assert to_date.year >= year || from_date.month >= month || to_date.day >= day
     end
 
     defp age(%Date{year: year, month: month, day: day}) do

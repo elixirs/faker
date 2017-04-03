@@ -24,19 +24,14 @@ if Version.match?(System.version(), ">= 1.3.0") do
 
     test "between/2" do
       from_date = DateTime.utc_now()
-      to_date = add_days(from_date, 10)
+      to_date = Faker.DateTime.forward(50)
       between_date = Faker.DateTime.between(from_date, to_date)
       assert %DateTime{year: year, month: month, day: day, second: second, microsecond: microsecond}
         = between_date
-      assert from_date.year < year || from_date.month < month || from_date.day < day
-        || from_date.second < second || from_date.microsecond < microsecond
-      assert to_date.year > year || to_date.month > month || to_date.day > day
-        || to_date.second > second || to_date.microsecond > microsecond
-    end
-
-    defp add_days(date, days) do
-      DateTime.to_unix(date) + @microseconds_per_day * days
-      |> DateTime.from_unix!(:microseconds)
+      assert from_date.year <= year || from_date.month <= month || from_date.day <= day
+        || from_date.second <= second || from_date.microsecond <= microsecond
+      assert to_date.year >= year || to_date.month >= month || to_date.day >= day
+        || to_date.second >= second || to_date.microsecond >= microsecond
     end
   end
 end
