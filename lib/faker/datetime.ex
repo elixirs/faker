@@ -33,7 +33,7 @@ if Version.match?(System.version(), ">= 1.3.0") do
     end
 
     @doc """
-    Returns a random `NaiveDateTime.t` between two `NaiveDateTime.t`'s
+    Returns a random `DateTime.t` between two `NaiveDateTime.t`'s
     """
     @spec between(NaiveDateTime.t, NaiveDateTime.t) :: DateTime.t
     def between(%NaiveDateTime{} = from, %NaiveDateTime{} = to) do
