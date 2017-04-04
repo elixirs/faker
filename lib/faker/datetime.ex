@@ -29,7 +29,15 @@ if Version.match?(System.version(), ">= 1.3.0") do
     """
     @spec between(Date.t, Date.t) :: DateTime.t
     def between(%Date{} = from, %Date{} = to) do
-      between(to_datetime(from), to_datetime(to))
+      between(date_to_datetime(from), date_to_datetime(to))
+    end
+
+    @doc """
+    Returns a random `NaiveDateTime.t` between two `NaiveDateTime.t`'s
+    """
+    @spec between(NaiveDateTime.t, NaiveDateTime.t) :: DateTime.t
+    def between(%NaiveDateTime{} = from, %NaiveDateTime{} = to) do
+      between(naivedatetime_to_datetime(from), naivedatetime_to_datetime(to))
     end
 
     @doc """
@@ -42,10 +50,18 @@ if Version.match?(System.version(), ">= 1.3.0") do
 
     # private
 
-    defp to_datetime(date) do
+    defp date_to_datetime(date) do
       %DateTime{calendar: Calendar.ISO, day: date.day, hour: 0, minute: 0,
                 month: date.month, second: 0, time_zone: "Etc/UTC",
                 utc_offset: 0, std_offset: 0, year: date.year, zone_abbr: "UTC"}
+    end
+
+    defp naivedatetime_to_datetime(naivedatetime) do
+      %DateTime{calendar: naivedatetime.calendar, day: naivedatetime.day,
+                hour: naivedatetime.hour, minute: naivedatetime.minute,
+                month: naivedatetime.month, second: naivedatetime.second,
+                time_zone: "Etc/UTC", utc_offset: 0, std_offset: 0,
+                year: naivedatetime.year, zone_abbr: "UTC"}
     end
 
     defp to_timestamp(datetime) do
