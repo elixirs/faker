@@ -25,7 +25,7 @@ if Version.match?(System.version(), ">= 1.3.0") do
     end
 
     @doc """
-    Returns a random date between two dates, today included
+    Returns a random date & time between two dates
     """
     @spec between(Date.t, Date.t) :: DateTime.t
     def between(%Date{} = from, %Date{} = to) do
@@ -33,7 +33,7 @@ if Version.match?(System.version(), ">= 1.3.0") do
     end
 
     @doc """
-    Returns a random date between two dates, today included
+    Returns a random `DateTime.t` between two `DateTime.t`'s
     """
     @spec between(DateTime.t, DateTime.t) :: DateTime.t
     def between(from, to) do

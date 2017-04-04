@@ -50,8 +50,7 @@ if Version.match?(System.version(), ">= 1.3.0") do
     end
 
     @doc """
-    Returns a random date between two dates, today included
-    included
+    Returns a random date between two dates
     """
     @spec between(Date.t, Date.t) :: Date.t
     def between(from, to) do
