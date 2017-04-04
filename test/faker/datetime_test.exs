@@ -2,8 +2,6 @@ if Version.match?(System.version(), ">= 1.3.0") do
   defmodule DateTimeTest do
     use ExUnit.Case, async: true
 
-    @microseconds_per_day 86400000000
-
     test "forward/1" do
       now = DateTime.utc_now()
       forwarded_date = Faker.DateTime.forward(10)
