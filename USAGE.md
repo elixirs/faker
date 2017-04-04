@@ -8,6 +8,7 @@
 - [Faker.Company](#fakercompany)
 - [Faker.Date](#fakerdate)
 - [Faker.DateTime](#fakerdatetime)
+- [Faker.NaiveDateTime](#fakernaivedatetime)
 - [Faker.File](#fakerfile)
 - [Faker.Internet](#fakerinternet)
 - [Faker.Internet.UserAgent](#fakerinternetuseragent)
@@ -197,11 +198,30 @@ Faker.DateTime.backward(4)
 #=>  std_offset: 0, time_zone: "Etc/UTC", utc_offset: 0, year: 2016,
 #=>  zone_abbr: "UTC"}
 
-Faker.DateTime.between(~D[2016-12-20], ~D[2016-12-25])
+Faker.DateTime.between(from_datetime, to_datetime)
 #=> %DateTime{calendar: Calendar.ISO, day: 23, hour: 6,
 #=>  microsecond: {922180, 6},  minute: 2, month: 12, second: 17,
 #=>  std_offset: 0, time_zone: "Etc/UTC", utc_offset: 0, year: 2016,
 #=>  zone_abbr: "UTC"}
+```
+
+### Faker.NaiveDateTime
+
+```elixir
+Faker.DateTime.forward(4)
+#=> %NaiveDateTime{calendar: Calendar.ISO, day: 25, hour: 6,
+#=>  microsecond: {922180, 6},  minute: 2, month: 12, second: 17,
+#=>  year: 2016}
+
+Faker.DateTime.backward(4)
+#=> %NaiveDateTime{calendar: Calendar.ISO, day: 20, hour: 6,
+#=>  microsecond: {922180, 6},  minute: 2, month: 12, second: 17,
+#=>  year: 2016}
+
+Faker.DateTime.between(from_naivedatetime, to_naivedatetime)
+#=> %NaiveDateTime{calendar: Calendar.ISO, day: 23, hour: 6,
+#=>  microsecond: {922180, 6},  minute: 2, month: 12, second: 17,
+#=>  year: 2016}
 ```
 
 ### Faker.File

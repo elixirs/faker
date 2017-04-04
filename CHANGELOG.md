@@ -17,6 +17,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 * `Faker.Date` [@tobyhinloopen][]
 * `Faker.Date.between` [@anthonator][]
 * `Faker.DateTime` [@anthonator][]
+* `Faker.NaiveDateTime` [@anthonator][]
 * `Faker.Nato` [@petehamilton][]
 * `Faker.Pokemon` [@orieken][]
 * `Faker.App.semver` [@wojtekmach][]
