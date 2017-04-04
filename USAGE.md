@@ -208,17 +208,17 @@ Faker.DateTime.between(from_datetime, to_datetime)
 ### Faker.NaiveDateTime
 
 ```elixir
-Faker.DateTime.forward(4)
+Faker.NaiveDateTime.forward(4)
 #=> %NaiveDateTime{calendar: Calendar.ISO, day: 25, hour: 6,
 #=>  microsecond: {922180, 6},  minute: 2, month: 12, second: 17,
 #=>  year: 2016}
 
-Faker.DateTime.backward(4)
+Faker.NaiveDateTime.backward(4)
 #=> %NaiveDateTime{calendar: Calendar.ISO, day: 20, hour: 6,
 #=>  microsecond: {922180, 6},  minute: 2, month: 12, second: 17,
 #=>  year: 2016}
 
-Faker.DateTime.between(from_naivedatetime, to_naivedatetime)
+Faker.NaiveDateTime.between(from_naivedatetime, to_naivedatetime)
 #=> %NaiveDateTime{calendar: Calendar.ISO, day: 23, hour: 6,
 #=>  microsecond: {922180, 6},  minute: 2, month: 12, second: 17,
 #=>  year: 2016}
