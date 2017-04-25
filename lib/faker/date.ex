@@ -4,8 +4,6 @@ if Version.match?(System.version(), ">= 1.3.0") do
     Functions for generating dates
     """
 
-    @seconds_per_day 86400
-
     @doc """
     Returns a random date of birth for a person with an age specified by a number or range
 
@@ -47,15 +45,17 @@ if Version.match?(System.version(), ">= 1.3.0") do
     """
     @spec forward(integer) :: Date.t
     def forward(days) do
-      unix_now =
-        DateTime.utc_now()
-        |> DateTime.to_unix()
+      Faker.DateTime.forward(days)
+      |> DateTime.to_date
+    end
 
-      sign = if days < 0, do: -1, else: 1
-
-      unix_now + sign * @seconds_per_day * :crypto.rand_uniform(1, abs(days))
-      |> DateTime.from_unix!()
-      |> DateTime.to_date()
+    @doc """
+    Returns a random date between two dates
+    """
+    @spec between(Date.t, Date.t) :: Date.t
+    def between(from, to) do
+      Faker.DateTime.between(from, to)
+      |> DateTime.to_date
     end
   end
 end
