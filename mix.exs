@@ -1,7 +1,7 @@
 defmodule Faker.Mixfile do
   use Mix.Project
 
-  @version "0.7.0"
+  @version "0.8.0"
 
   def project do
     [
@@ -25,9 +25,9 @@ defmodule Faker.Mixfile do
 
   defp deps do
     [
-      {:ex_doc, "~> 0.7", only: :docs},
+      {:ex_doc, ">= 0.0.0", only: :docs},
       {:earmark, ">= 0.0.0", only: :docs},
-      {:credo, "~> 0.3", only: [:dev, :test]}
+      {:credo, ">= 0.0.0", only: [:dev, :test]}
     ]
   end
 

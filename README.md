@@ -5,7 +5,7 @@ fake data.
 
 ## Quickstart
 
-* add `{:faker, "~> 0.7"}` to your deps in `mix.exs`;
+* add `{:faker, "~> 0.8"}` to your deps in `mix.exs`;
 * add `:faker` to list of your applications;
 * jump to [usage examples](https://github.com/igas/faker/blob/master/USAGE.md).
 
@@ -18,7 +18,7 @@ Example `mix.exs`:
   end
 ...
   defp deps do
-    [{:faker, "~> 0.7"}]
+    [{:faker, "~> 0.8"}]
   end
 ...
 ```
@@ -30,7 +30,7 @@ In your `mix.exs` file, add the `:faker` project to your dependencies
 
 ``` elixir
   defp deps do
-    [{:faker, "~> 0.7", only: :test}]
+    [{:faker, "~> 0.8", only: :test}]
   end
 ```
 
