@@ -62,7 +62,7 @@ defmodule Faker.Pizza do
   range). "And" will appear before the last topping, along with an Oxford comma.
   If no range is specified it defaults to 2..5
   """
-  @spec toppings_and(Range.t) :: list(String.t)
+  @spec toppings_and(Range.t) :: String.t
   def toppings_and(range \\ %Range{first: 2, last: 5})
 
   def toppings_and(%Range{first: first, last: last}) do
@@ -72,7 +72,7 @@ defmodule Faker.Pizza do
   @doc """
   Returns a specified number of toppings as a string, with an "and" before the last topping
   """
-  @spec toppings_and(integer) :: [char]
+  @spec toppings_and(integer) :: String.t
   def toppings_and(num) do
     num
     |> toppings()
@@ -80,22 +80,22 @@ defmodule Faker.Pizza do
   end
 
   @doc """
-  Converts a list to a string, with "and" before the last item
+  Converts a list to a string, with "and" before the last item. Uses an Oxford comma.
   """
-  @spec add_and(list) :: [char]
+  @spec add_and(list) :: String.t
   defp add_and([single]), do: single
   defp add_and([first, second]), do: "#{first} and #{second}"
   defp add_and([first | rest]), do: Enum.join(rest, ", ") <> ", and #{first}"
 
   @doc """
-  Returns a random cheese, meat or vegetarian topping
+  Returns a random cheese, sauce, meat or vegetarian topping
   """
-  @spec topping() :: [char]
+  @spec topping() :: String.t
   def topping, do: topping(:crypto.rand_uniform(1, 8))
   defp topping(1), do: cheese()
   defp topping(2), do: sauce()
   defp topping(count) when count <= 5, do: meat()
-  defp topping(count), do: vegetable()
+  defp topping(_count), do: vegetable()
 
   @doc"""
   Returns a Pizza Restaurant string
@@ -113,13 +113,13 @@ defmodule Faker.Pizza do
   Returns a sauce string
   """
   @spec sauce() :: String.t
-  sampler :sauce, ["Soy Miso Sauce", "Masala Sauce", "Classic Tomato Sauce", "Spicy Tomato Sauce", "Clam Sauce", "Bechamel (White) Sauce", "Pesto Sauce", "BBQ Sauce", "Salsa", "Passata Sauce", "Chipolte Sauce", "Mango Sauce", "Siracha Sauce", "Buffalo Sauce", "Tomatoe Garlic Sauce", "Butter Chicken Sauce", "Olive Oil", "Hummus", "White Garlic Sauce", "Marinara Sauce", "Tapenade", "Romesco Sauce", "Chimichurri Sauce", "Gravy", "Aoili", "Hoisin Sauce", "Chili Sauce", "Sweet Chili Sauce", "Gremolata", "Mustard", "Curry", "Alfredo Sauce", "Zaatar"]
+  sampler :sauce, ["Soy Miso Sauce", "Masala Sauce", "Classic Tomato Sauce", "Spicy Tomato Sauce", "Clam Sauce", "Bechamel (White) Sauce", "Pesto Sauce", "BBQ Sauce", "Salsa", "Passata Sauce", "Chipolte Sauce", "Mango Sauce", "Siracha Sauce", "Buffalo Sauce", "Tomatoe Garlic Sauce", "Butter Chicken Sauce", "Olive Oil", "Hummus", "White Garlic Sauce", "Marinara Sauce", "Tapenade", "Romesco Sauce", "Chimichurri Sauce", "Gravy", "Aioli", "Hoisin Sauce", "Chili Sauce", "Sweet Chili Sauce", "Gremolata", "Mustard", "Curry", "Alfredo Sauce", "Zaatar"]
 
   @doc """
   Returns a cheese string
   """
   @spec cheese() :: String.t
-  sampler :cheese, ["Mozzarella", "Cheddar", "Feta", "Secret Cheese Blend", "4 Cheese Blend", "Buffalo Mozzarella", "Asiago", "Romano", "Provolone", "Emmental", "Ricotta", "Marscapone", "Swiss", "Parmesan", "Smoked Mozzarella", "Blue (Bleu) Cheese", "Soy Cheese", "Lactose Free Cheese", "Whole Milk Mozzarella", "Burrata", "Goat Cheese", "Cashew Cheese", "Fior di latte", "Paneer", "Cheese Curds", "Gouda", "Fontina", "Gorgonzola", "Queso Fresco", "Crème fraîch"]
+  sampler :cheese, ["Mozzarella", "Cheddar", "Feta", "Secret Cheese Blend", "4 Cheese Blend", "Buffalo Mozzarella", "Asiago", "Romano", "Provolone", "Emmental", "Ricotta", "Marscapone", "Swiss", "Parmesan", "Smoked Mozzarella", "Blue (Bleu) Cheese", "Soy Cheese", "Lactose Free Cheese", "Whole Milk Mozzarella", "Burrata", "Goat Cheese", "Cashew Cheese", "Fior di latte", "Paneer", "Cheese Curds", "Gouda", "Fontina", "Gorgonzola", "Queso Fresco", "Crème fraîche"]
 
   @doc """
   Returns a meat string
@@ -134,7 +134,7 @@ defmodule Faker.Pizza do
   sampler :vegetable, ["Artichoke Hearts", "Arugula", "Banana", "Banana Peppers", "Basil", "Black Olives", "Broccoli", "Capers", "Caramelised Onions", "Cherry Tomatoes", "Coconut", "Eggplant", "Garlic", "Green Olives", "Green Peas", "Green Peppers", "Habanero Peppers", "Jalapeños", "Mango", "Mushrooms", "Onions", "Oysters", "Peperoncini", "Pickled Ginger", "Pineapple", "Potatoes", "Red Onion", "Red Peppers", "Sauerkraut", "Spinach", "Sun-Dried Tomatoes", "Sweet Corn", "Sweet Potato", "Zucchini"]
 
   @doc """
-  Returns a size string
+  Returns a combo string
   """
   @spec combo() :: Strint.t
   sampler :combo, ["Africana", "All Dressed", "Bacon Cheeseburger ", "BBQ Chicken", "Bianca ", "Bolognese", "Breakfast", "Buffalo Chicken", "Canadian", "Caprese", "Capricciosa", "Capricciosa ", "Cheese", "Chicken Pesto", "Ciao-ciao", "Curry Banana", "Double Dutch", "Fajita", "Fig and Goat Cheese", "Four Seasons", "Frutti di mare", "Funghi", "Grandma", "Greek", "Grilled Vegetarian", "Hawaiian", "Hot & Spicy", "Italian Deli", "Kebab", "Loaded", "Maltija", "Margherita", "Meat Feast", "Meat Lovers", "Meatball ", "Mockba", "Onion & Gorgonzola", "Pepperoni & Mushroom", "Perogie", "Pesto Chicken", "Poutine", "Prociutto Arugala", "Pugliese", "Quattro Formaggi", "Quattro Formaggio", "Quattro stagioni", "Romana", "Shrimp Club", "Smoked Salmon & Goat Cheese", "Supreme", "Taco", "Thai Chicken", "Vegetarian Lovers", "Vegetariana", "Veggie Korma", "Viennese"]
@@ -154,7 +154,7 @@ defmodule Faker.Pizza do
   sampler :size, ["Personal", "Small", "Medium", "Large", "Extra-Large", "Family"]
 
   @doc """
-  Returns a inches string
+  Returns an inches string
   """
   @spec inches() :: Strint.t
   sampler :inches, ["9\"", "10\"", "11\"", "12\"", "14\"", "16\"", "18\"", "20\"", "26\"", "30\""]
