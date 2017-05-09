@@ -18,6 +18,8 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Fixed
 
+* Stopped a warning from an unused import of `Faker` in `Faker.Internet`
+
 ### Security
 
 ## 0.8.0

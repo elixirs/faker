@@ -1,6 +1,4 @@
 defmodule Faker.Internet do
-  import Faker, only: [sampler: 2]
-
   alias Faker.Name.En, as: Name
 
   @moduledoc """
