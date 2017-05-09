@@ -136,7 +136,7 @@ defmodule Faker.Pizza do
   @doc """
   Returns a combo string
   """
-  @spec combo() :: Strint.t
+  @spec combo() :: String.t
   sampler :combo, ["Africana", "All Dressed", "Bacon Cheeseburger ", "BBQ Chicken", "Bianca ", "Bolognese", "Breakfast", "Buffalo Chicken", "Canadian", "Caprese", "Capricciosa", "Capricciosa ", "Cheese", "Chicken Pesto", "Ciao-ciao", "Curry Banana", "Double Dutch", "Fajita", "Fig and Goat Cheese", "Four Seasons", "Frutti di mare", "Funghi", "Grandma", "Greek", "Grilled Vegetarian", "Hawaiian", "Hot & Spicy", "Italian Deli", "Kebab", "Loaded", "Maltija", "Margherita", "Meat Feast", "Meat Lovers", "Meatball ", "Mockba", "Onion & Gorgonzola", "Pepperoni & Mushroom", "Perogie", "Pesto Chicken", "Poutine", "Prociutto Arugala", "Pugliese", "Quattro Formaggi", "Quattro Formaggio", "Quattro stagioni", "Romana", "Shrimp Club", "Smoked Salmon & Goat Cheese", "Supreme", "Taco", "Thai Chicken", "Vegetarian Lovers", "Vegetariana", "Veggie Korma", "Viennese"]
 
   @doc """
@@ -150,13 +150,13 @@ defmodule Faker.Pizza do
   @doc """
   Returns a size string
   """
-  @spec size() :: Strint.t
+  @spec size() :: String.t
   sampler :size, ["Personal", "Small", "Medium", "Large", "Extra-Large", "Family"]
 
   @doc """
   Returns an inches string
   """
-  @spec inches() :: Strint.t
+  @spec inches() :: String.t
   sampler :inches, ["9\"", "10\"", "11\"", "12\"", "14\"", "16\"", "18\"", "20\"", "26\"", "30\""]
 
 end
