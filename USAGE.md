@@ -198,13 +198,9 @@ Faker.DateTime.backward(4)
 #=>  std_offset: 0, time_zone: "Etc/UTC", utc_offset: 0, year: 2016,
 #=>  zone_abbr: "UTC"}
 
-from = DateTime.utc_now()
-to = DateTime.utc_now() |> DateTime.to_unix
-to = to + 86400 * 10 |> DateTime.from_unix!
-
-Faker.DateTime.between(from, to)
-#=> %DateTime{calendar: Calendar.ISO, day: 23, hour: 6,
-#=>  microsecond: {922180, 6},  minute: 2, month: 12, second: 17,
+Faker.DateTime.between(~N[2016-12-20 00:00:00], ~N[2016-12-25 00:00:00])
+#=> %DateTime{calendar: Calendar.ISO, day: 22, hour: 7,
+#=>  microsecond: {753572, 6},  minute: 56, month: 12, second: 26,
 #=>  std_offset: 0, time_zone: "Etc/UTC", utc_offset: 0, year: 2016,
 #=>  zone_abbr: "UTC"}
 ```
