@@ -18,6 +18,8 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Fixed
 
+* Credo issues [@lrosa007][]
+
 ### Security
 
 ## 0.8.0
