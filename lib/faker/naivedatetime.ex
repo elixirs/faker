@@ -1,5 +1,7 @@
 if Version.match?(System.version(), ">= 1.3.0") do
   defmodule Faker.NaiveDateTime do
+    @moduledoc false
+
     @doc """
     Returns a random date in the past up to N days, today not included
     """
@@ -13,7 +15,8 @@ if Version.match?(System.version(), ">= 1.3.0") do
     """
     @spec forward(integer) :: NaiveDateTime.t
     def forward(days) do
-      Faker.DateTime.forward(days)
+      days
+      |> Faker.DateTime.forward()
       |> DateTime.to_naive
     end
 
@@ -22,7 +25,8 @@ if Version.match?(System.version(), ">= 1.3.0") do
     """
     @spec between(NaiveDateTime.t, NaiveDateTime.t) :: NaiveDateTime.t
     def between(from, to) do
-      Faker.DateTime.between(from, to)
+      from
+      |> Faker.DateTime.between(to)
       |> DateTime.to_naive
     end
   end

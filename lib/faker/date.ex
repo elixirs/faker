@@ -23,12 +23,12 @@ if Version.match?(System.version(), ">= 1.3.0") do
 
     @spec date_of_birth(Range.t) :: Date.t
     def date_of_birth(%Range{first: first, last: last}) do
-      {{ current_year, current_month, current_day }, _time } = :calendar.local_time()
+      {{current_year, current_month, current_day}, _time} = :calendar.local_time()
       random_month = :crypto.rand_uniform(1, 13)
       random_day = :crypto.rand_uniform(1, 29)
       already_aged_this_year = current_month > random_month || current_month == random_month && random_day >= current_day
       random_year = current_year - :crypto.rand_uniform(first, last) + (if already_aged_this_year, do: 1, else: 0)
-      { :ok, date } = Date.new random_year, random_month, random_day
+      {:ok, date} = Date.new random_year, random_month, random_day
       date
     end
 
@@ -45,7 +45,8 @@ if Version.match?(System.version(), ">= 1.3.0") do
     """
     @spec forward(integer) :: Date.t
     def forward(days) do
-      Faker.DateTime.forward(days)
+      days
+      |> Faker.DateTime.forward()
       |> DateTime.to_date
     end
 
@@ -54,7 +55,8 @@ if Version.match?(System.version(), ">= 1.3.0") do
     """
     @spec between(Date.t, Date.t) :: Date.t
     def between(from, to) do
-      Faker.DateTime.between(from, to)
+      from
+      |> Faker.DateTime.between(to)
       |> DateTime.to_date
     end
   end

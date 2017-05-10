@@ -27,7 +27,10 @@ defmodule Faker.Lorem do
   """
   @spec characters(integer) :: [char]
   def characters(num) do
-    Stream.repeatedly(&character/0)
+    char = &character/0
+
+    char
+    |> Stream.repeatedly()
     |> Enum.take(num)
   end
 
@@ -69,7 +72,10 @@ defmodule Faker.Lorem do
   """
   @spec paragraphs(integer) :: list(String.t)
   def paragraphs(num) do
-    Stream.repeatedly(&paragraph/0)
+    paragraph = &paragraph/0
+
+    paragraph
+    |> Stream.repeatedly()
     |> Enum.take(num)
   end
 
@@ -125,7 +131,10 @@ defmodule Faker.Lorem do
   """
   @spec sentences(integer) :: [String.t]
   def sentences(num) do
-    Stream.repeatedly(&sentence/0)
+    sentence = &sentence/0
+
+    sentence
+    |> Stream.repeatedly()
     |> Enum.take(num)
   end
 
@@ -147,7 +156,10 @@ defmodule Faker.Lorem do
   """
   @spec words(integer) :: [String.t]
   def words(num) do
-    Stream.repeatedly(&word/0)
+    word = &word/0
+
+    word
+    |> Stream.repeatedly()
     |> Enum.take(num)
   end
 
