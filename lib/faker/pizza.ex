@@ -2,13 +2,15 @@ defmodule Faker.Pizza do
   import Faker, only: [sampler: 2]
 
   @moduledoc """
-  Functions for generating Pizza related data in English
+  Functions for generating Pizza related data in English.
   """
 
   @doc """
-  Returns a list with a random number of pizzas (in between the specified
-  range)
-  If no range is specified it defaults to 2..5
+  Returns a list with a number of pizzas.
+
+  If an integer is provided, exactly that number of pizzas will be returned.
+  If a range is provided, the number will be in the range.
+  If no range or integer is specified it defaults to 2..5
   """
   @spec pizzas(Range.t) :: list(String.t)
   def pizzas(range \\ %Range{first: 2, last: 5})
@@ -17,9 +19,6 @@ defmodule Faker.Pizza do
     pizzas(:crypto.rand_uniform(first, last + 1))
   end
 
-  @doc """
-  Returns a specified number of pizzas as a list
-  """
   @spec pizzas(integer) :: list(String.t)
   def pizzas(num) do
     Stream.repeatedly(&pizza/0)
@@ -31,15 +30,17 @@ defmodule Faker.Pizza do
   """
   @spec pizza() :: String.t
   def pizza, do: pizza(:crypto.rand_uniform(1, 31))
-  defp pizza(n) when n <= 5, do: "#{size_or_inches()} with #{toppings_and(n)}"
-  defp pizza(n) when n <= 10, do: "#{size_or_inches()} #{style()} with #{toppings_and(n - 5)}"
+  defp pizza(n) when n <= 5, do: "#{size_or_inches()} with #{toppings_sentence(n)}"
+  defp pizza(n) when n <= 10, do: "#{size_or_inches()} #{style()} with #{toppings_sentence(n - 5)}"
   defp pizza(n) when n <= 15, do: "#{size_or_inches()} #{style()} #{combo()}"
   defp pizza(_n), do: "#{size_or_inches()} #{combo()}"
 
   @doc """
-  Returns a list with a random number of toppings (in between the specified
-  range)
-  If no range is specified it defaults to 2..5
+  Returns a list with a number of toppings.
+
+  If an integer is provided, exactly that number of toppings will be returned.
+  If a range is provided, the number will be in the range.
+  If no range or integer is specified it defaults to 2..5
   """
   @spec toppings(Range.t) :: list(String.t)
   def toppings(range \\ %Range{first: 2, last: 5})
@@ -48,9 +49,6 @@ defmodule Faker.Pizza do
     toppings(:crypto.rand_uniform(first, last + 1))
   end
 
-  @doc """
-  Returns a specified number of toppings as a list
-  """
   @spec toppings(integer) :: list(String.t)
   def toppings(num) do
     Stream.repeatedly(&topping/0)
@@ -58,34 +56,33 @@ defmodule Faker.Pizza do
   end
 
   @doc """
-  Returns a string with a random number of toppings (in between the specified
-  range). "And" will appear before the last topping, along with an Oxford comma.
-  If no range is specified it defaults to 2..5
-  """
-  @spec toppings_and(Range.t) :: String.t
-  def toppings_and(range \\ %Range{first: 2, last: 5})
+  Returns a sentence with a number of toppings. "And" will appear before the last topping, along with an Oxford comma.
 
-  def toppings_and(%Range{first: first, last: last}) do
-    toppings_and(:crypto.rand_uniform(first, last + 1))
+  If an integer is provided, exactly that number of toppings will be returned.
+  If a range is provided, the number will be in the range.
+  If no range or integer is specified it defaults to 2..5
+  """
+  @spec toppings_sentence(Range.t) :: String.t
+  def toppings_sentence(range \\ %Range{first: 2, last: 5})
+
+  def toppings_sentence(%Range{first: first, last: last}) do
+    toppings_sentence(:crypto.rand_uniform(first, last + 1))
   end
 
-  @doc """
-  Returns a specified number of toppings as a string, with an "and" before the last topping
-  """
-  @spec toppings_and(integer) :: String.t
-  def toppings_and(num) do
+  @spec toppings_sentence(integer) :: String.t
+  def toppings_sentence(num) do
     num
     |> toppings()
-    |> add_and
+    |> to_sentence
   end
 
   @doc """
   Converts a list to a string, with "and" before the last item. Uses an Oxford comma.
   """
-  @spec add_and(list) :: String.t
-  defp add_and([single]), do: single
-  defp add_and([first, second]), do: "#{first} and #{second}"
-  defp add_and([first | rest]), do: Enum.join(rest, ", ") <> ", and #{first}"
+  @spec to_sentence(list) :: String.t
+  defp to_sentence([single]), do: single
+  defp to_sentence([first, second]), do: "#{first} and #{second}"
+  defp to_sentence([first | rest]), do: Enum.join(rest, ", ") <> ", and #{first}"
 
   @doc """
   Returns a random cheese, sauce, meat or vegetarian topping
