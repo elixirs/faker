@@ -33,6 +33,48 @@ if Version.match?(System.version(), ">= 1.3.0") do
     end
 
     @doc """
+    Returns a random date in the past up to today in NaiveDateTime
+    """
+    @spec backward(NaiveDateTime.t) :: NaiveDateTime.t
+    def backward(date = %NaiveDateTime{}) do
+      naive_now = NaiveDateTime.utc_now
+      diff = naive_now
+      |> NaiveDateTime.diff(date)
+
+      unix_now = DateTime.utc_now
+      |> DateTime.to_unix
+
+      case diff do
+        0 -> naive_now
+        _ ->
+          :crypto.rand_uniform(unix_now - diff, unix_now)
+          |> DateTime.from_unix!
+          |> DateTime.to_naive
+      end
+    end
+
+    @doc """
+    Returns a random date in the past up to today in DateTime
+    """
+    @spec backward(DateTime.t) :: DateTime.t
+    def backward(date = %DateTime{}) do
+      date_naive = DateTime.to_naive(date)
+      diff = NaiveDateTime.utc_now
+      |> NaiveDateTime.diff(date_naive)
+
+      utc_now = DateTime.utc_now
+      unix_now = utc_now
+      |> DateTime.to_unix
+
+      case diff do
+        0 -> utc_now
+        _ ->
+          :crypto.rand_uniform(unix_now - diff, unix_now)
+          |> DateTime.from_unix!
+      end
+    end
+
+    @doc """
     Returns a random date in the past up to N days, today not included
     """
     @spec backward(integer) :: Date.t
