@@ -22,7 +22,7 @@ defmodule Faker.Bitcoin do
     |> :binary.bin_to_list
     |> Enum.reverse
     |> Enum.with_index
-    |> Enum.map(fn({v,i}) -> round(v * :math.pow(256, i)) end)
+    |> Enum.map(fn({v, i}) -> round(v * :math.pow(256, i)) end)
     |> Enum.sum
     |> ret
     |> String.reverse

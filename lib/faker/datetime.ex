@@ -1,6 +1,8 @@
 if Version.match?(System.version(), ">= 1.3.0") do
   defmodule Faker.DateTime do
-    @microseconds_per_day 86400000000
+    @moduledoc false
+
+    @microseconds_per_day 86_400_000_000
 
     @doc """
     Returns a random date in the past up to N days, today not included
@@ -72,8 +74,9 @@ if Version.match?(System.version(), ">= 1.3.0") do
       diff = to - from
       sign = if diff < 0, do: -1, else: 1
 
-      from + sign * :crypto.rand_uniform(0, abs(diff))
-      |> DateTime.from_unix!(:microseconds)
+      date = from + sign * :crypto.rand_uniform(0, abs(diff))
+
+      DateTime.from_unix!(date, :microseconds)
     end
   end
 end

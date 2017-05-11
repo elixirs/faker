@@ -1,6 +1,4 @@
 defmodule Faker.Internet do
-  import Faker, only: [sampler: 2]
-
   alias Faker.Name.En, as: Name
 
   @moduledoc """
@@ -113,7 +111,10 @@ defmodule Faker.Internet do
   @spec ip_v6_address() :: String.t
   def ip_v6_address do
     Enum.map_join 1..8, ":", fn(_part) ->
-      Integer.to_string(:crypto.rand_uniform(0, 65_536), 16)
+      rand = :crypto.rand_uniform(0, 65_536)
+
+      rand
+      |> Integer.to_string(16)
       |> String.rjust(4, ?0)
     end
   end
@@ -123,10 +124,9 @@ defmodule Faker.Internet do
   """
   @spec mac_address() :: String.t
   def mac_address do
-    Enum.map_join(1..6, ":", fn(_part) ->
-      Integer.to_string(:crypto.rand_uniform(0, 256), 16)
-      |> String.rjust(2, ?0)
-    end) |> String.downcase
+    1..6
+    |> Enum.map_join(":", &format_mac_address/1)
+    |> String.downcase
   end
 
   @doc """
@@ -143,5 +143,13 @@ defmodule Faker.Internet do
     |> Enum.take_random(length(words))
     |> Enum.join(Enum.random(glue))
     |> String.downcase
+  end
+
+  defp format_mac_address(_part) do
+    rand = :crypto.rand_uniform(0, 256)
+
+    rand
+    |> Integer.to_string(16)
+    |> String.rjust(2, ?0)
   end
 end
