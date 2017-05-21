@@ -2,6 +2,7 @@ defmodule Faker.Util do
   @digit ~w/0 1 2 3 4 5 6 7 8 9/
   @lowercase_alphabet ~w/a b c d e f g h i j k l m n o p q r s t u v w x y z/
   @uppercase_alphabet ~w/A B C D E F G H I J K L M N O P Q R S T U V W X Y Z/
+  @alphabet [@lowercase_alphabet|@uppercase_alphabet]
 
   @doc """
   Pick a random element from the list
@@ -41,31 +42,31 @@ defmodule Faker.Util do
   """
   @spec digit() :: binary
   def digit do
-    pick @digit
+    localised_module().digit
   end
 
   @doc """
   Get a random alphabet character as a string; one of a-z or A-Z
   """
-  @spec alphabet() :: binary
-  def alphabet do
-    pick [@lowercase_alphabet|@uppercase_alphabet]
+  @spec letter() :: binary
+  def letter do
+    localised_module().letter
   end
 
   @doc """
   Get a random lowercase character as a string; one of a-z
   """
-  @spec lower_alphabet() :: binary
-  def lower_alphabet do
-    pick @lowercase_alphabet
+  @spec lower_letter() :: binary
+  def lower_letter do
+    localised_module().lower_letter
   end
 
   @doc """
   Get a random uppercase character as a string; one of A-Z
   """
-  @spec upper_alphabet() :: binary
-  def upper_alphabet do
-    pick @uppercase_alphabet
+  @spec upper_letter() :: binary
+  def upper_letter do
+    localised_module().upper_letter
   end
 
   @doc """
@@ -96,8 +97,9 @@ defmodule Faker.Util do
   The following specifier rules are present by default:
 
     - **d**: digits 0-9
-    - **a**: lowercase alphabet a-z
-    - **A**: uppercase alphabet A-Z
+    - **a**: lowercase letter a-z
+    - **A**: uppercase letter A-Z
+    - **b**: anycase letter a-z, A-Z
 
   The specifier rules can be overriden using the second argument.
 
@@ -106,7 +108,7 @@ defmodule Faker.Util do
       format("%2d-%3d %a%A %2d%%") #=> "74-381 sK 32%"
       format("%8nBATMAN", n: fn() -> "nana " end) #=> "nana nana nana nana nana nana nana nana BATMAN"
   """
-  def format(format_str, rules \\ [d: &digit/0, A: &upper_alphabet/0, a: &lower_alphabet/0]) do
+  def format(format_str, rules \\ [d: &digit/0, A: &upper_letter/0, a: &lower_letter/0, b: &letter/0]) do
     Regex.replace(~r/%(?:%|(\d*)([a-zA-Z]))/, format_str, &format_replace(&1, &2, &3, rules))
   end
 
@@ -124,4 +126,6 @@ defmodule Faker.Util do
       _ -> raise "Rule #{rule_key} not found or not a function"
     end
   end
+
+  defp localised_module, do: Module.concat(__MODULE__, Faker.mlocale)
 end

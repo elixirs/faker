@@ -22,16 +22,16 @@ defmodule UtilTest do
     assert Faker.Util.digit in ~w/0 1 2 3 4 5 6 7 8 9/
   end
 
-  test "lower_alphabet/0" do
-    assert Faker.Util.lower_alphabet in ~w/a b c d e f g h i j k l m n o p q r s t u v w x y z/
+  test "lower_letter/0" do
+    assert Faker.Util.lower_letter in ~w/a b c d e f g h i j k l m n o p q r s t u v w x y z/
   end
 
-  test "upper_alphabet/0" do
-    assert Faker.Util.upper_alphabet in ~w/A B C D E F G H I J K L M N O P Q R S T U V W X Y Z/
+  test "upper_letter/0" do
+    assert Faker.Util.upper_letter in ~w/A B C D E F G H I J K L M N O P Q R S T U V W X Y Z/
   end
 
-  test "alphabet/0" do
-    assert Faker.Util.alphabet in ~w/a b c d e f g h i j k l m n o p q r s t u v w x y z A B C D E F G H I J K L M N O P Q R S T U V W X Y Z/
+  test "letter/0" do
+    assert Faker.Util.letter in ~w/a b c d e f g h i j k l m n o p q r s t u v w x y z A B C D E F G H I J K L M N O P Q R S T U V W X Y Z/
   end
 
   test "cycle/2" do
