@@ -70,6 +70,15 @@ defmodule Faker.Util do
   end
 
   @doc """
+  Start a cycle. See cycle/1
+  """
+  @spec cycle_start([any]) :: pid
+  def cycle_start(items) do
+    {:ok, cycle_pid} = Agent.start_link(fn -> {[], items} end)
+    cycle_pid
+  end
+
+  @doc """
   Cycle randomly through the given list with guarantee every element of the list is used once before
   elements are being picked again. This is done by keeping a list of remaining elements that have
   not been picked yet. The list of remaining element is returned, as well as the randomly picked
@@ -77,16 +86,21 @@ defmodule Faker.Util do
 
   ## Example
 
-      {a, cycle_state} = cycle ~w(1 2 3)
-      {b, cycle_state} = cycle ~w(1 2 3), cycle_state
-      {c, cycle_state} = cycle ~w(1 2 3), cycle_state
-      [a, b, c] #=> [3, 1, 2]
+      my_cycle = cycle_start ~w(1 2 3)
+      cycle my_cycle #=> 2
+      cycle my_cycle #=> 3
+      cycle my_cycle #=> 1
   """
-  @spec cycle([any], any) :: {any, any}
-  def cycle(_list, _state \\ nil)
-  def cycle(list, nil), do: cycle(list, [])
-  def cycle(list, []), do: cycle(list, Enum.shuffle(list))
-  def cycle(_original_list, [h|t]), do: {h, t}
+  @spec cycle(pid) :: any
+  def cycle(cycle_pid) do
+    Agent.get_and_update(cycle_pid, fn
+      {[], items} ->
+        [h|t] = Enum.shuffle(items)
+        {h, {t, items}}
+      {[h|t], items} ->
+        {h, {t, items}}
+    end)
+  end
 
   @doc """
   Format a string with randomly generated data. Format specifiers are replaced by random values. A

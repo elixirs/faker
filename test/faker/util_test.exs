@@ -36,10 +36,8 @@ defmodule UtilTest do
 
   test "cycle/2" do
     list = ~w/a b c/
-    {results, _} = Enum.reduce(1..3, {[], nil}, fn _, {results, cycle_state} ->
-      {result, cycle_state} = Faker.Util.cycle(list, cycle_state)
-      {[result|results], cycle_state}
-    end)
+    my_cycle = Faker.Util.cycle_start(list)
+    results = Stream.repeatedly(fn -> Faker.Util.cycle(my_cycle) end) |> Enum.take(3)
     assert Enum.sort(results) == list
   end
 
