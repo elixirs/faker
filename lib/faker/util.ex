@@ -122,7 +122,7 @@ defmodule Faker.Util do
       format("%2d-%3d %a%A %2d%%") #=> "74-381 sK 32%"
       format("%8nBATMAN", n: fn() -> "nana " end) #=> "nana nana nana nana nana nana nana nana BATMAN"
   """
-  @spec format(String.t, Keyword.t) :: String.t
+  @spec format(binary, Keyword.t) :: binary
   def format(format_str, rules \\ [d: &digit/0, A: &upper_letter/0, a: &lower_letter/0, b: &letter/0]) do
     Regex.replace(~r/%(?:%|(\d*)([a-zA-Z]))/, format_str, &format_replace(&1, &2, &3, rules))
   end
