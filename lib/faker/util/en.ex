@@ -37,4 +37,13 @@ defmodule Faker.Util.En do
   def upper_letter do
     pick @uppercase_alphabet
   end
+
+  @doc """
+  Converts a list to a string, with "and" before the last item. Uses an Oxford comma.
+  """
+  @spec to_sentence([binary]) :: binary
+  def to_sentence([]), do: ""
+  def to_sentence([single]), do: single
+  def to_sentence([first, second]), do: "#{first} and #{second}"
+  def to_sentence([first | rest]), do: Enum.join(rest, ", ") <> ", and #{first}"
 end

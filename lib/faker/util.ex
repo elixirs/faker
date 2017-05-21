@@ -46,6 +46,14 @@ defmodule Faker.Util do
   end
 
   @doc """
+  Converts a list to a string, with "and" before the last item. Uses an Oxford comma.
+  """
+  @spec to_sentence([binary]) :: binary
+  def to_sentence(items) do
+    localised_module().to_sentence(items)
+  end
+
+  @doc """
   Get a random alphabet character as a string; one of a-z or A-Z
   """
   @spec letter() :: binary

@@ -46,4 +46,11 @@ defmodule UtilTest do
     assert Faker.Util.format("%3d") =~ ~r/\d{3}/
     assert Faker.Util.format("%2d-%3d %a%A %2d%%") =~ ~r/\d{2}-\d{3} [a-z][A-Z] \d{2}%/
   end
+
+  test "to_sentence/1" do
+    assert Faker.Util.to_sentence([]) == ""
+    assert Faker.Util.to_sentence(["a"]) == "a"
+    assert Faker.Util.to_sentence(["a", "b"]) == "a and b"
+    assert Faker.Util.to_sentence(["a", "a", "a"]) == "a, a, and a"
+  end
 end
