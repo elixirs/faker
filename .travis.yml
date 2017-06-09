@@ -16,6 +16,9 @@ otp_release:
   - 19.3
 before_script:
   - kerl list installations
+script:
+  - mix test
+  - mix dialyzer --halt-exit-status
 notifications:
   recipients:
     - igasgeek@me.com

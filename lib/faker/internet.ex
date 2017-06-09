@@ -134,11 +134,18 @@ defmodule Faker.Internet do
   If no words are provided it will generate 2 to 5 random words
   If no glue is provied it will use one of -, _ or .
   """
-  @spec slug([String.t], [String.t]) :: String.t
-  def slug(words \\ nil, glue \\ nil) do
-    words = words || Faker.Lorem.words(2..5)
-    glue  = glue || ["-", "_", "."]
+  @spec slug() :: String.t
+  def slug do
+    slug(Lorem.words(2..5))
+  end
 
+  @spec slug([String.t]) :: String.t
+  def slug(words) do
+    slug(words, ["-", "_", "."])
+  end
+
+  @spec slug([String.t], [String.t]) :: String.t
+  def slug(words, glue) do
     words
     |> Enum.take_random(length(words))
     |> Enum.join(Enum.random(glue))

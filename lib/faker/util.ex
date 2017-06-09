@@ -17,10 +17,12 @@ defmodule Faker.Util do
   """
   @spec list(integer, ((integer) -> any)) :: [any]
   def list(n, fun) when is_function(fun, 1) do
-    Enum.map(0..(n-1), &fun.(&1))
+    Enum.map(0..(n - 1), &fun.(&1))
   end
+
+  @spec list(integer, (() -> any)) :: [any]
   def list(n, fun) when is_function(fun, 0) do
-    Enum.map(0..(n-1), fn _ -> fun.() end)
+    Enum.map(0..(n - 1), fn _ -> fun.() end)
   end
 
   @doc """

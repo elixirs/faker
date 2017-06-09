@@ -71,7 +71,7 @@ defmodule Faker.Code.Iban do
       iban "MC", ["FOO", "BAR"] #=> "MC70FOOBAR05"
       iban "SM", ["A"] #=> "SM65A18398227594GI06519YAP4"
   """
-  @spec iban(binary|[binary], [binary]) :: binary
+  @spec iban(atom|binary|[binary], [binary]) :: binary
   def iban(country_code, prefix_components) when is_binary(country_code), do: iban(String.to_atom(country_code), prefix_components)
   def iban(country_codes, prefix_components) when is_list(country_codes), do: iban(sample(country_codes), prefix_components)
   def iban(country_code, prefix_components) when is_atom(country_code) do
