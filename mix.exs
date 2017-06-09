@@ -7,7 +7,7 @@ defmodule Faker.Mixfile do
     [
       app: :faker,
       version: @version,
-      elixir: "~> 1.0",
+      elixir: "~> 1.3",
       description: "Faker is a pure Elixir library for generating fake data.",
       package: package(),
       name: "Faker",
