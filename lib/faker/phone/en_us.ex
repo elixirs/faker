@@ -66,7 +66,7 @@ defmodule Faker.Phone.EnUs do
   @doc """
   Returns a random subscriber number `n` digits long
   """
-  @spec subscriber_number(n :: Integer.t) :: String.t
+  @spec subscriber_number(pos_integer) :: String.t
   def subscriber_number(n) when is_integer(n) do
     Faker.format(String.duplicate("#", n))
   end

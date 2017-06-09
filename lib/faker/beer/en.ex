@@ -32,6 +32,6 @@ defmodule Faker.Beer.En do
   @doc """
   Returns a style name string
   """
-  @spec style() :: Strint.t
+  @spec style() :: String.t
   sampler :style, ["Light Lager", "Pilsner", "European Amber Lager", "Dark Lager", "Bock", "Light Hybrid Beer", "Amber Hybrid Beer", "English Pale Ale", "Scottish And Irish Ale", "Merican Ale", "English Brown Ale", "Porter", "Stout", "India Pale Ale", "German Wheat And Rye Beer", "Belgian And French Ale", "Sour Ale", "Belgian Strong Ale", "Strong Ale", "Fruit Beer", "Vegetable Beer", "Smoke-flavored", "Wood-aged Beer"]
 end
