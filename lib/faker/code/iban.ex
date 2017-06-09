@@ -47,7 +47,7 @@ defmodule Faker.Code.Iban do
       iban #=> "EE634888052576910847"
       iban #=> "ES1520374189803777170663"
   """
-  def iban(), do: iban(Keyword.keys(@iso_iban_specs))
+  def iban, do: iban(Keyword.keys(@iso_iban_specs))
 
   @spec iban(binary|[binary]) :: binary
   @doc """

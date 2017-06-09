@@ -17,8 +17,7 @@ otp_release:
 before_script:
   - kerl list installations
 script:
-  - mix test
-  - mix dialyzer --halt-exit-status
+  - mix test && mix credo --strict && mix dialyzer --halt-exit-status
 notifications:
   recipients:
     - igasgeek@me.com

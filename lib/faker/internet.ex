@@ -1,5 +1,6 @@
 defmodule Faker.Internet do
   alias Faker.Name.En, as: Name
+  alias Faker.Lorem
 
   @moduledoc """
   Functions for generating internet related data
@@ -31,6 +32,7 @@ defmodule Faker.Internet do
 
   defp user_name(0), do: "#{Name.first_name |> String.replace(~s(  ), ~s()) |> String.downcase}#{:crypto.rand_uniform(1900, 2100)}"
   defp user_name(1), do: "#{:rand.seed(:exs64, :os.timestamp); [ Name.first_name, Name.last_name  ] |> Enum.map_join(hd(Enum.shuffle(~w(. _))), &(String.replace(&1, ~s(  ), ~s()))) |> String.downcase}"
+
   @doc """
   Returns a random domain word
   """
@@ -103,7 +105,6 @@ defmodule Faker.Internet do
       :crypto.rand_uniform(0, 255)
     end
   end
-
 
   @doc """
   Generates an ipv6 address
