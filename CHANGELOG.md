@@ -12,6 +12,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 * Credo on CI [@igas][]
 * Dialyxir on CI [@igas][]
+* `Faker.String.base64/0` and `Faker.String.base64/1` [@yordis][]
 
 ### Changed
 
