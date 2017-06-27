@@ -403,3 +403,9 @@ Faker.Superhero.name #=> "Magnificent Shatterstar"
 
 Faker.Superhero.power #=> "Photokinesis"
 ```
+
+### Faker.String
+
+```elixir
+Faker.String.base64 #=> "JfuzivfU"
+```
