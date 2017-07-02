@@ -79,7 +79,7 @@ defmodule Faker.Pizza do
   Returns a pizza style
   """
   @spec style() :: String.t
-  sampler :style, ["Wood Fired", "Thick Crust", "Thin Crust", "New York Style", "Deep Dish", "Stuffed Crust", "Detroit-style", "Kosher", "Gluten-Free Quinoa", "Flatbread", "Sweet Potato Crust", "Grilled", "New Haven Style", "Greek", "Sicilian Style", "Pizza Rustica", "Tomatoe Pie", "Pizza Bread", "Neapolitan", "Deep Fried Pizza", "Gluten-Free Quinoa Corn", "Pizza Frittata", "Hand Tossed", "Multigrain", "Whole Wheat", "Fugazza", "Spooning Pizza"]
+  sampler :style, ["Wood Fired", "Thick Crust", "Thin Crust", "New York Style", "Deep Dish", "Stuffed Crust", "Detroit-style", "Kosher", "Gluten-Free Quinoa", "Flatbread", "Sweet Potato Crust", "Grilled", "New Haven Style", "Greek", "Sicilian Style", "Pizza Rustica", "Tomatoe Pie", "Pizza Bread", "Neapolitan", "Deep Fried Pizza", "Gluten-Free Corn", "Pizza Frittata", "Hand Tossed", "Multigrain", "Whole Wheat", "Fugazza", "Spooning Pizza"]
 
   @doc """
   Returns a sauce string
