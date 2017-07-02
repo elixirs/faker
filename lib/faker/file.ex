@@ -48,7 +48,6 @@ defmodule Faker.File do
     |> pick()
   end
 
-
   @doc """
   Returns a random file name
   """

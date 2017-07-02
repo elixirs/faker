@@ -11,13 +11,21 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 ### Added
 * `Faker.Pizza` [@lauraannwilliams][]
 
+* Credo on CI [@igas][]
+* Dialyxir on CI [@igas][]
+* `Faker.String.base64/0` and `Faker.String.base64/1` [@yordis][]
+
 ### Changed
 
 ### Deprecated
 
 ### Removed
 
+* Elixir < 1.3 support [@igas][]
+
 ### Fixed
+
+* Credo issues [@lrosa007][]
 
 ### Security
 
@@ -212,4 +220,5 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 [@wojtekmach]: https://github.com/wojtekmach
 [@zmoshansky]: https://github.com/zmoshansky
 [@anthonator]: https://github.com/anthonator
+[@yordis]: https://github.com/yordis
 [@lauraannwilliams]: https://github.com/lauraannwilliams

@@ -1,7 +1,6 @@
 defmodule Faker.Internet do
-  import Faker, only: [sampler: 2]
-
   alias Faker.Name.En, as: Name
+  alias Faker.Lorem
 
   @moduledoc """
   Functions for generating internet related data
@@ -33,6 +32,7 @@ defmodule Faker.Internet do
 
   defp user_name(0), do: "#{Name.first_name |> String.replace(~s(  ), ~s()) |> String.downcase}#{:crypto.rand_uniform(1900, 2100)}"
   defp user_name(1), do: "#{:rand.seed(:exs64, :os.timestamp); [ Name.first_name, Name.last_name  ] |> Enum.map_join(hd(Enum.shuffle(~w(. _))), &(String.replace(&1, ~s(  ), ~s()))) |> String.downcase}"
+
   @doc """
   Returns a random domain word
   """
@@ -106,14 +106,16 @@ defmodule Faker.Internet do
     end
   end
 
-
   @doc """
   Generates an ipv6 address
   """
   @spec ip_v6_address() :: String.t
   def ip_v6_address do
     Enum.map_join 1..8, ":", fn(_part) ->
-      Integer.to_string(:crypto.rand_uniform(0, 65_536), 16)
+      rand = :crypto.rand_uniform(0, 65_536)
+
+      rand
+      |> Integer.to_string(16)
       |> String.rjust(4, ?0)
     end
   end
@@ -123,10 +125,9 @@ defmodule Faker.Internet do
   """
   @spec mac_address() :: String.t
   def mac_address do
-    Enum.map_join(1..6, ":", fn(_part) ->
-      Integer.to_string(:crypto.rand_uniform(0, 256), 16)
-      |> String.rjust(2, ?0)
-    end) |> String.downcase
+    1..6
+    |> Enum.map_join(":", &format_mac_address/1)
+    |> String.downcase
   end
 
   @doc """
@@ -134,14 +135,29 @@ defmodule Faker.Internet do
   If no words are provided it will generate 2 to 5 random words
   If no glue is provied it will use one of -, _ or .
   """
-  @spec slug([String.t], [String.t]) :: String.t
-  def slug(words \\ nil, glue \\ nil) do
-    words = words || Faker.Lorem.words(2..5)
-    glue  = glue || ["-", "_", "."]
+  @spec slug() :: String.t
+  def slug do
+    slug(Lorem.words(2..5))
+  end
 
+  @spec slug([String.t]) :: String.t
+  def slug(words) do
+    slug(words, ["-", "_", "."])
+  end
+
+  @spec slug([String.t], [String.t]) :: String.t
+  def slug(words, glue) do
     words
     |> Enum.take_random(length(words))
     |> Enum.join(Enum.random(glue))
     |> String.downcase
+  end
+
+  defp format_mac_address(_part) do
+    rand = :crypto.rand_uniform(0, 256)
+
+    rand
+    |> Integer.to_string(16)
+    |> String.rjust(2, ?0)
   end
 end
