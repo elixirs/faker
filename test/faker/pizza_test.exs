@@ -17,20 +17,6 @@ defmodule PizzaTest do
      assert length(Faker.Pizza.toppings(10)) == 10
    end
 
-   defp toppings_without_and(amount) do
-     amount
-     |> Faker.Pizza.toppings_sentence
-     |> String.split([", ", "and "], trim: true)
-   end
-
-   test "toppings_sentence/1" do
-     assert String.contains?(Faker.Pizza.toppings_sentence(2), " and ")
-     assert String.contains?(Faker.Pizza.toppings_sentence(3), ", and ")
-     assert length(toppings_without_and(2..10)) in 2..10
-     assert length(toppings_without_and(2)) == 2
-     assert length(toppings_without_and(10)) == 10
-   end
-
    test "pizza/0" do
    	assert is_binary(Faker.Pizza.pizza)
    end

@@ -55,34 +55,9 @@ defmodule Faker.Pizza do
     |> Enum.take(num)
   end
 
-  @doc """
-  Returns a sentence with a number of toppings. "And" will appear before the last topping, along with an Oxford comma.
-
-  If an integer is provided, exactly that number of toppings will be returned.
-  If a range is provided, the number will be in the range.
-  If no range or integer is specified it defaults to 2..5
-  """
-  @spec toppings_sentence(Range.t) :: String.t
-  def toppings_sentence(range \\ %Range{first: 2, last: 5})
-
-  def toppings_sentence(%Range{first: first, last: last}) do
-    toppings_sentence(:crypto.rand_uniform(first, last + 1))
+  defp toppings_sentence(num) do
+    num |> toppings() |> Faker.Util.to_sentence
   end
-
-  @spec toppings_sentence(integer) :: String.t
-  def toppings_sentence(num) do
-    num
-    |> toppings()
-    |> to_sentence
-  end
-
-  @doc """
-  Converts a list to a string, with "and" before the last item. Uses an Oxford comma.
-  """
-  @spec to_sentence(list) :: String.t
-  defp to_sentence([single]), do: single
-  defp to_sentence([first, second]), do: "#{first} and #{second}"
-  defp to_sentence([first | rest]), do: Enum.join(rest, ", ") <> ", and #{first}"
 
   @doc """
   Returns a random cheese, sauce, meat or vegetarian topping
