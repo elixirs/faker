@@ -29,9 +29,7 @@ defmodule Faker.Util do
 
   ## Examples
 
-      join(3, &)
-      date_of_birth(1) #=> ~D[2015-12-06]
-      date_of_birth(10..19) #=> ~D[2004-05-15]
+      join(3, ", ", &Faker.Code.isbn13/0) # => "9785053574562, 9787187574302, 9798231475230"
   """
   @spec join(integer, binary, ((integer) -> binary)) :: binary
   def join(n, joiner \\ "", fun) do
