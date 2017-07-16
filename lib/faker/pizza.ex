@@ -21,8 +21,8 @@ defmodule Faker.Pizza do
 
   @spec pizzas(integer) :: list(String.t)
   def pizzas(num) do
-    Stream.repeatedly(&pizza/0)
-    |> Enum.take(num)
+    stream = Stream.repeatedly(&pizza/0)
+    Enum.take(stream, num)
   end
 
   @doc """
@@ -51,8 +51,8 @@ defmodule Faker.Pizza do
 
   @spec toppings(integer) :: list(String.t)
   def toppings(num) do
-    Stream.repeatedly(&topping/0)
-    |> Enum.take(num)
+    stream = Stream.repeatedly(&topping/0)
+    Enum.take(stream, num)
   end
 
   defp toppings_sentence(num) do
