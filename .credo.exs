@@ -51,8 +51,7 @@
 
         # For some checks, like AliasUsage, you can only customize the priority
         # Priority values are: `low, normal, high, higher`
-        # TODO: https://github.com/rrrene/credo/issues/318
-        {Credo.Check.Design.AliasUsage, false},
+        {Credo.Check.Design.AliasUsage},
 
         # For others you can set parameters
 
