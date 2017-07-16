@@ -13,3 +13,7 @@ script:
 notifications:
   recipients:
     - igasgeek@me.com
+matrix:
+  exclude:
+    - otp_release: 20.0
+      elixir: 1.3.4
