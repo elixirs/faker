@@ -9,6 +9,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 ## Unreleased
 
 ### Added
+* `Faker.Pizza` [@lauraannwilliams][]
 
 * Credo on CI [@igas][]
 * Dialyxir on CI [@igas][]
@@ -220,3 +221,4 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 [@zmoshansky]: https://github.com/zmoshansky
 [@anthonator]: https://github.com/anthonator
 [@yordis]: https://github.com/yordis
+[@lauraannwilliams]: https://github.com/lauraannwilliams
