@@ -116,7 +116,7 @@ defmodule Faker.Pizza do
   @doc """
   Returns a random size or inches
   """
-  @spec size_or_inches() :: [char]
+  @spec size_or_inches() :: String.t
   def size_or_inches, do: size_or_inches(:crypto.rand_uniform(1, 3))
   defp size_or_inches(1), do: size()
   defp size_or_inches(2), do: inches()
