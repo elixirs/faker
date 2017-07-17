@@ -1,6 +1,8 @@
 defmodule Faker.Pizza do
   import Faker, only: [sampler: 2]
 
+  alias Faker.Util
+
   @moduledoc """
   Functions for generating Pizza related data in English.
   """
@@ -56,7 +58,7 @@ defmodule Faker.Pizza do
   end
 
   defp toppings_sentence(num) do
-    num |> toppings() |> Faker.Util.to_sentence
+    num |> toppings() |> Util.to_sentence
   end
 
   @doc """

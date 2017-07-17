@@ -145,5 +145,4 @@ defmodule Faker.Superhero.En do
   "Vision - Microscopic", "Vision - Night", "Vision - Telescopic",
   "Vision - Thermal", "Vision - X-Ray", "Vitakinesis", "Wallcrawling",
   "Weapon-based Powers", "Weapons Master", "Web Creation", "Wishing"]
-
 end
