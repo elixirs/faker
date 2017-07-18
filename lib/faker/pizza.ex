@@ -17,8 +17,8 @@ defmodule Faker.Pizza do
   @spec pizzas(Range.t) :: list(String.t)
   def pizzas(range \\ %Range{first: 2, last: 5})
 
-  def pizzas(%Range{first: first, last: last}) do
-    pizzas(:crypto.rand_uniform(first, last + 1))
+  def pizzas(first..last) do
+    pizzas(Faker.random_between(first..last))
   end
 
   @spec pizzas(integer) :: list(String.t)
@@ -31,7 +31,7 @@ defmodule Faker.Pizza do
   Returns a pizza
   """
   @spec pizza() :: String.t
-  def pizza, do: pizza(:crypto.rand_uniform(1, 31))
+  def pizza, do: pizza(Faker.random(30))
   defp pizza(n) when n <= 5, do: "#{size_or_inches()} with #{toppings_sentence(n)}"
   defp pizza(n) when n <= 10, do: "#{size_or_inches()} #{style()} with #{toppings_sentence(n - 5)}"
   defp pizza(n) when n <= 15, do: "#{size_or_inches()} #{style()} #{combo()}"
@@ -47,8 +47,8 @@ defmodule Faker.Pizza do
   @spec toppings(Range.t) :: list(String.t)
   def toppings(range \\ %Range{first: 2, last: 5})
 
-  def toppings(%Range{first: first, last: last}) do
-    toppings(:crypto.rand_uniform(first, last + 1))
+  def toppings(first..last) do
+    toppings(Faker.random_between(first..last))
   end
 
   @spec toppings(integer) :: list(String.t)
@@ -65,9 +65,9 @@ defmodule Faker.Pizza do
   Returns a random cheese, sauce, meat or vegetarian topping
   """
   @spec topping() :: String.t
-  def topping, do: topping(:crypto.rand_uniform(1, 8))
-  defp topping(1), do: cheese()
-  defp topping(2), do: sauce()
+  def topping, do: topping(Faker.random(7))
+  defp topping(0), do: cheese()
+  defp topping(1), do: sauce()
   defp topping(count) when count <= 5, do: meat()
   defp topping(_count), do: vegetable()
 
@@ -117,9 +117,9 @@ defmodule Faker.Pizza do
   Returns a random size or inches
   """
   @spec size_or_inches() :: String.t
-  def size_or_inches, do: size_or_inches(:crypto.rand_uniform(1, 3))
-  defp size_or_inches(1), do: size()
-  defp size_or_inches(2), do: inches()
+  def size_or_inches, do: size_or_inches(Faker.random(1))
+  defp size_or_inches(0), do: size()
+  defp size_or_inches(1), do: inches()
 
   @doc """
   Returns a size string

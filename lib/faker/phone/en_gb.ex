@@ -31,7 +31,7 @@ defmodule Faker.Phone.EnGb do
   """
   @spec number() :: String.t
   def number do
-    if :crypto.rand_uniform(0, 2) == 0 do
+    if Faker.random(1) == 0 do
       landline_number()
     else
       cell_number()
@@ -74,7 +74,7 @@ defmodule Faker.Phone.EnGb do
 
   defp number_prefix do
     numbers = Map.values(@prefixes)
-    type = Enum.at(numbers, :crypto.rand_uniform(0, Enum.count(@prefixes)))
-    Enum.at(type, :crypto.rand_uniform(0, Enum.count(type)))
+    type = Enum.at(numbers, Faker.random(Enum.count(@prefixes) - 1))
+    Enum.at(type, Faker.random(Enum.count(type) - 1))
   end
 end

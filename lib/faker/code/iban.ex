@@ -117,6 +117,6 @@ defmodule Faker.Code.Iban do
   end
 
   defp sample(list) do
-    Enum.fetch!(list, :crypto.rand_uniform(0, length(list)))
+    Enum.fetch!(list, Faker.random(length(list) - 1))
   end
 end

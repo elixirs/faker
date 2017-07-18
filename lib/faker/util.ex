@@ -8,7 +8,7 @@ defmodule Faker.Util do
   """
   @spec pick([any]) :: any
   def pick(list) do
-    Enum.at(list, :crypto.rand_uniform(0, Enum.count(list)))
+    Enum.at(list, Faker.random(Enum.count(list) - 1))
   end
 
   @doc """

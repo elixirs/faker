@@ -79,7 +79,7 @@ defmodule Faker.Phone.EnUs do
   defdelegate extension(n), to: __MODULE__, as: :subscriber_number
   defdelegate extension, to: __MODULE__, as: :subscriber_number
 
-  defp std_separator, do: Enum.at(["-", ".", ""], digit(0, 3))
+  defp std_separator, do: Enum.at(["-", ".", ""], Faker.random(2))
 
-  defp digit(min, max), do: :crypto.rand_uniform(min, max)
+  defp digit(min, max), do: Faker.random_between(min..max)
 end

@@ -19,7 +19,17 @@ defmodule Faker.Mixfile do
   def application do
     [
       applications: [:crypto],
-      env: [locale: :en]
+      env: env()
+    ]
+  end
+
+  defp env do
+    [
+      locale: :en,
+      random_function: {Faker, :default_random},
+      random_bytes_function: {Faker, :default_random_bytes},
+      random_uniform_function: {Faker, :default_random_uniform},
+      random_between_function: {Faker, :default_random_between}
     ]
   end
 
