@@ -18,7 +18,7 @@ defmodule Faker.Mixfile do
 
   def application do
     [
-      applications: [:crypto],
+      applications: [:crypto, :timex],
       env: [locale: :en]
     ]
   end
@@ -29,6 +29,7 @@ defmodule Faker.Mixfile do
       {:earmark, ">= 0.0.0", only: :dev, runtime: false},
       {:credo, ">= 0.0.0", only: [:dev, :test], runtime: false},
       {:dialyxir, ">= 0.0.0", only: [:dev], runtime: false},
+      {:timex, "~> 3.1"}
     ]
   end
 

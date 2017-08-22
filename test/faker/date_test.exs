@@ -1,5 +1,6 @@
 defmodule DateTest do
   use ExUnit.Case, async: true
+  use Timex
 
   test "date_of_birth/0" do
     assert age(Faker.Date.date_of_birth) in 18..99
@@ -15,32 +16,29 @@ defmodule DateTest do
 
   test "forward/1" do
     forwarded_date = Faker.Date.forward(10)
-    assert %Date{year: year, month: month, day: day} = forwarded_date
-    assert now().year < year || now().month < month || now().day < day
+    assert Date.compare(forwarded_date, Date.utc_today) == :gt
+    assert Timex.diff(forwarded_date, Timex.today, :days) in 1..10
   end
 
   test "backward/1" do
     backward_date = Faker.Date.backward(10)
-    assert %Date{year: year, month: month, day: day} = backward_date
-    assert now().year > year || now().month > month || now().day > day
+    assert Date.compare(backward_date, Date.utc_today) == :lt
+    assert Timex.diff(Timex.today, backward_date, :days) in 1..10
   end
 
   test "between/2" do
     from_date = ~D[2017-01-01]
     to_date = ~D[2017-01-10]
     between_date = Faker.Date.between(from_date, to_date)
-    assert %Date{year: year, month: month, day: day} = between_date
-    assert from_date.year <= year || from_date.month <= month || from_date.day <= day
-    assert to_date.year >= year || from_date.month >= month || to_date.day >= day
+    assert Date.compare(between_date, from_date) in [:gt, :eq]
+    assert Date.compare(between_date, to_date) in [:lt, :eq]
   end
 
-  defp age(%Date{year: year, month: month, day: day}) do
-    %Date{ year: current_year, month: current_month, day: current_day } = now()
-    already_aged_this_year = current_month > month || current_month == month && day >= current_day
-    current_year - year + (if already_aged_this_year, do: 1, else: 0)
+  test "age/1 returns valid age" do
+    assert 26 == age(%Date{year: 1990, month: 9, day: 1}, %Date{year: 2017, month: 8, day: 1})
   end
 
-  defp now do
-    DateTime.utc_now |> DateTime.to_date
+  defp age(date, today \\ Timex.today) do
+    Timex.diff today, date, :years
   end
 end

@@ -1,4 +1,6 @@
 defmodule Faker.Date do
+  use Timex
+
   @moduledoc """
   Functions for generating dates
   """
@@ -22,13 +24,9 @@ defmodule Faker.Date do
 
   @spec date_of_birth(Range.t) :: Date.t
   def date_of_birth(%Range{first: first, last: last}) do
-    {{current_year, current_month, current_day}, _time} = :calendar.local_time()
-    random_month = :crypto.rand_uniform(1, 13)
-    random_day = :crypto.rand_uniform(1, 29)
-    already_aged_this_year = current_month > random_month || current_month == random_month && random_day >= current_day
-    random_year = current_year - :crypto.rand_uniform(first, last) + (if already_aged_this_year, do: 1, else: 0)
-    {:ok, date} = Date.new random_year, random_month, random_day
-    date
+    to_date = Timex.shift Timex.today, years: -first
+    from_date = Timex.shift Timex.today, years: -last
+    between(from_date, to_date)
   end
 
   @doc """
@@ -36,7 +34,9 @@ defmodule Faker.Date do
   """
   @spec backward(integer) :: Date.t
   def backward(days) do
-    forward(-days)
+    from_date = Timex.shift Timex.today, days: -days
+    to_date = Timex.shift Timex.today, days: -1
+    between(from_date, to_date)
   end
 
   @doc """
@@ -44,18 +44,17 @@ defmodule Faker.Date do
   """
   @spec forward(integer) :: Date.t
   def forward(days) do
-    days
-    |> Faker.DateTime.forward()
-    |> DateTime.to_date
+    from_date = Timex.shift Timex.today, days: 1
+    to_date = Timex.shift Timex.today, days: days
+    between(from_date, to_date)
   end
 
   @doc """
-  Returns a random date between two dates
+  Returns a random date between two dates, inclusive
   """
   @spec between(Date.t, Date.t) :: Date.t
-  def between(from, to) do
-    from
-    |> Faker.DateTime.between(to)
-    |> DateTime.to_date
+  def between(from_date, to_date) do
+    days_diff = Timex.diff to_date, from_date, :days
+    Timex.shift from_date, days: Enum.random(0..days_diff)
   end
 end
