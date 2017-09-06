@@ -1,19 +1,12 @@
 language: elixir
-sudo: false
 elixir:
   - 1.3.4
   - 1.4.5
+  - 1.5.1
 otp_release:
   - 19.3
-  - 20.0
-before_script:
-  - kerl list installations
 script:
   - mix test && mix credo --strict && mix dialyzer --halt-exit-status
 notifications:
   recipients:
     - igasgeek@me.com
-matrix:
-  exclude:
-    - otp_release: 20.0
-      elixir: 1.3.4
