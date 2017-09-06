@@ -9,6 +9,20 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 ## Unreleased
 
 ### Added
+
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+## 0.9.0
+
+### Added
 * `Faker.Pizza` [@lauraannwilliams][]
 
 * Credo on CI [@igas][]
