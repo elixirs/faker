@@ -5,14 +5,12 @@ defmodule Faker.Geohash do
     @moduledoc """
     Function for generate geohashes.
     """
-    
     @doc """
     Return random geohash.
     """
     @spec geohash() :: String.t
     def geohash do
       import Geohash, only: [encode: 2]
-  
       Geohash.encode(latitude(), longitude(), rand_precision())
     end
 
