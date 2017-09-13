@@ -17,7 +17,7 @@ defmodule Faker.SSN.EnUs do
 
   defp area do
     case "#{:crypto.rand_uniform(1, 899)}" do
-      666 -> 667
+      "666" -> "667"
       n -> n |> String.pad_leading(3, "0")
     end
   end
