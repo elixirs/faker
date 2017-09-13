@@ -92,7 +92,7 @@ defmodule Faker.Internet do
     image_url(:crypto.rand_uniform(0, 3))
   end
 
-  defp image_url(0), do: "https://placekitten.com/#{:crypto.rand_uniform(1, 1024)}/#{:crypto.rand_uniform(1, 1024)}"
+  defp image_url(0), do: "placekitten.com#{:crypto.rand_uniform(1, 1024)}x#{:crypto.rand_uniform(1, 1024)}"
   defp image_url(1), do: "https://placehold.it/#{:crypto.rand_uniform(1, 1024)}x#{:crypto.rand_uniform(1, 1024)}"
   defp image_url(2), do: "https://dummyimage.com/#{:crypto.rand_uniform(1, 1024)}x#{:crypto.rand_uniform(1, 1024)}"
 
