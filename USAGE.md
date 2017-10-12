@@ -388,7 +388,7 @@ Faker.Beer.hop #=> "Equinox"
 
 Faker.Beer.yeast #=> "2278 - Czech Pils"
 
-Faker.Beer.malts #=> "Rye malt"
+Faker.Beer.malt #=> "Rye malt"
 
 Faker.Beer.ibu #=> "40 IBU"
 
