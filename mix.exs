@@ -29,6 +29,7 @@ defmodule Faker.Mixfile do
       {:earmark, ">= 0.0.0", only: :dev, runtime: false},
       {:credo, ">= 0.0.0", only: [:dev, :test], runtime: false},
       {:dialyxir, ">= 0.0.0", only: [:dev], runtime: false},
+      {:geohash, "~> 1.0", optional: true},
     ]
   end
 
