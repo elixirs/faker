@@ -21,6 +21,7 @@
 - [Faker.Beer](#fakerbeer)
 - [Faker.Superhero](#fakersuperhero)
 - [Faker.Pizza](#fakerpizza)
+- [Faker.Cat](#fakercat)
 
 ### Faker.Address
 
