@@ -45,7 +45,7 @@ defmodule Faker.Avatar do
     %{
       0 => "/bgset_bg1",
       1 => "/bgset_bg2"
-    }[Faker.random(1)]
+    }[Faker.random_between(0, 1)]
   end
 
   defp set do
@@ -53,6 +53,6 @@ defmodule Faker.Avatar do
       0 => "/set_set1",
       1 => "/set_set2",
       2 => "/set_set3"
-    }[Faker.random(2)]
+    }[Faker.random_between(0, 2)]
   end
 end

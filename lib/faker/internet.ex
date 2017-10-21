@@ -26,16 +26,16 @@ defmodule Faker.Internet do
   Returns a random username
   """
   @spec user_name() :: String.t
-  def user_name, do: user_name(Faker.random(1))
+  def user_name, do: user_name(Faker.random_between(0, 1))
 
-  defp user_name(0), do: "#{Name.first_name |> String.replace(~s(  ), ~s()) |> String.downcase}#{Faker.random_between(1900..2100)}"
+  defp user_name(0) do
+    "#{Name.first_name() |> String.replace(~s(  ), ~s()) |> String.downcase()}#{Faker.random_between(1900, 2100)}"
+  end
+
   defp user_name(1) do
-    [Name.first_name, Name.last_name]
-    |> Enum.map_join(
-      Util.pick(~w(. _)),
-      &(String.replace(&1, ~s(  ), ~s()))
-    )
-    |> String.downcase
+    [Name.first_name(), Name.last_name()]
+    |> Enum.map_join(Util.pick(~w(. _)), &String.replace(&1, ~s(  ), ~s()))
+    |> String.downcase()
   end
 
   @doc """
@@ -82,27 +82,29 @@ defmodule Faker.Internet do
   Returns a random url
   """
   @spec url() :: String.t
-  def url, do: url(Faker.random(1))
+  def url, do: url(Faker.random_between(0, 1))
 
   defp url(0), do: "http://#{domain_name()}"
   defp url(1), do: "https://#{domain_name()}"
 
-  @doc"""
+  @doc """
   Returns a random image url from placekitten.com | placehold.it | dummyimage.com
   """
   @spec image_url() :: String.t
-  def image_url, do: image_url(Faker.random(2))
+  def image_url, do: image_url(Faker.random_between(0, 2))
 
   defp image_url(0) do
-    size = Faker.random_between(10..1024)
+    size = Faker.random_between(10, 1024)
     "https://placekitten.com/#{size}/#{size}"
   end
+
   defp image_url(1) do
-    size = Faker.random_between(10..1024)
+    size = Faker.random_between(10, 1024)
     "https://placehold.it/#{size}x#{size}"
   end
+
   defp image_url(2) do
-    size = Faker.random_between(10..1024)
+    size = Faker.random_between(10, 1024)
     "https://dummyimage.com/#{size}x#{size}"
   end
 
@@ -112,7 +114,7 @@ defmodule Faker.Internet do
   @spec ip_v4_address() :: String.t
   def ip_v4_address do
     Enum.map_join 1..4, ".", fn(_part) ->
-      Faker.random(255)
+      Faker.random_between(0, 255)
     end
   end
 
@@ -121,13 +123,11 @@ defmodule Faker.Internet do
   """
   @spec ip_v6_address() :: String.t
   def ip_v6_address do
-    Enum.map_join 1..8, ":", fn(_part) ->
-      rand = Faker.random(65_535)
-
-      rand
+    Enum.map_join(1..8, ":", fn _part ->
+      Faker.random_between(0, 65535)
       |> Integer.to_string(16)
-      |> String.rjust(4, ?0)
-    end
+      |> String.pad_leading(4, ["0"])
+    end)
   end
 
   @doc """
@@ -135,9 +135,8 @@ defmodule Faker.Internet do
   """
   @spec mac_address() :: String.t
   def mac_address do
-    1..6
-    |> Enum.map_join(":", &format_mac_address/1)
-    |> String.downcase
+    Enum.map_join(1..6, ":", &format_mac_address/1)
+    |> String.downcase()
   end
 
   @doc """
@@ -164,10 +163,8 @@ defmodule Faker.Internet do
   end
 
   defp format_mac_address(_part) do
-    rand = Faker.random(255)
-
-    rand
+    Faker.random_between(0, 255)
     |> Integer.to_string(16)
-    |> String.rjust(2, ?0)
+    |> String.pad_leading(2, ["0"])
   end
 end

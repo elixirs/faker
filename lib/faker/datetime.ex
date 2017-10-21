@@ -65,7 +65,7 @@ defmodule Faker.DateTime do
     diff = to - from
     sign = if diff < 0, do: -1, else: 1
 
-    date = from + sign * Faker.random(abs(diff))
+    date = from + sign * Faker.random_between(0, abs(diff))
 
     DateTime.from_unix!(date, :microseconds)
   end

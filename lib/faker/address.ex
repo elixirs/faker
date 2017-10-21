@@ -13,7 +13,7 @@ defmodule Faker.Address do
   @spec building_number() :: String.t
   def building_number do
     ["#####", "####", "###", "##", "#"]
-    |> Enum.at(Faker.random(4))
+    |> Enum.at(Faker.random_between(0, 4))
     |> Faker.format
   end
 
@@ -22,7 +22,7 @@ defmodule Faker.Address do
   """
   @spec city() :: String.t
   def city do
-    city(Faker.random(3))
+    city(Faker.random_between(0, 3))
   end
 
   defp city(0), do: "#{city_prefix()} #{Name.first_name}#{city_suffix()}"
@@ -82,7 +82,7 @@ defmodule Faker.Address do
   @spec secondary_address() :: String.t
   def secondary_address do
     ["Apt. ###", "Suite ###"]
-    |> Enum.at(Faker.random(1))
+    |> Enum.at(Faker.random_between(0, 1))
     |> Faker.format
   end
 
@@ -118,7 +118,7 @@ defmodule Faker.Address do
   """
   @spec street_name() :: String.t
   def street_name do
-    street_name(Faker.random(1))
+    street_name(Faker.random_between(0, 1))
   end
 
   defp street_name(0), do: "#{Name.first_name} #{street_suffix()}"
@@ -148,7 +148,7 @@ defmodule Faker.Address do
   @spec zip_code() :: String.t
   def zip_code do
     ["#####", "#####-####"]
-    |> Enum.at(Faker.random(1))
+    |> Enum.at(Faker.random_between(0, 1))
     |> Faker.format
   end
 end

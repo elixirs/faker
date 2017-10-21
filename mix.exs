@@ -26,10 +26,7 @@ defmodule Faker.Mixfile do
   defp env do
     [
       locale: :en,
-      random_function: {Faker, :default_random},
-      random_bytes_function: {Faker, :default_random_bytes},
-      random_uniform_function: {Faker, :default_random_uniform},
-      random_between_function: {Faker, :default_random_between}
+      random_module: Faker.Random.Elixir
     ]
   end
 
@@ -38,7 +35,7 @@ defmodule Faker.Mixfile do
       {:ex_doc, ">= 0.0.0", only: :dev, runtime: false},
       {:earmark, ">= 0.0.0", only: :dev, runtime: false},
       {:credo, ">= 0.0.0", only: [:dev, :test], runtime: false},
-      {:dialyxir, ">= 0.0.0", only: [:dev], runtime: false},
+      {:dialyxir, ">= 0.0.0", only: [:dev], runtime: false}
     ]
   end
 

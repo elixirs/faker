@@ -18,7 +18,7 @@ defmodule Faker.Pizza do
   def pizzas(range \\ %Range{first: 2, last: 5})
 
   def pizzas(first..last) do
-    pizzas(Faker.random_between(first..last))
+    pizzas(Faker.random_between(first, last))
   end
 
   @spec pizzas(integer) :: list(String.t)
@@ -31,7 +31,7 @@ defmodule Faker.Pizza do
   Returns a pizza
   """
   @spec pizza() :: String.t
-  def pizza, do: pizza(Faker.random(30))
+  def pizza, do: pizza(Faker.random_between(0, 30))
   defp pizza(n) when n <= 5, do: "#{size_or_inches()} with #{toppings_sentence(n)}"
   defp pizza(n) when n <= 10, do: "#{size_or_inches()} #{style()} with #{toppings_sentence(n - 5)}"
   defp pizza(n) when n <= 15, do: "#{size_or_inches()} #{style()} #{combo()}"
@@ -48,7 +48,7 @@ defmodule Faker.Pizza do
   def toppings(range \\ %Range{first: 2, last: 5})
 
   def toppings(first..last) do
-    toppings(Faker.random_between(first..last))
+    toppings(Faker.random_between(first, last))
   end
 
   @spec toppings(integer) :: list(String.t)
@@ -65,13 +65,13 @@ defmodule Faker.Pizza do
   Returns a random cheese, sauce, meat or vegetarian topping
   """
   @spec topping() :: String.t
-  def topping, do: topping(Faker.random(7))
+  def topping, do: topping(Faker.random_between(0, 7))
   defp topping(0), do: cheese()
   defp topping(1), do: sauce()
   defp topping(count) when count <= 5, do: meat()
   defp topping(_count), do: vegetable()
 
-  @doc"""
+  @doc """
   Returns a Pizza Restaurant string
   """
   @spec company() :: String.t
@@ -117,7 +117,7 @@ defmodule Faker.Pizza do
   Returns a random size or inches
   """
   @spec size_or_inches() :: String.t
-  def size_or_inches, do: size_or_inches(Faker.random(1))
+  def size_or_inches, do: size_or_inches(Faker.random_between(0, 1))
   defp size_or_inches(0), do: size()
   defp size_or_inches(1), do: inches()
 

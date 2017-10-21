@@ -97,6 +97,6 @@ defmodule Faker.File do
 
   defp pick(list) do
     list
-    |> Enum.at(Faker.random(Enum.count(list) - 1))
+    |> Enum.at(Faker.random_between(0, Enum.count(list) - 1))
   end
 end

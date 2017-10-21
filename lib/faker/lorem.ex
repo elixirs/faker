@@ -21,7 +21,7 @@ defmodule Faker.Lorem do
   def characters(range \\ %Range{first: 15, last: 255})
 
   def characters(first..last) do
-    characters(Faker.random_between(first..last))
+    characters(Faker.random_between(first, last))
   end
 
   @doc """
@@ -45,7 +45,7 @@ defmodule Faker.Lorem do
   def paragraph(range \\ %Range{first: 2, last: 5})
 
   def paragraph(first..last) do
-    paragraph(Faker.random_between(first..last))
+    paragraph(Faker.random_between(first, last))
   end
 
   @doc """
@@ -66,7 +66,7 @@ defmodule Faker.Lorem do
   def paragraphs(range \\ %Range{first: 2, last: 5})
 
   def paragraphs(first..last) do
-    paragraphs(Faker.random_between(first..last))
+    paragraphs(Faker.random_between(first, last))
   end
 
   @doc """
@@ -90,8 +90,7 @@ defmodule Faker.Lorem do
   def sentence(range \\ %Range{first: 4, last: 10})
 
   def sentence(first..last) do
-    first..last
-    |> Faker.random_between()
+    Faker.random_between(first, last)
     |> sentence(Util.pick([".", ".", ".", "!", "?"]))
   end
 
@@ -125,7 +124,7 @@ defmodule Faker.Lorem do
   def sentences(range \\ 2..5)
 
   def sentences(first..last) do
-    sentences(Faker.random_between(first..last))
+    sentences(Faker.random_between(first, last))
   end
 
   @doc """
@@ -149,7 +148,7 @@ defmodule Faker.Lorem do
   def words(range \\ %Range{first: 3, last: 6})
 
   def words(first..last) do
-    words(Faker.random_between(first..last))
+    words(Faker.random_between(first, last))
   end
 
   @doc """
@@ -167,6 +166,6 @@ defmodule Faker.Lorem do
 
   defp character do
     alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
-    Enum.at(alphabet, Faker.random(Enum.count(alphabet) - 1))
+    Enum.at(alphabet, Faker.random_between(0, Enum.count(alphabet) - 1))
   end
 end

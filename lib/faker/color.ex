@@ -19,9 +19,9 @@ defmodule Faker.Color do
   @spec rgb_decimal() :: {byte, byte, byte}
   def rgb_decimal do
     {
-      Faker.random(255),
-      Faker.random(255),
-      Faker.random(255)
+      Faker.random_between(0, 255),
+      Faker.random_between(0, 255),
+      Faker.random_between(0, 255)
     }
   end
 

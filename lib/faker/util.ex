@@ -8,7 +8,7 @@ defmodule Faker.Util do
   """
   @spec pick([any]) :: any
   def pick(list) do
-    Enum.at(list, Faker.random(Enum.count(list) - 1))
+    Enum.at(list, Faker.random_between(0, Enum.count(list) - 1))
   end
 
   @doc """
