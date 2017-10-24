@@ -66,7 +66,6 @@ defmodule Faker.Date do
     date_of_birth(random_age)
   end
 
-
   @doc """
   Returns a random date in the past up to N days, today not included
   """
