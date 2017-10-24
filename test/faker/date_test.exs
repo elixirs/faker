@@ -35,9 +35,16 @@ defmodule DateTest do
   end
 
   defp age(%Date{year: year, month: month, day: day}) do
-    %Date{ year: current_year, month: current_month, day: current_day } = now()
-    already_aged_this_year = current_month > month || current_month == month && day >= current_day
-    current_year - year + (if already_aged_this_year, do: 1, else: 0)
+    %Date{year: current_year, month: current_month, day: current_day} = now()
+    min_age = current_year - year - 1
+
+    had_birthday_this_year =
+      current_month > month || (current_month == month && current_day >= day)
+
+    case had_birthday_this_year do
+      true -> min_age + 1
+      false -> min_age
+    end
   end
 
   defp now do
