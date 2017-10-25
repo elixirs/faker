@@ -25,24 +25,21 @@ defmodule Faker.Date do
     potential_latest_date = {earliest_year + 1, month_now, day_now}
 
     earliest_date =
-      case :calendar.valid_date(potential_earliest_date) do
-        true -> {earliest_year, month_now, day_now + 1}
-        false -> {earliest_year, 3, 1}
-      end
+      if :calendar.valid_date(potential_earliest_date),
+        do: {earliest_year, month_now, day_now + 1},
+        else: {earliest_year, 3, 1}
 
     latest_date =
-      case :calendar.valid_date(potential_latest_date) do
-        true -> {earliest_year + 1, month_now, day_now}
-        false -> {earliest_year + 1, 2, 28}
-      end
+      if :calendar.valid_date(potential_latest_date),
+        do: {earliest_year + 1, month_now, day_now},
+        else: {earliest_year + 1, 2, 28}
 
     earliest_as_seconds = :calendar.datetime_to_gregorian_seconds({earliest_date, {0, 0, 0}})
     lastest_as_seconds = :calendar.datetime_to_gregorian_seconds({latest_date, {23, 59, 59}})
 
     {chosen_date, _time} =
-      (lastest_as_seconds - earliest_as_seconds)
-      |> :rand.uniform()
-      |> Kernel.+(earliest_as_seconds)
+      earliest_as_seconds..lastest_as_seconds
+      |> Enum.random()
       |> :calendar.gregorian_seconds_to_datetime()
 
     {:ok, result} = Date.from_erl(chosen_date)
@@ -50,20 +47,10 @@ defmodule Faker.Date do
   end
 
   @spec date_of_birth(Range.t()) :: Date.t()
-  def date_of_birth(%Range{first: first, last: last}) do
-    random_age =
-      cond do
-        first < last ->
-          first + :rand.uniform(last - first + 1) - 1
-
-        first > last ->
-          last + :rand.uniform(first - last + 1) - 1
-
-        true ->
-          first
-      end
-
-    date_of_birth(random_age)
+  def date_of_birth(age_range) do
+    age_range
+    |> Enum.random()
+    |> date_of_birth()
   end
 
   @doc """
