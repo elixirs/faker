@@ -21,6 +21,7 @@
 - [Faker.Beer](#fakerbeer)
 - [Faker.Superhero](#fakersuperhero)
 - [Faker.Pizza](#fakerpizza)
+- [Faker.StarWars](#fakerstarwars)
 
 ### Faker.Address
 
@@ -441,6 +442,16 @@ Faker.Pizza.size() # => "Personal"
 
 Faker.Pizza.inches() # => "14\""
 
+```
+
+### Faker.StarWars
+
+```elixir
+Faker.StarWars.character() # => "Luke Skywalker"
+
+Faker.StarWars.planet() # => "Alderaan"
+
+Faker.StarWars.quote() # => "I've got a bad feeling about this."
 ```
 
 ### Faker.String

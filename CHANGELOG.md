@@ -9,6 +9,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 ## Unreleased
 
 ### Added
+* `Faker.StarWars` [@samcdavid][]
 
 ### Changed
 
