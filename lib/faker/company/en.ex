@@ -59,7 +59,7 @@ defmodule Faker.Company.En do
   Returns complete english company name
   """
   @spec name() :: String.t
-  def name, do: name(:crypto.rand_uniform 0, 3)
+  def name, do: name(Faker.random_between(0, 2))
   defp name(0), do: "#{Name.last_name} #{suffix()}"
   defp name(1), do: "#{Name.last_name}-#{Name.last_name}"
   defp name(2) do

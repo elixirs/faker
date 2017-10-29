@@ -10,6 +10,8 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Added
 
+* Customizable random functions [@igas][]
+
 ### Changed
 
 ### Deprecated
@@ -23,8 +25,8 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 ## 0.9.0
 
 ### Added
-* `Faker.Pizza` [@lauraannwilliams][]
 
+* `Faker.Pizza` [@lauraannwilliams][]
 * Credo on CI [@igas][]
 * Dialyxir on CI [@igas][]
 * `Faker.String.base64/0` and `Faker.String.base64/1` [@yordis][]

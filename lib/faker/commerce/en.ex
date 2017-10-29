@@ -22,9 +22,7 @@ defmodule Faker.Commerce.En do
   materials, product names
   """
   @spec product_name() :: String.t
-  def product_name do
-    product_name(:crypto.rand_uniform(0, 3))
-  end
+  def product_name, do: product_name(Faker.random_between(0, 2))
 
   defp product_name(0) do
     "#{product_name_adjective()} #{product_name_material()} #{product_name_product()}"

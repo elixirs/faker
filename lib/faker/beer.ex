@@ -48,7 +48,7 @@ defmodule Faker.Beer do
   """
   @spec ibu :: String.t
   def ibu do
-     "#{:crypto.rand_uniform(5,120)} UBI"
+    "#{Faker.random_between(5, 120)} IBU"
   end
 
   @doc """
@@ -68,6 +68,6 @@ defmodule Faker.Beer do
   end
 
   defp random_float do
-    "#{:crypto.rand_uniform(0,99)}.#{:crypto.rand_uniform(0,9)}"
+    "#{Faker.random_between(0, 99)}.#{Faker.random_between(0, 9)}"
   end
 end

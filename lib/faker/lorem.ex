@@ -1,6 +1,8 @@
 defmodule Faker.Lorem do
   import Faker, only: [sampler: 2]
 
+  alias Faker.Util
+
   @moduledoc """
   Functions for generating Lorem Ipsum data
   """
@@ -18,8 +20,8 @@ defmodule Faker.Lorem do
   @spec characters(Range.t) :: [char]
   def characters(range \\ %Range{first: 15, last: 255})
 
-  def characters(%Range{first: first, last: last}) do
-    characters(:crypto.rand_uniform(first, last + 1))
+  def characters(first..last) do
+    characters(Faker.random_between(first, last))
   end
 
   @doc """
@@ -42,8 +44,8 @@ defmodule Faker.Lorem do
   @spec paragraph(integer | Range.t) :: String.t
   def paragraph(range \\ %Range{first: 2, last: 5})
 
-  def paragraph(%Range{first: first, last: last}) do
-    paragraph(:crypto.rand_uniform(first, last + 1))
+  def paragraph(first..last) do
+    paragraph(Faker.random_between(first, last))
   end
 
   @doc """
@@ -63,8 +65,8 @@ defmodule Faker.Lorem do
   @spec paragraphs(Range.t) :: list(String.t)
   def paragraphs(range \\ %Range{first: 2, last: 5})
 
-  def paragraphs(%Range{first: first, last: last}) do
-    paragraphs(:crypto.rand_uniform(first, last + 1))
+  def paragraphs(first..last) do
+    paragraphs(Faker.random_between(first, last))
   end
 
   @doc """
@@ -87,10 +89,9 @@ defmodule Faker.Lorem do
   @spec sentence(Range.t) :: String.t
   def sentence(range \\ %Range{first: 4, last: 10})
 
-  def sentence(%Range{first: first, last: last}) do
-    first
-    |> :crypto.rand_uniform(last + 1)
-    |> sentence(hd(Enum.shuffle([".", ".", ".", "!", "?"])))
+  def sentence(first..last) do
+    Faker.random_between(first, last)
+    |> sentence(Util.pick([".", ".", ".", "!", "?"]))
   end
 
   @doc """
@@ -98,7 +99,7 @@ defmodule Faker.Lorem do
   """
   @spec sentence(integer) :: String.t
   def sentence(num) do
-    sentence(num, hd(Enum.shuffle([".", ".", ".", "!", "?"])))
+    sentence(num, Util.pick([".", ".", ".", "!", "?"]))
   end
 
   @doc """
@@ -120,10 +121,10 @@ defmodule Faker.Lorem do
   If no range is provided it defaults to 2..5
   """
   @spec sentences(Range.t) :: [String.t]
-  def sentences(range \\ %Range{first: 2, last: 5})
+  def sentences(range \\ 2..5)
 
-  def sentences(%Range{first: first, last: last}) do
-    sentences(:crypto.rand_uniform(first, last + 1))
+  def sentences(first..last) do
+    sentences(Faker.random_between(first, last))
   end
 
   @doc """
@@ -146,8 +147,8 @@ defmodule Faker.Lorem do
   @spec words(Range.t) :: [String.t]
   def words(range \\ %Range{first: 3, last: 6})
 
-  def words(%Range{first: first, last: last}) do
-    words(:crypto.rand_uniform(first, last + 1))
+  def words(first..last) do
+    words(Faker.random_between(first, last))
   end
 
   @doc """
@@ -165,6 +166,6 @@ defmodule Faker.Lorem do
 
   defp character do
     alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
-    Enum.at(alphabet, :crypto.rand_uniform(0, Enum.count(alphabet)))
+    Enum.at(alphabet, Faker.random_between(0, Enum.count(alphabet) - 1))
   end
 end

@@ -24,7 +24,7 @@ defmodule Faker.Commerce do
   """
   @spec price() :: float
   def price do
-    :crypto.rand_uniform(1, 1001) / 100.0
+    Faker.random_between(1, 1000) / 100.0
   end
 
   @doc """
