@@ -135,7 +135,8 @@ defmodule Faker.Internet do
   """
   @spec mac_address() :: String.t
   def mac_address do
-    Enum.map_join(1..6, ":", &format_mac_address/1)
+    1..6
+    |> Enum.map_join(":", &format_mac_address/1)
     |> String.downcase()
   end
 

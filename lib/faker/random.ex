@@ -1,4 +1,8 @@
 defmodule Faker.Random do
+  @moduledoc """
+  Behaviour that defines randomisation in faker.
+  """
+
   @callback random_between(integer, integer) :: integer
   @callback random_bytes(pos_integer) :: binary
 
