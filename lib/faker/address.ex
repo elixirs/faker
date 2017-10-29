@@ -13,7 +13,7 @@ defmodule Faker.Address do
   @spec building_number() :: String.t
   def building_number do
     ["#####", "####", "###", "##", "#"]
-    |> Enum.at(:crypto.rand_uniform(0, 5))
+    |> Enum.at(Faker.random_between(0, 4))
     |> Faker.format
   end
 
@@ -22,7 +22,7 @@ defmodule Faker.Address do
   """
   @spec city() :: String.t
   def city do
-    city(:crypto.rand_uniform(0, 4))
+    city(Faker.random_between(0, 3))
   end
 
   defp city(0), do: "#{city_prefix()} #{Name.first_name}#{city_suffix()}"
@@ -59,8 +59,7 @@ defmodule Faker.Address do
   """
   @spec latitude() :: float
   def latitude do
-    :rand.seed(:exs64, :os.timestamp)
-    ((:rand.uniform * 180) - 90)
+    ((Faker.random_uniform * 180) - 90)
   end
 
   @doc """
@@ -68,8 +67,7 @@ defmodule Faker.Address do
   """
   @spec longitude() :: float
   def longitude do
-    :rand.seed(:exs64, :os.timestamp)
-    ((:rand.uniform * 360) - 180)
+    ((Faker.random_uniform * 360) - 180)
   end
 
   @doc """
@@ -84,7 +82,7 @@ defmodule Faker.Address do
   @spec secondary_address() :: String.t
   def secondary_address do
     ["Apt. ###", "Suite ###"]
-    |> Enum.at(:crypto.rand_uniform(0, 2))
+    |> Enum.at(Faker.random_between(0, 1))
     |> Faker.format
   end
 
@@ -120,7 +118,7 @@ defmodule Faker.Address do
   """
   @spec street_name() :: String.t
   def street_name do
-    street_name(:crypto.rand_uniform(0, 2))
+    street_name(Faker.random_between(0, 1))
   end
 
   defp street_name(0), do: "#{Name.first_name} #{street_suffix()}"
@@ -150,7 +148,7 @@ defmodule Faker.Address do
   @spec zip_code() :: String.t
   def zip_code do
     ["#####", "#####-####"]
-    |> Enum.at(:crypto.rand_uniform(0, 2))
+    |> Enum.at(Faker.random_between(0, 1))
     |> Faker.format
   end
 end

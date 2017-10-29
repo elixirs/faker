@@ -42,12 +42,17 @@ defmodule Faker.Avatar do
   end
 
   defp bg do
-    :rand.seed(:exs64, :os.timestamp)
-    ~w(/bgset_bg1 /bgset_bg2) |> Enum.shuffle |> List.first
+    %{
+      0 => "/bgset_bg1",
+      1 => "/bgset_bg2"
+    }[Faker.random_between(0, 1)]
   end
 
   defp set do
-    :rand.seed(:exs64, :os.timestamp)
-    ~w(/set_set1 /set_set2 /set_set3) |> Enum.shuffle |> List.first
+    %{
+      0 => "/set_set1",
+      1 => "/set_set2",
+      2 => "/set_set3"
+    }[Faker.random_between(0, 2)]
   end
 end
