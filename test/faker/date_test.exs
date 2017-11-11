@@ -2,7 +2,7 @@ defmodule DateTest do
   use ExUnit.Case, async: true
 
   test "date_of_birth/0" do
-    assert age(Faker.Date.date_of_birth) in 18..99
+    assert age(Faker.Date.date_of_birth()) in 18..99
   end
 
   test "date_of_birth/1 with exact age" do
@@ -35,12 +35,18 @@ defmodule DateTest do
   end
 
   defp age(%Date{year: year, month: month, day: day}) do
-    %Date{ year: current_year, month: current_month, day: current_day } = now()
-    already_aged_this_year = current_month > month || current_month == month && day >= current_day
-    current_year - year + (if already_aged_this_year, do: 1, else: 0)
+    %Date{year: current_year, month: current_month, day: current_day} = now()
+    min_age = current_year - year - 1
+
+    had_birthday_this_year =
+      current_month > month || (current_month == month && current_day >= day)
+
+    if had_birthday_this_year,
+      do: min_age + 1,
+      else: min_age
   end
 
   defp now do
-    DateTime.utc_now |> DateTime.to_date
+    DateTime.utc_now() |> DateTime.to_date()
   end
 end
