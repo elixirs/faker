@@ -1,6 +1,7 @@
 defmodule Faker.Internet do
   alias Faker.Name.En, as: Name
   alias Faker.{Lorem, Util}
+  import Faker.Util, only: [pick: 1]
 
   @moduledoc """
   Functions for generating internet related data
@@ -159,7 +160,7 @@ defmodule Faker.Internet do
   def slug(words, glue) do
     words
     |> Enum.take_random(length(words))
-    |> Enum.join(Enum.random(glue))
+    |> Enum.join(pick(glue))
     |> String.downcase
   end
 

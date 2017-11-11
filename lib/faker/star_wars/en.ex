@@ -1,10 +1,15 @@
 defmodule Faker.StarWars.En do
+  import Faker, only: [sampler: 2]
 
   @moduledoc """
   Functions for generating StarWars related data in English
   """
 
-  @characters [
+  @doc """
+  Returns a Star Wars character name in English
+  """
+  @spec character() :: String.t
+  sampler :character, [
     "Luke Skywalker", "C-3PO", "R2-D2", "Darth Vader", "Leia Organa",
     "Owen Lars", "Beru Whitesun lars", "R5-D4", "Biggs Darklighter",
     "Obi-Wan Kenobi", "Anakin Skywalker", "Wilhuff Tarkin", "Chewbacca",
@@ -25,7 +30,11 @@ defmodule Faker.StarWars.En do
     "Poe Dameron", "BB8", "Captain Phasma", "Padmé Amidala",
   ]
 
-  @planets [
+  @doc """
+  Returns a Star Wars planet name in English
+  """
+  @spec planet() :: String.t
+  sampler :planet, [
     "Alderaan", "Aleen Minor", "Bespin", "Bestine IV", "Cato Neimoidia",
     "Cerea", "Champala", "Chandrila", "Concord Dawn", "Corellia", "Coruscant",
     "Dagobah", "Dantooine", "Dathomir", "Dorin", "Endor", "Eriadu", "Felucia",
@@ -38,7 +47,11 @@ defmodule Faker.StarWars.En do
     "Vulpter", "Yavin IV", "Zolan",
   ]
 
-  @quotes [
+  @doc """
+  Returns a Star Wars quote in English
+  """
+  @spec quote() :: String.t
+  sampler :quote, [
     "I've got a bad feeling about this.",
     "There's always a bigger fish.",
     "Fear is the path to the Dark Side. Fear leads to anger, anger leads to hate, hate leads to suffering.",
@@ -113,28 +126,4 @@ defmodule Faker.StarWars.En do
     "Be careful not to choke on your aspirations, Director.",
     "You're so lonely... So afraid to leave... At night, desperate to sleep... You imagine an ocean... I see it... I see the island... And Han Solo... You feel like he's the father you never had. He would have disappointed you.",
   ]
-
-  @doc """
-  Returns a Star Wars character name in English
-  """
-  @spec character() :: String.t
-  def character do
-    Enum.random(@characters)
-  end
-
-  @doc """
-  Returns a Star Wars planet name in English
-  """
-  @spec planet() :: String.t
-  def planet do
-    Enum.random(@planets)
-  end
-
-  @doc """
-  Returns a Star Wars quote in English
-  """
-  @spec quote() :: String.t
-  def quote do
-    Enum.random(@quotes)
-  end
 end
