@@ -9,8 +9,8 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 ## Unreleased
 
 ### Added
-* `Faker.StarWars` [@samcdavid][]
 
+* `Faker.StarWars` [@samcdavid][]
 * Customizable random functions [@igas][]
 
 ### Changed
