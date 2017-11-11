@@ -39,6 +39,7 @@
 <!-- Q -->
 <!-- R -->
 <!-- S -->
+- [Faker.StarWars](docs/star-wars.md)
 - [Faker.String](docs/string.md)
 - [Faker.Superhero](docs/superhero.md)
 <!-- T -->
