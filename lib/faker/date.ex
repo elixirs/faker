@@ -1,4 +1,6 @@
 defmodule Faker.Date do
+  import Faker.Util, only: [pick: 1]
+
   @moduledoc """
   Functions for generating dates
   """
@@ -39,7 +41,7 @@ defmodule Faker.Date do
 
     {chosen_date, _time} =
       earliest_as_seconds..lastest_as_seconds
-      |> Enum.random()
+      |> pick()
       |> :calendar.gregorian_seconds_to_datetime()
 
     {:ok, result} = Date.from_erl(chosen_date)
@@ -49,7 +51,7 @@ defmodule Faker.Date do
   @spec date_of_birth(Range.t()) :: Date.t()
   def date_of_birth(age_range) do
     age_range
-    |> Enum.random()
+    |> pick()
     |> date_of_birth()
   end
 

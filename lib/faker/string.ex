@@ -9,7 +9,7 @@ defmodule Faker.String do
   @spec base64(integer) :: String.t
   def base64(length \\ 8) do
     length
-    |> :crypto.strong_rand_bytes()
+    |> Faker.random_bytes()
     |> Base.encode64()
     |> binary_part(0, length)
   end

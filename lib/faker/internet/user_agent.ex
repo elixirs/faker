@@ -1,5 +1,6 @@
 defmodule Faker.Internet.UserAgent do
   import Faker, only: [sampler: 2]
+  import Faker.Util, only: [pick: 1]
 
   @moduledoc """
   Functions for generating user agent strings
@@ -77,7 +78,7 @@ defmodule Faker.Internet.UserAgent do
   """
   @spec user_agent() :: String.t
   def user_agent do
-    type = Enum.random(["bot", "desktop", "ereader", "game_console", "set_top", "tablet", "mobile"])
+    type = pick(["bot", "desktop", "ereader", "game_console", "set_top", "tablet", "mobile"])
     apply(__MODULE__, :"#{type}_user_agent", [])
   end
 end
