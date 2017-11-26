@@ -5,23 +5,72 @@ defmodule Faker.Code do
 
   alias Faker.Util
 
+  @doc """
+  Returns a random isbn code
+
+  ## Examples
+
+      iex> Faker.Code.isbn()
+      #=> "462033670X"
+  """
   defdelegate isbn, to: Faker.Code, as: :isbn10
 
+  @doc """
+  Returns a random isbn10 code
+
+  ## Examples
+
+      iex> Faker.Code.isbn10()
+      #=> "0762633026"
+  """
   def isbn10 do
     sequence = Faker.format("#########")
     sequence <> check_digit(sequence, &calc_digit_x_index/1, 11)
   end
 
+  @doc """
+  Returns a random isbn13 code
+
+  ## Examples
+
+      iex> Faker.Code.isbn13()
+      #=> "9794438325491"
+  """
   def isbn13 do
     sequence = Util.pick(["978", "979"]) <> Faker.format("#########")
     sequence <> check_digit(sequence, &calc_isbn13/1, 10)
   end
 
+  @doc """
+  Returns a random issn code
+
+  ## Examples
+
+      iex> Faker.Code.issn()
+      #=> "08979375"
+  """
   def issn do
     sequence = Faker.format("#######")
     sequence <> check_digit(sequence, &calc_digit_x_index/1, 11)
   end
 
+  @doc """
+  Returns a random iban code
+
+  ## Examples
+
+      iex> Faker.Code.iban()
+      #=> "IT34K5534420705QL3FT3SE7OTG"
+
+      iex> Faker.Code.iban("NL")
+      #=> "NL90FWAC8717013067"
+
+      iex> Faker.Code.iban(["NL", "BE"])
+      #=> "BE22587804301223"
+
+      iex> Faker.Code.iban("NL", ["ABNA"])
+      #=> "NL39ABNA4314302905"
+  """
   defdelegate iban(), to: Faker.Code.Iban
   defdelegate iban(country_code_or_codes), to: Faker.Code.Iban
   defdelegate iban(country_code, prefix_components), to: Faker.Code.Iban
