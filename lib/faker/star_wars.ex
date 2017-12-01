@@ -5,6 +5,11 @@ defmodule Faker.StarWars do
 
   @doc """
   Returns a Star Wars character name
+
+  ## Examples
+
+      iex> Faker.StarWars.character()
+      #=> "Luke Skywalker"
   """
   @spec character() :: String.t
   def character do
@@ -13,6 +18,11 @@ defmodule Faker.StarWars do
 
   @doc """
   Returns a Star Wars planet name
+
+  ## Examples
+
+      iex> Faker.StarWars.planet()
+      #=> "Alderaan"
   """
   @spec planet() :: String.t
   def planet do
@@ -21,6 +31,11 @@ defmodule Faker.StarWars do
 
   @doc """
   Returns a Star Wars quote
+
+  ## Examples
+
+      iex> Faker.StarWars.quote()
+      #=> "I've got a bad feeling about this."
   """
   @spec quote() :: String.t
   def quote do
