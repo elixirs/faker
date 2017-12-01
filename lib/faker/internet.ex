@@ -9,6 +9,11 @@ defmodule Faker.Internet do
 
   @doc """
   Returns a complete random domain name
+
+  ## Examples
+
+      iex> Faker.Internet.domain_name()
+      #=> "tremblay.org"
   """
   @spec domain_name() :: String.t
   def domain_name do
@@ -17,6 +22,11 @@ defmodule Faker.Internet do
 
   @doc """
   Returns a random domain suffix
+
+  ## Examples
+
+      iex> Faker.Internet.domain_suffix()
+      #=> "info"
   """
   @spec domain_suffix() :: String.t
   def domain_suffix do
@@ -25,6 +35,11 @@ defmodule Faker.Internet do
 
   @doc """
   Returns a random username
+
+  ## Examples
+
+      iex> Faker.Internet.user_name()
+      #=> "dee.bert"
   """
   @spec user_name() :: String.t
   def user_name, do: user_name(Faker.random_between(0, 1))
@@ -41,6 +56,11 @@ defmodule Faker.Internet do
 
   @doc """
   Returns a random domain word
+
+  ## Examples
+
+      iex> Faker.Internet.domain_word()
+      #=> "gerhold"
   """
   @spec domain_word() :: String.t
   def domain_word do
@@ -49,6 +69,11 @@ defmodule Faker.Internet do
 
   @doc """
   Returns a complete email based on a domain name
+
+  ## Examples
+
+      iex> Faker.Internet.email()
+      #=> "tavares1993@oconner.biz"
   """
   @spec email() :: String.t
   def email do
@@ -57,6 +82,11 @@ defmodule Faker.Internet do
 
   @doc """
   Returns a complete free email based on a free email service [gmail, yahoo, hotmail]
+
+  ## Examples
+
+      iex> Faker.Internet.free_email()
+      #=> "monroe.schaefer@yahoo.com"
   """
   @spec free_email() :: String.t
   def free_email do
@@ -65,6 +95,11 @@ defmodule Faker.Internet do
 
   @doc """
   Returns a safe email
+
+  ## Examples
+
+      iex> Faker.Internet.safe_email()
+      #=> "arvel1966@example.org"
   """
   @spec safe_email() :: String.t
   def safe_email do
@@ -73,6 +108,11 @@ defmodule Faker.Internet do
 
   @doc """
   Returns a free email service
+
+  ## Examples
+
+      iex> Faker.Internet.free_email_service()
+      #=> "yahoo.com"
   """
   @spec free_email_service() :: String.t
   def free_email_service do
@@ -81,6 +121,11 @@ defmodule Faker.Internet do
 
   @doc """
   Returns a random url
+
+  ## Examples
+
+      iex> Faker.Internet.url()
+      #=> "http://rohan.net"
   """
   @spec url() :: String.t
   def url, do: url(Faker.random_between(0, 1))
@@ -90,6 +135,11 @@ defmodule Faker.Internet do
 
   @doc """
   Returns a random image url from placekitten.com | placehold.it | dummyimage.com
+
+  ## Examples
+
+      iex> Faker.Internet.image_url()
+      #=> "https://dummyimage.com/846x223"
   """
   @spec image_url() :: String.t
   def image_url, do: image_url(Faker.random_between(0, 2))
@@ -111,6 +161,11 @@ defmodule Faker.Internet do
 
   @doc """
   Generates an ipv4 address
+
+  ## Examples
+
+      iex> Faker.Internet.ip_v4_address()
+      #=> "3.147.154.132"
   """
   @spec ip_v4_address() :: String.t
   def ip_v4_address do
@@ -121,6 +176,11 @@ defmodule Faker.Internet do
 
   @doc """
   Generates an ipv6 address
+
+  ## Examples
+
+      iex> Faker.Internet.ip_v6_address()
+      #=> "382F:76D8:2AC7:8EFC:488E:7039:CA87:0DEA"
   """
   @spec ip_v6_address() :: String.t
   def ip_v6_address do
@@ -133,6 +193,11 @@ defmodule Faker.Internet do
 
   @doc """
   Generates a mac address
+
+  ## Examples
+
+      iex> Faker.Internet.mac_address()
+      #=> "d2:35:c2:ea:f2:c1"
   """
   @spec mac_address() :: String.t
   def mac_address do
@@ -145,6 +210,17 @@ defmodule Faker.Internet do
   Generates a slug
   If no words are provided it will generate 2 to 5 random words
   If no glue is provied it will use one of -, _ or .
+
+  ## Examples
+
+      iex> Faker.Internet.slug()
+      #=> "lorem-ipsum"
+
+      iex> Faker.Internet.slug(["foo", "bar"])
+      #=> "foo-bar"
+
+      iex> Faker.Internet.slug(["foo", "bar"], ["."])
+      #=> "foo.bar"
   """
   @spec slug() :: String.t
   def slug do
