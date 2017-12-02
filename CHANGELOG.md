@@ -15,6 +15,8 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Changed
 
+* Moved all docs from `docs/` to `@doc` documentation
+
 ### Deprecated
 
 ### Removed
