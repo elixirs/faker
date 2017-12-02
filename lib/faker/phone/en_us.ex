@@ -28,6 +28,11 @@ defmodule Faker.Phone.EnUs do
     123-456-7890
     123.456.7890
     1234567890
+
+  ## Examples
+
+      iex> Faker.Phone.EnUs.phone()
+      #=> "555-555-xxxx"
   """
   @spec phone() :: String.t
   def phone do
@@ -43,6 +48,11 @@ defmodule Faker.Phone.EnUs do
 
   @doc """
   Returns a random area code
+
+  ## Examples
+
+      iex> Faker.Phone.EnUs.area_code()
+      #=> "301"
   """
   @spec area_code() :: String.t
   def area_code do
@@ -51,6 +61,11 @@ defmodule Faker.Phone.EnUs do
 
   @doc """
   Returns a random exchange code
+
+  ## Examples
+
+      iex> Faker.Phone.EnUs.exchange_code()
+      #=> "912"
   """
   @spec exchange_code() :: String.t
   def exchange_code do
@@ -65,6 +80,11 @@ defmodule Faker.Phone.EnUs do
 
   @doc """
   Returns a random subscriber number `n` digits long
+
+  ## Examples
+
+      iex> Faker.Phone.EnUs.subscriber_number()
+      #=> "6393"
   """
   @spec subscriber_number(pos_integer) :: String.t
   def subscriber_number(n) when is_integer(n) do
@@ -75,6 +95,14 @@ defmodule Faker.Phone.EnUs do
 
   @doc """
   Returns a random extension `n` digits long
+
+  ## Examples
+
+      iex> Faker.Phone.EnUs.extension()
+      #=> "1686"
+
+      iex> Faker.Phone.EnUs.extension(5)
+      #=> "16865"
   """
   defdelegate extension(n), to: __MODULE__, as: :subscriber_number
   defdelegate extension, to: __MODULE__, as: :subscriber_number
