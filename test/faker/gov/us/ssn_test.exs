@@ -1,6 +1,6 @@
 defmodule Faker.SSN.EnUsTest do
   use ExUnit.Case, async: true
-  import Faker.SSN.EnUs
+  import Faker.Gov.Us
 
   defp repeat_test(fun) do
     for _ <- 1..100, do: fun.()

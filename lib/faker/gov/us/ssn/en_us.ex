@@ -1,4 +1,5 @@
-defmodule Faker.SSN.EnUs do
+defmodule Faker.Gov.Us do
+
   @moduledoc"""
   Generating US Social Security numbers
   """
