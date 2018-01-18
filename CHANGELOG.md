@@ -19,6 +19,8 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Changed
 
+* Replace :crypto.rand_uniform with :rand.uniform [[@anthonyfalzetti][]]
+
 ### Deprecated
 
 ### Removed
