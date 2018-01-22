@@ -5,14 +5,6 @@ defmodule Faker.Code do
 
   alias Faker.Util
 
-  @doc """
-  Returns a random isbn code
-
-  ## Examples
-
-      iex> Faker.Code.isbn()
-      #=> "462033670X"
-  """
   defdelegate isbn, to: Faker.Code, as: :isbn10
 
   @doc """
@@ -54,23 +46,6 @@ defmodule Faker.Code do
     sequence <> check_digit(sequence, &calc_digit_x_index/1, 11)
   end
 
-  @doc """
-  Returns a random iban code
-
-  ## Examples
-
-      iex> Faker.Code.iban()
-      #=> "IT34K5534420705QL3FT3SE7OTG"
-
-      iex> Faker.Code.iban("NL")
-      #=> "NL90FWAC8717013067"
-
-      iex> Faker.Code.iban(["NL", "BE"])
-      #=> "BE22587804301223"
-
-      iex> Faker.Code.iban("NL", ["ABNA"])
-      #=> "NL39ABNA4314302905"
-  """
   defdelegate iban(), to: Faker.Code.Iban
   defdelegate iban(country_code_or_codes), to: Faker.Code.Iban
   defdelegate iban(country_code, prefix_components), to: Faker.Code.Iban
