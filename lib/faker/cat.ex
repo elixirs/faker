@@ -11,9 +11,9 @@ defmodule Faker.Cat do
       iex> Faker.Cat.name()
       #=> "Shadow"
   """
-  @spec name() :: String.t()
+  @spec name() :: String.t
   def name do
-    Module.concat(__MODULE__, Faker.mlocale()).name
+    Module.concat(__MODULE__, Faker.mlocale).name
   end
 
   @doc """
@@ -24,9 +24,9 @@ defmodule Faker.Cat do
       iex> Faker.Cat.breed()
       #=> "British Semipi-longhair"
   """
-  @spec breed() :: String.t()
+  @spec breed() :: String.t
   def breed do
-    Module.concat(__MODULE__, Faker.mlocale()).breed
+    Module.concat(__MODULE__, Faker.mlocale).breed
   end
 
   @doc """
@@ -37,8 +37,8 @@ defmodule Faker.Cat do
       iex> Faker.Cat.registry()
       #=> "American Cat Fanciers Association"
   """
-  @spec registry() :: String.t()
+  @spec registry() :: String.t
   def registry do
-    Module.concat(__MODULE__, Faker.mlocale()).registry
+    Module.concat(__MODULE__, Faker.mlocale).registry
   end
 end

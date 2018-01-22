@@ -27,7 +27,7 @@ defmodule Faker.Lorem do
       iex> Faker.Lorem.characters(%Range{first: 1, last: 10})
       #=> "lHixS3So"
   """
-  @spec characters(Range.t()) :: [char]
+  @spec characters(Range.t :: [char]
   def characters(range \\ %Range{first: 15, last: 255})
 
   def characters(first..last) do
@@ -61,7 +61,7 @@ defmodule Faker.Lorem do
       iex> Faker.Lorem.paragraph(%Range{first: 1, last: 2})
       #=> "Nemo labore enim rem qui praesentium totam non et aut. Beatae molestiae et fugit!"
   """
-  @spec paragraph(integer | Range.t()) :: String.t()
+  @spec paragraph(integer | Range.t :: String.t
   def paragraph(range \\ %Range{first: 2, last: 5})
 
   def paragraph(first..last) do
@@ -92,7 +92,7 @@ defmodule Faker.Lorem do
       iex> Faker.Lorem.paragraphs(%Range{first: 1, last: 2})
       #=> ["Placeat quos harum voluptatem quaerat quidem eveniet dolores laboriosam aut. Facilis fugiat fuga quo excepturi aut ratione aut sed! Nihil velit quis magni. Illo et et ducimus labore veritatis."]
   """
-  @spec paragraphs(Range.t()) :: list(String.t())
+  @spec paragraphs(Range.t) :: list(String.t)
   def paragraphs(range \\ %Range{first: 2, last: 5})
 
   def paragraphs(first..last) do
@@ -107,7 +107,7 @@ defmodule Faker.Lorem do
       iex> Faker.Lorem.paragraphs(1)
       #=> ["Placeat quos harum voluptatem quaerat quidem eveniet dolores laboriosam aut.]
   """
-  @spec paragraphs(integer) :: list(String.t())
+  @spec paragraphs(integer) :: list(String.t)
   def paragraphs(num) do
     paragraph = &paragraph/0
 
@@ -126,7 +126,7 @@ defmodule Faker.Lorem do
       iex> Faker.Lorem.sentence(%Range{first: 1, last: 10})
       #=> "Eum et et."
   """
-  @spec sentence(Range.t()) :: String.t()
+  @spec sentence(Range.t) :: String.t
   def sentence(range \\ %Range{first: 4, last: 10})
 
   def sentence(first..last) do
@@ -142,7 +142,7 @@ defmodule Faker.Lorem do
       iex> Faker.Lorem.sentence(1)
       #=> "Eum et et."
   """
-  @spec sentence(integer) :: String.t()
+  @spec sentence(integer) :: String.t
   def sentence(num) do
     sentence(num, Util.pick([".", ".", ".", "!", "?"]))
   end
@@ -156,7 +156,7 @@ defmodule Faker.Lorem do
       iex> Faker.Lorem.sentence(3, " & ")
       #=> "Cum eos harum & "
   """
-  @spec sentence(integer, binary) :: String.t()
+  @spec sentence(integer, binary) :: String.t
   def sentence(num, mark) when is_integer(num) and is_binary(mark) do
     tmp =
       num
@@ -177,7 +177,7 @@ defmodule Faker.Lorem do
       iex> Faker.Lorem.sentences(%Range{first: 1, last: 2})
       #=> ["Eum et et.", "Id eius esse totam voluptas sapiente totam accusantium?"]
   """
-  @spec sentences(Range.t()) :: [String.t()]
+  @spec sentences(Range.t) :: [String.t]
   def sentences(range \\ 2..5)
 
   def sentences(first..last) do
@@ -192,7 +192,7 @@ defmodule Faker.Lorem do
       iex> Faker.Lorem.sentences(2)
       #=> ["Eum et et.", "Id eius esse totam voluptas sapiente totam accusantium?"]
   """
-  @spec sentences(integer) :: [String.t()]
+  @spec sentences(integer) :: [String.t]
   def sentences(num) do
     sentence = &sentence/0
 
@@ -211,7 +211,7 @@ defmodule Faker.Lorem do
       iex> Faker.Lorem.words(%Range{first: 1, last: 2}))
       #=> ["labore", "totam"]
   """
-  @spec words(Range.t()) :: [String.t()]
+  @spec words(Range.t) :: [String.t]
   def words(range \\ %Range{first: 3, last: 6})
 
   def words(first..last) do
@@ -227,7 +227,7 @@ defmodule Faker.Lorem do
       iex> Faker.Lorem.words(2)
       #=> ["labore", "totam"]
   """
-  @spec words(integer) :: [String.t()]
+  @spec words(integer) :: [String.t]
   def words(num) do
     word = &word/0
 

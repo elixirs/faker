@@ -35,7 +35,7 @@ defmodule Faker.File do
       iex> Faker.File.file_extension()
       #=> "mp3"
   """
-  @spec file_extension() :: String.t()
+  @spec file_extension() :: String.t
   def file_extension do
     @categories_extensions
     |> pick
@@ -51,7 +51,7 @@ defmodule Faker.File do
       iex> Faker.File.file_extension(:video)
       #=> "webm"
   """
-  @spec file_extension(:atom) :: String.t()
+  @spec file_extension(:atom) :: String.t
   def file_extension(category) do
     category
     |> get_extensions_from_category()
@@ -66,9 +66,9 @@ defmodule Faker.File do
       iex> Faker.File.file_name()
       #=> "voluptaes.jpg"
   """
-  @spec file_name() :: String.t()
+  @spec file_name() :: String.t
   def file_name do
-    Lorem.word() <> "." <> file_extension()
+    Lorem.word <> "." <> file_extension()
   end
 
   @doc """
@@ -80,9 +80,9 @@ defmodule Faker.File do
       iex> Faker.File.file_name(:text)
       #=> "reo.json"
   """
-  @spec file_name(:atom) :: String.t()
+  @spec file_name(:atom) :: String.t
   def file_name(category) do
-    Lorem.word() <> "." <> file_extension(category)
+    Lorem.word <> "." <> file_extension(category)
   end
 
   @doc """
@@ -93,7 +93,7 @@ defmodule Faker.File do
       iex> Faker.File.mime_type()
       #=> "application/atom+xml"
   """
-  @spec mime_type :: String.t()
+  @spec mime_type :: String.t
   def mime_type do
     @categories_mimes
     |> pick
@@ -110,7 +110,7 @@ defmodule Faker.File do
       iex> Faker.File.mime_type(:image)
       #=> "image/gif"
   """
-  @spec mime_type(:atom) :: String.t()
+  @spec mime_type(:atom) :: String.t
   def mime_type(category) do
     category
     |> get_mimes_from_category()
