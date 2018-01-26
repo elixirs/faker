@@ -27,7 +27,7 @@ defmodule Faker.Lorem do
       iex> Faker.Lorem.characters(%Range{first: 1, last: 10})
       #=> "lHixS3So"
   """
-  @spec characters(Range.t :: [char]
+  @spec characters(Range.t) :: [char]
   def characters(range \\ %Range{first: 15, last: 255})
 
   def characters(first..last) do
@@ -61,7 +61,7 @@ defmodule Faker.Lorem do
       iex> Faker.Lorem.paragraph(%Range{first: 1, last: 2})
       #=> "Nemo labore enim rem qui praesentium totam non et aut. Beatae molestiae et fugit!"
   """
-  @spec paragraph(integer | Range.t :: String.t
+  @spec paragraph(integer | Range.t) :: String.t
   def paragraph(range \\ %Range{first: 2, last: 5})
 
   def paragraph(first..last) do
