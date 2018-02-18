@@ -2,7 +2,7 @@ defmodule Faker.Industry.En do
   import Faker, only: [sampler: 2]
 
   @moduledoc """
-  Functions for generating Beer related data in English
+  Functions for generating Industry related data in English
   """
 
   @doc """
