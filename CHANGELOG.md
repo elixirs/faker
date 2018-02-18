@@ -30,6 +30,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 * `Faker.Date.date_of_birth/0` and `Faker.Date.date_of_birth/1` returning wrong result [[@stfnsr][]]
 * Usage.md reorganisation [[@orieken][]]
 * Documentation for `Faker.Beer` [[@bcat-eu][]]
+* Fix pokemon name - Mr. Mime :) [[@leveloid][]]
 
 ### Security
 
