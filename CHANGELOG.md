@@ -16,6 +16,8 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 * `Faker.StarWars` added to generate `character/0`, `planet/0` and `quote/0` from StarWars universe [[@samcdavid][]]
 * `Faker.Cat` added to generate `name/0`, `breed/0` and `registry/0` of cats [[@orieken][]]
 * Customizable random functions [[@igas][]]
+* `Faker.Industry` [@cdesch][]
+
 
 ### Changed
 
