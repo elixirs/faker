@@ -233,6 +233,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 [@anthonator]: https://github.com/anthonator
 [@bcat-eu]: https://github.com/bcat-eu
 [@belaustegui]: https://github.com/belaustegui
+[@cdesch]: https://github.com/cdesch
 [@devshane]: https://github.com/devshane
 [@efexen]: https://github.com/efexen
 [@GesJeremie]: https://github.com/GesJeremie
@@ -240,7 +241,9 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 [@jarednorman]: https://github.com/jarednorman
 [@johnhamelink]: https://github.com/johnhamelink
 [@lauraannwilliams]: https://github.com/lauraannwilliams
+[@leveloid]: https://github.com/leveloid
 [@lowks]: https://github.com/lowks
+[@lrosa007]: https://github.com/lrosa007
 [@orieken]: https://github.com/orieken
 [@petehamilton]: https://github.com/petehamilton
 [@piton4eg]: https://github.com/piton4eg
