@@ -27,6 +27,8 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Removed
 
+* Elixir 1.3 support [[@igas][]]
+
 ### Fixed
 
 * `Faker.Date.date_of_birth/0` and `Faker.Date.date_of_birth/1` returning wrong result [[@stfnsr][]]
