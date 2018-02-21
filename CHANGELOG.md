@@ -17,7 +17,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 * `Faker.Cat` added to generate `name/0`, `breed/0` and `registry/0` of cats [[@orieken][]]
 * Customizable random functions [[@igas][]]
 * `Faker.Industry` [@cdesch][]
-
+* Missing colors to `Faker.Color.En` [@cdesch][]
 
 ### Changed
 
