@@ -31,6 +31,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 * Usage.md reorganisation [[@orieken][]]
 * Documentation for `Faker.Beer` [[@bcat-eu][]]
 * Fix pokemon name - Mr. Mime :) [[@leveloid][]]
+* Gov.Us deprecations [[@halfdan][]]
 
 ### Security
 
@@ -237,6 +238,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 [@devshane]: https://github.com/devshane
 [@efexen]: https://github.com/efexen
 [@GesJeremie]: https://github.com/GesJeremie
+[@halfdan]: https://github.com/halfdan
 [@igas]: https://github.com/igas
 [@jarednorman]: https://github.com/jarednorman
 [@johnhamelink]: https://github.com/johnhamelink
