@@ -17,12 +17,12 @@ defmodule Faker.Gov.Us do
   end
 
   defp area do
-    case "#{:rand.uniform(899)}" do
+    case "#{Faker.random_between(1, 899)}" do
       "666" -> "667"
       n -> n |> String.pad_leading(3, "0")
     end
   end
 
-  defp group, do: "#{:rand.uniform(99)}" |> String.pad_leading(2, "0")
-  defp serial, do: "#{:rand.uniform(9999)}" |> String.pad_leading(4, "0")
+  defp group, do: "#{Faker.random_between(1, 99)}" |> String.pad_leading(2, "0")
+  defp serial, do: "#{Faker.random_between(1, 9999)}" |> String.pad_leading(4, "0")
 end
