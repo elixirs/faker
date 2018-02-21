@@ -20,6 +20,7 @@
 <!-- G -->
 <!-- H -->
 <!-- I -->
+- [Faker.Industry](docs/industry.md)
 - [Faker.Internet](docs/internet.md)
 - [Faker.Internet.UserAgent](docs/internet-useragent.md)
 <!-- J -->

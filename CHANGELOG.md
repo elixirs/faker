@@ -16,6 +16,8 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 * `Faker.StarWars` added to generate `character/0`, `planet/0` and `quote/0` from StarWars universe [[@samcdavid][]]
 * `Faker.Cat` added to generate `name/0`, `breed/0` and `registry/0` of cats [[@orieken][]]
 * Customizable random functions [[@igas][]]
+* `Faker.Industry` [@cdesch][]
+* Missing colors to `Faker.Color.En` [@cdesch][]
 
 ### Changed
 
@@ -28,6 +30,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 * `Faker.Date.date_of_birth/0` and `Faker.Date.date_of_birth/1` returning wrong result [[@stfnsr][]]
 * Usage.md reorganisation [[@orieken][]]
 * Documentation for `Faker.Beer` [[@bcat-eu][]]
+* Fix pokemon name - Mr. Mime :) [[@leveloid][]]
 * Gov.Us deprecations [[@halfdan][]]
 
 ### Security
@@ -231,6 +234,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 [@anthonator]: https://github.com/anthonator
 [@bcat-eu]: https://github.com/bcat-eu
 [@belaustegui]: https://github.com/belaustegui
+[@cdesch]: https://github.com/cdesch
 [@devshane]: https://github.com/devshane
 [@efexen]: https://github.com/efexen
 [@GesJeremie]: https://github.com/GesJeremie
@@ -239,7 +243,9 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 [@jarednorman]: https://github.com/jarednorman
 [@johnhamelink]: https://github.com/johnhamelink
 [@lauraannwilliams]: https://github.com/lauraannwilliams
+[@leveloid]: https://github.com/leveloid
 [@lowks]: https://github.com/lowks
+[@lrosa007]: https://github.com/lrosa007
 [@orieken]: https://github.com/orieken
 [@petehamilton]: https://github.com/petehamilton
 [@piton4eg]: https://github.com/piton4eg
