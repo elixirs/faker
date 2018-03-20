@@ -3,22 +3,21 @@ defmodule Faker.Code do
   Functions for generate common codes.
   """
 
+  alias Faker.Util
+
   defdelegate isbn, to: Faker.Code, as: :isbn10
 
   def isbn10 do
-    :rand.seed(:exs64, :os.timestamp)
     sequence = Faker.format("#########")
     sequence <> check_digit(sequence, &calc_digit_x_index/1, 11)
   end
 
   def isbn13 do
-    :rand.seed(:exs64, :os.timestamp)
-    sequence = hd(Enum.shuffle(["978", "979"])) <> Faker.format("#########")
+    sequence = Util.pick(["978", "979"]) <> Faker.format("#########")
     sequence <> check_digit(sequence, &calc_isbn13/1, 10)
   end
 
   def issn do
-    :rand.seed(:exs64, :os.timestamp)
     sequence = Faker.format("#######")
     sequence <> check_digit(sequence, &calc_digit_x_index/1, 11)
   end

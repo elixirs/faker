@@ -10,6 +10,58 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Added
 
+* New maintainer [Toby Hinloopen (@tobyhinloopen)](https://github.com/tobyhinloopen)
+* Gitter chat [room](https://gitter.im/igas/faker) [[@igas][]]
+* `Faker.Gov.Us.ssn/0` added to generate US Social Security numbers [[@sotojuan][]]
+* `Faker.StarWars` added to generate `character/0`, `planet/0` and `quote/0` from StarWars universe [[@samcdavid][]]
+* `Faker.Cat` added to generate `name/0`, `breed/0` and `registry/0` of cats [[@orieken][]]
+* Customizable random functions [[@igas][]]
+* `Faker.Industry` [@cdesch][]
+* Missing colors to `Faker.Color.En` [@cdesch][]
+
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+* `Faker.Date.date_of_birth/0` and `Faker.Date.date_of_birth/1` returning wrong result [[@stfnsr][]]
+* Usage.md reorganisation [[@orieken][]]
+* Documentation for `Faker.Beer` [[@bcat-eu][]]
+* Fix pokemon name - Mr. Mime :) [[@leveloid][]]
+* Gov.Us deprecations [[@halfdan][]]
+
+### Security
+
+## 0.9.0
+
+### Added
+
+* `Faker.Pizza` [@lauraannwilliams][]
+* Credo on CI [@igas][]
+* Dialyxir on CI [@igas][]
+* `Faker.String.base64/0` and `Faker.String.base64/1` [@yordis][]
+
+### Changed
+
+### Deprecated
+
+### Removed
+
+* Elixir < 1.3 support [@igas][]
+
+### Fixed
+
+* Credo issues [@lrosa007][]
+
+### Security
+
+## 0.8.0
+
+### Added
+
 * `Faker.Internet.UserAgent` [@devshane][]
 * `Faker.Superhero` [@orieken][]
 * `Faker.Code.iban` [@tobyhinloopen][]
@@ -179,21 +231,31 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
   * `creature/0`
 
 [@adam-wanninger]: https://github.com/adam-wanninger
+[@anthonator]: https://github.com/anthonator
+[@bcat-eu]: https://github.com/bcat-eu
 [@belaustegui]: https://github.com/belaustegui
+[@cdesch]: https://github.com/cdesch
 [@devshane]: https://github.com/devshane
 [@efexen]: https://github.com/efexen
 [@GesJeremie]: https://github.com/GesJeremie
+[@halfdan]: https://github.com/halfdan
 [@igas]: https://github.com/igas
 [@jarednorman]: https://github.com/jarednorman
 [@johnhamelink]: https://github.com/johnhamelink
+[@lauraannwilliams]: https://github.com/lauraannwilliams
+[@leveloid]: https://github.com/leveloid
 [@lowks]: https://github.com/lowks
+[@lrosa007]: https://github.com/lrosa007
 [@orieken]: https://github.com/orieken
 [@petehamilton]: https://github.com/petehamilton
 [@piton4eg]: https://github.com/piton4eg
+[@samcdavid]: https://github.com/samcdavid
 [@saulecabrera]: https://github.com/saulecabrera
+[@sotojuan]: https://github.com/sotojuan
+[@stfnsr]: https://github.com/stfnsr
 [@tbash]: https://github.com/tbash
 [@tobyhinloopen]: https://github.com/tobyhinloopen
 [@vforvova]: https://github.com/vforvova
 [@wojtekmach]: https://github.com/wojtekmach
+[@yordis]: https://github.com/yordis
 [@zmoshansky]: https://github.com/zmoshansky
-[@anthonator]: https://github.com/anthonator

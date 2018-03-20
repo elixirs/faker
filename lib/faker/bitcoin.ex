@@ -10,11 +10,11 @@ defmodule Faker.Bitcoin do
   """
   @spec address(atom) :: binary
   def address(:testnet) do
-    base58(<<111>> <> :crypto.strong_rand_bytes(20))
+    base58(<<111>> <> Faker.random_bytes(20))
   end
 
   def address(:main) do
-    base58(<<0>> <> :crypto.strong_rand_bytes(20))
+    base58(<<0>> <> Faker.random_bytes(20))
   end
 
   defp base58(hash) do
@@ -22,7 +22,7 @@ defmodule Faker.Bitcoin do
     |> :binary.bin_to_list
     |> Enum.reverse
     |> Enum.with_index
-    |> Enum.map(fn({v,i}) -> round(v * :math.pow(256, i)) end)
+    |> Enum.map(fn({v, i}) -> round(v * :math.pow(256, i)) end)
     |> Enum.sum
     |> ret
     |> String.reverse

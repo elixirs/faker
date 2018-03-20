@@ -9,13 +9,11 @@ defmodule Faker.Superhero.En do
   Returns a Superhero name
   """
   @spec name() :: String.t
-  def name, do: name(:crypto.rand_uniform(1, 11))
-  defp name(1), do: "#{prefix()} #{descriptor()} #{suffix()}"
-  defp name(2), do: "#{prefix()} #{descriptor()}"
-  defp name(3), do: "#{descriptor()} #{suffix()}"
-  defp name(n) when is_integer(n) do
-    "#{descriptor()}"
-  end
+  def name, do: name(Faker.random_between(0, 9))
+  defp name(0), do: "#{prefix()} #{descriptor()} #{suffix()}"
+  defp name(1), do: "#{prefix()} #{descriptor()}"
+  defp name(2), do: "#{descriptor()} #{suffix()}"
+  defp name(n) when is_integer(n), do: "#{descriptor()}"
 
   @doc """
   Returns a random prefix
@@ -145,5 +143,4 @@ defmodule Faker.Superhero.En do
   "Vision - Microscopic", "Vision - Night", "Vision - Telescopic",
   "Vision - Thermal", "Vision - X-Ray", "Vitakinesis", "Wallcrawling",
   "Weapon-based Powers", "Weapons Master", "Web Creation", "Wishing"]
-
 end

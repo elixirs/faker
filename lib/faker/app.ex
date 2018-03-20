@@ -14,7 +14,7 @@ defmodule Faker.App do
   @spec version() :: String.t
   def version do
     ["0.#.#", "0.##", "#.##", "#.#", "#.#.#"]
-    |> Enum.at(:crypto.rand_uniform(0, 5))
+    |> Enum.at(Faker.random_between(0, 4))
     |> Faker.format
   end
 
@@ -34,7 +34,7 @@ defmodule Faker.App do
     allow_build = Keyword.get(opts, :allow_build, false)
     pre =
       ~w(dev alpha beta rc.0 rc.1)
-      |> Enum.at(:crypto.rand_uniform(0, 5))
+      |> Enum.at(Faker.random_between(0, 4))
 
     formats = ["0.#.#", "#.#.#", "#.##.##"]
     formats = if allow_pre, do: formats ++ ["#.#.#-#{pre}"], else: formats
@@ -42,7 +42,7 @@ defmodule Faker.App do
     formats = if allow_pre and allow_build, do: formats ++ ["#.#.#-#{pre}+###"], else: formats
 
     formats
-    |> Enum.at(:crypto.rand_uniform(0, length(formats)))
+    |> Enum.at(Faker.random_between(0, length(formats) - 1))
     |> Faker.format
   end
 
@@ -56,9 +56,7 @@ defmodule Faker.App do
   Returns an author name.
   """
   @spec author() :: String.t
-  def author do
-    author(:crypto.rand_uniform(0, 2))
-  end
+  def author, do: author(Faker.random_between(0, 1))
 
   defp author(0), do: Name.name
   defp author(1), do: Company.name

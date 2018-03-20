@@ -8,8 +8,7 @@ defmodule Faker.Phone.EnGb do
 
   @prefixes %{
     "International dialling" => ["0"],
-    "Geographic numbers with area codes - for list see telephone area codes" => ["1"],
-    "Geographic numbers with area codes - for list see telephone area codes" => ["2"],
+    "Geographic numbers with area codes - for list see telephone area codes" => ["1", "2"],
     "Geographic rate numbers - used by public sector and not-for-profit bodies" => ["30"],
     "Geographic rate numbers - new allocations" => ["33"],
     "Geographic rate numbers - migrating numbers from matching 084 numbers" => ["34"],
@@ -31,7 +30,7 @@ defmodule Faker.Phone.EnGb do
   """
   @spec number() :: String.t
   def number do
-    if :crypto.rand_uniform(0, 2) == 0 do
+    if Faker.random_between(0, 1) == 0 do
       landline_number()
     else
       cell_number()
@@ -64,7 +63,7 @@ defmodule Faker.Phone.EnGb do
 
   defp random_numbers_until(out, count) do
     char_count = out
-    |> String.to_char_list
+    |> String.to_charlist
     |> Enum.count
 
     format = String.duplicate("#", count - char_count)
@@ -74,7 +73,7 @@ defmodule Faker.Phone.EnGb do
 
   defp number_prefix do
     numbers = Map.values(@prefixes)
-    type = Enum.at(numbers, :crypto.rand_uniform(0, Enum.count(@prefixes)))
-    Enum.at(type, :crypto.rand_uniform(0, Enum.count(type)))
+    type = Enum.at(numbers, Faker.random_between(0, Enum.count(@prefixes) - 1))
+    Enum.at(type, Faker.random_between(0, Enum.count(type) - 1))
   end
 end

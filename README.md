@@ -1,13 +1,14 @@
-# Faker [![Version](https://img.shields.io/hexpm/v/faker.svg?style=flat-square)](https://hex.pm/packages/faker)[![License](https://img.shields.io/hexpm/l/faker.svg?style=flat-square)](https://github.com/igas/faker/blob/master/LICENSE)[![Build Status](https://img.shields.io/travis/igas/faker.svg?style=flat-square)](https://travis-ci.org/igas/faker)[![Issues](https://img.shields.io/github/issues/igas/faker.svg?style=flat-square)](https://github.com/igas/faker/issues)[![Downloads](https://img.shields.io/hexpm/dt/faker.svg?style=flat-square)](https://hex.pm/packages/faker)[![Donation](https://img.shields.io/gratipay/igas.svg?style=flat-square)](https://gratipay.com/igas/)
+# Faker
+[![Version](https://img.shields.io/hexpm/v/faker.svg?style=flat-square)](https://hex.pm/packages/faker)[![License](https://img.shields.io/hexpm/l/faker.svg?style=flat-square)](https://github.com/igas/faker/blob/master/LICENSE)[![Build Status](https://img.shields.io/travis/igas/faker.svg?style=flat-square)](https://travis-ci.org/igas/faker)[![Issues](https://img.shields.io/github/issues/igas/faker.svg?style=flat-square)](https://github.com/igas/faker/issues)[![Downloads](https://img.shields.io/hexpm/dt/faker.svg?style=flat-square)](https://hex.pm/packages/faker)[![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg?style=flat-square)](https://gitter.im/igas/faker)
 
 **Faker** is a pure [Elixir](http://elixir-lang.org/) library for generating
 fake data.
 
 ## Quickstart
 
-* add `{:faker, "~> 0.7"}` to your deps in `mix.exs`;
+* add `{:faker, "~> 0.9"}` to your deps in `mix.exs`;
 * add `:faker` to list of your applications;
-* jump to [usage examples](https://github.com/igas/faker/blob/master/USAGE.md).
+* jump to [usage examples](#usage).
 
 Example `mix.exs`:
 
@@ -18,7 +19,7 @@ Example `mix.exs`:
   end
 ...
   defp deps do
-    [{:faker, "~> 0.7"}]
+    [{:faker, "~> 0.9"}]
   end
 ...
 ```
@@ -30,7 +31,7 @@ In your `mix.exs` file, add the `:faker` project to your dependencies
 
 ``` elixir
   defp deps do
-    [{:faker, "~> 0.7", only: :test}]
+    [{:faker, "~> 0.9", only: :test}]
   end
 ```
 
@@ -40,8 +41,8 @@ If you want to use `faker` outside tests remove `, only: :test` part.
 
 ### Requirements
 
-*   OTP18+
-*   Elixir 1.1+
+* OTP18+
+* Elixir 1.3+
 
 ## Usage
 
@@ -49,7 +50,7 @@ You need to start `:faker` application, but due to the many usages of fake data,
 (seed database, tests, etc) there's no right place to do it. For example, if you
 want to use it in tests, just add `Faker.start` to `test/test_helper.exs`, then,
 use any function described in the [documentation](http://hexdocs.pm/faker/) or
-in [usage examples](https://github.com/igas/faker/blob/master/USAGE.md).
+in [usage examples](USAGE.md).
 
 ## Troubleshooting
 

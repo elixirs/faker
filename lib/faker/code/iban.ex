@@ -47,7 +47,7 @@ defmodule Faker.Code.Iban do
       iban #=> "EE634888052576910847"
       iban #=> "ES1520374189803777170663"
   """
-  def iban(), do: iban(Keyword.keys(@iso_iban_specs))
+  def iban, do: iban(Keyword.keys(@iso_iban_specs))
 
   @spec iban(binary|[binary]) :: binary
   @doc """
@@ -71,7 +71,7 @@ defmodule Faker.Code.Iban do
       iban "MC", ["FOO", "BAR"] #=> "MC70FOOBAR05"
       iban "SM", ["A"] #=> "SM65A18398227594GI06519YAP4"
   """
-  @spec iban(binary|[binary], [binary]) :: binary
+  @spec iban(atom|binary|[binary], [binary]) :: binary
   def iban(country_code, prefix_components) when is_binary(country_code), do: iban(String.to_atom(country_code), prefix_components)
   def iban(country_codes, prefix_components) when is_list(country_codes), do: iban(sample(country_codes), prefix_components)
   def iban(country_code, prefix_components) when is_atom(country_code) do
@@ -88,7 +88,8 @@ defmodule Faker.Code.Iban do
   end
 
   defp fragment_to_number(fragment) do
-    fragment_to_numeric_string(fragment)
+    fragment
+    |> fragment_to_numeric_string()
     |> String.to_integer()
   end
 
@@ -101,15 +102,21 @@ defmodule Faker.Code.Iban do
   defp random_bban([entry]), do: random_bban(entry)
   defp random_bban([entry|tail]), do: random_bban(entry) <> random_bban(tail)
   defp random_bban([]), do: ""
-  defp random_bban({:n, n}), do: sample_list(n, @numeric) |> Enum.join("")
-  defp random_bban({:a, n}), do: sample_list(n, @alpha) |> Enum.join("")
-  defp random_bban({:c, n}), do: sample_list(n, @alpha_numeric) |> Enum.join("")
+  defp random_bban({:n, n}), do: random_bban(n, @numeric)
+  defp random_bban({:a, n}), do: random_bban(n, @alpha)
+  defp random_bban({:c, n}), do: random_bban(n, @alpha_numeric)
+
+  defp random_bban(n, type) do
+    n
+    |> sample_list(type)
+    |> Enum.join("")
+  end
 
   defp sample_list(n, list) do
-    Enum.map(0..(n-1), fn _ -> sample(list) end)
+    Enum.map(0..(n - 1), fn _ -> sample(list) end)
   end
 
   defp sample(list) do
-    Enum.fetch!(list, :crypto.rand_uniform(0, length(list)))
+    Enum.fetch!(list, Faker.random_between(0, length(list) - 1))
   end
 end

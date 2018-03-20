@@ -66,7 +66,7 @@ defmodule Faker.Phone.EnUs do
   @doc """
   Returns a random subscriber number `n` digits long
   """
-  @spec subscriber_number(n :: Integer.t) :: String.t
+  @spec subscriber_number(pos_integer) :: String.t
   def subscriber_number(n) when is_integer(n) do
     Faker.format(String.duplicate("#", n))
   end
@@ -79,7 +79,7 @@ defmodule Faker.Phone.EnUs do
   defdelegate extension(n), to: __MODULE__, as: :subscriber_number
   defdelegate extension, to: __MODULE__, as: :subscriber_number
 
-  defp std_separator, do: Enum.at(["-", ".", ""], digit(0, 3))
+  defp std_separator, do: Enum.at(["-", ".", ""], Faker.random_between(0, 2))
 
-  defp digit(min, max), do: :crypto.rand_uniform(min, max)
+  defp digit(min, max), do: Faker.random_between(min, max)
 end

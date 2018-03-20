@@ -48,7 +48,6 @@ defmodule Faker.File do
     |> pick()
   end
 
-
   @doc """
   Returns a random file name
   """
@@ -98,6 +97,6 @@ defmodule Faker.File do
 
   defp pick(list) do
     list
-    |> Enum.at(:crypto.rand_uniform(0, Enum.count(list)))
+    |> Enum.at(Faker.random_between(0, Enum.count(list) - 1))
   end
 end

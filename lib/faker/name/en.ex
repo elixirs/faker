@@ -9,10 +9,10 @@ defmodule Faker.Name.En do
   Returns a complete name (may include a suffix/prefix or both)
   """
   @spec name() :: String.t
-  def name, do: name(:crypto.rand_uniform(1, 11))
-  defp name(1), do: "#{prefix()} #{first_name()} #{last_name()} #{suffix()}"
-  defp name(2), do: "#{prefix()} #{first_name()} #{last_name()}"
-  defp name(3), do: "#{first_name()} #{last_name()} #{suffix()}"
+  def name, do: name(Faker.random_between(0, 9))
+  defp name(0), do: "#{prefix()} #{first_name()} #{last_name()} #{suffix()}"
+  defp name(1), do: "#{prefix()} #{first_name()} #{last_name()}"
+  defp name(2), do: "#{first_name()} #{last_name()} #{suffix()}"
   defp name(n) when is_integer(n) do
     "#{first_name()} #{last_name()}"
   end

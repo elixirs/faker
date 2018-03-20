@@ -1,7 +1,7 @@
 defmodule Faker.Internet do
-  import Faker, only: [sampler: 2]
-
   alias Faker.Name.En, as: Name
+  alias Faker.{Lorem, Util}
+  import Faker.Util, only: [pick: 1]
 
   @moduledoc """
   Functions for generating internet related data
@@ -27,12 +27,18 @@ defmodule Faker.Internet do
   Returns a random username
   """
   @spec user_name() :: String.t
-  def user_name do
-    user_name(:crypto.rand_uniform(0, 2))
+  def user_name, do: user_name(Faker.random_between(0, 1))
+
+  defp user_name(0) do
+    "#{Name.first_name() |> String.replace(~s(  ), ~s()) |> String.downcase()}#{Faker.random_between(1900, 2100)}"
   end
 
-  defp user_name(0), do: "#{Name.first_name |> String.replace(~s(  ), ~s()) |> String.downcase}#{:crypto.rand_uniform(1900, 2100)}"
-  defp user_name(1), do: "#{:rand.seed(:exs64, :os.timestamp); [ Name.first_name, Name.last_name  ] |> Enum.map_join(hd(Enum.shuffle(~w(. _))), &(String.replace(&1, ~s(  ), ~s()))) |> String.downcase}"
+  defp user_name(1) do
+    [Name.first_name(), Name.last_name()]
+    |> Enum.map_join(Util.pick(~w(. _)), &String.replace(&1, ~s(  ), ~s()))
+    |> String.downcase()
+  end
+
   @doc """
   Returns a random domain word
   """
@@ -62,7 +68,7 @@ defmodule Faker.Internet do
   """
   @spec safe_email() :: String.t
   def safe_email do
-    "#{user_name()}@example.#{:rand.seed(:exs64, :os.timestamp);hd(Enum.shuffle(~w(org com net)))}"
+    "#{user_name()}@example.#{Util.pick(~w(org com net))}"
   end
 
   @doc """
@@ -77,24 +83,31 @@ defmodule Faker.Internet do
   Returns a random url
   """
   @spec url() :: String.t
-  def url do
-    url(:crypto.rand_uniform(0, 2))
-  end
+  def url, do: url(Faker.random_between(0, 1))
 
   defp url(0), do: "http://#{domain_name()}"
   defp url(1), do: "https://#{domain_name()}"
 
-  @doc"""
+  @doc """
   Returns a random image url from placekitten.com | placehold.it | dummyimage.com
   """
   @spec image_url() :: String.t
-  def image_url do
-    image_url(:crypto.rand_uniform(0, 3))
+  def image_url, do: image_url(Faker.random_between(0, 2))
+
+  defp image_url(0) do
+    size = Faker.random_between(10, 1024)
+    "https://placekitten.com/#{size}/#{size}"
   end
 
-  defp image_url(0), do: "https://placekitten.com/#{:crypto.rand_uniform(1, 1024)}/#{:crypto.rand_uniform(1, 1024)}"
-  defp image_url(1), do: "https://placehold.it/#{:crypto.rand_uniform(1, 1024)}x#{:crypto.rand_uniform(1, 1024)}"
-  defp image_url(2), do: "https://dummyimage.com/#{:crypto.rand_uniform(1, 1024)}x#{:crypto.rand_uniform(1, 1024)}"
+  defp image_url(1) do
+    size = Faker.random_between(10, 1024)
+    "https://placehold.it/#{size}x#{size}"
+  end
+
+  defp image_url(2) do
+    size = Faker.random_between(10, 1024)
+    "https://dummyimage.com/#{size}x#{size}"
+  end
 
   @doc """
   Generates an ipv4 address
@@ -102,20 +115,20 @@ defmodule Faker.Internet do
   @spec ip_v4_address() :: String.t
   def ip_v4_address do
     Enum.map_join 1..4, ".", fn(_part) ->
-      :crypto.rand_uniform(0, 255)
+      Faker.random_between(0, 255)
     end
   end
-
 
   @doc """
   Generates an ipv6 address
   """
   @spec ip_v6_address() :: String.t
   def ip_v6_address do
-    Enum.map_join 1..8, ":", fn(_part) ->
-      Integer.to_string(:crypto.rand_uniform(0, 65_536), 16)
-      |> String.rjust(4, ?0)
-    end
+    Enum.map_join(1..8, ":", fn _part ->
+      Faker.random_between(0, 65535)
+      |> Integer.to_string(16)
+      |> String.pad_leading(4, ["0"])
+    end)
   end
 
   @doc """
@@ -123,10 +136,9 @@ defmodule Faker.Internet do
   """
   @spec mac_address() :: String.t
   def mac_address do
-    Enum.map_join(1..6, ":", fn(_part) ->
-      Integer.to_string(:crypto.rand_uniform(0, 256), 16)
-      |> String.rjust(2, ?0)
-    end) |> String.downcase
+    1..6
+    |> Enum.map_join(":", &format_mac_address/1)
+    |> String.downcase()
   end
 
   @doc """
@@ -134,14 +146,27 @@ defmodule Faker.Internet do
   If no words are provided it will generate 2 to 5 random words
   If no glue is provied it will use one of -, _ or .
   """
-  @spec slug([String.t], [String.t]) :: String.t
-  def slug(words \\ nil, glue \\ nil) do
-    words = words || Faker.Lorem.words(2..5)
-    glue  = glue || ["-", "_", "."]
+  @spec slug() :: String.t
+  def slug do
+    slug(Lorem.words(2..5))
+  end
 
+  @spec slug([String.t]) :: String.t
+  def slug(words) do
+    slug(words, ["-", "_", "."])
+  end
+
+  @spec slug([String.t], [String.t]) :: String.t
+  def slug(words, glue) do
     words
     |> Enum.take_random(length(words))
-    |> Enum.join(Enum.random(glue))
+    |> Enum.join(pick(glue))
     |> String.downcase
+  end
+
+  defp format_mac_address(_part) do
+    Faker.random_between(0, 255)
+    |> Integer.to_string(16)
+    |> String.pad_leading(2, ["0"])
   end
 end

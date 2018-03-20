@@ -9,7 +9,7 @@ defmodule Faker.Commerce.En do
   Returns a random color
   """
   @spec color() :: String.t
-  sampler :color, ["azure", "black", "blue", "cyan", "fuchsia", "gold", "green", "grey", "indigo", "ivory", "lavender", "lime", "magenta", "maroon", "mint green", "olive", "orange", "orchid", "pink", "plum", "purple", "red", "salmon", "silver", "sky blue", "tan", "teal", "turquoise", "violet", "white", "yellow"]
+  sampler :color, ["azure", "black", "blue", "brown", "cyan", "fuchsia", "gold", "green", "grey", "indigo", "ivory", "lavender", "lime", "magenta", "maroon", "mint green", "olive", "orange", "orchid", "pink", "plum", "purple", "red", "salmon", "silver", "sky blue", "tan", "teal", "turquoise", "violet", "white", "yellow"]
 
   @doc """
   Returns a random department
@@ -22,9 +22,7 @@ defmodule Faker.Commerce.En do
   materials, product names
   """
   @spec product_name() :: String.t
-  def product_name do
-    product_name(:crypto.rand_uniform(0, 3))
-  end
+  def product_name, do: product_name(Faker.random_between(0, 2))
 
   defp product_name(0) do
     "#{product_name_adjective()} #{product_name_material()} #{product_name_product()}"
