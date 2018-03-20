@@ -18,6 +18,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 * Customizable random functions [[@igas][]]
 * `Faker.Industry` [@cdesch][]
 * Missing colors to `Faker.Color.En` [@cdesch][]
+* `Faker.UUID` [[@anthonator][]]
 
 ### Changed
 
