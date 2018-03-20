@@ -46,6 +46,7 @@
 <!-- T -->
 - [Faker.Team](docs/team.md)
 <!-- U -->
+- [Faker.UUID](docs/uuid.md)
 <!-- V -->
 <!-- W -->
 <!-- X -->
