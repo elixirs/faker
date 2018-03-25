@@ -18,6 +18,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 * Customizable random functions [[@igas][]]
 * `Faker.Industry` [@cdesch][]
 * Missing colors to `Faker.Color.En` [@cdesch][]
+* Elixir 1.6 support [[@igas][]]
 
 ### Changed
 
@@ -26,6 +27,8 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 ### Deprecated
 
 ### Removed
+
+* Elixir 1.3 support [[@igas][]]
 
 ### Fixed
 
