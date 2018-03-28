@@ -10,6 +10,22 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Added
 
+* `Faker.UUID` [[@anthonator][]]
+
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+## 0.10.0
+
+### Added
+
 * New maintainer [Toby Hinloopen (@tobyhinloopen)](https://github.com/tobyhinloopen)
 * Gitter chat [room](https://gitter.im/igas/faker) [[@igas][]]
 * `Faker.Gov.Us.ssn/0` added to generate US Social Security numbers [[@sotojuan][]]
@@ -18,13 +34,17 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 * Customizable random functions [[@igas][]]
 * `Faker.Industry` [@cdesch][]
 * Missing colors to `Faker.Color.En` [@cdesch][]
-* `Faker.UUID` [[@anthonator][]]
+* Elixir 1.6 support [[@igas][]]
 
 ### Changed
+
+* Updated dependencies [[@igas][]]
 
 ### Deprecated
 
 ### Removed
+
+* Elixir 1.3 support [[@igas][]]
 
 ### Fixed
 
