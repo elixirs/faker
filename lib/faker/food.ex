@@ -52,7 +52,7 @@ defmodule Faker.Food do
   end
 
   @doc """
-  Returns a random measurement size
+  Returns a random metric measurement
   """
   @spec metric_measurement() :: String.t
   def metric_measurement do

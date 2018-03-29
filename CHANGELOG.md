@@ -24,7 +24,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Added
 
-* `Faker.Food` [@vbrazo][]
+* `Faker.Food` added to generate Food data [@vbrazo][]
 * New maintainer [Toby Hinloopen (@tobyhinloopen)](https://github.com/tobyhinloopen)
 * Gitter chat [room](https://gitter.im/igas/faker) [[@igas][]]
 * `Faker.Gov.Us.ssn/0` added to generate US Social Security numbers [[@sotojuan][]]
