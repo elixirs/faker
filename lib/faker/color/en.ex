@@ -9,7 +9,7 @@ defmodule Faker.Color.En do
   Returns a random english color name
   """
   @spec name() :: String.t
-  sampler :name, ["Red", "Green", "Blue", "Pink", "Brown", "Orange", "Yellow", "Purple"]
+  sampler :name, ["Red", "Green", "Black", "Blue", "Pink", "Brown", "Orange", "Yellow", "Purple", "White"]
 
   @doc """
   Returns a random english fancy color name
