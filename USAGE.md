@@ -20,7 +20,7 @@
 <!-- G -->
 <!-- H -->
 <!-- I -->
-- [Faker.Industry](docs/industry.md)
+- [Faker.Industry](lib/faker/industry.ex)
 - [Faker.Internet](lib/faker/internet.ex)
 - [Faker.Internet.UserAgent](lib/faker/internet/user_agent.ex)
 <!-- J -->
