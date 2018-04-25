@@ -11,6 +11,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 ### Added
 
 * `Faker.UUID` [[@anthonator][]]
+* mix format config file [[@igas][]]
 
 ### Changed
 
