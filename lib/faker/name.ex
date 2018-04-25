@@ -5,6 +5,11 @@ defmodule Faker.Name do
 
   @doc """
   Returns a random complete name
+
+  ## Examples
+
+      iex> Faker.Name.name()
+      #=> "Mr. Christian Johnston"
   """
   @spec name() :: String.t
   def name do
@@ -13,6 +18,11 @@ defmodule Faker.Name do
 
   @doc """
   Returns a random first name
+
+  ## Examples
+
+      iex> Faker.Name.first_name()
+      #=> "Iva"
   """
   @spec first_name() :: String.t
   def first_name do
@@ -21,6 +31,11 @@ defmodule Faker.Name do
 
   @doc """
   Returns a random last name
+
+  ## Examples
+
+      iex> Faker.Name.last_name()
+      #=> "Veum"
   """
   @spec last_name() :: String.t
   def last_name do
@@ -29,6 +44,11 @@ defmodule Faker.Name do
 
   @doc """
   Returns a random name related title
+
+  ## Examples
+
+      iex> Faker.Name.title()
+      #=> "Chief Brand Planner"
   """
   @spec title() :: String.t
   def title do
@@ -37,6 +57,11 @@ defmodule Faker.Name do
 
   @doc """
   Returns a random name related suffix
+
+  ## Examples
+
+      iex> Faker.Name.suffix()
+      #=> "III"
   """
   @spec suffix() :: String.t
   def suffix do
@@ -45,6 +70,11 @@ defmodule Faker.Name do
 
   @doc """
   Returns a random name related prefix
+
+  ## Examples
+
+      iex> Faker.Name.prefix()
+      #=> "Miss"
   """
   @spec prefix() :: String.t
   def prefix do

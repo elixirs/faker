@@ -5,6 +5,11 @@ defmodule Faker.String do
 
   @doc """
   Returns a random base64 String
+
+  ## Examples
+
+      iex> Faker.String.base64()
+      #=> "JfuzivfU"
   """
   @spec base64(integer) :: String.t
   def base64(length \\ 8) do

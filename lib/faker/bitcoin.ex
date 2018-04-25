@@ -7,6 +7,14 @@ defmodule Faker.Bitcoin do
 
   @doc """
   Return bitcoin address. If pass `:testnet` it'll generate testnet address.
+
+  ## Examples
+
+      iex> Faker.Bitcoin.address()
+      #=> "15SYCAaXvxosAmndphQthDok7SFTQ7Dddc"
+
+      iex> Faker.Bitcoin.address(:testnet)
+      #=> "n1nEhSeHJiURtEymbtrV1Kv97C8BN6mBUP"
   """
   @spec address(atom) :: binary
   def address(:testnet) do

@@ -27,6 +27,11 @@ defmodule Faker.Phone.EnGb do
 
   @doc """
   Returns a random UK phone number
+
+  ## Examples
+
+      iex> Faker.Phone.EnGb.number()
+      #=> "+4433138xxxx"
   """
   @spec number() :: String.t
   def number do
@@ -39,6 +44,11 @@ defmodule Faker.Phone.EnGb do
 
   @doc """
   Returns a random UK landline phone number
+
+  ## Examples
+
+      iex> Faker.Phone.EnGb.landline_number()
+      #=> "+44227030xxx"
   """
   @spec landline_number() :: String.t
   def landline_number do
@@ -49,6 +59,11 @@ defmodule Faker.Phone.EnGb do
   samplerp :cell_number_format, ["074## ######", "075## ######", "076## ######", "077## ######", "078## ######", "079## ######", "+4474## ######", "+4475## ######", "+4476## ######", "+4477## ######", "+4478## ######", "+4479## ######"]
   @doc """
   Returns a random UK mobile phone number
+
+  ## Examples
+
+      iex> Faker.Phone.EnGb.cell_number()
+      #=> "07464 180xxx"
   """
   @spec cell_number() :: String.t
   def cell_number do
@@ -57,6 +72,11 @@ defmodule Faker.Phone.EnGb do
 
   @doc """
   Returns a random UK mobile phone number
+
+  ## Examples
+
+      iex> Faker.Phone.EnGb.mobile_number()
+      #=> "07866 45xxxx"
   """
   @spec mobile_number() :: String.t
   defdelegate mobile_number, to: __MODULE__, as: :cell_number

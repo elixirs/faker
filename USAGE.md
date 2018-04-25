@@ -1,50 +1,52 @@
 <!-- A -->
-- [Faker.Address](docs/address.md)
-- [Faker.App](docs/app.md)
-- [Faker.Avatar](docs/avatar.md)
+- [Faker.Address](lib/faker/address.ex)
+- [Faker.App](lib/faker/app.ex)
+- [Faker.Avatar](lib/faker/avatar.ex)
 <!-- B -->
-- [Faker.Beer](docs/beer.md)
-- [Faker.Bitcoin](docs/bitcoin.md)
+- [Faker.Beer](lib/faker/beer.ex)
+- [Faker.Bitcoin](lib/faker/bitcoin.ex)
 <!-- C -->
-- [Faker.Cat](docs/cat.md)
-- [Faker.Code](docs/code.md)
-- [Faker.Color](docs/color.md)
-- [Faker.Commerce](docs/commerce.md)
-- [Faker.Company](docs/company.md)
+- [Faker.Cat](lib/faker/cat.ex)
+- [Faker.Code](lib/faker/code.ex)
+- [Faker.Color](lib/faker/color.ex)
+- [Faker.Commerce](lib/faker/commerce.ex)
+- [Faker.Company](lib/faker/company.ex)
 <!-- D -->
-- [Faker.Date](docs/date.md)
-- [Faker.DateTime](docs/date-time.md)
+- [Faker.Date](lib/faker/date.ex)
+- [Faker.DateTime](lib/faker/datetime.ex)
 <!-- E -->
 <!-- F -->
-- [Faker.File](docs/file.md)
+- [Faker.File](lib/faker/file.ex)
 <!-- G -->
 <!-- H -->
 <!-- I -->
-- [Faker.Industry](docs/industry.md)
-- [Faker.Internet](docs/internet.md)
-- [Faker.Internet.UserAgent](docs/internet-useragent.md)
+- [Faker.Industry](lib/faker/industry.ex)
+- [Faker.Internet](lib/faker/internet.ex)
+- [Faker.Internet.UserAgent](lib/faker/internet/user_agent.ex)
 <!-- J -->
 <!-- K -->
 <!-- L -->
-- [Faker.Lorem](docs/lorem.md)
-- [Faker.Lorem.Shakespeare](docs/lorem-shakespeare.md)
+- [Faker.Lorem](lib/faker/lorem.ex)
+- [Faker.Lorem.Shakespeare](lib/faker/lorem/shakespeare.ex)
 <!-- M -->
 <!-- N -->
-- [Faker.NaiveDateTime](docs/native-date-time.md)
-- [Faker.Name](docs/name.md)
+- [Faker.NaiveDateTime](lib/faker/nativedatetime.ex)
+- [Faker.Name](lib/faker/name.ex)
+- [Faker.Nato](lib/faker/nato.ex)
 <!-- O -->
 <!-- P -->
-- [Faker.Phone](docs/phone.md)
-- [Faker.Pizza](docs/pizza.md)
-- [Faker.Pokemon](docs/pokemon.md)
+- [Faker.Phone.EnUs](lib/faker/phone/en_us.ex)
+- [Faker.Phone.EnGb](lib/faker/phone/en_gb.ex)
+- [Faker.Pizza](lib/faker/pizza.ex)
+- [Faker.Pokemon](lib/faker/pokemon.ex)
 <!-- Q -->
 <!-- R -->
 <!-- S -->
-- [Faker.StarWars](docs/star-wars.md)
-- [Faker.String](docs/string.md)
-- [Faker.Superhero](docs/superhero.md)
+- [Faker.StarWars](lib/faker/star_wars.ex)
+- [Faker.String](lib/faker/string.ex)
+- [Faker.Superhero](lib/faker/superhero.ex)
 <!-- T -->
-- [Faker.Team](docs/team.md)
+- [Faker.Team](lib/faker/team.ex)
 <!-- U -->
 - [Faker.UUID](docs/uuid.md)
 <!-- V -->

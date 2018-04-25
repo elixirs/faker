@@ -5,6 +5,11 @@ defmodule Faker.Company do
 
   @doc """
   Returns a random complete business related bullshit
+
+  ## Examples
+
+      iex> Faker.Company.bs()
+      #=> "enable next-generation markets"
   """
   @spec bs() :: String.t
   def bs do
@@ -13,6 +18,11 @@ defmodule Faker.Company do
 
   @doc """
   Returns a random business related bullshit
+
+  ## Examples
+
+      iex> Faker.Company.bullshit()
+      #=> "value-added"
   """
   @spec bullshit() :: String.t
   def bullshit do
@@ -21,6 +31,11 @@ defmodule Faker.Company do
 
   @doc """
   Returns a random business related bullshit prefix
+
+  ## Examples
+
+      iex> Faker.Company.bullshit_prefix()
+      #=> "recontextualize"
   """
   @spec bullshit_prefix() :: String.t
   def bullshit_prefix do
@@ -29,6 +44,11 @@ defmodule Faker.Company do
 
   @doc """
   Returns a random business related bullshit suffix
+
+  ## Examples
+
+      iex> Faker.Company.bullshit_suffix()
+      #=> "technologies"
   """
   @spec bullshit_suffix() :: String.t
   def bullshit_suffix do
@@ -37,6 +57,11 @@ defmodule Faker.Company do
 
   @doc """
   Returns a random business related buzzword
+
+  ## Examples
+
+      iex> Faker.Company.buzzword()
+      #=> "composite"
   """
   @spec buzzword() :: String.t
   def buzzword do
@@ -45,6 +70,11 @@ defmodule Faker.Company do
 
   @doc """
   Returns a random business related buzzword prefix
+
+  ## Examples
+
+      iex> Faker.Company.buzzword_prefix()
+      #=> "Up-sized"
   """
   @spec buzzword_prefix() :: String.t
   def buzzword_prefix do
@@ -53,6 +83,11 @@ defmodule Faker.Company do
 
   @doc """
   Returns a random business related buzzword suffix
+
+  ## Examples
+
+      iex> Faker.Company.buzzword_suffix()
+      #=> "paradigm"
   """
   @spec buzzword_suffix() :: String.t
   def buzzword_suffix do
@@ -61,6 +96,11 @@ defmodule Faker.Company do
 
   @doc """
   Returns a random complete catch phrase
+
+  ## Examples
+
+      iex> Faker.Company.catch_phrase()
+      #=> "Profound stable strategy"
   """
   @spec catch_phrase() :: String.t
   def catch_phrase do
@@ -69,6 +109,11 @@ defmodule Faker.Company do
 
   @doc """
   Returns complete company name
+
+  ## Examples
+
+      iex> Faker.Company.name()
+      #=> "Erdman, Rogahn and Bailey"
   """
   @spec name() :: String.t
   def name do
@@ -77,6 +122,11 @@ defmodule Faker.Company do
 
   @doc """
   Returns a random type of business entity
+
+  ## Examples
+
+      iex> Faker.Company.suffix()
+      #=> "Group"
   """
   @spec suffix() :: String.t
   def suffix do
