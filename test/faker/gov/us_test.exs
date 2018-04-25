@@ -1,4 +1,4 @@
-defmodule Faker.Gov.UsTest do
+defmodule Gov.UsTest do
   use ExUnit.Case, async: true
   import Faker.Gov.Us
 

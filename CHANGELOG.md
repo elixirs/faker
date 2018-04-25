@@ -10,12 +10,13 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Added
 
-* `Faker.UUID` [[@anthonator][]]
+* `Faker.UUID.v4/0` [[@anthonator][]]
 * mix format config file [[@igas][]]
+* `Faker.Food` to generate Food data [@vbrazo][]
 
 ### Changed
 
-* Moved all docs from `docs/` to `@doc` documentation [[@MarcusSky][]]
+* Documentation moved to hexdocs.pm [[@MarcusSky][]]
 * Updated dependencies [[@igas][]]
 
 ### Deprecated
@@ -30,7 +31,6 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Added
 
-* `Faker.Food` added to generate Food data [@vbrazo][]
 * New maintainer [Toby Hinloopen (@tobyhinloopen)](https://github.com/tobyhinloopen)
 * Gitter chat [room](https://gitter.im/igas/faker) [[@igas][]]
 * `Faker.Gov.Us.ssn/0` added to generate US Social Security numbers [[@sotojuan][]]
