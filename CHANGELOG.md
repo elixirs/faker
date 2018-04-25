@@ -14,6 +14,8 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Changed
 
+* Updated dependencies [[@igas][]]
+
 ### Deprecated
 
 ### Removed
