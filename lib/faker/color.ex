@@ -5,6 +5,11 @@ defmodule Faker.Color do
 
   @doc """
   Return random RGB hex value.
+
+  ## Examples
+
+      iex> Faker.Color.rgb_hex()
+      #=> "07E026"
   """
   @spec rgb_hex() :: binary
   def rgb_hex do
@@ -15,6 +20,11 @@ defmodule Faker.Color do
 
   @doc """
   Return random RGB decimal value.
+
+  ## Examples
+
+      iex> Faker.Color.rgb_decimal()
+      #=> {55, 2, 76}
   """
   @spec rgb_decimal() :: {byte, byte, byte}
   def rgb_decimal do
@@ -27,6 +37,11 @@ defmodule Faker.Color do
 
   @doc """
   Return a random color name
+
+  ## Examples
+
+      iex> Faker.Color.name()
+      #=> "Red"
   """
   @spec name() :: String.t
   def name do
@@ -35,6 +50,11 @@ defmodule Faker.Color do
 
   @doc """
   Return a random fancy color name
+
+  ## Examples
+
+      iex> Faker.Color.fancy_name()
+      #=> "Citrine"
   """
   @spec fancy_name() :: String.t
   def fancy_name do

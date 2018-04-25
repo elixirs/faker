@@ -7,16 +7,40 @@ defmodule Faker.Code do
 
   defdelegate isbn, to: Faker.Code, as: :isbn10
 
+  @doc """
+  Returns a random isbn10 code
+
+  ## Examples
+
+      iex> Faker.Code.isbn10()
+      #=> "0762633026"
+  """
   def isbn10 do
     sequence = Faker.format("#########")
     sequence <> check_digit(sequence, &calc_digit_x_index/1, 11)
   end
 
+  @doc """
+  Returns a random isbn13 code
+
+  ## Examples
+
+      iex> Faker.Code.isbn13()
+      #=> "9794438325491"
+  """
   def isbn13 do
     sequence = Util.pick(["978", "979"]) <> Faker.format("#########")
     sequence <> check_digit(sequence, &calc_isbn13/1, 10)
   end
 
+  @doc """
+  Returns a random issn code
+
+  ## Examples
+
+      iex> Faker.Code.issn()
+      #=> "08979375"
+  """
   def issn do
     sequence = Faker.format("#######")
     sequence <> check_digit(sequence, &calc_digit_x_index/1, 11)

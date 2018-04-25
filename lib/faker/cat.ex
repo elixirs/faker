@@ -5,6 +5,11 @@ defmodule Faker.Cat do
 
   @doc """
   Returns a ramdom Cat name
+
+  ## Examples
+
+      iex> Faker.Cat.name()
+      #=> "Shadow"
   """
   @spec name() :: String.t
   def name do
@@ -13,6 +18,11 @@ defmodule Faker.Cat do
 
   @doc """
   Returns a random Cat breed
+
+  ## Examples
+
+      iex> Faker.Cat.breed()
+      #=> "British Semipi-longhair"
   """
   @spec breed() :: String.t
   def breed do
@@ -21,6 +31,11 @@ defmodule Faker.Cat do
 
   @doc """
   Returns a random Cat registry
+
+  ## Examples
+
+      iex> Faker.Cat.registry()
+      #=> "American Cat Fanciers Association"
   """
   @spec registry() :: String.t
   def registry do

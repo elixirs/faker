@@ -29,17 +29,27 @@ defmodule Faker.File do
 
   @doc """
   Returns a random file extension
+
+  ## Examples
+
+      iex> Faker.File.file_extension()
+      #=> "mp3"
   """
   @spec file_extension() :: String.t
   def file_extension do
     @categories_extensions
-      |> pick
-      |> file_extension
+    |> pick
+    |> file_extension
   end
 
   @doc """
   Returns a random file extension from the category given
   Available categories: :audio, :image, :text, :video, :office
+
+  ## Examples
+
+      iex> Faker.File.file_extension(:video)
+      #=> "webm"
   """
   @spec file_extension(:atom) :: String.t
   def file_extension(category) do
@@ -50,6 +60,11 @@ defmodule Faker.File do
 
   @doc """
   Returns a random file name
+
+  ## Examples
+
+      iex> Faker.File.file_name()
+      #=> "voluptaes.jpg"
   """
   @spec file_name() :: String.t
   def file_name do
@@ -59,6 +74,11 @@ defmodule Faker.File do
   @doc """
   Returns a random file name from the category given
   Available categories: :audio, :image, :text, :video, :office
+
+  ## Examples
+
+      iex> Faker.File.file_name(:text)
+      #=> "reo.json"
   """
   @spec file_name(:atom) :: String.t
   def file_name(category) do
@@ -67,18 +87,28 @@ defmodule Faker.File do
 
   @doc """
   Returns a random mime type
+
+  ## Examples
+
+      iex> Faker.File.mime_type()
+      #=> "application/atom+xml"
   """
   @spec mime_type :: String.t
   def mime_type do
     @categories_mimes
-      |> pick
-      |> mime_type
+    |> pick
+    |> mime_type
   end
 
   @doc """
   Returns a random mime type from the category given
   Available categories: :application, :audio, :image, :message, :model,
   :multipart, :text, :video
+
+  ## Examples
+
+      iex> Faker.File.mime_type(:image)
+      #=> "image/gif"
   """
   @spec mime_type(:atom) :: String.t
   def mime_type(category) do
