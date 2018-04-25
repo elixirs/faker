@@ -17,6 +17,7 @@
 <!-- E -->
 <!-- F -->
 - [Faker.File](lib/faker/file.ex)
+- [Faker.Food](docs/food.md)
 <!-- G -->
 <!-- H -->
 <!-- I -->
