@@ -10,6 +10,8 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Added
 
+* `Faker.UUID` [[@anthonator][]]
+
 ### Changed
 
 ### Deprecated
