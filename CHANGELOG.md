@@ -10,9 +10,13 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Added
 
+* `Faker.UUID` [[@anthonator][]]
+* mix format config file [[@igas][]]
+
 ### Changed
 
-* Moved all docs from `docs/` to `@doc` documentation
+* Moved all docs from `docs/` to `@doc` documentation [[@MarcusSky][]]
+* Updated dependencies [[@igas][]]
 
 ### Deprecated
 
@@ -267,6 +271,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 [@leveloid]: https://github.com/leveloid
 [@lowks]: https://github.com/lowks
 [@lrosa007]: https://github.com/lrosa007
+[@MarcusSky]: https://github.com/MarcusSky
 [@orieken]: https://github.com/orieken
 [@petehamilton]: https://github.com/petehamilton
 [@piton4eg]: https://github.com/piton4eg

@@ -48,6 +48,7 @@
 <!-- T -->
 - [Faker.Team](lib/faker/team.ex)
 <!-- U -->
+- [Faker.UUID](docs/uuid.md)
 <!-- V -->
 <!-- W -->
 <!-- X -->

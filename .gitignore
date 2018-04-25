@@ -7,3 +7,5 @@ doc
 
 .idea
 *.iml
+
+.DS_Store
