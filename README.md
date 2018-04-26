@@ -44,11 +44,11 @@ See [documentation](http://hexdocs.pm/faker/) and [usage examples](USAGE.md).
 you need to add `:faker` to your application's mix file, in the `applications`
 function, as above.
 
-```
-** (FunctionClauseError) no function clause matching in Faker.Address.city_count/1
+    ```
+    ** (FunctionClauseError) no function clause matching in Faker.Address.city_count/1
     lib/faker/address.ex:48: Faker.Address.city_count(nil)
     lib/faker/address.ex:41: Faker.Address.city/0
-```
+    ```
 
 ## Tools
 
