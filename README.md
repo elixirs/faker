@@ -6,59 +6,45 @@ fake data.
 
 ## Quickstart
 
-* add `{:faker, "~> 0.10"}` to your deps in `mix.exs`;
-* add `:faker` to list of your applications;
+* add `{:faker, "~> 0.10"}` to your deps in `mix.exs`:
+
+    ```elixir
+    defp deps do
+      [{:faker, "~> 0.10", only: :test}]
+    end
+    ```
+
+* run:
+
+    ```
+    mix deps.get
+    ```
+
+* add `Faker.start()` to `test/test_helper.exs`:
+
+    ```elixir
+    ExUnit.start()
+    Faker.start()
+    ```
+
 * jump to [usage examples](#usage).
-
-Example `mix.exs`:
-
-```elixir
-...
-  def application do
-    [applications: [:logger, :faker]]
-  end
-...
-  defp deps do
-    [{:faker, "~> 0.10"}]
-  end
-...
-```
-
-## Install
-
-In your `mix.exs` file, add the `:faker` project to your dependencies
-(optionally include the version):
-
-``` elixir
-  defp deps do
-    [{:faker, "~> 0.10", only: :test}]
-  end
-```
-
-Do a `mix deps.get` to fetch the dependency. That's it.
-
-If you want to use `faker` outside tests remove `, only: :test` part.
 
 ### Requirements
 
-* OTP18+
-* Elixir 1.3+
+* OTP 18+
+* Elixir 1.4+
 
 ## Usage
 
-You need to start `:faker` application, but due to the many usages of fake data,
-(seed database, tests, etc) there's no right place to do it. For example, if you
-want to use it in tests, just add `Faker.start` to `test/test_helper.exs`, then,
-use any function described in the [documentation](http://hexdocs.pm/faker/) or
-in [usage examples](USAGE.md).
+See [documentation](http://hexdocs.pm/faker/) and [usage examples](USAGE.md).
 
 ## Troubleshooting
 
-*   If you get a message like the one below when you call `Faker.Address.city`,
+* If you get a message like the one below when you call `Faker.Address.city/0`,
 you need to add `:faker` to your application's mix file, in the `applications`
 function, as above.
 
-``` elixir
+```
 ** (FunctionClauseError) no function clause matching in Faker.Address.city_count/1
     lib/faker/address.ex:48: Faker.Address.city_count(nil)
     lib/faker/address.ex:41: Faker.Address.city/0
