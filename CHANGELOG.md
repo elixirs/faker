@@ -24,6 +24,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Added
 
+* `Faker.Color.En`, `Faker.Color.Es` and `Faker.Color.PtBr` [@vbrazo][]
 * New maintainer [Toby Hinloopen (@tobyhinloopen)](https://github.com/tobyhinloopen)
 * Gitter chat [room](https://gitter.im/igas/faker) [[@igas][]]
 * `Faker.Gov.Us.ssn/0` added to generate US Social Security numbers [[@sotojuan][]]
