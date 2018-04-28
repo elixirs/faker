@@ -6,7 +6,7 @@ defmodule Faker.Color.PtBr do
   """
 
   @doc """
-  Returns a random english color name
+  Returns a random brazilian portuguese color name
   """
   @spec name() :: String.t
   sampler :name, ["Vermelho", "Verde", "Preto", "Azul", "Rosa", "Marrom", "Laranja", "Amarelo", "Roxo", "Branco"]

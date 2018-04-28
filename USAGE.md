@@ -8,6 +8,7 @@
 <!-- C -->
 - [Faker.Cat](lib/faker/cat.ex)
 - [Faker.Code](lib/faker/code.ex)
+- [Faker.Color](lib/faker/color.ex)
 - [Faker.Color.En](lib/faker/color/en.ex)
 - [Faker.Color.Es](lib/faker/color/es.ex)
 - [Faker.Color.PtBr](lib/faker/color/pt_br.ex)
