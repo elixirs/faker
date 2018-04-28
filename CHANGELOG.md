@@ -10,7 +10,13 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Added
 
+* `Faker.UUID` [[@anthonator][]]
+* mix format config file [[@igas][]]
+
 ### Changed
+
+* Moved all docs from `docs/` to `@doc` documentation [[@MarcusSky][]]
+* Updated dependencies [[@igas][]]
 
 ### Deprecated
 
@@ -25,6 +31,8 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 ### Added
 
 * `Faker.Color.En`, `Faker.Color.Es` and `Faker.Color.PtBr` [@vbrazo][]
+* `Faker.Food` added to generate Food data [@vbrazo][]
+
 * New maintainer [Toby Hinloopen (@tobyhinloopen)](https://github.com/tobyhinloopen)
 * Gitter chat [room](https://gitter.im/igas/faker) [[@igas][]]
 * `Faker.Gov.Us.ssn/0` added to generate US Social Security numbers [[@sotojuan][]]
@@ -266,6 +274,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 [@leveloid]: https://github.com/leveloid
 [@lowks]: https://github.com/lowks
 [@lrosa007]: https://github.com/lrosa007
+[@MarcusSky]: https://github.com/MarcusSky
 [@orieken]: https://github.com/orieken
 [@petehamilton]: https://github.com/petehamilton
 [@piton4eg]: https://github.com/piton4eg
@@ -275,6 +284,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 [@stfnsr]: https://github.com/stfnsr
 [@tbash]: https://github.com/tbash
 [@tobyhinloopen]: https://github.com/tobyhinloopen
+[@vbrazo]: https://github.com/vbrazo
 [@vforvova]: https://github.com/vforvova
 [@wojtekmach]: https://github.com/wojtekmach
 [@yordis]: https://github.com/yordis

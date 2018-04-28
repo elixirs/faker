@@ -10,6 +10,11 @@ defmodule Faker.App do
 
   @doc """
   Returns a version number.
+
+  ## Examples
+
+      iex> Faker.App.version()
+      #=> "4.3"
   """
   @spec version() :: String.t
   def version do
@@ -27,6 +32,11 @@ defmodule Faker.App do
     will be appended (default: `false`)
   * `:allow_build` - when `true`, a build identifier (e.g.: `+001`)
     will be appended (default: `false`)
+
+  ## Examples
+
+      iex> Faker.App.semver()
+      #=> "0.1.6"
   """
   @spec semver(Keyword.t) :: String.t
   def semver(opts \\ []) do
@@ -48,12 +58,22 @@ defmodule Faker.App do
 
   @doc """
   Returns an app name.
+
+  ## Examples
+
+      iex> Faker.App.name()
+      #=> "Fixflex"
   """
   @spec name() :: String.t
   sampler :name, ["Redhold", "Treeflex", "Trippledex", "Kanlam", "Bigtax", "Daltfresh", "Toughjoyfax", "Mat Lam Tam", "Otcom", "Tres-Zap", "Y-Solowarm", "Tresom", "Voltsillam", "Biodex", "Greenlam", "Viva", "Matsoft", "Temp", "Zoolab", "Subin", "Rank", "Job", "Stringtough", "Tin", "It", "Home Ing", "Zamit", "Sonsing", "Konklab", "Alpha", "Latlux", "Voyatouch", "Alphazap", "Holdlamis", "Zaam-Dox", "Sub-Ex", "Quo Lux", "Bamity", "Ventosanzap", "Lotstring", "Hatity", "Tempsoft", "Overhold", "Fixflex", "Konklux", "Zontrax", "Tampflex", "Span", "Namfix", "Transcof", "Stim", "Fix San", "Sonair", "Stronghold", "Fintone", "Y-find", "Opela", "Lotlux", "Ronstring", "Zathin", "Duobam", "Keylex"]
 
   @doc """
   Returns an author name.
+
+  ## Examples
+
+      iex> Faker.App.author()
+      #=> "Angie Graham IV"
   """
   @spec author() :: String.t
   def author, do: author(Faker.random_between(0, 1))

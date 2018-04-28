@@ -7,6 +7,11 @@ defmodule Faker.Avatar do
 
   @doc """
   Return avatar url with random set and background.
+
+  ## Examples
+
+      iex> Faker.Avatar.image_url()
+      #=> "http://robohash.org/set_set3/bgset_bg2/qw6c1iLy6JM"
   """
   @spec image_url() :: String.t
   def image_url do
@@ -15,6 +20,11 @@ defmodule Faker.Avatar do
 
   @doc """
   Return avatar url for given `slug`.
+
+  ## Examples
+
+      iex> Faker.Avatar.image_url('a-simple-slug')
+      #=> "http://robohash.org/a-simple-slug"
   """
   @spec image_url(binary) :: String.t
   def image_url(slug) do
@@ -24,6 +34,11 @@ defmodule Faker.Avatar do
   @doc """
   Return avatar url with random set and background, with size `width` x `height`
   pixels.
+
+  ## Examples
+
+      iex> Faker.Avatar.image_url(200, 200)
+      #=> "http://robohash.org/set_set1/bgset_bg2/4sA8?size=200x200"
   """
   @spec image_url(integer, integer) :: String.t
   def image_url(width, height)
@@ -34,6 +49,11 @@ defmodule Faker.Avatar do
 
   @doc """
   Return avatar url for given `slug`, with size `width` x `height` pixels.
+
+  ## Examples
+
+      iex> Faker.Avatar.image_url('a-simple-slug', 200, 200)
+      #=> "http://robohash.org/a-simple-slug?size=200x200"
   """
   @spec image_url(binary, integer, integer) :: String.t
   def image_url(slug, width, height)
