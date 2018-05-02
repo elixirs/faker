@@ -94,6 +94,7 @@ defmodule Faker.Address do
       iex> Faker.Address.geohash()
       #=> "00q599mndtt20t"
   """
+  @spec geohash() :: binary
   def geohash do
     bits = encode_to_bits(latitude(), longitude(), Faker.random_between(5, 25) * 5)
 
