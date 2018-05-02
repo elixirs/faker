@@ -12,6 +12,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 * `Faker.UUID` [[@anthonator][]]
 * mix format config file [[@igas][]]
+* `Faker.Address.geohash/0` [[@anthonator][]][[@feyl][]]
 
 ### Changed
 
