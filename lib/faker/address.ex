@@ -3,6 +3,8 @@ defmodule Faker.Address do
 
   alias Faker.Name
 
+  @geobase32 '0123456789bcdefghjkmnpqrstuvwxyz'
+
   @moduledoc """
   Functions for generating addresses.
   """
@@ -83,6 +85,46 @@ defmodule Faker.Address do
   """
   @spec country_code() :: String.t
   sampler :country_code, ["AD", "AE", "AF", "AG", "AI", "AL", "AM", "AO", "AQ", "AR", "AS", "AT", "AU", "AW", "AX", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BL", "BM", "BN", "BO", "BQ", "BQ", "BR", "BS", "BT", "BV", "BW", "BY", "BZ", "CA", "CC", "CD", "CF", "CG", "CH", "CI", "CK", "CL", "CM", "CN", "CO", "CR", "CU", "CV", "CW", "CX", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "EH", "ER", "ES", "ET", "FI", "FJ", "FK", "FM", "FO", "FR", "GA", "GB", "GD", "GE", "GF", "GG", "GH", "GI", "GL", "GM", "GN", "GP", "GQ", "GR", "GS", "GT", "GU", "GW", "GY", "HK", "HM", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IM", "IN", "IO", "IQ", "IR", "IS", "IT", "JE", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KP", "KR", "KW", "KY", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "LY", "MA", "MC", "MD", "ME", "MF", "MG", "MH", "MK", "ML", "MM", "MN", "MO", "MP", "MQ", "MR", "MS", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NC", "NE", "NF", "NG", "NI", "NL", "NO", "NP", "NR", "NU", "NZ", "OM", "PA", "PE", "PF", "PG", "PH", "PK", "PL", "PM", "PN", "PR", "PS", "PT", "PW", "PY", "QA", "RE", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SD", "SE", "SG", "SH", "SI", "SJ", "SK", "SL", "SM", "SN", "SO", "SR", "SS", "ST", "SV", "SX", "SY", "SZ", "TC", "TD", "TF", "TG", "TH", "TJ", "TK", "TL", "TM", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "UM", "US", "UY", "UZ", "VA", "VC", "VE", "VG", "VI", "VN", "VU", "WF", "WS", "YE", "YT", "ZA", "ZM", "ZW"]
+
+  def geohash do
+    bits = encode_to_bits(latitude(), longitude(), Faker.random_between(5, 25) * 5)
+
+    to_geobase32(bits)
+  end
+
+  defp encode_to_bits(lat, lon, bits_length) do
+    starting_position = bits_length - 1
+    lat_bits = lat_to_bits(lat, starting_position - 1) # odd bits
+    lon_bits = lon_to_bits(lon, starting_position) # even bits
+    geo_bits = lat_bits + lon_bits
+    <<geo_bits::size(bits_length)>>
+  end
+
+  defp to_geobase32(bits) do
+    chars = for << c::5 <- bits >>, do: Enum.fetch!(@geobase32, c)
+    chars |> to_string
+  end
+
+  defp lon_to_bits(lon, position) do
+    geo_to_bits(lon, position, {-180.0, 180.0})
+  end
+
+  defp lat_to_bits(lat, position) do
+    geo_to_bits(lat, position, {-90.0, 90.0})
+  end
+
+  defp geo_to_bits(_, position, _) when position < 0 do
+    0
+  end
+  defp geo_to_bits(n, position, {gmin, gmax}) do
+    mid = (gmin + gmax) / 2
+
+    if n >= mid do
+        round(:math.pow(2, position)) + geo_to_bits(n, position - 2, {mid, gmax})
+    else
+        geo_to_bits(n, position - 2, {gmin, mid})
+    end
+  end
 
   @doc """
   Return random latitude.
