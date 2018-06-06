@@ -1,8 +1,8 @@
 defmodule Faker.App do
   import Faker, only: [sampler: 2]
 
-  alias Faker.Name
   alias Faker.Company
+  alias Faker.Name
 
   @moduledoc """
   Functions for generating app specific properties.
