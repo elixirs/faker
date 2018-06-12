@@ -9,6 +9,9 @@
 - [Faker.Cat](lib/faker/cat.ex)
 - [Faker.Code](lib/faker/code.ex)
 - [Faker.Color](lib/faker/color.ex)
+- [Faker.Color.En](lib/faker/color/en.ex)
+- [Faker.Color.Es](lib/faker/color/es.ex)
+- [Faker.Color.PtBr](lib/faker/color/pt_br.ex)
 - [Faker.Commerce](lib/faker/commerce.ex)
 - [Faker.Company](lib/faker/company.ex)
 <!-- D -->
@@ -23,6 +26,9 @@
 <!-- I -->
 - [Faker.Industry](lib/faker/industry.ex)
 - [Faker.Internet](lib/faker/internet.ex)
+- [Faker.Internet.En](lib/faker/internet/en.ex)
+- [Faker.Internet.Es](lib/faker/internet/es.ex)
+- [Faker.Internet.PtBr](lib/faker/internet/pt_br.ex)
 - [Faker.Internet.UserAgent](lib/faker/internet/user_agent.ex)
 <!-- J -->
 <!-- K -->
