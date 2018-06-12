@@ -12,6 +12,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 * `Faker.UUID` [[@anthonator][]]
 * mix format config file [[@igas][]]
+* `Faker.Internet` added Spanish and Brazilian Portuguese translations [@vbrazo][]
 
 ### Changed
 
@@ -30,7 +31,6 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Added
 
-* `Faker.Internet` added Spanish and Brazilian Portuguese translations [@vbrazo][]
 * `Faker.Food` added to generate Food data [@vbrazo][]
 * New maintainer [Toby Hinloopen (@tobyhinloopen)](https://github.com/tobyhinloopen)
 * Gitter chat [room](https://gitter.im/igas/faker) [[@igas][]]
