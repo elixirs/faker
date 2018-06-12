@@ -26,21 +26,21 @@ defmodule Faker do
 
   It replaces `"#"` to random number and `"?"` to random latin letter.
   """
-  @spec format(String.t) :: String.t
+  @spec format(String.t()) :: String.t()
   def format(str) when is_binary(str) do
     format(str, "")
   end
 
-  defp format(<<"#" :: utf8, tail :: binary>>, acc) do
-    format(tail, <<acc :: binary, "#{Faker.random_between(0, 9)}">>)
+  defp format(<<"#"::utf8, tail::binary>>, acc) do
+    format(tail, <<acc::binary, "#{Faker.random_between(0, 9)}">>)
   end
 
-  defp format(<<"?" :: utf8, tail :: binary>>, acc) do
-    format(tail, <<acc :: binary, letter()>>)
+  defp format(<<"?"::utf8, tail::binary>>, acc) do
+    format(tail, <<acc::binary, letter()>>)
   end
 
-  defp format(<<other :: utf8, tail :: binary>>, acc) do
-    format(tail, <<acc :: binary, other>>)
+  defp format(<<other::utf8, tail::binary>>, acc) do
+    format(tail, <<acc::binary, other>>)
   end
 
   defp format("", acc) do
@@ -55,9 +55,9 @@ defmodule Faker do
   @doc """
   Returns application locale ready for module constract.
   """
-  @spec mlocale() :: String.t
+  @spec mlocale() :: String.t()
   def mlocale do
-    String.capitalize(to_string(Faker.locale))
+    String.capitalize(to_string(Faker.locale()))
   end
 
   @doc """
@@ -112,7 +112,9 @@ defmodule Faker do
 
   defmacro sampler(name, data) do
     count = Enum.count(data)
-    mapped_data = data |> Enum.with_index |> Enum.into(%{}, fn({k, v}) -> {v, k} end) |> Macro.escape()
+
+    mapped_data =
+      data |> Enum.with_index() |> Enum.into(%{}, fn {k, v} -> {v, k} end) |> Macro.escape()
 
     quote do
       def unquote(name)() do
@@ -124,7 +126,9 @@ defmodule Faker do
 
   defmacro samplerp(name, data) do
     count = Enum.count(data)
-    mapped_data = data |> Enum.with_index |> Enum.into(%{}, fn({k, v}) -> {v, k} end) |> Macro.escape()
+
+    mapped_data =
+      data |> Enum.with_index() |> Enum.into(%{}, fn {k, v} -> {v, k} end) |> Macro.escape()
 
     quote do
       defp unquote(name)() do

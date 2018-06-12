@@ -28,6 +28,8 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Fixed
 
+* `Faker.App.semver/0` is not generating invalid versions anymore fixed by [[@igas][]] found by [[@ConnorRigby][]]
+
 ### Security
 
 ## 0.10.0
@@ -264,6 +266,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 [@bcat-eu]: https://github.com/bcat-eu
 [@belaustegui]: https://github.com/belaustegui
 [@cdesch]: https://github.com/cdesch
+[@ConnorRigby]: https://github.com/ConnorRigby
 [@devshane]: https://github.com/devshane
 [@efexen]: https://github.com/efexen
 [@GesJeremie]: https://github.com/GesJeremie
