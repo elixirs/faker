@@ -13,6 +13,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 * `Faker.UUID.v4/0` [[@anthonator][]]
 * mix format config file [[@igas][]]
 * `Faker.Food` to generate Food data [@vbrazo][]
+* `Faker.Address.geohash/0` [[@anthonator][]][[@feyl][]]
 
 ### Changed
 
