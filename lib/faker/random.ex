@@ -5,6 +5,7 @@ defmodule Faker.Random do
 
   @callback random_between(integer, integer) :: integer
   @callback random_bytes(pos_integer) :: binary
+  @callback random_uniform() :: float
 
   defmacro __using__(_) do
     quote do
