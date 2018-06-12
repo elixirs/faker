@@ -22,6 +22,10 @@ defmodule AddressTest do
     assert is_binary(Faker.Address.country)
   end
 
+  test "geohash/0" do
+    assert is_binary(Faker.Address.geohash)
+  end
+
   test "latitude/0" do
     assert is_float(Faker.Address.latitude)
     assert cover?(-90, Faker.Address.latitude, 90)
