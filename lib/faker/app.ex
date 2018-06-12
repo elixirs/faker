@@ -14,13 +14,19 @@ defmodule Faker.App do
   ## Examples
 
       iex> Faker.App.version()
-      #=> "4.3"
+      "0.1.5"
+      iex> Faker.App.version()
+      "2.6.4"
+      iex> Faker.App.version()
+      "0.10"
+      iex> Faker.App.version()
+      "3.2"
   """
-  @spec version() :: String.t
+  @spec version() :: String.t()
   def version do
     ["0.#.#", "0.##", "#.##", "#.#", "#.#.#"]
     |> Enum.at(Faker.random_between(0, 4))
-    |> Faker.format
+    |> Faker.format()
   end
 
   @doc """
@@ -36,12 +42,19 @@ defmodule Faker.App do
   ## Examples
 
       iex> Faker.App.semver()
-      #=> "0.1.6"
+      "5.42.64"
+      iex> Faker.App.semver()
+      "0.2.8"
+      iex> Faker.App.semver()
+      "7.0.5"
+      iex> Faker.App.semver()
+      "5.7.0"
   """
-  @spec semver(Keyword.t) :: String.t
+  @spec semver(Keyword.t()) :: String.t()
   def semver(opts \\ []) do
     allow_pre = Keyword.get(opts, :allow_pre, false)
     allow_build = Keyword.get(opts, :allow_build, false)
+
     pre =
       ~w(dev alpha beta rc.0 rc.1)
       |> Enum.at(Faker.random_between(0, 4))
@@ -53,8 +66,28 @@ defmodule Faker.App do
 
     formats
     |> Enum.at(Faker.random_between(0, length(formats) - 1))
-    |> Faker.format
+    |> Faker.format()
+    |> semver_reformat_bad_luck()
   end
+
+  defp semver_reformat_bad_luck(<<"0.0", rest::binary>>) do
+    semver_reformat_bad_luck(<<"0.#{Faker.random_between(1, 9)}", rest::binary>>)
+  end
+
+  defp semver_reformat_bad_luck(<<first::utf8, ".0", second::utf8, rest::binary>>)
+       when second !== 46 do
+    semver_reformat_bad_luck(<<first, ".#{Faker.random_between(1, 9)}", second, rest::binary>>)
+  end
+
+  defp semver_reformat_bad_luck(
+         <<first::utf8, ".", second::utf8, third::utf8, ".0", rest::binary>>
+       ) do
+    semver_reformat_bad_luck(
+      <<first, ".", second, third, ".#{Faker.random_between(1, 9)}", rest::binary>>
+    )
+  end
+
+  defp semver_reformat_bad_luck(version), do: version
 
   @doc """
   Returns an app name.
@@ -62,10 +95,75 @@ defmodule Faker.App do
   ## Examples
 
       iex> Faker.App.name()
-      #=> "Fixflex"
+      "Redhold"
+      iex> Faker.App.name()
+      "Tempsoft"
   """
-  @spec name() :: String.t
-  sampler :name, ["Redhold", "Treeflex", "Trippledex", "Kanlam", "Bigtax", "Daltfresh", "Toughjoyfax", "Mat Lam Tam", "Otcom", "Tres-Zap", "Y-Solowarm", "Tresom", "Voltsillam", "Biodex", "Greenlam", "Viva", "Matsoft", "Temp", "Zoolab", "Subin", "Rank", "Job", "Stringtough", "Tin", "It", "Home Ing", "Zamit", "Sonsing", "Konklab", "Alpha", "Latlux", "Voyatouch", "Alphazap", "Holdlamis", "Zaam-Dox", "Sub-Ex", "Quo Lux", "Bamity", "Ventosanzap", "Lotstring", "Hatity", "Tempsoft", "Overhold", "Fixflex", "Konklux", "Zontrax", "Tampflex", "Span", "Namfix", "Transcof", "Stim", "Fix San", "Sonair", "Stronghold", "Fintone", "Y-find", "Opela", "Lotlux", "Ronstring", "Zathin", "Duobam", "Keylex"]
+  @spec name() :: String.t()
+  sampler(:name, [
+    "Redhold",
+    "Treeflex",
+    "Trippledex",
+    "Kanlam",
+    "Bigtax",
+    "Daltfresh",
+    "Toughjoyfax",
+    "Mat Lam Tam",
+    "Otcom",
+    "Tres-Zap",
+    "Y-Solowarm",
+    "Tresom",
+    "Voltsillam",
+    "Biodex",
+    "Greenlam",
+    "Viva",
+    "Matsoft",
+    "Temp",
+    "Zoolab",
+    "Subin",
+    "Rank",
+    "Job",
+    "Stringtough",
+    "Tin",
+    "It",
+    "Home Ing",
+    "Zamit",
+    "Sonsing",
+    "Konklab",
+    "Alpha",
+    "Latlux",
+    "Voyatouch",
+    "Alphazap",
+    "Holdlamis",
+    "Zaam-Dox",
+    "Sub-Ex",
+    "Quo Lux",
+    "Bamity",
+    "Ventosanzap",
+    "Lotstring",
+    "Hatity",
+    "Tempsoft",
+    "Overhold",
+    "Fixflex",
+    "Konklux",
+    "Zontrax",
+    "Tampflex",
+    "Span",
+    "Namfix",
+    "Transcof",
+    "Stim",
+    "Fix San",
+    "Sonair",
+    "Stronghold",
+    "Fintone",
+    "Y-find",
+    "Opela",
+    "Lotlux",
+    "Ronstring",
+    "Zathin",
+    "Duobam",
+    "Keylex"
+  ])
 
   @doc """
   Returns an author name.
@@ -73,11 +171,13 @@ defmodule Faker.App do
   ## Examples
 
       iex> Faker.App.author()
-      #=> "Angie Graham IV"
+      "Mr. Ozella Sipes"
+      iex> Faker.App.author()
+      "Aniya Schiller"
   """
-  @spec author() :: String.t
+  @spec author() :: String.t()
   def author, do: author(Faker.random_between(0, 1))
 
-  defp author(0), do: Name.name
-  defp author(1), do: Company.name
+  defp author(0), do: Name.name()
+  defp author(1), do: Company.name()
 end
