@@ -13,6 +13,8 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 * `Faker.UUID` [[@anthonator][]]
 * mix format config file [[@igas][]]
 * `Faker.Color.En`, `Faker.Color.Es` and `Faker.Color.PtBr` [@vbrazo][]
+* `Faker.Internet` added Spanish and Brazilian Portuguese translations [@vbrazo][]
+* `Faker.Address.geohash/0` [[@anthonator][]][[@feyl][]]
 
 ### Changed
 

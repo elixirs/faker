@@ -26,6 +26,9 @@
 <!-- I -->
 - [Faker.Industry](lib/faker/industry.ex)
 - [Faker.Internet](lib/faker/internet.ex)
+- [Faker.Internet.En](lib/faker/internet/en.ex)
+- [Faker.Internet.Es](lib/faker/internet/es.ex)
+- [Faker.Internet.PtBr](lib/faker/internet/pt_br.ex)
 - [Faker.Internet.UserAgent](lib/faker/internet/user_agent.ex)
 <!-- J -->
 <!-- K -->
