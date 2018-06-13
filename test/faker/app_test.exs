@@ -1,10 +1,17 @@
 defmodule AppTest do
   use ExUnit.Case, async: true
+
+  import Faker.App
+
   doctest Faker.App
 
+  @iterations 10_000
+
   test "semver/0" do
-    Enum.each(0..10_000, fn _ ->
-      assert {:ok, %Version{}} = Version.parse(Faker.App.semver())
+    Stream.repeatedly(&semver/0)
+    |> Enum.take(@iterations)
+    |> Enum.each(fn generated_value ->
+      assert {:ok, %Version{}} = Version.parse(generated_value)
     end)
   end
 end

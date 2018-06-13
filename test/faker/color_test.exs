@@ -1,25 +1,28 @@
 defmodule Faker.ColorTest do
   use ExUnit.Case, async: true
+
   import Faker.Color
 
+  doctest Faker.Color
+
+  @iterations 10_000
+
   test "rgb_decimal/0" do
-    assert tuple_size(rgb_decimal()) == 3
-    0..100 |> Enum.each(fn(_) ->
-      assert rgb_decimal() |> Tuple.to_list |> Enum.all?(&(&1 >= 0))
-      assert rgb_decimal() |> Tuple.to_list |> Enum.all?(&(&1 <= 255))
+    Stream.repeatedly(&rgb_decimal/0)
+    |> Enum.take(@iterations)
+    |> Enum.each(fn generated_value ->
+      assert tuple_size(generated_value) == 3
+      assert generated_value |> Tuple.to_list() |> Enum.all?(&(&1 >= 0))
+      assert generated_value |> Tuple.to_list() |> Enum.all?(&(&1 <= 255))
     end)
   end
 
   test "rgb_hex/0" do
-    assert String.length(rgb_hex()) == 6
-    assert Regex.match?(~r/^[0-9A-F]{6}$/, rgb_hex())
-  end
-
-  test "name/0" do
-    assert is_binary(name())
-  end
-
-  test "fancy_name/0" do
-    assert is_binary(fancy_name())
+    Stream.repeatedly(&rgb_hex/0)
+    |> Enum.take(@iterations)
+    |> Enum.each(fn generated_value ->
+      assert String.length(generated_value) == 6
+      assert Regex.match?(~r/^[0-9A-F]{6}$/, generated_value)
+    end)
   end
 end
