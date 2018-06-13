@@ -39,6 +39,8 @@
 <!-- N -->
 - [Faker.NaiveDateTime](lib/faker/nativedatetime.ex)
 - [Faker.Name](lib/faker/name.ex)
+- [Faker.Name.Es](lib/faker/name.ex)
+- [Faker.Name.PtBr](lib/faker/name.ex)
 - [Faker.Nato](lib/faker/nato.ex)
 <!-- O -->
 <!-- P -->
