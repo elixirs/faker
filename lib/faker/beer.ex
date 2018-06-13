@@ -9,11 +9,17 @@ defmodule Faker.Beer do
   ## Examples
 
       iex> Faker.Beer.name()
-      #=> "Hercules Double IPA"
+      "Duvel"
+      iex> Faker.Beer.name()
+      "Founders Kentucky Breakfast"
+      iex> Faker.Beer.name()
+      "Yeti Imperial Stout"
+      iex> Faker.Beer.name()
+      "Stone Imperial Russian Stout"
   """
-  @spec name() :: String.t
+  @spec name() :: String.t()
   def name do
-    Module.concat(__MODULE__, Faker.mlocale).name
+    Module.concat(__MODULE__, Faker.mlocale()).name
   end
 
   @doc """
@@ -22,11 +28,17 @@ defmodule Faker.Beer do
   ## Examples
 
       iex> Faker.Beer.hop()
-      #=> "Equinox"
+      "Eroica"
+      iex> Faker.Beer.hop()
+      "Bullion"
+      iex> Faker.Beer.hop()
+      "Mt. Rainier"
+      iex> Faker.Beer.hop()
+      "Citra"
   """
-  @spec hop() :: String.t
+  @spec hop() :: String.t()
   def hop do
-    Module.concat(__MODULE__, Faker.mlocale).hop
+    Module.concat(__MODULE__, Faker.mlocale()).hop
   end
 
   @doc """
@@ -35,11 +47,17 @@ defmodule Faker.Beer do
   ## Examples
 
       iex> Faker.Beer.yeast()
-      #=> "2278 - Czech Pils"
+      "2206 - Bavarian Lager"
+      iex> Faker.Beer.yeast()
+      "3763 - Roeselare Ale Blend"
+      iex> Faker.Beer.yeast()
+      "3711 - French Saison"
+      iex> Faker.Beer.yeast()
+      "3944 - Belgian Witbier"
   """
-  @spec yeast() :: String.t
+  @spec yeast() :: String.t()
   def yeast do
-    Module.concat(__MODULE__, Faker.mlocale).yeast
+    Module.concat(__MODULE__, Faker.mlocale()).yeast
   end
 
   @doc """
@@ -48,11 +66,17 @@ defmodule Faker.Beer do
   ## Examples
 
       iex> Faker.Beer.malt()
-      #=> "Rye malt"
+      "Carapils"
+      iex> Faker.Beer.malt()
+      "Pale"
+      iex> Faker.Beer.malt()
+      "Rye malt"
+      iex> Faker.Beer.malt()
+      "Munich"
   """
-  @spec malt() :: String.t
+  @spec malt() :: String.t()
   def malt do
-    Module.concat(__MODULE__, Faker.mlocale).malt
+    Module.concat(__MODULE__, Faker.mlocale()).malt
   end
 
   @doc """
@@ -61,11 +85,17 @@ defmodule Faker.Beer do
   ## Examples
 
       iex> Faker.Beer.style()
-      #=> "Belgian Strong Ale"
+      "Stout"
+      iex> Faker.Beer.style()
+      "European Amber Lager"
+      iex> Faker.Beer.style()
+      "Strong Ale"
+      iex> Faker.Beer.style()
+      "German Wheat And Rye Beer"
   """
-  @spec style() :: String.t
+  @spec style() :: String.t()
   def style do
-    Module.concat(__MODULE__, Faker.mlocale).style
+    Module.concat(__MODULE__, Faker.mlocale()).style
   end
 
   @doc """
@@ -74,9 +104,15 @@ defmodule Faker.Beer do
   ## Examples
 
       iex> Faker.Beer.ibu()
-      #=> "40 IBU"
+      "59 IBU"
+      iex> Faker.Beer.ibu()
+      "10 IBU"
+      iex> Faker.Beer.ibu()
+      "56 IBU"
+      iex> Faker.Beer.ibu()
+      "85 IBU"
   """
-  @spec ibu :: String.t
+  @spec ibu :: String.t()
   def ibu do
     "#{Faker.random_between(5, 120)} IBU"
   end
@@ -87,9 +123,15 @@ defmodule Faker.Beer do
   ## Examples
 
       iex> Faker.Beer.alcohol()
-      #=> "6.3%"
+      "10.1%"
+      iex> Faker.Beer.alcohol()
+      "35.4%"
+      iex> Faker.Beer.alcohol()
+      "92.6%"
+      iex> Faker.Beer.alcohol()
+      "64.6%"
   """
-  @spec alcohol :: String.t
+  @spec alcohol :: String.t()
   def alcohol do
     random_float() <> "%"
   end
@@ -100,9 +142,15 @@ defmodule Faker.Beer do
   ## Examples
 
       iex> Faker.Beer.blg()
-      #=> "18.5°Blg"
+      "10.1°Blg"
+      iex> Faker.Beer.blg()
+      "35.4°Blg"
+      iex> Faker.Beer.blg()
+      "92.6°Blg"
+      iex> Faker.Beer.blg()
+      "64.6°Blg"
   """
-  @spec blg :: String.t
+  @spec blg :: String.t()
   def blg do
     random_float() <> "°Blg"
   end

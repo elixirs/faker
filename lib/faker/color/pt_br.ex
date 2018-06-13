@@ -8,16 +8,16 @@ defmodule Faker.Color.PtBr do
   @doc """
   Returns a random brazilian portuguese color name
 
-    ## Examples
+  ## Examples
 
-        iex> Faker.Color.PtBr.name()
-        "Vermelho"
-        iex> Faker.Color.PtBr.name()
-        "Verde"
-        iex> Faker.Color.PtBr.name()
-        "Marrom"
-        iex> Faker.Color.PtBr.name()
-        "Rosa"
+      iex> Faker.Color.PtBr.name()
+      "Vermelho"
+      iex> Faker.Color.PtBr.name()
+      "Verde"
+      iex> Faker.Color.PtBr.name()
+      "Marrom"
+      iex> Faker.Color.PtBr.name()
+      "Rosa"
   """
   @spec name() :: String.t()
   sampler(:name, [
