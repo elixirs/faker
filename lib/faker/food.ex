@@ -14,7 +14,6 @@ defmodule Faker.Food do
       "Fish and chips"
       iex> Faker.Food.dish()
       "Pork belly buns"
-
   """
   @spec dish() :: String.t()
   def dish do

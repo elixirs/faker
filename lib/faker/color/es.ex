@@ -8,16 +8,16 @@ defmodule Faker.Color.Es do
   @doc """
   Returns a random spanish color name
 
-    ## Examples
+  ## Examples
 
-        iex> Faker.Color.Es.name()
-        "Rojo"
-        iex> Faker.Color.Es.name()
-        "Verde"
-        iex> Faker.Color.Es.name()
-        "Marrón"
-        iex> Faker.Color.Es.name()
-        "Rosa"
+      iex> Faker.Color.Es.name()
+      "Rojo"
+      iex> Faker.Color.Es.name()
+      "Verde"
+      iex> Faker.Color.Es.name()
+      "Marrón"
+      iex> Faker.Color.Es.name()
+      "Rosa"
   """
   @spec name() :: String.t()
   sampler(:name, [

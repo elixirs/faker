@@ -270,6 +270,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 [@ConnorRigby]: https://github.com/ConnorRigby
 [@devshane]: https://github.com/devshane
 [@efexen]: https://github.com/efexen
+[@feyl]: https://github.com/feyl
 [@GesJeremie]: https://github.com/GesJeremie
 [@halfdan]: https://github.com/halfdan
 [@igas]: https://github.com/igas
