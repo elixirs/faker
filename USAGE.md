@@ -1,5 +1,6 @@
 <!-- A -->
 - [Faker.Address](lib/faker/address.ex)
+- [Faker.Address.Es](lib/faker/address/es.ex)
 - [Faker.App](lib/faker/app.ex)
 - [Faker.Avatar](lib/faker/avatar.ex)
 <!-- B -->
