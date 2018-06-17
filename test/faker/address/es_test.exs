@@ -78,7 +78,7 @@ defmodule Faker.Address.EsTest do
   end
 
   test "country_code/0" do
-    assert is_binary(Faker.Address.country_code)
+    assert is_binary(Faker.Address.Es.country_code)
     assert String.length(Faker.Address.Es.country_code) == 2
   end
 
