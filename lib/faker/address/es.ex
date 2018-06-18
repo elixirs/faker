@@ -408,23 +408,6 @@ defmodule Faker.Address.Es do
   sampler(:country_code, ["ES"])
 
   @doc """
-  Return random postcode.
-
-  ## Examples
-
-      iex> Faker.Address.Es.postcode()
-      "01542"
-      iex> Faker.Address.Es.postcode()
-      "64610"
-      iex> Faker.Address.Es.postcode()
-      "83297"
-      iex> Faker.Address.Es.postcode()
-      "05235"
-  """
-  @spec postcode() :: String.t()
-  defdelegate postcode, to: __MODULE__, as: :zip_code
-
-  @doc """
   Return random secondary address.
 
     ## Examples
@@ -522,11 +505,11 @@ defmodule Faker.Address.Es do
       iex> Faker.Address.Es.street_address()
       "Elizabeth Mercado 26"
       iex> Faker.Address.Es.street_address()
-      "Aniya Senda s/n."
+      "Padberg Senda s/n."
       iex> Faker.Address.Es.street_address()
-      "Frederique Rambla 70"
+      "Ryan Enrique Sector , 05"
       iex> Faker.Address.Es.street_address()
-      "Crooks Manzana s/n."
+      "Price Colonia , 02"
   """
   @spec street_address() :: String.t()
   def street_address do
@@ -541,7 +524,7 @@ defmodule Faker.Address.Es do
       iex> Faker.Address.Es.street_address(true)
       "Elizabeth Mercado 26 Esc. 610"
       iex> Faker.Address.Es.street_address(false)
-      "Frederique Rambla 70"
+      "Ryan Enrique Sector , 05"
   """
   @spec street_address(true | any) :: String.t()
   def street_address(true), do: street_address() <> " " <> secondary_address()
@@ -555,19 +538,20 @@ defmodule Faker.Address.Es do
       iex> Faker.Address.Es.street_name()
       "Elizabeth Mercado"
       iex> Faker.Address.Es.street_name()
-      "Reese Conjunto"
+      "Sipes Trycia Colegio"
       iex> Faker.Address.Es.street_name()
-      "Aniya Senda"
+      "Schiller Delphine Chalet"
       iex> Faker.Address.Es.street_name()
-      "Bianka Arroyo"
+      "Murphy Sector"
   """
   @spec street_name() :: String.t()
   def street_name do
-    street_name(Faker.random_between(0, 1))
+    street_name(Faker.random_between(0, 2))
   end
 
   defp street_name(0), do: "#{Name.first_name()} #{street_suffix()}"
   defp street_name(1), do: "#{Name.last_name()} #{street_suffix()}"
+  defp street_name(2), do: "#{Name.last_name()} #{Name.first_name()} #{street_suffix()}"
 
   @doc """
   Return street suffix.
@@ -799,23 +783,6 @@ defmodule Faker.Address.Es do
     "Pacífico/Fakaofo",
     "Pacífico/Apia"
   ])
-
-  @doc """
-  Return random postcode.
-
-    ## Examples
-
-      iex> Faker.Address.Es.zip()
-      "01542"
-      iex> Faker.Address.Es.zip()
-      "64610"
-      iex> Faker.Address.Es.zip()
-      "83297"
-      iex> Faker.Address.Es.zip()
-      "05235"
-  """
-  @spec zip() :: String.t()
-  defdelegate zip, to: __MODULE__, as: :zip_code
 
   @doc """
   Return random postcode.

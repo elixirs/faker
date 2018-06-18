@@ -1,6 +1,9 @@
 defmodule AddressTest do
   use ExUnit.Case, async: true
 
+  doctest Faker.Address.En
+  doctest Faker.Address.Es
+
   test "building_number/0" do
     assert is_binary(Faker.Address.building_number)
     assert String.length(Faker.Address.building_number) in 1..5
