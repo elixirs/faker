@@ -3,24 +3,44 @@ defmodule Faker.Address.Es do
 
   alias Faker.Name
 
-  @geobase32 '0123456789bcdefghjkmnpqrstuvwxyz'
-
   @moduledoc """
   Functions for generating addresses in Spanish
   """
 
   @doc """
   Return random building number.
+
+  ## Examples
+
+      iex> Faker.Address.Es.building_number()
+      "s/n."
+      iex> Faker.Address.Es.building_number()
+      ", 5"
+      iex> Faker.Address.Es.building_number()
+      "26"
+      iex> Faker.Address.Es.building_number()
+      "61"
   """
   @spec building_number() :: String.t()
   def building_number do
-    ["#####", "####", "###", "##", "#"]
+    ["s/n.", ", #", ", ##", "#", "##"]
     |> Enum.at(Faker.random_between(0, 4))
     |> Faker.format
   end
 
   @doc """
   Return city name.
+
+  ## Examples
+
+      iex> Faker.Address.Es.city()
+      "Elizabeth"
+      iex> Faker.Address.Es.city()
+      "Rolfson"
+      iex> Faker.Address.Es.city()
+      "Burgos Conor"
+      iex> Faker.Address.Es.city()
+      "Hardy"
   """
   @spec city() :: String.t()
   def city do
@@ -34,6 +54,17 @@ defmodule Faker.Address.Es do
 
   @doc """
   Return city prefix.
+
+  ## Examples
+
+      iex> Faker.Address.Es.city_prefix()
+      "Vitoria"
+      iex> Faker.Address.Es.city_prefix()
+      "Oviedo"
+      iex> Faker.Address.Es.city_prefix()
+      "Talavera de la Reina"
+      iex> Faker.Address.Es.city_prefix()
+      "Cáceres"
   """
   @spec city_prefix() :: String.t()
   sampler(:city_prefix, [
@@ -157,7 +188,8 @@ defmodule Faker.Address.Es do
     "Mataró",
     "Dos Hermanas",
     "Santa Coloma de Gramanet",
-    "Jaén, Algeciras",
+    "Jaén",
+    "Algeciras",
     "Torrejón de Ardoz",
     "Orense",
     "Alcobendas",
@@ -168,6 +200,17 @@ defmodule Faker.Address.Es do
 
   @doc """
   Return country.
+
+  ## Examples
+
+      iex> Faker.Address.Es.country()
+      "Cabo Verde"
+      iex> Faker.Address.Es.country()
+      "Malawi"
+      iex> Faker.Address.Es.country()
+      "Bielorusia"
+      iex> Faker.Address.Es.country()
+      "Mali"
   """
   @spec country() :: String.t()
   sampler(:country, [
@@ -355,78 +398,45 @@ defmodule Faker.Address.Es do
 
   @doc """
   Return country code.
+
+  ## Examples
+
+      iex> Faker.Address.Es.country_code()
+      "ES"
   """
   @spec country_code() :: String.t()
   sampler :country_code, ["ES"]
 
   @doc """
-  Returns a geohash.
-  """
-  @spec geohash() :: binary
-  def geohash do
-    bits = encode_to_bits(latitude(), longitude(), Faker.random_between(5, 25) * 5)
-
-    to_geobase32(bits)
-  end
-
-  defp encode_to_bits(lat, lon, bits_length) do
-    starting_position = bits_length - 1
-    lat_bits = lat_to_bits(lat, starting_position - 1) # odd bits
-    lon_bits = lon_to_bits(lon, starting_position) # even bits
-    geo_bits = lat_bits + lon_bits
-    <<geo_bits::size(bits_length)>>
-  end
-
-  defp to_geobase32(bits) do
-    chars = for << c::5 <- bits >>, do: Enum.fetch!(@geobase32, c)
-    chars |> to_string
-  end
-
-  defp lon_to_bits(lon, position) do
-    geo_to_bits(lon, position, {-180.0, 180.0})
-  end
-
-  defp lat_to_bits(lat, position) do
-    geo_to_bits(lat, position, {-90.0, 90.0})
-  end
-
-  defp geo_to_bits(_, position, _) when position < 0 do
-    0
-  end
-  defp geo_to_bits(n, position, {gmin, gmax}) do
-    mid = (gmin + gmax) / 2
-
-    if n >= mid do
-        round(:math.pow(2, position)) + geo_to_bits(n, position - 2, {mid, gmax})
-    else
-        geo_to_bits(n, position - 2, {gmin, mid})
-    end
-  end
-
-  @doc """
-  Return random latitude.
-  """
-  @spec latitude() :: float()
-  def latitude do
-    ((Faker.random_uniform * 180) - 90)
-  end
-
-  @doc """
-  Return random longitude.
-  """
-  @spec longitude() :: float()
-  def longitude do
-    ((Faker.random_uniform * 360) - 180)
-  end
-
-  @doc """
   Return random postcode.
+
+  ## Examples
+
+      iex> Faker.Address.Es.postcode()
+      "01542"
+      iex> Faker.Address.Es.postcode()
+      "64610"
+      iex> Faker.Address.Es.postcode()
+      "83297"
+      iex> Faker.Address.Es.postcode()
+      "05235"
   """
   @spec postcode() :: String.t()
   defdelegate postcode, to: __MODULE__, as: :zip_code
 
   @doc """
   Return random secondary address.
+
+    ## Examples
+
+      iex> Faker.Address.Es.secondary_address()
+      "Esc. 154"
+      iex> Faker.Address.Es.secondary_address()
+      "Esc. 646"
+      iex> Faker.Address.Es.secondary_address()
+      "Puerta 083"
+      iex> Faker.Address.Es.secondary_address()
+      "Esc. 970"
   """
   @spec secondary_address() :: String.t
   def secondary_address do
@@ -437,6 +447,17 @@ defmodule Faker.Address.Es do
 
   @doc """
   Return state.
+
+      ## Examples
+
+      iex> Faker.Address.Es.state()
+      "Castilla-La Mancha"
+      iex> Faker.Address.Es.state()
+      "Comunidad Valenciana"
+      iex> Faker.Address.Es.state()
+      "Galicia"
+      iex> Faker.Address.Es.state()
+      "Cataluña"
   """
   @spec state() :: String.t()
   sampler(:state, [
@@ -460,6 +481,17 @@ defmodule Faker.Address.Es do
 
   @doc """
   Return state abbr.
+
+    ## Examples
+
+      iex> Faker.Address.Es.state_abbr()
+      "Ara"
+      iex> Faker.Address.Es.state_abbr()
+      "Cbr"
+      iex> Faker.Address.Es.state_abbr()
+      "Mad"
+      iex> Faker.Address.Es.state_abbr()
+      "Gal"
   """
   @spec state_abbr() :: String.t()
   sampler(:state_abbr, [
@@ -484,6 +516,17 @@ defmodule Faker.Address.Es do
 
   @doc """
   Return street address.
+
+    ## Examples
+
+      iex> Faker.Address.Es.street_address()
+      "Elizabeth Mercado 26"
+      iex> Faker.Address.Es.street_address()
+      "Aniya Senda s/n."
+      iex> Faker.Address.Es.street_address()
+      "Frederique Rambla 70"
+      iex> Faker.Address.Es.street_address()
+      "Crooks Manzana s/n."
   """
   @spec street_address() :: String.t()
   def street_address do
@@ -492,6 +535,13 @@ defmodule Faker.Address.Es do
 
   @doc """
   Return `street_address/0` or if argument is `true` adds `secondary_address/0`.
+
+    ## Examples
+
+      iex> Faker.Address.Es.street_address(true)
+      "Elizabeth Mercado 26 Esc. 610"
+      iex> Faker.Address.Es.street_address(false)
+      "Frederique Rambla 70"
   """
   @spec street_address(true | any) :: String.t()
   def street_address(true), do: street_address() <> " " <> secondary_address()
@@ -499,6 +549,17 @@ defmodule Faker.Address.Es do
 
   @doc """
   Return street name.
+
+    ## Examples
+
+      iex> Faker.Address.Es.street_name()
+      "Elizabeth Mercado"
+      iex> Faker.Address.Es.street_name()
+      "Reese Conjunto"
+      iex> Faker.Address.Es.street_name()
+      "Aniya Senda"
+      iex> Faker.Address.Es.street_name()
+      "Bianka Arroyo"
   """
   @spec street_name() :: String.t()
   def street_name do
@@ -510,6 +571,17 @@ defmodule Faker.Address.Es do
 
   @doc """
   Return street suffix.
+
+    ## Examples
+
+      iex> Faker.Address.Es.street_suffix()
+      "Entrada"
+      iex> Faker.Address.Es.street_suffix()
+      "Ramal"
+      iex> Faker.Address.Es.street_suffix()
+      "Mercado"
+      iex> Faker.Address.Es.street_suffix()
+      "Riera"
   """
   @spec street_suffix() :: String.t()
   sampler(:street_suffix, [
@@ -587,6 +659,17 @@ defmodule Faker.Address.Es do
 
   @doc """
   Return time zone.
+
+    ## Examples
+
+      iex> Faker.Address.Es.time_zone()
+      "Australia/Sydney"
+      iex> Faker.Address.Es.time_zone()
+      "America/Guyana"
+      iex> Faker.Address.Es.time_zone()
+      "Asia/Kathmandu"
+      iex> Faker.Address.Es.time_zone()
+      "Europa/Vienna"
   """
   @spec time_zone() :: String.t()
   sampler(:time_zone, [
@@ -619,7 +702,8 @@ defmodule Faker.Address.Es do
     "America/Guyana",
     "America/Godthab",
     "Atlantic/South_Georgia",
-    "Atlantic/Azores, Atlantic/Cape_Verde",
+    "Atlantic/Azores",
+    "Atlantic/Cape_Verde",
     "Europa/Dublin",
     "Europa/Lisbon",
     "Europa/London",
@@ -718,17 +802,39 @@ defmodule Faker.Address.Es do
 
   @doc """
   Return random postcode.
+
+    ## Examples
+
+      iex> Faker.Address.Es.zip()
+      "01542"
+      iex> Faker.Address.Es.zip()
+      "64610"
+      iex> Faker.Address.Es.zip()
+      "83297"
+      iex> Faker.Address.Es.zip()
+      "05235"
   """
   @spec zip() :: String.t()
   defdelegate zip, to: __MODULE__, as: :zip_code
 
   @doc """
   Return random postcode.
+
+    ## Examples
+
+      iex> Faker.Address.Es.zip_code()
+      "01542"
+      iex> Faker.Address.Es.zip_code()
+      "64610"
+      iex> Faker.Address.Es.zip_code()
+      "83297"
+      iex> Faker.Address.Es.zip_code()
+      "05235"
   """
   @spec zip_code() :: String.t()
   def zip_code do
-    ["#####", "#####-####"]
-    |> Enum.at(Faker.random_between(0, 1))
+    ["#####"]
+    |> Enum.at(0)
     |> Faker.format
   end
 end
