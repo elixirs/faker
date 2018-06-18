@@ -4,6 +4,9 @@ defmodule Faker.ColorTest do
   import Faker.Color
 
   doctest Faker.Color
+  doctest Faker.Color.En
+  doctest Faker.Color.Es
+  doctest Faker.Color.PtBr
 
   @iterations 10_000
 
