@@ -25,7 +25,7 @@ defmodule Faker.Address.Es do
   def building_number do
     ["s/n.", ", #", ", ##", "#", "##"]
     |> Enum.at(Faker.random_between(0, 4))
-    |> Faker.format
+    |> Faker.format()
   end
 
   @doc """
@@ -47,10 +47,10 @@ defmodule Faker.Address.Es do
     city(Faker.random_between(0, 3))
   end
 
-  defp city(0), do: "#{city_prefix()} #{Name.first_name}"
-  defp city(1), do: "#{city_prefix()} #{Name.first_name}"
-  defp city(2), do: "#{Name.first_name}"
-  defp city(3), do: "#{Name.last_name}"
+  defp city(0), do: "#{city_prefix()} #{Name.first_name()}"
+  defp city(1), do: "#{city_prefix()} #{Name.first_name()}"
+  defp city(2), do: "#{Name.first_name()}"
+  defp city(3), do: "#{Name.last_name()}"
 
   @doc """
   Return city prefix.
@@ -405,7 +405,7 @@ defmodule Faker.Address.Es do
       "ES"
   """
   @spec country_code() :: String.t()
-  sampler :country_code, ["ES"]
+  sampler(:country_code, ["ES"])
 
   @doc """
   Return random postcode.
@@ -438,7 +438,7 @@ defmodule Faker.Address.Es do
       iex> Faker.Address.Es.secondary_address()
       "Esc. 970"
   """
-  @spec secondary_address() :: String.t
+  @spec secondary_address() :: String.t()
   def secondary_address do
     ["Esc. ###", "Puerta ###"]
     |> Enum.at(Faker.random_between(0, 1))
@@ -566,8 +566,8 @@ defmodule Faker.Address.Es do
     street_name(Faker.random_between(0, 1))
   end
 
-  defp street_name(0), do: "#{Name.first_name} #{street_suffix()}"
-  defp street_name(1), do: "#{Name.last_name} #{street_suffix()}"
+  defp street_name(0), do: "#{Name.first_name()} #{street_suffix()}"
+  defp street_name(1), do: "#{Name.last_name()} #{street_suffix()}"
 
   @doc """
   Return street suffix.
@@ -835,6 +835,6 @@ defmodule Faker.Address.Es do
   def zip_code do
     ["#####"]
     |> Enum.at(0)
-    |> Faker.format
+    |> Faker.format()
   end
 end
