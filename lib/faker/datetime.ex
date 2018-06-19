@@ -14,7 +14,7 @@ defmodule Faker.DateTime do
       #=>  std_offset: 0, time_zone: "Etc/UTC", utc_offset: 0, year: 2016,
       #=>  zone_abbr: "UTC"}
   """
-  @spec backward(integer) :: DateTime.t
+  @spec backward(integer) :: DateTime.t()
   def backward(days) do
     forward(-days)
   end
@@ -30,7 +30,7 @@ defmodule Faker.DateTime do
       #=>  std_offset: 0, time_zone: "Etc/UTC", utc_offset: 0, year: 2016,
       #=>  zone_abbr: "UTC"}
   """
-  @spec forward(integer) :: DateTime.t
+  @spec forward(integer) :: DateTime.t()
   def forward(days) do
     sign = if days < 0, do: -1, else: 1
 
@@ -53,33 +53,56 @@ defmodule Faker.DateTime do
       #=>  std_offset: 0, time_zone: "Etc/UTC", utc_offset: 0, year: 2016,
       #=>  zone_abbr: "UTC"}
   """
-  @spec between(Date.t | NaiveDateTime.t | DateTime.t, Date.t | NaiveDateTime.t | DateTime.t) :: DateTime.t
+  @spec between(
+          Date.t() | NaiveDateTime.t() | DateTime.t(),
+          Date.t() | NaiveDateTime.t() | DateTime.t()
+        ) :: DateTime.t()
   def between(%Date{} = from, %Date{} = to) do
     between(date_to_datetime(from), date_to_datetime(to))
   end
+
   def between(%NaiveDateTime{} = from, %NaiveDateTime{} = to) do
     between(naivedatetime_to_datetime(from), naivedatetime_to_datetime(to))
   end
+
   def between(from, to) do
     unix_between(to_timestamp(from), to_timestamp(to))
   end
 
   # private
 
-  @spec date_to_datetime(Date.t) :: DateTime.t
+  @spec date_to_datetime(Date.t()) :: DateTime.t()
   defp date_to_datetime(date) do
-    %DateTime{calendar: Calendar.ISO, day: date.day, hour: 0, minute: 0,
-              month: date.month, second: 0, time_zone: "Etc/UTC",
-              utc_offset: 0, std_offset: 0, year: date.year, zone_abbr: "UTC"}
+    %DateTime{
+      calendar: Calendar.ISO,
+      day: date.day,
+      hour: 0,
+      minute: 0,
+      month: date.month,
+      second: 0,
+      time_zone: "Etc/UTC",
+      utc_offset: 0,
+      std_offset: 0,
+      year: date.year,
+      zone_abbr: "UTC"
+    }
   end
 
-  @spec naivedatetime_to_datetime(NaiveDateTime.t) :: DateTime.t
+  @spec naivedatetime_to_datetime(NaiveDateTime.t()) :: DateTime.t()
   defp naivedatetime_to_datetime(naivedatetime) do
-    %DateTime{calendar: naivedatetime.calendar, day: naivedatetime.day,
-              hour: naivedatetime.hour, minute: naivedatetime.minute,
-              month: naivedatetime.month, second: naivedatetime.second,
-              time_zone: "Etc/UTC", utc_offset: 0, std_offset: 0,
-              year: naivedatetime.year, zone_abbr: "UTC"}
+    %DateTime{
+      calendar: naivedatetime.calendar,
+      day: naivedatetime.day,
+      hour: naivedatetime.hour,
+      minute: naivedatetime.minute,
+      month: naivedatetime.month,
+      second: naivedatetime.second,
+      time_zone: "Etc/UTC",
+      utc_offset: 0,
+      std_offset: 0,
+      year: naivedatetime.year,
+      zone_abbr: "UTC"
+    }
   end
 
   defp to_timestamp(datetime) do
