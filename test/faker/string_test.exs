@@ -1,4 +1,4 @@
-defmodule StringTest do
+defmodule Faker.StringTest do
   use ExUnit.Case, async: true
 
   test "base64/0" do

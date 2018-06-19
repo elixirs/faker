@@ -1,4 +1,4 @@
-defmodule BeerTest do
+defmodule Faker.BeerTest do
   use ExUnit.Case, async: true
 
   doctest Faker.Beer
