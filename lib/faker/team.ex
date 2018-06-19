@@ -11,9 +11,9 @@ defmodule Faker.Team do
       iex> Faker.Team.creature()
       #=> "chickens"
   """
-  @spec creature() :: String.t
+  @spec creature() :: String.t()
   def creature do
-    Module.concat(__MODULE__, Faker.mlocale).creature
+    Module.concat(__MODULE__, Faker.mlocale()).creature
   end
 
   @doc """
@@ -24,8 +24,8 @@ defmodule Faker.Team do
       iex> Faker.Team.name()
       #=> "Delaware ants"
   """
-  @spec name() :: String.t
+  @spec name() :: String.t()
   def name do
-    Module.concat(__MODULE__, Faker.mlocale).name
+    Module.concat(__MODULE__, Faker.mlocale()).name
   end
 end

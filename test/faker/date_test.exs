@@ -1,4 +1,4 @@
-defmodule DateTest do
+defmodule Faker.DateTest do
   use ExUnit.Case, async: true
 
   test "date_of_birth/0" do

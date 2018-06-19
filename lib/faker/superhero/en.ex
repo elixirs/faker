@@ -8,7 +8,7 @@ defmodule Faker.Superhero.En do
   @doc """
   Returns a Superhero name
   """
-  @spec name() :: String.t
+  @spec name() :: String.t()
   def name, do: name(Faker.random_between(0, 9))
   defp name(0), do: "#{prefix()} #{descriptor()} #{suffix()}"
   defp name(1), do: "#{prefix()} #{descriptor()}"

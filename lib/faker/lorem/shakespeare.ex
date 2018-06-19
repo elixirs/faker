@@ -11,9 +11,9 @@ defmodule Faker.Lorem.Shakespeare do
       iex> Faker.Lorem.Shakespeare.hamlet()
       #=> "And it must follow, as the night the day, thou canst not then be false to any man."
   """
-  @spec hamlet() :: String.t
+  @spec hamlet() :: String.t()
   def hamlet do
-    Module.concat(__MODULE__, Faker.mlocale).hamlet
+    Module.concat(__MODULE__, Faker.mlocale()).hamlet
   end
 
   @doc """
@@ -24,9 +24,9 @@ defmodule Faker.Lorem.Shakespeare do
       iex> Faker.Lorem.Shakespeare.as_you_like_it()
       #=> "How bitter a thing it is to look into happiness through another man's eyes!"
   """
-  @spec as_you_like_it() :: String.t
+  @spec as_you_like_it() :: String.t()
   def as_you_like_it do
-    Module.concat(__MODULE__, Faker.mlocale).as_you_like_it
+    Module.concat(__MODULE__, Faker.mlocale()).as_you_like_it
   end
 
   @doc """
@@ -37,9 +37,9 @@ defmodule Faker.Lorem.Shakespeare do
       iex> Faker.Lorem.Shakespeare.king_richard_iii()
       #=> "Now is the winter of our discontent."
   """
-  @spec king_richard_iii() :: String.t
+  @spec king_richard_iii() :: String.t()
   def king_richard_iii do
-    Module.concat(__MODULE__, Faker.mlocale).king_richard_iii
+    Module.concat(__MODULE__, Faker.mlocale()).king_richard_iii
   end
 
   @doc """
@@ -50,8 +50,8 @@ defmodule Faker.Lorem.Shakespeare do
       iex> Faker.Lorem.Shakespeare.romeo_and_juliet()
       #=> "O! she doth teach the torches to burn bright."
   """
-  @spec romeo_and_juliet() :: String.t
+  @spec romeo_and_juliet() :: String.t()
   def romeo_and_juliet do
-    Module.concat(__MODULE__, Faker.mlocale).romeo_and_juliet
+    Module.concat(__MODULE__, Faker.mlocale()).romeo_and_juliet
   end
 end
