@@ -1,34 +1,49 @@
 defmodule Gov.UsTest do
   use ExUnit.Case, async: true
+
   import Faker.Gov.Us
 
-  defp repeat_test(fun) do
-    for _ <- 1..100, do: fun.()
-  end
+  doctest Faker.Gov.Us
 
-  test "ssn/0", do: assert is_binary(ssn())
+  @iterations 10_000
 
   test "ssn is a valid length" do
-    repeat_test fn ->
-      assert String.length(ssn()) == 11
-    end
+    Stream.repeatedly(&ssn/0)
+    |> Enum.take(@iterations)
+    |> Enum.each(fn generated_value ->
+      assert 11 = String.length(generated_value)
+    end)
+  end
+
+  test "snn does not contain 900-999 in area" do
+    Stream.repeatedly(&ssn/0)
+    |> Enum.take(@iterations)
+    |> Enum.each(fn <<area::binary-size(3), _::binary>> ->
+      refute String.to_integer(area) in 900..999
+    end)
   end
 
   test "snn does not contain 666 in area" do
-    repeat_test fn ->
-      refute String.contains?(ssn(), "666-")
-    end
+    Stream.repeatedly(&ssn/0)
+    |> Enum.take(@iterations)
+    |> Enum.each(fn generated_value ->
+      refute String.contains?(generated_value, "666-")
+    end)
   end
 
   test "snn does not contain 00 in group" do
-    repeat_test fn ->
-      refute String.contains?(ssn(), "-00-")
-    end
+    Stream.repeatedly(&ssn/0)
+    |> Enum.take(@iterations)
+    |> Enum.each(fn generated_value ->
+      refute String.contains?(generated_value, "-00-")
+    end)
   end
 
   test "snn does not contain 0000 in serial" do
-    repeat_test fn ->
-      refute String.contains?(ssn(), "-0000")
-    end
+    Stream.repeatedly(&ssn/0)
+    |> Enum.take(@iterations)
+    |> Enum.each(fn generated_value ->
+      refute String.contains?(generated_value, "-0000")
+    end)
   end
 end
