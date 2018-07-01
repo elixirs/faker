@@ -11,7 +11,7 @@ defmodule Faker.String do
       iex> Faker.String.base64()
       #=> "JfuzivfU"
   """
-  @spec base64(integer) :: String.t
+  @spec base64(integer) :: String.t()
   def base64(length \\ 8) do
     length
     |> Faker.random_bytes()

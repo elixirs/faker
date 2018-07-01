@@ -13,7 +13,7 @@ defmodule Faker.Util.En do
   """
   @spec digit() :: binary
   def digit do
-    pick @digit
+    pick(@digit)
   end
 
   @doc """
@@ -21,7 +21,7 @@ defmodule Faker.Util.En do
   """
   @spec letter() :: binary
   def letter do
-    pick @alphabet
+    pick(@alphabet)
   end
 
   @doc """
@@ -29,7 +29,7 @@ defmodule Faker.Util.En do
   """
   @spec lower_letter() :: binary
   def lower_letter do
-    pick @lowercase_alphabet
+    pick(@lowercase_alphabet)
   end
 
   @doc """
@@ -37,7 +37,7 @@ defmodule Faker.Util.En do
   """
   @spec upper_letter() :: binary
   def upper_letter do
-    pick @uppercase_alphabet
+    pick(@uppercase_alphabet)
   end
 
   @doc """

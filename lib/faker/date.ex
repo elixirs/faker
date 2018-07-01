@@ -68,7 +68,7 @@ defmodule Faker.Date do
       iex> Faker.Date.backward(4)
       #=> ~D[2016-12-20]
   """
-  @spec backward(integer) :: Date.t
+  @spec backward(integer) :: Date.t()
   def backward(days) do
     forward(-days)
   end
@@ -81,11 +81,11 @@ defmodule Faker.Date do
       iex> Faker.Date.forward(4)
       #=> ~D[2016-12-25]
   """
-  @spec forward(integer) :: Date.t
+  @spec forward(integer) :: Date.t()
   def forward(days) do
     days
     |> Faker.DateTime.forward()
-    |> DateTime.to_date
+    |> DateTime.to_date()
   end
 
   @doc """
@@ -96,10 +96,10 @@ defmodule Faker.Date do
       iex> Faker.Date.between(~D[2016-12-20], ~D[2016-12-25])
       #=> ~D[2016-12-23]
   """
-  @spec between(Date.t, Date.t) :: Date.t
+  @spec between(Date.t(), Date.t()) :: Date.t()
   def between(from, to) do
     from
     |> Faker.DateTime.between(to)
-    |> DateTime.to_date
+    |> DateTime.to_date()
   end
 end

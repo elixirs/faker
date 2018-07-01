@@ -15,7 +15,7 @@ defmodule Faker.Internet do
       iex> Faker.Internet.domain_name()
       #=> "tremblay.org"
   """
-  @spec domain_name() :: String.t
+  @spec domain_name() :: String.t()
   def domain_name do
     "#{domain_word()}.#{domain_suffix()}"
   end
@@ -28,9 +28,9 @@ defmodule Faker.Internet do
       iex> Faker.Internet.domain_suffix()
       #=> "info"
   """
-  @spec domain_suffix() :: String.t
+  @spec domain_suffix() :: String.t()
   def domain_suffix do
-    Module.concat(__MODULE__, Faker.mlocale).domain_suffix
+    Module.concat(__MODULE__, Faker.mlocale()).domain_suffix
   end
 
   @doc """
@@ -41,11 +41,13 @@ defmodule Faker.Internet do
       iex> Faker.Internet.user_name()
       #=> "dee.bert"
   """
-  @spec user_name() :: String.t
+  @spec user_name() :: String.t()
   def user_name, do: user_name(Faker.random_between(0, 1))
 
   defp user_name(0) do
-    "#{Name.first_name() |> String.replace(~s(  ), ~s()) |> String.downcase()}#{Faker.random_between(1900, 2100)}"
+    "#{Name.first_name() |> String.replace(~s(  ), ~s()) |> String.downcase()}#{
+      Faker.random_between(1900, 2100)
+    }"
   end
 
   defp user_name(1) do
@@ -62,9 +64,9 @@ defmodule Faker.Internet do
       iex> Faker.Internet.domain_word()
       #=> "gerhold"
   """
-  @spec domain_word() :: String.t
+  @spec domain_word() :: String.t()
   def domain_word do
-    "#{Name.last_name |> String.split(["'"]) |> Enum.join |> String.downcase}"
+    "#{Name.last_name() |> String.split(["'"]) |> Enum.join() |> String.downcase()}"
   end
 
   @doc """
@@ -75,7 +77,7 @@ defmodule Faker.Internet do
       iex> Faker.Internet.email()
       #=> "tavares1993@oconner.biz"
   """
-  @spec email() :: String.t
+  @spec email() :: String.t()
   def email do
     "#{user_name()}@#{domain_name()}"
   end
@@ -88,7 +90,7 @@ defmodule Faker.Internet do
       iex> Faker.Internet.free_email()
       #=> "monroe.schaefer@yahoo.com"
   """
-  @spec free_email() :: String.t
+  @spec free_email() :: String.t()
   def free_email do
     "#{user_name()}@#{free_email_service()}"
   end
@@ -101,7 +103,7 @@ defmodule Faker.Internet do
       iex> Faker.Internet.safe_email()
       #=> "arvel1966@example.org"
   """
-  @spec safe_email() :: String.t
+  @spec safe_email() :: String.t()
   def safe_email do
     "#{user_name()}@example.#{Util.pick(~w(org com net))}"
   end
@@ -114,9 +116,9 @@ defmodule Faker.Internet do
       iex> Faker.Internet.free_email_service()
       #=> "yahoo.com"
   """
-  @spec free_email_service() :: String.t
+  @spec free_email_service() :: String.t()
   def free_email_service do
-    Module.concat(__MODULE__, Faker.mlocale).free_email_service
+    Module.concat(__MODULE__, Faker.mlocale()).free_email_service
   end
 
   @doc """
@@ -127,7 +129,7 @@ defmodule Faker.Internet do
       iex> Faker.Internet.url()
       #=> "http://rohan.net"
   """
-  @spec url() :: String.t
+  @spec url() :: String.t()
   def url, do: url(Faker.random_between(0, 1))
 
   defp url(0), do: "http://#{domain_name()}"
@@ -141,7 +143,7 @@ defmodule Faker.Internet do
       iex> Faker.Internet.image_url()
       #=> "https://dummyimage.com/846x223"
   """
-  @spec image_url() :: String.t
+  @spec image_url() :: String.t()
   def image_url, do: image_url(Faker.random_between(0, 2))
 
   defp image_url(0) do
@@ -167,11 +169,11 @@ defmodule Faker.Internet do
       iex> Faker.Internet.ip_v4_address()
       #=> "3.147.154.132"
   """
-  @spec ip_v4_address() :: String.t
+  @spec ip_v4_address() :: String.t()
   def ip_v4_address do
-    Enum.map_join 1..4, ".", fn(_part) ->
+    Enum.map_join(1..4, ".", fn _part ->
       Faker.random_between(0, 255)
-    end
+    end)
   end
 
   @doc """
@@ -182,7 +184,7 @@ defmodule Faker.Internet do
       iex> Faker.Internet.ip_v6_address()
       #=> "382F:76D8:2AC7:8EFC:488E:7039:CA87:0DEA"
   """
-  @spec ip_v6_address() :: String.t
+  @spec ip_v6_address() :: String.t()
   def ip_v6_address do
     Enum.map_join(1..8, ":", fn _part ->
       Faker.random_between(0, 65535)
@@ -199,7 +201,7 @@ defmodule Faker.Internet do
       iex> Faker.Internet.mac_address()
       #=> "d2:35:c2:ea:f2:c1"
   """
-  @spec mac_address() :: String.t
+  @spec mac_address() :: String.t()
   def mac_address do
     1..6
     |> Enum.map_join(":", &format_mac_address/1)
@@ -222,22 +224,22 @@ defmodule Faker.Internet do
       iex> Faker.Internet.slug(["foo", "bar"], ["."])
       #=> "foo.bar"
   """
-  @spec slug() :: String.t
+  @spec slug() :: String.t()
   def slug do
     slug(Lorem.words(2..5))
   end
 
-  @spec slug([String.t]) :: String.t
+  @spec slug([String.t()]) :: String.t()
   def slug(words) do
     slug(words, ["-", "_", "."])
   end
 
-  @spec slug([String.t], [String.t]) :: String.t
+  @spec slug([String.t()], [String.t()]) :: String.t()
   def slug(words, glue) do
     words
     |> Enum.take_random(length(words))
     |> Enum.join(pick(glue))
-    |> String.downcase
+    |> String.downcase()
   end
 
   defp format_mac_address(_part) do

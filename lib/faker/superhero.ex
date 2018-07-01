@@ -11,9 +11,9 @@ defmodule Faker.Superhero do
       iex> Faker.Superhero.name()
       #=> "Magnificent Shatterstar"
   """
-  @spec name() :: String.t
+  @spec name() :: String.t()
   def name do
-    Module.concat(__MODULE__, Faker.mlocale).name
+    Module.concat(__MODULE__, Faker.mlocale()).name
   end
 
   @doc """
@@ -24,9 +24,9 @@ defmodule Faker.Superhero do
       iex> Faker.Superhero.prefix()
       #=> "Magnificent"
   """
-  @spec prefix() :: String.t
+  @spec prefix() :: String.t()
   def prefix do
-    Module.concat(__MODULE__, Faker.mlocale).prefix
+    Module.concat(__MODULE__, Faker.mlocale()).prefix
   end
 
   @doc """
@@ -37,9 +37,9 @@ defmodule Faker.Superhero do
       iex> Faker.Superhero.suffix()
       #=> "of Hearts"
   """
-  @spec suffix() :: String.t
+  @spec suffix() :: String.t()
   def suffix do
-    Module.concat(__MODULE__, Faker.mlocale).suffix
+    Module.concat(__MODULE__, Faker.mlocale()).suffix
   end
 
   @doc """
@@ -50,9 +50,9 @@ defmodule Faker.Superhero do
       iex> Faker.Superhero.descriptor()
       #=> "Angel"
   """
-  @spec descriptor() :: String.t
+  @spec descriptor() :: String.t()
   def descriptor do
-    Module.concat(__MODULE__, Faker.mlocale).descriptor
+    Module.concat(__MODULE__, Faker.mlocale()).descriptor
   end
 
   @doc """
@@ -63,8 +63,8 @@ defmodule Faker.Superhero do
       iex> Faker.Superhero.power()
       #=> "Photokinesis"
   """
-  @spec power() :: String.t
+  @spec power() :: String.t()
   def power do
-    Module.concat(__MODULE__, Faker.mlocale).power
+    Module.concat(__MODULE__, Faker.mlocale()).power
   end
 end

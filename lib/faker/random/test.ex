@@ -23,6 +23,7 @@ defmodule Faker.Random.Test do
     :rand.seed(:exsplus, {1, 1, 1})
     :ets.insert(:seed_registry, {self(), true})
   end
+
   defp set_seed(_) do
   end
 end

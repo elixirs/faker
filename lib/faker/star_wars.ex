@@ -11,9 +11,9 @@ defmodule Faker.StarWars do
       iex> Faker.StarWars.character()
       #=> "Luke Skywalker"
   """
-  @spec character() :: String.t
+  @spec character() :: String.t()
   def character do
-    Module.concat(__MODULE__, Faker.mlocale).character
+    Module.concat(__MODULE__, Faker.mlocale()).character
   end
 
   @doc """
@@ -24,9 +24,9 @@ defmodule Faker.StarWars do
       iex> Faker.StarWars.planet()
       #=> "Alderaan"
   """
-  @spec planet() :: String.t
+  @spec planet() :: String.t()
   def planet do
-    Module.concat(__MODULE__, Faker.mlocale).planet
+    Module.concat(__MODULE__, Faker.mlocale()).planet
   end
 
   @doc """
@@ -37,8 +37,8 @@ defmodule Faker.StarWars do
       iex> Faker.StarWars.quote()
       #=> "I've got a bad feeling about this."
   """
-  @spec quote() :: String.t
+  @spec quote() :: String.t()
   def quote do
-    Module.concat(__MODULE__, Faker.mlocale).quote
+    Module.concat(__MODULE__, Faker.mlocale()).quote
   end
 end
