@@ -15,7 +15,7 @@ defmodule Faker.Address.Es do
       iex> Faker.Address.Es.building_number()
       "s/n."
       iex> Faker.Address.Es.building_number()
-      ", 5"
+      "5"
       iex> Faker.Address.Es.building_number()
       "26"
       iex> Faker.Address.Es.building_number()
@@ -23,7 +23,7 @@ defmodule Faker.Address.Es do
   """
   @spec building_number() :: String.t()
   def building_number do
-    ["s/n.", ", #", ", ##", "#", "##"]
+    ["s/n.", "#", "##", "#", "##"]
     |> Enum.at(Faker.random_between(0, 4))
     |> Faker.format()
   end
@@ -507,9 +507,9 @@ defmodule Faker.Address.Es do
       iex> Faker.Address.Es.street_address()
       "Padberg Senda s/n."
       iex> Faker.Address.Es.street_address()
-      "Ryan Enrique Sector , 05"
+      "Ryan Enrique Sector 05"
       iex> Faker.Address.Es.street_address()
-      "Price Colonia , 02"
+      "Price Colonia 02"
   """
   @spec street_address() :: String.t()
   def street_address do
@@ -524,9 +524,9 @@ defmodule Faker.Address.Es do
       iex> Faker.Address.Es.street_address(true)
       "Elizabeth Mercado 26 Esc. 610"
       iex> Faker.Address.Es.street_address(false)
-      "Ryan Enrique Sector , 05"
+      "Ryan Enrique Sector 05"
       iex> Faker.Address.Es.street_address(false)
-      "Price Colonia , 02"
+      "Price Colonia 02"
       iex> Faker.Address.Es.street_address(false)
       "Ernser Calleja 2"
   """
