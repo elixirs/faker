@@ -60,5 +60,5 @@ defmodule Faker.StarWars do
     Module.concat(__MODULE__, Faker.mlocale()).quote
   end
 
-  defp localised_module(), do: Module.concat(__MODULE__, Faker.mlocale())
+  defp localised_module, do: Module.concat(__MODULE__, Faker.mlocale())
 end
