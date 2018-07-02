@@ -10,6 +10,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Added
 
+* Add doctests for Company [[@vbrazo][]]
 * Add doctests for Pokemon [[@vbrazo][]]
 * Add doctests for Cat [[@vbrazo][]]
 * Tests covered by actual values not just checking that result is a binary [[@igas][]]
