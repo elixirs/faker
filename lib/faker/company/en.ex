@@ -661,5 +661,11 @@ defmodule Faker.Company.En do
       "Ltd"
   """
   @spec suffix() :: String.t()
-  sampler(:suffix, ["Inc", "and Sons", "LLC", "Group", "Ltd"])
+  sampler(:suffix, [
+    "Inc",
+    "and Sons",
+    "LLC",
+    "Group",
+    "Ltd"
+  ])
 end
