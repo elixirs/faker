@@ -9,11 +9,17 @@ defmodule Faker.Commerce do
   ## Examples
 
       iex> Faker.Commerce.color()
-      #=> "maroon"
+      "red"
+      iex> Faker.Commerce.color()
+      "sky blue"
+      iex> Faker.Commerce.color()
+      "lavender"
+      iex> Faker.Commerce.color()
+      "grey"
   """
   @spec color() :: String.t()
   def color do
-    Module.concat(__MODULE__, Faker.mlocale()).color
+    localised_module().color
   end
 
   @doc """
@@ -22,11 +28,17 @@ defmodule Faker.Commerce do
   ## Examples
 
       iex> Faker.Commerce.department()
-      #=> "Sports & Outdoors"
+      "Home, Garden & Tools"
+      iex> Faker.Commerce.department()
+      "Electronics & Computers"
+      iex> Faker.Commerce.department()
+      "Clothing, Shoes & Jewelery"
+      iex> Faker.Commerce.department()
+      "Toys, Kids & Baby"
   """
   @spec department() :: String.t()
   def department do
-    Module.concat(__MODULE__, Faker.mlocale()).department
+    localised_module().department
   end
 
   @doc """
@@ -35,7 +47,13 @@ defmodule Faker.Commerce do
   ## Examples
 
       iex> Faker.Commerce.price()
-      #=> "3.5"
+      1.11
+      iex> Faker.Commerce.price()
+      4.02
+      iex> Faker.Commerce.price()
+      8.36
+      iex> Faker.Commerce.price()
+      3.05
   """
   @spec price() :: float
   def price do
@@ -49,11 +67,17 @@ defmodule Faker.Commerce do
   ## Examples
 
       iex> Faker.Commerce.product_name()
-      #=> "Fantastic Chair"
+      "Ergonomic Steel Shirt"
+      iex> Faker.Commerce.product_name()
+      "Fantastic Car"
+      iex> Faker.Commerce.product_name()
+      "Granite Gloves"
+      iex> Faker.Commerce.product_name()
+      "Plastic Shoes"
   """
   @spec product_name() :: String.t()
   def product_name do
-    Module.concat(__MODULE__, Faker.mlocale()).product_name
+    localised_module().product_name
   end
 
   @doc """
@@ -62,11 +86,17 @@ defmodule Faker.Commerce do
   ## Examples
 
       iex> Faker.Commerce.product_name_adjective()
-      #=> "Incredible"
+      "Small"
+      iex> Faker.Commerce.product_name_adjective()
+      "Ergonomic"
+      iex> Faker.Commerce.product_name_adjective()
+      "Incredible"
+      iex> Faker.Commerce.product_name_adjective()
+      "Gorgeous"
   """
   @spec product_name_adjective() :: String.t()
   def product_name_adjective do
-    Module.concat(__MODULE__, Faker.mlocale()).product_name_adjective
+    localised_module().product_name_adjective
   end
 
   @doc """
@@ -75,11 +105,17 @@ defmodule Faker.Commerce do
   ## Examples
 
       iex> Faker.Commerce.product_name_material()
-      #=> "Wooden"
+      "Rubber"
+      iex> Faker.Commerce.product_name_material()
+      "Concrete"
+      iex> Faker.Commerce.product_name_material()
+      "Steel"
+      iex> Faker.Commerce.product_name_material()
+      "Granite"
   """
   @spec product_name_material() :: String.t()
   def product_name_material do
-    Module.concat(__MODULE__, Faker.mlocale()).product_name_material
+    localised_module().product_name_material
   end
 
   @doc """
@@ -88,10 +124,18 @@ defmodule Faker.Commerce do
   ## Examples
 
       iex> Faker.Commerce.product_name_product()
-      #=> "Gloves"
+      "Gloves"
+      iex> Faker.Commerce.product_name_product()
+      "Computer"
+      iex> Faker.Commerce.product_name_product()
+      "Table"
+      iex> Faker.Commerce.product_name_product()
+      "Shirt"
   """
   @spec product_name_product() :: String.t()
   def product_name_product do
-    Module.concat(__MODULE__, Faker.mlocale()).product_name_product
+    localised_module().product_name_product
   end
+
+  defp localised_module, do: Module.concat(__MODULE__, Faker.mlocale())
 end
