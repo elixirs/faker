@@ -9,11 +9,17 @@ defmodule Faker.Pokemon do
   ## Examples
 
       iex> Faker.Pokemon.name()
-      #=> "Pikachu"
+      "Poliwhirl"
+      iex> Faker.Pokemon.name()
+      "Exeggcute"
+      iex> Faker.Pokemon.name()
+      "Flareon"
+      iex> Faker.Pokemon.name()
+      "Marowak"
   """
   @spec name() :: String.t()
   def name do
-    Module.concat(__MODULE__, Faker.mlocale()).name
+    localised_module().name
   end
 
   @doc """
@@ -22,10 +28,18 @@ defmodule Faker.Pokemon do
   ## Examples
 
       iex> Faker.Pokemon.location()
-      #=> "Pallet Town"
+      "Vaniville Town"
+      iex> Faker.Pokemon.location()
+      "Slateport City"
+      iex> Faker.Pokemon.location()
+      "Shalour City"
+      iex> Faker.Pokemon.location()
+      "Solaceon Town"
   """
   @spec location() :: String.t()
   def location do
-    Module.concat(__MODULE__, Faker.mlocale()).location
+    localised_module().location
   end
+
+  defp localised_module, do: Module.concat(__MODULE__, Faker.mlocale())
 end
