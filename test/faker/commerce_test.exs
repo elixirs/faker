@@ -1,4 +1,4 @@
-defmodule CommerceTest do
+defmodule Faker.CommerceTest do
   use ExUnit.Case, async: true
 
   doctest Faker.Commerce

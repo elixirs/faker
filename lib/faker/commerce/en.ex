@@ -60,13 +60,13 @@ defmodule Faker.Commerce.En do
 
   ## Examples
 
-      iex> Faker.Commerce.department()
+      iex> Faker.Commerce.En.department()
       "Home, Garden & Tools"
-      iex> Faker.Commerce.department()
+      iex> Faker.Commerce.En.department()
       "Electronics & Computers"
-      iex> Faker.Commerce.department()
+      iex> Faker.Commerce.En.department()
       "Clothing, Shoes & Jewelery"
-      iex> Faker.Commerce.department()
+      iex> Faker.Commerce.En.department()
       "Toys, Kids & Baby"
   """
   @spec department() :: String.t()
@@ -88,13 +88,13 @@ defmodule Faker.Commerce.En do
 
   ## Examples
 
-      iex> Faker.Commerce.product_name()
+      iex> Faker.Commerce.En.product_name()
       "Ergonomic Steel Shirt"
-      iex> Faker.Commerce.product_name()
+      iex> Faker.Commerce.En.product_name()
       "Fantastic Car"
-      iex> Faker.Commerce.product_name()
+      iex> Faker.Commerce.En.product_name()
       "Granite Gloves"
-      iex> Faker.Commerce.product_name()
+      iex> Faker.Commerce.En.product_name()
       "Plastic Shoes"
   """
   @spec product_name() :: String.t()
@@ -112,13 +112,13 @@ defmodule Faker.Commerce.En do
 
   ## Examples
 
-      iex> Faker.Commerce.product_name_adjective()
+      iex> Faker.Commerce.En.product_name_adjective()
       "Small"
-      iex> Faker.Commerce.product_name_adjective()
+      iex> Faker.Commerce.En.product_name_adjective()
       "Ergonomic"
-      iex> Faker.Commerce.product_name_adjective()
+      iex> Faker.Commerce.En.product_name_adjective()
       "Incredible"
-      iex> Faker.Commerce.product_name_adjective()
+      iex> Faker.Commerce.En.product_name_adjective()
       "Gorgeous"
   """
   @spec product_name_adjective() :: String.t()
@@ -140,13 +140,13 @@ defmodule Faker.Commerce.En do
 
   ## Examples
 
-      iex> Faker.Commerce.product_name_material()
+      iex> Faker.Commerce.En.product_name_material()
       "Rubber"
-      iex> Faker.Commerce.product_name_material()
+      iex> Faker.Commerce.En.product_name_material()
       "Concrete"
-      iex> Faker.Commerce.product_name_material()
+      iex> Faker.Commerce.En.product_name_material()
       "Steel"
-      iex> Faker.Commerce.product_name_material()
+      iex> Faker.Commerce.En.product_name_material()
       "Granite"
   """
   @spec product_name_material() :: String.t()
@@ -165,13 +165,13 @@ defmodule Faker.Commerce.En do
 
   ## Examples
 
-      iex> Faker.Commerce.product_name_product()
+      iex> Faker.Commerce.En.product_name_product()
       "Gloves"
-      iex> Faker.Commerce.product_name_product()
+      iex> Faker.Commerce.En.product_name_product()
       "Computer"
-      iex> Faker.Commerce.product_name_product()
+      iex> Faker.Commerce.En.product_name_product()
       "Table"
-      iex> Faker.Commerce.product_name_product()
+      iex> Faker.Commerce.En.product_name_product()
       "Shirt"
   """
   @spec product_name_product() :: String.t()
