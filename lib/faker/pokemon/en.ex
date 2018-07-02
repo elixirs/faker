@@ -10,13 +10,13 @@ defmodule Faker.Pokemon.En do
 
   ## Examples
 
-      iex> Faker.Pokemon.name()
+      iex> Faker.Pokemon.En.name()
       "Poliwhirl"
-      iex> Faker.Pokemon.name()
+      iex> Faker.Pokemon.En.name()
       "Exeggcute"
-      iex> Faker.Pokemon.name()
+      iex> Faker.Pokemon.En.name()
       "Flareon"
-      iex> Faker.Pokemon.name()
+      iex> Faker.Pokemon.En.name()
       "Marowak"
   """
   @spec name() :: String.t()
@@ -178,13 +178,13 @@ defmodule Faker.Pokemon.En do
 
   ## Examples
 
-      iex> Faker.Pokemon.location()
+      iex> Faker.Pokemon.En.location()
       "Vaniville Town"
-      iex> Faker.Pokemon.location()
+      iex> Faker.Pokemon.En.location()
       "Slateport City"
-      iex> Faker.Pokemon.location()
+      iex> Faker.Pokemon.En.location()
       "Shalour City"
-      iex> Faker.Pokemon.location()
+      iex> Faker.Pokemon.En.location()
       "Solaceon Town"
   """
   @spec location() :: String.t()
