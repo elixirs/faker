@@ -1,4 +1,4 @@
-defmodule AppTest do
+defmodule Faker.AppTest do
   use ExUnit.Case, async: true
 
   import Faker.App

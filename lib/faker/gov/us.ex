@@ -1,18 +1,24 @@
 defmodule Faker.Gov.Us do
-
-  @moduledoc"""
+  @moduledoc """
   Generating US Social Security numbers
   """
 
   @doc """
   Returns a random US Social Security number
-  """
-  @spec ssn() :: String.t
-  def ssn do
-    # Certain numbers are invalid for U.S. SSNs. The area (first 3 digits)
-    # cannot be 666 or 900-999. The group number (middle digits) cannot be
-    # 00. The serial (last 4 digits) cannot be 0000.
 
+  ## Examples
+
+      iex> Faker.Gov.Us.ssn
+      "838-84-5749"
+      iex> Faker.Gov.Us.ssn
+      "719-41-8674"
+      iex> Faker.Gov.Us.ssn
+      "213-54-3766"
+      iex> Faker.Gov.Us.ssn
+      "379-09-6851"
+  """
+  @spec ssn() :: String.t()
+  def ssn do
     "#{area()}-#{group()}-#{serial()}"
   end
 
