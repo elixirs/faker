@@ -10,6 +10,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Added
 
+* Add doctests for Commerce [[@vbrazo][]]
 * Add doctests for StarWars [[@vbrazo][]]
 * Add doctests for Company [[@vbrazo][]]
 * Add doctests for Pokemon [[@vbrazo][]]
