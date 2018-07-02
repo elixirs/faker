@@ -10,7 +10,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Added
 
-* `Faker.Address.Es` [@vbrazo][]
+* `Faker.Address.Es` and `Faker.Address.En` [@vbrazo][]
 * Tests covered by actual values not just checking that result is a binary [[@igas][]]
 * `Faker.UUID.v4/0` [[@anthonator][]]
 * mix format config file [[@igas][]]
