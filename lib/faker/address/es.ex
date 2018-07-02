@@ -525,6 +525,10 @@ defmodule Faker.Address.Es do
       "Elizabeth Mercado 26 Esc. 610"
       iex> Faker.Address.Es.street_address(false)
       "Ryan Enrique Sector , 05"
+      iex> Faker.Address.Es.street_address(false)
+      "Price Colonia , 02"
+      iex> Faker.Address.Es.street_address(false)
+      "Ernser Calleja 2"
   """
   @spec street_address(true | any) :: String.t()
   def street_address(true), do: street_address() <> " " <> secondary_address()
