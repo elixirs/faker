@@ -7,51 +7,203 @@ defmodule Faker.StarWars.En do
 
   @doc """
   Returns a Star Wars character name in English
+
+  ## Examples
+
+      iex> Faker.StarWars.En.character()
+      "Plo Koon"
+      iex> Faker.StarWars.En.character()
+      "Owen Lars"
+      iex> Faker.StarWars.En.character()
+      "Adi Gallia"
+      iex> Faker.StarWars.En.character()
+      "Tion Medon"
   """
-  @spec character() :: String.t
-  sampler :character, [
-    "Luke Skywalker", "C-3PO", "R2-D2", "Darth Vader", "Leia Organa",
-    "Owen Lars", "Beru Whitesun lars", "R5-D4", "Biggs Darklighter",
-    "Obi-Wan Kenobi", "Anakin Skywalker", "Wilhuff Tarkin", "Chewbacca",
-    "Han Solo", "Greedo", "Jabba Desilijic Tiure", "Wedge Antilles",
-    "Jek Tono Porkins", "Yoda", "Palpatine", "Boba Fett", "IG-88", "Bossk",
-    "Lando Calrissian", "Lobot", "Ackbar", "Mon Mothma", "Arvel Crynyd",
-    "Wicket Systri Warrick", "Nien Nunb", "Qui-Gon Jinn", "Nute Gunray",
-    "Finis Valorum", "Jar Jar Binks", "Roos Tarpals", "Rugor Nass", "Ric Olié",
-    "Watto", "Sebulba", "Quarsh Panaka", "Shmi Skywalker", "Darth Maul",
-    "Bib Fortuna", "Ayla Secura", "Dud Bolt", "Gasgano", "Ben Quadinaros",
-    "Mace Windu", "Ki-Adi-Mundi", "Kit Fisto", "Eeth Koth", "Adi Gallia",
-    "Saesee Tiin", "Yarael Poof", "Plo Koon", "Mas Amedda", "Gregar Typho",
-    "Cordé", "Cliegg Lars", "Poggle the Lesser", "Luminara Unduli",
-    "Barriss Offee", "Dormé", "Dooku", "Bail Prestor Organa", "Jango Fett",
-    "Zam Wesell", "Dexter Jettster", "Lama Su", "Taun We", "Jocasta Nu",
-    "Ratts Tyerell", "R4-P17", "Wat Tambor", "San Hill", "Shaak Ti", "Grievous",
-    "Tarfful", "Raymus Antilles", "Sly Moore", "Tion Medon", "Finn", "Rey",
-    "Poe Dameron", "BB8", "Captain Phasma", "Padmé Amidala",
-  ]
+  @spec character() :: String.t()
+  sampler(:character, [
+    "Luke Skywalker",
+    "C-3PO",
+    "R2-D2",
+    "Darth Vader",
+    "Leia Organa",
+    "Owen Lars",
+    "Beru Whitesun lars",
+    "R5-D4",
+    "Biggs Darklighter",
+    "Obi-Wan Kenobi",
+    "Anakin Skywalker",
+    "Wilhuff Tarkin",
+    "Chewbacca",
+    "Han Solo",
+    "Greedo",
+    "Jabba Desilijic Tiure",
+    "Wedge Antilles",
+    "Jek Tono Porkins",
+    "Yoda",
+    "Palpatine",
+    "Boba Fett",
+    "IG-88",
+    "Bossk",
+    "Lando Calrissian",
+    "Lobot",
+    "Ackbar",
+    "Mon Mothma",
+    "Arvel Crynyd",
+    "Wicket Systri Warrick",
+    "Nien Nunb",
+    "Qui-Gon Jinn",
+    "Nute Gunray",
+    "Finis Valorum",
+    "Jar Jar Binks",
+    "Roos Tarpals",
+    "Rugor Nass",
+    "Ric Olié",
+    "Watto",
+    "Sebulba",
+    "Quarsh Panaka",
+    "Shmi Skywalker",
+    "Darth Maul",
+    "Bib Fortuna",
+    "Ayla Secura",
+    "Dud Bolt",
+    "Gasgano",
+    "Ben Quadinaros",
+    "Mace Windu",
+    "Ki-Adi-Mundi",
+    "Kit Fisto",
+    "Eeth Koth",
+    "Adi Gallia",
+    "Saesee Tiin",
+    "Yarael Poof",
+    "Plo Koon",
+    "Mas Amedda",
+    "Gregar Typho",
+    "Cordé",
+    "Cliegg Lars",
+    "Poggle the Lesser",
+    "Luminara Unduli",
+    "Barriss Offee",
+    "Dormé",
+    "Dooku",
+    "Bail Prestor Organa",
+    "Jango Fett",
+    "Zam Wesell",
+    "Dexter Jettster",
+    "Lama Su",
+    "Taun We",
+    "Jocasta Nu",
+    "Ratts Tyerell",
+    "R4-P17",
+    "Wat Tambor",
+    "San Hill",
+    "Shaak Ti",
+    "Grievous",
+    "Tarfful",
+    "Raymus Antilles",
+    "Sly Moore",
+    "Tion Medon",
+    "Finn",
+    "Rey",
+    "Poe Dameron",
+    "BB8",
+    "Captain Phasma",
+    "Padmé Amidala"
+  ])
 
   @doc """
   Returns a Star Wars planet name in English
+
+  ## Examples
+
+      iex> Faker.StarWars.En.planet()
+      "Mon Cala"
+      iex> Faker.StarWars.En.planet()
+      "Ryloth"
+      iex> Faker.StarWars.En.planet()
+      "Endor"
+      iex> Faker.StarWars.En.planet()
+      "Shili"
   """
-  @spec planet() :: String.t
-  sampler :planet, [
-    "Alderaan", "Aleen Minor", "Bespin", "Bestine IV", "Cato Neimoidia",
-    "Cerea", "Champala", "Chandrila", "Concord Dawn", "Corellia", "Coruscant",
-    "Dagobah", "Dantooine", "Dathomir", "Dorin", "Endor", "Eriadu", "Felucia",
-    "Geonosis", "Glee Anselm", "Haruun Kal", "Hoth", "Iktotch", "Iridonia",
-    "Jakku", "Kalee", "Kamino", "Kashyyyk", "Malastare", "Mirial", "Mon Cala",
-    "Mustafar", "Muunilinst", "Mygeeto", "Naboo", "Nal Hutta", "Ojom",
-    "Ord Mantell", "Polis Massa", "Quermia", "Rodia", "Ryloth", "Saleucami",
-    "Serenno", "Shili", "Skako", "Socorro", "Stewjon", "Sullust", "Tatooine",
-    "Tholoth", "Toydaria", "Trandosha", "Troiken", "Tund", "Umbara", "Utapau",
-    "Vulpter", "Yavin IV", "Zolan",
-  ]
+  @spec planet() :: String.t()
+  sampler(:planet, [
+    "Alderaan",
+    "Aleen Minor",
+    "Bespin",
+    "Bestine IV",
+    "Cato Neimoidia",
+    "Cerea",
+    "Champala",
+    "Chandrila",
+    "Concord Dawn",
+    "Corellia",
+    "Coruscant",
+    "Dagobah",
+    "Dantooine",
+    "Dathomir",
+    "Dorin",
+    "Endor",
+    "Eriadu",
+    "Felucia",
+    "Geonosis",
+    "Glee Anselm",
+    "Haruun Kal",
+    "Hoth",
+    "Iktotch",
+    "Iridonia",
+    "Jakku",
+    "Kalee",
+    "Kamino",
+    "Kashyyyk",
+    "Malastare",
+    "Mirial",
+    "Mon Cala",
+    "Mustafar",
+    "Muunilinst",
+    "Mygeeto",
+    "Naboo",
+    "Nal Hutta",
+    "Ojom",
+    "Ord Mantell",
+    "Polis Massa",
+    "Quermia",
+    "Rodia",
+    "Ryloth",
+    "Saleucami",
+    "Serenno",
+    "Shili",
+    "Skako",
+    "Socorro",
+    "Stewjon",
+    "Sullust",
+    "Tatooine",
+    "Tholoth",
+    "Toydaria",
+    "Trandosha",
+    "Troiken",
+    "Tund",
+    "Umbara",
+    "Utapau",
+    "Vulpter",
+    "Yavin IV",
+    "Zolan"
+  ])
 
   @doc """
   Returns a Star Wars quote in English
+
+  ## Examples
+
+      iex> Faker.StarWars.En.quote()
+      "Congratulations. You are being rescued. Please do not resist."
+      iex> Faker.StarWars.En.quote()
+      "What chance do we have? The question is 'what choice'. Run, hide, plead for mercy, scatter your forces. You give way to an enemy this evil with this much power and you condemn the galaxy to an eternity of submission. The time to fight is now!"
+      iex> Faker.StarWars.En.quote()
+      "Will someone get this big walking carpet out of my way?"
+      iex> Faker.StarWars.En.quote()
+      "To be Jedi is to face the truth, and choose. Give off light, or darkness, Padawan. Be a candle, or the night."
   """
-  @spec quote() :: String.t
-  sampler :quote, [
+  @spec quote() :: String.t()
+  sampler(:quote, [
     "I've got a bad feeling about this.",
     "There's always a bigger fish.",
     "Fear is the path to the Dark Side. Fear leads to anger, anger leads to hate, hate leads to suffering.",
@@ -122,8 +274,8 @@ defmodule Faker.StarWars.En do
     "I feel it again... The pull to the light... Supreme Leader senses it. Show me again... The power of the darkness... And I'll let nothing stand in our way... Show me... Grandfather... and I will finish... what you started.",
     "I fear nothing. For all is as the Force wills it.",
     "I'm not Resistance. I'm not a hero. I'm a stormtrooper. Like all of them, I was taken from a family I'll never know. And raised to do one thing. But my first battle, I made a choice. I wasn't gonna kill for them. So I ran. Right into you. And you looked at me like no one ever had. I was ashamed of what I was. But I'm done with the First Order. I'm never going back. Rey, come with me.",
-    "What chance do we have? The question is \"what choice.\" Run, hide, plead for mercy, scatter your forces. You give way to an enemy this evil with this much power and you condemn the galaxy to an eternity of submission. The time to fight is now!",
+    "What chance do we have? The question is 'what choice'. Run, hide, plead for mercy, scatter your forces. You give way to an enemy this evil with this much power and you condemn the galaxy to an eternity of submission. The time to fight is now!",
     "Be careful not to choke on your aspirations, Director.",
-    "You're so lonely... So afraid to leave... At night, desperate to sleep... You imagine an ocean... I see it... I see the island... And Han Solo... You feel like he's the father you never had. He would have disappointed you.",
-  ]
+    "You're so lonely... So afraid to leave... At night, desperate to sleep... You imagine an ocean... I see it... I see the island... And Han Solo... You feel like he's the father you never had. He would have disappointed you."
+  ])
 end
