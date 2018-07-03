@@ -5,8 +5,6 @@ defmodule Faker.AvatarTest do
 
   doctest Faker.Avatar
 
-  @iterations 10_000
-
   test "image_url/0" do
     assert String.starts_with?(image_url(), "http://robohash.org/")
   end
