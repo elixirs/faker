@@ -9,11 +9,17 @@ defmodule Faker.Company do
   ## Examples
 
       iex> Faker.Company.bs()
-      #=> "enable next-generation markets"
+      "syndicate e-business e-business"
+      iex> Faker.Company.bs()
+      "scale global metrics"
+      iex> Faker.Company.bs()
+      "optimize scalable markets"
+      iex> Faker.Company.bs()
+      "implement out-of-the-box content"
   """
   @spec bs() :: String.t()
   def bs do
-    Module.concat(__MODULE__, Faker.mlocale()).bs
+    localised_module().bs
   end
 
   @doc """
@@ -22,11 +28,17 @@ defmodule Faker.Company do
   ## Examples
 
       iex> Faker.Company.bullshit()
-      #=> "value-added"
+      "web-enabled"
+      iex> Faker.Company.bullshit()
+      "e-business"
+      iex> Faker.Company.bullshit()
+      "web-enabled"
+      iex> Faker.Company.bullshit()
+      "next-generation"
   """
   @spec bullshit() :: String.t()
   def bullshit do
-    Module.concat(__MODULE__, Faker.mlocale()).bullshit
+    localised_module().bullshit
   end
 
   @doc """
@@ -35,11 +47,17 @@ defmodule Faker.Company do
   ## Examples
 
       iex> Faker.Company.bullshit_prefix()
-      #=> "recontextualize"
+      "syndicate"
+      iex> Faker.Company.bullshit_prefix()
+      "visualize"
+      iex> Faker.Company.bullshit_prefix()
+      "incentivize"
+      iex> Faker.Company.bullshit_prefix()
+      "scale"
   """
   @spec bullshit_prefix() :: String.t()
   def bullshit_prefix do
-    Module.concat(__MODULE__, Faker.mlocale()).bullshit_prefix
+    localised_module().bullshit_prefix
   end
 
   @doc """
@@ -48,11 +66,17 @@ defmodule Faker.Company do
   ## Examples
 
       iex> Faker.Company.bullshit_suffix()
-      #=> "technologies"
+      "e-services"
+      iex> Faker.Company.bullshit_suffix()
+      "niches"
+      iex> Faker.Company.bullshit_suffix()
+      "e-business"
+      iex> Faker.Company.bullshit_suffix()
+      "systems"
   """
   @spec bullshit_suffix() :: String.t()
   def bullshit_suffix do
-    Module.concat(__MODULE__, Faker.mlocale()).bullshit_suffix
+    localised_module().bullshit_suffix
   end
 
   @doc """
@@ -61,11 +85,17 @@ defmodule Faker.Company do
   ## Examples
 
       iex> Faker.Company.buzzword()
-      #=> "composite"
+      "upward-trending"
+      iex> Faker.Company.buzzword()
+      "full-range"
+      iex> Faker.Company.buzzword()
+      "uniform"
+      iex> Faker.Company.buzzword()
+      "tertiary"
   """
   @spec buzzword() :: String.t()
   def buzzword do
-    Module.concat(__MODULE__, Faker.mlocale()).buzzword
+    localised_module().buzzword
   end
 
   @doc """
@@ -74,11 +104,17 @@ defmodule Faker.Company do
   ## Examples
 
       iex> Faker.Company.buzzword_prefix()
-      #=> "Up-sized"
+      "Configurable"
+      iex> Faker.Company.buzzword_prefix()
+      "Advanced"
+      iex> Faker.Company.buzzword_prefix()
+      "Grass-roots"
+      iex> Faker.Company.buzzword_prefix()
+      "Automated"
   """
   @spec buzzword_prefix() :: String.t()
   def buzzword_prefix do
-    Module.concat(__MODULE__, Faker.mlocale()).buzzword_prefix
+    localised_module().buzzword_prefix
   end
 
   @doc """
@@ -87,11 +123,17 @@ defmodule Faker.Company do
   ## Examples
 
       iex> Faker.Company.buzzword_suffix()
-      #=> "paradigm"
+      "encoding"
+      iex> Faker.Company.buzzword_suffix()
+      "standardization"
+      iex> Faker.Company.buzzword_suffix()
+      "Graphical User Interface"
+      iex> Faker.Company.buzzword_suffix()
+      "product"
   """
   @spec buzzword_suffix() :: String.t()
   def buzzword_suffix do
-    Module.concat(__MODULE__, Faker.mlocale()).buzzword_suffix
+    localised_module().buzzword_suffix
   end
 
   @doc """
@@ -100,11 +142,17 @@ defmodule Faker.Company do
   ## Examples
 
       iex> Faker.Company.catch_phrase()
-      #=> "Profound stable strategy"
+      "Configurable full-range Graphical User Interface"
+      iex> Faker.Company.buzzword_suffix()
+      "product"
+      iex> Faker.Company.buzzword_suffix()
+      "intranet"
+      iex> Faker.Company.buzzword_suffix()
+      "pricing structure"
   """
   @spec catch_phrase() :: String.t()
   def catch_phrase do
-    Module.concat(__MODULE__, Faker.mlocale()).catch_phrase
+    localised_module().catch_phrase
   end
 
   @doc """
@@ -113,11 +161,17 @@ defmodule Faker.Company do
   ## Examples
 
       iex> Faker.Company.name()
-      #=> "Erdman, Rogahn and Bailey"
+      "Hayes Inc"
+      iex> Faker.Company.name()
+      "Sipes, Wehner and Hane"
+      iex> Faker.Company.name()
+      "Schiller, Rogahn and Hartmann"
+      iex> Faker.Company.name()
+      "Murphy-Metz"
   """
   @spec name() :: String.t()
   def name do
-    Module.concat(__MODULE__, Faker.mlocale()).name
+    localised_module().name
   end
 
   @doc """
@@ -126,10 +180,18 @@ defmodule Faker.Company do
   ## Examples
 
       iex> Faker.Company.suffix()
-      #=> "Group"
+      "Inc"
+      iex> Faker.Company.suffix()
+      "and Sons"
+      iex> Faker.Company.suffix()
+      "Inc"
+      iex> Faker.Company.suffix()
+      "Ltd"
   """
   @spec suffix() :: String.t()
   def suffix do
-    Module.concat(__MODULE__, Faker.mlocale()).suffix
+    localised_module().suffix
   end
+
+  defp localised_module, do: Module.concat(__MODULE__, Faker.mlocale())
 end
