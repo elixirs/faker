@@ -9,11 +9,17 @@ defmodule Faker.Superhero do
   ## Examples
 
       iex> Faker.Superhero.name()
-      #=> "Magnificent Shatterstar"
+      "Red Beyonder the Hunter"
+      iex> Faker.Superhero.name()
+      "Penance Strike"
+      iex> Faker.Superhero.name()
+      "Sage"
+      iex> Faker.Superhero.name()
+      "Giant Aqua I"
   """
   @spec name() :: String.t()
   def name do
-    Module.concat(__MODULE__, Faker.mlocale()).name
+    localised_module().name
   end
 
   @doc """
@@ -22,11 +28,17 @@ defmodule Faker.Superhero do
   ## Examples
 
       iex> Faker.Superhero.prefix()
-      #=> "Magnificent"
+      "The"
+      iex> Faker.Superhero.prefix()
+      "Red"
+      iex> Faker.Superhero.prefix()
+      "The"
+      iex> Faker.Superhero.prefix()
+      "Captain"
   """
   @spec prefix() :: String.t()
   def prefix do
-    Module.concat(__MODULE__, Faker.mlocale()).prefix
+    localised_module().prefix
   end
 
   @doc """
@@ -35,11 +47,17 @@ defmodule Faker.Superhero do
   ## Examples
 
       iex> Faker.Superhero.suffix()
-      #=> "of Hearts"
+      "Strange"
+      iex> Faker.Superhero.suffix()
+      "Claw"
+      iex> Faker.Superhero.suffix()
+      "the Hunter"
+      iex> Faker.Superhero.suffix()
+      "the Hunter"
   """
   @spec suffix() :: String.t()
   def suffix do
-    Module.concat(__MODULE__, Faker.mlocale()).suffix
+    localised_module().suffix
   end
 
   @doc """
@@ -48,11 +66,17 @@ defmodule Faker.Superhero do
   ## Examples
 
       iex> Faker.Superhero.descriptor()
-      #=> "Angel"
+      "Ronin"
+      iex> Faker.Superhero.descriptor()
+      "Azrael"
+      iex> Faker.Superhero.descriptor()
+      "Beyonder"
+      iex> Faker.Superhero.descriptor()
+      "Phantom"
   """
   @spec descriptor() :: String.t()
   def descriptor do
-    Module.concat(__MODULE__, Faker.mlocale()).descriptor
+    localised_module().descriptor
   end
 
   @doc """
@@ -61,10 +85,18 @@ defmodule Faker.Superhero do
   ## Examples
 
       iex> Faker.Superhero.power()
-      #=> "Photokinesis"
+      "Death Touch"
+      iex> Faker.Superhero.power()
+      "Shapeshifting"
+      iex> Faker.Superhero.power()
+      "Gliding"
+      iex> Faker.Superhero.power()
+      "Illusions"
   """
   @spec power() :: String.t()
   def power do
-    Module.concat(__MODULE__, Faker.mlocale()).power
+    localised_module().power
   end
+
+  defp localised_module, do: Module.concat(__MODULE__, Faker.mlocale())
 end
