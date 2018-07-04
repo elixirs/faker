@@ -11,13 +11,13 @@ defmodule Faker.Date do
   ## Examples
 
       iex> Faker.Date.date_of_birth()
-      #=> ~D[1961-05-09]
-
+      ~D[1936-01-25]
       iex> Faker.Date.date_of_birth(1)
-      #=> ~D[2015-12-06]
-
+      ~D[2016-12-25]
       iex> Faker.Date.date_of_birth(10..19)
-      #=> ~D[2004-05-15]
+      ~D[2004-03-09]
+      iex> Faker.Date.date_of_birth(20..99)
+      ~D[1992-06-20]
   """
   @spec date_of_birth() :: Date.t()
   def date_of_birth(age_or_range \\ 18..99)
@@ -62,11 +62,6 @@ defmodule Faker.Date do
 
   @doc """
   Returns a random date in the past up to N days, today not included
-
-  ## Examples
-
-      iex> Faker.Date.backward(4)
-      #=> ~D[2016-12-20]
   """
   @spec backward(integer) :: Date.t()
   def backward(days) do
@@ -75,11 +70,6 @@ defmodule Faker.Date do
 
   @doc """
   Returns a random date in the future up to N days, today not included
-
-  ## Examples
-
-      iex> Faker.Date.forward(4)
-      #=> ~D[2016-12-25]
   """
   @spec forward(integer) :: Date.t()
   def forward(days) do
@@ -93,8 +83,14 @@ defmodule Faker.Date do
 
   ## Examples
 
-      iex> Faker.Date.between(~D[2016-12-20], ~D[2016-12-25])
-      #=> ~D[2016-12-23]
+      iex> Faker.Date.between(~D[2010-12-10], ~D[2016-12-25])
+      ~D[2013-06-07]
+      iex> Faker.Date.between(~D[2000-12-20], ~D[2000-12-25])
+      ~D[2000-12-20]
+      iex> Faker.Date.between(~D[2000-02-02], ~D[2016-02-05])
+      ~D[2014-10-23]
+      iex> Faker.Date.between(~D[2010-12-20], ~D[2010-12-25])
+      ~D[2010-12-21]
   """
   @spec between(Date.t(), Date.t()) :: Date.t()
   def between(from, to) do

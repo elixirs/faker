@@ -8,8 +8,14 @@ defmodule Faker.Team do
 
   ## Examples
 
-      iex> Faker.Team.creature()
-      #=> "chickens"
+      iex> Faker.Team.name()
+      "Hawaii cats"
+      iex> Faker.Team.name()
+      "Oklahoma banshees"
+      iex> Faker.Team.name()
+      "Texas elves"
+      iex> Faker.Team.name()
+      "Iowa fishes"
   """
   @spec creature() :: String.t()
   def creature do
@@ -21,8 +27,14 @@ defmodule Faker.Team do
 
   ## Examples
 
-      iex> Faker.Team.name()
-      #=> "Delaware ants"
+      iex> Faker.Team.creature()
+      "prophets"
+      iex> Faker.Team.creature()
+      "cats"
+      iex> Faker.Team.creature()
+      "enchanters"
+      iex> Faker.Team.creature()
+      "banshees"
   """
   @spec name() :: String.t()
   def name do

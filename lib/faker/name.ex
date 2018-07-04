@@ -9,11 +9,17 @@ defmodule Faker.Name do
   ## Examples
 
       iex> Faker.Name.name()
-      #=> "Mr. Christian Johnston"
+      "Mrs. Abe Rolfson MD"
+      iex> Faker.Name.name()
+      "Conor Padberg"
+      iex> Faker.Name.name()
+      "Mr. Bianka Ryan"
+      iex> Faker.Name.name()
+      "Ally Rau MD"
   """
   @spec name() :: String.t()
   def name do
-    Module.concat(__MODULE__, Faker.mlocale()).name
+    localised_module().name
   end
 
   @doc """
@@ -22,11 +28,17 @@ defmodule Faker.Name do
   ## Examples
 
       iex> Faker.Name.first_name()
-      #=> "Iva"
+      "Joany"
+      iex> Faker.Name.first_name()
+      "Elizabeth"
+      iex> Faker.Name.first_name()
+      "Abe"
+      iex> Faker.Name.first_name()
+      "Ozella"
   """
   @spec first_name() :: String.t()
   def first_name do
-    Module.concat(__MODULE__, Faker.mlocale()).first_name
+    localised_module().first_name
   end
 
   @doc """
@@ -35,11 +47,17 @@ defmodule Faker.Name do
   ## Examples
 
       iex> Faker.Name.last_name()
-      #=> "Veum"
+      "Blick"
+      iex> Faker.Name.last_name()
+      "Hayes"
+      iex> Faker.Name.last_name()
+      "Schumm"
+      iex> Faker.Name.last_name()
+      "Rolfson"
   """
   @spec last_name() :: String.t()
   def last_name do
-    Module.concat(__MODULE__, Faker.mlocale()).last_name
+    localised_module().last_name
   end
 
   @doc """
@@ -48,11 +66,17 @@ defmodule Faker.Name do
   ## Examples
 
       iex> Faker.Name.title()
-      #=> "Chief Brand Planner"
+      "Dynamic Identity Administrator"
+      iex> Faker.Name.title()
+      "Product Communications Technician"
+      iex> Faker.Name.title()
+      "Legacy Accountability Architect"
+      iex> Faker.Name.title()
+      "Customer Data Representative"
   """
   @spec title() :: String.t()
   def title do
-    Module.concat(__MODULE__, Faker.mlocale()).title
+    localised_module().title
   end
 
   @doc """
@@ -61,11 +85,17 @@ defmodule Faker.Name do
   ## Examples
 
       iex> Faker.Name.suffix()
-      #=> "III"
+      "II"
+      iex> Faker.Name.suffix()
+      "V"
+      iex> Faker.Name.suffix()
+      "V"
+      iex> Faker.Name.suffix()
+      "V"
   """
   @spec suffix() :: String.t()
   def suffix do
-    Module.concat(__MODULE__, Faker.mlocale()).suffix
+    localised_module().suffix
   end
 
   @doc """
@@ -74,10 +104,18 @@ defmodule Faker.Name do
   ## Examples
 
       iex> Faker.Name.prefix()
-      #=> "Miss"
+      "Mr."
+      iex> Faker.Name.prefix()
+      "Mrs."
+      iex> Faker.Name.prefix()
+      "Mr."
+      iex> Faker.Name.prefix()
+      "Dr."
   """
   @spec prefix() :: String.t()
   def prefix do
-    Module.concat(__MODULE__, Faker.mlocale()).prefix
+    localised_module().prefix
   end
+
+  defp localised_module, do: Module.concat(__MODULE__, Faker.mlocale())
 end

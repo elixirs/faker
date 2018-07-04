@@ -19,7 +19,7 @@ defmodule Faker.Beer do
   """
   @spec name() :: String.t()
   def name do
-    Module.concat(__MODULE__, Faker.mlocale()).name
+    localised_module().name
   end
 
   @doc """
@@ -38,7 +38,7 @@ defmodule Faker.Beer do
   """
   @spec hop() :: String.t()
   def hop do
-    Module.concat(__MODULE__, Faker.mlocale()).hop
+    localised_module().hop
   end
 
   @doc """
@@ -57,7 +57,7 @@ defmodule Faker.Beer do
   """
   @spec yeast() :: String.t()
   def yeast do
-    Module.concat(__MODULE__, Faker.mlocale()).yeast
+    localised_module().yeast
   end
 
   @doc """
@@ -76,7 +76,7 @@ defmodule Faker.Beer do
   """
   @spec malt() :: String.t()
   def malt do
-    Module.concat(__MODULE__, Faker.mlocale()).malt
+    localised_module().malt
   end
 
   @doc """
@@ -95,7 +95,7 @@ defmodule Faker.Beer do
   """
   @spec style() :: String.t()
   def style do
-    Module.concat(__MODULE__, Faker.mlocale()).style
+    localised_module().style
   end
 
   @doc """
@@ -158,4 +158,6 @@ defmodule Faker.Beer do
   defp random_float do
     "#{Faker.random_between(0, 99)}.#{Faker.random_between(0, 9)}"
   end
+
+  defp localised_module, do: Module.concat(__MODULE__, Faker.mlocale())
 end
