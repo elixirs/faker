@@ -1,4 +1,4 @@
-defmodule LoremTest do
+defmodule Faker.LoremTest do
   use ExUnit.Case, async: true
 
   doctest Faker.Lorem

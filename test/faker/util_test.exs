@@ -1,4 +1,4 @@
-defmodule UtilTest do
+defmodule Faker.UtilTest do
   use ExUnit.Case, async: true
 
   test "pick/1" do

@@ -1,4 +1,4 @@
-defmodule Internet.EnTest do
+defmodule Faker.Internet.EnTest do
   use ExUnit.Case, async: true
 
   test "domain_suffix/0" do

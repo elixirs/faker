@@ -1,4 +1,4 @@
-defmodule PizzaTest do
+defmodule Faker.PizzaTest do
   use ExUnit.Case, async: true
 
   test "pizzas/1" do

@@ -1,4 +1,4 @@
-defmodule IndustryTest do
+defmodule Faker.IndustryTest do
   use ExUnit.Case, async: true
 
   test "industry/0" do
@@ -16,5 +16,4 @@ defmodule IndustryTest do
   test "sub_sector/0" do
     assert is_binary(Faker.Industry.sub_sector)
   end
-
 end

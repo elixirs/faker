@@ -1,4 +1,4 @@
-defmodule NatoTest do
+defmodule Faker.NatoTest do
   use ExUnit.Case, async: true
 
   test "letter_code_word/0" do

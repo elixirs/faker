@@ -1,4 +1,4 @@
-defmodule Internet.PtBrTest do
+defmodule Faker.Internet.PtBrTest do
   use ExUnit.Case, async: true
 
   test "domain_suffix/0" do

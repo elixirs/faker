@@ -1,4 +1,4 @@
-defmodule DateTimeTest do
+defmodule Faker.DateTimeTest do
   use ExUnit.Case, async: true
 
   test "forward/1" do

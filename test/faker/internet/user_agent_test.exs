@@ -1,4 +1,4 @@
-defmodule Internet.UserAgentTest do
+defmodule Faker.Internet.UserAgentTest do
   use ExUnit.Case, async: true
 
   alias Faker.Internet.UserAgent
