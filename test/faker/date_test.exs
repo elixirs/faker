@@ -1,6 +1,8 @@
 defmodule Faker.DateTest do
   use ExUnit.Case, async: true
 
+  doctest Faker.Date
+
   test "date_of_birth/0" do
     assert age(Faker.Date.date_of_birth()) in 18..99
   end

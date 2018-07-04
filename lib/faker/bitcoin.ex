@@ -11,10 +11,13 @@ defmodule Faker.Bitcoin do
   ## Examples
 
       iex> Faker.Bitcoin.address()
-      #=> "15SYCAaXvxosAmndphQthDok7SFTQ7Dddc"
-
+      "1Lb2DM8vNXubePBWV7xmRnqJp5YT3BatcQ"
+      iex> Faker.Bitcoin.address()
+      "1erV2PhPaR4ndbEvLWDD9KX8btdNJZXt5"
+      iex> Faker.Bitcoin.address(:main)
+      "1Pn5NbAbT5hZocVWKSBtmqygdVbeVoheWk"
       iex> Faker.Bitcoin.address(:testnet)
-      #=> "n1nEhSeHJiURtEymbtrV1Kv97C8BN6mBUP"
+      "mj1Vh7G8JZxg8gBtcQic2opTxtKUCQBBc5"
   """
   @spec address(atom) :: binary
   def address(:testnet) do
@@ -26,14 +29,14 @@ defmodule Faker.Bitcoin do
   end
 
   defp base58(hash) do
-    hash <> :binary.part(:crypto.hash(:sha256, :crypto.hash(:sha256, hash)), {0, 4})
-    |> :binary.bin_to_list
-    |> Enum.reverse
-    |> Enum.with_index
-    |> Enum.map(fn({v, i}) -> round(v * :math.pow(256, i)) end)
-    |> Enum.sum
+    (hash <> :binary.part(:crypto.hash(:sha256, :crypto.hash(:sha256, hash)), {0, 4}))
+    |> :binary.bin_to_list()
+    |> Enum.reverse()
+    |> Enum.with_index()
+    |> Enum.map(fn {v, i} -> round(v * :math.pow(256, i)) end)
+    |> Enum.sum()
     |> ret
-    |> String.reverse
+    |> String.reverse()
     |> npad(hash)
   end
 
@@ -41,9 +44,11 @@ defmodule Faker.Bitcoin do
   defp npad(addr, _), do: addr
 
   defp ret(val), do: ret(round(val), "")
+
   defp ret(val, acc) when val > 0 do
     ret(div(val, 58), acc <> letter(rem(val, 58)))
   end
+
   defp ret(_, acc), do: acc
 
   defp letter(val) do
