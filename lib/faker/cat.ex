@@ -1,4 +1,6 @@
 defmodule Faker.Cat do
+  import Faker, only: [localize: 1]
+
   @moduledoc """
   Functions for generating Cat names, breeds, and registries
   """
@@ -18,9 +20,7 @@ defmodule Faker.Cat do
       "Max"
   """
   @spec name() :: String.t()
-  def name do
-    localised_module().name
-  end
+  localize(:name)
 
   @doc """
   Return a random Cat breed
@@ -37,9 +37,7 @@ defmodule Faker.Cat do
       "Asian Semi-longhair"
   """
   @spec breed() :: String.t()
-  def breed do
-    localised_module().breed
-  end
+  localize(:breed)
 
   @doc """
   Return a random Cat registry
@@ -56,9 +54,5 @@ defmodule Faker.Cat do
       "Fédération Internationale Féline"
   """
   @spec registry() :: String.t()
-  def registry do
-    localised_module().registry
-  end
-
-  defp localised_module, do: Module.concat(__MODULE__, Faker.mlocale())
+  localize(:registry)
 end
