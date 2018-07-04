@@ -10,6 +10,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Added
 
+* Add doctests for Team [[@vbrazo][]]
 * `Faker.Name.PtBr` and `Faker.Name.Es` [@vbrazo][]
 * Add doctests for Commerce [[@vbrazo][]]
 * Add doctests for StarWars [[@vbrazo][]]
