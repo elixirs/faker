@@ -7,17 +7,6 @@ defmodule Faker.Date do
 
   @doc """
   Returns a random date of birth for a person with an age specified by a number or range
-
-  ## Examples
-
-      iex> Faker.Date.date_of_birth()
-      ~D[1936-01-25]
-      iex> Faker.Date.date_of_birth(1)
-      ~D[2016-12-25]
-      iex> Faker.Date.date_of_birth(10..19)
-      ~D[2004-03-09]
-      iex> Faker.Date.date_of_birth(20..99)
-      ~D[1992-06-20]
   """
   @spec date_of_birth() :: Date.t()
   def date_of_birth(age_or_range \\ 18..99)

@@ -2,6 +2,10 @@ defmodule Faker.ShakespeareTest do
   use ExUnit.Case, async: true
   import Faker.Lorem.Shakespeare
 
+  doctest Faker.Lorem.Shakespeare
+  doctest Faker.Lorem.Shakespeare.En
+  doctest Faker.Lorem.Shakespeare.Ru
+
   test "hamlet/0" do
     assert String.length(hamlet()) != 0
     assert Regex.match?(~r/.+/, hamlet())

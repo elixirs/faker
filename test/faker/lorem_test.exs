@@ -1,9 +1,10 @@
 defmodule LoremTest do
   use ExUnit.Case, async: true
 
+  doctest Faker.Lorem
+
   test "characters/0" do
-    assert is_list(Faker.Lorem.characters)
-    assert length(Faker.Lorem.characters) in 15..255
+    assert length(Faker.Lorem.characters()) in 15..255
   end
 
   test "characters/1" do
@@ -15,21 +16,18 @@ defmodule LoremTest do
   end
 
   test "paragraph/0" do
-    assert is_binary(Faker.Lorem.paragraph)
-    assert length(Regex.scan(~r/[.,?!]/, Faker.Lorem.paragraph)) in 2..5
+    assert length(Regex.scan(~r/[.,?!]/, Faker.Lorem.paragraph())) in 2..5
   end
 
   test "paragraph/1" do
-    assert is_binary(Faker.Lorem.paragraph(2..3))
-    assert is_binary(Faker.Lorem.paragraph(2))
     assert length(Regex.scan(~r/[.,?!]/, Faker.Lorem.paragraph(2..3))) in 2..3
     assert length(Regex.scan(~r/[.,?!]/, Faker.Lorem.paragraph(2))) == 2
     assert length(Regex.scan(~r/[.,?!]/, Faker.Lorem.paragraph(3))) == 3
   end
 
   test "paragraphs/0" do
-    assert is_list(Faker.Lorem.paragraphs)
-    assert length(Faker.Lorem.paragraphs) in 2..5
+    assert is_list(Faker.Lorem.paragraphs())
+    assert length(Faker.Lorem.paragraphs()) in 2..5
   end
 
   test "paragraphs/1" do
@@ -41,25 +39,21 @@ defmodule LoremTest do
   end
 
   test "sentence/0" do
-    assert is_binary(Faker.Lorem.sentence)
-    assert String.ends_with?(Faker.Lorem.sentence, [".", "!", "?"])
+    assert String.ends_with?(Faker.Lorem.sentence(), [".", "!", "?"])
   end
 
   test "sentence/1" do
-    assert is_binary(Faker.Lorem.sentence(4..7))
-    assert is_binary(Faker.Lorem.sentence(4))
     assert String.ends_with?(Faker.Lorem.sentence(4..7), [".", "!", "?"])
     assert String.ends_with?(Faker.Lorem.sentence(4), [".", "!", "?"])
   end
 
   test "sentence/2" do
-    assert is_binary(Faker.Lorem.sentence(4, "."))
     assert String.ends_with?(Faker.Lorem.sentence(4, "?"), "?")
   end
 
   test "sentences/0" do
-    assert is_list(Faker.Lorem.sentences)
-    assert length(Faker.Lorem.sentences) in 2..5
+    assert is_list(Faker.Lorem.sentences())
+    assert length(Faker.Lorem.sentences()) in 2..5
   end
 
   test "sentences/1" do
@@ -70,13 +64,9 @@ defmodule LoremTest do
     assert length(Faker.Lorem.sentences(5)) == 5
   end
 
-  test "word/0" do
-    assert is_binary(Faker.Lorem.word)
-  end
-
   test "words/0" do
-    assert is_list(Faker.Lorem.words)
-    assert length(Faker.Lorem.words) in 3..6
+    assert is_list(Faker.Lorem.words())
+    assert length(Faker.Lorem.words()) in 3..6
   end
 
   test "words/1" do

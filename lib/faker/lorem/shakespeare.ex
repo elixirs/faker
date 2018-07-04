@@ -9,11 +9,17 @@ defmodule Faker.Lorem.Shakespeare do
   ## Examples
 
       iex> Faker.Lorem.Shakespeare.hamlet()
-      #=> "And it must follow, as the night the day, thou canst not then be false to any man."
+      "Brevity is the soul of wit."
+      iex> Faker.Lorem.Shakespeare.hamlet()
+      "And it must follow, as the night the day, thou canst not then be false to any man."
+      iex> Faker.Lorem.Shakespeare.hamlet()
+      "Do you think I am easier to be played on than a pipe?"
+      iex> Faker.Lorem.Shakespeare.hamlet()
+      "Rich gifts wax poor when givers prove unkind."
   """
   @spec hamlet() :: String.t()
   def hamlet do
-    Module.concat(__MODULE__, Faker.mlocale()).hamlet
+    localised_module().hamlet
   end
 
   @doc """
@@ -22,11 +28,17 @@ defmodule Faker.Lorem.Shakespeare do
   ## Examples
 
       iex> Faker.Lorem.Shakespeare.as_you_like_it()
-      #=> "How bitter a thing it is to look into happiness through another man's eyes!"
+      "For ever and a day."
+      iex> Faker.Lorem.Shakespeare.as_you_like_it()
+      "Can one desire too much of a good thing?."
+      iex> Faker.Lorem.Shakespeare.as_you_like_it()
+      "How bitter a thing it is to look into happiness through another man's eyes!"
+      iex> Faker.Lorem.Shakespeare.as_you_like_it()
+      "All the world's a stage, and all the men and women merely players. They have their exits and their entrances; And one man in his time plays many parts."
   """
   @spec as_you_like_it() :: String.t()
   def as_you_like_it do
-    Module.concat(__MODULE__, Faker.mlocale()).as_you_like_it
+    localised_module().as_you_like_it
   end
 
   @doc """
@@ -35,11 +47,17 @@ defmodule Faker.Lorem.Shakespeare do
   ## Examples
 
       iex> Faker.Lorem.Shakespeare.king_richard_iii()
-      #=> "Now is the winter of our discontent."
+      "The king's name is a tower of strength."
+      iex> Faker.Lorem.Shakespeare.king_richard_iii()
+      "A horse! a horse! my kingdom for a horse!"
+      iex> Faker.Lorem.Shakespeare.king_richard_iii()
+      "So wise so young, they say, do never live long."
+      iex> Faker.Lorem.Shakespeare.king_richard_iii()
+      "Now is the winter of our discontent."
   """
   @spec king_richard_iii() :: String.t()
   def king_richard_iii do
-    Module.concat(__MODULE__, Faker.mlocale()).king_richard_iii
+    localised_module().king_richard_iii
   end
 
   @doc """
@@ -48,10 +66,18 @@ defmodule Faker.Lorem.Shakespeare do
   ## Examples
 
       iex> Faker.Lorem.Shakespeare.romeo_and_juliet()
-      #=> "O! she doth teach the torches to burn bright."
+      "What's in a name? That which we call a rose by any other name would smell as sweet."
+      iex> Faker.Lorem.Shakespeare.romeo_and_juliet()
+      "For you and I are past our dancing days."
+      iex> Faker.Lorem.Shakespeare.romeo_and_juliet()
+      "For you and I are past our dancing days."
+      iex> Faker.Lorem.Shakespeare.romeo_and_juliet()
+      "For you and I are past our dancing days."
   """
   @spec romeo_and_juliet() :: String.t()
   def romeo_and_juliet do
-    Module.concat(__MODULE__, Faker.mlocale()).romeo_and_juliet
+    localised_module().romeo_and_juliet
   end
+
+  defp localised_module, do: Module.concat(__MODULE__, Faker.mlocale())
 end
