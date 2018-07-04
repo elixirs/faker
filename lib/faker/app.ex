@@ -98,6 +98,10 @@ defmodule Faker.App do
       "Redhold"
       iex> Faker.App.name()
       "Tempsoft"
+      iex> Faker.App.name()
+      "Tempsoft"
+      iex> Faker.App.name()
+      "Quo Lux"
   """
   @spec name() :: String.t()
   sampler(:name, [
@@ -174,6 +178,10 @@ defmodule Faker.App do
       "Mr. Ozella Sipes"
       iex> Faker.App.author()
       "Aniya Schiller"
+      iex> Faker.App.author()
+      "Frederique Murphy"
+      iex> Faker.App.author()
+      "Rutherford Inc"
   """
   @spec author() :: String.t()
   def author, do: author(Faker.random_between(0, 1))

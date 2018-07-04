@@ -14,10 +14,12 @@ defmodule Faker.Food do
       "Fish and chips"
       iex> Faker.Food.dish()
       "Pork belly buns"
+      iex> Faker.Food.dish()
+      "Pasta Carbonara"
   """
   @spec dish() :: String.t()
   def dish do
-    Module.concat(__MODULE__, Faker.mlocale()).dish
+    localised_module().dish
   end
 
   @doc """
@@ -31,10 +33,12 @@ defmodule Faker.Food do
       "28-day aged 300g USDA Certified Prime Ribeye, rosemary-thyme garlic butter, with choice of two sides."
       iex> Faker.Food.description()
       "Breaded fried chicken with waffles, and a side of maple syrup."
+      iex> Faker.Food.description()
+      "Creamy mascarpone cheese and custard layered between espresso and rum soaked house-made ladyfingers, topped with Valrhona cocoa powder."
   """
   @spec description() :: String.t()
   def description do
-    Module.concat(__MODULE__, Faker.mlocale()).description
+    localised_module().description
   end
 
   @doc """
@@ -48,10 +52,12 @@ defmodule Faker.Food do
       "Albacore Tuna"
       iex> Faker.Food.ingredient()
       "Potatoes"
+      iex> Faker.Food.ingredient()
+      "Tinned"
   """
   @spec ingredient() :: String.t()
   def ingredient do
-    Module.concat(__MODULE__, Faker.mlocale()).ingredient
+    localised_module().ingredient
   end
 
   @doc """
@@ -65,10 +71,12 @@ defmodule Faker.Food do
       "Ras-el-Hanout"
       iex> Faker.Food.spice()
       "Curry Hot"
+      iex> Faker.Food.spice()
+      "Peppercorns Mixed"
   """
   @spec spice() :: String.t()
   def spice do
-    Module.concat(__MODULE__, Faker.mlocale()).spice
+    localised_module().spice
   end
 
   @doc """
@@ -82,10 +90,12 @@ defmodule Faker.Food do
       "gallon"
       iex> Faker.Food.measurement()
       "pint"
+      iex> Faker.Food.measurement()
+      "cup"
   """
   @spec measurement() :: String.t()
   def measurement do
-    Module.concat(__MODULE__, Faker.mlocale()).measurement
+    localised_module().measurement
   end
 
   @doc """
@@ -99,10 +109,12 @@ defmodule Faker.Food do
       "3"
       iex> Faker.Food.measurement_size()
       "1"
+      iex> Faker.Food.measurement_size()
+      "1/2"
   """
   @spec measurement_size() :: String.t()
   def measurement_size do
-    Module.concat(__MODULE__, Faker.mlocale()).measurement_size
+    localised_module().measurement_size
   end
 
   @doc """
@@ -116,9 +128,13 @@ defmodule Faker.Food do
       "deciliter"
       iex> Faker.Food.metric_measurement()
       "liter"
+      iex> Faker.Food.metric_measurement()
+      "milliliter"
   """
   @spec metric_measurement() :: String.t()
   def metric_measurement do
-    Module.concat(__MODULE__, Faker.mlocale()).metric_measurement
+    localised_module().metric_measurement
   end
+
+  defp localised_module, do: Module.concat(__MODULE__, Faker.mlocale())
 end
