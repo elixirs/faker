@@ -9,7 +9,13 @@ defmodule Faker.String do
   ## Examples
 
       iex> Faker.String.base64()
-      #=> "JfuzivfU"
+      "1tmLiMhm"
+      iex> Faker.String.base64()
+      "29Tee6SN"
+      iex> Faker.String.base64()
+      "Kfp7+Qco"
+      iex> Faker.String.base64()
+      "Z7xbfJZP"
   """
   @spec base64(integer) :: String.t()
   def base64(length \\ 8) do
