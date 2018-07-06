@@ -75,8 +75,8 @@
 - [Faker.Team](lib/faker/team.ex)
 - [Faker.Team.En](lib/faker/team/en.ex)
 <!-- U -->
-- [Faker.Util](docs/util.md)
-- [Faker.UUID](docs/uuid.md)
+- [Faker.Util](lib/faker/util.ex)
+- [Faker.UUID](lib/faker/uuid.ex)
 <!-- V -->
 <!-- W -->
 <!-- X -->
