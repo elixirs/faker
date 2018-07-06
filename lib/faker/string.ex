@@ -8,12 +8,12 @@ defmodule Faker.String do
 
   ## Examples
 
+      iex> Faker.String.base64()
+      "1tmLiMhm"
+      iex> Faker.String.base64()
+      "29Tee6SN"
       iex> Faker.String.base64(5)
-      "1tmLi"
-      iex> Faker.String.base64()
-      "ZvSW29Te"
-      iex> Faker.String.base64()
-      "jQ9SKfp7"
+      "Kfp7+"
       iex> Faker.String.base64(100)
       "KLJyZ7xbfJZPMy3J7dAsyfOB3vnZIqFGv4VQil8D/xh1C/Nj9K7xJk47zJtcKsy5mjpJk61Wt3jcJu3bfgwuScTmOOYt4ykzvDUl"
   """
