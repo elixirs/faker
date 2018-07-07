@@ -1,11 +1,11 @@
 /_build
 /deps
+/.idea
+/doc
+/.elixir_ls
+/.vscode
 erl_crash.dump
 *.ez
-doc
 *.swp
-
-.idea
 *.iml
-
 .DS_Store
