@@ -1,4 +1,4 @@
-defmodule PokemonTest do
+defmodule Faker.PokemonTest do
   use ExUnit.Case, async: true
 
   doctest Faker.Pokemon
