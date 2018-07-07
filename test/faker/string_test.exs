@@ -1,9 +1,7 @@
 defmodule Faker.StringTest do
   use ExUnit.Case, async: true
 
-  test "base64/0" do
-    assert is_binary(Faker.String.base64())
-  end
+  doctest Faker.String
 
   test "base64/1" do
     length = Faker.String.base64(12) |> String.length()
