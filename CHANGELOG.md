@@ -10,6 +10,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Added
 
+* Add doctests for Strings [@vbrazo][]
 * Add doctests for Nato [@vbrazo][]
 * Add doctests for Internet [@vbrazo][]
 * Add doctests for Superhero [@vbrazo][]
