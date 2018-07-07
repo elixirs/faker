@@ -5,6 +5,17 @@ defmodule Faker.Util do
 
   @doc """
   Pick a random element from the list
+
+  ## Examples
+
+      iex> Faker.Util.pick([1, 3, 5, 7])
+      5
+      iex> Faker.Util.pick([true, false, nil])
+      nil
+      iex> Faker.Util.pick(["a", "b", "c"])
+      "a"
+      iex> Faker.Util.pick([1, "2", 3.0])
+      3.0
   """
   @spec pick([any]) :: any
   def pick(list) do
@@ -13,8 +24,19 @@ defmodule Faker.Util do
 
   @doc """
   Execute fun n times with the index as first param and return the results as a list
+
+  ## Examples
+
+      iex> Faker.Util.list(3, &(&1))
+      [0, 1, 2]
+      iex> Faker.Util.list(3, &(&1 + 1))
+      [1, 2, 3]
+      iex> Faker.Util.list(5, &(&1 * &1))
+      [0, 1, 4, 9, 16]
+      iex> Faker.Util.list(3, &(to_string(&1)))
+      ["0", "1", "2"]
   """
-  @spec list(integer, ((integer) -> any)) :: [any]
+  @spec list(integer, (integer -> any)) :: [any]
   def list(n, fun) when is_function(fun, 1) do
     Enum.map(0..(n - 1), &fun.(&1))
   end
@@ -29,15 +51,33 @@ defmodule Faker.Util do
 
   ## Examples
 
-      join(3, ", ", &Faker.Code.isbn13/0) # => "9785053574562, 9787187574302, 9798231475230"
+      iex> Faker.Util.join(3, ", ", &Faker.Code.isbn13/0)
+      "9781542646109, 9783297052358, 9790203032090"
+      iex> Faker.Util.join(4, "-", fn -> Faker.format("####") end)
+      "7337-6033-7459-8109"
+      iex> Faker.Util.join(2, " vs ", &Faker.Superhero.name/0)
+      "Falcon vs Green Blink Claw"
+      iex> Faker.Util.join(2, " or ", &Faker.Color.name/0)
+      "Purple or White"
   """
-  @spec join(integer, binary, ((integer) -> binary)) :: binary
+  @spec join(integer, binary, (integer -> binary)) :: binary
   def join(n, joiner \\ "", fun) do
     Enum.join(list(n, fun), joiner)
   end
 
   @doc """
   Get a random digit as a string; one of 0-9
+
+  ## Examples
+
+      iex> Faker.Util.digit()
+      "0"
+      iex> Faker.Util.digit()
+      "1"
+      iex> Faker.Util.digit()
+      "5"
+      iex> Faker.Util.digit()
+      "4"
   """
   @spec digit() :: binary
   def digit do
@@ -46,6 +86,17 @@ defmodule Faker.Util do
 
   @doc """
   Converts a list to a string, with "and" before the last item. Uses an Oxford comma.
+
+  ## Examples
+
+      iex> Faker.Util.to_sentence(["Black", "White"])
+      "Black and White"
+      iex> Faker.Util.to_sentence(["Jon Snow"])
+      "Jon Snow"
+      iex> Faker.Util.to_sentence(["Oceane", "Angeline", "Nicholas"])
+      "Angeline, Nicholas, and Oceane"
+      iex> Faker.Util.to_sentence(["One", "Two", "Three", "Four"])
+      "Two, Three, Four, and One"
   """
   @spec to_sentence([binary]) :: binary
   def to_sentence(items) do
@@ -54,6 +105,19 @@ defmodule Faker.Util do
 
   @doc """
   Get a random alphabet character as a string; one of a-z or A-Z
+
+  ## Examples
+
+      iex> Faker.Util.letter()
+      "E"
+      iex> Faker.Util.letter()
+      "L"
+      iex> Faker.Util.letter()
+      "R"
+      iex> Faker.Util.letter()
+      "C"
+      iex> Faker.Util.letter()
+      "e"
   """
   @spec letter() :: binary
   def letter do
@@ -62,6 +126,17 @@ defmodule Faker.Util do
 
   @doc """
   Get a random lowercase character as a string; one of a-z
+
+  ## Examples
+
+      iex> Faker.Util.lower_letter()
+      "e"
+      iex> Faker.Util.lower_letter()
+      "l"
+      iex> Faker.Util.lower_letter()
+      "r"
+      iex> Faker.Util.lower_letter()
+      "c"
   """
   @spec lower_letter() :: binary
   def lower_letter do
@@ -70,6 +145,17 @@ defmodule Faker.Util do
 
   @doc """
   Get a random uppercase character as a string; one of A-Z
+
+  ## Examples
+
+      iex> Faker.Util.letter()
+      "E"
+      iex> Faker.Util.letter()
+      "L"
+      iex> Faker.Util.letter()
+      "R"
+      iex> Faker.Util.letter()
+      "C"
   """
   @spec upper_letter() :: binary
   def upper_letter do
@@ -90,21 +176,15 @@ defmodule Faker.Util do
   elements are being picked again. This is done by keeping a list of remaining elements that have
   not been picked yet. The list of remaining element is returned, as well as the randomly picked
   element.
-
-  ## Example
-
-      my_cycle = cycle_start ~w(1 2 3)
-      cycle my_cycle #=> 2
-      cycle my_cycle #=> 3
-      cycle my_cycle #=> 1
   """
   @spec cycle(pid) :: any
   def cycle(cycle_pid) do
     Agent.get_and_update(cycle_pid, fn
       {[], items} ->
-        [h|t] = Enum.shuffle(items)
+        [h | t] = Enum.shuffle(items)
         {h, {t, items}}
-      {[h|t], items} ->
+
+      {[h | t], items} ->
         {h, {t, items}}
     end)
   end
@@ -126,28 +206,37 @@ defmodule Faker.Util do
 
   ## Examples
 
-      format("%2d-%3d %a%A %2d%%") #=> "74-381 sK 32%"
-      format("%8nBATMAN", n: fn() -> "nana " end) #=> "nana nana nana nana nana nana nana nana BATMAN"
+      iex> Faker.Util.format("%2d-%3d %a%A %2d%%")
+      "01-542 aS 61%"
+      iex> Faker.Util.format("%8nBATMAN", n: fn() -> "nana " end)
+      "nana nana nana nana nana nana nana nana BATMAN"
   """
-  @spec format(binary, Keyword.t) :: binary
-  def format(format_str, rules \\ [d: &digit/0, A: &upper_letter/0, a: &lower_letter/0, b: &letter/0]) do
+  @spec format(binary, Keyword.t()) :: binary
+  def format(
+        format_str,
+        rules \\ [d: &digit/0, A: &upper_letter/0, a: &lower_letter/0, b: &letter/0]
+      ) do
     Regex.replace(~r/%(?:%|(\d*)([a-zA-Z]))/, format_str, &format_replace(&1, &2, &3, rules))
   end
 
   defp format_replace("%%", _, _, _), do: "%"
+
   defp format_replace(_, "", rule_char, rules) do
     format_replace(nil, 1, rule_char, rules)
   end
+
   defp format_replace(_, length_str, rule_char, rules) when is_binary(length_str) do
     format_replace(nil, String.to_integer(length_str), rule_char, rules)
   end
+
   defp format_replace(_, n, rule_char, rules) when is_integer(n) do
     rule_key = String.to_existing_atom(rule_char)
+
     case rules[rule_key] do
       fun when is_function(fun) -> join(n, fun)
       _ -> raise "Rule #{rule_key} not found or not a function"
     end
   end
 
-  defp localised_module, do: Module.concat(__MODULE__, Faker.mlocale)
+  defp localised_module, do: Module.concat(__MODULE__, Faker.mlocale())
 end

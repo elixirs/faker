@@ -10,30 +10,18 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Added
 
-* Add doctests for Industry [@vbrazo][]
-* Add missing docs - `USAGE.md` [@vbrazo][]
-* Add doctests for Strings [@vbrazo][]
-* Add doctests for Nato [@vbrazo][]
-* Add doctests for Internet [@vbrazo][]
-* Add doctests for Superhero [@vbrazo][]
-* Add doctests for Team [[@vbrazo][]]
-* `Faker.Name.PtBr` and `Faker.Name.Es` [@vbrazo][]
-* Add doctests for Commerce [[@vbrazo][]]
-* Add doctests for StarWars [[@vbrazo][]]
-* Add doctests for Company [[@vbrazo][]]
-* Add doctests for Pokemon [[@vbrazo][]]
-* Add doctests for Cat [[@vbrazo][]]
 * Tests covered by actual values not just checking that result is a binary [[@igas][]]
+* `Faker.Name.PtBr` and `Faker.Name.Es` [[@vbrazo][]]
 * `Faker.UUID.v4/0` [[@anthonator][]]
-* mix format config file [[@igas][]]
-* `Faker.Food` to generate Food data [@vbrazo][]
-* `Faker.Color.En`, `Faker.Color.Es` and `Faker.Color.PtBr` [@vbrazo][]
-* `Faker.Internet` added Spanish and Brazilian Portuguese translations [@vbrazo][]
-* `Faker.Address.geohash/0` [[@anthonator][]] [[@feyl][]]
+* `Faker.Food` to generate Food data [[@vbrazo][]]
+* `Faker.Color.En`, `Faker.Color.Es` and `Faker.Color.PtBr` [[@vbrazo][]]
+* `Faker.Internet` added Spanish and Brazilian Portuguese translations [[@vbrazo][]]
+* `Faker.Address.geohash/0` [[@anthonator][]] and [[@feyl][]]
 
 ### Changed
 
-* Documentation moved to hexdocs.pm [[@MarcusSky][]]
+* Codebase been reformated with elixir formatter [[@vbrazo][]] and [[@igas][]]
+* Documentation moved to hexdocs.pm [[@MarcusSky][]], [[@vbrazo][]], and [[@igas][]]
 * Updated dependencies [[@igas][]]
 
 ### Deprecated
