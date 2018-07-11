@@ -23,6 +23,37 @@ defmodule Faker.Util do
   end
 
   @doc """
+  Generate N unique elements
+
+  ## Examples
+
+      iex> Faker.Util.sample_uniq(2, &Faker.Internet.email/0)
+      ["conor2058@schiller.com", "elizabeth2056@rolfson.net"]
+
+      iex> Faker.Util.sample_uniq(10, fn -> Faker.String.base64(4) end)
+      ["1tmL", "29Te", "Byiy", "Kfp7", "Z7xb", "lk8z", "pI0P", "yGb0", "ye3Q", "yfOB"]
+
+      iex> Faker.Util.sample_uniq(1, &Faker.Phone.EnUs.area_code/0)
+      ["825"]
+
+      iex> Faker.Util.sample_uniq(0, &Faker.Internet.email/0)
+      ** (FunctionClauseError) no function clause matching in Faker.Util.sample_uniq/3
+  """
+  @spec sample_uniq(pos_integer, (() -> any), MapSet.t) :: [any]
+  def sample_uniq(count, sampler, acc \\ MapSet.new())
+      when is_integer(count) and count > 0 and is_function(sampler, 0) do
+    case MapSet.size(acc) do
+      ^count ->
+        MapSet.to_list(acc)
+
+      _ ->
+        acc = MapSet.put(acc, sampler.())
+
+        sample_uniq(count, sampler, acc)
+    end
+  end
+
+  @doc """
   Execute fun n times with the index as first param and return the results as a list
 
   ## Examples
