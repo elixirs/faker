@@ -1,6 +1,7 @@
 defmodule Faker.Internet do
+  alias Faker.Lorem
   alias Faker.Name.En, as: Name
-  alias Faker.{Lorem, Util}
+  alias Faker.Util
   import Faker.Util, only: [pick: 1]
 
   @moduledoc """
