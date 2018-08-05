@@ -21,11 +21,6 @@ format:
   script:
     - mix format --check-formatted
 
-elixir1.3:
-  image: elixir:1.3-slim
-  script:
-    - mix test
-
 elixir1.4:
   image: elixir:1.4-slim
   script:
@@ -38,5 +33,10 @@ elixir1.5:
 
 elixir1.6:
   image: elixir:1.6-alpine
+  script:
+    - mix test
+
+elixir1.7:
+  image: elixir:1.7-alpine
   script:
     - mix test
