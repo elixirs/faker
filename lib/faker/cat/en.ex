@@ -166,7 +166,7 @@ defmodule Faker.Cat.En do
   ])
 
   @doc """
-  Returns a yeast name string
+  Returns a cat registry string
 
   ## Examples
 
