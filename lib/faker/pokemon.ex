@@ -4,7 +4,7 @@ defmodule Faker.Pokemon do
   """
 
   @doc """
-  Returns a ramdom Pokemon name
+  Returns a random Pokemon name
 
   ## Examples
 
