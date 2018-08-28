@@ -32,6 +32,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 ### Fixed
 
 * `Faker.App.semver/0` is not generating invalid versions anymore fixed by [[@igas][]] found by [[@ConnorRigby][]]
+* `Faker.Lorem` is not redefining documentation in multiple functions anymore fixed and found by [[@pfac][]]
 
 ### Security
 
