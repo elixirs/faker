@@ -31,9 +31,15 @@ defmodule Faker.Phone.EnGb do
   ## Examples
 
       iex> Faker.Phone.EnGb.number()
-      #=> "+4433138xxxx"
+      "+44054264610"
+      iex> Faker.Phone.EnGb.number()
+      "+44562970523"
+      iex> Faker.Phone.EnGb.number()
+      "+447502 030320"
+      iex> Faker.Phone.EnGb.number()
+      "+447933 760337"
   """
-  @spec number() :: String.t
+  @spec number() :: String.t()
   def number do
     if Faker.random_between(0, 1) == 0 do
       landline_number()
@@ -48,24 +54,50 @@ defmodule Faker.Phone.EnGb do
   ## Examples
 
       iex> Faker.Phone.EnGb.landline_number()
-      #=> "+44227030xxx"
+      "+44331542646"
+      iex> Faker.Phone.EnGb.landline_number()
+      "+44560832970"
+      iex> Faker.Phone.EnGb.landline_number()
+      "+44023570203"
+      iex> Faker.Phone.EnGb.landline_number()
+      "+44703209733"
   """
-  @spec landline_number() :: String.t
+  @spec landline_number() :: String.t()
   def landline_number do
     "+44#{number_prefix()}"
     |> random_numbers_until(12)
   end
 
-  samplerp :cell_number_format, ["074## ######", "075## ######", "076## ######", "077## ######", "078## ######", "079## ######", "+4474## ######", "+4475## ######", "+4476## ######", "+4477## ######", "+4478## ######", "+4479## ######"]
+  samplerp(:cell_number_format, [
+    "074## ######",
+    "075## ######",
+    "076## ######",
+    "077## ######",
+    "078## ######",
+    "079## ######",
+    "+4474## ######",
+    "+4475## ######",
+    "+4476## ######",
+    "+4477## ######",
+    "+4478## ######",
+    "+4479## ######"
+  ])
+
   @doc """
   Returns a random UK mobile phone number
 
   ## Examples
 
       iex> Faker.Phone.EnGb.cell_number()
-      #=> "07464 180xxx"
+      "+447415 426461"
+      iex> Faker.Phone.EnGb.cell_number()
+      "07483 297052"
+      iex> Faker.Phone.EnGb.cell_number()
+      "+447557 020303"
+      iex> Faker.Phone.EnGb.cell_number()
+      "+447609 733760"
   """
-  @spec cell_number() :: String.t
+  @spec cell_number() :: String.t()
   def cell_number do
     Faker.format(cell_number_format())
   end
@@ -76,15 +108,22 @@ defmodule Faker.Phone.EnGb do
   ## Examples
 
       iex> Faker.Phone.EnGb.mobile_number()
-      #=> "07866 45xxxx"
+      "+447415 426461"
+      iex> Faker.Phone.EnGb.mobile_number()
+      "07483 297052"
+      iex> Faker.Phone.EnGb.mobile_number()
+      "+447557 020303"
+      iex> Faker.Phone.EnGb.mobile_number()
+      "+447609 733760"
   """
-  @spec mobile_number() :: String.t
+  @spec mobile_number() :: String.t()
   defdelegate mobile_number, to: __MODULE__, as: :cell_number
 
   defp random_numbers_until(out, count) do
-    char_count = out
-    |> String.to_charlist
-    |> Enum.count
+    char_count =
+      out
+      |> String.to_charlist()
+      |> Enum.count()
 
     format = String.duplicate("#", count - char_count)
 
