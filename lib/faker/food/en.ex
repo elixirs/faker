@@ -856,7 +856,7 @@ defmodule Faker.Food.En do
   ])
 
   @doc """
-  Returns a sushi.
+  Returns a type of sushi.
 
   ## Examples
 
