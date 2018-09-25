@@ -11,6 +11,8 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 ### Added
 
 * Remove special characters in `Faker::Internet` [[@vbrazo][]]
+* `Add Faker.Food.sushi/0` [[@vbrazo][]]
+* `Faker.Team.PtBr` [[@vbrazo][]]
 * Tests covered by actual values not just checking that result is a binary [[@igas][]]
 * `Faker.Name.PtBr` and `Faker.Name.Es` [[@vbrazo][]]
 * `Faker.UUID.v4/0` [[@anthonator][]]
@@ -33,6 +35,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 ### Fixed
 
 * `Faker.App.semver/0` is not generating invalid versions anymore fixed by [[@igas][]] found by [[@ConnorRigby][]]
+* `Faker.Lorem` is not redefining documentation in multiple functions anymore fixed and found by [[@pfac][]]
 
 ### Security
 

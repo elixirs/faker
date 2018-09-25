@@ -3,4 +3,5 @@ defmodule Faker.TeamTest do
 
   doctest Faker.Team
   doctest Faker.Team.En
+  doctest Faker.Team.PtBr
 end
