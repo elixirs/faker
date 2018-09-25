@@ -6,7 +6,7 @@ defmodule Faker.Beer.En do
   """
 
   @doc """
-  Returns a Beer name string
+  Returns a Beer brand string
 
   ## Examples
 
