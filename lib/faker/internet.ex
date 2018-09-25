@@ -337,6 +337,6 @@ defmodule Faker.Internet do
   defp localised_module, do: Module.concat(__MODULE__, Faker.mlocale())
 
   defp remove_special_characters(string) do
-    String.replace(string, "!#$%&'*+-/=?^_`{|}~", "")
+    String.replace(string, ~s('"), "")
   end
 end
