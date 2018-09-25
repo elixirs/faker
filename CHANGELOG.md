@@ -10,6 +10,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Added
 
+* `Faker.Team.PtBr` [[@vbrazo][]]
 * Tests covered by actual values not just checking that result is a binary [[@igas][]]
 * `Faker.Name.PtBr` and `Faker.Name.Es` [[@vbrazo][]]
 * `Faker.UUID.v4/0` [[@anthonator][]]
