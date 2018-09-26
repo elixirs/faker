@@ -11,7 +11,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 ### Added
 
 * Remove special characters in `Faker::Internet` [[@vbrazo][]]
-* `Add Faker.Food.sushi/0` [[@vbrazo][]]
+* `Faker.Food.sushi/0` [[@vbrazo][]]
 * `Faker.Team.PtBr` [[@vbrazo][]]
 * Tests covered by actual values not just checking that result is a binary [[@igas][]]
 * `Faker.Name.PtBr` and `Faker.Name.Es` [[@vbrazo][]]
