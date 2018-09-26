@@ -1,5 +1,6 @@
 defmodule Faker.UUIDTest do
   use ExUnit.Case, async: true
+
   doctest Faker.UUID
 
   test "v4/0" do

@@ -1,4 +1,4 @@
-defmodule AddressTest do
+defmodule Faker.AddressTest do
   use ExUnit.Case, async: true
 
   doctest Faker.Address

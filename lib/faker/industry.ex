@@ -10,11 +10,17 @@ defmodule Faker.Industry do
   ## Examples
 
       iex> Faker.Industry.industry
-      #=> "Basic Materials"
+      "Oil & Gas"
+      iex> Faker.Industry.industry
+      "Health Care"
+      iex> Faker.Industry.industry
+      "Consumer Services"
+      iex> Faker.Industry.industry
+      "Telecommunications"
   """
   @spec industry() :: String.t()
   def industry do
-    Module.concat(__MODULE__, Faker.mlocale()).industry
+    localised_module().industry
   end
 
   @doc """
@@ -23,11 +29,17 @@ defmodule Faker.Industry do
   ## Examples
 
       iex> Faker.Industry.super_sector
-      #=> "Basic Resources"
+      "Media"
+      iex> Faker.Industry.super_sector
+      "Banks"
+      iex> Faker.Industry.super_sector
+      "Chemicals"
+      iex> Faker.Industry.super_sector
+      "Oil & Gas"
   """
   @spec super_sector() :: String.t()
   def super_sector do
-    Module.concat(__MODULE__, Faker.mlocale()).super_sector
+    localised_module().super_sector
   end
 
   @doc """
@@ -36,11 +48,17 @@ defmodule Faker.Industry do
   ## Examples
 
       iex> Faker.Industry.sector
-      #=> "Industrial Metals & Mining"
+      "Beverages"
+      iex> Faker.Industry.sector
+      "Chemicals"
+      iex> Faker.Industry.sector
+      "Industrial Engineering"
+      iex> Faker.Industry.sector
+      "Mining"
   """
   @spec sector() :: String.t()
   def sector do
-    Module.concat(__MODULE__, Faker.mlocale()).sector
+    localised_module().sector
   end
 
   @doc """
@@ -48,11 +66,19 @@ defmodule Faker.Industry do
 
   ## Examples
 
-      iex> Faker.Industry.sub_sector
-      #=> "Nonferrous Metals"
+      iex> Faker.Industry.sub_sector()
+      "General Mining"
+      iex> Faker.Industry.sub_sector()
+      "Defense"
+      iex> Faker.Industry.sub_sector()
+      "ÊPaper"
+      iex> Faker.Industry.sub_sector()
+      "Pipelines"
   """
   @spec sub_sector() :: String.t()
   def sub_sector do
-    Module.concat(__MODULE__, Faker.mlocale()).sub_sector
+    localised_module().sub_sector
   end
+
+  defp localised_module, do: Module.concat(__MODULE__, Faker.mlocale())
 end

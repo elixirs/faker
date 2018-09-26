@@ -136,5 +136,24 @@ defmodule Faker.Food do
     localised_module().metric_measurement
   end
 
+  @doc """
+  Returns a type of sushi.
+
+  ## Examples
+
+      iex> Faker.Food.sushi()
+      "Whitespotted conger"
+      iex> Faker.Food.sushi()
+      "Japanese horse mackerel"
+      iex> Faker.Food.sushi()
+      "Salmon"
+      iex> Faker.Food.sushi()
+      "Octopus"
+  """
+  @spec sushi() :: String.t()
+  def sushi do
+    localised_module().sushi
+  end
+
   defp localised_module, do: Module.concat(__MODULE__, Faker.mlocale())
 end
