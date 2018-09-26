@@ -854,4 +854,59 @@ defmodule Faker.Food.En do
     "Vegetable Seasoning",
     "Zahtar Spice Mix"
   ])
+
+  @doc """
+  Returns a type of sushi.
+
+  ## Examples
+
+      iex> Faker.Food.En.sushi()
+      "Whitespotted conger"
+      iex> Faker.Food.En.sushi()
+      "Japanese horse mackerel"
+      iex> Faker.Food.En.sushi()
+      "Salmon"
+      iex> Faker.Food.En.sushi()
+      "Octopus"
+  """
+  @spec sushi() :: String.t()
+  sampler(:sushi, [
+    "Abalone",
+    "Alaskan pink shrimp",
+    "Amberjack",
+    "Bastard halibut",
+    "Bloody clam",
+    "Botan shrimp",
+    "Crab",
+    "Dotted gizzard shad",
+    "Eel",
+    "Firefly squid",
+    "Greater amberjack",
+    "Halfbeak",
+    "Horned turban",
+    "Japanese horse mackerel",
+    "Japanese sea bass",
+    "Japanese spanish mackerel",
+    "Japanese style-chunky omelette",
+    "Japanese whiting",
+    "Mackerel",
+    "Milt",
+    "Mirugai clam",
+    "Octopus",
+    "Orient clam",
+    "Oyster",
+    "Rosy seabass",
+    "Salmon roe",
+    "Salmon",
+    "Scallop",
+    "Sea bream",
+    "Skipjack tuna",
+    "Small amberjack",
+    "Squid",
+    "Trough shells",
+    "Trout",
+    "Tuna",
+    "White trevally",
+    "Whitespotted conger"
+  ])
 end

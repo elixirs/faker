@@ -275,13 +275,23 @@ defmodule Faker.Lorem do
   ])
 
   @doc """
-  Returns a character list with a random length (in between the specified range)
-  If no range is provided, defaults to 15..255
+  Returns a character list of the given length.
+
+  If a range is provided, the length of the list is random in between the
+  specified range.
+
+  Defaults to a range between 15 and 255 (inclusive).
 
   ## Examples
 
+      iex> Faker.Lorem.characters()
+      #=> 'ej5Qmc45I7DRT3E6gOfCMbWAIz6AQiExiYl0zxXteF10YMeAsV93Q'
+
+      iex> Faker.Lorem.characters(2)
+      #=> '3g'
+
       iex> Faker.Lorem.characters(%Range{first: 1, last: 10})
-      #=> "lHixS3So"
+      #=> 'lHixS3So'
   """
   @spec characters(Range.t()) :: [char]
   def characters(range \\ %Range{first: 15, last: 255})
@@ -314,11 +324,20 @@ defmodule Faker.Lorem do
   end
 
   @doc """
-  Returns a string with a random amount of sentences (in between the specified
-  range)
-  If no range is specified it defaults to 2..5
+  Returns a string with a given amount of sentences.
+
+  If a range is provided, the number of sentences is random in between the
+  specified range.
+
+  Defaults to a range between 2 and 5 (inclusive).
 
   ## Examples
+
+      iex> Faker.Lorem.paragraph()
+      #=> "Delectus ea velit error cupiditate distinctio suscipit voluptatem et cupiditate. Quia consectetur sunt maiores qui suscipit et sed! Id accusamus ut ut qui reprehenderit sed."
+
+      iex> Faker.Lorem.paragraph(1)
+      #=> "Nemo labore enim"
 
       iex> Faker.Lorem.paragraph(%Range{first: 1, last: 2})
       #=> "Nemo labore enim rem qui praesentium totam non et aut. Beatae molestiae et fugit!"
@@ -351,11 +370,20 @@ defmodule Faker.Lorem do
   end
 
   @doc """
-  Returns a list with a random amount of paragraphs (in between the specified
-  range)
-  If no range is specified it defaults to 2..5
+  Returns a list with a given amount of paragraphs.
+
+  If a range is provided, the number of paragraphs is random in between the
+  specified range.
+
+  Defaults to a range between 2 and 5 (inclusive)
 
   ## Examples
+
+      iex> Faker.Lorem.paragraphs()
+      #=> ["Placeat quos harum voluptatem quaerat quidem eveniet dolores laboriosam aut. Facilis fugiat fuga quo excepturi aut ratione aut sed! Nihil velit quis magni. Illo et et ducimus labore veritatis."]
+
+      iex> Faker.Lorem.paragraphs(1)
+      #=> ["Placeat quos harum voluptatem quaerat quidem eveniet dolores laboriosam aut.]
 
       iex> Faker.Lorem.paragraphs(%Range{first: 1, last: 2})
       #=> ["Placeat quos harum voluptatem quaerat quidem eveniet dolores laboriosam aut. Facilis fugiat fuga quo excepturi aut ratione aut sed! Nihil velit quis magni. Illo et et ducimus labore veritatis."]
@@ -391,11 +419,20 @@ defmodule Faker.Lorem do
   end
 
   @doc """
-  Returns a string with a random amount of words (in between the specified
-  range)
-  If no range is specified it defaults to 4..10
+  Returns a string with a given amount of words.
+
+  If a range is provided, the number of words is random in between the
+  specified range.
+
+  Defaults to a range between 4 and 10 (inclusive).
 
   ## Examples
+
+      iex> Faker.Lorem.sentence()
+      #=> "Eum et et."
+
+      iex> Faker.Lorem.sentence(1)
+      #=> "Eum et et."
 
       iex> Faker.Lorem.sentence(%Range{first: 1, last: 10})
       #=> "Eum et et."
@@ -454,11 +491,20 @@ defmodule Faker.Lorem do
   end
 
   @doc """
-  Returns a list of strings each string representing a sentence.
-  The length of the list is random (calculated in between the range provided)
-  If no range is provided it defaults to 2..5
+  Returns a list of strings of the given length, each representing a sentence.
+
+  If a range is provided, the length of the list is random in between the
+  specified range.
+
+  Defaults to a range between 2 and 5 (inclusive).
 
   ## Examples
+
+      iex> Faker.Lorem.sentences()
+      #=> ["Eum et et.", "Id eius esse totam voluptas sapiente totam accusantium?"]
+
+      iex> Faker.Lorem.sentences(2)
+      #=> ["Eum et et.", "Id eius esse totam voluptas sapiente totam accusantium?"]
 
       iex> Faker.Lorem.sentences(%Range{first: 1, last: 2})
       #=> ["Eum et et.", "Id eius esse totam voluptas sapiente totam accusantium?"]
@@ -497,11 +543,20 @@ defmodule Faker.Lorem do
   end
 
   @doc """
-  Returns a list of strings each representing a word.
-  The length of the list is random (calculated between the range provided)
-  If no range is provided it defaults to 3..6
+  Returns a list of strings of the given length, each representing a word.
+
+  If a range is provided, the length of the list is random in between the
+  provided range.
+
+  Defaults to a range between 3 and 6.
 
   ## Examples
+
+      iex> Faker.Lorem.words()
+      #=> ["labore", "totam"]
+
+      iex> Faker.Lorem.words(2)
+      #=> ["labore", "totam"]
 
       iex> Faker.Lorem.words(%Range{first: 1, last: 2}))
       #=> ["labore", "totam"]
