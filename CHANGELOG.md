@@ -11,6 +11,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 ### Added
 
 * Add lorem doctests [[@vbrazo][]]
+* `Faker.Beer.brand/0` [[@vbrazo][]]
 * `Faker.Food.sushi/0` [[@vbrazo][]]
 * `Faker.Team.PtBr` [[@vbrazo][]]
 * Tests covered by actual values not just checking that result is a binary [[@igas][]]
