@@ -25,6 +25,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Changed
 
+* Remove `'` and `"` from generated names in `Faker::Internet` [[@vbrazo][]]
 * Codebase been reformated with elixir formatter [[@vbrazo][]] and [[@igas][]]
 * Documentation moved to hexdocs.pm [[@MarcusSky][]], [[@vbrazo][]], and [[@igas][]]
 * Updated dependencies [[@igas][]]

@@ -1,10 +1,14 @@
 defmodule Faker.InternetTest do
   use ExUnit.Case, async: true
 
+  import Faker.Internet
+
   doctest Faker.Internet
   doctest Faker.Internet.En
   doctest Faker.Internet.Es
   doctest Faker.Internet.PtBr
+
+  @iterations 10_000
 
   test "ip_v4_address/0" do
     assert Regex.match?(~r/^(\d+\.){3}\d+$/, Faker.Internet.ip_v4_address())
@@ -36,5 +40,45 @@ defmodule Faker.InternetTest do
     slug = Faker.Internet.slug(["hello", "world"], ["-"])
 
     assert Regex.match?(~r/\A((hello|world)-)(hello|world)\z/, slug)
+  end
+
+  test "user_name/0" do
+    Stream.repeatedly(&user_name/0)
+    |> Enum.take(@iterations)
+    |> Enum.each(fn generated_value ->
+      refute String.contains?(generated_value, ~s('"))
+    end)
+  end
+
+  test "email/0" do
+    Stream.repeatedly(&email/0)
+    |> Enum.take(@iterations)
+    |> Enum.each(fn generated_value ->
+      refute String.contains?(generated_value, ~s('"))
+    end)
+  end
+
+  test "safe_email/0" do
+    Stream.repeatedly(&safe_email/0)
+    |> Enum.take(@iterations)
+    |> Enum.each(fn generated_value ->
+      refute String.contains?(generated_value, ~s('"))
+    end)
+  end
+
+  test "free_email/0" do
+    Stream.repeatedly(&free_email/0)
+    |> Enum.take(@iterations)
+    |> Enum.each(fn generated_value ->
+      refute String.contains?(generated_value, ~s('"))
+    end)
+  end
+
+  test "domain_word/0" do
+    Stream.repeatedly(&domain_word/0)
+    |> Enum.take(@iterations)
+    |> Enum.each(fn generated_value ->
+      refute String.contains?(generated_value, ~s('"))
+    end)
   end
 end

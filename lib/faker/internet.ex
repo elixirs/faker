@@ -64,13 +64,15 @@ defmodule Faker.Internet do
   def user_name, do: user_name(Faker.random_between(0, 1))
 
   defp user_name(0) do
-    "#{Name.first_name() |> String.replace(~s(  ), ~s()) |> String.downcase()}#{
-      Faker.random_between(1900, 2100)
-    }"
+    "#{
+      remove_special_characters(Name.first_name())
+      |> String.replace(~s(  ), ~s())
+      |> String.downcase()
+    }#{Faker.random_between(1900, 2100)}"
   end
 
   defp user_name(1) do
-    [Name.first_name(), Name.last_name()]
+    [remove_special_characters(Name.first_name()), remove_special_characters(Name.last_name())]
     |> Enum.map_join(Util.pick(~w(. _)), &String.replace(&1, ~s(  ), ~s()))
     |> String.downcase()
   end
@@ -91,7 +93,12 @@ defmodule Faker.Internet do
   """
   @spec domain_word() :: String.t()
   def domain_word do
-    "#{Name.last_name() |> String.split(["'"]) |> Enum.join() |> String.downcase()}"
+    "#{
+      remove_special_characters(Name.last_name())
+      |> String.split(["'"])
+      |> Enum.join()
+      |> String.downcase()
+    }"
   end
 
   @doc """
@@ -110,7 +117,7 @@ defmodule Faker.Internet do
   """
   @spec email() :: String.t()
   def email do
-    "#{user_name()}@#{domain_name()}"
+    "#{remove_special_characters(user_name())}@#{domain_name()}"
   end
 
   @doc """
@@ -129,7 +136,7 @@ defmodule Faker.Internet do
   """
   @spec free_email() :: String.t()
   def free_email do
-    "#{user_name()}@#{free_email_service()}"
+    "#{remove_special_characters(user_name())}@#{free_email_service()}"
   end
 
   @doc """
@@ -148,7 +155,7 @@ defmodule Faker.Internet do
   """
   @spec safe_email() :: String.t()
   def safe_email do
-    "#{user_name()}@example.#{Util.pick(~w(org com net))}"
+    "#{remove_special_characters(user_name())}@example.#{Util.pick(~w(org com net))}"
   end
 
   @doc """
@@ -328,4 +335,8 @@ defmodule Faker.Internet do
   end
 
   defp localised_module, do: Module.concat(__MODULE__, Faker.mlocale())
+
+  defp remove_special_characters(string) do
+    String.replace(string, ~s('"), "")
+  end
 end
