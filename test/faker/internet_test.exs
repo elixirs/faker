@@ -46,7 +46,7 @@ defmodule Faker.InternetTest do
     Stream.repeatedly(&user_name/0)
     |> Enum.take(@iterations)
     |> Enum.each(fn generated_value ->
-      assert Regex.match?(~r/^((?!").)|((?!').)*$/, generated_value)
+      refute String.contains?(generated_value, ~s('"))
     end)
   end
 
@@ -54,7 +54,7 @@ defmodule Faker.InternetTest do
     Stream.repeatedly(&email/0)
     |> Enum.take(@iterations)
     |> Enum.each(fn generated_value ->
-      assert Regex.match?(~r/^((?!").)|((?!').)*$/, generated_value)
+      refute String.contains?(generated_value, ~s('"))
     end)
   end
 
@@ -62,7 +62,7 @@ defmodule Faker.InternetTest do
     Stream.repeatedly(&safe_email/0)
     |> Enum.take(@iterations)
     |> Enum.each(fn generated_value ->
-      assert Regex.match?(~r/^((?!").)|((?!').)*$/, generated_value)
+      refute String.contains?(generated_value, ~s('"))
     end)
   end
 
@@ -70,7 +70,7 @@ defmodule Faker.InternetTest do
     Stream.repeatedly(&free_email/0)
     |> Enum.take(@iterations)
     |> Enum.each(fn generated_value ->
-      assert Regex.match?(~r/^((?!").)|((?!').)*$/, generated_value)
+      refute String.contains?(generated_value, ~s('"))
     end)
   end
 
@@ -78,7 +78,7 @@ defmodule Faker.InternetTest do
     Stream.repeatedly(&domain_word/0)
     |> Enum.take(@iterations)
     |> Enum.each(fn generated_value ->
-      assert Regex.match?(~r/^((?!").)|((?!').)*$/, generated_value)
+      refute String.contains?(generated_value, ~s('"))
     end)
   end
 end
