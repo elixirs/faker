@@ -43,6 +43,7 @@ defmodule Faker.Mixfile do
   defp env do
     [
       locale: :en,
+      country: nil,
       random_module: Faker.Random.Elixir
     ]
   end
