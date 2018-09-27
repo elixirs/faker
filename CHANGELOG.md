@@ -10,8 +10,22 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Added
 
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+## 0.11.0
+
+### Added
+
 * Tests covered by actual values not just checking that result is a binary [[@igas][]]
-* `Faker.Address.Es` and `Faker.Address.En` [@vbrazo][]
+* `Faker.Address.Es` and `Faker.Address.En` [[@vbrazo][]]
 * `Faker.Beer.brand/0` [[@vbrazo][]]
 * `Faker.Food.sushi/0` [[@vbrazo][]]
 * `Faker.Team.PtBr` [[@vbrazo][]]
@@ -229,10 +243,11 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 [@ConnorRigby]: https://github.com/ConnorRigby
 [@devshane]: https://github.com/devshane
 [@efexen]: https://github.com/efexen
+[@fenollp]: https://github.com/fenollp
 [@feyl]: https://github.com/feyl
 [@GesJeremie]: https://github.com/GesJeremie
 [@halfdan]: https://github.com/halfdan
-[@igas]: https://github.com/igas
+[@igas]: https://igas.me
 [@jarednorman]: https://github.com/jarednorman
 [@johnhamelink]: https://github.com/johnhamelink
 [@lauraannwilliams]: https://github.com/lauraannwilliams
@@ -242,6 +257,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 [@MarcusSky]: https://github.com/MarcusSky
 [@orieken]: https://github.com/orieken
 [@petehamilton]: https://github.com/petehamilton
+[@pfac]: https://github.com/pfac
 [@piton4eg]: https://github.com/piton4eg
 [@samcdavid]: https://github.com/samcdavid
 [@saulecabrera]: https://github.com/saulecabrera
