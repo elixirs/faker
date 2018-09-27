@@ -10,10 +10,11 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Added
 
+* Tests covered by actual values not just checking that result is a binary [[@igas][]]
 * `Faker.Address.Es` and `Faker.Address.En` [@vbrazo][]
+* `Faker.Beer.brand/0` [[@vbrazo][]]
 * `Faker.Food.sushi/0` [[@vbrazo][]]
 * `Faker.Team.PtBr` [[@vbrazo][]]
-* Tests covered by actual values not just checking that result is a binary [[@igas][]]
 * `Faker.Name.PtBr` and `Faker.Name.Es` [[@vbrazo][]]
 * `Faker.UUID.v4/0` [[@anthonator][]]
 * `Faker.Food` to generate Food data [[@vbrazo][]]

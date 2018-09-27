@@ -17,7 +17,7 @@ defmodule Faker do
   @spec start(atom) :: :ok
   def start(lang) when is_atom(lang) do
     :application.start(:faker)
-    Faker.locale(lang)
+    locale(lang)
     :ok
   end
 
@@ -32,7 +32,7 @@ defmodule Faker do
   end
 
   defp format(<<"#"::utf8, tail::binary>>, acc) do
-    format(tail, <<acc::binary, "#{Faker.random_between(0, 9)}">>)
+    format(tail, <<acc::binary, "#{random_between(0, 9)}">>)
   end
 
   defp format(<<"?"::utf8, tail::binary>>, acc) do
@@ -49,7 +49,7 @@ defmodule Faker do
 
   @alphabet 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
   defp letter do
-    Enum.at(@alphabet, Faker.random_between(0, Enum.count(@alphabet) - 1))
+    Enum.at(@alphabet, random_between(0, Enum.count(@alphabet) - 1))
   end
 
   @doc """
@@ -57,7 +57,11 @@ defmodule Faker do
   """
   @spec mlocale() :: String.t()
   def mlocale do
-    String.capitalize(to_string(Faker.locale()))
+    if Faker.country() do
+      String.capitalize(to_string(Faker.locale())) <> String.capitalize(to_string(Faker.country()))
+    else
+      String.capitalize(to_string(Faker.locale()))
+    end
   end
 
   @doc """
@@ -66,6 +70,14 @@ defmodule Faker do
   @spec locale() :: atom
   def locale do
     Application.get_env(:faker, :locale)
+  end
+
+  @doc """
+  Returns application country.
+  """
+  @spec country() :: atom
+  def country do
+    Application.get_env(:faker, :country)
   end
 
   @doc """
@@ -108,6 +120,22 @@ defmodule Faker do
   @spec random_bytes(pos_integer) :: binary
   def random_bytes(total) do
     Application.get_env(:faker, :random_module).random_bytes(total)
+  end
+
+  defmacro localize(function) do
+    quote do
+      def unquote(function)() do
+        module = Module.concat(unquote(__CALLER__.module), Faker.mlocale())
+        cond do
+          function_exported?(module, unquote(function), 0) ->
+            apply(module, unquote(function), [])
+          function_exported?(module, unquote(function), EnUs) ->
+            apply(Module.concat(unquote(__CALLER__.module), EnUs), unquote(function), [])
+          true ->
+            apply(Module.concat(unquote(__CALLER__.module), En), unquote(function), [])
+        end
+      end
+    end
   end
 
   defmacro sampler(name, data) do
