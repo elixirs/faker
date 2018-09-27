@@ -4,6 +4,25 @@ defmodule Faker.Beer do
   """
 
   @doc """
+  Returns a Beer brand string
+
+  ## Examples
+
+      iex> Faker.Beer.brand()
+      "Paulaner"
+      iex> Faker.Beer.brand()
+      "Pabst Blue Ribbon"
+      iex> Faker.Beer.brand()
+      "Kirin Inchiban"
+      iex> Faker.Beer.brand()
+      "Birra Moretti"
+  """
+  @spec brand() :: String.t()
+  def brand do
+    localised_module().brand
+  end
+
+  @doc """
   Returns a Beer name string
 
   ## Examples

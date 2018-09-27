@@ -6,6 +6,58 @@ defmodule Faker.Beer.En do
   """
 
   @doc """
+  Returns a Beer brand string
+
+  ## Examples
+
+      iex> Faker.Beer.En.brand()
+      "Paulaner"
+      iex> Faker.Beer.En.brand()
+      "Pabst Blue Ribbon"
+      iex> Faker.Beer.En.brand()
+      "Kirin Inchiban"
+      iex> Faker.Beer.En.brand()
+      "Birra Moretti"
+  """
+  @spec brand() :: String.t()
+  sampler(:brand, [
+    "Corona Extra",
+    "Heineken",
+    "Budweiser",
+    "Becks",
+    "BudLight",
+    "Pabst Blue Ribbon",
+    "Dos Equis",
+    "Blue Moon",
+    "Stella Artois",
+    "Miller Draft",
+    "Coors lite",
+    "Amstel",
+    "Guinness",
+    "Kirin Inchiban",
+    "Tsingtao",
+    "Sierra Nevada",
+    "Rolling Rock",
+    "Red Stripe",
+    "Paulaner",
+    "Patagonia",
+    "Delirium Tremens",
+    "Delirium Noctorum'",
+    "Samuel Adams",
+    "Sapporo Premium",
+    "Carlsberg",
+    "Pacifico",
+    "Quimes",
+    "Murphys",
+    "Birra Moretti",
+    "Harp",
+    "Fosters",
+    "Hoegaarden",
+    "Leffe",
+    "Lowenbrau"
+  ])
+
+  @doc """
   Returns a Beer name string
 
   ## Examples
