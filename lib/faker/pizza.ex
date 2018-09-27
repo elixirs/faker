@@ -44,8 +44,8 @@ defmodule Faker.Pizza do
         "Family with Clam, Cherry Tomatoes, Salmon, and Chicken"
       ]
   """
-  @spec pizzas(Range.t()) :: list(String.t())
-  def pizzas(range \\ %Range{first: 2, last: 5})
+  @spec pizzas(Range.t) :: list(String.t)
+  def pizzas(range \\ 2..5)
 
   def pizzas(first..last) do
     pizzas(Faker.random_between(first, last))
@@ -99,8 +99,8 @@ defmodule Faker.Pizza do
       iex> Faker.Pizza.toppings(2..3)
       ["Shellfish", "Smoked Salmon"]
   """
-  @spec toppings(Range.t()) :: list(String.t())
-  def toppings(range \\ %Range{first: 2, last: 5})
+  @spec toppings(Range.t) :: list(String.t)
+  def toppings(range \\ 2..5)
 
   def toppings(first..last) do
     toppings(Faker.random_between(first, last))
