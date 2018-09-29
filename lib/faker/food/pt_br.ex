@@ -11,13 +11,13 @@ defmodule Faker.Food.PtBr do
   ## Examples
 
       iex> Faker.Food.PtBr.dish()
-      "Macarrão com tomate e manjericão"
-      iex> Faker.Food.PtBr.dish()
-      "Risotto com frutos do mar"
-      iex> Faker.Food.PtBr.dish()
-      "Risotto com frutos do mar"
-      iex> Faker.Food.PtBr.dish()
       "Asinha de frango"
+      iex> Faker.Food.PtBr.dish()
+      "Pizza"
+      iex> Faker.Food.PtBr.dish()
+      "Salada Caprese"
+      iex> Faker.Food.PtBr.dish()
+      "Peixe frito e batata frita"
   """
   @spec dish() :: String.t()
   sampler(:dish, [
@@ -55,11 +55,11 @@ defmodule Faker.Food.PtBr do
       iex> Faker.Food.PtBr.description()
       "Três ovos com coentro, tomate, cebola, abacate e queijo derretido. Acompanhado com torradas ou croissant."
       iex> Faker.Food.PtBr.description()
-      "Três claras de ovos com espinafre, cogumelos, cebola caramelizada, tomate e queijo com baixo teor de gordura. Com quinoa + ervas e sua escolha de centeio ou torrada integral."
+      "Três claras de ovos com espinafre, cogumelos, cebola caramelizada, tomate e queijo com baixo teor de gordura. Acompanhado de torradas integrais."
       iex> Faker.Food.PtBr.description()
       "Três ovos com coentro, tomate, cebola, abacate e queijo derretido. Acompanhado com torradas ou croissant."
       iex> Faker.Food.PtBr.description()
-      "Três claras de ovos com espinafre, cogumelos, cebola caramelizada, tomate e queijo com baixo teor de gordura. Com quinoa + ervas e sua escolha de centeio ou torrada integral."
+      "Três claras de ovos com espinafre, cogumelos, cebola caramelizada, tomate e queijo com baixo teor de gordura. Acompanhado de torradas integrais."
   """
   @spec description() :: String.t()
   sampler(:description, [
