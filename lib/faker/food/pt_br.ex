@@ -22,23 +22,25 @@ defmodule Faker.Food.PtBr do
   @spec dish() :: String.t()
   sampler(:dish, [
     "Costelas de churrasco",
-    "Bruschette com tomate",
-    "Salada César",
+    "Bruschetta com tomate",
+    "Salada Caesar",
     "Salada Caprese",
     "X-Burger",
     "Frango à milanesa",
     "Asinha de frango",
-    "Fettuccine",
-    "Peixe e batata frita",
-    "Batatas fritas",
+    "Fettuccine caprese",
+    "Peixe frito e batata frita",
+    "Batata frita tradicional",
+    "Batata frita com bacon",
+    "Batata frita com cheddar e bacon",
     "Lasanha",
-    "Almôndegas com molho",
-    "Risoto de cogumelo",
+    "Almôndegas cozidas",
+    "Risoto de cogumelos com salsinha",
     "Macarrão à carbonara",
-    "Macarrão com tomate e manjericão",
+    "Espaguete com tomate-cereja e manjericão",
     "Pizza",
     "Ravioli de Ricota e Espinafre",
-    "Risotto com frutos do mar",
+    "Risoto com frutos do mar",
     "Ovos cozidos",
     "Frango Teriyaki",
     "Sashimi de atum",
@@ -63,7 +65,7 @@ defmodule Faker.Food.PtBr do
   sampler(:description, [
     "Três ovos com coentro, tomate, cebola, abacate e queijo derretido. Acompanhado com torradas ou croissant.",
     "Três omeletes de ovo com queijo ralado, cebolinha e presunto. Acompanhado com torradas ou croissant.",
-    "Três claras de ovos com espinafre, cogumelos, cebola caramelizada, tomate e queijo com baixo teor de gordura. Com quinoa + ervas e sua escolha de centeio ou torrada integral."
+    "Três claras de ovos com espinafre, cogumelos, cebola caramelizada, tomate e queijo com baixo teor de gordura. Acompanhado de torradas integrais."
   ])
 
   @doc """
