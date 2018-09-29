@@ -5,4 +5,5 @@ defmodule Faker.FoodTest do
   doctest Faker.Food.En
   doctest Faker.Food.PtBr
   doctest Faker.Food.Hy
+  doctest Faker.Food.PtBr
 end
