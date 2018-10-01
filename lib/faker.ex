@@ -126,11 +126,12 @@ defmodule Faker do
     quote do
       def unquote(function)() do
         module = Module.concat(unquote(__CALLER__.module), Faker.mlocale())
+        module_enus = Module.concat(unquote(__CALLER__.module), EnUs)
         cond do
           function_exported?(module, unquote(function), 0) ->
             apply(module, unquote(function), [])
-          function_exported?(module, unquote(function), EnUs) ->
-            apply(Module.concat(unquote(__CALLER__.module), EnUs), unquote(function), [])
+          function_exported?(module_enus, unquote(function), 0) ->
+            apply(module_enus, unquote(function), [])
           true ->
             apply(Module.concat(unquote(__CALLER__.module), En), unquote(function), [])
         end
