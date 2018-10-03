@@ -27,7 +27,7 @@ defmodule Faker.StarWars.En do
     "Darth Vader",
     "Leia Organa",
     "Owen Lars",
-    "Beru Whitesun lars",
+    "Beru Whitesun Lars",
     "R5-D4",
     "Biggs Darklighter",
     "Obi-Wan Kenobi",
@@ -84,7 +84,7 @@ defmodule Faker.StarWars.En do
     "Luminara Unduli",
     "Barriss Offee",
     "Dormé",
-    "Dooku",
+    "Count Dooku",
     "Bail Prestor Organa",
     "Jango Fett",
     "Zam Wesell",
@@ -107,7 +107,8 @@ defmodule Faker.StarWars.En do
     "Poe Dameron",
     "BB8",
     "Captain Phasma",
-    "Padmé Amidala"
+    "Padmé Amidala",
+    "Enfys Nest"
   ])
 
   @doc """
