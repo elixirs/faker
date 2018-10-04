@@ -17,6 +17,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 ### Removed
 
 ### Fixed
+* `Faker.localize/1` is calling `Kernel.function_exported?/3` with the wrong parameter
 
 ### Security
 
