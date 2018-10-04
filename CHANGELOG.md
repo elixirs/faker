@@ -17,7 +17,9 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 ### Removed
 
 ### Fixed
-* `Faker.localize/1` is calling `Kernel.function_exported?/3` with the wrong parameter
+
+* `Faker.localize/1` is calling `Kernel.function_exported?/3` with the wrong parameter [[@indocomsoft][]]
+* `Faker.StarWars.En` Changed Palpatine to Sheev Palpatine, and fixed typo for Beru Lars [[@theabrad][]]
 
 ### Security
 
@@ -51,7 +53,6 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Fixed
 
-* `Faker.StarWars.En` Changed Palpatine to Sheev Palpatine, and fixed typo for Beru Lars [[@theabrad][]]
 * `Faker.App.semver/0` is not generating invalid versions anymore fixed by [[@igas][]] found by [[@ConnorRigby][]]
 * `Faker.Lorem` is not redefining documentation in multiple functions anymore fixed and found by [[@pfac][]]
 
@@ -250,6 +251,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 [@GesJeremie]: https://github.com/GesJeremie
 [@halfdan]: https://github.com/halfdan
 [@igas]: https://igas.me
+[@indocomsoft]: https://github.com/indocomsoft
 [@jarednorman]: https://github.com/jarednorman
 [@johnhamelink]: https://github.com/johnhamelink
 [@lauraannwilliams]: https://github.com/lauraannwilliams
