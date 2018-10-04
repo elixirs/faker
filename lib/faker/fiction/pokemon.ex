@@ -1,4 +1,4 @@
-defmodule Faker.Pokemon do
+defmodule Faker.Fiction.Pokemon do
   @moduledoc """
   Function for generating Pokemon
   """
@@ -8,13 +8,13 @@ defmodule Faker.Pokemon do
 
   ## Examples
 
-      iex> Faker.Pokemon.name()
+      iex> Faker.Fiction.Pokemon.name()
       "Poliwhirl"
-      iex> Faker.Pokemon.name()
+      iex> Faker.Fiction.Pokemon.name()
       "Exeggcute"
-      iex> Faker.Pokemon.name()
+      iex> Faker.Fiction.Pokemon.name()
       "Flareon"
-      iex> Faker.Pokemon.name()
+      iex> Faker.Fiction.Pokemon.name()
       "Marowak"
   """
   @spec name() :: String.t()
@@ -27,13 +27,13 @@ defmodule Faker.Pokemon do
 
   ## Examples
 
-      iex> Faker.Pokemon.location()
+      iex> Faker.Fiction.Pokemon.location()
       "Vaniville Town"
-      iex> Faker.Pokemon.location()
+      iex> Faker.Fiction.Pokemon.location()
       "Slateport City"
-      iex> Faker.Pokemon.location()
+      iex> Faker.Fiction.Pokemon.location()
       "Shalour City"
-      iex> Faker.Pokemon.location()
+      iex> Faker.Fiction.Pokemon.location()
       "Solaceon Town"
   """
   @spec location() :: String.t()

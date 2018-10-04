@@ -1,4 +1,4 @@
-defmodule Faker.StarWars do
+defmodule Faker.Fiction.StarWars do
   @moduledoc """
   Functions for generating StarWars related data
   """
@@ -8,13 +8,13 @@ defmodule Faker.StarWars do
 
   ## Examples
 
-      iex> Faker.StarWars.character()
+      iex> Faker.Fiction.StarWars.character()
       "Greedo"
-      iex> Faker.StarWars.character()
+      iex> Faker.Fiction.StarWars.character()
       "Jek Tono Porkins"
-      iex> Faker.StarWars.character()
+      iex> Faker.Fiction.StarWars.character()
       "Poe Dameron"
-      iex> Faker.StarWars.character()
+      iex> Faker.Fiction.StarWars.character()
       "R4-P17"
   """
   @spec character() :: String.t()
@@ -27,13 +27,13 @@ defmodule Faker.StarWars do
 
   ## Examples
 
-      iex> Faker.StarWars.planet()
+      iex> Faker.Fiction.StarWars.planet()
       "Mon Cala"
-      iex> Faker.StarWars.planet()
+      iex> Faker.Fiction.StarWars.planet()
       "Ryloth"
-      iex> Faker.StarWars.planet()
+      iex> Faker.Fiction.StarWars.planet()
       "Endor"
-      iex> Faker.StarWars.planet()
+      iex> Faker.Fiction.StarWars.planet()
       "Shili"
   """
   @spec planet() :: String.t()
@@ -46,13 +46,13 @@ defmodule Faker.StarWars do
 
   ## Examples
 
-      iex> Faker.StarWars.quote()
+      iex> Faker.Fiction.StarWars.quote()
       "Congratulations. You are being rescued. Please do not resist."
-      iex> Faker.StarWars.quote()
+      iex> Faker.Fiction.StarWars.quote()
       "What chance do we have? The question is 'what choice'. Run, hide, plead for mercy, scatter your forces. You give way to an enemy this evil with this much power and you condemn the galaxy to an eternity of submission. The time to fight is now!"
-      iex> Faker.StarWars.quote()
+      iex> Faker.Fiction.StarWars.quote()
       "Will someone get this big walking carpet out of my way?"
-      iex> Faker.StarWars.quote()
+      iex> Faker.Fiction.StarWars.quote()
       "To be Jedi is to face the truth, and choose. Give off light, or darkness, Padawan. Be a candle, or the night."
   """
   @spec quote() :: String.t()

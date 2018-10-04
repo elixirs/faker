@@ -8,6 +8,10 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ## Unreleased
 
+### Breaking Change
+
+* `Faker.Pokemon`, `Faker.StarWars` and `Faker.Superhero` related modules moved to `Faker.Fiction` namespace [[@igas][]]
+
 ### Added
 
 ### Changed

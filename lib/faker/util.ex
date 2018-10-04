@@ -90,7 +90,7 @@ defmodule Faker.Util do
       "9781542646109, 9783297052358, 9790203032090"
       iex> Faker.Util.join(4, "-", fn -> Faker.format("####") end)
       "7337-6033-7459-8109"
-      iex> Faker.Util.join(2, " vs ", &Faker.Superhero.name/0)
+      iex> Faker.Util.join(2, " vs ", &Faker.Fiction.Superhero.name/0)
       "Falcon vs Green Blink Claw"
       iex> Faker.Util.join(2, " or ", &Faker.Color.name/0)
       "Purple or White"

@@ -1,4 +1,4 @@
-defmodule Faker.Pokemon.En do
+defmodule Faker.Fiction.Pokemon.En do
   import Faker, only: [sampler: 2]
 
   @moduledoc """
@@ -10,13 +10,13 @@ defmodule Faker.Pokemon.En do
 
   ## Examples
 
-      iex> Faker.Pokemon.En.name()
+      iex> Faker.Fiction.Pokemon.En.name()
       "Poliwhirl"
-      iex> Faker.Pokemon.En.name()
+      iex> Faker.Fiction.Pokemon.En.name()
       "Exeggcute"
-      iex> Faker.Pokemon.En.name()
+      iex> Faker.Fiction.Pokemon.En.name()
       "Flareon"
-      iex> Faker.Pokemon.En.name()
+      iex> Faker.Fiction.Pokemon.En.name()
       "Marowak"
   """
   @spec name() :: String.t()
@@ -178,13 +178,13 @@ defmodule Faker.Pokemon.En do
 
   ## Examples
 
-      iex> Faker.Pokemon.En.location()
+      iex> Faker.Fiction.Pokemon.En.location()
       "Vaniville Town"
-      iex> Faker.Pokemon.En.location()
+      iex> Faker.Fiction.Pokemon.En.location()
       "Slateport City"
-      iex> Faker.Pokemon.En.location()
+      iex> Faker.Fiction.Pokemon.En.location()
       "Shalour City"
-      iex> Faker.Pokemon.En.location()
+      iex> Faker.Fiction.Pokemon.En.location()
       "Solaceon Town"
   """
   @spec location() :: String.t()
