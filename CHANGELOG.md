@@ -16,6 +16,9 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Removed
 
+* `Faker.StarWars.En` Changed Palpatine to Sheev Palpatine, and fixed typo for Beru Lars [[@theabrad][]]
+* Elixir 1.5 from CI [[@igas][]]
+
 ### Fixed
 
 * `Faker.localize/1` is calling `Kernel.function_exported?/3` with the wrong parameter [[@indocomsoft][]]
