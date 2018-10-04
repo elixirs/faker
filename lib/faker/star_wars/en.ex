@@ -11,13 +11,13 @@ defmodule Faker.StarWars.En do
   ## Examples
 
       iex> Faker.StarWars.En.character()
-      "Plo Koon"
+      "Greedo"
       iex> Faker.StarWars.En.character()
-      "Owen Lars"
+      "Jek Tono Porkins"
       iex> Faker.StarWars.En.character()
-      "Adi Gallia"
+      "Poe Dameron"
       iex> Faker.StarWars.En.character()
-      "Tion Medon"
+      "R4-P17"
   """
   @spec character() :: String.t()
   sampler(:character, [
