@@ -10,8 +10,6 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Added
 
-* dialyzer fail call checks [[@igas][]]
-
 ### Changed
 
 ### Deprecated
@@ -19,6 +17,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 ### Removed
 
 * Elixir 1.5 from CI [[@igas][]]
+* dialyzer warning suppressions [[@igas][]]
 
 ### Fixed
 
