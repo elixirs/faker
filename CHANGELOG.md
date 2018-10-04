@@ -10,6 +10,8 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Added
 
+* dialyzer fail call checks [[@igas][]]
+
 ### Changed
 
 ### Deprecated

@@ -8,10 +8,9 @@ defmodule Faker.Date do
   @doc """
   Returns a random date of birth for a person with an age specified by a number or range
   """
-  @spec date_of_birth() :: Date.t()
+  @spec date_of_birth(integer | Range.t()) :: Date.t()
   def date_of_birth(age_or_range \\ 18..99)
 
-  @spec date_of_birth(integer) :: Date.t()
   def date_of_birth(age) when is_integer(age) do
     {{year_now, month_now, day_now}, _time} = :calendar.local_time()
 
@@ -42,7 +41,6 @@ defmodule Faker.Date do
     result
   end
 
-  @spec date_of_birth(Range.t()) :: Date.t()
   def date_of_birth(age_range) do
     age_range
     |> pick()

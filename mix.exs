@@ -18,7 +18,6 @@ defmodule Faker.Mixfile do
           :error_handling,
           :no_behaviours,
           :no_contracts,
-          :no_fail_call,
           :no_fun_app,
           :no_improper_lists,
           :no_match,
