@@ -8,18 +8,22 @@ defmodule Faker.Util do
 
   ## Examples
 
+      iex> Faker.Util.pick(10..100)
+      79
       iex> Faker.Util.pick([1, 3, 5, 7])
-      5
+      3
       iex> Faker.Util.pick([true, false, nil])
-      nil
+      true
       iex> Faker.Util.pick(["a", "b", "c"])
-      "a"
+      "c"
       iex> Faker.Util.pick([1, "2", 3.0])
-      3.0
+      "2"
   """
-  @spec pick([any]) :: any
-  def pick(list) do
-    Enum.at(list, Faker.random_between(0, Enum.count(list) - 1))
+  @spec pick(Enum.t()) :: any
+  def pick(enum) do
+    enum
+    |> Enum.to_list()
+    |> Enum.at(Faker.random_between(0, Enum.count(enum) - 1))
   end
 
   @doc """

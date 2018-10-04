@@ -12,11 +12,11 @@ defmodule Faker.StarWars.En do
 
       iex> Faker.StarWars.En.character()
       "Greedo"
-      iex> Faker.StarWars.character()
+      iex> Faker.StarWars.En.character()
       "Jek Tono Porkins"
-      iex> Faker.StarWars.character()
+      iex> Faker.StarWars.En.character()
       "Poe Dameron"
-      iex> Faker.StarWars.character()
+      iex> Faker.StarWars.En.character()
       "R4-P17"
   """
   @spec character() :: String.t()
