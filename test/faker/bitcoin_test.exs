@@ -1,5 +1,5 @@
-defmodule Faker.BitcoinTest do
+defmodule Faker.Blockchain.BitcoinTest do
   use ExUnit.Case, async: true
 
-  doctest Faker.Bitcoin
+  doctest Faker.Blockchain.Bitcoin
 end
