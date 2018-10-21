@@ -1,4 +1,6 @@
 defmodule Faker.Util do
+  import Faker, only: [localize: 1]
+
   @moduledoc """
   Collection of useful functions for your fake data. Functions aware of locale.
   """
@@ -115,9 +117,7 @@ defmodule Faker.Util do
       "4"
   """
   @spec digit() :: binary
-  def digit do
-    localised_module().digit
-  end
+  localize(:digit)
 
   @doc """
   Converts a list to a string, with "and" before the last item. Uses an Oxford comma.
@@ -135,7 +135,7 @@ defmodule Faker.Util do
   """
   @spec to_sentence([binary]) :: binary
   def to_sentence(items) do
-    localised_module().to_sentence(items)
+    Module.concat(__MODULE__, Faker.mlocale()).to_sentence(items)
   end
 
   @doc """
@@ -155,9 +155,7 @@ defmodule Faker.Util do
       "e"
   """
   @spec letter() :: binary
-  def letter do
-    localised_module().letter
-  end
+  localize(:letter)
 
   @doc """
   Get a random lowercase character as a string; one of a-z
@@ -174,9 +172,7 @@ defmodule Faker.Util do
       "c"
   """
   @spec lower_letter() :: binary
-  def lower_letter do
-    localised_module().lower_letter
-  end
+  localize(:lower_letter)
 
   @doc """
   Get a random uppercase character as a string; one of A-Z
@@ -193,9 +189,7 @@ defmodule Faker.Util do
       "C"
   """
   @spec upper_letter() :: binary
-  def upper_letter do
-    localised_module().upper_letter
-  end
+  localize(:upper_letter)
 
   @doc """
   Start a cycle. See cycle/1
@@ -272,6 +266,4 @@ defmodule Faker.Util do
       _ -> raise "Rule #{rule_key} not found or not a function"
     end
   end
-
-  defp localised_module, do: Module.concat(__MODULE__, Faker.mlocale())
 end

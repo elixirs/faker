@@ -12,6 +12,8 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Changed
 
+* all localized functions now use Faker.localize/1 [[@igas][]]
+
 ### Deprecated
 
 ### Removed
@@ -272,6 +274,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 [@sotojuan]: https://github.com/sotojuan
 [@stfnsr]: https://github.com/stfnsr
 [@tbash]: https://github.com/tbash
+[@theabrad]: https://github.com/theabrad
 [@tobyhinloopen]: https://github.com/tobyhinloopen
 [@vbrazo]: https://github.com/vbrazo
 [@vforvova]: https://github.com/vforvova

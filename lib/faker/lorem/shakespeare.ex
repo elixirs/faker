@@ -1,4 +1,6 @@
 defmodule Faker.Lorem.Shakespeare do
+  import Faker, only: [localize: 1]
+
   @moduledoc """
   Random quotes from William Shakespeare's plays, sonnets and poems.
   """
@@ -18,9 +20,7 @@ defmodule Faker.Lorem.Shakespeare do
       "Rich gifts wax poor when givers prove unkind."
   """
   @spec hamlet() :: String.t()
-  def hamlet do
-    localised_module().hamlet
-  end
+  localize(:hamlet)
 
   @doc """
   Return random quote from "As You Like It" comedy.
@@ -37,9 +37,7 @@ defmodule Faker.Lorem.Shakespeare do
       "All the world's a stage, and all the men and women merely players. They have their exits and their entrances; And one man in his time plays many parts."
   """
   @spec as_you_like_it() :: String.t()
-  def as_you_like_it do
-    localised_module().as_you_like_it
-  end
+  localize(:as_you_like_it)
 
   @doc """
   Return random quote from "Richard III" play.
@@ -56,9 +54,7 @@ defmodule Faker.Lorem.Shakespeare do
       "Now is the winter of our discontent."
   """
   @spec king_richard_iii() :: String.t()
-  def king_richard_iii do
-    localised_module().king_richard_iii
-  end
+  localize(:king_richard_iii)
 
   @doc """
   Return random quote from "Romeo and Juliet" tragedy.
@@ -75,9 +71,5 @@ defmodule Faker.Lorem.Shakespeare do
       "For you and I are past our dancing days."
   """
   @spec romeo_and_juliet() :: String.t()
-  def romeo_and_juliet do
-    localised_module().romeo_and_juliet
-  end
-
-  defp localised_module, do: Module.concat(__MODULE__, Faker.mlocale())
+  localize(:romeo_and_juliet)
 end

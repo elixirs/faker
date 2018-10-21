@@ -1,4 +1,6 @@
 defmodule Faker.Industry do
+  import Faker, only: [localize: 1]
+
   @moduledoc """
   Functions for generating Industry related data
   Reference https://en.wikipedia.org/wiki/Industry_Classification_Benchmark
@@ -19,9 +21,7 @@ defmodule Faker.Industry do
       "Telecommunications"
   """
   @spec industry() :: String.t()
-  def industry do
-    localised_module().industry
-  end
+  localize(:industry)
 
   @doc """
   Returns a Super Sector name string
@@ -38,9 +38,7 @@ defmodule Faker.Industry do
       "Oil & Gas"
   """
   @spec super_sector() :: String.t()
-  def super_sector do
-    localised_module().super_sector
-  end
+  localize(:super_sector)
 
   @doc """
   Returns a Sector name string
@@ -57,9 +55,7 @@ defmodule Faker.Industry do
       "Mining"
   """
   @spec sector() :: String.t()
-  def sector do
-    localised_module().sector
-  end
+  localize(:sector)
 
   @doc """
   Returns a Sub Sector name string
@@ -76,9 +72,5 @@ defmodule Faker.Industry do
       "Pipelines"
   """
   @spec sub_sector() :: String.t()
-  def sub_sector do
-    localised_module().sub_sector
-  end
-
-  defp localised_module, do: Module.concat(__MODULE__, Faker.mlocale())
+  localize(:sub_sector)
 end

@@ -1,4 +1,6 @@
 defmodule Faker.Color do
+  import Faker, only: [localize: 1]
+
   @moduledoc """
   Functions for generating different color representations.
   """
@@ -62,9 +64,7 @@ defmodule Faker.Color do
       "Pink"
   """
   @spec name() :: String.t()
-  def name do
-    localised_module().name
-  end
+  localize(:name)
 
   @doc """
   Return a random fancy color name
@@ -81,9 +81,5 @@ defmodule Faker.Color do
       "Cesious"
   """
   @spec fancy_name() :: String.t()
-  def fancy_name do
-    localised_module().fancy_name
-  end
-
-  defp localised_module, do: Module.concat(__MODULE__, Faker.mlocale())
+  localize(:fancy_name)
 end

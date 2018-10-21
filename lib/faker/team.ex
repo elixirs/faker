@@ -1,4 +1,6 @@
 defmodule Faker.Team do
+  import Faker, only: [localize: 1]
+
   @moduledoc """
   Functions for generating team related data
   """
@@ -18,9 +20,7 @@ defmodule Faker.Team do
       "Iowa fishes"
   """
   @spec creature() :: String.t()
-  def creature do
-    Module.concat(__MODULE__, Faker.mlocale()).creature
-  end
+  localize(:creature)
 
   @doc """
   Returns a random creature name
@@ -37,7 +37,5 @@ defmodule Faker.Team do
       "banshees"
   """
   @spec name() :: String.t()
-  def name do
-    Module.concat(__MODULE__, Faker.mlocale()).name
-  end
+  localize(:name)
 end
