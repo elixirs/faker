@@ -20,6 +20,8 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Fixed
 
+* Quotes removal in `Faker.Internet` functions [[@jc00ke][]]
+
 ### Security
 
 ## 0.11.2
@@ -258,6 +260,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 [@igas]: https://igas.me
 [@indocomsoft]: https://github.com/indocomsoft
 [@jarednorman]: https://github.com/jarednorman
+[@jc00ke]: https://github.com/jc00ke
 [@johnhamelink]: https://github.com/johnhamelink
 [@lauraannwilliams]: https://github.com/lauraannwilliams
 [@leveloid]: https://github.com/leveloid
