@@ -1,4 +1,6 @@
 defmodule Faker.Superhero do
+  import Faker, only: [localize: 1]
+
   @moduledoc """
   Functions for generating Superhero data
   """
@@ -18,9 +20,7 @@ defmodule Faker.Superhero do
       "Giant Aqua I"
   """
   @spec name() :: String.t()
-  def name do
-    localised_module().name
-  end
+  localize(:name)
 
   @doc """
   Returns a random Superher name prefix
@@ -37,9 +37,7 @@ defmodule Faker.Superhero do
       "Captain"
   """
   @spec prefix() :: String.t()
-  def prefix do
-    localised_module().prefix
-  end
+  localize(:prefix)
 
   @doc """
   Returns a random Superhero name suffix
@@ -56,9 +54,7 @@ defmodule Faker.Superhero do
       "the Hunter"
   """
   @spec suffix() :: String.t()
-  def suffix do
-    localised_module().suffix
-  end
+  localize(:suffix)
 
   @doc """
   Returns a random Superhero descriptor
@@ -75,9 +71,7 @@ defmodule Faker.Superhero do
       "Phantom"
   """
   @spec descriptor() :: String.t()
-  def descriptor do
-    localised_module().descriptor
-  end
+  localize(:descriptor)
 
   @doc """
   Returns a random Superhero power
@@ -94,9 +88,5 @@ defmodule Faker.Superhero do
       "Illusions"
   """
   @spec power() :: String.t()
-  def power do
-    localised_module().power
-  end
-
-  defp localised_module, do: Module.concat(__MODULE__, Faker.mlocale())
+  localize(:power)
 end

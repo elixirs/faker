@@ -1,4 +1,6 @@
 defmodule Faker.StarWars do
+  import Faker, only: [localize: 1]
+
   @moduledoc """
   Functions for generating StarWars related data
   """
@@ -18,9 +20,7 @@ defmodule Faker.StarWars do
       "R4-P17"
   """
   @spec character() :: String.t()
-  def character do
-    localised_module().character
-  end
+  localize(:character)
 
   @doc """
   Returns a Star Wars planet name
@@ -37,9 +37,7 @@ defmodule Faker.StarWars do
       "Shili"
   """
   @spec planet() :: String.t()
-  def planet do
-    localised_module().planet
-  end
+  localize(:planet)
 
   @doc """
   Returns a Star Wars quote
@@ -56,9 +54,5 @@ defmodule Faker.StarWars do
       "To be Jedi is to face the truth, and choose. Give off light, or darkness, Padawan. Be a candle, or the night."
   """
   @spec quote() :: String.t()
-  def quote do
-    Module.concat(__MODULE__, Faker.mlocale()).quote
-  end
-
-  defp localised_module, do: Module.concat(__MODULE__, Faker.mlocale())
+  localize(:quote)
 end

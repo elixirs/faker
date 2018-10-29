@@ -1,4 +1,6 @@
 defmodule Faker.Beer do
+  import Faker, only: [localize: 1]
+
   @moduledoc """
   Functions for generating Beer related data
   """
@@ -18,9 +20,7 @@ defmodule Faker.Beer do
       "Birra Moretti"
   """
   @spec brand() :: String.t()
-  def brand do
-    localised_module().brand
-  end
+  localize(:brand)
 
   @doc """
   Returns a Beer name string
@@ -37,9 +37,7 @@ defmodule Faker.Beer do
       "Stone Imperial Russian Stout"
   """
   @spec name() :: String.t()
-  def name do
-    localised_module().name
-  end
+  localize(:name)
 
   @doc """
   Returns a Hop name string
@@ -56,9 +54,7 @@ defmodule Faker.Beer do
       "Citra"
   """
   @spec hop() :: String.t()
-  def hop do
-    localised_module().hop
-  end
+  localize(:hop)
 
   @doc """
   Returns a Yeast name string
@@ -75,9 +71,7 @@ defmodule Faker.Beer do
       "3944 - Belgian Witbier"
   """
   @spec yeast() :: String.t()
-  def yeast do
-    localised_module().yeast
-  end
+  localize(:yeast)
 
   @doc """
   Returns a Malt name string
@@ -94,9 +88,7 @@ defmodule Faker.Beer do
       "Munich"
   """
   @spec malt() :: String.t()
-  def malt do
-    localised_module().malt
-  end
+  localize(:malt)
 
   @doc """
   Returns a Style name string
@@ -113,9 +105,7 @@ defmodule Faker.Beer do
       "German Wheat And Rye Beer"
   """
   @spec style() :: String.t()
-  def style do
-    localised_module().style
-  end
+  localize(:style)
 
   @doc """
   Returns an IBU(International Bitterness Unit) for a beer
@@ -177,6 +167,4 @@ defmodule Faker.Beer do
   defp random_float do
     "#{Faker.random_between(0, 99)}.#{Faker.random_between(0, 9)}"
   end
-
-  defp localised_module, do: Module.concat(__MODULE__, Faker.mlocale())
 end

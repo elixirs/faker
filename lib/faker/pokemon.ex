@@ -1,4 +1,6 @@
 defmodule Faker.Pokemon do
+  import Faker, only: [localize: 1]
+
   @moduledoc """
   Function for generating Pokemon
   """
@@ -18,9 +20,7 @@ defmodule Faker.Pokemon do
       "Marowak"
   """
   @spec name() :: String.t()
-  def name do
-    localised_module().name
-  end
+  localize(:name)
 
   @doc """
   Returns a random Pokemon location
@@ -37,9 +37,5 @@ defmodule Faker.Pokemon do
       "Solaceon Town"
   """
   @spec location() :: String.t()
-  def location do
-    localised_module().location
-  end
-
-  defp localised_module, do: Module.concat(__MODULE__, Faker.mlocale())
+  localize(:location)
 end

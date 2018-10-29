@@ -1,4 +1,6 @@
 defmodule Faker.Address do
+  import Faker, only: [localize: 1]
+
   alias Faker.Name
 
   @geobase32 '0123456789bcdefghjkmnpqrstuvwxyz'
@@ -22,9 +24,7 @@ defmodule Faker.Address do
       "7"
   """
   @spec building_number() :: String.t()
-  def building_number do
-    localised_module().building_number
-  end
+  localize(:building_number)
 
   @doc """
   Return city name.
@@ -41,9 +41,7 @@ defmodule Faker.Address do
       "Hardy"
   """
   @spec city() :: String.t()
-  def city do
-    localised_module().city
-  end
+  localize(:city)
 
   @doc """
   Return city prefix.
@@ -60,9 +58,7 @@ defmodule Faker.Address do
       "Lake"
   """
   @spec city_prefix() :: String.t()
-  def city_prefix do
-    localised_module().city_prefix
-  end
+  localize(:city_prefix)
 
   @doc """
   Return city suffix.
@@ -79,9 +75,7 @@ defmodule Faker.Address do
       "view"
   """
   @spec city_suffix() :: String.t()
-  def city_suffix do
-    localised_module().city_suffix
-  end
+  localize(:city_suffix)
 
   @doc """
   Return country.
@@ -98,9 +92,7 @@ defmodule Faker.Address do
       "Venezuela"
   """
   @spec country() :: String.t()
-  def country do
-    localised_module().country
-  end
+  localize(:country)
 
   @doc """
   Return country code.
@@ -117,9 +109,7 @@ defmodule Faker.Address do
       "CX"
   """
   @spec country_code() :: String.t()
-  def country_code do
-    localised_module().country_code
-  end
+  localize(:country_code)
 
   @doc """
   Returns a geohash.
@@ -249,9 +239,7 @@ defmodule Faker.Address do
       "Apt. 970"
   """
   @spec secondary_address() :: String.t()
-  def secondary_address do
-    localised_module().secondary_address
-  end
+  localize(:secondary_address)
 
   @doc """
   Return state.
@@ -268,9 +256,7 @@ defmodule Faker.Address do
       "California"
   """
   @spec state() :: String.t()
-  def state do
-    localised_module().state
-  end
+  localize(:state)
 
   @doc """
   Return state abbr.
@@ -287,9 +273,7 @@ defmodule Faker.Address do
       "CA"
   """
   @spec state_abbr() :: String.t()
-  def state_abbr do
-    localised_module().state_abbr
-  end
+  localize(:state_abbr)
 
   @doc """
   Return street address.
@@ -365,9 +349,7 @@ defmodule Faker.Address do
       "Lodge"
   """
   @spec street_suffix() :: String.t()
-  def street_suffix do
-    localised_module().street_suffix
-  end
+  localize(:street_suffix)
 
   @doc """
   Return time zone.
@@ -384,9 +366,7 @@ defmodule Faker.Address do
       "America/Guyana"
   """
   @spec time_zone() :: String.t()
-  def time_zone do
-    localised_module().time_zone
-  end
+  localize(:time_zone)
 
   @doc """
   Return random postcode.
@@ -420,9 +400,5 @@ defmodule Faker.Address do
       "05235"
   """
   @spec zip_code() :: String.t()
-  def zip_code do
-    localised_module().zip_code
-  end
-
-  defp localised_module, do: Module.concat(__MODULE__, Faker.mlocale())
+  localize(:zip_code)
 end
