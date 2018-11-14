@@ -1,6 +1,8 @@
 defmodule Faker.Address.It do
   import Faker, only: [sampler: 2]
 
+  alias Faker.Address.It
+
   @moduledoc """
   Functions for generating addresses in Italian
   """
@@ -646,8 +648,8 @@ defmodule Faker.Address.It do
   @doc """
   Return state. But Italy doesn't have states so this calls Faker.Address.It.region() instead
   """
-  @spec state() :: String.t()
-  def state(), do: region()
+  @spec state :: String.t()
+  def state, do: region()
 
   @doc """
   Return region.
@@ -673,8 +675,8 @@ defmodule Faker.Address.It do
   @doc """
   There are no state/region abbreviations in Italy.
   """
-  @spec state_abbr() :: String.t()
-  def state_abbr(), do: ""
+  @spec state_abbr :: String.t()
+  def state_abbr, do: ""
 
   @doc """
   Return province name.
@@ -1067,7 +1069,7 @@ defmodule Faker.Address.It do
   """
   @spec street_address() :: String.t()
   def street_address do
-    "#{street_name()}, #{building_number()}"
+    "#{It.street_name()}, #{building_number()}"
   end
 
   @doc """
