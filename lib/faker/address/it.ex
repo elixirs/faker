@@ -930,7 +930,7 @@ defmodule Faker.Address.It do
   ])
 
   @doc """
-  Return a consistent tuple of region, province and province abbreviation.
+  Return a consistent list containing the region and province names with the province code.
   Data from https://dait.interno.gov.it/servizi-demografici/documentazione/anagaire-tabelle-comuni-province-consolati-statiterritori
 
   ## Examples
