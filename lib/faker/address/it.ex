@@ -30,7 +30,7 @@ defmodule Faker.Address.It do
   ## Examples
 
       iex> Faker.Address.It.city()
-      "Dionigi marittima"
+      "Dionigi Marittima"
       iex> Faker.Address.It.city()
       "Quarto Gennaro"
       iex> Faker.Address.It.city()
@@ -87,14 +87,14 @@ defmodule Faker.Address.It do
       iex> Faker.Address.It.city_suffix()
       "di sopra"
       iex> Faker.Address.It.city_suffix()
-      "marittima"
+      "Marittima"
   """
   @spec city_suffix() :: String.t()
   sampler(:city_suffix, [
         "al mare",
         "di sopra",
         "di sotto",
-        "marittima"
+        "Marittima"
       ])
 
   @doc """
@@ -366,6 +366,7 @@ defmodule Faker.Address.It do
 
   @doc """
   Return country code.
+  List from http://publications.europa.eu/code/it/it-5000500.htm
 
   ## Examples
 
@@ -650,6 +651,10 @@ defmodule Faker.Address.It do
 
   @doc """
   Return region.
+  If you call region(), province() or province_abbr() separately you'll end up with
+  inconsistent data. For example: "Lombardia", "Roma", "GE".
+  If you want consisten data call region_province_abbr() instead, which will return
+  something like ["Lombardia", "Milano", "MI"].
 
       ## Examples
 
@@ -672,8 +677,12 @@ defmodule Faker.Address.It do
   def state_abbr(), do: ""
 
   @doc """
-  Return province
+  Return province name.
   Data from https://dait.interno.gov.it/servizi-demografici/documentazione/anagaire-tabelle-comuni-province-consolati-statiterritori
+  If you call region(), province() or province_abbr() separately you'll end up with
+  inconsistent data. For example: "Lombardia", "Roma", "GE".
+  If you want consisten data call region_province_abbr() instead, which will return
+  something like ["Lombardia", "Milano", "MI"].
 
       ## Examples
 
@@ -794,8 +803,12 @@ defmodule Faker.Address.It do
   ])
 
   @doc """
-  Return province suffix
+  Return province code.
   Data from https://dait.interno.gov.it/servizi-demografici/documentazione/anagaire-tabelle-comuni-province-consolati-statiterritori
+  If you call region(), province() or province_abbr() separately you'll end up with
+  inconsistent data. For example: "Lombardia", "Roma", "GE".
+  If you want consisten data call region_province_abbr() instead, which will return
+  something like ["Lombardia", "Milano", "MI"].
 
     ## Examples
 
@@ -927,7 +940,7 @@ defmodule Faker.Address.It do
       iex> Faker.Address.It.region_province_abbr()
       ["Trentino-Alto Adige/Südtirol", "Bolzano/Bozen", "BZ"]
   """
-  @spec region_province_abbr() :: String.t()
+  @spec region_province_abbr() :: [String.t()]
   sampler(:region_province_abbr, [
         ["Abruzzi", "Chieti", "CH"],
         ["Abruzzi", "L'Aquila", "AQ"],
@@ -952,7 +965,7 @@ defmodule Faker.Address.It do
         ["Emilia-Romagna", "Parma", "PR"],
         ["Emilia-Romagna", "Piacenza", "PC"],
         ["Emilia-Romagna", "Ravenna", "RA"],
-        ["Emilia-Romagna", "Reggio NELL'EMILIA", "RE"],
+        ["Emilia-Romagna", "Reggio nell'Emilia", "RE"],
         ["Emilia-Romagna", "Rimini", "RN"],
         ["Friuli Venezia Giulia", "Gorizia", "GO"],
         ["Friuli Venezia Giulia", "Pordenone", "PN"],
@@ -991,7 +1004,7 @@ defmodule Faker.Address.It do
         ["Piemonte", "Biella", "BI"],
         ["Piemonte", "Cuneo", "CN"],
         ["Piemonte", "Novara", "NO"],
-        ["Piemonte", "TORINO", "TO"],
+        ["Piemonte", "Torino", "TO"],
         ["Piemonte", "Verbano-Cusio-Ossola", "VB"],
         ["Piemonte", "Vercelli", "VC"],
         ["Puglia", "Bari", "BA"],
@@ -1036,7 +1049,7 @@ defmodule Faker.Address.It do
         ["Veneto", "Venezia", "VE"],
         ["Veneto", "Verona", "VR"],
         ["Veneto", "Vicenza", "VI"]
-      ])
+  ])
 
   @doc """
   Return street address.
