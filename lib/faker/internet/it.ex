@@ -20,7 +20,16 @@ defmodule Faker.Internet.It do
       "gmail.com"
   """
   @spec free_email_service() :: String.t()
-  sampler(:free_email_service, ["gmail.com", "yahoo.it", "hotmail.it", "aruba.it", "libero.it", "alice.it", "virgilio.it", "tin.it"])
+  sampler(:free_email_service, [
+    "gmail.com",
+    "yahoo.it",
+    "hotmail.it",
+    "aruba.it",
+    "libero.it",
+    "alice.it",
+    "virgilio.it",
+    "tin.it"
+  ])
 
   @doc """
   Returns a random domain suffix
