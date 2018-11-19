@@ -23,11 +23,13 @@ defmodule Faker.Util do
   """
   @spec pick([any]) :: any
   def pick(list) when is_list(list) do
+    IO.puts("Lista")
     Enum.at(list, Faker.random_between(0, Enum.count(list) - 1))
   end
 
   @spec pick(Enum.t()) :: any
   def pick(enum) do
+    IO.puts("Enum")
     enum
     |> Enum.to_list()
     |> Enum.at(Faker.random_between(0, Enum.count(enum) - 1))
