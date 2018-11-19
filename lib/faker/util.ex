@@ -21,6 +21,11 @@ defmodule Faker.Util do
       iex> Faker.Util.pick([1, "2", 3.0])
       "2"
   """
+  @spec pick([any]) :: any
+  def pick(list) when is_list(list) do
+    Enum.at(list, Faker.random_between(0, Enum.count(list) - 1))
+  end
+
   @spec pick(Enum.t()) :: any
   def pick(enum) do
     enum
