@@ -20,6 +20,8 @@ defmodule Faker.Util do
       "c"
       iex> Faker.Util.pick([1, "2", 3.0])
       "2"
+      iex> Faker.Util.pick(%{"state1" => "city1", "state2" => "city2"})
+      {"state1", "city1"}
   """
   @spec pick([any]) :: any
   def pick(list) do
