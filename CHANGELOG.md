@@ -18,6 +18,8 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Fixed
 
+* `Faker.Util.pick/1` performance regression [[@aptinio][]]
+
 ### Security
 
 ## 0.11.1

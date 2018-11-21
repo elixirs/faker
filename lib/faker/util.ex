@@ -23,9 +23,7 @@ defmodule Faker.Util do
   """
   @spec pick(Enum.t()) :: any
   def pick(enum) do
-    enum
-    |> Enum.to_list()
-    |> Enum.at(Faker.random_between(0, Enum.count(enum) - 1))
+    Enum.at(enum, Faker.random_between(0, Enum.count(enum) - 1))
   end
 
   @doc """
