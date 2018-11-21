@@ -22,10 +22,6 @@ defmodule Faker.Util do
       "2"
   """
   @spec pick(Enum.t()) :: any
-  def pick(low..high) do
-    Faker.random_between(low, high)
-  end
-
   def pick(enum) do
     Enum.at(enum, Faker.random_between(0, Enum.count(enum) - 1))
   end

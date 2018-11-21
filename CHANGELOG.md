@@ -18,9 +18,13 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Fixed
 
-* `Faker.Util.pick/1` performance regression [[@aptinio][]]
-
 ### Security
+
+## 0.11.2
+
+### Fixed
+
+* `Faker.Util.pick/1` performance regression [[@aptinio][]] & [[@elbow-jason][]]
 
 ## 0.11.1
 
@@ -236,12 +240,14 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 [@adam-wanninger]: https://github.com/adam-wanninger
 [@anthonator]: https://github.com/anthonator
+[@aptinio]: https://github.com/aptinio
 [@bcat-eu]: https://github.com/bcat-eu
 [@belaustegui]: https://github.com/belaustegui
 [@cdesch]: https://github.com/cdesch
 [@ConnorRigby]: https://github.com/ConnorRigby
 [@devshane]: https://github.com/devshane
 [@efexen]: https://github.com/efexen
+[@elbow-jason]: https://github.com/elbow-jason
 [@fenollp]: https://github.com/fenollp
 [@feyl]: https://github.com/feyl
 [@GesJeremie]: https://github.com/GesJeremie
