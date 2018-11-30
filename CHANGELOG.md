@@ -12,6 +12,8 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Changed
 
+- [ ] Fixed `Faker.Internet.remove_special_characters/1` so that it strips apostrophes and quotes
+
 ### Deprecated
 
 ### Removed
