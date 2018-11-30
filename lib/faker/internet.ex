@@ -333,6 +333,6 @@ defmodule Faker.Internet do
   end
 
   defp remove_special_characters(string) do
-    String.replace(string, ~s('"), "")
+    String.replace(string, ~r/('|")/, "")
   end
 end
