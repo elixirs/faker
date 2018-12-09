@@ -10,6 +10,8 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Added
 
+* `Faker.Address.It`, `Faker.Color.It`, `Faker.Internet.It` and `Faker.Name.It` [[@pmontrasio][]]
+
 ### Changed
 
 ### Deprecated
@@ -27,10 +29,6 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 * `Faker.Util.pick/1` performance regression [[@aptinio][]] & [[@elbow-jason][]]
 
 ## 0.11.1
-
-### Added
-
-* `Faker.Address.It`, `Faker.Color.It`, `Faker.Internet.It` and `Faker.Name.It` [[@pmontrasio][]]
 
 ### Changed
 
