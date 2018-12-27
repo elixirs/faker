@@ -43,7 +43,7 @@ defmodule Faker.Util do
       iex> Faker.Util.sample_uniq(0, &Faker.Internet.email/0)
       ** (FunctionClauseError) no function clause matching in Faker.Util.sample_uniq/3
   """
-  @spec sample_uniq(pos_integer, (() -> any), MapSet.t) :: [any]
+  @spec sample_uniq(pos_integer, (() -> any), MapSet.t()) :: [any]
   def sample_uniq(count, sampler, acc \\ MapSet.new())
       when is_integer(count) and count > 0 and is_function(sampler, 0) do
     case MapSet.size(acc) do

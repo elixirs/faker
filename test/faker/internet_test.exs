@@ -6,6 +6,7 @@ defmodule Faker.InternetTest do
   doctest Faker.Internet
   doctest Faker.Internet.En
   doctest Faker.Internet.Es
+  doctest Faker.Internet.It
   doctest Faker.Internet.PtBr
 
   @iterations 10_000

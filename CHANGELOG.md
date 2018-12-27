@@ -10,6 +10,8 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Added
 
+* `Faker.Address.It`, `Faker.Color.It`, `Faker.Internet.It` and `Faker.Name.It` [[@pmontrasio][]]
+
 ### Changed
 
 ### Deprecated
@@ -42,6 +44,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 * `Faker.Util.pick/1` work with `Enum` type now [[@igas][]]
 * `Faker.localize/1` is calling `Kernel.function_exported?/3` with the wrong parameter [[@indocomsoft][]]
 * `Faker.StarWars.En` Changed Palpatine to Sheev Palpatine, and fixed typo for Beru Lars [[@theabrad][]]
+
 
 ## 0.11.0
 
@@ -265,6 +268,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 [@petehamilton]: https://github.com/petehamilton
 [@pfac]: https://github.com/pfac
 [@piton4eg]: https://github.com/piton4eg
+[@pmontrasio]: https://github.com/pmontrasio
 [@samcdavid]: https://github.com/samcdavid
 [@saulecabrera]: https://github.com/saulecabrera
 [@sotojuan]: https://github.com/sotojuan
