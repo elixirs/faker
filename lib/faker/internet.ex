@@ -333,6 +333,7 @@ defmodule Faker.Internet do
   end
 
   defp remove_special_characters(string) do
-    String.replace(string, ~s('"), "")
+    special_characters_pattern = :binary.compile_pattern(["'", "\""])
+    String.replace(string, special_characters_pattern, "")
   end
 end
