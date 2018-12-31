@@ -4,5 +4,6 @@ defmodule Faker.NameTest do
   doctest Faker.Name
   doctest Faker.Name.En
   doctest Faker.Name.Es
+  doctest Faker.Name.It
   doctest Faker.Name.PtBr
 end

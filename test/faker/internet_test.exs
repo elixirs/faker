@@ -6,6 +6,7 @@ defmodule Faker.InternetTest do
   doctest Faker.Internet
   doctest Faker.Internet.En
   doctest Faker.Internet.Es
+  doctest Faker.Internet.It
   doctest Faker.Internet.PtBr
 
   @iterations 10_000
@@ -43,42 +44,47 @@ defmodule Faker.InternetTest do
   end
 
   test "user_name/0" do
+    special_characters_pattern = :binary.compile_pattern(["'", "\""])
     Stream.repeatedly(&user_name/0)
     |> Enum.take(@iterations)
     |> Enum.each(fn generated_value ->
-      refute String.contains?(generated_value, ~s('"))
+      refute String.contains?(generated_value, special_characters_pattern)
     end)
   end
 
   test "email/0" do
+    special_characters_pattern = :binary.compile_pattern(["'", "\""])
     Stream.repeatedly(&email/0)
     |> Enum.take(@iterations)
     |> Enum.each(fn generated_value ->
-      refute String.contains?(generated_value, ~s('"))
+      refute String.contains?(generated_value, special_characters_pattern)
     end)
   end
 
   test "safe_email/0" do
+    special_characters_pattern = :binary.compile_pattern(["'", "\""])
     Stream.repeatedly(&safe_email/0)
     |> Enum.take(@iterations)
     |> Enum.each(fn generated_value ->
-      refute String.contains?(generated_value, ~s('"))
+      refute String.contains?(generated_value, special_characters_pattern)
     end)
   end
 
   test "free_email/0" do
+    special_characters_pattern = :binary.compile_pattern(["'", "\""])
     Stream.repeatedly(&free_email/0)
     |> Enum.take(@iterations)
     |> Enum.each(fn generated_value ->
-      refute String.contains?(generated_value, ~s('"))
+      refute String.contains?(generated_value, special_characters_pattern)
     end)
   end
 
   test "domain_word/0" do
+    special_characters_pattern = :binary.compile_pattern(["'", "\""])
     Stream.repeatedly(&domain_word/0)
     |> Enum.take(@iterations)
     |> Enum.each(fn generated_value ->
-      refute String.contains?(generated_value, ~s('"))
+      refute String.contains?(generated_value, special_characters_pattern)
     end)
   end
 end

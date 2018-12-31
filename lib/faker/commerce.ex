@@ -1,4 +1,6 @@
 defmodule Faker.Commerce do
+  import Faker, only: [localize: 1]
+
   @moduledoc """
   Functions for generating commerce related data
   """
@@ -18,9 +20,7 @@ defmodule Faker.Commerce do
       "grey"
   """
   @spec color() :: String.t()
-  def color do
-    localised_module().color
-  end
+  localize(:color)
 
   @doc """
   Returns a random department
@@ -37,9 +37,7 @@ defmodule Faker.Commerce do
       "Toys, Kids & Baby"
   """
   @spec department() :: String.t()
-  def department do
-    localised_module().department
-  end
+  localize(:department)
 
   @doc """
   Returns a random number that represents a price
@@ -76,9 +74,7 @@ defmodule Faker.Commerce do
       "Plastic Shoes"
   """
   @spec product_name() :: String.t()
-  def product_name do
-    localised_module().product_name
-  end
+  localize(:product_name)
 
   @doc """
   Returns a random adjective for a product
@@ -95,9 +91,7 @@ defmodule Faker.Commerce do
       "Gorgeous"
   """
   @spec product_name_adjective() :: String.t()
-  def product_name_adjective do
-    localised_module().product_name_adjective
-  end
+  localize(:product_name_adjective)
 
   @doc """
   Returns a random product material
@@ -114,9 +108,7 @@ defmodule Faker.Commerce do
       "Granite"
   """
   @spec product_name_material() :: String.t()
-  def product_name_material do
-    localised_module().product_name_material
-  end
+  localize(:product_name_material)
 
   @doc """
   Returns a random product name
@@ -133,9 +125,5 @@ defmodule Faker.Commerce do
       "Shirt"
   """
   @spec product_name_product() :: String.t()
-  def product_name_product do
-    localised_module().product_name_product
-  end
-
-  defp localised_module, do: Module.concat(__MODULE__, Faker.mlocale())
+  localize(:product_name_product)
 end
