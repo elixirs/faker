@@ -11,10 +11,31 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 ### Added
 
 * Add `Faker.Blockchain` namespace [[@vbrazo][]]
+* `Faker.Address.It`, `Faker.Color.It`, `Faker.Internet.It` and `Faker.Name.It` [[@pmontrasio][]]
 
 ### Changed
 
 ### Deprecated
+
+### Removed
+
+### Fixed
+
+* Quotes removal in `Faker.Internet` functions [[@jc00ke][]]
+
+### Security
+
+## 0.11.2
+
+### Fixed
+
+* `Faker.Util.pick/1` performance regression [[@aptinio][]] & [[@elbow-jason][]]
+
+## 0.11.1
+
+### Changed
+
+* all localized functions now use Faker.localize/1 [[@igas][]]
 
 ### Removed
 
@@ -27,7 +48,6 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 * `Faker.localize/1` is calling `Kernel.function_exported?/3` with the wrong parameter [[@indocomsoft][]]
 * `Faker.StarWars.En` Changed Palpatine to Sheev Palpatine, and fixed typo for Beru Lars [[@theabrad][]]
 
-### Security
 
 ## 0.11.0
 
@@ -53,16 +73,10 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 * Documentation moved to hexdocs.pm [[@MarcusSky][]], [[@vbrazo][]], and [[@igas][]]
 * Updated dependencies [[@igas][]]
 
-### Deprecated
-
-### Removed
-
 ### Fixed
 
 * `Faker.App.semver/0` is not generating invalid versions anymore fixed by [[@igas][]] found by [[@ConnorRigby][]]
 * `Faker.Lorem` is not redefining documentation in multiple functions anymore fixed and found by [[@pfac][]]
-
-### Security
 
 ## 0.10.0
 
@@ -82,8 +96,6 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 * Updated dependencies [[@igas][]]
 
-### Deprecated
-
 ### Removed
 
 * Elixir 1.3 support [[@igas][]]
@@ -96,8 +108,6 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 * Fix pokemon name - Mr. Mime :) [[@leveloid][]]
 * Gov.Us deprecations [[@halfdan][]]
 
-### Security
-
 ## 0.9.0
 
 ### Added
@@ -107,10 +117,6 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 * Dialyxir on CI [[@igas][]]
 * `Faker.String.base64/0` and `Faker.String.base64/1` [[@yordis][]]
 
-### Changed
-
-### Deprecated
-
 ### Removed
 
 * Elixir < 1.3 support [[@igas][]]
@@ -118,8 +124,6 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 ### Fixed
 
 * Credo issues [[@lrosa007][]]
-
-### Security
 
 ## 0.8.0
 
@@ -144,8 +148,6 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 * Underlaying data structure changed to maps to improve performance [[@igas][]]
 * Improved `Faker.Beer` usage [[@tbash][]]
 
-### Deprecated
-
 ### Removed
 
 * Usage docs duplication [[@piton4eg][]]
@@ -153,8 +155,6 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 ### Fixed
 
 * Elixir 1.4 deprecation warnings [[@igas][]]
-
-### Security
 
 ## 0.7.0
 
@@ -246,12 +246,14 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 [@adam-wanninger]: https://github.com/adam-wanninger
 [@anthonator]: https://github.com/anthonator
+[@aptinio]: https://github.com/aptinio
 [@bcat-eu]: https://github.com/bcat-eu
 [@belaustegui]: https://github.com/belaustegui
 [@cdesch]: https://github.com/cdesch
 [@ConnorRigby]: https://github.com/ConnorRigby
 [@devshane]: https://github.com/devshane
 [@efexen]: https://github.com/efexen
+[@elbow-jason]: https://github.com/elbow-jason
 [@fenollp]: https://github.com/fenollp
 [@feyl]: https://github.com/feyl
 [@GesJeremie]: https://github.com/GesJeremie
@@ -259,6 +261,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 [@igas]: https://igas.me
 [@indocomsoft]: https://github.com/indocomsoft
 [@jarednorman]: https://github.com/jarednorman
+[@jc00ke]: https://github.com/jc00ke
 [@johnhamelink]: https://github.com/johnhamelink
 [@lauraannwilliams]: https://github.com/lauraannwilliams
 [@leveloid]: https://github.com/leveloid
@@ -269,11 +272,13 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 [@petehamilton]: https://github.com/petehamilton
 [@pfac]: https://github.com/pfac
 [@piton4eg]: https://github.com/piton4eg
+[@pmontrasio]: https://github.com/pmontrasio
 [@samcdavid]: https://github.com/samcdavid
 [@saulecabrera]: https://github.com/saulecabrera
 [@sotojuan]: https://github.com/sotojuan
 [@stfnsr]: https://github.com/stfnsr
 [@tbash]: https://github.com/tbash
+[@theabrad]: https://github.com/theabrad
 [@tobyhinloopen]: https://github.com/tobyhinloopen
 [@vbrazo]: https://github.com/vbrazo
 [@vforvova]: https://github.com/vforvova

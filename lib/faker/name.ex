@@ -1,4 +1,6 @@
 defmodule Faker.Name do
+  import Faker, only: [localize: 1]
+
   @moduledoc """
   Functions for generating names
   """
@@ -18,9 +20,7 @@ defmodule Faker.Name do
       "Ally Rau MD"
   """
   @spec name() :: String.t()
-  def name do
-    localised_module().name
-  end
+  localize(:name)
 
   @doc """
   Returns a random first name
@@ -37,9 +37,7 @@ defmodule Faker.Name do
       "Ozella"
   """
   @spec first_name() :: String.t()
-  def first_name do
-    localised_module().first_name
-  end
+  localize(:first_name)
 
   @doc """
   Returns a random last name
@@ -56,9 +54,7 @@ defmodule Faker.Name do
       "Rolfson"
   """
   @spec last_name() :: String.t()
-  def last_name do
-    localised_module().last_name
-  end
+  localize(:last_name)
 
   @doc """
   Returns a random name related title
@@ -75,9 +71,7 @@ defmodule Faker.Name do
       "Customer Data Representative"
   """
   @spec title() :: String.t()
-  def title do
-    localised_module().title
-  end
+  localize(:title)
 
   @doc """
   Returns a random name related suffix
@@ -94,9 +88,7 @@ defmodule Faker.Name do
       "V"
   """
   @spec suffix() :: String.t()
-  def suffix do
-    localised_module().suffix
-  end
+  localize(:suffix)
 
   @doc """
   Returns a random name related prefix
@@ -113,9 +105,5 @@ defmodule Faker.Name do
       "Dr."
   """
   @spec prefix() :: String.t()
-  def prefix do
-    localised_module().prefix
-  end
-
-  defp localised_module, do: Module.concat(__MODULE__, Faker.mlocale())
+  localize(:prefix)
 end

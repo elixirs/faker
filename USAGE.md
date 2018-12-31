@@ -2,6 +2,7 @@
 - [Faker.Address](lib/faker/address.ex)
 - [Faker.Address.En](lib/faker/address/en.ex)
 - [Faker.Address.Es](lib/faker/address/es.ex)
+- [Faker.Address.It](lib/faker/address/it.ex)
 - [Faker.App](lib/faker/app.ex)
 - [Faker.Avatar](lib/faker/avatar.ex)
 <!-- B -->
@@ -12,10 +13,10 @@
 - [Faker.Cat](lib/faker/cat.ex)
 - [Faker.Cat.En](lib/faker/cat/en.ex)
 - [Faker.Code](lib/faker/code.ex)
-- [Faker.Code.En](lib/faker/code/en.ex)
 - [Faker.Color](lib/faker/color.ex)
 - [Faker.Color.En](lib/faker/color/en.ex)
 - [Faker.Color.Es](lib/faker/color/es.ex)
+- [Faker.Color.It](lib/faker/color/it.ex)
 - [Faker.Color.PtBr](lib/faker/color/pt_br.ex)
 - [Faker.Commerce](lib/faker/commerce.ex)
 - [Faker.Commerce.En](lib/faker/commerce/en.ex)
@@ -38,6 +39,7 @@
 - [Faker.Internet](lib/faker/internet.ex)
 - [Faker.Internet.En](lib/faker/internet/en.ex)
 - [Faker.Internet.Es](lib/faker/internet/es.ex)
+- [Faker.Internet.It](lib/faker/internet/it.ex)
 - [Faker.Internet.PtBr](lib/faker/internet/pt_br.ex)
 - [Faker.Internet.UserAgent](lib/faker/internet/user_agent.ex)
 <!-- J -->
@@ -53,6 +55,7 @@
 - [Faker.Name](lib/faker/name.ex)
 - [Faker.Name.En](lib/faker/name/en.ex)
 - [Faker.Name.Es](lib/faker/name/es.ex)
+- [Faker.Name.It](lib/faker/name/it.ex)
 - [Faker.Name.PtBr](lib/faker/name/pt_br.ex)
 - [Faker.Nato](lib/faker/nato.ex)
 <!-- O -->

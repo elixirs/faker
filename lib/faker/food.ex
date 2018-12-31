@@ -1,4 +1,6 @@
 defmodule Faker.Food do
+  import Faker, only: [localize: 1]
+
   @moduledoc """
   Functions for generating food data.
   """
@@ -18,9 +20,7 @@ defmodule Faker.Food do
       "Pasta Carbonara"
   """
   @spec dish() :: String.t()
-  def dish do
-    localised_module().dish
-  end
+  localize(:dish)
 
   @doc """
   Returns a random description.
@@ -37,9 +37,7 @@ defmodule Faker.Food do
       "Creamy mascarpone cheese and custard layered between espresso and rum soaked house-made ladyfingers, topped with Valrhona cocoa powder."
   """
   @spec description() :: String.t()
-  def description do
-    localised_module().description
-  end
+  localize(:description)
 
   @doc """
   Returns a random ingredient.
@@ -56,9 +54,7 @@ defmodule Faker.Food do
       "Tinned"
   """
   @spec ingredient() :: String.t()
-  def ingredient do
-    localised_module().ingredient
-  end
+  localize(:ingredient)
 
   @doc """
   Returns a random spicy ingredient.
@@ -75,9 +71,7 @@ defmodule Faker.Food do
       "Peppercorns Mixed"
   """
   @spec spice() :: String.t()
-  def spice do
-    localised_module().spice
-  end
+  localize(:spice)
 
   @doc """
   Returns a random measurement.
@@ -94,9 +88,7 @@ defmodule Faker.Food do
       "cup"
   """
   @spec measurement() :: String.t()
-  def measurement do
-    localised_module().measurement
-  end
+  localize(:measurement)
 
   @doc """
   Returns a random measurement size.
@@ -113,9 +105,7 @@ defmodule Faker.Food do
       "1/2"
   """
   @spec measurement_size() :: String.t()
-  def measurement_size do
-    localised_module().measurement_size
-  end
+  localize(:measurement_size)
 
   @doc """
   Returns a random metric measurement.
@@ -132,9 +122,7 @@ defmodule Faker.Food do
       "milliliter"
   """
   @spec metric_measurement() :: String.t()
-  def metric_measurement do
-    localised_module().metric_measurement
-  end
+  localize(:metric_measurement)
 
   @doc """
   Returns a type of sushi.
@@ -151,9 +139,5 @@ defmodule Faker.Food do
       "Octopus"
   """
   @spec sushi() :: String.t()
-  def sushi do
-    localised_module().sushi
-  end
-
-  defp localised_module, do: Module.concat(__MODULE__, Faker.mlocale())
+  localize(:sushi)
 end

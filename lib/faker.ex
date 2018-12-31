@@ -58,7 +58,8 @@ defmodule Faker do
   @spec mlocale() :: String.t()
   def mlocale do
     if Faker.country() do
-      String.capitalize(to_string(Faker.locale())) <> String.capitalize(to_string(Faker.country()))
+      String.capitalize(to_string(Faker.locale())) <>
+        String.capitalize(to_string(Faker.country()))
     else
       String.capitalize(to_string(Faker.locale()))
     end
@@ -127,11 +128,14 @@ defmodule Faker do
       def unquote(function)() do
         module = Module.concat(unquote(__CALLER__.module), Faker.mlocale())
         module_enus = Module.concat(unquote(__CALLER__.module), EnUs)
+
         cond do
           function_exported?(module, unquote(function), 0) ->
             apply(module, unquote(function), [])
+
           function_exported?(module_enus, unquote(function), 0) ->
             apply(module_enus, unquote(function), [])
+
           true ->
             apply(Module.concat(unquote(__CALLER__.module), En), unquote(function), [])
         end

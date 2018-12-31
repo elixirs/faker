@@ -1,4 +1,6 @@
 defmodule Faker.Company do
+  import Faker, only: [localize: 1]
+
   @moduledoc """
   Functions for generating company names and related stuff
   """
@@ -18,9 +20,7 @@ defmodule Faker.Company do
       "implement out-of-the-box content"
   """
   @spec bs() :: String.t()
-  def bs do
-    localised_module().bs
-  end
+  localize(:bs)
 
   @doc """
   Returns a random business related bullshit
@@ -37,9 +37,7 @@ defmodule Faker.Company do
       "next-generation"
   """
   @spec bullshit() :: String.t()
-  def bullshit do
-    localised_module().bullshit
-  end
+  localize(:bullshit)
 
   @doc """
   Returns a random business related bullshit prefix
@@ -56,9 +54,7 @@ defmodule Faker.Company do
       "scale"
   """
   @spec bullshit_prefix() :: String.t()
-  def bullshit_prefix do
-    localised_module().bullshit_prefix
-  end
+  localize(:bullshit_prefix)
 
   @doc """
   Returns a random business related bullshit suffix
@@ -75,9 +71,7 @@ defmodule Faker.Company do
       "systems"
   """
   @spec bullshit_suffix() :: String.t()
-  def bullshit_suffix do
-    localised_module().bullshit_suffix
-  end
+  localize(:bullshit_suffix)
 
   @doc """
   Returns a random business related buzzword
@@ -94,9 +88,7 @@ defmodule Faker.Company do
       "tertiary"
   """
   @spec buzzword() :: String.t()
-  def buzzword do
-    localised_module().buzzword
-  end
+  localize(:buzzword)
 
   @doc """
   Returns a random business related buzzword prefix
@@ -113,9 +105,7 @@ defmodule Faker.Company do
       "Automated"
   """
   @spec buzzword_prefix() :: String.t()
-  def buzzword_prefix do
-    localised_module().buzzword_prefix
-  end
+  localize(:buzzword_prefix)
 
   @doc """
   Returns a random business related buzzword suffix
@@ -132,9 +122,7 @@ defmodule Faker.Company do
       "product"
   """
   @spec buzzword_suffix() :: String.t()
-  def buzzword_suffix do
-    localised_module().buzzword_suffix
-  end
+  localize(:buzzword_suffix)
 
   @doc """
   Returns a random complete catch phrase
@@ -151,9 +139,7 @@ defmodule Faker.Company do
       "pricing structure"
   """
   @spec catch_phrase() :: String.t()
-  def catch_phrase do
-    localised_module().catch_phrase
-  end
+  localize(:catch_phrase)
 
   @doc """
   Returns complete company name
@@ -170,9 +156,7 @@ defmodule Faker.Company do
       "Murphy-Metz"
   """
   @spec name() :: String.t()
-  def name do
-    localised_module().name
-  end
+  localize(:name)
 
   @doc """
   Returns a random type of business entity
@@ -189,9 +173,5 @@ defmodule Faker.Company do
       "Ltd"
   """
   @spec suffix() :: String.t()
-  def suffix do
-    localised_module().suffix
-  end
-
-  defp localised_module, do: Module.concat(__MODULE__, Faker.mlocale())
+  localize(:suffix)
 end

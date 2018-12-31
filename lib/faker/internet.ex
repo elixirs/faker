@@ -2,7 +2,9 @@ defmodule Faker.Internet do
   alias Faker.Lorem
   alias Faker.Name.En, as: Name
   alias Faker.Util
+
   import Faker.Util, only: [pick: 1]
+  import Faker, only: [localize: 1]
 
   @moduledoc """
   Functions for generating internet related data
@@ -42,9 +44,7 @@ defmodule Faker.Internet do
       "info"
   """
   @spec domain_suffix() :: String.t()
-  def domain_suffix do
-    localised_module().domain_suffix
-  end
+  localize(:domain_suffix)
 
   @doc """
   Returns a random username
@@ -173,9 +173,7 @@ defmodule Faker.Internet do
       "hotmail.com"
   """
   @spec free_email_service() :: String.t()
-  def free_email_service do
-    localised_module().free_email_service
-  end
+  localize(:free_email_service)
 
   @doc """
   Returns a random url
@@ -334,9 +332,8 @@ defmodule Faker.Internet do
     |> String.pad_leading(2, ["0"])
   end
 
-  defp localised_module, do: Module.concat(__MODULE__, Faker.mlocale())
-
   defp remove_special_characters(string) do
-    String.replace(string, ~s('"), "")
+    special_characters_pattern = :binary.compile_pattern(["'", "\""])
+    String.replace(string, special_characters_pattern, "")
   end
 end
