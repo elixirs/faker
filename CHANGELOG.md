@@ -23,6 +23,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Fixed
 
+* Elixir 1.8.0 `DateTime` deprecation [[@vnegrisolo][]]
 * Quotes removal in `Faker.Internet` functions [[@jc00ke][]]
 
 ### Security
@@ -284,6 +285,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 [@tobyhinloopen]: https://github.com/tobyhinloopen
 [@vbrazo]: https://github.com/vbrazo
 [@vforvova]: https://github.com/vforvova
+[@vnegrisolo]: https://github.com/vnegrisolo
 [@wojtekmach]: https://github.com/wojtekmach
 [@yordis]: https://github.com/yordis
 [@zmoshansky]: https://github.com/zmoshansky
