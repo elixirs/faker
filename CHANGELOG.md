@@ -23,8 +23,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Fixed
 
-* Fix deprecated `Elixir.DateTime` unit `:microseconds` to `:microsecond` [[@vnegrisolo][]]
-
+* Elixir 1.8.0 `DateTime` deprecation [[@vnegrisolo][]]
 * Quotes removal in `Faker.Internet` functions [[@jc00ke][]]
 
 ### Security
