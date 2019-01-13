@@ -23,7 +23,7 @@ defmodule Faker.Name do
   localize(:name)
 
   @doc """
-  Returns a random complete job title
+  Returns a random complete name with middle name
 
     ## Examples
 
@@ -40,7 +40,7 @@ defmodule Faker.Name do
   localize(:name_with_middle)
 
   @doc """
-  Returns a complete name (may include a suffix/prefix or both)
+  Returns a complete middle name
 
   ## Examples
 
