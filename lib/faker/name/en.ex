@@ -3599,7 +3599,7 @@ defmodule Faker.Name.En do
   ])
 
   @doc """
-  Returns a random complete job title
+  Returns a random complete name with middle name
 
     ## Examples
 
@@ -3616,7 +3616,7 @@ defmodule Faker.Name.En do
   def name_with_middle, do: "#{first_name()} #{middle_name()} #{last_name()}"
 
   @doc """
-  Returns a complete name (may include a suffix/prefix or both)
+  Returns a complete middle name
 
   ## Examples
 
