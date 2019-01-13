@@ -4,7 +4,7 @@ defmodule Faker.Address.En do
   alias Faker.Name
 
   @moduledoc """
-  Functions for generating addresses in Spanish
+  Functions for generating addresses in English
   """
 
   @doc """
