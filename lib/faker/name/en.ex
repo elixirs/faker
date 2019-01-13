@@ -3603,6 +3603,40 @@ defmodule Faker.Name.En do
 
     ## Examples
 
+      iex> Faker.Name.En.name_with_middle()
+      "Joany Hayes Schumm"
+      iex> Faker.Name.En.name_with_middle()
+      "Ozella Sipes Wehner"
+      iex> Faker.Name.En.name_with_middle()
+      "Conor Padberg Schiller"
+      iex> Faker.Name.En.name_with_middle()
+      "Delphine Hartmann Ryan"
+  """
+  @spec name_with_middle() :: String.t()
+  def name_with_middle, do: "#{first_name()} #{middle_name()} #{last_name()}"
+
+  @doc """
+  Returns a complete name (may include a suffix/prefix or both)
+
+  ## Examples
+
+      iex> Faker.Name.En.middle_name()
+      "Blick"
+      iex> Faker.Name.En.middle_name()
+      "Hayes"
+      iex> Faker.Name.En.middle_name()
+      "Schumm"
+      iex> Faker.Name.En.middle_name()
+      "Rolfson"
+  """
+  @spec middle_name() :: String.t()
+  def middle_name, do: last_name()
+
+  @doc """
+  Returns a random complete job title
+
+    ## Examples
+
       iex> Faker.Name.En.title()
       "Dynamic Identity Administrator"
       iex> Faker.Name.En.title()

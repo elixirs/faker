@@ -23,6 +23,40 @@ defmodule Faker.Name do
   localize(:name)
 
   @doc """
+  Returns a random complete job title
+
+    ## Examples
+
+      iex> Faker.Name.name_with_middle()
+      "Joany Hayes Schumm"
+      iex> Faker.Name.name_with_middle()
+      "Ozella Sipes Wehner"
+      iex> Faker.Name.name_with_middle()
+      "Conor Padberg Schiller"
+      iex> Faker.Name.name_with_middle()
+      "Delphine Hartmann Ryan"
+  """
+  @spec name_with_middle() :: String.t()
+  localize(:name_with_middle)
+
+  @doc """
+  Returns a complete name (may include a suffix/prefix or both)
+
+  ## Examples
+
+      iex> Faker.Name.middle_name()
+      "Blick"
+      iex> Faker.Name.middle_name()
+      "Hayes"
+      iex> Faker.Name.middle_name()
+      "Schumm"
+      iex> Faker.Name.middle_name()
+      "Rolfson"
+  """
+  @spec middle_name() :: String.t()
+  localize(:middle_name)
+
+  @doc """
   Returns a random first name
 
   ## Examples
