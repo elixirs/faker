@@ -10,7 +10,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Added
 
-* `Faker.Name.En.middle_name` and `Faker.Name.En.name_with_middle` [[@vbrazo][]]
+* `Faker.Name.middle_name` and `Faker.Name.name_with_middle` [[@vbrazo][]]
 * `Faker.Blockchain` namespace [[@vbrazo][]]
 * `Faker.Address.It`, `Faker.Color.It`, `Faker.Internet.It` and `Faker.Name.It` [[@pmontrasio][]]
 
