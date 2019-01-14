@@ -78,7 +78,7 @@ defmodule Faker.Address.En do
   ])
 
   @doc """
-  Return city prefix.
+  Return city suffix.
 
   ## Examples
 
