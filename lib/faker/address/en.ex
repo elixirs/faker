@@ -4,7 +4,7 @@ defmodule Faker.Address.En do
   alias Faker.Name
 
   @moduledoc """
-  Functions for generating addresses in Spanish
+  Functions for generating addresses in English
   """
 
   @doc """
@@ -78,7 +78,7 @@ defmodule Faker.Address.En do
   ])
 
   @doc """
-  Return city prefix.
+  Return city suffix.
 
   ## Examples
 
@@ -650,7 +650,7 @@ defmodule Faker.Address.En do
   @doc """
   Return random secondary address.
 
-    ## Examples
+  ## Examples
 
       iex> Faker.Address.En.secondary_address()
       "Apt. 154"
@@ -671,7 +671,7 @@ defmodule Faker.Address.En do
   @doc """
   Return state.
 
-      ## Examples
+  ## Examples
 
       iex> Faker.Address.En.state()
       "Hawaii"
@@ -739,7 +739,7 @@ defmodule Faker.Address.En do
   @doc """
   Return state abbr.
 
-    ## Examples
+  ## Examples
 
       iex> Faker.Address.En.state_abbr()
       "HI"
@@ -807,7 +807,7 @@ defmodule Faker.Address.En do
   @doc """
   Return street address.
 
-    ## Examples
+  ## Examples
 
       iex> Faker.Address.En.street_address()
       "Elizabeth Freeway 2"
@@ -826,7 +826,7 @@ defmodule Faker.Address.En do
   @doc """
   Return `street_address/0` or if argument is `true` adds `secondary_address/0`.
 
-    ## Examples
+  ## Examples
 
       iex> Faker.Address.En.street_address(true)
       "Elizabeth Freeway 2 Apt. 461"
@@ -844,7 +844,7 @@ defmodule Faker.Address.En do
   @doc """
   Return street name.
 
-    ## Examples
+  ## Examples
 
       iex> Faker.Address.En.street_name()
       "Elizabeth Freeway"
@@ -867,7 +867,7 @@ defmodule Faker.Address.En do
   @doc """
   Return street suffix.
 
-    ## Examples
+  ## Examples
 
       iex> Faker.Address.En.street_suffix()
       "View"
@@ -1110,7 +1110,7 @@ defmodule Faker.Address.En do
   @doc """
   Return time zone.
 
-    ## Examples
+  ## Examples
 
       iex> Faker.Address.En.time_zone()
       "Europe/Istanbul"
@@ -1271,7 +1271,7 @@ defmodule Faker.Address.En do
   @doc """
   Return random postcode.
 
-    ## Examples
+  ## Examples
 
       iex> Faker.Address.En.zip_code()
       "01542"

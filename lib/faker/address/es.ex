@@ -410,7 +410,7 @@ defmodule Faker.Address.Es do
   @doc """
   Return random secondary address.
 
-    ## Examples
+  ## Examples
 
       iex> Faker.Address.Es.secondary_address()
       "Esc. 154"
@@ -431,7 +431,7 @@ defmodule Faker.Address.Es do
   @doc """
   Return state.
 
-      ## Examples
+  ## Examples
 
       iex> Faker.Address.Es.state()
       "Castilla-La Mancha"
@@ -465,7 +465,7 @@ defmodule Faker.Address.Es do
   @doc """
   Return state abbr.
 
-    ## Examples
+  ## Examples
 
       iex> Faker.Address.Es.state_abbr()
       "Ara"
@@ -500,7 +500,7 @@ defmodule Faker.Address.Es do
   @doc """
   Return street address.
 
-    ## Examples
+  ## Examples
 
       iex> Faker.Address.Es.street_address()
       "Elizabeth Mercado 26"
@@ -519,7 +519,7 @@ defmodule Faker.Address.Es do
   @doc """
   Return `street_address/0` or if argument is `true` adds `secondary_address/0`.
 
-    ## Examples
+  ## Examples
 
       iex> Faker.Address.Es.street_address(true)
       "Elizabeth Mercado 26 Esc. 610"
@@ -537,7 +537,7 @@ defmodule Faker.Address.Es do
   @doc """
   Return street name.
 
-    ## Examples
+  ## Examples
 
       iex> Faker.Address.Es.street_name()
       "Elizabeth Mercado"
@@ -560,7 +560,7 @@ defmodule Faker.Address.Es do
   @doc """
   Return street suffix.
 
-    ## Examples
+  ## Examples
 
       iex> Faker.Address.Es.street_suffix()
       "Entrada"
@@ -648,7 +648,7 @@ defmodule Faker.Address.Es do
   @doc """
   Return time zone.
 
-    ## Examples
+  ## Examples
 
       iex> Faker.Address.Es.time_zone()
       "Australia/Sydney"
@@ -791,7 +791,7 @@ defmodule Faker.Address.Es do
   @doc """
   Return random postcode.
 
-    ## Examples
+  ## Examples
 
       iex> Faker.Address.Es.zip_code()
       "01542"
