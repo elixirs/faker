@@ -11,10 +11,28 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 ### Added
 
 * `Faker.Name.middle_name` and `Faker.Name.name_with_middle` [[@vbrazo][]]
+
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+## 0.12.0
+
+### Added
+
 * `Faker.Blockchain` namespace [[@vbrazo][]]
 * `Faker.Address.It`, `Faker.Color.It`, `Faker.Internet.It` and `Faker.Name.It` [[@pmontrasio][]]
 
 ### Changed
+
+* Bump `ex_doc` from **0.19.1** to **0.19.3**
+* Bump `earmark` from **1.3.0** to **1.3.1**
 
 ### Deprecated
 
@@ -24,8 +42,10 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Fixed
 
+* Typo in Faker.Pizza [[@gmcintire][]]
 * Elixir 1.8.0 `DateTime` deprecation [[@vnegrisolo][]]
-* Quotes removal in `Faker.Internet` functions [[@jc00ke][]]
+* Quotes removal in `Faker.Internet` functions [[@jc00ke][]] & [[@igas][]]
+* Documentation issues [[@hovikman][]]
 
 ### Security
 
@@ -261,7 +281,9 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 [@fenollp]: https://github.com/fenollp
 [@feyl]: https://github.com/feyl
 [@GesJeremie]: https://github.com/GesJeremie
+[@gmcintire]: https://github.com/gmcintire
 [@halfdan]: https://github.com/halfdan
+[@hovikman]: https://github.com/hovikman
 [@igas]: https://igas.me
 [@indocomsoft]: https://github.com/indocomsoft
 [@jarednorman]: https://github.com/jarednorman

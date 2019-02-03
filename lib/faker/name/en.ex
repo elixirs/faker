@@ -3549,7 +3549,7 @@ defmodule Faker.Name.En do
   @doc """
   Returns a random prefix
 
-    ## Examples
+  ## Examples
 
       iex> Faker.Name.En.prefix()
       "Mr."
@@ -3572,7 +3572,7 @@ defmodule Faker.Name.En do
   @doc """
   Returns a random suffix
 
-    ## Examples
+  ## Examples
 
       iex> Faker.Name.En.suffix()
       "II"
@@ -3635,7 +3635,7 @@ defmodule Faker.Name.En do
   @doc """
   Returns a random complete job title
 
-    ## Examples
+  ## Examples
 
       iex> Faker.Name.En.title()
       "Dynamic Identity Administrator"
@@ -3694,7 +3694,7 @@ defmodule Faker.Name.En do
   @doc """
   Returns a random job title name
 
-    ## Examples
+  ## Examples
 
       iex> Faker.Name.En.title_job()
       "Administrator"
