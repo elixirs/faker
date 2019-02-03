@@ -44,7 +44,7 @@ defmodule Faker.Pizza do
         "Family with Clam, Cherry Tomatoes, Salmon, and Chicken"
       ]
   """
-  @spec pizzas(Range.t) :: list(String.t)
+  @spec pizzas(Range.t()) :: list(String.t())
   def pizzas(range \\ 2..5)
 
   def pizzas(first..last) do
@@ -99,7 +99,7 @@ defmodule Faker.Pizza do
       iex> Faker.Pizza.toppings(2..3)
       ["Shellfish", "Smoked Salmon"]
   """
-  @spec toppings(Range.t) :: list(String.t)
+  @spec toppings(Range.t()) :: list(String.t())
   def toppings(range \\ 2..5)
 
   def toppings(first..last) do
@@ -227,7 +227,7 @@ defmodule Faker.Pizza do
     "Greek",
     "Sicilian Style",
     "Pizza Rustica",
-    "Tomatoe Pie",
+    "Tomato Pie",
     "Pizza Bread",
     "Neapolitan",
     "Deep Fried Pizza",
@@ -270,7 +270,7 @@ defmodule Faker.Pizza do
     "Mango Sauce",
     "Siracha Sauce",
     "Buffalo Sauce",
-    "Tomatoe Garlic Sauce",
+    "Tomato Garlic Sauce",
     "Butter Chicken Sauce",
     "Olive Oil",
     "Hummus",
