@@ -1,13 +1,13 @@
 defmodule Faker.Mixfile do
   use Mix.Project
 
-  @version "0.11.2"
+  @version "0.12.0"
 
   def project do
     [
       app: :faker,
       version: @version,
-      elixir: "~> 1.3",
+      elixir: "~> 1.4",
       description: "Faker is a pure Elixir library for generating fake data.",
       package: package(),
       name: "Faker",
@@ -50,11 +50,6 @@ defmodule Faker.Mixfile do
   defp package do
     %{
       files: ["lib", "mix.exs", "mix.lock"],
-      maintainers: [
-        "Igor Kapkov",
-        "Toby Hinloopen",
-        "Vitor Oliveira"
-      ],
       licenses: ["MIT"],
       links: %{"GitHub" => "https://github.com/igas/faker"}
     }
