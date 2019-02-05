@@ -154,7 +154,7 @@ defmodule Faker.Industry.En do
     "Commodity Chemicals",
     "Specialty Chemicals",
     "Forestry",
-    "ÊPaper",
+    "Paper",
     "Aluminum",
     "Nonferrous Metals",
     "Iron & Steel",
