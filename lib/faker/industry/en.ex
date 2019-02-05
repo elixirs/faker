@@ -13,11 +13,11 @@ defmodule Faker.Industry.En do
       iex> Faker.Industry.En.industry
       "Oil & Gas"
       iex> Faker.Industry.En.industry
-      "Health Care"
+      "Basic Materials"
       iex> Faker.Industry.En.industry
       "Consumer Services"
       iex> Faker.Industry.En.industry
-      "Telecommunications"
+      "Health Care"
   """
   @spec industry() :: String.t()
   sampler(:industry, [
@@ -39,13 +39,13 @@ defmodule Faker.Industry.En do
   ## Examples
 
       iex> Faker.Industry.En.super_sector
-      "Media"
+      "Automobiles & Parts"
       iex> Faker.Industry.En.super_sector
       "Banks"
       iex> Faker.Industry.En.super_sector
-      "Chemicals"
+      "Automobiles & Parts"
       iex> Faker.Industry.En.super_sector
-      "Oil & Gas"
+      "Health Care"
   """
   @spec super_sector() :: String.t()
   sampler(:super_sector, [
@@ -76,13 +76,13 @@ defmodule Faker.Industry.En do
   ## Examples
 
       iex> Faker.Industry.En.sector
-      "Beverages"
+      "Food & Drug Retailers"
       iex> Faker.Industry.En.sector
-      "Chemicals"
+      "Banks"
       iex> Faker.Industry.En.sector
-      "Industrial Engineering"
+      "Software & Computer Services"
       iex> Faker.Industry.En.sector
-      "Mining"
+      "Media"
   """
   @spec sector() :: String.t()
   sampler(:sector, [
@@ -135,13 +135,13 @@ defmodule Faker.Industry.En do
   ## Examples
 
       iex> Faker.Industry.En.sub_sector()
-      "General Mining"
+      "Electrical Components & Equipment"
       iex> Faker.Industry.En.sub_sector()
-      "Defense"
+      "Publishing"
       iex> Faker.Industry.En.sub_sector()
-      "ÊPaper"
+      "Alternative Electricity"
       iex> Faker.Industry.En.sub_sector()
-      "Pipelines"
+      "Forestry"
   """
   @spec sub_sector() :: String.t()
   sampler(:sub_sector, [
