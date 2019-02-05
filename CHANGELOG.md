@@ -25,6 +25,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 ### Added
 
 * New maintainer [Vitor Oliveira (@vbrazo)](https://github.com/vbrazo)
+* New maintainer [Anthony Smith (@anthonator)](https://github.com/anthonator)
 * `Faker.Blockchain` namespace [[@vbrazo][]]
 * `Faker.Address.It`, `Faker.Color.It`, `Faker.Internet.It` and `Faker.Name.It` [[@pmontrasio][]]
 
@@ -32,6 +33,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 * Bump `ex_doc` from **0.19.1** to **0.19.3**
 * Bump `earmark` from **1.3.0** to **1.3.1**
+* Bump `credo` from **1.0.1** to **1.0.2**
 
 ### Deprecated
 

@@ -293,7 +293,7 @@ defmodule Faker.Lorem do
       iex> Faker.Lorem.characters(7)
       'jycADSd'
   """
-  @spec characters(integer | Range.t) :: [char]
+  @spec characters(integer | Range.t()) :: [char]
   def characters(range_or_length \\ 15..255)
 
   def characters(first..last) do
