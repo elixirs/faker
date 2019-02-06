@@ -4,6 +4,7 @@ defmodule Faker.InternetTest do
   import Faker.Internet
 
   doctest Faker.Internet
+  doctest Faker.Internet.Arm
   doctest Faker.Internet.En
   doctest Faker.Internet.Es
   doctest Faker.Internet.It

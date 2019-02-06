@@ -2,6 +2,7 @@ defmodule Faker.CommerceTest do
   use ExUnit.Case, async: true
 
   doctest Faker.Commerce
+  doctest Faker.Commerce.Arm
   doctest Faker.Commerce.En
 
   test "price/0" do
