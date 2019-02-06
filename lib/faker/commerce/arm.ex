@@ -1,5 +1,6 @@
 defmodule Faker.Commerce.Arm do
   import Faker, only: [sampler: 2]
+  alias Faker.Color.Arm
 
   @moduledoc """
   Fuctions for generating commerce related data in Armenian
@@ -20,8 +21,8 @@ defmodule Faker.Commerce.Arm do
       "մանուշակագույն"
   """
   @spec color() :: String.t()
-  def color() do
-    Faker.Color.Arm.name()
+  def color do
+    Arm.name()
   end
 
   @doc """
