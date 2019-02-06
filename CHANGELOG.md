@@ -10,6 +10,8 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Added
 
+* Added: Support for `Armenian Language` [[@hovikman][]]
+
 ### Changed
 
 ### Deprecated
@@ -17,6 +19,8 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 ### Removed
 
 ### Fixed
+
+* Fix industry tests [[@hovikman][]]
 
 ### Security
 
