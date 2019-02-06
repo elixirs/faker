@@ -1,4 +1,4 @@
-defmodule Faker.Internet.Arm do
+defmodule Faker.Internet.Am do
   import Faker, only: [sampler: 2]
 
   @moduledoc """
@@ -10,14 +10,14 @@ defmodule Faker.Internet.Arm do
 
   ## Examples
 
-      iex> Faker.Internet.Arm.free_email_service()
+      iex> Faker.Internet.Am.free_email_service()
       "hotmail.com"
-      iex> Faker.Internet.Arm.free_email_service()
+      iex> Faker.Internet.Am.free_email_service()
       "yandex.ru"
-      iex> Faker.Internet.Arm.free_email_service()
+      iex> Faker.Internet.Am.free_email_service()
       "freenet.am"
-      iex> Faker.Internet.En.free_email_service()
-      "hotmail.com"
+      iex> Faker.Internet.Am.free_email_service()
+      "yahoo.com"
   """
   @spec free_email_service() :: String
   sampler(:free_email_service, [
@@ -35,13 +35,13 @@ defmodule Faker.Internet.Arm do
 
   ## Examples
 
-      iex> Faker.Internet.Arm.domain_suffix()
+      iex> Faker.Internet.Am.domain_suffix()
       "am"
-      iex> Faker.Internet.Arm.domain_suffix()
+      iex> Faker.Internet.Am.domain_suffix()
       "com"
-      iex> Faker.Internet.Arm.domain_suffix()
+      iex> Faker.Internet.Am.domain_suffix()
       "am"
-      iex> Faker.Internet.Arm.domain_suffix()
+      iex> Faker.Internet.Am.domain_suffix()
       "org"
   """
   @spec domain_suffix() :: String.t()

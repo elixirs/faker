@@ -1,4 +1,4 @@
-defmodule Faker.Industry.Arm do
+defmodule Faker.Industry.Am do
   import Faker, only: [sampler: 2]
 
   @moduledoc """
@@ -10,13 +10,13 @@ defmodule Faker.Industry.Arm do
 
   ## Examples
 
-      iex> Faker.Industry.Arm.industry
+      iex> Faker.Industry.Am.industry
       "Հյուրընկալություն"
-      iex> Faker.Industry.Arm.industry
+      iex> Faker.Industry.Am.industry
       "Բժշկական Գործունեություն"
-      iex> Faker.Industry.Arm.industry
+      iex> Faker.Industry.Am.industry
       "Վենչուրային և Մասնավոր Կապիտալ"
-      iex> Faker.Industry.Arm.industry
+      iex> Faker.Industry.Am.industry
       "Էներգետիկա"
   """
   @spec industry() :: String.t()

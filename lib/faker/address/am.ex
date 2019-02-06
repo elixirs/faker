@@ -1,4 +1,4 @@
-defmodule Faker.Address.Arm do
+defmodule Faker.Address.Am do
   import Faker, only: [sampler: 2]
 
   @moduledoc """
@@ -10,13 +10,13 @@ defmodule Faker.Address.Arm do
 
   ## Examples
 
-      iex> Faker.Address.Arm.building_number()
+      iex> Faker.Address.Am.building_number()
       "1"
-      iex> Faker.Address.Arm.building_number()
+      iex> Faker.Address.Am.building_number()
       "4"
-      iex> Faker.Address.Arm.building_number()
+      iex> Faker.Address.Am.building_number()
       "64"
-      iex> Faker.Address.Arm.building_number()
+      iex> Faker.Address.Am.building_number()
       "108"
   """
   @spec building_number() :: String.t()
@@ -31,13 +31,13 @@ defmodule Faker.Address.Arm do
 
   ## Examples
 
-      iex> Faker.Address.Arm.city()
+      iex> Faker.Address.Am.city()
       "Ստեփանավան"
-      iex> Faker.Address.Arm.city()
+      iex> Faker.Address.Am.city()
       "Մարալիկ"
-      iex> Faker.Address.Arm.city()
+      iex> Faker.Address.Am.city()
       "Ճամբարակ"
-      iex> Faker.Address.Arm.city()
+      iex> Faker.Address.Am.city()
       "Մեղրի"
   """
 
@@ -99,7 +99,7 @@ defmodule Faker.Address.Arm do
 
   ## Examples
 
-      iex> Faker.Address.Arm.city_prefix()
+      iex> Faker.Address.Am.city_prefix()
       "ք."
 
   """
@@ -113,13 +113,13 @@ defmodule Faker.Address.Arm do
 
   ## Examples
 
-      iex> Faker.Address.Arm.country()
+      iex> Faker.Address.Am.country()
       "Ֆրանսիա"
-      iex> Faker.Address.Arm.country()
+      iex> Faker.Address.Am.country()
       "Նիդերլանդներ"
-      iex> Faker.Address.Arm.country()
+      iex> Faker.Address.Am.country()
       "Ղազախստան"
-      iex> Faker.Address.Arm.country()
+      iex> Faker.Address.Am.country()
       "Թուրքմենստան"
   """
   @spec country() :: String.t()
@@ -362,13 +362,13 @@ defmodule Faker.Address.Arm do
 
   ## Examples
 
-      iex> Faker.Address.Arm.secondary_address()
+      iex> Faker.Address.Am.secondary_address()
       "բն. 1"
-      iex> Faker.Address.Arm.secondary_address()
+      iex> Faker.Address.Am.secondary_address()
       "բն. 4"
-      iex> Faker.Address.Arm.secondary_address()
+      iex> Faker.Address.Am.secondary_address()
       "բն. 64"
-      iex> Faker.Address.Arm.secondary_address()
+      iex> Faker.Address.Am.secondary_address()
       "բն. 110"
   """
 
@@ -385,13 +385,13 @@ defmodule Faker.Address.Arm do
 
   ## Examples
 
-      iex> Faker.Address.Arm.state()
+      iex> Faker.Address.Am.state()
       "Արագածոտն"
-      iex> Faker.Address.Arm.state()
+      iex> Faker.Address.Am.state()
       "Արարատ"
-      iex> Faker.Address.Arm.state()
+      iex> Faker.Address.Am.state()
       "Կոտայք"
-      iex> Faker.Address.Arm.state()
+      iex> Faker.Address.Am.state()
       "Լոռի"
   """
   @spec state() :: String.t()
@@ -413,13 +413,13 @@ defmodule Faker.Address.Arm do
 
   ## Examples
 
-      iex> Faker.Address.Arm.state_abbr()
+      iex> Faker.Address.Am.state_abbr()
       "ԱԳ"
-      iex> Faker.Address.Arm.state_abbr()
+      iex> Faker.Address.Am.state_abbr()
       "ԱՐ"
-      iex> Faker.Address.Arm.state_abbr()
+      iex> Faker.Address.Am.state_abbr()
       "ԿՏ"
-      iex> Faker.Address.Arm.state_abbr()
+      iex> Faker.Address.Am.state_abbr()
       "ԼՌ"
   """
   @spec state_abbr() :: String.t()
@@ -441,13 +441,13 @@ defmodule Faker.Address.Arm do
 
   ## Examples
 
-      iex> Faker.Address.Arm.street_address()
+      iex> Faker.Address.Am.street_address()
       "Սուրբ Հովհաննեսի 542"
-      iex> Faker.Address.Arm.street_address()
+      iex> Faker.Address.Am.street_address()
       "Բուռնազյան 61"
-      iex> Faker.Address.Arm.street_address()
+      iex> Faker.Address.Am.street_address()
       "Լամբրոնի 329"
-      iex> Faker.Address.Arm.street_address()
+      iex> Faker.Address.Am.street_address()
       "Հանրապետության 5"
   """
   @spec street_address() :: String.t()
@@ -460,13 +460,13 @@ defmodule Faker.Address.Arm do
 
   ## Examples
 
-      iex> Faker.Address.Arm.street_address(true)
+      iex> Faker.Address.Am.street_address(true)
       "Սուրբ Հովհաննեսի 542 բն. 4"
-      iex> Faker.Address.Arm.street_address(false)
+      iex> Faker.Address.Am.street_address(false)
       "Գյուլբենկյան 0"
-      iex> Faker.Address.Arm.street_address(true)
+      iex> Faker.Address.Am.street_address(true)
       "Պուշկինի 29 բն. 0"
-      iex> Faker.Address.Arm.street_address(false)
+      iex> Faker.Address.Am.street_address(false)
       "Տիգրան Մեծի 35"
   """
   @spec street_address(true | any) :: String.t()
@@ -478,13 +478,13 @@ defmodule Faker.Address.Arm do
 
   ## Examples
 
-      iex> Faker.Address.Arm.street_name()
+      iex> Faker.Address.Am.street_name()
       "Սուրբ Հովհաննեսի"
-      iex> Faker.Address.Arm.street_name()
+      iex> Faker.Address.Am.street_name()
       "Մոսկովյան"
-      iex> Faker.Address.Arm.street_name()
+      iex> Faker.Address.Am.street_name()
       "Սերգեյ Փարաջանովի"
-      iex> Faker.Address.Arm.street_name()
+      iex> Faker.Address.Am.street_name()
       "Պրահայի"
   """
   @spec street_name() :: String.t()
@@ -659,13 +659,13 @@ defmodule Faker.Address.Arm do
 
   ## Examples
 
-      iex> Faker.Address.Arm.street_suffix()
+      iex> Faker.Address.Am.street_suffix()
       "նրբանցք"
-      iex> Faker.Address.Arm.street_suffix()
+      iex> Faker.Address.Am.street_suffix()
       "պողոտա"
-      iex> Faker.Address.Arm.street_suffix()
+      iex> Faker.Address.Am.street_suffix()
       "փակուղի"
-      iex> Faker.Address.Arm.street_suffix()
+      iex> Faker.Address.Am.street_suffix()
       "փողոց"
   """
   @spec street_suffix() :: String.t()
@@ -681,13 +681,13 @@ defmodule Faker.Address.Arm do
 
   ## Examples
 
-      iex> Faker.Address.Arm.zip_code()
+      iex> Faker.Address.Am.zip_code()
       "0154"
-      iex> Faker.Address.Arm.zip_code()
+      iex> Faker.Address.Am.zip_code()
       "2646"
-      iex> Faker.Address.Arm.zip_code()
+      iex> Faker.Address.Am.zip_code()
       "1083"
-      iex> Faker.Address.Arm.zip_code()
+      iex> Faker.Address.Am.zip_code()
       "2970"
   """
   @spec zip_code() :: String.t()

@@ -1,7 +1,7 @@
-defmodule Faker.Company.Arm do
+defmodule Faker.Company.Am do
   import Faker, only: [sampler: 2]
 
-  alias Faker.Name.Arm, as: Name
+  alias Faker.Name.Am, as: Name
 
   @moduledoc """
   Functions for generating company related data in Armenian
@@ -12,13 +12,13 @@ defmodule Faker.Company.Arm do
 
   ## Examples
 
-      iex> Faker.Company.Arm.bs()
+      iex> Faker.Company.Am.bs()
       "առավելագույնի հասցնել նորարարական հարաբերություններ"
-      iex> Faker.Company.Arm.bs()
+      iex> Faker.Company.Am.bs()
       "ակտիվացնել վիրտուալ օգտագործողներ"
-      iex> Faker.Company.Arm.bs()
+      iex> Faker.Company.Am.bs()
       "առաքել գլոբալ կառուցվածքներ"
-      iex> Faker.Company.Arm.bs()
+      iex> Faker.Company.Am.bs()
       "առաքել հարուստ փորձառություններ"
   """
   @spec bs() :: String.t()
@@ -29,13 +29,13 @@ defmodule Faker.Company.Arm do
 
   ## Examples
 
-      iex> Faker.Company.Arm.bullshit()
+      iex> Faker.Company.Am.bullshit()
       "ազդեցիկ"
-      iex> Faker.Company.Arm.bullshit()
+      iex> Faker.Company.Am.bullshit()
       "նորարարական"
-      iex> Faker.Company.Arm.bullshit()
+      iex> Faker.Company.Am.bullshit()
       "ժամանակակից"
-      iex> Faker.Company.Arm.bullshit()
+      iex> Faker.Company.Am.bullshit()
       "ժամանակակից"
   """
   @spec bullshit() :: String.t()
@@ -76,13 +76,13 @@ defmodule Faker.Company.Arm do
 
   ## Examples
 
-      iex> Faker.Company.Arm.bullshit_prefix()
+      iex> Faker.Company.Am.bullshit_prefix()
       "առավելագույնի հասցնել"
-      iex> Faker.Company.Arm.bullshit_prefix()
+      iex> Faker.Company.Am.bullshit_prefix()
       "պատկերացնել"
-      iex> Faker.Company.Arm.bullshit_prefix()
+      iex> Faker.Company.Am.bullshit_prefix()
       "ընդլայնել"
-      iex> Faker.Company.Arm.bullshit_prefix()
+      iex> Faker.Company.Am.bullshit_prefix()
       "ակտիվացնել"
   """
   @spec bullshit_prefix() :: String.t()
@@ -126,13 +126,13 @@ defmodule Faker.Company.Arm do
 
   ## Examples
 
-      iex> Faker.Company.Arm.bullshit_suffix()
+      iex> Faker.Company.Am.bullshit_suffix()
       "հարաբերություններ"
-      iex> Faker.Company.Arm.bullshit_suffix()
+      iex> Faker.Company.Am.bullshit_suffix()
       "շուկաներ"
-      iex> Faker.Company.Arm.bullshit_suffix()
+      iex> Faker.Company.Am.bullshit_suffix()
       "հարաբերություններ"
-      iex> Faker.Company.Arm.bullshit_suffix()
+      iex> Faker.Company.Am.bullshit_suffix()
       "նախաձեռնություններ"
   """
   @spec bullshit_suffix() :: String.t()
@@ -169,13 +169,13 @@ defmodule Faker.Company.Arm do
 
   ## Examples
 
-      iex> Faker.Company.Arm.buzzword()
+      iex> Faker.Company.Am.buzzword()
       "ուղղորդիչ"
-      iex> Faker.Company.Arm.buzzword()
+      iex> Faker.Company.Am.buzzword()
       "լոգիստիկ"
-      iex> Faker.Company.Arm.buzzword()
+      iex> Faker.Company.Am.buzzword()
       "երրորդական"
-      iex> Faker.Company.Arm.buzzword()
+      iex> Faker.Company.Am.buzzword()
       "բացահայտ"
   """
   @spec buzzword() :: String.t()
@@ -233,13 +233,13 @@ defmodule Faker.Company.Arm do
 
   ## Examples
 
-      iex> Faker.Company.Arm.buzzword_prefix()
+      iex> Faker.Company.Am.buzzword_prefix()
       "Բազմուղի"
-      iex> Faker.Company.Arm.buzzword_prefix()
+      iex> Faker.Company.Am.buzzword_prefix()
       "Կարգավորելի"
-      iex> Faker.Company.Arm.buzzword_prefix()
+      iex> Faker.Company.Am.buzzword_prefix()
       "Փոխարկելի"
-      iex> Faker.Company.Arm.buzzword_prefix()
+      iex> Faker.Company.Am.buzzword_prefix()
       "Ծրագրավորելի"
   """
   @spec buzzword_prefix() :: String.t()
@@ -306,13 +306,13 @@ defmodule Faker.Company.Arm do
 
   ## Examples
 
-      iex> Faker.Company.Arm.buzzword_suffix()
+      iex> Faker.Company.Am.buzzword_suffix()
       "ինտերֆեյս"
-      iex> Faker.Company.Arm.buzzword_suffix()
+      iex> Faker.Company.Am.buzzword_suffix()
       "համախմբվածություն"
-      iex> Faker.Company.Arm.buzzword_suffix()
+      iex> Faker.Company.Am.buzzword_suffix()
       "տեղական ցանց"
-      iex> Faker.Company.Arm.buzzword_suffix()
+      iex> Faker.Company.Am.buzzword_suffix()
       "գնային կառուցվածք"
   """
   @spec buzzword_suffix() :: String.t()
@@ -390,13 +390,13 @@ defmodule Faker.Company.Arm do
 
   ## Examples
 
-      iex> Faker.Company.Arm.catch_phrase()
+      iex> Faker.Company.Am.catch_phrase()
       "Բազմուղի լոգիստիկ տեղական ցանց"
-      iex> Faker.Company.Arm.catch_phrase()
+      iex> Faker.Company.Am.catch_phrase()
       "Ծրագրավորելի 3-րդ սերնդի արտադրողականություն"
-      iex> Faker.Company.Arm.catch_phrase()
+      iex> Faker.Company.Am.catch_phrase()
       "Հեշտացված ուղղորդիչ ալգորիթմ"
-      iex> Faker.Company.Arm.catch_phrase()
+      iex> Faker.Company.Am.catch_phrase()
       "Դիմացկուն չեզոք տվյալների պահեստ"
   """
   @spec catch_phrase() :: String.t()
@@ -407,18 +407,18 @@ defmodule Faker.Company.Arm do
 
   ## Examples
 
-      iex> Faker.Company.Arm.name()
+      iex> Faker.Company.Am.name()
       "Մարալիկ ԲԲԸ"
-      iex> Faker.Company.Arm.name()
+      iex> Faker.Company.Am.name()
       "Վանյան, Կարագյան և Ամիրբեկյան ՓԲԸ"
-      iex> Faker.Company.Arm.name()
+      iex> Faker.Company.Am.name()
       "Հովիվյան ՓԲԸ"
-      iex> Faker.Company.Arm.name()
+      iex> Faker.Company.Am.name()
       "Միլենա և Աշոտ ԲԲԸ"
   """
   @spec name() :: String.t()
   def name, do: name(Faker.random_between(0, 4))
-  defp name(0), do: "#{Faker.Address.Arm.city()} #{suffix()}"
+  defp name(0), do: "#{Faker.Address.Am.city()} #{suffix()}"
   defp name(1), do: "#{Name.last_name()} #{suffix()}"
   defp name(2), do: "#{Name.last_name()} և #{Name.last_name()} #{suffix()}"
   defp name(3), do: "#{Name.first_name()} և #{Name.first_name()} #{suffix()}"
@@ -432,13 +432,13 @@ defmodule Faker.Company.Arm do
 
   ## Examples
 
-      iex> Faker.Company.Arm.suffix()
+      iex> Faker.Company.Am.suffix()
       "ՍՊԸ"
-      iex> Faker.Company.Arm.suffix()
+      iex> Faker.Company.Am.suffix()
       "Հոլդինգ"
-      iex> Faker.Company.Arm.suffix()
+      iex> Faker.Company.Am.suffix()
       "ԲԲԸ"
-      iex> Faker.Company.Arm.suffix()
+      iex> Faker.Company.Am.suffix()
       "ՓԲԸ"
   """
   @spec suffix() :: String.t()
