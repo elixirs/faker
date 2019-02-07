@@ -4,6 +4,7 @@ defmodule Faker.ColorTest do
   import Faker.Color
 
   doctest Faker.Color
+  doctest Faker.Color.Am
   doctest Faker.Color.En
   doctest Faker.Color.Es
   doctest Faker.Color.It
