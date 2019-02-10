@@ -2,8 +2,8 @@ defmodule Faker.CommerceTest do
   use ExUnit.Case, async: true
 
   doctest Faker.Commerce
-  doctest Faker.Commerce.Am
   doctest Faker.Commerce.En
+  doctest Faker.Commerce.Hy
 
   test "price/0" do
     assert is_float(Faker.Commerce.price())

@@ -1,6 +1,6 @@
-defmodule Faker.Commerce.Am do
+defmodule Faker.Commerce.Hy do
   import Faker, only: [sampler: 2]
-  alias Faker.Color.Am, as: Color
+  alias Faker.Color.Hy, as: Color
 
   @moduledoc """
   Fuctions for generating commerce related data in Armenian
@@ -11,13 +11,13 @@ defmodule Faker.Commerce.Am do
 
   ## Examples
 
-      iex> Faker.Commerce.Am.color()
+      iex> Faker.Commerce.Hy.color()
       "մոխրագույն"
-      iex> Faker.Commerce.Am.color()
+      iex> Faker.Commerce.Hy.color()
       "կանաչ"
-      iex> Faker.Commerce.Am.color()
+      iex> Faker.Commerce.Hy.color()
       "երկնագույն"
-      iex> Faker.Commerce.Am.color()
+      iex> Faker.Commerce.Hy.color()
       "մանուշակագույն"
   """
   @spec color() :: String.t()
@@ -30,13 +30,13 @@ defmodule Faker.Commerce.Am do
 
   ## Examples
 
-      iex> Faker.Commerce.Am.department()
+      iex> Faker.Commerce.Hy.department()
       "Համակարգիչներ"
-      iex> Faker.Commerce.Am.department()
+      iex> Faker.Commerce.Hy.department()
       "Երաժշտություն"
-      iex> Faker.Commerce.Am.department()
+      iex> Faker.Commerce.Hy.department()
       "Գրքեր"
-      iex> Faker.Commerce.Am.department()
+      iex> Faker.Commerce.Hy.department()
       "Էլեկտրոնիկա"
   """
   @spec department() :: String.t()
@@ -70,13 +70,13 @@ defmodule Faker.Commerce.Am do
 
   ## Examples
 
-      iex> Faker.Commerce.Am.product_name()
+      iex> Faker.Commerce.Hy.product_name()
       "հիանալի բրոնզե գլխարկ"
-      iex> Faker.Commerce.Am.product_name()
+      iex> Faker.Commerce.Hy.product_name()
       "ֆանտաստիկ դանակ"
-      iex> Faker.Commerce.Am.product_name()
+      iex> Faker.Commerce.Hy.product_name()
       "պլաստիկից աթոռ"
-      iex> Faker.Commerce.Am.product_name()
+      iex> Faker.Commerce.Hy.product_name()
       "ալյումինե վերնաշապիկ"
   """
   @spec product_name() :: String.t()
@@ -94,13 +94,13 @@ defmodule Faker.Commerce.Am do
 
   ## Examples
 
-      iex> Faker.Commerce.Am.product_name_adjective()
+      iex> Faker.Commerce.Hy.product_name_adjective()
       "ֆանտաստիկ"
-      iex> Faker.Commerce.Am.product_name_adjective()
+      iex> Faker.Commerce.Hy.product_name_adjective()
       "հիանալի"
-      iex> Faker.Commerce.Am.product_name_adjective()
+      iex> Faker.Commerce.Hy.product_name_adjective()
       "միջակ"
-      iex> Faker.Commerce.Am.product_name_adjective()
+      iex> Faker.Commerce.Hy.product_name_adjective()
       "նրբագեղ"
   """
   @spec product_name_adjective() :: String.t()
@@ -128,13 +128,13 @@ defmodule Faker.Commerce.Am do
 
   ## Examples
 
-      iex> Faker.Commerce.Am.product_name_material()
+      iex> Faker.Commerce.Hy.product_name_material()
       "փայտե"
-      iex> Faker.Commerce.Am.product_name_material()
+      iex> Faker.Commerce.Hy.product_name_material()
       "գրանիտե"
-      iex> Faker.Commerce.Am.product_name_material()
+      iex> Faker.Commerce.Hy.product_name_material()
       "բրոնզե"
-      iex> Faker.Commerce.Am.product_name_material()
+      iex> Faker.Commerce.Hy.product_name_material()
       "մարմարե"
   """
   @spec product_name_material() :: String.t()
@@ -163,13 +163,13 @@ defmodule Faker.Commerce.Am do
 
   ## Examples
 
-      iex> Faker.Commerce.Am.product_name_product()
+      iex> Faker.Commerce.Hy.product_name_product()
       "վերնաշապիկ"
-      iex> Faker.Commerce.Am.product_name_product()
+      iex> Faker.Commerce.Hy.product_name_product()
       "ստեղնաշար"
-      iex> Faker.Commerce.Am.product_name_product()
+      iex> Faker.Commerce.Hy.product_name_product()
       "վերնաշապիկ"
-      iex> Faker.Commerce.Am.product_name_product()
+      iex> Faker.Commerce.Hy.product_name_product()
       "գլխարկ"
   """
   @spec product_name_product() :: String.t()
