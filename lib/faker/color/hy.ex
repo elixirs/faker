@@ -1,4 +1,4 @@
-defmodule Faker.Color.Am do
+defmodule Faker.Color.Hy do
   import Faker, only: [sampler: 2]
 
   @moduledoc """
@@ -10,13 +10,13 @@ defmodule Faker.Color.Am do
 
   ## Examples
 
-      iex> Faker.Color.Am.name()
+      iex> Faker.Color.Hy.name()
       "մոխրագույն"
-      iex> Faker.Color.Am.name()
+      iex> Faker.Color.Hy.name()
       "կանաչ"
-      iex> Faker.Color.Am.name()
+      iex> Faker.Color.Hy.name()
       "երկնագույն"
-      iex> Faker.Color.Am.name()
+      iex> Faker.Color.Hy.name()
       "մանուշակագույն"
   """
   @spec name() :: String.t()

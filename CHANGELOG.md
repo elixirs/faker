@@ -14,6 +14,8 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Changed
 
+* Use `'hy'` language code instead of `'am'` country code as Armenian locale [[@hovikman][]]
+
 ### Deprecated
 
 ### Removed
