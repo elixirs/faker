@@ -32,10 +32,10 @@
 <!-- E -->
 <!-- F -->
 - [Faker.File](lib/faker/file.ex)
-- [Faker.Food](docs/food.md)
-- [Faker.Food.En](docs/food/en.md)
+- [Faker.Food](lib/faker/food.ex)
+- [Faker.Food.En](lib/faker/food/en.ex)
 <!-- G -->
-- [Faker.Gov.Us](docs/gov/us.md)
+- [Faker.Gov.Us](lib/faker/gov/us.ex)
 <!-- H -->
 <!-- I -->
 - [Faker.Industry](lib/faker/industry.ex)
