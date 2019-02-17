@@ -34,6 +34,7 @@
 - [Faker.File](lib/faker/file.ex)
 - [Faker.Food](lib/faker/food.ex)
 - [Faker.Food.En](lib/faker/food/en.ex)
+- [Faker.Food.Hy](lib/faker/food/hy.ex)
 <!-- G -->
 - [Faker.Gov.Us](lib/faker/gov/us.ex)
 <!-- H -->
