@@ -57,7 +57,7 @@
 - [Faker.Lorem.Shakespeare.Ru](lib/faker/lorem/shakespeare/ru.ex)
 <!-- M -->
 <!-- N -->
-- [Faker.NaiveDateTime](lib/faker/nativedatetime.ex)
+- [Faker.NaiveDateTime](lib/faker/naivedatetime.ex)
 - [Faker.Name](lib/faker/name.ex)
 - [Faker.Name.En](lib/faker/name/en.ex)
 - [Faker.Name.Es](lib/faker/name/es.ex)
