@@ -23,7 +23,6 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Fixed
 
-* Fix some broken hyperlinks in USAGE.md [[@hovikman][]]
 * Fix industry tests [[@hovikman][]]
 
 ### Security
