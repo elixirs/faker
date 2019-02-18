@@ -10,6 +10,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Added
 
+* Added: Category `Food` for `Armenian Language` [[@hovikman][]]
 * Added: Support for `Armenian Language` [[@hovikman][]]
 
 ### Changed

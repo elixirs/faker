@@ -32,10 +32,11 @@
 <!-- E -->
 <!-- F -->
 - [Faker.File](lib/faker/file.ex)
-- [Faker.Food](docs/food.md)
-- [Faker.Food.En](docs/food/en.md)
+- [Faker.Food](lib/faker/food.ex)
+- [Faker.Food.En](lib/faker/food/en.ex)
+- [Faker.Food.Hy](lib/faker/food/hy.ex)
 <!-- G -->
-- [Faker.Gov.Us](docs/gov/us.md)
+- [Faker.Gov.Us](lib/faker/gov/us.ex)
 <!-- H -->
 <!-- I -->
 - [Faker.Industry](lib/faker/industry.ex)
@@ -57,7 +58,7 @@
 - [Faker.Lorem.Shakespeare.Ru](lib/faker/lorem/shakespeare/ru.ex)
 <!-- M -->
 <!-- N -->
-- [Faker.NaiveDateTime](lib/faker/nativedatetime.ex)
+- [Faker.NaiveDateTime](lib/faker/naivedatetime.ex)
 - [Faker.Name](lib/faker/name.ex)
 - [Faker.Name.En](lib/faker/name/en.ex)
 - [Faker.Name.Es](lib/faker/name/es.ex)
