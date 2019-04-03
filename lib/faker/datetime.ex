@@ -1,5 +1,7 @@
 defmodule Faker.DateTime do
-  @moduledoc false
+  @moduledoc """
+  Functions for working with `DateTime` values.
+  """
 
   @microseconds_per_day 86_400_000_000
 
