@@ -16,6 +16,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 ### Changed
 
 * Use `'hy'` language code instead of `'am'` country code as Armenian locale [[@hovikman][]]
+* Enabled `Faker.DateTime` to be indexed in documentation.
 
 ### Deprecated
 
