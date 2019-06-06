@@ -389,7 +389,7 @@ defmodule Faker.Vehicle.En do
       "Verano"
   """
   @spec model() :: String.t()
-  def model() do
+  def model do
     Util.pick(all_models())
   end
 

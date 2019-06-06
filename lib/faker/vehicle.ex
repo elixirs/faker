@@ -1,6 +1,7 @@
 defmodule Faker.Vehicle do
   import Faker, only: [localize: 1]
   alias Faker.Util
+  alias Faker.Vehicle.En
 
   @moduledoc """
   Functions for generating Vehicle related data
@@ -26,13 +27,13 @@ defmodule Faker.Vehicle do
   Returns a vehicle drivetrain string
 
   ## Examples
-      iex> Faker.Vehicle.En.drivetrain()
+      iex> Faker.Vehicle.drivetrain()
       "4x2/2-wheel drive"
-      iex> Faker.Vehicle.En.drivetrain()
+      iex> Faker.Vehicle.drivetrain()
       "4x4/4-wheel drive"
-      iex> Faker.Vehicle.En.drivetrain()
+      iex> Faker.Vehicle.drivetrain()
       "4x2/2-wheel drive"
-      iex> Faker.Vehicle.En.drivetrain()
+      iex> Faker.Vehicle.drivetrain()
       "RWD"
   """
   @spec drivetrain() :: String.t()
@@ -125,13 +126,13 @@ defmodule Faker.Vehicle do
   Returns a vehicle option string
 
   ## Examples
-      iex> Faker.Vehicle.En.option()
+      iex> Faker.Vehicle.option()
       "Premium Sound"
-      iex> Faker.Vehicle.En.option()
+      iex> Faker.Vehicle.option()
       "Power Steering"
-      iex> Faker.Vehicle.En.option()
+      iex> Faker.Vehicle.option()
       "A/C: Front"
-      iex> Faker.Vehicle.En.option()
+      iex> Faker.Vehicle.option()
       "Keyless Entry"
   """
   @spec options() :: String.t()
@@ -141,18 +142,18 @@ defmodule Faker.Vehicle do
   Returns a list of vehicle options()
 
   ## Examples
-      iex> Faker.Vehicle.En.options
+      iex> Faker.Vehicle.options
       ["Power Steering", "A/C: Front", "Keyless Entry", "AM/FM Stereo", "Power Steering", "Antilock Brakes", "8-Track Player", "Leather Interior"]
-      iex> Faker.Vehicle.En.options
+      iex> Faker.Vehicle.options
       ["MP3 (Multi Disc)", "A/C: Rear", "Fog Lights", "Power Windows", "Cruise Control", "Premium Sound", "A/C: Front"]
-      iex> Faker.Vehicle.En.options
+      iex> Faker.Vehicle.options
       ["Tinted Glass", "MP3 (Single Disc)", "CD (Multi Disc)"]
-      iex> Faker.Vehicle.En.options
+      iex> Faker.Vehicle.options
       ["Fog Lights", "Rear Window Wiper", "MP3 (Multi Disc)", "Navigation", "Airbag: Side", "Rear Window Defroster", "Premium Sound"]
   """
   @spec options(non_neg_integer()) :: list()
   def options(number) do
-    Faker.Vehicle.En.options(number)
+    En.options(number)
   end
 
   @doc """
@@ -175,18 +176,18 @@ defmodule Faker.Vehicle do
   Returns a list of vehicle standard specs
 
   ## Examples
-      iex> Faker.Vehicle.En.standard_specs()
+      iex> Faker.Vehicle.standard_specs()
       ["20\\" x 9.0\\" front & 20\\" x 10.0\\" rear aluminum wheels", "Deluxe insulation group", "Torsion beam rear suspension w/stabilizer bar", "High performance suspension", "200mm front axle", "Traveler/mini trip computer", "P235/50R18 all-season tires", "Front door tinted glass"]
-      iex> Faker.Vehicle.En.standard_specs()
+      iex> Faker.Vehicle.standard_specs()
       ["625-amp maintenance-free battery", "Body color sill extension", "Cargo compartment cover", "Dana 44/226mm rear axle", "Tachometer", "Leather-wrapped parking brake handle", "Side-impact door beams"]
-      iex> Faker.Vehicle.En.standard_specs()
+      iex> Faker.Vehicle.standard_specs()
       ["Tilt steering column", "Luxury front & rear floor mats w/logo", "HomeLink universal transceiver"]
-      iex> Faker.Vehicle.En.standard_specs()
+      iex> Faker.Vehicle.standard_specs()
       ["Multi-reflector halogen headlamps", "Multi-info display -inc: driving range, average MPG, current MPG, average speed, outside temp, elapsed time, maintenance & diagnostic messages", "Zone body construction -inc: front/rear crumple zones, hood deformation point", "60/40 split fold-down rear seat w/outboard adjustable headrests", "Trim-panel-mounted storage net", "Front side-impact airbags", "Front/rear spot-lamp illumination"]
   """
   @spec standard_specs() :: list(String.t())
   def standard_specs do
-    Faker.Vehicle.En.standard_specs()
+    En.standard_specs()
   end
 
   @doc """
@@ -204,7 +205,7 @@ defmodule Faker.Vehicle do
   """
   @spec standard_specs(non_neg_integer()) :: list(String.t())
   def standard_specs(number) do
-    Faker.Vehicle.En.standard_specs(number)
+    En.standard_specs(number)
   end
 
   @doc """
@@ -237,7 +238,7 @@ defmodule Faker.Vehicle do
       "LQZ6QTST830A76983"
   """
   def vin do
-    Faker.Util.format("%10x%y%x%5d",
+    Util.format("%10x%y%x%5d",
       x: fn ->
         Util.pick([Util.upper_letter(), "#{Util.digit()}"])
       end,
