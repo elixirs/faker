@@ -151,7 +151,7 @@ defmodule Faker.Vehicle do
       iex> Faker.Vehicle.options
       ["Fog Lights", "Rear Window Wiper", "MP3 (Multi Disc)", "Navigation", "Airbag: Side", "Rear Window Defroster", "Premium Sound"]
   """
-  @spec options(non_neg_integer()) :: list()
+  @spec options(non_neg_integer()) :: list(String.t())
   def options(number) do
     En.options(number)
   end
