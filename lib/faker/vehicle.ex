@@ -26,10 +26,14 @@ defmodule Faker.Vehicle do
   Returns a vehicle drivetrain string
 
   ## Examples
-      iex> Faker.Vehicle.drivetrain()
+      iex> Faker.Vehicle.En.drivetrain()
       "4x2/2-wheel drive"
-      iex> Faker.Vehicle.drivetrain()
+      iex> Faker.Vehicle.En.drivetrain()
       "4x4/4-wheel drive"
+      iex> Faker.Vehicle.En.drivetrain()
+      "4x2/2-wheel drive"
+      iex> Faker.Vehicle.En.drivetrain()
+      "RWD"
   """
   @spec drivetrain() :: String.t()
   localize(:drivetrain)
@@ -118,21 +122,33 @@ defmodule Faker.Vehicle do
   localize(:option)
 
   @doc """
-  Returns a list of vehicle options
+  Returns a vehicle option string
 
   ## Examples
-      iex> Faker.Vehicle.options()
-      ["Power Steering", "A/C: Front", "Keyless Entry", "AM/FM Stereo", "Power Steering", "Antilock Brakes", "8-Track Player", "Leather Interior"]
+      iex> Faker.Vehicle.En.option()
+      "Premium Sound"
+      iex> Faker.Vehicle.En.option()
+      "Power Steering"
+      iex> Faker.Vehicle.En.option()
+      "A/C: Front"
+      iex> Faker.Vehicle.En.option()
+      "Keyless Entry"
   """
   @spec options() :: String.t()
   localize(:options)
 
   @doc """
-  Returns a list of vehicle options of the given length
+  Returns a list of vehicle options()
 
   ## Examples
-      iex> Faker.Vehicle.options(3)
-      ["Premium Sound", "Power Steering", "A/C: Front"]
+      iex> Faker.Vehicle.En.options
+      ["Power Steering", "A/C: Front", "Keyless Entry", "AM/FM Stereo", "Power Steering", "Antilock Brakes", "8-Track Player", "Leather Interior"]
+      iex> Faker.Vehicle.En.options
+      ["MP3 (Multi Disc)", "A/C: Rear", "Fog Lights", "Power Windows", "Cruise Control", "Premium Sound", "A/C: Front"]
+      iex> Faker.Vehicle.En.options
+      ["Tinted Glass", "MP3 (Single Disc)", "CD (Multi Disc)"]
+      iex> Faker.Vehicle.En.options
+      ["Fog Lights", "Rear Window Wiper", "MP3 (Multi Disc)", "Navigation", "Airbag: Side", "Rear Window Defroster", "Premium Sound"]
   """
   @spec options(non_neg_integer()) :: list()
   def options(number) do
@@ -159,8 +175,14 @@ defmodule Faker.Vehicle do
   Returns a list of vehicle standard specs
 
   ## Examples
-      iex> Faker.Vehicle.standard_specs()
+      iex> Faker.Vehicle.En.standard_specs()
       ["20\\" x 9.0\\" front & 20\\" x 10.0\\" rear aluminum wheels", "Deluxe insulation group", "Torsion beam rear suspension w/stabilizer bar", "High performance suspension", "200mm front axle", "Traveler/mini trip computer", "P235/50R18 all-season tires", "Front door tinted glass"]
+      iex> Faker.Vehicle.En.standard_specs()
+      ["625-amp maintenance-free battery", "Body color sill extension", "Cargo compartment cover", "Dana 44/226mm rear axle", "Tachometer", "Leather-wrapped parking brake handle", "Side-impact door beams"]
+      iex> Faker.Vehicle.En.standard_specs()
+      ["Tilt steering column", "Luxury front & rear floor mats w/logo", "HomeLink universal transceiver"]
+      iex> Faker.Vehicle.En.standard_specs()
+      ["Multi-reflector halogen headlamps", "Multi-info display -inc: driving range, average MPG, current MPG, average speed, outside temp, elapsed time, maintenance & diagnostic messages", "Zone body construction -inc: front/rear crumple zones, hood deformation point", "60/40 split fold-down rear seat w/outboard adjustable headrests", "Trim-panel-mounted storage net", "Front side-impact airbags", "Front/rear spot-lamp illumination"]
   """
   @spec standard_specs() :: list(String.t())
   def standard_specs do
@@ -171,8 +193,14 @@ defmodule Faker.Vehicle do
   Returns a list of vehicle standard specs of the given length
 
   ## Examples
-      iex> Faker.Vehicle.standard_specs(3)
+      iex> Faker.Vehicle.En.standard_specs(3)
       ["Tire pressure monitoring system (TPMS)", "20\\" x 9.0\\" front & 20\\" x 10.0\\" rear aluminum wheels", "Deluxe insulation group"]
+      iex> Faker.Vehicle.En.standard_specs(3)
+      ["Torsion beam rear suspension w/stabilizer bar", "High performance suspension", "200mm front axle"]
+      iex> Faker.Vehicle.En.standard_specs(3)
+      ["Traveler/mini trip computer", "P235/50R18 all-season tires", "Front door tinted glass"]
+      iex> Faker.Vehicle.En.standard_specs(3)
+      ["XM satellite radio receiver -inc: 90 day trial subscription", "625-amp maintenance-free battery", "Body color sill extension"]
   """
   @spec standard_specs(non_neg_integer()) :: list(String.t())
   def standard_specs(number) do
