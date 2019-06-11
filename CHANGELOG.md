@@ -11,13 +11,14 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 ### Added
 
 * Added: Category `Food` for `Armenian Language` [[@hovikman][]]
-* Added: Support for `Armenian Language` [[@hovikman][]]
+* Added: Support for `Armenian Language` [[@hovikman][]]  
 
 ### Changed
 
 * Use `'hy'` language code instead of `'am'` country code as Armenian locale [[@hovikman][]]
 * Enabled `Faker.DateTime` to be indexed in documentation [[@jalcine][]]
 * Simplified `Faker.UUID.v4/0` [[@whatyouhide][]]
+* Replace UTF8 1FBF with ASCII single quote in the Italian locale [[@pmontrasio][]]
 
 ### Deprecated
 
