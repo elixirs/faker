@@ -15,6 +15,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 - Added: Support for `Armenian Language` [[@hovikman][]]
 - Added: `Faker.Vehicle` [[@daytonn][]]
 - Added: Elixir 1.9 support [[@igas][]]
+* Added: Category `Finance` [[@thomascharbonnel][]]
 
 ### Changed
 
@@ -318,6 +319,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 [@stfnsr]: https://github.com/stfnsr
 [@tbash]: https://github.com/tbash
 [@theabrad]: https://github.com/theabrad
+[@thomascharbonnel]: https://github.com/thomascharbonnel
 [@tobyhinloopen]: https://github.com/tobyhinloopen
 [@vbrazo]: https://github.com/vbrazo
 [@vforvova]: https://github.com/vforvova
