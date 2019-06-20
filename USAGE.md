@@ -92,6 +92,8 @@
 - [Faker.Util](lib/faker/util.ex)
 - [Faker.UUID](lib/faker/uuid.ex)
 <!-- V -->
+- [Faker.Vehicle](lib/faker/vehicle.ex)
+- [Faker.Vehicle.En](lib/faker/vehicle/en.ex)
 <!-- W -->
 <!-- X -->
 <!-- Y -->
