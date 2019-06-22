@@ -10,6 +10,7 @@
 - [Faker.Beer](lib/faker/beer.ex)
 - [Faker.Beer.En](lib/faker/beer/en.ex)
 - [Faker.Blockchain.Bitcoin](lib/faker/bitcoin.ex)
+- [Faker.BlockChain.CryptoCoin](lib/faker/blockchain/crypto_coin.ex)
 <!-- C -->
 - [Faker.Cat](lib/faker/cat.ex)
 - [Faker.Cat.En](lib/faker/cat/en.ex)
@@ -26,7 +27,6 @@
 - [Faker.Company](lib/faker/company.ex)
 - [Faker.Company.En](lib/faker/company/en.ex)
 - [Faker.Company.Hy](lib/faker/company/hy.ex)
-- [Faker.BlockChain.CryptoCoin](lib/faker/blockchain/crypto_coin.ex)
 <!-- D -->
 - [Faker.Date](lib/faker/date.ex)
 - [Faker.DateTime](lib/faker/datetime.ex)
