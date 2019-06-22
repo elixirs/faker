@@ -439,14 +439,9 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ## 0.2.0
 
-<<<<<<< HEAD
 - Added `Faker.Team`
   - `name/0`
   - `creature/0`
-=======
-* Added `Faker.Team`
-  * `name/0`
-  * `creature/0`
 
 [@adam-wanninger]: https://github.com/adam-wanninger
 [@anthonator]: https://github.com/anthonator

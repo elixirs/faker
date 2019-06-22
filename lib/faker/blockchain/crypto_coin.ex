@@ -1,4 +1,4 @@
-defmodule Faker.CryptoCoin do
+defmodule Faker.BlockChain.CryptoCoin do
   import Faker, only: [sampler: 2]
 
   @moduledoc """
@@ -10,13 +10,13 @@ defmodule Faker.CryptoCoin do
 
   ## Examples
 
-      iex> Faker.CryptoCoin.name()
+      iex> Faker.BlockChain.CryptoCoin.name()
       "Dash"
-      iex> Faker.CryptoCoin.name()
+      iex> Faker.BlockChain.CryptoCoin.name()
       "Bitcoin Gold"
-      iex> Faker.CryptoCoin.name()
+      iex> Faker.BlockChain.CryptoCoin.name()
       "Bitcoin"
-      iex> Faker.CryptoCoin.name()
+      iex> Faker.BlockChain.CryptoCoin.name()
       "Cardano"
   """
   @spec name() :: String.t()
@@ -49,13 +49,13 @@ defmodule Faker.CryptoCoin do
 
   ## Examples
 
-      iex> Faker.CryptoCoin.acronym()
+      iex> Faker.BlockChain.CryptoCoin.acronym()
       "DASH"
-      iex> Faker.CryptoCoin.acronym()
+      iex> Faker.BlockChain.CryptoCoin.acronym()
       "BTG"
-      iex> Faker.CryptoCoin.acronym()
+      iex> Faker.BlockChain.CryptoCoin.acronym()
       "BTC"
-      iex> Faker.CryptoCoin.acronym()
+      iex> Faker.BlockChain.CryptoCoin.acronym()
       "ADA"
   """
 
@@ -89,13 +89,13 @@ defmodule Faker.CryptoCoin do
 
   ## Examples
 
-      iex> Faker.CryptoCoin.url_logo()
+      iex> Faker.BlockChain.CryptoCoin.url_logo()
       "https://i.imgur.com/2uX91cb.png"
-      iex> Faker.CryptoCoin.url_logo()
+      iex> Faker.BlockChain.CryptoCoin.url_logo()
       "https://i.imgur.com/l9cVE7c.png"
-      iex> Faker.CryptoCoin.url_logo()
+      iex> Faker.BlockChain.CryptoCoin.url_logo()
       "https://i.imgur.com/psBNOBq.png"
-      iex> Faker.CryptoCoin.url_logo()
+      iex> Faker.BlockChain.CryptoCoin.url_logo()
       "https://i.imgur.com/8qGU4zg.png"
   """
   @spec url_logo() :: String.t()
