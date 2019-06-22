@@ -439,6 +439,58 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ## 0.2.0
 
+<<<<<<< HEAD
 - Added `Faker.Team`
   - `name/0`
   - `creature/0`
+=======
+* Added `Faker.Team`
+  * `name/0`
+  * `creature/0`
+
+[@adam-wanninger]: https://github.com/adam-wanninger
+[@anthonator]: https://github.com/anthonator
+[@aptinio]: https://github.com/aptinio
+[@bcat-eu]: https://github.com/bcat-eu
+[@belaustegui]: https://github.com/belaustegui
+[@cdesch]: https://github.com/cdesch
+[@ConnorRigby]: https://github.com/ConnorRigby
+[@devshane]: https://github.com/devshane
+[@efexen]: https://github.com/efexen
+[@elbow-jason]: https://github.com/elbow-jason
+[@fenollp]: https://github.com/fenollp
+[@feyl]: https://github.com/feyl
+[@GesJeremie]: https://github.com/GesJeremie
+[@gmcintire]: https://github.com/gmcintire
+[@halfdan]: https://github.com/halfdan
+[@hovikman]: https://github.com/hovikman
+[@igas]: https://igas.me
+[@indocomsoft]: https://github.com/indocomsoft
+[@jarednorman]: https://github.com/jarednorman
+[@jc00ke]: https://github.com/jc00ke
+[@johnhamelink]: https://github.com/johnhamelink
+[@lauraannwilliams]: https://github.com/lauraannwilliams
+[@leveloid]: https://github.com/leveloid
+[@lowks]: https://github.com/lowks
+[@lrosa007]: https://github.com/lrosa007
+[@MarcusSky]: https://github.com/MarcusSky
+[@orieken]: https://github.com/orieken
+[@petehamilton]: https://github.com/petehamilton
+[@pfac]: https://github.com/pfac
+[@piton4eg]: https://github.com/piton4eg
+[@pmontrasio]: https://github.com/pmontrasio
+[@samcdavid]: https://github.com/samcdavid
+[@saulecabrera]: https://github.com/saulecabrera
+[@sotojuan]: https://github.com/sotojuan
+[@stfnsr]: https://github.com/stfnsr
+[@tbash]: https://github.com/tbash
+[@thadeubrito]: https://github.com/thadeubrito
+[@theabrad]: https://github.com/theabrad
+[@tobyhinloopen]: https://github.com/tobyhinloopen
+[@vbrazo]: https://github.com/vbrazo
+[@vforvova]: https://github.com/vforvova
+[@vnegrisolo]: https://github.com/vnegrisolo
+[@wojtekmach]: https://github.com/wojtekmach
+[@yordis]: https://github.com/yordis
+[@zmoshansky]: https://github.com/zmoshansky
+>>>>>>> b2aa6e4 (add crypto coin)
