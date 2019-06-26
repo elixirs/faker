@@ -14,6 +14,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 * Added: Support for `Armenian Language` [[@hovikman][]]
 * Added: `Faker.Vehicle` [[@daytonn][]]
 * Added: Elixir 1.9 support [[@igas][]]
+* Added: `Faker.BlockChain.CryptoCoin` [[@thadeubrito][]]
 
 ### Changed
 
@@ -317,6 +318,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 [@sotojuan]: https://github.com/sotojuan
 [@stfnsr]: https://github.com/stfnsr
 [@tbash]: https://github.com/tbash
+[@thadeubrito]: https://github.com/thadeubrito
 [@theabrad]: https://github.com/theabrad
 [@tobyhinloopen]: https://github.com/tobyhinloopen
 [@vbrazo]: https://github.com/vbrazo
