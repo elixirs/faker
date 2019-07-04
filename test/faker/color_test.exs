@@ -6,6 +6,7 @@ defmodule Faker.ColorTest do
   doctest Faker.Color
   doctest Faker.Color.En
   doctest Faker.Color.Es
+  doctest Faker.Color.Fr
   doctest Faker.Color.Hy
   doctest Faker.Color.It
   doctest Faker.Color.PtBr
