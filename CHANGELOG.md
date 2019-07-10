@@ -302,6 +302,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 [@indocomsoft]: https://github.com/indocomsoft
 [@jarednorman]: https://github.com/jarednorman
 [@jc00ke]: https://github.com/jc00ke
+[@jeanparpaillon]: https://github.com/jeanparpaillon
 [@johnhamelink]: https://github.com/johnhamelink
 [@lauraannwilliams]: https://github.com/lauraannwilliams
 [@leveloid]: https://github.com/leveloid
