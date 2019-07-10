@@ -11,6 +11,7 @@
 - [Faker.Beer](lib/faker/beer.ex)
 - [Faker.Beer.En](lib/faker/beer/en.ex)
 - [Faker.Blockchain.Bitcoin](lib/faker/bitcoin.ex)
+- [Faker.Blockchain.Ethereum](lib/faker/blockchain/ethereum.ex)
   <!-- C -->
 - [Faker.Cat](lib/faker/cat.ex)
 - [Faker.Cat.En](lib/faker/cat/en.ex)
