@@ -1,89 +1,103 @@
 <!-- A -->
+
 - [Faker.Address](lib/faker/address.ex)
 - [Faker.Address.En](lib/faker/address/en.ex)
 - [Faker.Address.Es](lib/faker/address/es.ex)
+- [Faker.Address.Hy](lib/faker/address/hy.ex)
 - [Faker.Address.It](lib/faker/address/it.ex)
 - [Faker.App](lib/faker/app.ex)
 - [Faker.Avatar](lib/faker/avatar.ex)
-<!-- B -->
+  <!-- B -->
 - [Faker.Beer](lib/faker/beer.ex)
 - [Faker.Beer.En](lib/faker/beer/en.ex)
-- [Faker.Bitcoin](lib/faker/bitcoin.ex)
-<!-- C -->
+- [Faker.Blockchain.Bitcoin](lib/faker/bitcoin.ex)
+- [Faker.Blockchain.Ethereum](lib/faker/blockchain/ethereum.ex)
+  <!-- C -->
 - [Faker.Cat](lib/faker/cat.ex)
 - [Faker.Cat.En](lib/faker/cat/en.ex)
 - [Faker.Code](lib/faker/code.ex)
 - [Faker.Color](lib/faker/color.ex)
 - [Faker.Color.En](lib/faker/color/en.ex)
 - [Faker.Color.Es](lib/faker/color/es.ex)
+- [Faker.Color.Fr](lib/faker/color/fr.ex)
+- [Faker.Color.Hy](lib/faker/color/hy.ex)
 - [Faker.Color.It](lib/faker/color/it.ex)
 - [Faker.Color.PtBr](lib/faker/color/pt_br.ex)
 - [Faker.Commerce](lib/faker/commerce.ex)
 - [Faker.Commerce.En](lib/faker/commerce/en.ex)
+- [Faker.Commerce.Hy](lib/faker/commerce/hy.ex)
 - [Faker.Company](lib/faker/company.ex)
 - [Faker.Company.En](lib/faker/company/en.ex)
-<!-- D -->
+- [Faker.Company.Hy](lib/faker/company/hy.ex)
+  <!-- D -->
 - [Faker.Date](lib/faker/date.ex)
 - [Faker.DateTime](lib/faker/datetime.ex)
-<!-- E -->
-<!-- F -->
+  <!-- E -->
+  <!-- F -->
 - [Faker.File](lib/faker/file.ex)
-- [Faker.Food](docs/food.md)
-- [Faker.Food.En](docs/food/en.md)
-<!-- G -->
-- [Faker.Gov.Us](docs/gov/us.md)
-<!-- H -->
-<!-- I -->
+- [Faker.Food](lib/faker/food.ex)
+- [Faker.Food.En](lib/faker/food/en.ex)
+- [Faker.Food.Hy](lib/faker/food/hy.ex)
+  <!-- G -->
+- [Faker.Gov.Us](lib/faker/gov/us.ex)
+  <!-- H -->
+  <!-- I -->
 - [Faker.Industry](lib/faker/industry.ex)
 - [Faker.Industry.En](lib/faker/industry/en.ex)
+- [Faker.Industry.Hy](lib/faker/industry/hy.ex)
 - [Faker.Internet](lib/faker/internet.ex)
 - [Faker.Internet.En](lib/faker/internet/en.ex)
 - [Faker.Internet.Es](lib/faker/internet/es.ex)
+- [Faker.Internet.Hy](lib/faker/internet/hy.ex)
 - [Faker.Internet.It](lib/faker/internet/it.ex)
 - [Faker.Internet.PtBr](lib/faker/internet/pt_br.ex)
 - [Faker.Internet.UserAgent](lib/faker/internet/user_agent.ex)
-<!-- J -->
-<!-- K -->
-<!-- L -->
+  <!-- J -->
+  <!-- K -->
+  <!-- L -->
 - [Faker.Lorem](lib/faker/lorem.ex)
 - [Faker.Lorem.Shakespeare](lib/faker/lorem/shakespeare.ex)
 - [Faker.Lorem.Shakespeare.En](lib/faker/lorem/shakespeare/en.ex)
 - [Faker.Lorem.Shakespeare.Ru](lib/faker/lorem/shakespeare/ru.ex)
-<!-- M -->
-<!-- N -->
-- [Faker.NaiveDateTime](lib/faker/nativedatetime.ex)
+  <!-- M -->
+  <!-- N -->
+- [Faker.NaiveDateTime](lib/faker/naivedatetime.ex)
 - [Faker.Name](lib/faker/name.ex)
 - [Faker.Name.En](lib/faker/name/en.ex)
 - [Faker.Name.Es](lib/faker/name/es.ex)
+- [Faker.Name.Hy](lib/faker/name/hy.ex)
 - [Faker.Name.It](lib/faker/name/it.ex)
 - [Faker.Name.PtBr](lib/faker/name/pt_br.ex)
 - [Faker.Nato](lib/faker/nato.ex)
-<!-- O -->
-<!-- P -->
+  <!-- O -->
+  <!-- P -->
 - [Faker.Phone.EnUs](lib/faker/phone/en_us.ex)
 - [Faker.Phone.EnGb](lib/faker/phone/en_gb.ex)
+- [Faker.Phone.Hy](lib/faker/phone/hy.ex)
 - [Faker.Pizza](lib/faker/pizza.ex)
 - [Faker.Pokemon](lib/faker/pokemon.ex)
 - [Faker.Pokemon.En](lib/faker/pokemon/en.ex)
-<!-- Q -->
-<!-- R -->
+  <!-- Q -->
+  <!-- R -->
 - [Faker.Random](lib/faker/random.ex)
 - [Faker.Random.Elixir](lib/faker/random/elixir.ex)
 - [Faker.Random.Test](lib/faker/random/test.ex)
-<!-- S -->
+  <!-- S -->
 - [Faker.StarWars](lib/faker/star_wars.ex)
 - [Faker.StarWars.En](lib/faker/star_wars/en.ex)
 - [Faker.String](lib/faker/string.ex)
 - [Faker.Superhero](lib/faker/superhero.ex)
 - [Faker.Superhero.En](lib/faker/superhero/en.ex)
-<!-- T -->
+  <!-- T -->
 - [Faker.Team](lib/faker/team.ex)
 - [Faker.Team.En](lib/faker/team/en.ex)
-<!-- U -->
+  <!-- U -->
 - [Faker.Util](lib/faker/util.ex)
 - [Faker.UUID](lib/faker/uuid.ex)
-<!-- V -->
-<!-- W -->
-<!-- X -->
-<!-- Y -->
-<!-- Z -->
+  <!-- V -->
+- [Faker.Vehicle](lib/faker/vehicle.ex)
+- [Faker.Vehicle.En](lib/faker/vehicle/en.ex)
+  <!-- W -->
+  <!-- X -->
+  <!-- Y -->
+  <!-- Z -->

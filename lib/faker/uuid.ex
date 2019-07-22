@@ -29,42 +29,17 @@ defmodule Faker.UUID do
     |> uuid_to_string()
   end
 
-  defp binary_to_hex_list(binary) do
-    :binary.bin_to_list(binary)
-    |> list_to_hex_str
-  end
-
-  defp list_to_hex_str([]) do
-    []
-  end
-
-  defp list_to_hex_str([head | tail]) do
-    to_hex_str(head) ++ list_to_hex_str(tail)
-  end
-
-  defp to_hex(i) when i < 10 do
-    0 + i + 48
-  end
-
-  defp to_hex(i) when i >= 10 and i < 16 do
-    ?a + (i - 10)
-  end
-
-  defp to_hex_str(n) when n < 256 do
-    [to_hex(div(n, 16)), to_hex(rem(n, 16))]
-  end
-
   defp uuid_to_string(<<u0::32, u1::16, u2::16, u3::16, u4::48>>) do
     [
-      binary_to_hex_list(<<u0::32>>),
+      Base.encode16(<<u0::32>>, case: :lower),
       ?-,
-      binary_to_hex_list(<<u1::16>>),
+      Base.encode16(<<u1::16>>, case: :lower),
       ?-,
-      binary_to_hex_list(<<u2::16>>),
+      Base.encode16(<<u2::16>>, case: :lower),
       ?-,
-      binary_to_hex_list(<<u3::16>>),
+      Base.encode16(<<u3::16>>, case: :lower),
       ?-,
-      binary_to_hex_list(<<u4::48>>)
+      Base.encode16(<<u4::48>>, case: :lower)
     ]
     |> IO.iodata_to_binary()
   end

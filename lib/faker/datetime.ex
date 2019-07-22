@@ -1,5 +1,7 @@
 defmodule Faker.DateTime do
-  @moduledoc false
+  @moduledoc """
+  Functions for working with `DateTime` values.
+  """
 
   @microseconds_per_day 86_400_000_000
 
@@ -106,7 +108,7 @@ defmodule Faker.DateTime do
   end
 
   defp to_timestamp(datetime) do
-    DateTime.to_unix(datetime, :microseconds)
+    DateTime.to_unix(datetime, :microsecond)
   end
 
   defp unix_between(from, to) do
@@ -115,6 +117,6 @@ defmodule Faker.DateTime do
 
     date = from + sign * Faker.random_between(0, abs(diff))
 
-    DateTime.from_unix!(date, :microseconds)
+    DateTime.from_unix!(date, :microsecond)
   end
 end

@@ -6,6 +6,7 @@ defmodule Faker.InternetTest do
   doctest Faker.Internet
   doctest Faker.Internet.En
   doctest Faker.Internet.Es
+  doctest Faker.Internet.Hy
   doctest Faker.Internet.It
   doctest Faker.Internet.PtBr
 
@@ -45,6 +46,7 @@ defmodule Faker.InternetTest do
 
   test "user_name/0" do
     special_characters_pattern = :binary.compile_pattern(["'", "\""])
+
     Stream.repeatedly(&user_name/0)
     |> Enum.take(@iterations)
     |> Enum.each(fn generated_value ->
@@ -54,6 +56,7 @@ defmodule Faker.InternetTest do
 
   test "email/0" do
     special_characters_pattern = :binary.compile_pattern(["'", "\""])
+
     Stream.repeatedly(&email/0)
     |> Enum.take(@iterations)
     |> Enum.each(fn generated_value ->
@@ -63,6 +66,7 @@ defmodule Faker.InternetTest do
 
   test "safe_email/0" do
     special_characters_pattern = :binary.compile_pattern(["'", "\""])
+
     Stream.repeatedly(&safe_email/0)
     |> Enum.take(@iterations)
     |> Enum.each(fn generated_value ->
@@ -72,6 +76,7 @@ defmodule Faker.InternetTest do
 
   test "free_email/0" do
     special_characters_pattern = :binary.compile_pattern(["'", "\""])
+
     Stream.repeatedly(&free_email/0)
     |> Enum.take(@iterations)
     |> Enum.each(fn generated_value ->
@@ -81,6 +86,7 @@ defmodule Faker.InternetTest do
 
   test "domain_word/0" do
     special_characters_pattern = :binary.compile_pattern(["'", "\""])
+
     Stream.repeatedly(&domain_word/0)
     |> Enum.take(@iterations)
     |> Enum.each(fn generated_value ->
