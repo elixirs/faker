@@ -6,11 +6,11 @@ fake data.
 
 ## Quickstart
 
-* add `{:faker, "~> 0.11"}` to your deps in `mix.exs`:
+* add `{:faker, "~> 0.12"}` to your deps in `mix.exs`:
 
     ```elixir
     defp deps do
-      [{:faker, "~> 0.11", only: :test}]
+      [{:faker, "~> 0.12", only: :test}]
     end
     ```
 
@@ -60,6 +60,17 @@ with other tools.
 You can build templates for testing purposes with the
 [Blacksmith](https://github.com/batate/blacksmith) project. See the Blacksmith
 [readme](https://github.com/batate/blacksmith#readme) for details.
+
+## Team
+
+Faker was originally written by [Igor Kapkov](https://igas.me).
+
+Current list of maintainers:
+
+* [Anthony Smith](https://github.com/anthonator)
+* [Igor Kapkov](https://igas.me)
+* [Toby Hinloopen](https://github.com/tobyhinloopen)
+* [Vitor Oliveira](https://github.com/vbrazo)
 
 ## Thanks
 

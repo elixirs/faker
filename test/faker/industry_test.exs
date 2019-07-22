@@ -3,4 +3,5 @@ defmodule Faker.IndustryTest do
 
   doctest Faker.Industry
   doctest Faker.Industry.En
+  doctest Faker.Industry.Hy
 end

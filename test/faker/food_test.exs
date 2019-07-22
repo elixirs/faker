@@ -3,4 +3,5 @@ defmodule Faker.FoodTest do
 
   doctest Faker.Food
   doctest Faker.Food.En
+  doctest Faker.Food.Hy
 end
