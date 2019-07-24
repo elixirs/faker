@@ -13,6 +13,8 @@
 - [Faker.Blockchain.Bitcoin](lib/faker/bitcoin.ex)
 - [Faker.Blockchain.Ethereum](lib/faker/blockchain/ethereum.ex)
   <!-- C -->
+- [Faker.Cannabis](lib/faker/cannabis.ex)
+- [Faker.Cannabis.En](lib/faker/cannabis/en.ex)
 - [Faker.Cat](lib/faker/cat.ex)
 - [Faker.Cat.En](lib/faker/cat/en.ex)
 - [Faker.Code](lib/faker/code.ex)
