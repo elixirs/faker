@@ -168,7 +168,7 @@ defmodule Faker.Cannabis do
   localize(:brand)
 
   @doc """
-  Returns a thc percentage for a cannabis strain
+  Returns a thc percentage for a cannabis thc
 
   ## Examples
 

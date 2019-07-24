@@ -154,7 +154,7 @@ defmodule Faker.Cannabis.En do
       iex> Faker.Cannabis.En.cannabinoid()
       "Cannabicyclol"
   """
-  @spec strain() :: String.t()
+  @spec cannabinoid() :: String.t()
   sampler(:cannabinoid, [
     "Tetrahydrocannabinol",
     "Tetrahydrocannabinolic Acid",
