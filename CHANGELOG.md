@@ -10,6 +10,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Added
 
+- Added: `Faker.Cannabis` [[@nurugger07][]]
 - Added: Category `Food` for `Armenian Language` [[@hovikman][]]
 - Added: Category `Color` for `French Language` [[@popo63301][]]
 - Added: Support for `Armenian Language` [[@hovikman][]]
