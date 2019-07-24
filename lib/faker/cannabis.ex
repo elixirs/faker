@@ -186,25 +186,6 @@ defmodule Faker.Cannabis do
     random_float() <> "%"
   end
 
-  @doc """
-  Returns a cbd percentage for a cannabis strain
-
-  ## Examples
-
-      iex> Faker.Cannabis.cbd()
-      "18.1%"
-      iex> Faker.Cannabis.cbd()
-      "30.4%"
-      iex> Faker.Cannabis.cbd()
-      "28.6%"
-      iex> Faker.Cannabis.cbd()
-      "40.6%"
-  """
-  @spec cbd :: String.t()
-  def cbd do
-    random_float() <> "%"
-  end
-
   defp random_float do
     "#{Faker.random_between(0, 50)}.#{Faker.random_between(0, 9)}"
   end
