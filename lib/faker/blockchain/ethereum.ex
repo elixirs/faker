@@ -3,7 +3,7 @@ defmodule Faker.Blockchain.Ethereum do
   Functions for genrerate ethereum addresses.
   """
 
-  @type address :: <<_::160>>
+  @type address :: <<_::336>>
 
   @doc """
   Return ethereum address
