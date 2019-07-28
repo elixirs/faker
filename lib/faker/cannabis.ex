@@ -133,6 +133,10 @@ defmodule Faker.Cannabis do
       "hybrid"
       iex> Faker.Cannabis.type()
       "sativa"
+      iex> Faker.Cannabis.type()
+      "hybrid"
+      iex> Faker.Cannabis.type()
+      "sativa"
   """
   @spec type() :: String.t()
   localize(:type)
@@ -146,6 +150,8 @@ defmodule Faker.Cannabis do
       "toke"
       iex> Faker.Cannabis.buzzword()
       "cbd"
+      iex> Faker.Cannabis.buzzword()
+      "stoned"
       iex> Faker.Cannabis.buzzword()
       "stoned"
   """
@@ -163,6 +169,8 @@ defmodule Faker.Cannabis do
       "CI Wholesale"
       iex> Faker.Cannabis.En.brand()
       "Muy"
+      iex> Faker.Cannabis.En.brand()
+      "Chong's Choice"
   """
   @spec brand() :: String.t()
   localize(:brand)

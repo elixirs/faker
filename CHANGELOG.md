@@ -310,6 +310,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 [@lowks]: https://github.com/lowks
 [@lrosa007]: https://github.com/lrosa007
 [@marcussky]: https://github.com/MarcusSky
+[@nurugger07]: https://github.com/nurugger07
 [@orieken]: https://github.com/orieken
 [@petehamilton]: https://github.com/petehamilton
 [@pfac]: https://github.com/pfac
