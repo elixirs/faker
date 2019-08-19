@@ -17,6 +17,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 - Added: `Faker.Vehicle` [[@daytonn][]]
 - Added: `Faker.Blockchain.Ethereum` [[@jeanparpaillon][]]
 - Added: Elixir 1.9 support [[@igas][]]
+- Added: `Faker.Gender` and `Faker.Name.Ru` [[@secoint][]]
 
 ### Changed
 
@@ -329,3 +330,4 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 [@wojtekmach]: https://github.com/wojtekmach
 [@yordis]: https://github.com/yordis
 [@zmoshansky]: https://github.com/zmoshansky
+[@secoint]: https://github.com/secoint

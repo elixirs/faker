@@ -41,6 +41,7 @@
 - [Faker.Food.En](lib/faker/food/en.ex)
 - [Faker.Food.Hy](lib/faker/food/hy.ex)
   <!-- G -->
+- [Faker.Gender](lib/faker/gender.ex)
 - [Faker.Gov.Us](lib/faker/gov/us.ex)
   <!-- H -->
   <!-- I -->
@@ -70,6 +71,9 @@
 - [Faker.Name.Hy](lib/faker/name/hy.ex)
 - [Faker.Name.It](lib/faker/name/it.ex)
 - [Faker.Name.PtBr](lib/faker/name/pt_br.ex)
+- [Faker.Name.Ru](lib/faker/name/ru.ex)
+- [Faker.Name.Ru.Male](lib/faker/name/ru/male.ex)
+- [Faker.Name.Ru.Female](lib/faker/name/ru/female.ex)
 - [Faker.Nato](lib/faker/nato.ex)
   <!-- O -->
   <!-- P -->
