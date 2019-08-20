@@ -37,6 +37,8 @@
   <!-- E -->
   <!-- F -->
 - [Faker.File](lib/faker/file.ex)
+- [Faker.Finance](lib/faker/finance.ex)
+- [Faker.Finance.Stock](lib/faker/finance/stock.ex)
 - [Faker.Food](lib/faker/food.ex)
 - [Faker.Food.En](lib/faker/food/en.ex)
 - [Faker.Food.Hy](lib/faker/food/hy.ex)
