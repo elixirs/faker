@@ -33,6 +33,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Fixed
 
+- Fixed: `Faker.File` typespecs [[@frm][]]
 - Fix industry tests [[@hovikman][]]
 
 ### Security
@@ -297,6 +298,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 [@elbow-jason]: https://github.com/elbow-jason
 [@fenollp]: https://github.com/fenollp
 [@feyl]: https://github.com/feyl
+[@frm]: https://github.com/frm
 [@gesjeremie]: https://github.com/GesJeremie
 [@gmcintire]: https://github.com/gmcintire
 [@halfdan]: https://github.com/halfdan
