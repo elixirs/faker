@@ -1,4 +1,6 @@
 defmodule Faker.Finance.Stock do
+  alias Faker.Util
+
   @moduledoc """
   Functions for stock data
   """
@@ -20,7 +22,7 @@ defmodule Faker.Finance.Stock do
   @spec ticker() :: String.t()
   def ticker do
     code = :reuters
-    exchange = [:nikkei225, :sehk] |> Faker.Util.pick
+    exchange = [:nikkei225, :sehk] |> Util.pick()
     ticker(code, exchange)
   end
 
