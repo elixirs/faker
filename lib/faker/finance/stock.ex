@@ -8,20 +8,19 @@ defmodule Faker.Finance.Stock do
 
   ## Examples
 
-      iex> :rand.seed(:exsplus, {1, 2, 3})
       iex> Faker.Finance.Stock.ticker()
-      "2110.N225"
+      "7401.N225"
       iex> Faker.Finance.Stock.ticker()
-      "9835.N225"
+      "4786.HK"
       iex> Faker.Finance.Stock.ticker()
-      "7564.HK"
+      "6766.N225"
       iex> Faker.Finance.Stock.ticker()
-      "1085.HK"
+      "5166.N225"
   """
   @spec ticker() :: String.t()
   def ticker do
     code = :reuters
-    exchange = [:nikkei225, :sehk] |> Enum.random()
+    exchange = [:nikkei225, :sehk] |> Enum.at(Faker.random_between(0, 1))
     ticker(code, exchange)
   end
 
