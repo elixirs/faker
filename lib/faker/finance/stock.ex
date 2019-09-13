@@ -20,7 +20,7 @@ defmodule Faker.Finance.Stock do
   @spec ticker() :: String.t()
   def ticker do
     code = :reuters
-    exchange = [:nikkei225, :sehk] |> Enum.at(Faker.random_between(0, 1))
+    exchange = [:nikkei225, :sehk] |> Faker.Util.pick
     ticker(code, exchange)
   end
 
