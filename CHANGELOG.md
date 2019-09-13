@@ -10,12 +10,15 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Added
 
+- Added: `Faker.Food.PtBr` [[@vbrazo][]]
+- Added: `Faker.Cannabis` [[@nurugger07][]]
 - Added: Category `Food` for `Armenian Language` [[@hovikman][]]
 - Added: Category `Color` for `French Language` [[@popo63301][]]
 - Added: Support for `Armenian Language` [[@hovikman][]]
 - Added: `Faker.Vehicle` [[@daytonn][]]
 - Added: `Faker.Blockchain.Ethereum` [[@jeanparpaillon][]]
 - Added: Elixir 1.9 support [[@igas][]]
+* Added: Category `Finance` [[@thomascharbonnel][]]
 
 ### Changed
 
@@ -30,6 +33,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Fixed
 
+- Fixed: `Faker.File` typespecs [[@frm][]]
 - Fix industry tests [[@hovikman][]]
 
 ### Security
@@ -294,6 +298,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 [@elbow-jason]: https://github.com/elbow-jason
 [@fenollp]: https://github.com/fenollp
 [@feyl]: https://github.com/feyl
+[@frm]: https://github.com/frm
 [@gesjeremie]: https://github.com/GesJeremie
 [@gmcintire]: https://github.com/gmcintire
 [@halfdan]: https://github.com/halfdan
@@ -309,6 +314,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 [@lowks]: https://github.com/lowks
 [@lrosa007]: https://github.com/lrosa007
 [@marcussky]: https://github.com/MarcusSky
+[@nurugger07]: https://github.com/nurugger07
 [@orieken]: https://github.com/orieken
 [@petehamilton]: https://github.com/petehamilton
 [@pfac]: https://github.com/pfac
@@ -320,6 +326,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 [@stfnsr]: https://github.com/stfnsr
 [@tbash]: https://github.com/tbash
 [@theabrad]: https://github.com/theabrad
+[@thomascharbonnel]: https://github.com/thomascharbonnel
 [@tobyhinloopen]: https://github.com/tobyhinloopen
 [@vbrazo]: https://github.com/vbrazo
 [@vforvova]: https://github.com/vforvova
