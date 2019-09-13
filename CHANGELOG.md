@@ -10,15 +10,15 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Added
 
-- Added: `Faker.Food.PtBr` [[@vbrazo][]]
-- Added: `Faker.Cannabis` [[@nurugger07][]]
-- Added: Category `Food` for `Armenian Language` [[@hovikman][]]
-- Added: Category `Color` for `French Language` [[@popo63301][]]
-- Added: Support for `Armenian Language` [[@hovikman][]]
-- Added: `Faker.Vehicle` [[@daytonn][]]
-- Added: `Faker.Blockchain.Ethereum` [[@jeanparpaillon][]]
-- Added: Elixir 1.9 support [[@igas][]]
-* Added: Category `Finance` [[@thomascharbonnel][]]
+- `Faker.Food.PtBr` [[@vbrazo][]]
+- `Faker.Cannabis` [[@nurugger07][]]
+- Category `Food` for `Armenian Language` [[@hovikman][]]
+- Category `Color` for `French Language` [[@popo63301][]]
+- Support for `Armenian Language` [[@hovikman][]]
+- `Faker.Vehicle` [[@daytonn][]]
+- `Faker.Blockchain.Ethereum` [[@jeanparpaillon][]]
+- Elixir 1.9 support [[@igas][]]
+* Category `Finance` [[@thomascharbonnel][]]
 
 ### Changed
 
@@ -33,8 +33,9 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Fixed
 
-- Fixed: `Faker.File` typespecs [[@frm][]]
-- Fix industry tests [[@hovikman][]]
+- `Faker.File` typespecs [[@frm][]]
+- industry tests [[@hovikman][]]
+- credo warnings on CI [[@igas][]]
 
 ### Security
 
