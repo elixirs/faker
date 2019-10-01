@@ -11,13 +11,13 @@ defmodule Faker.Pokemon.En do
   ## Examples
 
       iex> Faker.Pokemon.En.name()
-      "Poliwhirl"
+      "Fraxure"
       iex> Faker.Pokemon.En.name()
-      "Exeggcute"
+      "Shellos"
       iex> Faker.Pokemon.En.name()
-      "Flareon"
+      "Ambipom"
       iex> Faker.Pokemon.En.name()
-      "Marowak"
+      "Forretress"
   """
   @spec name() :: String.t()
   sampler(:name, [
