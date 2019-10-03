@@ -10,24 +10,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Added
 
-- `Faker.Pokemon.De` [[@mrmstn][]]
-- `Faker.Food.PtBr` [[@vbrazo][]]
-- `Faker.Cannabis` [[@nurugger07][]]
-- Category `Food` for `Armenian Language` [[@hovikman][]]
-- Category `Color` for `French Language` [[@popo63301][]]
-- Support for `Armenian Language` [[@hovikman][]]
-- `Faker.Vehicle` [[@daytonn][]]
-- `Faker.Blockchain.Ethereum` [[@jeanparpaillon][]]
-- Elixir 1.9 support [[@igas][]]
-* Category `Finance` [[@thomascharbonnel][]]
-
 ### Changed
-
-- `Faker.Pokemon.En` added more Pokemon names [[@hdahlheim][]]
-- Use `'hy'` language code instead of `'am'` country code as Armenian locale [[@hovikman][]]
-- Enabled `Faker.DateTime` to be indexed in documentation [[@jalcine][]]
-- Simplified `Faker.UUID.v4/0` [[@whatyouhide][]]
-- Replace UTF8 1FBF with ASCII single quote in the Italian locale [[@pmontrasio][]]
 
 ### Deprecated
 
@@ -35,11 +18,48 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Fixed
 
+### Security
+
+## 0.13.0
+
+### Added
+
+- Elixir 1.9 support [[@igas][]]
+- `Faker.Address.Hy` [[@hovikman][]]
+- `Faker.Blockchain.Ethereum` [[@jeanparpaillon][]]
+- `Faker.Cannabis.En` [[@nurugger07][]]
+- `Faker.Color.Fr` [[@popo63301][]]
+- `Faker.Color.Hy` [[@hovikman][]]
+- `Faker.Commerce.Hy` [[@hovikman][]]
+- `Faker.Company.Hy` [[@hovikman][]]
+- `Faker.Finance.Stock` [[@thomascharbonnel][]]
+- `Faker.Food.Hy` [[@hovikman][]]
+- `Faker.Food.PtBr` [[@vbrazo][]]
+- `Faker.Industry.Hy` [[@hovikman][]]
+- `Faker.Internet.Hy` [[@hovikman][]]
+- `Faker.Name.Hy` [[@hovikman][]]
+- `Faker.Phone.Hy` [[@hovikman][]]
+- `Faker.Pokemon.De` [[@mrmstn][]]
+- `Faker.Vehicle` [[@daytonn][]]
+
+### Changed
+
+- `Faker.Pokemon.En.name/0` added more Pokemon names [[@hdahlheim][]]
+- Simplified `Faker.UUID.v4/0` [[@whatyouhide][]]
+- Replace UTF8 1FBF with ASCII single quote in the Italian locale [[@pmontrasio][]]
+- Bump `credo` from **1.0.2** to **1.1.4**
+- Bump `earmark` from **1.3.1** to **1.4.1**
+- Bump `ex_doc` from **0.19.3** to **0.21.2**
+- Bump `makeup` from **0.8.0** to **1.0.0**
+- Bump `makeup_elixir` from **0.13.0** to **0.14.0**
+- Bump `nimble_parsec` from **0.5.0** to **0.5.1**
+
+### Fixed
+
+- `Faker.DateTime` indexing in documentation [[@jalcine][]]
 - `Faker.File` typespecs [[@frm][]]
 - industry tests [[@hovikman][]]
 - credo warnings on CI [[@igas][]]
-
-### Security
 
 ## 0.12.0
 
@@ -296,6 +316,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 [@belaustegui]: https://github.com/belaustegui
 [@cdesch]: https://github.com/cdesch
 [@connorrigby]: https://github.com/ConnorRigby
+[@daytonn]: https://github.com/daytonn
 [@devshane]: https://github.com/devshane
 [@efexen]: https://github.com/efexen
 [@elbow-jason]: https://github.com/elbow-jason
@@ -305,9 +326,11 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 [@gesjeremie]: https://github.com/GesJeremie
 [@gmcintire]: https://github.com/gmcintire
 [@halfdan]: https://github.com/halfdan
+[@hdahlheim]: https://github.com/hdahlheim
 [@hovikman]: https://github.com/hovikman
 [@igas]: https://igas.me
 [@indocomsoft]: https://github.com/indocomsoft
+[@jalcine]: https://github.com/jalcine
 [@jarednorman]: https://github.com/jarednorman
 [@jc00ke]: https://github.com/jc00ke
 [@jeanparpaillon]: https://github.com/jeanparpaillon
@@ -317,12 +340,14 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 [@lowks]: https://github.com/lowks
 [@lrosa007]: https://github.com/lrosa007
 [@marcussky]: https://github.com/MarcusSky
+[@mrmstn]: https://github.com/mrmstn
 [@nurugger07]: https://github.com/nurugger07
 [@orieken]: https://github.com/orieken
 [@petehamilton]: https://github.com/petehamilton
 [@pfac]: https://github.com/pfac
 [@piton4eg]: https://github.com/piton4eg
 [@pmontrasio]: https://github.com/pmontrasio
+[@popo63301]: https://github.com/popo63301
 [@samcdavid]: https://github.com/samcdavid
 [@saulecabrera]: https://github.com/saulecabrera
 [@sotojuan]: https://github.com/sotojuan
@@ -334,6 +359,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 [@vbrazo]: https://github.com/vbrazo
 [@vforvova]: https://github.com/vforvova
 [@vnegrisolo]: https://github.com/vnegrisolo
+[@whatyouhide]: https://github.com/whatyouhide
 [@wojtekmach]: https://github.com/wojtekmach
 [@yordis]: https://github.com/yordis
 [@zmoshansky]: https://github.com/zmoshansky

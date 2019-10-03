@@ -6,11 +6,11 @@ fake data.
 
 ## Quickstart
 
-* add `{:faker, "~> 0.12"}` to your deps in `mix.exs`:
+* add `{:faker, "~> 0.13"}` to your deps in `mix.exs`:
 
     ```elixir
     defp deps do
-      [{:faker, "~> 0.12", only: :test}]
+      [{:faker, "~> 0.13", only: :test}]
     end
     ```
 
