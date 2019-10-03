@@ -10,6 +10,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Added
 
+- `Faker.Pokemon.De` [[@mrmstn][]]
 - `Faker.Food.PtBr` [[@vbrazo][]]
 - `Faker.Cannabis` [[@nurugger07][]]
 - Category `Food` for `Armenian Language` [[@hovikman][]]
