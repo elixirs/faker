@@ -5,6 +5,7 @@
 - [Faker.Address.Es](lib/faker/address/es.ex)
 - [Faker.Address.Hy](lib/faker/address/hy.ex)
 - [Faker.Address.It](lib/faker/address/it.ex)
+- [Faker.Address.Ru](lib/faker/address/ru.ex)
 - [Faker.App](lib/faker/app.ex)
 - [Faker.Avatar](lib/faker/avatar.ex)
   <!-- B -->
