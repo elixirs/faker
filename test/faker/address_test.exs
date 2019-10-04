@@ -6,4 +6,5 @@ defmodule Faker.AddressTest do
   doctest Faker.Address.Es
   doctest Faker.Address.Hy
   doctest Faker.Address.It
+  doctest Faker.Address.Ru
 end
