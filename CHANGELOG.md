@@ -11,6 +11,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 ### Added
 
 - `Faker.Address.Ru.country/0` [[@igas][]]
+- `Faker.Address.Ru.state/0` [[@igas][]]
 
 ### Changed
 
