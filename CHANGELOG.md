@@ -10,6 +10,8 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Added
 
+- `Faker.Color.De.name/0` [[@hlhr][]]
+- `Faker.Color.De.fancy_name/0` [[@hlhr][]]
 - `Faker.Address.Ru.country/0` [[@igas][]]
 - `Faker.Address.Ru.state/0` [[@igas][]]
 

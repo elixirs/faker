@@ -20,6 +20,7 @@
 - [Faker.Cat.En](lib/faker/cat/en.ex)
 - [Faker.Code](lib/faker/code.ex)
 - [Faker.Color](lib/faker/color.ex)
+- [Faker.Color.De](lib/faker/color/de.ex)
 - [Faker.Color.En](lib/faker/color/en.ex)
 - [Faker.Color.Es](lib/faker/color/es.ex)
 - [Faker.Color.Fr](lib/faker/color/fr.ex)
