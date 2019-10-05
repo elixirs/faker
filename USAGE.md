@@ -45,6 +45,7 @@
 - [Faker.Food.Hy](lib/faker/food/hy.ex)
   <!-- G -->
 - [Faker.Gov.Us](lib/faker/gov/us.ex)
+- [Faker.Gov.It](lib/faker/gov/it.ex)
   <!-- H -->
   <!-- I -->
 - [Faker.Industry](lib/faker/industry.ex)
