@@ -19,6 +19,8 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Removed
 
+- gitlab CI [[@igas][]]
+
 ### Fixed
 
 ### Security
@@ -82,8 +84,6 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 ### Deprecated
 
 - `Faker.Bitcoin` in favour of `Faker.Blockchain.Bitcoin` [[@igas][]]
-
-### Removed
 
 ### Fixed
 
