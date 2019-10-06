@@ -1,6 +1,7 @@
 defmodule Faker.Gov.It do
   @moduledoc """
-  Generating Italian fiscal codes
+  Functions for data created/released by the Italian government,
+  like fiscal codes
   """
 
   require Integer
