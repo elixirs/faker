@@ -7,18 +7,18 @@ defmodule Faker.Gov.It do
 
   alias Faker.Util
 
-  # @doc """
-  # Returns a random Italian fiscal code
+  @doc """
+  Returns a random Italian fiscal code
 
-  # ## Examples
+  ## Examples
 
-  #     iex> Faker.Gov.It.fiscal_id
-  #     "ZRSNND48A23E151U"
-  #     iex> Faker.Gov.It.fiscal_id
-  #     "CCPWLC58L04I289K"
-  #     iex> Faker.Gov.It.fiscal_id
-  #     "TTKRQQ77P43I477X"
-  # """
+      iex> Faker.Gov.It.fiscal_id
+      "ZRSNND48A23E151U"
+      iex> Faker.Gov.It.fiscal_id
+      "CCPWLC58L04I289K"
+      iex> Faker.Gov.It.fiscal_id
+      "TTKRQQ77P43I477X"
+  """
   @spec fiscal_id() :: binary()
   def fiscal_id do
     surname()
