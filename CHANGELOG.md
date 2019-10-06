@@ -31,29 +31,29 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Added
 
-- Elixir 1.9 support [[@igas][]]
-- `Faker.Address.Hy` [[@hovikman][]]
-- `Faker.Blockchain.Ethereum` [[@jeanparpaillon][]]
-- `Faker.Cannabis.En` [[@nurugger07][]]
-- `Faker.Color.Fr` [[@popo63301][]]
-- `Faker.Color.Hy` [[@hovikman][]]
-- `Faker.Commerce.Hy` [[@hovikman][]]
-- `Faker.Company.Hy` [[@hovikman][]]
-- `Faker.Finance.Stock` [[@thomascharbonnel][]]
-- `Faker.Food.Hy` [[@hovikman][]]
-- `Faker.Food.PtBr` [[@vbrazo][]]
-- `Faker.Industry.Hy` [[@hovikman][]]
-- `Faker.Internet.Hy` [[@hovikman][]]
-- `Faker.Name.Hy` [[@hovikman][]]
-- `Faker.Phone.Hy` [[@hovikman][]]
-- `Faker.Pokemon.De` [[@mrmstn][]]
-- `Faker.Vehicle` [[@daytonn][]]
+- Elixir 1.9 support [[@igas](https://igas.me)]
+- `Faker.Address.Hy` [[@hovikman](https://github.com/hovikman)]
+- `Faker.Blockchain.Ethereum` [[@jeanparpaillon](https://github.com/jeanparpaillon)]
+- `Faker.Cannabis.En` [[@nurugger07](https://github.com/nurugger07)]
+- `Faker.Color.Fr` [[@popo63301](https://github.com/popo63301)]
+- `Faker.Color.Hy` [[@hovikman](https://github.com/hovikman)]
+- `Faker.Commerce.Hy` [[@hovikman](https://github.com/hovikman)]
+- `Faker.Company.Hy` [[@hovikman](https://github.com/hovikman)]
+- `Faker.Finance.Stock` [[@thomascharbonnel](https://github.com/thomascharbonnel)]
+- `Faker.Food.Hy` [[@hovikman](https://github.com/hovikman)]
+- `Faker.Food.PtBr` [[@vbrazo](https://github.com/vbrazo)]
+- `Faker.Industry.Hy` [[@hovikman](https://github.com/hovikman)]
+- `Faker.Internet.Hy` [[@hovikman](https://github.com/hovikman)]
+- `Faker.Name.Hy` [[@hovikman](https://github.com/hovikman)]
+- `Faker.Phone.Hy` [[@hovikman](https://github.com/hovikman)]
+- `Faker.Pokemon.De` [[@mrmstn](https://github.com/mrmstn)]
+- `Faker.Vehicle` [[@daytonn](https://github.com/daytonn)]
 
 ### Changed
 
-- `Faker.Pokemon.En.name/0` added more Pokemon names [[@hdahlheim][]]
-- Simplified `Faker.UUID.v4/0` [[@whatyouhide][]]
-- Replace UTF8 1FBF with ASCII single quote in the Italian locale [[@pmontrasio][]]
+- `Faker.Pokemon.En.name/0` added more Pokemon names [[@hdahlheim](https://github.com/hdahlheim)]
+- Simplified `Faker.UUID.v4/0` [[@whatyouhide](https://github.com/whatyouhide)]
+- Replace UTF8 1FBF with ASCII single quote in the Italian locale [[@pmontrasio](https://github.com/pmontrasio)]
 - Bump `credo` from **1.0.2** to **1.1.4**
 - Bump `earmark` from **1.3.1** to **1.4.1**
 - Bump `ex_doc` from **0.19.3** to **0.21.2**
@@ -63,10 +63,10 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Fixed
 
-- `Faker.DateTime` indexing in documentation [[@jalcine][]]
-- `Faker.File` typespecs [[@frm][]]
-- industry tests [[@hovikman][]]
-- credo warnings on CI [[@igas][]]
+- `Faker.DateTime` indexing in documentation [[@jalcine](https://github.com/jalcine)]
+- `Faker.File` typespecs [[@frm](https://github.com/frm)]
+- industry tests [[@hovikman](https://github.com/hovikman)]
+- credo warnings on CI [[@igas](https://igas.me)]
 
 ## 0.12.0
 
@@ -74,8 +74,8 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 - New maintainer [Vitor Oliveira (@vbrazo)](https://github.com/vbrazo)
 - New maintainer [Anthony Smith (@anthonator)](https://github.com/anthonator)
-- `Faker.Blockchain` namespace [[@vbrazo][]]
-- `Faker.Address.It`, `Faker.Color.It`, `Faker.Internet.It` and `Faker.Name.It` [[@pmontrasio][]]
+- `Faker.Blockchain` namespace [[@vbrazo](https://github.com/vbrazo)]
+- `Faker.Address.It`, `Faker.Color.It`, `Faker.Internet.It` and `Faker.Name.It` [[@pmontrasio](https://github.com/pmontrasio)]
 
 ### Changed
 
@@ -85,14 +85,14 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Deprecated
 
-- `Faker.Bitcoin` in favour of `Faker.Blockchain.Bitcoin` [[@igas][]]
+- `Faker.Bitcoin` in favour of `Faker.Blockchain.Bitcoin` [[@igas](https://igas.me)]
 
 ### Fixed
 
-- Typo in Faker.Pizza [[@gmcintire][]]
-- Elixir 1.8.0 `DateTime` deprecation [[@vnegrisolo][]]
-- Quotes removal in `Faker.Internet` functions [[@jc00ke][]] & [[@igas][]]
-- Documentation issues [[@hovikman][]]
+- Typo in Faker.Pizza [[@gmcintire](https://github.com/gmcintire)]
+- Elixir 1.8.0 `DateTime` deprecation [[@vnegrisolo](https://github.com/vnegrisolo)]
+- Quotes removal in `Faker.Internet` functions [[@jc00ke](https://github.com/jc00ke)] & [[@igas](https://igas.me)]
+- Documentation issues [[@hovikman](https://github.com/hovikman)]
 
 ### Security
 
@@ -100,150 +100,150 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Fixed
 
-- `Faker.Util.pick/1` performance regression [[@aptinio][]] & [[@elbow-jason][]]
+- `Faker.Util.pick/1` performance regression [[@aptinio](https://github.com/aptinio)] & [[@elbow-jason](https://github.com/elbow-jason)]
 
 ## 0.11.1
 
 ### Changed
 
-- all localized functions now use Faker.localize/1 [[@igas][]]
+- all localized functions now use Faker.localize/1 [[@igas](https://igas.me)]
 
 ### Removed
 
-- Elixir 1.5 from CI [[@igas][]]
-- dialyzer warning suppressions [[@igas][]]
+- Elixir 1.5 from CI [[@igas](https://igas.me)]
+- dialyzer warning suppressions [[@igas](https://igas.me)]
 
 ### Fixed
 
-- `Faker.Util.pick/1` work with `Enum` type now [[@igas][]]
-- `Faker.localize/1` is calling `Kernel.function_exported?/3` with the wrong parameter [[@indocomsoft][]]
-- `Faker.StarWars.En` Changed Palpatine to Sheev Palpatine, and fixed typo for Beru Lars [[@theabrad][]]
+- `Faker.Util.pick/1` work with `Enum` type now [[@igas](https://igas.me)]
+- `Faker.localize/1` is calling `Kernel.function_exported?/3` with the wrong parameter [[@indocomsoft](https://github.com/indocomsoft)]
+- `Faker.StarWars.En` Changed Palpatine to Sheev Palpatine, and fixed typo for Beru Lars [[@theabrad](https://github.com/theabrad)]
 
 ## 0.11.0
 
 ### Added
 
-- Tests covered by actual values not just checking that result is a binary [[@igas][]]
-- `Faker.Address.Es` and `Faker.Address.En` [[@vbrazo][]]
-- `Faker.Beer.brand/0` [[@vbrazo][]]
-- `Faker.Food.sushi/0` [[@vbrazo][]]
-- `Faker.Team.PtBr` [[@vbrazo][]]
-- `Faker.Name.PtBr` and `Faker.Name.Es` [[@vbrazo][]]
-- `Faker.UUID.v4/0` [[@anthonator][]]
-- `Faker.Food` to generate Food data [[@vbrazo][]]
-- `Faker.Color.En`, `Faker.Color.Es` and `Faker.Color.PtBr` [[@vbrazo][]]
-- `Faker.Internet` added Spanish and Brazilian Portuguese translations [[@vbrazo][]]
-- `Faker.Address.geohash/0` [[@anthonator][]] and [[@feyl][]]
-- `Faker.Util.sample_uniq/2` [[@fenollp][]]
+- Tests covered by actual values not just checking that result is a binary [[@igas](https://igas.me)]
+- `Faker.Address.Es` and `Faker.Address.En` [[@vbrazo](https://github.com/vbrazo)]
+- `Faker.Beer.brand/0` [[@vbrazo](https://github.com/vbrazo)]
+- `Faker.Food.sushi/0` [[@vbrazo](https://github.com/vbrazo)]
+- `Faker.Team.PtBr` [[@vbrazo](https://github.com/vbrazo)]
+- `Faker.Name.PtBr` and `Faker.Name.Es` [[@vbrazo](https://github.com/vbrazo)]
+- `Faker.UUID.v4/0` [[@anthonator](https://github.com/anthonator)]
+- `Faker.Food` to generate Food data [[@vbrazo](https://github.com/vbrazo)]
+- `Faker.Color.En`, `Faker.Color.Es` and `Faker.Color.PtBr` [[@vbrazo](https://github.com/vbrazo)]
+- `Faker.Internet` added Spanish and Brazilian Portuguese translations [[@vbrazo](https://github.com/vbrazo)]
+- `Faker.Address.geohash/0` [[@anthonator](https://github.com/anthonator)] and [[@feyl](https://github.com/feyl)]
+- `Faker.Util.sample_uniq/2` [[@fenollp](https://github.com/fenollp)]
 
 ### Changed
 
-- Remove `'` and `"` from generated names in `Faker::Internet` [[@vbrazo][]]
-- Codebase been reformated with elixir formatter [[@vbrazo][]] and [[@igas][]]
-- Documentation moved to hexdocs.pm [[@MarcusSky][]], [[@vbrazo][]], and [[@igas][]]
-- Updated dependencies [[@igas][]]
+- Remove `'` and `"` from generated names in `Faker::Internet` [[@vbrazo](https://github.com/vbrazo)]
+- Codebase been reformated with elixir formatter [[@vbrazo](https://github.com/vbrazo)] and [[@igas](https://igas.me)]
+- Documentation moved to hexdocs.pm [[@MarcusSky](https://github.com/MarcusSky)], [[@vbrazo](https://github.com/vbrazo)], and [[@igas](https://igas.me)]
+- Updated dependencies [[@igas](https://igas.me)]
 
 ### Fixed
 
-- `Faker.App.semver/0` is not generating invalid versions anymore fixed by [[@igas][]] found by [[@ConnorRigby][]]
-- `Faker.Lorem` is not redefining documentation in multiple functions anymore fixed and found by [[@pfac][]]
+- `Faker.App.semver/0` is not generating invalid versions anymore fixed by [[@igas](https://igas.me)] found by [[@ConnorRigby](https://github.com/ConnorRigby)]
+- `Faker.Lorem` is not redefining documentation in multiple functions anymore fixed and found by [[@pfac](https://github.com/pfac)]
 
 ## 0.10.0
 
 ### Added
 
 - New maintainer [Toby Hinloopen (@tobyhinloopen)](https://github.com/tobyhinloopen)
-- Gitter chat [room](https://gitter.im/igas/faker) [[@igas][]]
-- `Faker.Gov.Us.ssn/0` added to generate US Social Security numbers [[@sotojuan][]]
-- `Faker.StarWars` added to generate `character/0`, `planet/0` and `quote/0` from StarWars universe [[@samcdavid][]]
-- `Faker.Cat` added to generate `name/0`, `breed/0` and `registry/0` of cats [[@orieken][]]
-- Customizable random functions [[@igas][]]
-- `Faker.Industry` [[@cdesch][]]
-- Missing colors to `Faker.Color.En` [[@cdesch][]]
-- Elixir 1.6 support [[@igas][]]
+- Gitter chat [room](https://gitter.im/igas/faker) [[@igas](https://igas.me)]
+- `Faker.Gov.Us.ssn/0` added to generate US Social Security numbers [[@sotojuan](https://github.com/sotojuan)]
+- `Faker.StarWars` added to generate `character/0`, `planet/0` and `quote/0` from StarWars universe [[@samcdavid](https://github.com/samcdavid)]
+- `Faker.Cat` added to generate `name/0`, `breed/0` and `registry/0` of cats [[@orieken](https://github.com/orieken)]
+- Customizable random functions [[@igas](https://igas.me)]
+- `Faker.Industry` [[@cdesch](https://github.com/cdesch)]
+- Missing colors to `Faker.Color.En` [[@cdesch](https://github.com/cdesch)]
+- Elixir 1.6 support [[@igas](https://igas.me)]
 
 ### Changed
 
-- Updated dependencies [[@igas][]]
+- Updated dependencies [[@igas](https://igas.me)]
 
 ### Removed
 
-- Elixir 1.3 support [[@igas][]]
+- Elixir 1.3 support [[@igas](https://igas.me)]
 
 ### Fixed
 
-- `Faker.Date.date_of_birth/0` and `Faker.Date.date_of_birth/1` returning wrong result [[@stfnsr][]]
-- Usage.md reorganisation [[@orieken][]]
-- Documentation for `Faker.Beer` [[@bcat-eu][]]
-- Fix pokemon name - Mr. Mime :) [[@leveloid][]]
-- Gov.Us deprecations [[@halfdan][]]
+- `Faker.Date.date_of_birth/0` and `Faker.Date.date_of_birth/1` returning wrong result [[@stfnsr](https://github.com/stfnsr)]
+- Usage.md reorganisation [[@orieken](https://github.com/orieken)]
+- Documentation for `Faker.Beer` [[@bcat-eu](https://github.com/bcat-eu)]
+- Fix pokemon name - Mr. Mime :) [[@leveloid](https://github.com/leveloid)]
+- Gov.Us deprecations [[@halfdan](https://github.com/halfdan)]
 
 ## 0.9.0
 
 ### Added
 
-- `Faker.Pizza` [[@lauraannwilliams][]]
-- Credo on CI [[@igas][]]
-- Dialyxir on CI [[@igas][]]
-- `Faker.String.base64/0` and `Faker.String.base64/1` [[@yordis][]]
+- `Faker.Pizza` [[@lauraannwilliams](https://github.com/lauraannwilliams)]
+- Credo on CI [[@igas](https://igas.me)]
+- Dialyxir on CI [[@igas](https://igas.me)]
+- `Faker.String.base64/0` and `Faker.String.base64/1` [[@yordis](https://github.com/yordis)]
 
 ### Removed
 
-- Elixir < 1.3 support [[@igas][]]
+- Elixir < 1.3 support [[@igas](https://igas.me)]
 
 ### Fixed
 
-- Credo issues [[@lrosa007][]]
+- Credo issues [[@lrosa007](https://github.com/lrosa007)]
 
 ## 0.8.0
 
 ### Added
 
-- `Faker.Internet.UserAgent` [[@devshane][]]
-- `Faker.Superhero` [[@orieken][]]
-- `Faker.Code.iban` [[@tobyhinloopen][]]
-- `Faker.Beer` [[@orieken][]]
-- `Faker.Date` [[@tobyhinloopen][]]
-- `Faker.Date.between` [[@anthonator][]]
-- `Faker.DateTime` [[@anthonator][]]
-- `Faker.NaiveDateTime` [[@anthonator][]]
-- `Faker.Nato` [[@petehamilton][]]
-- `Faker.Pokemon` [[@orieken][]]
-- `Faker.App.semver` [[@wojtekmach][]]
-- `Faker.Internet.slug` [[@anthonator][]]
-- credo [[@igas][]]
+- `Faker.Internet.UserAgent` [[@devshane](https://github.com/devshane)]
+- `Faker.Superhero` [[@orieken](https://github.com/orieken)]
+- `Faker.Code.iban` [[@tobyhinloopen](https://github.com/tobyhinloopen)]
+- `Faker.Beer` [[@orieken](https://github.com/orieken)]
+- `Faker.Date` [[@tobyhinloopen](https://github.com/tobyhinloopen)]
+- `Faker.Date.between` [[@anthonator](https://github.com/anthonator)]
+- `Faker.DateTime` [[@anthonator](https://github.com/anthonator)]
+- `Faker.NaiveDateTime` [[@anthonator](https://github.com/anthonator)]
+- `Faker.Nato` [[@petehamilton](https://github.com/petehamilton)]
+- `Faker.Pokemon` [[@orieken](https://github.com/orieken)]
+- `Faker.App.semver` [[@wojtekmach](https://github.com/wojtekmach)]
+- `Faker.Internet.slug` [[@anthonator](https://github.com/anthonator)]
+- credo [[@igas](https://igas.me)]
 
 ### Changed
 
-- Underlaying data structure changed to maps to improve performance [[@igas][]]
-- Improved `Faker.Beer` usage [[@tbash][]]
+- Underlaying data structure changed to maps to improve performance [[@igas](https://igas.me)]
+- Improved `Faker.Beer` usage [[@tbash](https://github.com/tbash)]
 
 ### Removed
 
-- Usage docs duplication [[@piton4eg][]]
+- Usage docs duplication [[@piton4eg](https://github.com/piton4eg)]
 
 ### Fixed
 
-- Elixir 1.4 deprecation warnings [[@igas][]]
+- Elixir 1.4 deprecation warnings [[@igas](https://igas.me)]
 
 ## 0.7.0
 
-- Upgrade to latest versions [[@belaustegui][]]
-- Documentation improvements [[@GesJeremie][]]
-- `Faker.Color.En.name/0` & `Faker.Color.En.fancy_name/0` [[@efexen][]]
-- `Faker.Phone.EnGb.cell_number/0` [[@igas][]]
-- `Faker.Phone.EnGb.landline_number/0` [[@johnhamelink][]]
-- `Faker.Phone.EnGb.mobile_number/0` [[@igas][]]
-- `Faker.Phone.EnGb.number/0` [[@igas][]]
-- `Faker.Phone.EnUs` [[@devshane][]]
+- Upgrade to latest versions [[@belaustegui](https://github.com/belaustegui)]
+- Documentation improvements [[@GesJeremie](https://github.com/GesJeremie)]
+- `Faker.Color.En.name/0` & `Faker.Color.En.fancy_name/0` [[@efexen](https://github.com/efexen)]
+- `Faker.Phone.EnGb.cell_number/0` [[@igas](https://igas.me)]
+- `Faker.Phone.EnGb.landline_number/0` [[@johnhamelink](https://github.com/johnhamelink)]
+- `Faker.Phone.EnGb.mobile_number/0` [[@igas](https://igas.me)]
+- `Faker.Phone.EnGb.number/0` [[@igas](https://igas.me)]
+- `Faker.Phone.EnUs` [[@devshane](https://github.com/devshane)]
 
 ## 0.6.0
 
 - Most of functions covered by specs and docs now
-- Removed JSON programming and poison dependency [[@saulecabrera][]] and [[@vforvova][]]
-- Add Faker.Shakespeare [[@adam-wanninger][]]
-- Fix SSL issues in `Internet.image_url/0` [[@zmoshansky][]]
-- Improve tests [[@lowks][]]
+- Removed JSON programming and poison dependency [[@saulecabrera](https://github.com/saulecabrera)] and [[@vforvova](https://github.com/vforvova)]
+- Add Faker.Shakespeare [[@adam-wanninger](https://github.com/adam-wanninger)]
+- Fix SSL issues in `Internet.image_url/0` [[@zmoshansky](https://github.com/zmoshansky)]
+- Improve tests [[@lowks](https://github.com/lowks)]
 - Elixir 1.1 support
 - Add `Faker.App` with `author/0`, `name/0` and `version/0`
 - Add `Faker.Address.country_code/0`
@@ -266,12 +266,12 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 ## 0.4.0
 
 - Elixir 1.0.0
-- ISBN check digit algorithm [[@vforvova][]]
+- ISBN check digit algorithm [[@vforvova](https://github.com/vforvova)]
 - Move from JSEX to Poison
 
 ## 0.3.2
 
-- Fixed function heads [[@jarednorman][]]
+- Fixed function heads [[@jarednorman](https://github.com/jarednorman)]
 
 ## 0.3.1
 
@@ -313,58 +313,3 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 - Added `Faker.Team`
   - `name/0`
   - `creature/0`
-
-[@adam-wanninger]: https://github.com/adam-wanninger
-[@anthonator]: https://github.com/anthonator
-[@aptinio]: https://github.com/aptinio
-[@bcat-eu]: https://github.com/bcat-eu
-[@belaustegui]: https://github.com/belaustegui
-[@cdesch]: https://github.com/cdesch
-[@connorrigby]: https://github.com/ConnorRigby
-[@daytonn]: https://github.com/daytonn
-[@devshane]: https://github.com/devshane
-[@efexen]: https://github.com/efexen
-[@elbow-jason]: https://github.com/elbow-jason
-[@fenollp]: https://github.com/fenollp
-[@feyl]: https://github.com/feyl
-[@frm]: https://github.com/frm
-[@gesjeremie]: https://github.com/GesJeremie
-[@gmcintire]: https://github.com/gmcintire
-[@halfdan]: https://github.com/halfdan
-[@hdahlheim]: https://github.com/hdahlheim
-[@hovikman]: https://github.com/hovikman
-[@igas]: https://igas.me
-[@indocomsoft]: https://github.com/indocomsoft
-[@jalcine]: https://github.com/jalcine
-[@jarednorman]: https://github.com/jarednorman
-[@jc00ke]: https://github.com/jc00ke
-[@jeanparpaillon]: https://github.com/jeanparpaillon
-[@johnhamelink]: https://github.com/johnhamelink
-[@lauraannwilliams]: https://github.com/lauraannwilliams
-[@leveloid]: https://github.com/leveloid
-[@lowks]: https://github.com/lowks
-[@lrosa007]: https://github.com/lrosa007
-[@marcussky]: https://github.com/MarcusSky
-[@mrmstn]: https://github.com/mrmstn
-[@nurugger07]: https://github.com/nurugger07
-[@orieken]: https://github.com/orieken
-[@petehamilton]: https://github.com/petehamilton
-[@pfac]: https://github.com/pfac
-[@piton4eg]: https://github.com/piton4eg
-[@pmontrasio]: https://github.com/pmontrasio
-[@popo63301]: https://github.com/popo63301
-[@samcdavid]: https://github.com/samcdavid
-[@saulecabrera]: https://github.com/saulecabrera
-[@sotojuan]: https://github.com/sotojuan
-[@stfnsr]: https://github.com/stfnsr
-[@tbash]: https://github.com/tbash
-[@theabrad]: https://github.com/theabrad
-[@thomascharbonnel]: https://github.com/thomascharbonnel
-[@tobyhinloopen]: https://github.com/tobyhinloopen
-[@vbrazo]: https://github.com/vbrazo
-[@vforvova]: https://github.com/vforvova
-[@vnegrisolo]: https://github.com/vnegrisolo
-[@whatyouhide]: https://github.com/whatyouhide
-[@wojtekmach]: https://github.com/wojtekmach
-[@yordis]: https://github.com/yordis
-[@zmoshansky]: https://github.com/zmoshansky
