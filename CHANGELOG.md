@@ -12,7 +12,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 - `Faker.Address.Ru.country/0` [[@igas][]]
 - `Faker.Address.Ru.state/0` [[@igas][]]
-- `Faker.Gov.It` [[@neslinesli93][]]
+- `Faker.Gov.It` [[@neslinesli93](https://github.com/neslinesli93)]
 
 ### Changed
 
