@@ -13,11 +13,11 @@ defmodule Faker.Gov.It do
   ## Examples
 
       iex> Faker.Gov.It.fiscal_id
-      "ZRSNND48A23E151U"
+      "ELRCEA64C50A918F"
       iex> Faker.Gov.It.fiscal_id
-      "CCPWLC58L04I289K"
+      "ZSLNKH22M34H480J"
       iex> Faker.Gov.It.fiscal_id
-      "TTKRQQ77P43I477X"
+      "OCPCVO90M50F353I"
   """
   @spec fiscal_id() :: binary()
   def fiscal_id do
@@ -32,11 +32,11 @@ defmodule Faker.Gov.It do
   end
 
   defp surname do
-    Enum.reduce(1..3, "", fn _, acc -> acc <> Util.upper_letter() end)
+    Util.join(3, &Util.upper_letter/0)
   end
 
   defp name do
-    Enum.reduce(1..3, "", fn _, acc -> acc <> Util.upper_letter() end)
+    Util.join(3, &Util.upper_letter/0)
   end
 
   defp birth_year do
