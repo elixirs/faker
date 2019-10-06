@@ -10,14 +10,18 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Added
 
-- `Faker.Address.Ru.country/0` [[@igas](https://igas.me)]
-- `Faker.Address.Ru.state/0` [[@igas](https://igas.me)]
+- `Faker.Color.De.name/0` [[@hlhr][]]
+- `Faker.Color.De.fancy_name/0` [[@hlhr][]]
+- `Faker.Address.Ru.country/0` [[@igas][]]
+- `Faker.Address.Ru.state/0` [[@igas][]]
 
 ### Changed
 
 ### Deprecated
 
 ### Removed
+
+- gitlab CI [[@igas][]]
 
 ### Fixed
 
@@ -82,8 +86,6 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 ### Deprecated
 
 - `Faker.Bitcoin` in favour of `Faker.Blockchain.Bitcoin` [[@igas](https://igas.me)]
-
-### Removed
 
 ### Fixed
 
