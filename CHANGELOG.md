@@ -14,6 +14,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 - `Faker.Color.De.fancy_name/0` [[@hlhr][]]
 - `Faker.Address.Ru.country/0` [[@igas][]]
 - `Faker.Address.Ru.state/0` [[@igas][]]
+- `Faker.Gov.It` [[@neslinesli93](https://github.com/neslinesli93)]
 
 ### Changed
 
