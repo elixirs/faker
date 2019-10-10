@@ -107,6 +107,24 @@ defmodule Faker.Vehicle do
   localize(:model)
 
   @doc """
+  Returns a vehicle model string belonging to the given make
+
+  ## Examples
+      iex> Faker.Vehicle.model("Ford")
+      "Focus"
+      iex> Faker.Vehicle.model("BMW")
+      "X5"
+      iex> Faker.Vehicle.model("Audi")
+      "A4"
+      iex> Faker.Vehicle.model("Toyota")
+      "Corolla"
+  """
+  @spec model(String.t()) :: String.t()
+  def model(make) do
+    En.model(make)
+  end
+
+  @doc """
   Returns a vehicle option string
 
   ## Examples
@@ -119,6 +137,7 @@ defmodule Faker.Vehicle do
       iex> Faker.Vehicle.option()
       "Keyless Entry"
   """
+
   @spec option() :: String.t()
   localize(:option)
 
