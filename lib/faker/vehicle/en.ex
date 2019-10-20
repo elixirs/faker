@@ -16,7 +16,8 @@ defmodule Faker.Vehicle.En do
     "Lincoln",
     "Buick",
     "Honda",
-    "Nissan"
+    "Nissan",
+    "Tesla"
   ]
 
   @models %{
@@ -29,7 +30,8 @@ defmodule Faker.Vehicle.En do
     "Lincoln" => ["Navigator", "MKZ", "MKX", "MKS"],
     "Buick" => ["Enclave", "Regal", "LaCrosse", "Verano", "Encore", "Riveria"],
     "Honda" => ["Accord", "Civic", "CR-V", "Odyssey"],
-    "Nissan" => ["Rogue", "Juke", "Cube", "Pathfiner", "Versa", "Altima"]
+    "Nissan" => ["Rogue", "Juke", "Cube", "Pathfiner", "Versa", "Altima"],
+    "Tesla" => ["Roadster", "Model S", "Model 3", "Model X", "Model Y"]
   }
 
   @options [
