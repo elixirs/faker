@@ -95,7 +95,7 @@ defmodule Faker.Util do
       iex> Faker.Util.join(2, " or ", &Faker.Color.name/0)
       "Purple or White"
   """
-  @spec join(integer, binary, (integer -> binary)) :: binary
+  @spec join(integer, binary, (() -> binary)) :: binary
   def join(n, joiner \\ "", fun) do
     Enum.join(list(n, fun), joiner)
   end
