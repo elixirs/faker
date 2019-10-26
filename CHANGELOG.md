@@ -9,6 +9,9 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 ## Unreleased
 
 ### Added
+- `Faker.Pokemon.It.name/0` [[@fusillicode][]]
+
+### Added
 
 - `Faker.Color.De.name/0` [[@hlhr][]]
 - `Faker.Color.De.fancy_name/0` [[@hlhr][]]
