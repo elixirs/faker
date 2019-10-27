@@ -443,6 +443,10 @@ defmodule Faker.Address.Es do
       "Extremadura"
       iex> Faker.Address.Es.region()
       "Aragón"
+      iex> Faker.Address.Es.region()
+      "País Vasco"
+      iex> Faker.Address.Es.region()
+      "Canarias"
   """
 
   @spec region() :: String.t()
@@ -574,6 +578,10 @@ defmodule Faker.Address.Es do
       "de arriba"
       iex> Faker.Address.Es.street_suffix()
       "Sur"
+      iex> Faker.Address.Es.street_suffix()
+      "de abajo"
+      iex> Faker.Address.Es.street_suffix()
+      "Norte"
   """
   @spec street_suffix() :: String.t()
   sampler(:street_suffix, [
