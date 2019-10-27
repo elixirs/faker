@@ -9,11 +9,11 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 ## Unreleased
 
 ### Added
-
-- `Faker.Color.De.name/0` [[@hlhr][]]
-- `Faker.Color.De.fancy_name/0` [[@hlhr][]]
-- `Faker.Address.Ru.country/0` [[@igas][]]
-- `Faker.Address.Ru.state/0` [[@igas][]]
+- `Faker.Pokemon.It.name/0` [[@fusillicode](https://github.com/fusillicode)]
+- `Faker.Color.De.name/0` [[@hlhr](https://github.com/hlhr)]
+- `Faker.Color.De.fancy_name/0` [[@hlhr](https://github.com/hlhr)]
+- `Faker.Address.Ru.country/0` [[@igas](https://github.com/igas)]
+- `Faker.Address.Ru.state/0` [[@igas](https://github.com/igas)]
 - `Faker.Gov.It` [[@neslinesli93](https://github.com/neslinesli93)]
 - `Faker.Vehicle.model/1` [[@daytonn][https://github/com/daytonn]]
 
