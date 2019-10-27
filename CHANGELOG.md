@@ -10,9 +10,6 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Added
 - `Faker.Pokemon.It.name/0` [[@fusillicode](https://github.com/fusillicode)]
-
-### Added
-
 - `Faker.Color.De.name/0` [[@hlhr](https://github.com/hlhr)]
 - `Faker.Color.De.fancy_name/0` [[@hlhr](https://github.com/hlhr)]
 - `Faker.Address.Ru.country/0` [[@igas](https://github.com/igas)]
