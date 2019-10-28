@@ -84,6 +84,7 @@
 - [Faker.Pizza](lib/faker/pizza.ex)
 - [Faker.Pokemon](lib/faker/pokemon.ex)
 - [Faker.Pokemon.En](lib/faker/pokemon/en.ex)
+- [Faker.Pokemon.It](lib/faker/pokemon/it.ex)
   <!-- Q -->
   <!-- R -->
 - [Faker.Random](lib/faker/random.ex)
