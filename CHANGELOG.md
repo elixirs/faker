@@ -18,6 +18,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 - `Faker.Address.Ru.state/0` [[@igas](https://github.com/igas)]
 - `Faker.Gov.It` [[@neslinesli93](https://github.com/neslinesli93)]
 - `Faker.Vehicle.model/1` [[@daytonn][https://github/com/daytonn]]
+- `Faker.String.naughty/0` [[@Cantido][https://github.com/Cantido]]
 
 ### Changed
 
