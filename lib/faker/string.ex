@@ -38,6 +38,10 @@ defmodule Faker.String do
       "1#QNAN"
       iex> Faker.String.naughty()
       "Craig Cockburn, Software Specialist"
+      iex> Faker.String.naughty()
+      "\\"\\`\\'><script>\\\\x09javascript:alert(1)</script>"
+      iex> Faker.String.naughty()
+      "𝚃𝚑𝚎 𝚚𝚞𝚒𝚌𝚔 𝚋𝚛𝚘𝚠𝚗 𝚏𝚘𝚡 𝚓𝚞𝚖𝚙𝚜 𝚘𝚟𝚎𝚛 𝚝𝚑𝚎 𝚕𝚊𝚣𝚢 𝚍𝚘𝚐"
 
   """
   @spec naughty() :: String.t()
