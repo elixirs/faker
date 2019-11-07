@@ -20,6 +20,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 - `Faker.Vehicle.model/1` [[@daytonn][https://github/com/daytonn]]
 
 ### Changed
+- `Faker.Address.Es` [[@emig](https://github.com/emig)]
 
 ### Deprecated
 
