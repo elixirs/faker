@@ -21,6 +21,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 - `Faker.String.naughty/0` [[@Cantido][https://github.com/Cantido]]
 
 ### Changed
+- `Faker.Address.Es` [[@emig](https://github.com/emig)]
 
 ### Deprecated
 
