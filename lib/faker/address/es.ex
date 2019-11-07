@@ -429,7 +429,7 @@ defmodule Faker.Address.Es do
   end
 
   @doc """
-  Return state. But Spain doesn't has states so this calls Faker.Address.Es.region() instead
+  Return state. But Spain doesn't have states so this calls Faker.Address.Es.region() instead.
   """
   @spec state() :: String.t()
   def state, do: region()
