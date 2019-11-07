@@ -1047,6 +1047,10 @@ defmodule Faker.Name.Hy do
       "կրտսեր"
       iex> Faker.Name.Hy.suffix()
       "ավագ"
+      iex> Faker.Name.Hy.suffix()
+      "ավագ"
+      iex> Faker.Name.Hy.suffix()
+      "կրտսեր"
   """
   @spec suffix() :: String.t()
   sampler(:suffix, [
