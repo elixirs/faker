@@ -9,7 +9,7 @@ fake data.
   - [Requirements](#requirements)
   - [Usage](#usage)
   - [Troubleshooting](#troubleshooting)
-  - [Tools](#customization)
+  - [Tools](#tools)
   - [Templating](#contributing)
   - [Team](#team)
   - [Contributing](#contributing)
