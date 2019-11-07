@@ -10,7 +10,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Added
 
-- Remove extra `Faker.Code.Iban.iban` doctests [[@vbrazo](https://github.com/vbrazo)]
+- Fix `Faker.Code.Iban.iban` and `Faker.Gov.It.fiscal_id` doctests [[@vbrazo](https://github.com/vbrazo)]
 - `Faker.Pokemon.It.location/0` [[@fusillicode](https://github.com/fusillicode)]
 - `Faker.Pokemon.It.name/0` [[@fusillicode](https://github.com/fusillicode)]
 - `Faker.Color.De.name/0` [[@hlhr](https://github.com/hlhr)]
