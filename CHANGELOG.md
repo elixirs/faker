@@ -10,6 +10,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Added
 
+- Remove extra doctests in `Faker.Nato.format` [[@vbrazo](https://github.com/vbrazo)]
 - `Faker.Pokemon.It.location/0` [[@fusillicode](https://github.com/fusillicode)]
 - `Faker.Pokemon.It.name/0` [[@fusillicode](https://github.com/fusillicode)]
 - `Faker.Color.De.name/0` [[@hlhr](https://github.com/hlhr)]
