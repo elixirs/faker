@@ -86,7 +86,11 @@ Current list of maintainers:
 
 ## Contributing
 
-Do you want to become a maintainer? See our [CONTRIBUTING.md](https://github.com/elixirs/faker/blob/master/CONTRIBUTING.md) and start contributing today. We usually elect new maintainers based on contributions.
+Do you want to become a maintainer? 
+
+See our [CONTRIBUTING.md](https://github.com/elixirs/faker/blob/master/CONTRIBUTING.md) and start contributing today. 
+
+We usually elect new maintainers based on contributions.
 
 ## Thanks
 
