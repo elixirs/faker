@@ -8,9 +8,11 @@ We love pull requests. Here's a quick guide:
 
 4. Please add a test for your change. Only refactoring and documentation changes require no new tests. If you are adding functionality or fixing a bug, we need a test!
 
-5. When removing a method, don't forget to deprecate it. You can use `@deprecated "message"` to deprecate a faker interface method.
+5. If you're adding doctests, please make sure to include 4 examples. 4 is our magic number in this library and this is our pattern.
 
-6. Push to your fork and submit a pull request.
+6. When removing a method, don't forget to deprecate it. You can use `@deprecated "message"` to deprecate a faker interface method.
+
+7. Push to your fork and submit a pull request.
 
 ### Github Flow for contributors and collaborators
 
