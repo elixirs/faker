@@ -1,16 +1,16 @@
 # Faker
-[![Version](https://img.shields.io/hexpm/v/faker.svg?style=flat-square)](https://hex.pm/packages/faker)[![License](https://img.shields.io/hexpm/l/faker.svg?style=flat-square)](https://github.com/igas/faker/blob/master/LICENSE)[![Build Status](https://img.shields.io/travis/igas/faker.svg?style=flat-square)](https://travis-ci.org/igas/faker)[![Issues](https://img.shields.io/github/issues/igas/faker.svg?style=flat-square)](https://github.com/igas/faker/issues)[![Downloads](https://img.shields.io/hexpm/dt/faker.svg?style=flat-square)](https://hex.pm/packages/faker)[![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg?style=flat-square)](https://gitter.im/igas/faker)
+[![Version](https://img.shields.io/hexpm/v/faker.svg?style=flat-square)](https://hex.pm/packages/faker)[![License](https://img.shields.io/hexpm/l/faker.svg?style=flat-square)](https://github.com/elixirs/faker/blob/master/LICENSE)[![Build Status](https://img.shields.io/travis/elixirs/faker.svg?style=flat-square)](https://travis-ci.org/elixirs/faker)[![Issues](https://img.shields.io/github/issues/elixirs/faker.svg?style=flat-square)](https://github.com/elixirs/faker/issues)[![Downloads](https://img.shields.io/hexpm/dt/faker.svg?style=flat-square)](https://hex.pm/packages/faker)[![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg?style=flat-square)](https://gitter.im/igas/faker)
 
 **Faker** is a pure [Elixir](http://elixir-lang.org/) library for generating
 fake data.
 
 ## Quickstart
 
-* add `{:faker, "~> 0.12"}` to your deps in `mix.exs`:
+* add `{:faker, "~> 0.13"}` to your deps in `mix.exs`:
 
     ```elixir
     defp deps do
-      [{:faker, "~> 0.12", only: :test}]
+      [{:faker, "~> 0.13", only: :test}]
     end
     ```
 
@@ -76,6 +76,6 @@ Current list of maintainers:
 
 [![Sponsored by Evil Martians](https://evilmartians.com/badges/sponsored-by-evil-martians.svg)](https://evilmartians.com/)
 
-## [License](https://github.com/igas/faker/blob/master/LICENSE)
+## [License](https://github.com/elixirs/faker/blob/master/LICENSE)
 
 Released under the MIT License.

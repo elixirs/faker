@@ -69,7 +69,7 @@ defmodule Faker.File do
       iex> Faker.File.file_extension(:office)
       "xls"
   """
-  @spec file_extension(:atom) :: String.t()
+  @spec file_extension(atom) :: String.t()
   def file_extension(category) do
     category
     |> get_extensions_from_category()
@@ -110,7 +110,7 @@ defmodule Faker.File do
       iex> Faker.File.file_name(:audio)
       "qui.wav"
   """
-  @spec file_name(:atom) :: String.t()
+  @spec file_name(atom) :: String.t()
   def file_name(category) do
     Lorem.word() <> "." <> file_extension(category)
   end
@@ -152,7 +152,7 @@ defmodule Faker.File do
       iex> Faker.File.mime_type(:video)
       "video/mpeg"
   """
-  @spec mime_type(:atom) :: String.t()
+  @spec mime_type(atom) :: String.t()
   def mime_type(category) do
     category
     |> get_mimes_from_category()

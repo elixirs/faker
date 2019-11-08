@@ -5,6 +5,7 @@
 - [Faker.Address.Es](lib/faker/address/es.ex)
 - [Faker.Address.Hy](lib/faker/address/hy.ex)
 - [Faker.Address.It](lib/faker/address/it.ex)
+- [Faker.Address.Ru](lib/faker/address/ru.ex)
 - [Faker.App](lib/faker/app.ex)
 - [Faker.Avatar](lib/faker/avatar.ex)
   <!-- B -->
@@ -13,10 +14,13 @@
 - [Faker.Blockchain.Bitcoin](lib/faker/bitcoin.ex)
 - [Faker.Blockchain.Ethereum](lib/faker/blockchain/ethereum.ex)
   <!-- C -->
+- [Faker.Cannabis](lib/faker/cannabis.ex)
+- [Faker.Cannabis.En](lib/faker/cannabis/en.ex)
 - [Faker.Cat](lib/faker/cat.ex)
 - [Faker.Cat.En](lib/faker/cat/en.ex)
 - [Faker.Code](lib/faker/code.ex)
 - [Faker.Color](lib/faker/color.ex)
+- [Faker.Color.De](lib/faker/color/de.ex)
 - [Faker.Color.En](lib/faker/color/en.ex)
 - [Faker.Color.Es](lib/faker/color/es.ex)
 - [Faker.Color.Fr](lib/faker/color/fr.ex)
@@ -35,11 +39,14 @@
   <!-- E -->
   <!-- F -->
 - [Faker.File](lib/faker/file.ex)
+- [Faker.Finance](lib/faker/finance.ex)
+- [Faker.Finance.Stock](lib/faker/finance/stock.ex)
 - [Faker.Food](lib/faker/food.ex)
 - [Faker.Food.En](lib/faker/food/en.ex)
 - [Faker.Food.Hy](lib/faker/food/hy.ex)
   <!-- G -->
 - [Faker.Gov.Us](lib/faker/gov/us.ex)
+- [Faker.Gov.It](lib/faker/gov/it.ex)
   <!-- H -->
   <!-- I -->
 - [Faker.Industry](lib/faker/industry.ex)
@@ -77,6 +84,7 @@
 - [Faker.Pizza](lib/faker/pizza.ex)
 - [Faker.Pokemon](lib/faker/pokemon.ex)
 - [Faker.Pokemon.En](lib/faker/pokemon/en.ex)
+- [Faker.Pokemon.It](lib/faker/pokemon/it.ex)
   <!-- Q -->
   <!-- R -->
 - [Faker.Random](lib/faker/random.ex)
