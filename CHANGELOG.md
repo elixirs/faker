@@ -11,6 +11,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 ### Added
 
 - Add missing `Faker.Address.It` doctests [[@vbrazo](https://github.com/vbrazo)]
+- Add CONTRIBUTING and update README [[@vbrazo](https://github.com/vbrazo)]
 - `Faker.Pokemon.It.location/0` [[@fusillicode](https://github.com/fusillicode)]
 - `Faker.Pokemon.It.name/0` [[@fusillicode](https://github.com/fusillicode)]
 - `Faker.Color.De.name/0` [[@hlhr](https://github.com/hlhr)]

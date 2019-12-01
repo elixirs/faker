@@ -4,6 +4,18 @@
 **Faker** is a pure [Elixir](http://elixir-lang.org/) library for generating
 fake data.
 
+- [Faker](#faker)
+  - [Quickstart](#quickstart)
+  - [Requirements](#requirements)
+  - [Usage](#usage)
+  - [Troubleshooting](#troubleshooting)
+  - [Tools](#tools)
+  - [Templating](#contributing)
+  - [Team](#team)
+  - [Contributing](#contributing)
+  - [Thanks](#thanks)
+  - [License](#license)
+
 ## Quickstart
 
 * add `{:faker, "~> 0.13"}` to your deps in `mix.exs`:
@@ -71,6 +83,12 @@ Current list of maintainers:
 * [Igor Kapkov](https://igas.me)
 * [Toby Hinloopen](https://github.com/tobyhinloopen)
 * [Vitor Oliveira](https://github.com/vbrazo)
+
+## Contributing
+
+Do you want to become a maintainer? 
+
+See our [CONTRIBUTING.md](https://github.com/elixirs/faker/blob/master/CONTRIBUTING.md) and start contributing today. We usually elect new maintainers based on contributions.
 
 ## Thanks
 
