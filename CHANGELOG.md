@@ -10,6 +10,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Added
 
+- Remove extra doctests in `Faker.Nato.format` [[@vbrazo](https://github.com/vbrazo)]
 - Add missing `Faker.Name.Hy.suffix` doctests [[@vbrazo](https://github.com/vbrazo)]
 - Add missing `Faker.Address.It` doctests [[@vbrazo](https://github.com/vbrazo)]
 - Add CONTRIBUTING and update README [[@vbrazo](https://github.com/vbrazo)]
