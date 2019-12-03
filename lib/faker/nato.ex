@@ -121,12 +121,6 @@ defmodule Faker.Nato do
       "FIVE-GOLF-TWO-STOP"
       iex> Faker.Nato.format("#-?-#-.")
       "ONE-WHISKEY-FOUR-STOP"
-      iex> Faker.Nato.format("? Team")
-      "SIERRA Team"
-      iex> Faker.Nato.format("hey")
-      "hey"
-      iex> Faker.Nato.format(". it")
-      "STOP it"
   """
   @spec format(String.t()) :: String.t()
   def format(str) when is_binary(str) do

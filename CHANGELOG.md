@@ -10,7 +10,9 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Added
 
-- Fix `Faker.Code.Iban.iban` and `Faker.Gov.It.fiscal_id` doctests [[@vbrazo](https://github.com/vbrazo)]
+- Add missing `Faker.Name.Hy.suffix` doctests [[@vbrazo](https://github.com/vbrazo)]
+- Add missing `Faker.Address.It` doctests [[@vbrazo](https://github.com/vbrazo)]
+- Add CONTRIBUTING and update README [[@vbrazo](https://github.com/vbrazo)]
 - `Faker.Pokemon.It.location/0` [[@fusillicode](https://github.com/fusillicode)]
 - `Faker.Pokemon.It.name/0` [[@fusillicode](https://github.com/fusillicode)]
 - `Faker.Color.De.name/0` [[@hlhr](https://github.com/hlhr)]
@@ -21,12 +23,14 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 - `Faker.Vehicle.model/1` [[@daytonn][https://github/com/daytonn]]
 
 ### Changed
+- Fix `Faker.Code.Iban.iban` and `Faker.Gov.It.fiscal_id` doctests [[@vbrazo](https://github.com/vbrazo)]
 - `Faker.Address.Es` [[@emig](https://github.com/emig)]
 
 ### Deprecated
 
 ### Removed
 
+- Remove extra doctests in `Faker.Nato.format` [[@vbrazo](https://github.com/vbrazo)]
 - gitlab CI [[@igas][]]
 
 ### Fixed
