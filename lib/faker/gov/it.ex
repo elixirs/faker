@@ -19,6 +19,8 @@ defmodule Faker.Gov.It do
       "ZSLNKH22M34H480J"
       iex> Faker.Gov.It.fiscal_id
       "OCPCVO90M50F353I"
+      iex> Faker.Gov.It.fiscal_id
+      "PQYRFX94R54C681K"
   """
   @spec fiscal_id() :: binary()
   def fiscal_id do
