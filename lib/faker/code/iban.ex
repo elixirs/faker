@@ -18,8 +18,6 @@ defmodule Faker.Code.Iban do
       "NL74YRFX4598109960"
       iex> Faker.Code.Iban.iban(["NL", "BE"])
       "BE31198979502980"
-      iex> Faker.Code.Iban.iban("NL", ["ABNA"])
-      "NL79ABNA7856869061"
   """
 
   @alpha ~w(A B C D E F G H I J K L M N O P Q R S T U V W X Y Z)
