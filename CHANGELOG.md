@@ -8,6 +8,8 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ## Unreleased
 
+- Removed support for Elixir 1.4
+
 ### Added
 
 - Add missing `Faker.Name.Hy.suffix` doctests [[@vbrazo](https://github.com/vbrazo)]
