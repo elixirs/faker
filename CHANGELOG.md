@@ -32,6 +32,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 - Remove extra doctests in `Faker.Nato.format` [[@vbrazo](https://github.com/vbrazo)]
 - gitlab CI [[@igas][]]
+- Elixir 1.4 support
 
 ### Fixed
 
