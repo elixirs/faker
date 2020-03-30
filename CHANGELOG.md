@@ -35,6 +35,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 - Elixir 1.4 support
 
 ### Fixed
+- `Faker.Util.upper_letter/0` documentation examples [[@michaelfich](https://github.com/michaelfich)]
 
 ### Security
 

@@ -177,13 +177,13 @@ defmodule Faker.Util do
 
   ## Examples
 
-      iex> Faker.Util.letter()
+      iex> Faker.Util.upper_letter()
       "E"
-      iex> Faker.Util.letter()
+      iex> Faker.Util.upper_letter()
       "L"
-      iex> Faker.Util.letter()
+      iex> Faker.Util.upper_letter()
       "R"
-      iex> Faker.Util.letter()
+      iex> Faker.Util.upper_letter()
       "C"
   """
   @spec upper_letter() :: binary
