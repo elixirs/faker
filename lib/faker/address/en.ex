@@ -1,7 +1,7 @@
 defmodule Faker.Address.En do
   import Faker, only: [sampler: 2]
 
-  alias Faker.Name
+  alias Faker.Person
 
   @moduledoc """
   Functions for generating addresses in English
@@ -47,10 +47,10 @@ defmodule Faker.Address.En do
     city(Faker.random_between(0, 3))
   end
 
-  defp city(0), do: "#{city_prefix()} #{Name.first_name()}"
-  defp city(1), do: "#{city_prefix()} #{Name.first_name()}"
-  defp city(2), do: "#{Name.first_name()}"
-  defp city(3), do: "#{Name.last_name()}"
+  defp city(0), do: "#{city_prefix()} #{Person.first_name()}"
+  defp city(1), do: "#{city_prefix()} #{Person.first_name()}"
+  defp city(2), do: "#{Person.first_name()}"
+  defp city(3), do: "#{Person.last_name()}"
 
   @doc """
   Return city prefix.
@@ -860,9 +860,9 @@ defmodule Faker.Address.En do
     street_name(Faker.random_between(0, 2))
   end
 
-  defp street_name(0), do: "#{Name.first_name()} #{street_suffix()}"
-  defp street_name(1), do: "#{Name.last_name()} #{street_suffix()}"
-  defp street_name(2), do: "#{Name.last_name()} #{Name.first_name()} #{street_suffix()}"
+  defp street_name(0), do: "#{Person.first_name()} #{street_suffix()}"
+  defp street_name(1), do: "#{Person.last_name()} #{street_suffix()}"
+  defp street_name(2), do: "#{Person.last_name()} #{Person.first_name()} #{street_suffix()}"
 
   @doc """
   Return street suffix.

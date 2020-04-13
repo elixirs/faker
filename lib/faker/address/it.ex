@@ -47,10 +47,10 @@ defmodule Faker.Address.It do
     city(Faker.random_between(0, 3))
   end
 
-  defp city(0), do: "#{city_prefix()} #{Faker.Name.It.first_name()}"
-  defp city(1), do: "#{city_prefix()} #{Faker.Name.It.first_name()} #{city_suffix()}"
-  defp city(2), do: "#{Faker.Name.It.first_name()} #{city_suffix()}"
-  defp city(3), do: "#{Faker.Name.It.last_name()}"
+  defp city(0), do: "#{city_prefix()} #{Faker.Person.It.first_name()}"
+  defp city(1), do: "#{city_prefix()} #{Faker.Person.It.first_name()} #{city_suffix()}"
+  defp city(2), do: "#{Faker.Person.It.first_name()} #{city_suffix()}"
+  defp city(3), do: "#{Faker.Person.It.last_name()}"
 
   @doc """
   Return city prefix.
@@ -1149,11 +1149,11 @@ defmodule Faker.Address.It do
     street_name(Faker.random_between(0, 5))
   end
 
-  defp street_name(0), do: "#{street_prefix()} #{Faker.Name.It.first_name()}"
-  defp street_name(1), do: "#{street_prefix()} #{Faker.Name.It.last_name()}"
+  defp street_name(0), do: "#{street_prefix()} #{Faker.Person.It.first_name()}"
+  defp street_name(1), do: "#{street_prefix()} #{Faker.Person.It.last_name()}"
 
   defp street_name(2),
-    do: "#{street_prefix()} #{Faker.Name.It.first_name()} #{Faker.Name.It.last_name()}"
+    do: "#{street_prefix()} #{Faker.Person.It.first_name()} #{Faker.Person.It.last_name()}"
 
   defp street_name(3), do: "#{street_prefix()} #{country()}"
   defp street_name(4), do: "#{street_prefix()} #{region()}"
