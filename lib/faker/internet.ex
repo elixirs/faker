@@ -72,7 +72,10 @@ defmodule Faker.Internet do
   end
 
   defp user_name(1) do
-    [remove_special_characters(Person.first_name()), remove_special_characters(Person.last_name())]
+    [
+      remove_special_characters(Person.first_name()),
+      remove_special_characters(Person.last_name())
+    ]
     |> Enum.map_join(Util.pick(~w(. _)), &String.replace(&1, ~s(  ), ~s()))
     |> String.downcase()
   end
