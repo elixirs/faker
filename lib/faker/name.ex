@@ -1,4 +1,6 @@
 defmodule Faker.Name do
+  alias Faker.Person
+
   @moduledoc """
   Deprecated. Use Faker.Person instead.
   """
@@ -19,7 +21,7 @@ defmodule Faker.Name do
   """
   @deprecated "Use Faker.Person.name/0 instead."
   @spec name() :: String.t()
-  def name, do: Faker.Person.name()
+  def name, do: Person.name()
 
   @doc """
   Returns a random first name
@@ -37,7 +39,7 @@ defmodule Faker.Name do
   """
   @deprecated "Use Faker.Person.first_name/0 instead."
   @spec first_name() :: String.t()
-  def first_name, do: Faker.Person.first_name()
+  def first_name, do: Person.first_name()
 
   @doc """
   Returns a random last name
@@ -55,7 +57,7 @@ defmodule Faker.Name do
   """
   @deprecated "Use Faker.Person.last_name/0 instead."
   @spec last_name() :: String.t()
-  def last_name, do: Faker.Person.last_name()
+  def last_name, do: Person.last_name()
 
   @doc """
   Returns a random name related title
@@ -73,7 +75,7 @@ defmodule Faker.Name do
   """
   @deprecated "Use Faker.Person.title/0 instead."
   @spec title() :: String.t()
-  def title, do: Faker.Person.title()
+  def title, do: Person.title()
 
   @doc """
   Returns a random name related suffix
@@ -91,7 +93,7 @@ defmodule Faker.Name do
   """
   @deprecated "Use Faker.Person.suffix/0 instead."
   @spec suffix() :: String.t()
-  def suffix, do: Faker.Person.suffix()
+  def suffix, do: Person.suffix()
 
   @doc """
   Returns a random name related prefix
@@ -109,5 +111,5 @@ defmodule Faker.Name do
   """
   @deprecated "Use Faker.Person.prefix/0 instead."
   @spec prefix() :: String.t()
-  def prefix, do: Faker.Person.prefix()
+  def prefix, do: Person.prefix()
 end
