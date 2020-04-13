@@ -68,10 +68,10 @@
 - [Faker.Lorem.Shakespeare.Ru](lib/faker/lorem/shakespeare/ru.ex)
   <!-- M -->
   <!-- N -->
+- [Faker.NaiveDateTime](lib/faker/naivedatetime.ex)
 - [Faker.Nato](lib/faker/nato.ex)
   <!-- O -->
   <!-- P -->
-- [Faker.NaiveDateTime](lib/faker/naivedatetime.ex)
 - [Faker.Person](lib/faker/name.ex)
 - [Faker.Person.En](lib/faker/name/en.ex)
 - [Faker.Person.Es](lib/faker/name/es.ex)
