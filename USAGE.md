@@ -68,16 +68,16 @@
 - [Faker.Lorem.Shakespeare.Ru](lib/faker/lorem/shakespeare/ru.ex)
   <!-- M -->
   <!-- N -->
-- [Faker.NaiveDateTime](lib/faker/naivedatetime.ex)
-- [Faker.Name](lib/faker/name.ex)
-- [Faker.Name.En](lib/faker/name/en.ex)
-- [Faker.Name.Es](lib/faker/name/es.ex)
-- [Faker.Name.Hy](lib/faker/name/hy.ex)
-- [Faker.Name.It](lib/faker/name/it.ex)
-- [Faker.Name.PtBr](lib/faker/name/pt_br.ex)
 - [Faker.Nato](lib/faker/nato.ex)
   <!-- O -->
   <!-- P -->
+- [Faker.NaiveDateTime](lib/faker/naivedatetime.ex)
+- [Faker.Person](lib/faker/name.ex)
+- [Faker.Person.En](lib/faker/name/en.ex)
+- [Faker.Person.Es](lib/faker/name/es.ex)
+- [Faker.Person.Hy](lib/faker/name/hy.ex)
+- [Faker.Person.It](lib/faker/name/it.ex)
+- [Faker.Person.PtBr](lib/faker/name/pt_br.ex)
 - [Faker.Phone.EnUs](lib/faker/phone/en_us.ex)
 - [Faker.Phone.EnGb](lib/faker/phone/en_gb.ex)
 - [Faker.Phone.Hy](lib/faker/phone/hy.ex)
