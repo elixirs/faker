@@ -2,7 +2,7 @@ defmodule Faker.Name do
   alias Faker.Person
 
   @moduledoc """
-  Deprecated. Use Faker.Person instead.
+  Deprecated. Faker.Name will be removed in 1.0.0. Please use Faker.Person instead.
   """
 
   @doc """
