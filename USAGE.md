@@ -72,12 +72,12 @@
 - [Faker.Nato](lib/faker/nato.ex)
   <!-- O -->
   <!-- P -->
-- [Faker.Person](lib/faker/name.ex)
-- [Faker.Person.En](lib/faker/name/en.ex)
-- [Faker.Person.Es](lib/faker/name/es.ex)
-- [Faker.Person.Hy](lib/faker/name/hy.ex)
-- [Faker.Person.It](lib/faker/name/it.ex)
-- [Faker.Person.PtBr](lib/faker/name/pt_br.ex)
+- [Faker.Person](lib/faker/person.ex)
+- [Faker.Person.En](lib/faker/person/en.ex)
+- [Faker.Person.Es](lib/faker/person/es.ex)
+- [Faker.Person.Hy](lib/faker/person/hy.ex)
+- [Faker.Person.It](lib/faker/person/it.ex)
+- [Faker.Person.PtBr](lib/faker/person/pt_br.ex)
 - [Faker.Phone.EnUs](lib/faker/phone/en_us.ex)
 - [Faker.Phone.EnGb](lib/faker/phone/en_gb.ex)
 - [Faker.Phone.Hy](lib/faker/phone/hy.ex)
