@@ -2,7 +2,7 @@ defmodule Faker.App do
   import Faker, only: [sampler: 2]
 
   alias Faker.Company
-  alias Faker.Name
+  alias Faker.Person
 
   @moduledoc """
   Functions for generating app specific properties.
@@ -186,6 +186,6 @@ defmodule Faker.App do
   @spec author() :: String.t()
   def author, do: author(Faker.random_between(0, 1))
 
-  defp author(0), do: Name.name()
+  defp author(0), do: Person.name()
   defp author(1), do: Company.name()
 end
