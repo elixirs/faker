@@ -43,8 +43,8 @@ fake data.
 
 ### Requirements
 
-* OTP 18+
-* Elixir 1.4+
+* OTP 20+
+* Elixir 1.6+
 
 ## Usage
 
@@ -86,7 +86,7 @@ Current list of maintainers:
 
 ## Contributing
 
-Do you want to become a maintainer? 
+Do you want to become a maintainer?
 
 See our [CONTRIBUTING.md](https://github.com/elixirs/faker/blob/master/CONTRIBUTING.md) and start contributing today. We usually elect new maintainers based on contributions.
 
