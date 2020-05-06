@@ -43,7 +43,7 @@ fake data.
 
 ### Requirements
 
-* OTP 20+
+* OTP 19+
 * Elixir 1.6+
 
 ## Usage
