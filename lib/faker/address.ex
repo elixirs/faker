@@ -1,7 +1,7 @@
 defmodule Faker.Address do
   import Faker, only: [localize: 1]
 
-  alias Faker.Name
+  alias Faker.Person
 
   @geobase32 '0123456789bcdefghjkmnpqrstuvwxyz'
 
@@ -331,8 +331,8 @@ defmodule Faker.Address do
     street_name(Faker.random_between(0, 1))
   end
 
-  defp street_name(0), do: "#{Name.first_name()} #{street_suffix()}"
-  defp street_name(1), do: "#{Name.last_name()} #{street_suffix()}"
+  defp street_name(0), do: "#{Person.first_name()} #{street_suffix()}"
+  defp street_name(1), do: "#{Person.last_name()} #{street_suffix()}"
 
   @doc """
   Return street suffix.

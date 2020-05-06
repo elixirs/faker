@@ -1,7 +1,7 @@
 defmodule Faker.Company.En do
   import Faker, only: [sampler: 2]
 
-  alias Faker.Name.En, as: Name
+  alias Faker.Person.En, as: Person
 
   @moduledoc """
   Functions for company data in English
@@ -639,11 +639,11 @@ defmodule Faker.Company.En do
   """
   @spec name() :: String.t()
   def name, do: name(Faker.random_between(0, 2))
-  defp name(0), do: "#{Name.last_name()} #{suffix()}"
-  defp name(1), do: "#{Name.last_name()}-#{Name.last_name()}"
+  defp name(0), do: "#{Person.last_name()} #{suffix()}"
+  defp name(1), do: "#{Person.last_name()}-#{Person.last_name()}"
 
   defp name(2) do
-    "#{Name.last_name()}, #{Name.last_name()} and #{Name.last_name()}"
+    "#{Person.last_name()}, #{Person.last_name()} and #{Person.last_name()}"
   end
 
   @doc """

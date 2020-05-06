@@ -1,4 +1,4 @@
-defmodule Faker.Name.En do
+defmodule Faker.Person.En do
   import Faker, only: [sampler: 2]
 
   @moduledoc """
@@ -10,13 +10,13 @@ defmodule Faker.Name.En do
 
   ## Examples
 
-      iex> Faker.Name.En.name()
+      iex> Faker.Person.En.name()
       "Mrs. Abe Rolfson MD"
-      iex> Faker.Name.En.name()
+      iex> Faker.Person.En.name()
       "Conor Padberg"
-      iex> Faker.Name.En.name()
+      iex> Faker.Person.En.name()
       "Mr. Bianka Ryan"
-      iex> Faker.Name.En.name()
+      iex> Faker.Person.En.name()
       "Ally Rau MD"
   """
   @spec name() :: String.t()
@@ -34,13 +34,13 @@ defmodule Faker.Name.En do
 
   ## Examples
 
-      iex> Faker.Name.En.first_name()
+      iex> Faker.Person.En.first_name()
       "Joany"
-      iex> Faker.Name.En.first_name()
+      iex> Faker.Person.En.first_name()
       "Elizabeth"
-      iex> Faker.Name.En.first_name()
+      iex> Faker.Person.En.first_name()
       "Abe"
-      iex> Faker.Name.En.first_name()
+      iex> Faker.Person.En.first_name()
       "Ozella"
   """
   @spec first_name() :: String.t()
@@ -3059,13 +3059,13 @@ defmodule Faker.Name.En do
 
   ## Examples
 
-      iex> Faker.Name.En.last_name()
+      iex> Faker.Person.En.last_name()
       "Blick"
-      iex> Faker.Name.En.last_name()
+      iex> Faker.Person.En.last_name()
       "Hayes"
-      iex> Faker.Name.En.last_name()
+      iex> Faker.Person.En.last_name()
       "Schumm"
-      iex> Faker.Name.En.last_name()
+      iex> Faker.Person.En.last_name()
       "Rolfson"
   """
   @spec last_name() :: String.t()
@@ -3551,13 +3551,13 @@ defmodule Faker.Name.En do
 
   ## Examples
 
-      iex> Faker.Name.En.prefix()
+      iex> Faker.Person.En.prefix()
       "Mr."
-      iex> Faker.Name.En.prefix()
+      iex> Faker.Person.En.prefix()
       "Mrs."
-      iex> Faker.Name.En.prefix()
+      iex> Faker.Person.En.prefix()
       "Mr."
-      iex> Faker.Name.En.prefix()
+      iex> Faker.Person.En.prefix()
       "Dr."
   """
   @spec prefix() :: String.t()
@@ -3574,13 +3574,13 @@ defmodule Faker.Name.En do
 
   ## Examples
 
-      iex> Faker.Name.En.suffix()
+      iex> Faker.Person.En.suffix()
       "II"
-      iex> Faker.Name.En.suffix()
+      iex> Faker.Person.En.suffix()
       "V"
-      iex> Faker.Name.En.suffix()
+      iex> Faker.Person.En.suffix()
       "V"
-      iex> Faker.Name.En.suffix()
+      iex> Faker.Person.En.suffix()
       "V"
   """
   @spec suffix() :: String.t()
@@ -3603,13 +3603,13 @@ defmodule Faker.Name.En do
 
   ## Examples
 
-      iex> Faker.Name.En.title()
+      iex> Faker.Person.En.title()
       "Dynamic Identity Administrator"
-      iex> Faker.Name.En.title()
+      iex> Faker.Person.En.title()
       "Product Communications Technician"
-      iex> Faker.Name.En.title()
+      iex> Faker.Person.En.title()
       "Legacy Accountability Architect"
-      iex> Faker.Name.En.title()
+      iex> Faker.Person.En.title()
       "Customer Data Representative"
   """
   @spec title() :: String.t()
@@ -3622,13 +3622,13 @@ defmodule Faker.Name.En do
 
   ## Examples
 
-      iex> Faker.Name.En.title_descriptor()
+      iex> Faker.Person.En.title_descriptor()
       "Dynamic"
-      iex> Faker.Name.En.title_descriptor()
+      iex> Faker.Person.En.title_descriptor()
       "Forward"
-      iex> Faker.Name.En.title_descriptor()
+      iex> Faker.Person.En.title_descriptor()
       "Forward"
-      iex> Faker.Name.En.title_descriptor()
+      iex> Faker.Person.En.title_descriptor()
       "Product"
   """
   @spec title_descriptor() :: String.t()
@@ -3662,13 +3662,13 @@ defmodule Faker.Name.En do
 
   ## Examples
 
-      iex> Faker.Name.En.title_job()
+      iex> Faker.Person.En.title_job()
       "Administrator"
-      iex> Faker.Name.En.title_job()
+      iex> Faker.Person.En.title_job()
       "Associate"
-      iex> Faker.Name.En.title_job()
+      iex> Faker.Person.En.title_job()
       "Administrator"
-      iex> Faker.Name.En.title_job()
+      iex> Faker.Person.En.title_job()
       "Officer"
   """
   @spec title_job() :: String.t()
@@ -3705,13 +3705,13 @@ defmodule Faker.Name.En do
 
   ## Examples
 
-      iex> Faker.Name.En.title_level()
+      iex> Faker.Person.En.title_level()
       "Metrics"
-      iex> Faker.Name.En.title_level()
+      iex> Faker.Person.En.title_level()
       "Identity"
-      iex> Faker.Name.En.title_level()
+      iex> Faker.Person.En.title_level()
       "Assurance"
-      iex> Faker.Name.En.title_level()
+      iex> Faker.Person.En.title_level()
       "Intranet"
   """
   @spec title_level() :: String.t()

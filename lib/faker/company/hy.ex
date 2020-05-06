@@ -1,7 +1,7 @@
 defmodule Faker.Company.Hy do
   import Faker, only: [sampler: 2]
 
-  alias Faker.Name.Hy, as: Name
+  alias Faker.Person.Hy, as: Person
 
   @moduledoc """
   Functions for generating company related data in Armenian
@@ -419,12 +419,12 @@ defmodule Faker.Company.Hy do
   @spec name() :: String.t()
   def name, do: name(Faker.random_between(0, 4))
   defp name(0), do: "#{Faker.Address.Hy.city()} #{suffix()}"
-  defp name(1), do: "#{Name.last_name()} #{suffix()}"
-  defp name(2), do: "#{Name.last_name()} և #{Name.last_name()} #{suffix()}"
-  defp name(3), do: "#{Name.first_name()} և #{Name.first_name()} #{suffix()}"
+  defp name(1), do: "#{Person.last_name()} #{suffix()}"
+  defp name(2), do: "#{Person.last_name()} և #{Person.last_name()} #{suffix()}"
+  defp name(3), do: "#{Person.first_name()} և #{Person.first_name()} #{suffix()}"
 
   defp name(4) do
-    "#{Name.last_name()}, #{Name.last_name()} և #{Name.last_name()} #{suffix()}"
+    "#{Person.last_name()}, #{Person.last_name()} և #{Person.last_name()} #{suffix()}"
   end
 
   @doc """

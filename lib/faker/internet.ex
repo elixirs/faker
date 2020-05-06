@@ -1,6 +1,6 @@
 defmodule Faker.Internet do
   alias Faker.Lorem
-  alias Faker.Name.En, as: Name
+  alias Faker.Person.En, as: Person
   alias Faker.Util
 
   import Faker.Util, only: [pick: 1]
@@ -65,14 +65,17 @@ defmodule Faker.Internet do
 
   defp user_name(0) do
     "#{
-      remove_special_characters(Name.first_name())
+      remove_special_characters(Person.first_name())
       |> String.replace(~s(  ), ~s())
       |> String.downcase()
     }#{Faker.random_between(1900, 2100)}"
   end
 
   defp user_name(1) do
-    [remove_special_characters(Name.first_name()), remove_special_characters(Name.last_name())]
+    [
+      remove_special_characters(Person.first_name()),
+      remove_special_characters(Person.last_name())
+    ]
     |> Enum.map_join(Util.pick(~w(. _)), &String.replace(&1, ~s(  ), ~s()))
     |> String.downcase()
   end
@@ -94,7 +97,7 @@ defmodule Faker.Internet do
   @spec domain_word() :: String.t()
   def domain_word do
     "#{
-      remove_special_characters(Name.last_name())
+      remove_special_characters(Person.last_name())
       |> String.split(["'"])
       |> Enum.join()
       |> String.downcase()

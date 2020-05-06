@@ -1,4 +1,4 @@
-defmodule Faker.Name.Es do
+defmodule Faker.Person.Es do
   import Faker, only: [sampler: 2]
 
   @moduledoc """
@@ -10,13 +10,13 @@ defmodule Faker.Name.Es do
 
   ## Examples
 
-      iex> Faker.Name.Es.name()
+      iex> Faker.Person.Es.name()
       "Sta. Daniela Agosto MD"
-      iex> Faker.Name.Es.name()
+      iex> Faker.Person.Es.name()
       "Alfonso Menéndez"
-      iex> Faker.Name.Es.name()
+      iex> Faker.Person.Es.name()
       "Sr. Francisco Jaimes"
-      iex> Faker.Name.Es.name()
+      iex> Faker.Person.Es.name()
       "Manuel Lucio MD"
   """
   @spec name() :: String.t()
@@ -34,13 +34,13 @@ defmodule Faker.Name.Es do
 
   ## Examples
 
-      iex> Faker.Name.Es.first_name()
+      iex> Faker.Person.Es.first_name()
       "Jorge"
-      iex> Faker.Name.Es.first_name()
+      iex> Faker.Person.Es.first_name()
       "Guillermina"
-      iex> Faker.Name.Es.first_name()
+      iex> Faker.Person.Es.first_name()
       "Daniela"
-      iex> Faker.Name.Es.first_name()
+      iex> Faker.Person.Es.first_name()
       "Armando"
   """
   @spec first_name() :: String.t()
@@ -264,13 +264,13 @@ defmodule Faker.Name.Es do
 
   ## Examples
 
-      iex> Faker.Name.Es.last_name()
+      iex> Faker.Person.Es.last_name()
       "Raya"
-      iex> Faker.Name.Es.last_name()
+      iex> Faker.Person.Es.last_name()
       "Cervantes"
-      iex> Faker.Name.Es.last_name()
+      iex> Faker.Person.Es.last_name()
       "Maya"
-      iex> Faker.Name.Es.last_name()
+      iex> Faker.Person.Es.last_name()
       "Agosto"
   """
   @spec last_name() :: String.t()
@@ -918,13 +918,13 @@ defmodule Faker.Name.Es do
 
   ## Examples
 
-      iex> Faker.Name.Es.prefix()
+      iex> Faker.Person.Es.prefix()
       "Sr."
-      iex> Faker.Name.Es.prefix()
+      iex> Faker.Person.Es.prefix()
       "Sta."
-      iex> Faker.Name.Es.prefix()
+      iex> Faker.Person.Es.prefix()
       "Sr."
-      iex> Faker.Name.Es.prefix()
+      iex> Faker.Person.Es.prefix()
       "Sta."
   """
   @spec prefix() :: String.t()
@@ -939,13 +939,13 @@ defmodule Faker.Name.Es do
 
   ## Examples
 
-      iex> Faker.Name.Es.suffix()
+      iex> Faker.Person.Es.suffix()
       "II"
-      iex> Faker.Name.Es.suffix()
+      iex> Faker.Person.Es.suffix()
       "V"
-      iex> Faker.Name.Es.suffix()
+      iex> Faker.Person.Es.suffix()
       "V"
-      iex> Faker.Name.Es.suffix()
+      iex> Faker.Person.Es.suffix()
       "V"
   """
   @spec suffix() :: String.t()

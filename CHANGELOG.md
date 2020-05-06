@@ -21,6 +21,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 - `Faker.Address.Ru.state/0` [[@igas](https://github.com/igas)]
 - `Faker.Gov.It` [[@neslinesli93](https://github.com/neslinesli93)]
 - `Faker.Vehicle.model/1` [[@daytonn][https://github/com/daytonn]]
+- `Faker.Person`[[@anthonator](https://github.com/anthonator)]
 
 ### Changed
 - Fix `Faker.Code.Iban.iban` and `Faker.Gov.It.fiscal_id` doctests [[@vbrazo](https://github.com/vbrazo)]
@@ -30,11 +31,13 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Deprecated
 
+- `Faker.Name` (in favor of `Faker.Person`) [[@anthonator](https://github.com/anthonator)]
+
 ### Removed
 
 - Remove extra doctests in `Faker.Nato.format` [[@vbrazo](https://github.com/vbrazo)]
 - gitlab CI [[@igas][]]
-- Elixir 1.4 support
+- Elixir 1.4 and 1.5 support
 
 ### Fixed
 - `Faker.Util.upper_letter/0` documentation examples [[@michaelfich](https://github.com/michaelfich)]
