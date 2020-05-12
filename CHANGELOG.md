@@ -130,6 +130,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 - `Faker.Vehicle.model/1` [[@daytonn](https://github.com/daytonn)]
 - `Faker.Person`[[@anthonator](https://github.com/anthonator)]
 - `Faker.Phone.PtBr`[[@netond](https://github.com/netond)]
+- `Faker.String.hexadecimal/0` and `Faker.String.hexadecimal/1`[[@ilyashuma](https://github.com/ilyashuma)]
 
 ### Changed
 - Fix `Faker.Code.Iban.iban` and `Faker.Gov.It.fiscal_id` doctests [[@vbrazo](https://github.com/vbrazo)]
