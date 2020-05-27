@@ -26,7 +26,7 @@ defmodule Faker.Util do
   def pick(enum, blacklist)
 
   def pick(enum, blacklist) do
-    Enum.filter(enum, fn el -> !Enum.member?(blacklist, el) end)
+    Enum.reject(enum, fn el -> Enum.member?(blacklist, el) end)
     |> pick()
   end
 
