@@ -28,7 +28,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 - `Faker.Address.Es` [[@emig](https://github.com/emig)]
 - Set minimum Elixir version to 1.6
 - Set minimum OTP version to 19
-- Fix `Faker.Vehcile.vin/0` to return valid vin [[@jimgerneer](https://github.com/jimgerneer)]
+- Fix `Faker.Vehicle.vin/0` to return valid vin [[@jimgerneer](https://github.com/jimgerneer)]
 - Altered `Faker.Util.pick/1` now accepts optional blacklist [[@jimgerneer](https://github.com/jimgerneer)]
 
 ### Deprecated
