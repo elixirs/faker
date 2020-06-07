@@ -47,7 +47,7 @@ defmodule Faker.Gov.Us do
       iex> Faker.Gov.Us.ein
       "83-6106581"
   """
-  def ein() do
+  def ein do
     "#{ein_campus()}-#{ein_serial()}"
   end
 
