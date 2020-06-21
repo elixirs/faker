@@ -24,4 +24,25 @@ defmodule Faker.String do
     |> Base.encode64()
     |> binary_part(0, length)
   end
+
+  @doc """
+  Returns a random alphanumeric String
+
+  ## Examples
+
+      iex> Faker.String.alphanumeric()
+      "1tmLiMhm"
+      iex> Faker.String.alphanumeric()
+      "1N57pI0P"
+      iex> Faker.String.alphanumeric(5)
+      "e3kHK"
+      iex> Faker.String.alphanumeric(100)
+      "Z7xbfJZPMy3J7dAsyfOB3vnZIqFGv4VQil8D3xh1C3Nj9K7xJk47zJtcKsy5mjpJk61Wt3jcJu3bfgwuScTmOOYt4ykzvDUlu0WU"
+  """
+  @spec alphanumeric(pos_integer) :: String.t()
+  def alphanumeric(length \\ 8) do
+    length
+    |> base64()
+    |> String.replace(~r/\W+/, "#{Faker.random_between(0, 10)}")
+  end
 end
