@@ -6,7 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
-## Unreleased 
+## Unreleased
 
 ### Added
 
