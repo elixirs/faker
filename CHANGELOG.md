@@ -27,6 +27,8 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 ### Changed
 - Fix `Faker.Code.Iban.iban` and `Faker.Gov.It.fiscal_id` doctests [[@vbrazo](https://github.com/vbrazo)]
 - `Faker.Address.Es` [[@emig](https://github.com/emig)]
+- Set minimum Elixir version to 1.6
+- Set minimum OTP version to 19
 
 ### Deprecated
 
