@@ -10,6 +10,8 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Added
 
+- Add `Faker.Code.GitRef` module with git commit sha and branch names generators
+
 ### Changed
 
 ### Deprecated
