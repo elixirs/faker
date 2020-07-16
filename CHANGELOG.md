@@ -10,6 +10,8 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Added
 
+- `Faker.Gov.Us.ein/0` [[@artkay](https://github.com/artkay)]
+
 ### Changed
 
 ### Deprecated
@@ -36,7 +38,6 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 - `Faker.Gov.It` [[@neslinesli93](https://github.com/neslinesli93)]
 - `Faker.Vehicle.model/1` [[@daytonn](https://github.com/daytonn)]
 - `Faker.Person`[[@anthonator](https://github.com/anthonator)]
-- `Faker.Gov.Us.ein/0` [[@artkay](https://github.com/artkay)]
 
 ### Changed
 - Fix `Faker.Code.Iban.iban` and `Faker.Gov.It.fiscal_id` doctests [[@vbrazo](https://github.com/vbrazo)]
