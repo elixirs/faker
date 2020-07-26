@@ -32,7 +32,6 @@ defmodule Faker.Gov.Us do
   defp ssn_group, do: "#{Faker.random_between(1, 99)}" |> String.pad_leading(2, "0")
   defp ssn_serial, do: "#{Faker.random_between(1, 9999)}" |> String.pad_leading(4, "0")
 
-  @spec ein() :: String.t()
   @doc """
   Returns a random Employer Identification Number
 
@@ -47,6 +46,7 @@ defmodule Faker.Gov.Us do
       iex> Faker.Gov.Us.ein
       "83-6106581"
   """
+  @spec ein() :: String.t()
   def ein do
     "#{ein_campus()}-#{ein_serial()}"
   end
