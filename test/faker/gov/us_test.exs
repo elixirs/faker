@@ -46,4 +46,28 @@ defmodule Faker.Gov.UsTest do
       refute String.contains?(generated_value, "-0000")
     end)
   end
+
+  test "ein is a valid length" do
+    Stream.repeatedly(&ein/0)
+    |> Enum.take(@iterations)
+    |> Enum.each(fn generated_value ->
+      assert 10 = String.length(generated_value)
+    end)
+  end
+
+  test "ein does not contain 00 in campus" do
+    Stream.repeatedly(&ein/0)
+    |> Enum.take(@iterations)
+    |> Enum.each(fn generated_value ->
+      refute String.contains?(generated_value, "00-")
+    end)
+  end
+
+  test "ein does not contain 0000000 in serial" do
+    Stream.repeatedly(&ein/0)
+    |> Enum.take(@iterations)
+    |> Enum.each(fn generated_value ->
+      refute String.contains?(generated_value, "-0000000")
+    end)
+  end
 end
