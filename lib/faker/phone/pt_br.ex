@@ -26,7 +26,6 @@ defmodule Faker.Phone.PtBr do
     |> number_with_region()
   end
 
-
   @spec number_with_region(binary) :: binary
   def number_with_region(number) do
     region = generate_region_code()
@@ -52,7 +51,6 @@ defmodule Faker.Phone.PtBr do
   def generate_region_code() do
     region_code()
     |> Integer.to_string()
-
   end
 
   sampler(:base_template_number, [
@@ -63,6 +61,35 @@ defmodule Faker.Phone.PtBr do
     "(xx) 5###-####"
   ])
 
-  sampler(:region_code, [71,75,11,21,27,31,41,47,51,81,82,83,84,85,86,
-                         61,62,63,65,67,68,69,71,79,91,92,95,96,98])
+  sampler(:region_code, [
+    71,
+    75,
+    11,
+    21,
+    27,
+    31,
+    41,
+    47,
+    51,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    61,
+    62,
+    63,
+    65,
+    67,
+    68,
+    69,
+    71,
+    79,
+    91,
+    92,
+    95,
+    96,
+    98
+  ])
 end
