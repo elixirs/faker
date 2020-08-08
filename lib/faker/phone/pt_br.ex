@@ -48,7 +48,7 @@ defmodule Faker.Phone.PtBr do
       "71"
   """
   @spec generate_region_code :: binary
-  def generate_region_code() do
+  def generate_region_code do
     region_code()
     |> Integer.to_string()
   end
