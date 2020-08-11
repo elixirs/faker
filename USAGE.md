@@ -33,6 +33,7 @@
 - [Faker.Company](lib/faker/company.ex)
 - [Faker.Company.En](lib/faker/company/en.ex)
 - [Faker.Company.Hy](lib/faker/company/hy.ex)
+- [Faker.Currency](lib/faker/currency.ex)
   <!-- D -->
 - [Faker.Date](lib/faker/date.ex)
 - [Faker.DateTime](lib/faker/datetime.ex)
