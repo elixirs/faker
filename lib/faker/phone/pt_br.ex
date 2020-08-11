@@ -26,6 +26,19 @@ defmodule Faker.Phone.PtBr do
     |> number_with_region()
   end
 
+  @doc """
+  Replace 'xx' for a random region number picked.
+
+  ## Examples
+      iex> Faker.Phone.PtBr.number_with_region("(xx) 9 1542-6461")
+      "(92) 9 1542-6461"
+      iex> Faker.Phone.PtBr.number_with_region("(xx) 4329-7052")
+      "(31) 4329-7052"
+      iex> Faker.Phone.PtBr.number_with_region("(xx) 9 7020-3032")
+      "(71) 9 7020-3032"
+      iex> Faker.Phone.PtBr.number_with_region("(xx) 5733-7603")
+      "(71) 5733-7603"
+  """
   @spec number_with_region(binary) :: binary
   def number_with_region(number) do
     region = generate_region_code()
