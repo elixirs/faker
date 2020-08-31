@@ -77,6 +77,7 @@
 - [Faker.Person](lib/faker/person.ex)
 - [Faker.Person.En](lib/faker/person/en.ex)
 - [Faker.Person.Es](lib/faker/person/es.ex)
+- [Faker.Person.Fr](lib/faker/person/fr.ex)
 - [Faker.Person.Hy](lib/faker/person/hy.ex)
 - [Faker.Person.It](lib/faker/person/it.ex)
 - [Faker.Person.PtBr](lib/faker/person/pt_br.ex)
