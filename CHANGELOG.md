@@ -9,6 +9,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 ## Unreleased
 
 ### Added
+- `Faker.Aws.En.service/0` [[@vboivin](https://github.com/vboivin)]
 - `Faker.Aws.En.region/0` [[@vboivin](https://github.com/vboivin)]
 - `Faker.Person.Fr.name/0` [[@vboivin](https://github.com/vboivin)]
 - `Faker.Gov.Us.ein/0` [[@artkay](https://github.com/artkay)]
