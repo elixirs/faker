@@ -8,6 +8,7 @@
 - [Faker.Address.Ru](lib/faker/address/ru.ex)
 - [Faker.App](lib/faker/app.ex)
 - [Faker.Avatar](lib/faker/avatar.ex)
+- [Faker.Aws.En](lib/faker/aws/en.ex)
   <!-- B -->
 - [Faker.Beer](lib/faker/beer.ex)
 - [Faker.Beer.En](lib/faker/beer/en.ex)
