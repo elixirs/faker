@@ -92,7 +92,7 @@ defmodule Faker.Address.PtBr do
     "Verde"
   ])
 
-   @doc """
+  @doc """
   Return city suffixes.
 
   ## Examples
