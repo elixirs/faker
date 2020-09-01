@@ -15,6 +15,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 - `Faker.Person.Fr.name/0` [[@vboivin](https://github.com/vboivin)]
 - `Faker.Gov.Us.ein/0` [[@artkay](https://github.com/artkay)]
 - `Faker.Currency.code/0` and `Faker.Currency.symbol/0` [[@brunohkbx](https://github.com/brunohkbx)]
+- `Faker.Address.PtBr` [[@hiagomeels](https://github.com/hiagomeels)]
 
 ### Changed
 
@@ -23,6 +24,8 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 ### Removed
 
 ### Fixed
+
+- `Faker.Date.date_of_birth/1` generating invalid date range on last day of the month [[@anthonator](https://github.com/anthonator)]
 
 ### Security
 
