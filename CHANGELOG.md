@@ -23,6 +23,8 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Fixed
 
+- `Faker.Date.date_of_birth/1` generating invalid date range on last day of the month [[@anthonator](https://github.com/anthonator)]
+
 ### Security
 
 ## 0.14.0
