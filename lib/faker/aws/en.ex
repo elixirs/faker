@@ -2,26 +2,25 @@ defmodule Faker.Aws.En do
   import Faker, only: [sampler: 2]
 
   @moduledoc """
-  Functions for generating Aws information in English
+  Functions for generating AWS information in English
   """
 
   @doc """
-  Returns a random region from the available Aws regions
+  Returns a random region name available on AWS
 
   ## Examples
 
-      iex> Faker.Aws.En.region()
+      iex> Faker.Aws.En.region_name()
       "Asia Pacific (Tokyo)"
-      iex> Faker.Aws.En.region()
+      iex> Faker.Aws.En.region_name()
       "US East (Ohio)"
-      iex> Faker.Aws.En.region()
+      iex> Faker.Aws.En.region_name()
       "Europe (Milan)"
-      iex> Faker.Aws.En.region()
+      iex> Faker.Aws.En.region_name()
       "Africa (Cape Town)"
   """
-
-  @spec region() :: String.t()
-  sampler(:region, [
+  @spec region_name() :: String.t()
+  sampler(:region_name, [
     "US East (N. Virginia)",
     "US East (Ohio)",
     "US West (N. California)",
@@ -42,6 +41,44 @@ defmodule Faker.Aws.En do
     "Europe (Stockholm)",
     "Middle East (Bahrain)",
     "South America (São Paulo)"
+  ])
+
+  @doc """
+  Returns a random region code available on AWS
+
+  ## Examples
+
+      iex> Faker.Aws.En.region_code()
+      "ap-northeast-1"
+      iex> Faker.Aws.En.region_code()
+      "us-east-2"
+      iex> Faker.Aws.En.region_code()
+      "eu-south-1"
+      iex> Faker.Aws.En.region_code()
+      "af-south-1"
+  """
+  @spec region_code() :: String.t()
+  sampler(:region_code, [
+    "us-east-1",
+    "us-east-2",
+    "us-west-1",
+    "us-west-2",
+    "af-south-1",
+    "ap-east-1",
+    "ap-south-1",
+    "ap-northeast-2",
+    "ap-southeast-1",
+    "ap-southeast-2",
+    "ap-northeast-1",
+    "ca-central-1",
+    "eu-central-1",
+    "eu-west-1",
+    "eu-west-2",
+    "eu-south-1",
+    "eu-west-3",
+    "eu-north-1",
+    "me-south-1",
+    "sa-east-1"
   ])
 
   @doc """
