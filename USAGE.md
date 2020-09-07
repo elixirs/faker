@@ -5,9 +5,11 @@
 - [Faker.Address.Es](lib/faker/address/es.ex)
 - [Faker.Address.Hy](lib/faker/address/hy.ex)
 - [Faker.Address.It](lib/faker/address/it.ex)
+- [Faker.Address.PtBr](lib/faker/address/pt_br.ex)
 - [Faker.Address.Ru](lib/faker/address/ru.ex)
 - [Faker.App](lib/faker/app.ex)
 - [Faker.Avatar](lib/faker/avatar.ex)
+- [Faker.Aws.En](lib/faker/aws/en.ex)
   <!-- B -->
 - [Faker.Beer](lib/faker/beer.ex)
 - [Faker.Beer.En](lib/faker/beer/en.ex)
@@ -33,6 +35,7 @@
 - [Faker.Company](lib/faker/company.ex)
 - [Faker.Company.En](lib/faker/company/en.ex)
 - [Faker.Company.Hy](lib/faker/company/hy.ex)
+- [Faker.Currency](lib/faker/currency.ex)
   <!-- D -->
 - [Faker.Date](lib/faker/date.ex)
 - [Faker.DateTime](lib/faker/datetime.ex)
@@ -75,6 +78,7 @@
 - [Faker.Person](lib/faker/person.ex)
 - [Faker.Person.En](lib/faker/person/en.ex)
 - [Faker.Person.Es](lib/faker/person/es.ex)
+- [Faker.Person.Fr](lib/faker/person/fr.ex)
 - [Faker.Person.Hy](lib/faker/person/hy.ex)
 - [Faker.Person.It](lib/faker/person/it.ex)
 - [Faker.Person.PtBr](lib/faker/person/pt_br.ex)

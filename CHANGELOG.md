@@ -9,6 +9,29 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 ## Unreleased
 
 ### Added
+- `Faker.Aws.En.region_code/0` [[@vboivin](https://github.com/vboivin)]
+- `Faker.Aws.En.service/0` [[@vboivin](https://github.com/vboivin)]
+- `Faker.Aws.En.region_name/0` [[@vboivin](https://github.com/vboivin)]
+- `Faker.Person.Fr.name/0` [[@vboivin](https://github.com/vboivin)]
+- `Faker.Gov.Us.ein/0` [[@artkay](https://github.com/artkay)]
+- `Faker.Currency.code/0` and `Faker.Currency.symbol/0` [[@brunohkbx](https://github.com/brunohkbx)]
+- `Faker.Address.PtBr` [[@hiagomeels](https://github.com/hiagomeels)]
+
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+- `Faker.Date.date_of_birth/1` generating invalid date range on last day of the month [[@anthonator](https://github.com/anthonator)]
+
+### Security
+
+## 0.14.0
+
+### Added
 
 - Add missing `Faker.Name.Hy.suffix` doctests [[@vbrazo](https://github.com/vbrazo)]
 - Add missing `Faker.Address.It` doctests [[@vbrazo](https://github.com/vbrazo)]
@@ -20,7 +43,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 - `Faker.Address.Ru.country/0` [[@igas](https://github.com/igas)]
 - `Faker.Address.Ru.state/0` [[@igas](https://github.com/igas)]
 - `Faker.Gov.It` [[@neslinesli93](https://github.com/neslinesli93)]
-- `Faker.Vehicle.model/1` [[@daytonn][https://github/com/daytonn]]
+- `Faker.Vehicle.model/1` [[@daytonn](https://github.com/daytonn)]
 - `Faker.Person`[[@anthonator](https://github.com/anthonator)]
 - `Faker.String.hexadecimal/0` and `Faker.String.hexadecimal/1`[[@ilyashuma](https://github.com/ilyashuma)]
 
@@ -29,6 +52,8 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 - `Faker.Address.Es` [[@emig](https://github.com/emig)]
 - Set minimum Elixir version to 1.6
 - Set minimum OTP version to 19
+- Fix `Faker.Vehicle.vin/0` to return valid vin [[@jimgerneer](https://github.com/jimgerneer)]
+- Altered `Faker.Util.pick/1` now accepts optional blacklist [[@jimgerneer](https://github.com/jimgerneer)]
 
 ### Deprecated
 
