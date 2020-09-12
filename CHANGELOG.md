@@ -9,9 +9,21 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 ## Unreleased
 
 ### Added
-- `Faker.Aws.En.region_code/0` [[@vboivin](https://github.com/vboivin)]
-- `Faker.Aws.En.service/0` [[@vboivin](https://github.com/vboivin)]
-- `Faker.Aws.En.region_name/0` [[@vboivin](https://github.com/vboivin)]
+
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+## 0.15.0
+
+### Added
+
 - `Faker.Person.Fr.name/0` [[@vboivin](https://github.com/vboivin)]
 - `Faker.Gov.Us.ein/0` [[@artkay](https://github.com/artkay)]
 - `Faker.Currency.code/0` and `Faker.Currency.symbol/0` [[@brunohkbx](https://github.com/brunohkbx)]
