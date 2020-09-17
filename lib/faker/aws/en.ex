@@ -82,7 +82,7 @@ defmodule Faker.Aws.En do
   ])
 
   @doc """
-  Returns a random Aws service in 
+  Returns a random AWS service
 
   ## Examples
 
