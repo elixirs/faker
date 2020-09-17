@@ -7,7 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ## Unreleased
-
+- `Faker.Aws.En.s3_action/0` [[@vboivin](https://github.com/vboivin)
 ### Added
 
 ### Changed
