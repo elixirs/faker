@@ -241,4 +241,110 @@ defmodule Faker.Aws.En do
     "Pinpoint",
     "Simple Email Service"
   ])
+
+  @doc """
+  Returns an AWS S3 Action
+
+  ## Example
+
+    iex> Faker.Aws.En.s3_action()
+    "DeleteBucketTagging"
+    iex> Faker.Aws.En.s3_action()
+    "DeleteObjects"
+    iex> Faker.Aws.En.s3_action()
+    "PutPublicAccessBlock"
+    iex> Faker.Aws.En.s3_action()
+    "PutBucketReplication"
+  """
+  @spec s3_action() :: String.t()
+  sampler(:s3_action, [
+    "AbortMultipartUpload",
+    "CompleteMultipartUpload",
+    "CopyObject",
+    "CreateBucket",
+    "CreateMultipartUpload",
+    "DeleteBucket",
+    "DeleteBucketAnalyticsConfiguration",
+    "DeleteBucketCors",
+    "DeleteBucketEncryption",
+    "DeleteBucketInventoryConfiguration",
+    "DeleteBucketLifecycle",
+    "DeleteBucketMetricsConfiguration",
+    "DeleteBucketPolicy",
+    "DeleteBucketReplication",
+    "DeleteBucketTagging",
+    "DeleteBucketWebsite",
+    "DeleteObject",
+    "DeleteObjects",
+    "DeleteObjectTagging",
+    "DeletePublicAccessBlock",
+    "GetBucketAccelerateConfiguration",
+    "GetBucketAcl",
+    "GetBucketAnalyticsConfiguration",
+    "GetBucketCors",
+    "GetBucketEncryption",
+    "GetBucketInventoryConfiguration",
+    "GetBucketLifecycle",
+    "GetBucketLifecycleConfiguration",
+    "GetBucketLocation",
+    "GetBucketLogging",
+    "GetBucketMetricsConfiguration",
+    "GetBucketNotification",
+    "GetBucketNotificationConfiguration",
+    "GetBucketPolicy",
+    "GetBucketPolicyStatus",
+    "GetBucketReplication",
+    "GetBucketRequestPayment",
+    "GetBucketTagging",
+    "GetBucketVersioning",
+    "GetBucketWebsite",
+    "GetObject",
+    "GetObjectAcl",
+    "GetObjectLegalHold",
+    "GetObjectLockConfiguration",
+    "GetObjectRetention",
+    "GetObjectTagging",
+    "GetObjectTorrent",
+    "GetPublicAccessBlock",
+    "HeadBucket",
+    "HeadObject",
+    "ListBucketAnalyticsConfigurations",
+    "ListBucketInventoryConfigurations",
+    "ListBucketMetricsConfigurations",
+    "ListBuckets",
+    "ListMultipartUploads",
+    "ListObjects",
+    "ListObjectsV2",
+    "ListObjectVersions",
+    "ListParts",
+    "PutBucketAccelerateConfiguration",
+    "PutBucketAcl",
+    "PutBucketAnalyticsConfiguration",
+    "PutBucketCors",
+    "PutBucketEncryption",
+    "PutBucketInventoryConfiguration",
+    "PutBucketLifecycle",
+    "PutBucketLifecycleConfiguration",
+    "PutBucketLogging",
+    "PutBucketMetricsConfiguration",
+    "PutBucketNotification",
+    "PutBucketNotificationConfiguration",
+    "PutBucketPolicy",
+    "PutBucketReplication",
+    "PutBucketRequestPayment",
+    "PutBucketTagging",
+    "PutBucketVersioning",
+    "PutBucketWebsite",
+    "PutObject",
+    "PutObjectAcl",
+    "PutObjectLegalHold",
+    "PutObjectLockConfiguration",
+    "PutObjectRetention",
+    "PutObjectTagging",
+    "PutPublicAccessBlock",
+    "RestoreObject",
+    "SelectObjectContent",
+    "UploadPart",
+    "UploadPartCopy"
+  ])
 end
