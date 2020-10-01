@@ -8,7 +8,11 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ## Unreleased
 - `Faker.Aws.En.s3_action/0` [[@vboivin](https://github.com/vboivin)]
-- `Faker.Aws.Fr.region_name/0` [[@vboivin](https://github.com/vboivin)]
+- `Faker.Aws.Fr.region_name/0` [[@vboivin](https://github.com/vboivin)
+- `Faker.Aws.PtPt.region_name/0` [[@rubenandre](https://github.com/rubenandre)]
+- `Faker.Phone.PtPt.number/0` [[@rubenandre](https://github.com/rubenandre)]
+- `Faker.Phone.PtPt.landline_number/0` [[@rubenandre](https://github.com/rubenandre)]
+- `Faker.Phone.PtPt.cell_number/0` [[@rubenandre](https://github.com/rubenandre)]
 ### Added
 
 ### Changed
