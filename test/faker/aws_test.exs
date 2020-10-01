@@ -3,4 +3,5 @@ defmodule Faker.AwsTest do
 
   doctest Faker.Aws.En
   doctest Faker.Aws.Fr
+  doctest Faker.Aws.PtPt
 end
