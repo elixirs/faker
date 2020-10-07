@@ -3,6 +3,7 @@ dist: bionic
 language: elixir
 
 stages:
+  - debug
   - lint
   - typecheck
   - test
@@ -13,6 +14,9 @@ env:
 
 jobs:
   include:
+    - script: kerl list installations
+      name: "List avaliable erlang versions"
+      stage: debug
     - script: mix credo --strict
       name: "Credo"
       stage: lint
