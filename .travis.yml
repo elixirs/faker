@@ -14,7 +14,8 @@ env:
 
 jobs:
   include:
-    - script: kerl list installations
+    - before_script: kerl list installations
+      script: echo done
       name: "List avaliable erlang versions"
       stage: debug
     - script: mix credo --strict
