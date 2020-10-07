@@ -3,7 +3,6 @@ dist: bionic
 language: elixir
 
 stages:
-  - debug
   - lint
   - typecheck
   - test
