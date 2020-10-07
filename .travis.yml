@@ -18,6 +18,8 @@ jobs:
       script: echo done
       name: "List avaliable erlang versions"
       stage: debug
+      otp_release: '20.3.8.22'
+      elixir: '1.6'
     - script: mix credo --strict
       name: "Credo"
       stage: lint
