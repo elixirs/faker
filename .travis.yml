@@ -14,51 +14,45 @@ env:
 
 jobs:
   include:
-    - before_script: kerl list installations
-      script: echo done
-      name: "List avaliable erlang versions"
-      stage: debug
-      otp_release: '20.3.8.22'
-      elixir: '1.6'
     - script: mix credo --strict
       name: "Credo"
       stage: lint
       elixir: '1.11'
-      otp_release: '23.1.1'
+      otp_release: '23.0.4'
     - script: mix format --check-formatted
       name: "Formatter"
       stage: lint
       elixir: '1.11'
-      otp_release: '23.1.1'
+      otp_release: '23.0.4'
     - script: mix dialyzer --halt-exit-status
       name: "Dialyzer"
       stage: typecheck
       env:
         - MIX_ENV=dev
       elixir: '1.11'
-      otp_release: '23.1.1'
+      otp_release: '23.0.4'
     - elixir: '1.6'
       otp_release: '20.3.8.22'
       script: mix test
       stage: test
     - elixir: '1.7'
-      otp_release: '23.1.1'
+      otp_release: '23.0.4'
       script: mix test
       stage: test
     - elixir: '1.8'
-      otp_release: '23.1.1'
+      otp_release: '23.0.4'
       script: mix test
       stage: test
     - elixir: '1.9'
-      otp_release: '23.1.1'
+      otp_release: '23.0.4'
       script: mix test
       stage: test
     - elixir: '1.10'
-      otp_release: '23.1.1'
+      otp_release: '23.0.4'
       script: mix test
       stage: test
     - elixir: '1.11'
-      otp_release: '23.1.1'
+      otp_release: '23.0.4'
       script: mix test
       stage: test
 
