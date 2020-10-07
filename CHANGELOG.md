@@ -29,6 +29,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 - `Faker.Gov.Us.ein/0` [[@artkay](https://github.com/artkay)]
 - `Faker.Currency.code/0` and `Faker.Currency.symbol/0` [[@brunohkbx](https://github.com/brunohkbx)]
 - `Faker.Address.PtBr` [[@hiagomeels](https://github.com/hiagomeels)]
+- Elixir 1.11 support [[@igas](https://github.com/igas)]
 
 ### Changed
 
