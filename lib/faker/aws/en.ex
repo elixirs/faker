@@ -494,6 +494,7 @@ defmodule Faker.Aws.En do
     "StopActivityStream",
     "StopDBCluster",
     "StopDBInstance"
+  ])
 
   @doc """
   Returns an AWS EC2 Action
