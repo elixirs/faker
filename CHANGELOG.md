@@ -7,7 +7,6 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ## Unreleased
-- `Faker.Aws.En.ec2_action/0` [[@vboivin](https://github.com/vboivin)]
 - `Faker.Aws.En.s3_action/0` [[@vboivin](https://github.com/vboivin)]
 - `Faker.Aws.Fr.region_name/0` [[@vboivin](https://github.com/vboivin)]
 ### Added
@@ -31,6 +30,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 - `Faker.Currency.code/0` and `Faker.Currency.symbol/0` [[@brunohkbx](https://github.com/brunohkbx)]
 - `Faker.Address.PtBr` [[@hiagomeels](https://github.com/hiagomeels)]
 - Elixir 1.11 support [[@igas](https://github.com/igas)]
+- `Faker.Dog.PtBr`[[@caiaffa](https://github.com/caiaffa)]
 
 ### Changed
 
