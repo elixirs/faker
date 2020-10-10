@@ -13,6 +13,8 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 - `Faker.Aws.Fr.region_name/0` [[@vboivin](https://github.com/vboivin)]
 ### Added
 
+- `Faker.Markdown` [[techgaun](https://github.com/techgaun)]
+
 ### Changed
 
 ### Deprecated
