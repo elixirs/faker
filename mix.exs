@@ -1,13 +1,13 @@
 defmodule Faker.Mixfile do
   use Mix.Project
 
-  @version "0.13.0"
+  @version "0.15.0"
 
   def project do
     [
       app: :faker,
       version: @version,
-      elixir: "~> 1.4",
+      elixir: "~> 1.6",
       description: "Faker is a pure Elixir library for generating fake data.",
       package: package(),
       name: "Faker",
@@ -43,7 +43,7 @@ defmodule Faker.Mixfile do
       {:ex_doc, ">= 0.0.0", only: :dev, runtime: false},
       {:earmark, ">= 0.0.0", only: :dev, runtime: false},
       {:credo, ">= 0.0.0", only: [:dev, :test], runtime: false},
-      {:dialyxir, "~> 0.5", only: [:dev], runtime: false}
+      {:dialyxir, "~> 1.0", only: [:dev], runtime: false}
     ]
   end
 

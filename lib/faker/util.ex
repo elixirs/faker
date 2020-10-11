@@ -6,7 +6,7 @@ defmodule Faker.Util do
   """
 
   @doc """
-  Pick a random element from the list
+  Pick a random element from an enumerable. Can also be provided a blacklist enumerable as a second argument.
 
   ## Examples
 
@@ -16,12 +16,20 @@ defmodule Faker.Util do
       3
       iex> Faker.Util.pick([true, false, nil])
       true
-      iex> Faker.Util.pick(["a", "b", "c"])
-      "c"
-      iex> Faker.Util.pick([1, "2", 3.0])
+      iex> Faker.Util.pick(["a", "b", "c"], ["b"])
+      "a"
+      iex> Faker.Util.pick([1, "2", 3.0], 1..10)
       "2"
   """
-  @spec pick(Enum.t()) :: any
+
+  @spec pick(Enum.t(), Enum.t()) :: any
+  def pick(enum, blacklist)
+
+  def pick(enum, blacklist) do
+    Enum.reject(enum, fn el -> Enum.member?(blacklist, el) end)
+    |> pick()
+  end
+
   def pick(enum) do
     Enum.at(enum, Faker.random_between(0, Enum.count(enum) - 1))
   end
@@ -177,13 +185,13 @@ defmodule Faker.Util do
 
   ## Examples
 
-      iex> Faker.Util.letter()
+      iex> Faker.Util.upper_letter()
       "E"
-      iex> Faker.Util.letter()
+      iex> Faker.Util.upper_letter()
       "L"
-      iex> Faker.Util.letter()
+      iex> Faker.Util.upper_letter()
       "R"
-      iex> Faker.Util.letter()
+      iex> Faker.Util.upper_letter()
       "C"
   """
   @spec upper_letter() :: binary

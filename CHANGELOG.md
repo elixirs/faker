@@ -7,6 +7,47 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ## Unreleased
+- `Faker.Aws.EN.rds_action/0` [[@vboivin](https://github.com/vboivin)]
+- `Faker.Aws.En.ec2_action/0` [[@vboivin](https://github.com/vboivin)]
+- `Faker.Aws.En.s3_action/0` [[@vboivin](https://github.com/vboivin)]
+- `Faker.Aws.Fr.region_name/0` [[@vboivin](https://github.com/vboivin)]
+- `Faker.String.naughty/0` [[@Cantido][https://github.com/Cantido]]
+
+### Added
+
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+## 0.15.0
+
+### Added
+
+- `Faker.Person.Fr.name/0` [[@vboivin](https://github.com/vboivin)]
+- `Faker.Gov.Us.ein/0` [[@artkay](https://github.com/artkay)]
+- `Faker.Currency.code/0` and `Faker.Currency.symbol/0` [[@brunohkbx](https://github.com/brunohkbx)]
+- `Faker.Address.PtBr` [[@hiagomeels](https://github.com/hiagomeels)]
+- Elixir 1.11 support [[@igas](https://github.com/igas)]
+
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+- `Faker.Date.date_of_birth/1` generating invalid date range on last day of the month [[@anthonator](https://github.com/anthonator)]
+
+### Security
+
+## 0.14.0
 
 ### Added
 
@@ -20,21 +61,29 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 - `Faker.Address.Ru.country/0` [[@igas](https://github.com/igas)]
 - `Faker.Address.Ru.state/0` [[@igas](https://github.com/igas)]
 - `Faker.Gov.It` [[@neslinesli93](https://github.com/neslinesli93)]
-- `Faker.Vehicle.model/1` [[@daytonn][https://github/com/daytonn]]
-- `Faker.String.naughty/0` [[@Cantido][https://github.com/Cantido]]
+- `Faker.Vehicle.model/1` [[@daytonn](https://github.com/daytonn)]
+- `Faker.Person`[[@anthonator](https://github.com/anthonator)]
 
 ### Changed
 - Fix `Faker.Code.Iban.iban` and `Faker.Gov.It.fiscal_id` doctests [[@vbrazo](https://github.com/vbrazo)]
 - `Faker.Address.Es` [[@emig](https://github.com/emig)]
+- Set minimum Elixir version to 1.6
+- Set minimum OTP version to 19
+- Fix `Faker.Vehicle.vin/0` to return valid vin [[@jimgerneer](https://github.com/jimgerneer)]
+- Altered `Faker.Util.pick/1` now accepts optional blacklist [[@jimgerneer](https://github.com/jimgerneer)]
 
 ### Deprecated
+
+- `Faker.Name` (in favor of `Faker.Person`) [[@anthonator](https://github.com/anthonator)]
 
 ### Removed
 
 - Remove extra doctests in `Faker.Nato.format` [[@vbrazo](https://github.com/vbrazo)]
 - gitlab CI [[@igas][]]
+- Elixir 1.4 and 1.5 support
 
 ### Fixed
+- `Faker.Util.upper_letter/0` documentation examples [[@michaelfich](https://github.com/michaelfich)]
 
 ### Security
 

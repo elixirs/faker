@@ -1,7 +1,7 @@
 defmodule Faker.Address.Es do
   import Faker, only: [sampler: 2]
 
-  alias Faker.Name.Es
+  alias Faker.Person.Es
 
   @moduledoc """
   Functions for generating addresses in Spanish

@@ -1,8 +1,8 @@
 defmodule Faker.Name do
-  import Faker, only: [localize: 1]
+  alias Faker.Person
 
   @moduledoc """
-  Functions for generating names
+  Deprecated. Faker.Name will be removed in 1.0.0. Please use Faker.Person instead.
   """
 
   @doc """
@@ -19,8 +19,9 @@ defmodule Faker.Name do
       iex> Faker.Name.name()
       "Ally Rau MD"
   """
+  @deprecated "Use Faker.Person.name/0 instead."
   @spec name() :: String.t()
-  localize(:name)
+  def name, do: Person.name()
 
   @doc """
   Returns a random first name
@@ -36,8 +37,9 @@ defmodule Faker.Name do
       iex> Faker.Name.first_name()
       "Ozella"
   """
+  @deprecated "Use Faker.Person.first_name/0 instead."
   @spec first_name() :: String.t()
-  localize(:first_name)
+  def first_name, do: Person.first_name()
 
   @doc """
   Returns a random last name
@@ -53,8 +55,9 @@ defmodule Faker.Name do
       iex> Faker.Name.last_name()
       "Rolfson"
   """
+  @deprecated "Use Faker.Person.last_name/0 instead."
   @spec last_name() :: String.t()
-  localize(:last_name)
+  def last_name, do: Person.last_name()
 
   @doc """
   Returns a random name related title
@@ -70,8 +73,9 @@ defmodule Faker.Name do
       iex> Faker.Name.title()
       "Customer Data Representative"
   """
+  @deprecated "Use Faker.Person.title/0 instead."
   @spec title() :: String.t()
-  localize(:title)
+  def title, do: Person.title()
 
   @doc """
   Returns a random name related suffix
@@ -87,8 +91,9 @@ defmodule Faker.Name do
       iex> Faker.Name.suffix()
       "V"
   """
+  @deprecated "Use Faker.Person.suffix/0 instead."
   @spec suffix() :: String.t()
-  localize(:suffix)
+  def suffix, do: Person.suffix()
 
   @doc """
   Returns a random name related prefix
@@ -104,6 +109,7 @@ defmodule Faker.Name do
       iex> Faker.Name.prefix()
       "Dr."
   """
+  @deprecated "Use Faker.Person.prefix/0 instead."
   @spec prefix() :: String.t()
-  localize(:prefix)
+  def prefix, do: Person.prefix()
 end
