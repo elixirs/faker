@@ -6,7 +6,7 @@ defmodule Faker.Dog.PtBr do
   """
 
   @doc """
-  Returns a Dog name string
+  Returns a dog name.
 
   ## Examples
 
