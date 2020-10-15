@@ -3,4 +3,5 @@ defmodule Faker.AirportsTest do
 
   doctest Faker.Airports
   doctest Faker.Airports.En
+  doctest Faker.Airports.PtBr
 end
