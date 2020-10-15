@@ -7,8 +7,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ## Unreleased
+- `Faker.Aws.EN.rds_action/0` [[@vboivin](https://github.com/vboivin)]
+- `Faker.Aws.En.ec2_action/0` [[@vboivin](https://github.com/vboivin)]
 - `Faker.Aws.En.s3_action/0` [[@vboivin](https://github.com/vboivin)]
 - `Faker.Aws.Fr.region_name/0` [[@vboivin](https://github.com/vboivin)]
+- `Faker.Airports.icao/0` [[@brunohkbx](https://github.com/brunohkbx)]
+- `Faker.Airports.iata/0` [[@brunohkbx](https://github.com/brunohkbx)]
+- `Faker.Airports.En.name/0` [[@brunohkbx](https://github.com/brunohkbx)]
+
 ### Added
 
 ### Changed
