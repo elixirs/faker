@@ -74,6 +74,7 @@
 - [Faker.Lorem.Shakespeare.En](lib/faker/lorem/shakespeare/en.ex)
 - [Faker.Lorem.Shakespeare.Ru](lib/faker/lorem/shakespeare/ru.ex)
   <!-- M -->
+- [Faker.Markdown](lib/faker/markdown.ex)
   <!-- N -->
 - [Faker.NaiveDateTime](lib/faker/naivedatetime.ex)
 - [Faker.Nato](lib/faker/nato.ex)
