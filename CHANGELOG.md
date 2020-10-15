@@ -39,6 +39,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 - `Faker.Address.PtBr` [[@hiagomeels](https://github.com/hiagomeels)]
 - Elixir 1.11 support [[@igas](https://github.com/igas)]
 - `Faker.Dog.PtBr`[[@caiaffa](https://github.com/caiaffa)]
+- `Faker.Airports.PtBr`[[@caiaffa](https://github.com/caiaffa)]
 
 ### Changed
 
