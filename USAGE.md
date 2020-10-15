@@ -42,6 +42,7 @@
   <!-- D -->
 - [Faker.Date](lib/faker/date.ex)
 - [Faker.DateTime](lib/faker/datetime.ex)
+- [Faker.Dog.PtBr](lib/faker/dog/pt_br.ex)
   <!-- E -->
   <!-- F -->
 - [Faker.File](lib/faker/file.ex)
