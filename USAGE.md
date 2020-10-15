@@ -7,6 +7,8 @@
 - [Faker.Address.It](lib/faker/address/it.ex)
 - [Faker.Address.PtBr](lib/faker/address/pt_br.ex)
 - [Faker.Address.Ru](lib/faker/address/ru.ex)
+- [Faker.Airports](lib/faker/airports.ex)
+- [Faker.Airports.En](lib/faker/airports/en.ex)
 - [Faker.App](lib/faker/app.ex)
 - [Faker.Avatar](lib/faker/avatar.ex)
 - [Faker.Aws.En](lib/faker/aws/en.ex)
@@ -40,6 +42,7 @@
   <!-- D -->
 - [Faker.Date](lib/faker/date.ex)
 - [Faker.DateTime](lib/faker/datetime.ex)
+- [Faker.Dog.PtBr](lib/faker/dog/pt_br.ex)
   <!-- E -->
   <!-- F -->
 - [Faker.File](lib/faker/file.ex)
@@ -71,6 +74,7 @@
 - [Faker.Lorem.Shakespeare.En](lib/faker/lorem/shakespeare/en.ex)
 - [Faker.Lorem.Shakespeare.Ru](lib/faker/lorem/shakespeare/ru.ex)
   <!-- M -->
+- [Faker.Markdown](lib/faker/markdown.ex)
   <!-- N -->
 - [Faker.NaiveDateTime](lib/faker/naivedatetime.ex)
 - [Faker.Nato](lib/faker/nato.ex)
