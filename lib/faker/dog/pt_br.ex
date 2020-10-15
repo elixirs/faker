@@ -73,7 +73,7 @@ defmodule Faker.Dog.PtBr do
   ])
 
   @doc """
-  Returns a Dog breed string
+  Returns a dog breed.
 
   ## Examples
 
