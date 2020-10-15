@@ -138,7 +138,7 @@ defmodule Faker.Dog.PtBr do
   ])
 
   @doc """
-  Returns a dog characteristics string
+  Returns a characteristic of a dog.
 
   ## Examples
 
