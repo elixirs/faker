@@ -17,6 +17,8 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Added
 
+- `Faker.Markdown` [[techgaun](https://github.com/techgaun)]
+
 ### Changed
 
 ### Deprecated
