@@ -17,37 +17,41 @@ jobs:
       name: "Credo"
       stage: lint
       elixir: '1.10'
-      otp_release: '22.2.4'
+      otp_release: '23.0.4'
     - script: mix format --check-formatted
       name: "Formatter"
       stage: lint
       elixir: '1.10'
-      otp_release: '22.2.4'
+      otp_release: '23.0.4'
     - script: mix dialyzer --halt-exit-status
       name: "Dialyzer"
       stage: typecheck
       env:
         - MIX_ENV=dev
       elixir: '1.10'
-      otp_release: '22.2.4'
+      otp_release: '23.0.4'
     - elixir: '1.6'
       otp_release: '20.3.8.22'
       script: mix test
       stage: test
     - elixir: '1.7'
-      otp_release: '22.0.7'
+      otp_release: '22.3.4'
       script: mix test
       stage: test
     - elixir: '1.8'
-      otp_release: '22.0.7'
+      otp_release: '22.3.4'
       script: mix test
       stage: test
     - elixir: '1.9'
-      otp_release: '22.0.7'
+      otp_release: '22.3.4'
       script: mix test
       stage: test
     - elixir: '1.10'
-      otp_release: '22.2.4'
+      otp_release: '23.0.4'
+      script: mix test
+      stage: test
+    - elixir: '1.11'
+      otp_release: '23.0.4'
       script: mix test
       stage: test
 
