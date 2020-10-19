@@ -10,6 +10,20 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Added
 
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+## 0.16.0
+
+### Added
+
 - `Faker.Markdown` [[techgaun](https://github.com/techgaun)]
 - `Faker.Aws.En.rds_action/0` [[@vboivin](https://github.com/vboivin)]
 - `Faker.Aws.En.ec2_action/0` [[@vboivin](https://github.com/vboivin)]
