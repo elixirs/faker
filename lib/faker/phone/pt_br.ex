@@ -2,7 +2,7 @@ defmodule Faker.Phone.PtBr do
   import Faker, only: [sampler: 2]
 
   @moduledoc """
-  Function to generate brazilians phone  number.
+  Function to generate Brazilian phone numbers.
   """
 
   @doc """
