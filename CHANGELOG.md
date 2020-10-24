@@ -10,11 +10,26 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Added
 
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+## 0.16.0
+
+### Added
+
 - `Faker.Markdown` [[techgaun](https://github.com/techgaun)]
 - `Faker.Aws.En.rds_action/0` [[@vboivin](https://github.com/vboivin)]
 - `Faker.Aws.En.ec2_action/0` [[@vboivin](https://github.com/vboivin)]
 - `Faker.Aws.En.s3_action/0` [[@vboivin](https://github.com/vboivin)]
 - `Faker.Aws.Fr.region_name/0` [[@vboivin](https://github.com/vboivin)]
+- `Faker.String.naughty/0` [[@Cantido][https://github.com/Cantido]]
 - `Faker.Airports.icao/0` [[@brunohkbx](https://github.com/brunohkbx)]
 - `Faker.Airports.iata/0` [[@brunohkbx](https://github.com/brunohkbx)]
 - `Faker.Airports.En.name/0` [[@brunohkbx](https://github.com/brunohkbx)]
