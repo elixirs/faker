@@ -1,6 +1,8 @@
 defmodule Faker.Person.Ja do
   @moduledoc """
   Functions for name data in Japanese; 日本語の人名を生成する関数群
+
+  Samples based on https://github.com/faker-ruby/faker
   """
   import Faker, only: [sampler: 2]
 
