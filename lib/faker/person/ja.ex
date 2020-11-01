@@ -21,7 +21,7 @@ defmodule Faker.Person.Ja do
       "中島諒"
   """
   @spec name() :: String.t()
-  def name(), do: name(Faker.random_between(0, 9))
+  def name, do: name(Faker.random_between(0, 9))
   defp name(n) when is_integer(n), do: elem(name_with_kana(), 0)
 
   @doc """
@@ -45,7 +45,7 @@ defmodule Faker.Person.Ja do
       {"斎藤仁", "さいとうひとし", "サイトウヒトシ"}
   """
   @spec name_with_kana() :: {String.t(), String.t(), String.t()}
-  def name_with_kana(), do: name_with_kana(Faker.random_between(0, 9))
+  def name_with_kana, do: name_with_kana(Faker.random_between(0, 9))
 
   defp name_with_kana(n) when is_integer(n) do
     {ln_kanji, ln_hira, ln_kata} = last_name_with_kana()
@@ -68,7 +68,7 @@ defmodule Faker.Person.Ja do
       "伊藤"
   """
   @spec last_name() :: String.t()
-  def last_name(), do: elem(last_name_with_kana(), 0)
+  def last_name, do: elem(last_name_with_kana(), 0)
 
   @doc """
   Returns a random last name with kanas
@@ -203,7 +203,7 @@ defmodule Faker.Person.Ja do
       "颯太"
   """
   @spec first_name() :: String.t()
-  def first_name(), do: elem(first_name_with_kana(), 0)
+  def first_name, do: elem(first_name_with_kana(), 0)
 
   @doc """
   Returns a random first name with kanas
