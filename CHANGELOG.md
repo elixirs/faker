@@ -10,6 +10,8 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Added
 
+- `Faker.Person.Ja` [[@ymtszw](https://github.com/ymtszw)]
+
 ### Changed
 
 ### Deprecated
