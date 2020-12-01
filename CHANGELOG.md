@@ -10,6 +10,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Added
 
+- `Faker.Vehicle.trim/2` [[@joshillian](https://github.com/joshillian)]
 ### Changed
 
 ### Deprecated
