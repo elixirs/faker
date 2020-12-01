@@ -13,6 +13,8 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 - `Faker.Vehicle.trim/1` [[@joshillian](https://github.com/joshillian)]
 ### Changed
 
+- `Faker.Avatar` switch to `https` to prevent redirect [[igas](https://github.com/igas)]
+
 ### Deprecated
 
 ### Removed
