@@ -6,7 +6,7 @@ defmodule Faker.Color.En do
   """
 
   @doc """
-  Returns a random english color name
+  Returns a random English color name
 
   ## Examples
 
@@ -34,7 +34,7 @@ defmodule Faker.Color.En do
   ])
 
   @doc """
-  Returns a random english fancy color name
+  Returns a random English fancy color name
 
   ## Examples
 

@@ -6,7 +6,7 @@ defmodule Faker.Color.De do
   """
 
   @doc """
-  Returns a random german color name
+  Returns a random German color name
 
   ## Examples
 
