@@ -1,7 +1,7 @@
 defmodule Faker.Mixfile do
   use Mix.Project
 
-  @source_url "https://github.com/igas/faker"
+  @source_url "https://github.com/elixirs/faker"
   @version "0.16.0"
 
   def project do
