@@ -14,11 +14,15 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Changed
 
+- `Faker.Avatar` switch to `https` to prevent redirect [[igas](https://github.com/igas)]
+
 ### Deprecated
 
 ### Removed
 
 ### Fixed
+
+- `Faker.Team` `creature/0` and `name/0` documentation examples fixed [[@yuriploc](https://github.com/yuriploc)]
 
 ### Security
 
