@@ -8,7 +8,7 @@ defmodule Faker.Company.En do
   """
 
   @doc """
-  Returns a random complete english business related bullshit
+  Returns a random complete English business related bullshit
 
   ## Examples
 
@@ -25,7 +25,7 @@ defmodule Faker.Company.En do
   def bs, do: "#{bullshit_prefix()} #{bullshit()} #{bullshit_suffix()}"
 
   @doc """
-  Returns a random english business related bullshit
+  Returns a random English business related bullshit
 
   ## Examples
 
@@ -108,7 +108,7 @@ defmodule Faker.Company.En do
   ])
 
   @doc """
-  Returns a random english business related bullshit prefix
+  Returns a random English business related bullshit prefix
 
   ## Examples
 
@@ -186,7 +186,7 @@ defmodule Faker.Company.En do
   ])
 
   @doc """
-  Returns a random english business related bullshit suffix
+  Returns a random English business related bullshit suffix
 
   ## Examples
 
@@ -248,7 +248,7 @@ defmodule Faker.Company.En do
   ])
 
   @doc """
-  Returns a random english business related buzzword
+  Returns a random English business related buzzword
 
   ## Examples
 
@@ -367,7 +367,7 @@ defmodule Faker.Company.En do
   ])
 
   @doc """
-  Returns a random english business related buzzword prefix
+  Returns a random English business related buzzword prefix
 
   ## Examples
 
@@ -485,7 +485,7 @@ defmodule Faker.Company.En do
   ])
 
   @doc """
-  Returns a random english business related buzzword suffix
+  Returns a random English business related buzzword suffix
 
   ## Examples
 
@@ -607,7 +607,7 @@ defmodule Faker.Company.En do
   ])
 
   @doc """
-  Returns a random complete english catch phrase
+  Returns a random complete English catch phrase
 
   ## Examples
 
@@ -624,7 +624,7 @@ defmodule Faker.Company.En do
   def catch_phrase, do: "#{buzzword_prefix()} #{buzzword()} #{buzzword_suffix()}"
 
   @doc """
-  Returns complete english company name
+  Returns complete English company name
 
   ## Examples
 

@@ -89,7 +89,7 @@ defmodule Faker.Nato do
   def stop_code_word, do: "STOP"
 
   @doc """
-  Returns a random NATO callsign of the form [alpha]-[alpha]-[digit]
+  Returns a random NATO call sign of the form [alpha]-[alpha]-[digit]
 
   ## Examples
 

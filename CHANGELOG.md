@@ -104,7 +104,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 ### Removed
 
 - Remove extra doctests in `Faker.Nato.format` [[@vbrazo](https://github.com/vbrazo)]
-- gitlab CI [[@igas][]]
+- GitLab CI [[@igas][]]
 - Elixir 1.4 and 1.5 support
 
 ### Fixed
@@ -224,7 +224,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 ### Changed
 
 - Remove `'` and `"` from generated names in `Faker::Internet` [[@vbrazo](https://github.com/vbrazo)]
-- Codebase been reformated with elixir formatter [[@vbrazo](https://github.com/vbrazo)] and [[@igas](https://igas.me)]
+- Codebase been reformatted with elixir formatter [[@vbrazo](https://github.com/vbrazo)] and [[@igas](https://igas.me)]
 - Documentation moved to hexdocs.pm [[@MarcusSky](https://github.com/MarcusSky)], [[@vbrazo](https://github.com/vbrazo)], and [[@igas](https://igas.me)]
 - Updated dependencies [[@igas](https://igas.me)]
 
@@ -260,7 +260,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 - `Faker.Date.date_of_birth/0` and `Faker.Date.date_of_birth/1` returning wrong result [[@stfnsr](https://github.com/stfnsr)]
 - Usage.md reorganisation [[@orieken](https://github.com/orieken)]
 - Documentation for `Faker.Beer` [[@bcat-eu](https://github.com/bcat-eu)]
-- Fix pokemon name - Mr. Mime :) [[@leveloid](https://github.com/leveloid)]
+- Fix Pokemon name - Mr. Mime :) [[@leveloid](https://github.com/leveloid)]
 - Gov.Us deprecations [[@halfdan](https://github.com/halfdan)]
 
 ## 0.9.0
@@ -300,7 +300,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Changed
 
-- Underlaying data structure changed to maps to improve performance [[@igas](https://igas.me)]
+- Underlying data structure changed to maps to improve performance [[@igas](https://igas.me)]
 - Improved `Faker.Beer` usage [[@tbash](https://github.com/tbash)]
 
 ### Removed
