@@ -1,6 +1,6 @@
 defmodule Faker.Blockchain.Ethereum do
   @moduledoc """
-  Functions for genrerate ethereum addresses.
+  Functions for generate ethereum addresses.
   """
 
   @type address :: <<_::336>>
