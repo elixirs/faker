@@ -9,6 +9,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 ## Unreleased
 
 ### Added
+- `mix_test_watch` as a dependency [[@winescout](https://github.com/winescout)]
 
 ### Changed
 
