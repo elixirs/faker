@@ -11,13 +11,13 @@ defmodule Faker.Dwelling do
 
   ## Examples 
       iex> Faker.Dwelling.dwelling_type()
-      "Cycladic house"
+      "cycladic house"
       iex> Faker.Dwelling.dwelling_type()
-      "Shepard's hut"
+      "shepard's hut"
       iex> Faker.Dwelling.dwelling_type()
-      "Cycladic house"
+      "cycladic house"
       iex> Faker.Dwelling.dwelling_type()
-      "Earth house"
+      "earth house"
   """
 
   @spec dwelling_type :: String.t()

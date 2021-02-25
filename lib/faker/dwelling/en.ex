@@ -10,35 +10,35 @@ defmodule Faker.Dwelling.En do
 
   ## Examples
       iex> Faker.Dwelling.dwelling_type()
-      "Cycladic house"
+      "cycladic house"
       iex> Faker.Dwelling.dwelling_type()
-      "Shepard's hut"
+      "shepard's hut"
       iex> Faker.Dwelling.dwelling_type()
-      "Cycladic house"
+      "cycladic house"
       iex> Faker.Dwelling.dwelling_type()
-      "Earth house"
+      "earth house"
   """
   @spec dwelling_type() :: String.t()
   sampler(:dwelling_type, [
-    "Bungalow",
-    "Cabin",
-    "Casa Particular",
-    "Chalet",
-    "Cottage",
-    "Cycladic house",
-    "Dammuso",
-    "Dome house",
-    "Earth house",
-    "House",
-    "Houseboat",
-    "Hut",
-    "Lighthouse",
-    "Pension",
-    "Shepard's hut",
-    "Tiny house",
-    "Townhouse",
-    "Trulio",
-    "Villa",
+    "bungalow",
+    "cabin",
+    "casa particular",
+    "chalet",
+    "cottage",
+    "cycladic house",
+    "dammuso",
+    "dome house",
+    "earth house",
+    "house",
+    "houseboat",
+    "hut",
+    "lighthouse",
+    "pension",
+    "shepard's hut",
+    "tiny house",
+    "townhouse",
+    "trulio",
+    "villa",
   ])
 
   @doc """
