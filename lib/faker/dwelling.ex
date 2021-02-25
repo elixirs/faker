@@ -23,4 +23,19 @@ defmodule Faker.Dwelling do
   @spec dwelling_type :: String.t()
   localize(:dwelling_type)
 
+  @doc """
+  Returns a room name string
+
+  ## Examples
+      iex> Faker.Dwelling.room()
+      "kitchen"
+      iex> Faker.Dwelling.room()
+      "bathroom"
+      iex> Faker.Dwelling.room()
+      "dining room"
+      iex> Faker.Dwelling.room()
+      "living room"
+  """
+  @spec room :: String.t()
+  localize(:room)
 end

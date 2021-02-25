@@ -40,4 +40,31 @@ defmodule Faker.Dwelling.En do
     "Trulio",
     "Villa",
   ])
+
+  @doc """
+  Returns a room name string
+
+  ## Examples
+      iex> Faker.Dwelling.En.room()
+      "kitchen"
+      iex> Faker.Dwelling.En.room()
+      "bathroom"
+      iex> Faker.Dwelling.En.room()
+      "dining room"
+      iex> Faker.Dwelling.En.room()
+      "living room"
+  """
+  @spec room :: String.t()
+  sampler(:room, [
+    "kitchen",
+    "bathroom",
+    "bedroom",
+    "master bedroom",
+    "living room",
+    "dining room",
+    "entry way",
+    "garage",
+    "laundry room",
+    "basement"
+  ])
 end
