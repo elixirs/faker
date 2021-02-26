@@ -23,7 +23,7 @@ defmodule Faker.Superhero do
   localize(:name)
 
   @doc """
-  Returns a random Superher name prefix
+  Returns a random Superhero name prefix
 
   ## Examples
 
