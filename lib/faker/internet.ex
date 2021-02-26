@@ -298,7 +298,7 @@ defmodule Faker.Internet do
   @doc """
   Generates a slug
   If no words are provided it will generate 2 to 5 random words
-  If no glue is provied it will use one of -, _ or .
+  If no glue is provided it will use one of -, _ or .
 
   ## Examples
 

@@ -24,7 +24,7 @@ defmodule Faker do
   @doc """
   Internal function to format string.
 
-  It replaces `"#"` to random number and `"?"` to random latin letter.
+  It replaces `"#"` to random number and `"?"` to random Latin letter.
   """
   @spec format(String.t()) :: String.t()
   def format(str) when is_binary(str) do
@@ -53,7 +53,7 @@ defmodule Faker do
   end
 
   @doc """
-  Returns application locale ready for module constract.
+  Returns application locale ready for module construct.
   """
   @spec mlocale() :: String.t()
   def mlocale do

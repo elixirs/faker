@@ -1,5 +1,13 @@
 # Faker
-[![Version](https://img.shields.io/hexpm/v/faker.svg?style=flat-square)](https://hex.pm/packages/faker)[![License](https://img.shields.io/hexpm/l/faker.svg?style=flat-square)](https://github.com/elixirs/faker/blob/master/LICENSE)[![Build Status](https://img.shields.io/travis/elixirs/faker.svg?style=flat-square)](https://travis-ci.org/elixirs/faker)[![Issues](https://img.shields.io/github/issues/elixirs/faker.svg?style=flat-square)](https://github.com/elixirs/faker/issues)[![Downloads](https://img.shields.io/hexpm/dt/faker.svg?style=flat-square)](https://hex.pm/packages/faker)[![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg?style=flat-square)](https://gitter.im/igas/faker)
+
+[![Build Status](https://img.shields.io/travis/elixirs/faker.svg?style=flat-square)](https://travis-ci.org/elixirs/faker)
+[![Version](https://img.shields.io/hexpm/v/faker.svg?style=flat-square)](https://hex.pm/packages/faker)
+[![Hex Docs](https://img.shields.io/badge/hex-docs-lightgreen.svg)](https://hexdocs.pm/faker/)
+[![License](https://img.shields.io/hexpm/l/faker.svg?style=flat-square)](https://github.com/elixirs/faker/blob/master/LICENSE)
+[![Issues](https://img.shields.io/github/issues/elixirs/faker.svg?style=flat-square)](https://github.com/elixirs/faker/issues)
+[![Downloads](https://img.shields.io/hexpm/dt/faker.svg?style=flat-square)](https://hex.pm/packages/faker)
+[![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg?style=flat-square)](https://gitter.im/igas/faker)
+[![Last Updated](https://img.shields.io/github/last-commit/elixirs/faker.svg)](https://github.com/elixirs/faker/commits/master)
 
 **Faker** is a pure [Elixir](http://elixir-lang.org/) library for generating
 fake data.
@@ -48,7 +56,7 @@ fake data.
 
 ## Usage
 
-See [documentation](http://hexdocs.pm/faker/) and [usage examples](USAGE.md).
+See [documentation](http://hexdocs.pm/faker/) and [usage examples](https://github.com/elixirs/faker/blob/master/USAGE.md).
 
 ## Troubleshooting
 

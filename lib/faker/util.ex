@@ -237,7 +237,7 @@ defmodule Faker.Util do
     - **A**: uppercase letter A-Z
     - **b**: anycase letter a-z, A-Z
 
-  The specifier rules can be overriden using the second argument.
+  The specifier rules can be overridden using the second argument.
 
   ## Examples
 
