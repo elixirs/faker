@@ -1,6 +1,5 @@
-defmodule Faker.Dwelling do 
+defmodule Faker.Dwelling do
   import Faker, only: [localize: 1]
-
 
   @moduledoc """
   Functions for generating Dwelling related data

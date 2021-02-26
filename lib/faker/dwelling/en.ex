@@ -38,7 +38,7 @@ defmodule Faker.Dwelling.En do
     "tiny house",
     "townhouse",
     "trulio",
-    "villa",
+    "villa"
   ])
 
   @doc """
