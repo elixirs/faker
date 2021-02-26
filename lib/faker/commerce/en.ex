@@ -2,7 +2,7 @@ defmodule Faker.Commerce.En do
   import Faker, only: [sampler: 2]
 
   @moduledoc """
-  Fuctions for generating commerce related data in English
+  Functions for generating commerce related data in English
   """
 
   @doc """
