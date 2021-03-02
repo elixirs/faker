@@ -11,6 +11,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 ### Added
 - `Faker.Dwelling` [[@winescout](https://github.com/winescout)]
 - `Faker.Dwelling.En` [[@winescout](https://github.com/winescout)]
+- `Faker.Internet.StatusCode` [[@emmetreza](https://github.com/emmetreza)]
 
 ### Changed
 
