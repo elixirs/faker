@@ -6,7 +6,7 @@ defmodule Faker.Color.PtBr do
   """
 
   @doc """
-  Returns a random brazilian portuguese color name
+  Returns a random Brazilian Portuguese color name
 
   ## Examples
 

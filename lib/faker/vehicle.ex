@@ -229,7 +229,7 @@ defmodule Faker.Vehicle do
   end
 
   @doc """
-  Reterns a vehicle standard option string
+  Returns a vehicle standard option string
 
   ## Examples
       iex> Faker.Vehicle.standard_spec()
