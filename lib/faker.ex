@@ -57,12 +57,19 @@ defmodule Faker do
   """
   @spec mlocale() :: String.t()
   def mlocale do
-    if Faker.country() do
-      String.capitalize(to_string(Faker.locale())) <>
-        String.capitalize(to_string(Faker.country()))
-    else
-      String.capitalize(to_string(Faker.locale()))
-    end
+    Faker.country()
+    |> mlocale()
+  end
+
+  defp mlocale(nil) do
+    mlocale("")
+  end
+
+  defp mlocale(suffix) do
+    Faker.locale()
+    |> to_string()
+    |> String.capitalize()
+    |> Kernel.<>(suffix)
   end
 
   @doc """
