@@ -66,6 +66,7 @@
 - [Faker.Internet.Hy](lib/faker/internet/hy.ex)
 - [Faker.Internet.It](lib/faker/internet/it.ex)
 - [Faker.Internet.PtBr](lib/faker/internet/pt_br.ex)
+- [Faker.Internet.StatusCode](lib/faker/internet/status_code.ex)
 - [Faker.Internet.UserAgent](lib/faker/internet/user_agent.ex)
   <!-- J -->
   <!-- K -->
