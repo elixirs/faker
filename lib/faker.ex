@@ -57,12 +57,19 @@ defmodule Faker do
   """
   @spec mlocale() :: String.t()
   def mlocale do
-    if Faker.country() do
-      String.capitalize(to_string(Faker.locale())) <>
-        String.capitalize(to_string(Faker.country()))
-    else
-      String.capitalize(to_string(Faker.locale()))
-    end
+    Faker.country()
+    |> mlocale()
+  end
+
+  defp mlocale(nil) do
+    mlocale("")
+  end
+
+  defp mlocale(suffix) do
+    Faker.locale()
+    |> to_string()
+    |> String.capitalize()
+    |> Kernel.<>(suffix)
   end
 
   @doc """
@@ -126,19 +133,14 @@ defmodule Faker do
   defmacro localize(function) do
     quote do
       def unquote(function)() do
-        module = Module.concat(unquote(__CALLER__.module), Faker.mlocale())
-        module_enus = Module.concat(unquote(__CALLER__.module), EnUs)
+        caller = unquote(__CALLER__.module)
+        fn_impl = unquote(function)
+        fallback = Module.concat(caller, En)
 
-        cond do
-          function_exported?(module, unquote(function), 0) ->
-            apply(module, unquote(function), [])
-
-          function_exported?(module_enus, unquote(function), 0) ->
-            apply(module_enus, unquote(function), [])
-
-          true ->
-            apply(Module.concat(unquote(__CALLER__.module), En), unquote(function), [])
-        end
+        [Faker.mlocale(), EnUs]
+        |> Stream.map(&Module.concat(caller, &1))
+        |> Enum.find(fallback, &function_exported?(&1, fn_impl, 0))
+        |> apply(fn_impl, [])
       end
     end
   end
