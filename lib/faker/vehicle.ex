@@ -61,13 +61,13 @@ defmodule Faker.Vehicle do
   ## Examples
 
       iex> Faker.Vehicle.make()
-      "BMW"
-      iex> Faker.Vehicle.make()
-      "Audi"
+      "Lincoln"
       iex> Faker.Vehicle.make()
       "Dodge"
       iex> Faker.Vehicle.make()
-      "Ford"
+      "Chevy"
+      iex> Faker.Vehicle.make()
+      "Honda"
   """
   @spec make() :: String.t()
   localize(:make)
@@ -78,11 +78,11 @@ defmodule Faker.Vehicle do
   ## Examples
 
       iex> Faker.Vehicle.make_and_model()
-      "BMW X5"
+      "Lincoln MKZ"
       iex> Faker.Vehicle.make_and_model()
-      "Dodge Ram"
+      "Chevy Malibu"
       iex> Faker.Vehicle.make_and_model()
-      "Toyota Prius"
+      "Ford Focus"
       iex> Faker.Vehicle.make_and_model()
       "Ford Focus"
   """
@@ -95,13 +95,13 @@ defmodule Faker.Vehicle do
   ## Examples
 
       iex> Faker.Vehicle.model()
-      "CR-V"
-      iex> Faker.Vehicle.model()
-      "Enclave"
-      iex> Faker.Vehicle.model()
       "Encore"
       iex> Faker.Vehicle.model()
-      "Verano"
+      "S5"
+      iex> Faker.Vehicle.model()
+      "Fiesta"
+      iex> Faker.Vehicle.model()
+      "X1"
   """
   @spec model() :: String.t()
   localize(:model)
