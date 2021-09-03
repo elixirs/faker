@@ -59,16 +59,26 @@ defmodule Faker.App do
       ~w(dev alpha beta rc.0 rc.1)
       |> Enum.at(Faker.random_between(0, 4))
 
-    formats = ["0.#.#", "#.#.#", "#.##.##"]
-    formats = if allow_pre, do: formats ++ ["#.#.#-#{pre}"], else: formats
-    formats = if allow_build, do: formats ++ ["#.#.#+###"], else: formats
-    formats = if allow_pre and allow_build, do: formats ++ ["#.#.#-#{pre}+###"], else: formats
+    formats =
+      ["0.#.#", "#.#.#", "#.##.##"]
+      |> semver_pre_releases(pre, allow_pre)
+      |> semver_builds(allow_build)
+      |> semver_pre_release_builds(pre, allow_pre and allow_build)
 
     formats
     |> Enum.at(Faker.random_between(0, length(formats) - 1))
     |> Faker.format()
     |> semver_reformat_bad_luck()
   end
+
+  defp semver_pre_releases(acc, pre, true), do: ["#.#.#-#{pre}" | acc]
+  defp semver_pre_releases(acc, _pre, _), do: acc
+
+  defp semver_builds(acc, true), do: ["#.#.#+###" | acc]
+  defp semver_builds(acc, _), do: acc
+
+  defp semver_pre_release_builds(acc, pre, true), do: ["#.#.#-#{pre}+###" | acc]
+  defp semver_pre_release_builds(acc, _pre, _), do: acc
 
   defp semver_reformat_bad_luck(<<"0.0", rest::binary>>) do
     semver_reformat_bad_luck(<<"0.#{Faker.random_between(1, 9)}", rest::binary>>)
