@@ -90,7 +90,7 @@ Current list of maintainers:
 * [Anthony Smith](https://github.com/anthonator)
 * [Igor Kapkov](https://igas.me)
 * [Toby Hinloopen](https://github.com/tobyhinloopen)
-* [Vitor Oliveira](https://github.com/vbrazo)
+* [Vitor Oliveira](https://github.com/imvitoroliveira)
 
 ## Contributing
 
