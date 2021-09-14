@@ -10,6 +10,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Added
 - `Faker.Internet.StatusCode` [[@emmetreza](https://github.com/emmetreza)]
+- CI workflow using GitHub Actions [[@anthonator](https://github.com/anthonator)]
 
 ### Changed
 - `Faker.Vehicles` add makes and models that are multi-word, refactor existing fns [[jersearls](https://github.com/jersearls)]
@@ -19,6 +20,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 ### Deprecated
 
 ### Removed
+- Travis CI for CI workflow [[@anthonator](https://github.com/anthonator)]
 
 ### Fixed
 
