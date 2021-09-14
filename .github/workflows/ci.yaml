@@ -25,13 +25,30 @@ jobs:
 
       - run: mix deps.get
 
-      - run: mix dialyzer
+      - run: mix dialyzer --halt-exit-status
 
     strategy:
       matrix:
-        elixir: [1.7.x, 1.8.x, 1.9.x, 1.10.x, 1.11.x, 1.12.x]
+        include:
+          - elixir: 1.7.x
 
-        otp: [22.x, 23.x, 24.x]
+            otp: [19.x, 20.x, 21.x, 22.x]
+
+          - elixir: [1.8.x, 1.9.x]
+
+            otp: [20.x, 21.x, 22.x]
+
+          - elixir: 1.10.x
+
+            otp: [21.x, 22.x]
+
+          - elixir: 1.11.x
+
+            otp: [21.x, 22.x, 23.x]
+
+          - elixir: 1.12.x
+
+            otp: [22.x, 23.x, 24.x]
 
   test:
     runs-on: ubuntu-latest
@@ -59,6 +76,23 @@ jobs:
 
     strategy:
       matrix:
-        elixir: [1.7.x, 1.8.x, 1.9.x, 1.10.x, 1.11.x, 1.12.x]
+        include:
+          - elixir: 1.7.x
 
-        otp: [22.x, 23.x, 24.x]
+            otp: [19.x, 20.x, 21.x, 22.x]
+
+          - elixir: [1.8.x, 1.9.x]
+
+            otp: [20.x, 21.x, 22.x]
+
+          - elixir: 1.10.x
+
+            otp: [21.x, 22.x]
+
+          - elixir: 1.11.x
+
+            otp: [21.x, 22.x, 23.x]
+
+          - elixir: 1.12.x
+
+            otp: [22.x, 23.x, 24.x]
