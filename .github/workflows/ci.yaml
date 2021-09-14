@@ -4,7 +4,7 @@ on: push
 
 jobs:
   dialyzer:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os || 'ubuntu-latest' }}
 
     steps:
       - uses: actions/checkout@v2
@@ -31,6 +31,8 @@ jobs:
       matrix:
         include:
           - elixir: 1.7.x
+
+            os: ubuntu-18.04
 
             otp: 19.x
 
@@ -103,7 +105,7 @@ jobs:
             otp: 24.x
 
   test:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os || 'ubuntu-latest' }}
 
     steps:
       - uses: actions/checkout@v2
@@ -130,6 +132,8 @@ jobs:
       matrix:
         include:
           - elixir: 1.7.x
+
+            os: ubuntu-18.04
 
             otp: 19.x
 
