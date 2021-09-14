@@ -32,23 +32,75 @@ jobs:
         include:
           - elixir: 1.7.x
 
-            otp: [19.x, 20.x, 21.x, 22.x]
+            otp: 19.x
 
-          - elixir: [1.8.x, 1.9.x]
+          - elixir: 1.7.x
 
-            otp: [20.x, 21.x, 22.x]
+            otp: 20.x
+
+          - elixir: 1.7.x
+
+            otp: 21.x
+
+          - elixir: 1.7.x
+
+            otp: 22.x
+
+          - elixir: 1.8.x
+
+            otp: 20.x
+
+          - elixir: 1.8.x
+
+            otp: 21.x
+
+          - elixir: 1.8.x
+
+            otp: 22.x
+
+          - elixir: 1.9.x
+
+            otp: 20.x
+
+          - elixir: 1.9.x
+
+            otp: 21.x
+
+          - elixir: 1.9.x
+
+            otp: 22.x
 
           - elixir: 1.10.x
 
-            otp: [21.x, 22.x]
+            otp: 21.x
+
+          - elixir: 1.10.x
+
+            otp: 22.x
 
           - elixir: 1.11.x
 
-            otp: [21.x, 22.x, 23.x]
+            otp: 21.x
+
+          - elixir: 1.11.x
+
+            otp: 22.x
+
+          - elixir: 1.11.x
+
+            otp: 23.x
 
           - elixir: 1.12.x
 
-            otp: [22.x, 23.x, 24.x]
+            otp: 22.x
+
+          - elixir: 1.12.x
+
+            otp: 23.x
+
+          - elixir: 1.12.x
+
+            otp: 24.x
 
   test:
     runs-on: ubuntu-latest
@@ -79,20 +131,72 @@ jobs:
         include:
           - elixir: 1.7.x
 
-            otp: [19.x, 20.x, 21.x, 22.x]
+            otp: 19.x
 
-          - elixir: [1.8.x, 1.9.x]
+          - elixir: 1.7.x
 
-            otp: [20.x, 21.x, 22.x]
+            otp: 20.x
+
+          - elixir: 1.7.x
+
+            otp: 21.x
+
+          - elixir: 1.7.x
+
+            otp: 22.x
+
+          - elixir: 1.8.x
+
+            otp: 20.x
+
+          - elixir: 1.8.x
+
+            otp: 21.x
+
+          - elixir: 1.8.x
+
+            otp: 22.x
+
+          - elixir: 1.9.x
+
+            otp: 20.x
+
+          - elixir: 1.9.x
+
+            otp: 21.x
+
+          - elixir: 1.9.x
+
+            otp: 22.x
 
           - elixir: 1.10.x
 
-            otp: [21.x, 22.x]
+            otp: 21.x
+
+          - elixir: 1.10.x
+
+            otp: 22.x
 
           - elixir: 1.11.x
 
-            otp: [21.x, 22.x, 23.x]
+            otp: 21.x
+
+          - elixir: 1.11.x
+
+            otp: 22.x
+
+          - elixir: 1.11.x
+
+            otp: 23.x
 
           - elixir: 1.12.x
 
-            otp: [22.x, 23.x, 24.x]
+            otp: 22.x
+
+          - elixir: 1.12.x
+
+            otp: 23.x
+
+          - elixir: 1.12.x
+
+            otp: 24.x
