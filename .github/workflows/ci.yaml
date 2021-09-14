@@ -16,7 +16,7 @@ jobs:
 
           path: _build
 
-      - uses: erlef/setup-elixir@v1
+      - uses: erlef/setup-beam@v1
 
         with:
           elixir-version: ${{ matrix.elixir }}
@@ -115,7 +115,7 @@ jobs:
 
           path: _build
 
-      - uses: erlef/setup-elixir@v1
+      - uses: erlef/setup-beam@v1
 
         with:
           elixir-version: ${{ matrix.elixir }}
