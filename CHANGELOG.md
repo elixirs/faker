@@ -14,8 +14,8 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Changed
 - `Faker.Vehicles` add makes and models that are multi-word, refactor existing fns [[jersearls](https://github.com/jersearls)]
-
 - `Faker.Avatar` switch to `https` to prevent redirect [[igas](https://github.com/igas)]
+- Updated build badge for GitHub Actions [[@anthonator](https://github.com/anthonator)]
 
 ### Deprecated
 

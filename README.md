@@ -1,6 +1,6 @@
 # Faker
 
-[![Build Status](https://img.shields.io/travis/elixirs/faker.svg?style=flat-square)](https://travis-ci.org/elixirs/faker)
+[![build](https://github.com/elixirs/faker/actions/workflows/ci.yaml/badge.svg)](https://github.com/elixirs/faker/actions/workflows/ci.yaml)
 [![Version](https://img.shields.io/hexpm/v/faker.svg?style=flat-square)](https://hex.pm/packages/faker)
 [![Hex Docs](https://img.shields.io/badge/hex-docs-lightgreen.svg)](https://hexdocs.pm/faker/)
 [![License](https://img.shields.io/hexpm/l/faker.svg?style=flat-square)](https://github.com/elixirs/faker/blob/master/LICENSE)
