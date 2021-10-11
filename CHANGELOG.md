@@ -11,6 +11,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 ### Added
 - `Faker.Internet.StatusCode` [[@emmetreza](https://github.com/emmetreza)]
 - CI workflow using GitHub Actions [[@anthonator](https://github.com/anthonator)]
+- `Faker.Fruit.PtBr` [[@f-francine](https://github.com/f-francine)]
 
 ### Changed
 - `Faker.Vehicles` add makes and models that are multi-word, refactor existing fns [[jersearls](https://github.com/jersearls)]
