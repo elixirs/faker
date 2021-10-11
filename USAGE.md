@@ -24,6 +24,7 @@
 - [Faker.Cannabis.En](lib/faker/cannabis/en.ex)
 - [Faker.Cat](lib/faker/cat.ex)
 - [Faker.Cat.En](lib/faker/cat/en.ex)
+- [Faker.Cat.PtBr](lib/faker/cat/pt_br.ex)
 - [Faker.Code](lib/faker/code.ex)
 - [Faker.Color](lib/faker/color.ex)
 - [Faker.Color.De](lib/faker/color/de.ex)
