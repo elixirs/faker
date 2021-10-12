@@ -78,7 +78,7 @@ defmodule Faker.Fruit.PtBr do
     "Morango",
     "Mertilo",
     "Maracujá",
-    "Meão",
+    "Melão",
     "Melancia",
     "Mexirica",
     "Necatarina",
