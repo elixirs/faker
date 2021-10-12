@@ -36,6 +36,7 @@
 - [Faker.Commerce](lib/faker/commerce.ex)
 - [Faker.Commerce.En](lib/faker/commerce/en.ex)
 - [Faker.Commerce.Hy](lib/faker/commerce/hy.ex)
+- [Faker.Commerce.PtBr](lib/faker/commerce/pt_br.ex)
 - [Faker.Company](lib/faker/company.ex)
 - [Faker.Company.En](lib/faker/company/en.ex)
 - [Faker.Company.Hy](lib/faker/company/hy.ex)
