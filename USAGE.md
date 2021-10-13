@@ -14,6 +14,7 @@
 - [Faker.Avatar](lib/faker/avatar.ex)
 - [Faker.Aws.En](lib/faker/aws/en.ex)
 - [Faker.Aws.Fr](lib/faker/aws/fr.ex)
+- [Faker.Aws.PtBr](lib/faker/aws/pt_br.ex)
   <!-- B -->
 - [Faker.Beer](lib/faker/beer.ex)
 - [Faker.Beer.En](lib/faker/beer/en.ex)
