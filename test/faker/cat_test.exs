@@ -3,4 +3,5 @@ defmodule Faker.Cat.EnTest do
 
   doctest Faker.Cat
   doctest Faker.Cat.En
+  doctest Faker.Cat.PtBr
 end
