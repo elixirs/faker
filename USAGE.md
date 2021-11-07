@@ -14,6 +14,7 @@
 - [Faker.Avatar](lib/faker/avatar.ex)
 - [Faker.Aws.En](lib/faker/aws/en.ex)
 - [Faker.Aws.Fr](lib/faker/aws/fr.ex)
+- [Faker.Aws.PtBr](lib/faker/aws/pt_br.ex)
   <!-- B -->
 - [Faker.Beer](lib/faker/beer.ex)
 - [Faker.Beer.En](lib/faker/beer/en.ex)
@@ -24,6 +25,7 @@
 - [Faker.Cannabis.En](lib/faker/cannabis/en.ex)
 - [Faker.Cat](lib/faker/cat.ex)
 - [Faker.Cat.En](lib/faker/cat/en.ex)
+- [Faker.Cat.PtBr](lib/faker/cat/pt_br.ex)
 - [Faker.Code](lib/faker/code.ex)
 - [Faker.Color](lib/faker/color.ex)
 - [Faker.Color.De](lib/faker/color/de.ex)
