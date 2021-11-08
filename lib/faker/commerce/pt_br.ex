@@ -25,7 +25,7 @@ defmodule Faker.Commerce.PtBr do
   def color do
     # As in Brazilian Portuguese we have feminine and masculine words, this function suffixes an (a)
     # when a color name ends with an 'o'.
-    # Words ending with an 'o' are masculine words, but when we suffixe an (a), we are saying the word
+    # Words ending with an 'o' are masculine words, but when we suffice an (a), we are saying the word
     # can be either feminine or masculine.
 
     color = Color.name()
