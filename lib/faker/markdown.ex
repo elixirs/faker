@@ -180,8 +180,7 @@ defmodule Faker.Markdown do
     0..m_rows
     |> Enum.map(fn _ ->
       1..n_cols
-      |> Enum.map(fn _ -> Lorem.word() end)
-      |> Enum.join(separator)
+      |> Enum.map_join(separator, fn _ -> Lorem.word() end)
     end)
     |> List.insert_at(1, header)
     |> Enum.join("\n")
