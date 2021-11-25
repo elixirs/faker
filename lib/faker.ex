@@ -135,12 +135,13 @@ defmodule Faker do
       def unquote(function)() do
         caller = unquote(__CALLER__.module)
         fn_impl = unquote(function)
+        fn_args = []
         fallback = Module.concat(caller, En)
 
         [Faker.mlocale(), EnUs]
         |> Stream.map(&Module.concat(caller, &1))
         |> Enum.find(fallback, &function_exported?(&1, fn_impl, 0))
-        |> apply(fn_impl, [])
+        |> apply(fn_impl, fn_args)
       end
     end
   end
