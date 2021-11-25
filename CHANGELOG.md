@@ -30,7 +30,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 - `Faker.Team` `creature/0` and `name/0` documentation examples fixed [[@yuriploc](https://github.com/yuriploc)]
 - Fix bidirectional formatting [[@MichalDolata](https://github.com/MichalDolata)]
-
+- Extra split for Virgin Islands in the country sampler [[intercaetera](https://github.com/intercaetera)]
 ### Security
 
 ## 0.16.0
