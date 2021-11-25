@@ -29,6 +29,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 ### Fixed
 
 - `Faker.Team` `creature/0` and `name/0` documentation examples fixed [[@yuriploc](https://github.com/yuriploc)]
+- Fix bidirectional formatting [[@MichalDolata](https://github.com/MichalDolata)]
 
 ### Security
 
