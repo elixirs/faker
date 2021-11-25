@@ -120,13 +120,13 @@ defmodule Faker.Address.En do
   ## Examples
 
       iex> Faker.Address.En.country()
-      "China"
+      "Guinea-Bissau"
       iex> Faker.Address.En.country()
-      "Macedonia"
+      "Tuvalu"
       iex> Faker.Address.En.country()
-      "China"
+      "Portugal"
       iex> Faker.Address.En.country()
-      "Venezuela"
+      "United Arab Emirates"
   """
   @spec country() :: String.t()
   sampler(:country, [
@@ -368,10 +368,8 @@ defmodule Faker.Address.En do
     "Vanuatu",
     "Venezuela",
     "Vietnam",
-    "'Virgin Islands",
-    "British'",
-    "'Virgin Islands",
-    "U.S.'",
+    "Virgin Islands, British",
+    "Virgin Islands, U.S.",
     "Wallis and Futuna",
     "Western Sahara",
     "Yemen",
