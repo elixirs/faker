@@ -9,6 +9,20 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 ## Unreleased
 
 ### Added
+
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+## 0.17.0
+
+### Added
 - `Faker.Internet.StatusCode` [[@emmetreza](https://github.com/emmetreza)]
 - CI workflow using GitHub Actions [[@anthonator](https://github.com/anthonator)]
 - `Faker.Cat.PtBr` [[@f-francine](https://github.com/f-francine)]

@@ -104,15 +104,15 @@ jobs:
 
             otp: 24.x
 
-          - elixir: v1.13.0-rc.0
+          - elixir: v1.13.x
 
             otp: 22.x
 
-          - elixir: v1.13.0-rc.0
+          - elixir: v1.13.x
 
             otp: 23.x
 
-          - elixir: v1.13.0-rc.0
+          - elixir: v1.13.x
 
             otp: 24.x
 
@@ -217,15 +217,15 @@ jobs:
 
             otp: 24.x
 
-          - elixir: v1.13.0-rc.0
+          - elixir: v1.13.x
 
             otp: 22.x
 
-          - elixir: v1.13.0-rc.0
+          - elixir: v1.13.x
 
             otp: 23.x
 
-          - elixir: v1.13.0-rc.0
+          - elixir: v1.13.x
 
             otp: 24.x
 
@@ -330,14 +330,14 @@ jobs:
 
             otp: 24.x
 
-          - elixir: v1.13.0-rc.0
+          - elixir: v1.13.x
 
             otp: 22.x
 
-          - elixir: v1.13.0-rc.0
+          - elixir: v1.13.x
 
             otp: 23.x
 
-          - elixir: v1.13.0-rc.0
+          - elixir: v1.13.x
 
             otp: 24.x
