@@ -17,6 +17,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 ### Removed
 
 ### Fixed
+- `Faker.Address.En/0` corrected formatting for US and Britian [[@atavistock](https://github.com/atavistock)]
 
 ### Security
 
