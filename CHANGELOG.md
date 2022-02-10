@@ -11,7 +11,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 ### Added
 
 ### Changed
-- `Faker.Commerce.PtBr` [[@igorgbr](https://github.com/igorgbr)] add more products in product_name_product
+- `Faker.Commerce.PtBr` - add more products in product_name_product [[@igorgbr](https://github.com/igorgbr)]
 
 ### Deprecated
 
