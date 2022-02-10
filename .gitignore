@@ -9,3 +9,4 @@ erl_crash.dump
 *.swp
 *.iml
 .DS_Store
+.tool-versions
