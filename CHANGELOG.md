@@ -11,6 +11,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 ### Added
 
 ### Changed
+- `Faker.Commerce.PtBr` [[@igorgbr](https://github.com/igorgbr)] add more products in product_name_product
 
 ### Deprecated
 
@@ -29,7 +30,6 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 - `Faker.Aws.PtBr.region_name/0` [[@f-francine](https://github.com/f-francine)]
 - `Faker.Fruit.PtBr` [[@f-francine](https://github.com/f-francine)]
 - `Faker.Commerce.PtBr` [[@f-francine](https://github.com/f-francine)]
-- `Faker.Commerce.PtBr` [[@igorgbr](https://github.com/igorgbr)]
 
 ### Changed
 - `Faker.Vehicles` add makes and models that are multi-word, refactor existing fns [[jersearls](https://github.com/jersearls)]
