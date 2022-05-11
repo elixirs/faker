@@ -64,18 +64,12 @@ defmodule Faker.Internet do
   def user_name, do: user_name(Faker.random_between(0, 1))
 
   defp user_name(0) do
-    "#{
-      remove_special_characters(Person.first_name())
-      |> String.replace(~s(  ), ~s())
-      |> String.downcase()
-    }#{Faker.random_between(1900, 2100)}"
+    "#{remove_special_characters(Person.first_name()) |> String.replace(~s(  ), ~s()) |> String.downcase()}#{Faker.random_between(1900, 2100)}"
   end
 
   defp user_name(1) do
-    [
-      remove_special_characters(Person.first_name()),
-      remove_special_characters(Person.last_name())
-    ]
+    [Person.first_name(), Person.last_name()]
+    |> Stream.map(&remove_special_characters/1)
     |> Enum.map_join(Util.pick(~w(. _)), &String.replace(&1, ~s(  ), ~s()))
     |> String.downcase()
   end
@@ -96,12 +90,7 @@ defmodule Faker.Internet do
   """
   @spec domain_word() :: String.t()
   def domain_word do
-    "#{
-      remove_special_characters(Person.last_name())
-      |> String.split(["'"])
-      |> Enum.join()
-      |> String.downcase()
-    }"
+    "#{remove_special_characters(Person.last_name()) |> String.split(["'"]) |> Enum.join() |> String.downcase()}"
   end
 
   @doc """
