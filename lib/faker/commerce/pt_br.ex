@@ -84,13 +84,13 @@ defmodule Faker.Commerce.PtBr do
   ## Examples
 
       iex> Faker.Commerce.PtBr.product_name()
-      "Gorro Gigante de Algodão"
+      "Cadeira Gigante de Algodão"
       iex> Faker.Commerce.PtBr.product_name()
-      "Quadro de Granito"
+      "Computador de Granito"
       iex> Faker.Commerce.PtBr.product_name()
       "Bolsa Médio(a)"
       iex> Faker.Commerce.PtBr.product_name()
-      "Guitarra Grande"
+      "Escrivaninha Grande"
   """
   @spec product_name() :: String.t()
   def product_name, do: product_name(Faker.random_between(0, 5))
@@ -174,13 +174,13 @@ defmodule Faker.Commerce.PtBr do
   ## Examples
 
       iex> Faker.Commerce.PtBr.product_name_product()
-      "Bolsa"
+      "Guarda-roupa"
       iex> Faker.Commerce.PtBr.product_name_product()
-      "Gorro"
+      "Cadeira"
       iex> Faker.Commerce.PtBr.product_name_product()
-      "Caderno"
+      "Cobertor"
       iex> Faker.Commerce.PtBr.product_name_product()
-      "Gorro"
+      "Sandália"
   """
   @spec product_name_product() :: String.t()
   sampler(:product_name_product, [
@@ -216,6 +216,7 @@ defmodule Faker.Commerce.PtBr do
     "Sapato",
     "Saxofone",
     "Tênis",
+    "Teclado",
     "Violão"
   ])
 end
