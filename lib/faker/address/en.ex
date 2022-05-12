@@ -808,13 +808,13 @@ defmodule Faker.Address.En do
   ## Examples
 
       iex> Faker.Address.En.street_address()
-      "2 Elizabeth Freeway"
+      "15426 Padberg Mews"
       iex> Faker.Address.En.street_address()
-      "0832 Conor Motorway"
+      "83297 Jana Spring"
       iex> Faker.Address.En.street_address()
-      "23570 Rau Crest"
+      "57 Legros Cletus Field"
       iex> Faker.Address.En.street_address()
-      "32097 Schimmel Field"
+      "32097 Brekke Ladarius Turnpike"
   """
   @spec street_address() :: String.t()
   def street_address do
@@ -827,13 +827,13 @@ defmodule Faker.Address.En do
   ## Examples
 
       iex> Faker.Address.En.street_address(true)
-      "2 Elizabeth Freeway, Apt. 461"
+      "15426 Padberg Mews, Apt. 832"
       iex> Faker.Address.En.street_address(false)
-      "970 Bianka Heights"
+      "7 Jana Spring"
       iex> Faker.Address.En.street_address(true)
-      "020 Crooks Thomas Spur, Suite 032"
+      "57 Legros Cletus Field, Apt. 320"
       iex> Faker.Address.En.street_address(false)
-      "37 Johann Gardens 37"
+      "7 Brekke Ladarius Turnpike"
   """
   @spec street_address(true | any) :: String.t()
   def street_address(true), do: street_address() <> ", " <> secondary_address()
@@ -880,11 +880,6 @@ defmodule Faker.Address.En do
   sampler(:street_suffix, [
     "Alley",
     "Avenue",
-    "Avenue",
-    "Ave",
-    "Ave",
-    "Bend",
-    "Boulevard",
     "Branch",
     "Bridge",
     "Brook",
