@@ -7,10 +7,14 @@
 - [Faker.Address.It](lib/faker/address/it.ex)
 - [Faker.Address.PtBr](lib/faker/address/pt_br.ex)
 - [Faker.Address.Ru](lib/faker/address/ru.ex)
+- [Faker.Airports](lib/faker/airports.ex)
+- [Faker.Airports.En](lib/faker/airports/en.ex)
+- [Faker.Airports.PtBr](lib/faker/airports/pt_br.ex)
 - [Faker.App](lib/faker/app.ex)
 - [Faker.Avatar](lib/faker/avatar.ex)
 - [Faker.Aws.En](lib/faker/aws/en.ex)
 - [Faker.Aws.Fr](lib/faker/aws/fr.ex)
+- [Faker.Aws.PtBr](lib/faker/aws/pt_br.ex)
   <!-- B -->
 - [Faker.Beer](lib/faker/beer.ex)
 - [Faker.Beer.En](lib/faker/beer/en.ex)
@@ -21,6 +25,7 @@
 - [Faker.Cannabis.En](lib/faker/cannabis/en.ex)
 - [Faker.Cat](lib/faker/cat.ex)
 - [Faker.Cat.En](lib/faker/cat/en.ex)
+- [Faker.Cat.PtBr](lib/faker/cat/pt_br.ex)
 - [Faker.Code](lib/faker/code.ex)
 - [Faker.Color](lib/faker/color.ex)
 - [Faker.Color.De](lib/faker/color/de.ex)
@@ -33,6 +38,7 @@
 - [Faker.Commerce](lib/faker/commerce.ex)
 - [Faker.Commerce.En](lib/faker/commerce/en.ex)
 - [Faker.Commerce.Hy](lib/faker/commerce/hy.ex)
+- [Faker.Commerce.PtBr](lib/faker/commerce/pt_br.ex)
 - [Faker.Company](lib/faker/company.ex)
 - [Faker.Company.En](lib/faker/company/en.ex)
 - [Faker.Company.Hy](lib/faker/company/hy.ex)
@@ -40,6 +46,7 @@
   <!-- D -->
 - [Faker.Date](lib/faker/date.ex)
 - [Faker.DateTime](lib/faker/datetime.ex)
+- [Faker.Dog.PtBr](lib/faker/dog/pt_br.ex)
   <!-- E -->
   <!-- F -->
 - [Faker.File](lib/faker/file.ex)
@@ -48,6 +55,7 @@
 - [Faker.Food](lib/faker/food.ex)
 - [Faker.Food.En](lib/faker/food/en.ex)
 - [Faker.Food.Hy](lib/faker/food/hy.ex)
+- [Faker.Fruit.PtBr](lib/faker/fruit/pt_br.ex)
   <!-- G -->
 - [Faker.Gov.Us](lib/faker/gov/us.ex)
 - [Faker.Gov.It](lib/faker/gov/it.ex)
@@ -62,6 +70,7 @@
 - [Faker.Internet.Hy](lib/faker/internet/hy.ex)
 - [Faker.Internet.It](lib/faker/internet/it.ex)
 - [Faker.Internet.PtBr](lib/faker/internet/pt_br.ex)
+- [Faker.Internet.StatusCode](lib/faker/internet/status_code.ex)
 - [Faker.Internet.UserAgent](lib/faker/internet/user_agent.ex)
   <!-- J -->
   <!-- K -->
@@ -71,6 +80,7 @@
 - [Faker.Lorem.Shakespeare.En](lib/faker/lorem/shakespeare/en.ex)
 - [Faker.Lorem.Shakespeare.Ru](lib/faker/lorem/shakespeare/ru.ex)
   <!-- M -->
+- [Faker.Markdown](lib/faker/markdown.ex)
   <!-- N -->
 - [Faker.NaiveDateTime](lib/faker/naivedatetime.ex)
 - [Faker.Nato](lib/faker/nato.ex)
@@ -86,6 +96,7 @@
 - [Faker.Phone.EnUs](lib/faker/phone/en_us.ex)
 - [Faker.Phone.EnGb](lib/faker/phone/en_gb.ex)
 - [Faker.Phone.Hy](lib/faker/phone/hy.ex)
+- [Faker.Phone.PtBr](lib/faker/phone/pt_br.ex)
 - [Faker.Pizza](lib/faker/pizza.ex)
 - [Faker.Pokemon](lib/faker/pokemon.ex)
 - [Faker.Pokemon.En](lib/faker/pokemon/en.ex)

@@ -6,11 +6,11 @@ defmodule Faker.AvatarTest do
   doctest Faker.Avatar
 
   test "image_url/0" do
-    assert String.starts_with?(image_url(), "http://robohash.org/")
+    assert String.starts_with?(image_url(), "https://robohash.org/")
   end
 
   test "image_url/1" do
-    assert String.starts_with?(image_url("myslug"), "http://robohash.org/")
+    assert String.starts_with?(image_url("myslug"), "https://robohash.org/")
     assert String.contains?(image_url("myslug"), "myslug")
   end
 

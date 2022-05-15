@@ -7,9 +7,67 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ## Unreleased
-- `Faker.Aws.En.s3_action/0` [[@vboivin](https://github.com/vboivin)]
-- `Faker.Aws.Fr.region_name/0` [[@vboivin](https://github.com/vboivin)]
+
 ### Added
+
+### Changed
+- `Faker.Commerce.PtBr` - add more products in product_name_product [[@igorgbr](https://github.com/igorgbr)]
+
+### Deprecated
+
+### Removed
+
+### Fixed
+- `Faker.Adress.PtBr` - fix model documentation [[@laraujo7](https://github.com/laraujo7)]
+- `Faker.Address.En/0` corrected formatting for US and Britian [[@atavistock](https://github.com/atavistock)]
+
+### Security
+
+## 0.17.0
+
+### Added
+- `Faker.Internet.StatusCode` [[@emmetreza](https://github.com/emmetreza)]
+- CI workflow using GitHub Actions [[@anthonator](https://github.com/anthonator)]
+- `Faker.Cat.PtBr` [[@f-francine](https://github.com/f-francine)]
+- `Faker.Aws.PtBr.region_name/0` [[@f-francine](https://github.com/f-francine)]
+- `Faker.Fruit.PtBr` [[@f-francine](https://github.com/f-francine)]
+- `Faker.Commerce.PtBr` [[@f-francine](https://github.com/f-francine)]
+
+### Changed
+- `Faker.Vehicles` add makes and models that are multi-word, refactor existing fns [[jersearls](https://github.com/jersearls)]
+- `Faker.Avatar` switch to `https` to prevent redirect [[igas](https://github.com/igas)]
+- Updated build badge for GitHub Actions [[@anthonator](https://github.com/anthonator)]
+
+### Deprecated
+
+### Removed
+- Travis CI for CI workflow [[@anthonator](https://github.com/anthonator)]
+
+### Fixed
+
+- `Faker.Team` `creature/0` and `name/0` documentation examples fixed [[@yuriploc](https://github.com/yuriploc)]
+- Fix bidirectional formatting [[@MichalDolata](https://github.com/MichalDolata)]
+- Extra split for Virgin Islands in the country sampler [[intercaetera](https://github.com/intercaetera)]
+### Security
+
+## 0.16.0
+
+### Added
+
+- `Faker.Markdown` [[techgaun](https://github.com/techgaun)]
+- `Faker.Aws.En.rds_action/0` [[@vboivin](https://github.com/vboivin)]
+- `Faker.Aws.En.ec2_action/0` [[@vboivin](https://github.com/vboivin)]
+- `Faker.Aws.En.s3_action/0` [[@vboivin](https://github.com/vboivin)]
+- `Faker.Aws.Fr.region_name/0` [[@vboivin](https://github.com/vboivin)
+- `Faker.Aws.PtPt.region_name/0` [[@rubenandre](https://github.com/rubenandre)]
+- `Faker.Phone.PtPt.number/0` [[@rubenandre](https://github.com/rubenandre)]
+- `Faker.Phone.PtPt.landline_number/0` [[@rubenandre](https://github.com/rubenandre)]
+- `Faker.Phone.PtPt.cell_number/0` [[@rubenandre](https://github.com/rubenandre)]
+- `Faker.Aws.Fr.region_name/0` [[@vboivin](https://github.com/vboivin)]
+- `Faker.String.naughty/0` [[@Cantido][https://github.com/Cantido]]
+- `Faker.Airports.icao/0` [[@brunohkbx](https://github.com/brunohkbx)]
+- `Faker.Airports.iata/0` [[@brunohkbx](https://github.com/brunohkbx)]
+- `Faker.Airports.En.name/0` [[@brunohkbx](https://github.com/brunohkbx)]
 
 ### Changed
 
@@ -29,6 +87,9 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 - `Faker.Gov.Us.ein/0` [[@artkay](https://github.com/artkay)]
 - `Faker.Currency.code/0` and `Faker.Currency.symbol/0` [[@brunohkbx](https://github.com/brunohkbx)]
 - `Faker.Address.PtBr` [[@hiagomeels](https://github.com/hiagomeels)]
+- Elixir 1.11 support [[@igas](https://github.com/igas)]
+- `Faker.Dog.PtBr`[[@caiaffa](https://github.com/caiaffa)]
+- `Faker.Airports.PtBr`[[@caiaffa](https://github.com/caiaffa)]
 
 ### Changed
 
@@ -58,6 +119,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 - `Faker.Gov.It` [[@neslinesli93](https://github.com/neslinesli93)]
 - `Faker.Vehicle.model/1` [[@daytonn](https://github.com/daytonn)]
 - `Faker.Person`[[@anthonator](https://github.com/anthonator)]
+- `Faker.Phone.PtBr`[[@netond](https://github.com/netond)]
 
 ### Changed
 - Fix `Faker.Code.Iban.iban` and `Faker.Gov.It.fiscal_id` doctests [[@vbrazo](https://github.com/vbrazo)]
@@ -74,7 +136,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 ### Removed
 
 - Remove extra doctests in `Faker.Nato.format` [[@vbrazo](https://github.com/vbrazo)]
-- gitlab CI [[@igas][]]
+- GitLab CI [[@igas][]]
 - Elixir 1.4 and 1.5 support
 
 ### Fixed
@@ -194,7 +256,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 ### Changed
 
 - Remove `'` and `"` from generated names in `Faker::Internet` [[@vbrazo](https://github.com/vbrazo)]
-- Codebase been reformated with elixir formatter [[@vbrazo](https://github.com/vbrazo)] and [[@igas](https://igas.me)]
+- Codebase been reformatted with elixir formatter [[@vbrazo](https://github.com/vbrazo)] and [[@igas](https://igas.me)]
 - Documentation moved to hexdocs.pm [[@MarcusSky](https://github.com/MarcusSky)], [[@vbrazo](https://github.com/vbrazo)], and [[@igas](https://igas.me)]
 - Updated dependencies [[@igas](https://igas.me)]
 
@@ -230,7 +292,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 - `Faker.Date.date_of_birth/0` and `Faker.Date.date_of_birth/1` returning wrong result [[@stfnsr](https://github.com/stfnsr)]
 - Usage.md reorganisation [[@orieken](https://github.com/orieken)]
 - Documentation for `Faker.Beer` [[@bcat-eu](https://github.com/bcat-eu)]
-- Fix pokemon name - Mr. Mime :) [[@leveloid](https://github.com/leveloid)]
+- Fix Pokemon name - Mr. Mime :) [[@leveloid](https://github.com/leveloid)]
 - Gov.Us deprecations [[@halfdan](https://github.com/halfdan)]
 
 ## 0.9.0
@@ -270,7 +332,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Changed
 
-- Underlaying data structure changed to maps to improve performance [[@igas](https://igas.me)]
+- Underlying data structure changed to maps to improve performance [[@igas](https://igas.me)]
 - Improved `Faker.Beer` usage [[@tbash](https://github.com/tbash)]
 
 ### Removed

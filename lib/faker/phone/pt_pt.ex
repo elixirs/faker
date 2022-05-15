@@ -16,6 +16,8 @@ defmodule Faker.Phone.PtPt do
       "919999999"
       iex> Faker.Phone.PtPt.number()
       "234999999"
+      iex> Faker.Phone.PtPt.number()
+      "939999999"
   """
 
   @spec number() :: String.t()
@@ -40,7 +42,11 @@ defmodule Faker.Phone.PtPt do
       iex> Faker.Phone.PtPt.landline_number()
       "299999999"
       iex> Faker.Phone.PtPt.landline_number()
+      "299999998"
+      iex> Faker.Phone.PtPt.landline_number()
       "399999999"
+      iex> Faker.Phone.PtPt.landline_number()
+      "399999998"
   """
 
   @spec landline_number() :: String.t()
@@ -62,6 +68,10 @@ defmodule Faker.Phone.PtPt do
 
       iex> Faker.Phone.PtPt.cell_number()
       "919999999"
+      iex> Faker.Phone.PtPt.cell_number()
+      "929999999"
+      iex> Faker.Phone.PtPt.cell_number()
+      "939999999"
       iex> Faker.Phone.PtPt.cell_number()
       "969999999"
   """

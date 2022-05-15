@@ -120,13 +120,13 @@ defmodule Faker.Address.En do
   ## Examples
 
       iex> Faker.Address.En.country()
-      "China"
+      "Guinea-Bissau"
       iex> Faker.Address.En.country()
-      "Macedonia"
+      "Tuvalu"
       iex> Faker.Address.En.country()
-      "China"
+      "Portugal"
       iex> Faker.Address.En.country()
-      "Venezuela"
+      "United Arab Emirates"
   """
   @spec country() :: String.t()
   sampler(:country, [
@@ -368,10 +368,8 @@ defmodule Faker.Address.En do
     "Vanuatu",
     "Venezuela",
     "Vietnam",
-    "'Virgin Islands",
-    "British'",
-    "'Virgin Islands",
-    "U.S.'",
+    "Virgin Islands, British",
+    "Virgin Islands, U.S.",
     "Wallis and Futuna",
     "Western Sahara",
     "Yemen",
@@ -810,17 +808,17 @@ defmodule Faker.Address.En do
   ## Examples
 
       iex> Faker.Address.En.street_address()
-      "Elizabeth Freeway 2"
+      "15426 Padberg Mews"
       iex> Faker.Address.En.street_address()
-      "Conor Motorway 0832"
+      "83297 Jana Spring"
       iex> Faker.Address.En.street_address()
-      "Rau Crest 23570"
+      "57 Legros Cletus Field"
       iex> Faker.Address.En.street_address()
-      "Schimmel Field 32097"
+      "32097 Brekke Ladarius Turnpike"
   """
   @spec street_address() :: String.t()
   def street_address do
-    "#{street_name()} #{building_number()}"
+    "#{building_number()} #{street_name()}"
   end
 
   @doc """
@@ -829,16 +827,16 @@ defmodule Faker.Address.En do
   ## Examples
 
       iex> Faker.Address.En.street_address(true)
-      "Elizabeth Freeway 2 Apt. 461"
+      "15426 Padberg Mews, Apt. 832"
       iex> Faker.Address.En.street_address(false)
-      "Bianka Heights 970"
+      "7 Jana Spring"
       iex> Faker.Address.En.street_address(true)
-      "Crooks Thomas Spur 020 Suite 032"
+      "57 Legros Cletus Field, Apt. 320"
       iex> Faker.Address.En.street_address(false)
-      "Johann Gardens 37"
+      "7 Brekke Ladarius Turnpike"
   """
   @spec street_address(true | any) :: String.t()
-  def street_address(true), do: street_address() <> " " <> secondary_address()
+  def street_address(true), do: street_address() <> ", " <> secondary_address()
   def street_address(_), do: street_address()
 
   @doc """
