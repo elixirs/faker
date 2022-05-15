@@ -16,7 +16,9 @@ defmodule Faker.Vehicle.En do
     "Lincoln",
     "Buick",
     "Honda",
-    "Nissan"
+    "Nissan",
+    "Mercedes-Benz",
+    "Aston Martin"
   ]
 
   @models %{
@@ -29,7 +31,9 @@ defmodule Faker.Vehicle.En do
     "Lincoln" => ["Navigator", "MKZ", "MKX", "MKS"],
     "Buick" => ["Enclave", "Regal", "LaCrosse", "Verano", "Encore", "Riveria"],
     "Honda" => ["Accord", "Civic", "CR-V", "Odyssey"],
-    "Nissan" => ["Rogue", "Juke", "Cube", "Pathfiner", "Versa", "Altima"]
+    "Nissan" => ["Rogue", "Juke", "Cube", "Pathfinder", "Versa", "Altima"],
+    "Mercedes-Benz" => ["AMG GLB 35", "B-Class Electric Drive", "G 550 4x4 Squared"],
+    "Aston Martin" => ["DB AR1 Zagato", "DB7 Vantage", "V8 Vantage S"]
   }
 
   @trims %{
@@ -372,6 +376,13 @@ defmodule Faker.Vehicle.En do
     "Tire pressure monitoring display"
   ]
 
+  @spec all_models :: [String.t()]
+  defp all_models do
+    @models
+    |> Map.values()
+    |> Enum.concat()
+  end
+
   @doc """
   Returns a vehicle body style string
 
@@ -447,13 +458,13 @@ defmodule Faker.Vehicle.En do
   ## Examples
 
       iex> Faker.Vehicle.En.make()
-      "BMW"
-      iex> Faker.Vehicle.En.make()
-      "Audi"
+      "Lincoln"
       iex> Faker.Vehicle.En.make()
       "Dodge"
       iex> Faker.Vehicle.En.make()
-      "Ford"
+      "Chevy"
+      iex> Faker.Vehicle.En.make()
+      "Honda"
   """
   @spec make() :: String.t()
   def make do
@@ -466,18 +477,18 @@ defmodule Faker.Vehicle.En do
   ## Examples
 
       iex> Faker.Vehicle.En.make_and_model()
-      "BMW X5"
+      "Lincoln MKZ"
       iex> Faker.Vehicle.En.make_and_model()
-      "Dodge Ram"
+      "Chevy Malibu"
       iex> Faker.Vehicle.En.make_and_model()
-      "Toyota Prius"
+      "Ford Focus"
       iex> Faker.Vehicle.En.make_and_model()
       "Ford Focus"
   """
   @spec make_and_model() :: String.t()
   def make_and_model do
-    m = make()
-    "#{m} #{model(m)}"
+    make = make()
+    "#{make} #{model(make)}"
   end
 
   @doc """
@@ -486,13 +497,13 @@ defmodule Faker.Vehicle.En do
   ## Examples
 
       iex> Faker.Vehicle.En.model()
-      "CR-V"
-      iex> Faker.Vehicle.En.model()
-      "Enclave"
-      iex> Faker.Vehicle.En.model()
       "Encore"
       iex> Faker.Vehicle.En.model()
-      "Verano"
+      "S5"
+      iex> Faker.Vehicle.En.model()
+      "Fiesta"
+      iex> Faker.Vehicle.En.model()
+      "X1"
   """
   @spec model() :: String.t()
   def model do
@@ -514,15 +525,10 @@ defmodule Faker.Vehicle.En do
       iex> Faker.Vehicle.En.model("Toyota")
       "Corolla"
   """
-
   @spec model(String.t()) :: String.t()
-  def model(make) do
-    if Enum.member?(@makes, make) do
-      Util.pick(@models[make])
-    else
-      model()
-    end
-  end
+  def model(make) when make in @makes, do: Util.pick(@models[make])
+
+  def model(_make), do: model()
 
   @doc """
   Returns a vehicle make, model, and trim  string

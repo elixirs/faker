@@ -4,6 +4,7 @@ defmodule Faker.CommerceTest do
   doctest Faker.Commerce
   doctest Faker.Commerce.En
   doctest Faker.Commerce.Hy
+  doctest Faker.Commerce.PtBr
 
   test "price/0" do
     assert is_float(Faker.Commerce.price())
