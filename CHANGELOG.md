@@ -18,6 +18,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 ### Removed
 
 ### Fixed
+- `Faker.Adress.PtBr` - fix model documentation [[@laraujo7](https://github.com/laraujo7)]
 
 ### Security
 
