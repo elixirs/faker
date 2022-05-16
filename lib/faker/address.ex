@@ -82,14 +82,14 @@ defmodule Faker.Address do
 
   ## Examples
 
-      iex> Faker.Address.country()
-      "China"
-      iex> Faker.Address.country()
-      "Macedonia"
-      iex> Faker.Address.country()
-      "China"
-      iex> Faker.Address.country()
-      "Venezuela"
+      iex> Faker.Address.En.country()
+      "Guinea-Bissau"
+      iex> Faker.Address.En.country()
+      "Tuvalu"
+      iex> Faker.Address.En.country()
+      "Portugal"
+      iex> Faker.Address.En.country()
+      "United Arab Emirates"
   """
   @spec country() :: String.t()
   localize(:country)

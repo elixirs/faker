@@ -11,20 +11,45 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 ### Added
 - `Faker.Dwelling` [[@winescout](https://github.com/winescout)]
 - `Faker.Dwelling.En` [[@winescout](https://github.com/winescout)]
-- `Faker.Internet.StatusCode` [[@emmetreza](https://github.com/emmetreza)]
 
 ### Changed
-
-- `Faker.Avatar` switch to `https` to prevent redirect [[igas](https://github.com/igas)]
+- `Faker.Commerce.PtBr` - add more products in product_name_product [[@igorgbr](https://github.com/igorgbr)]
 
 ### Deprecated
 
 ### Removed
 
 ### Fixed
+- `Faker.Adress.PtBr` - fix model documentation [[@laraujo7](https://github.com/laraujo7)]
+- `Faker.Address.En/0` corrected formatting for US and Britian [[@atavistock](https://github.com/atavistock)]
+
+### Security
+
+## 0.17.0
+
+### Added
+- `Faker.Internet.StatusCode` [[@emmetreza](https://github.com/emmetreza)]
+- CI workflow using GitHub Actions [[@anthonator](https://github.com/anthonator)]
+- `Faker.Cat.PtBr` [[@f-francine](https://github.com/f-francine)]
+- `Faker.Aws.PtBr.region_name/0` [[@f-francine](https://github.com/f-francine)]
+- `Faker.Fruit.PtBr` [[@f-francine](https://github.com/f-francine)]
+- `Faker.Commerce.PtBr` [[@f-francine](https://github.com/f-francine)]
+
+### Changed
+- `Faker.Vehicles` add makes and models that are multi-word, refactor existing fns [[jersearls](https://github.com/jersearls)]
+- `Faker.Avatar` switch to `https` to prevent redirect [[igas](https://github.com/igas)]
+- Updated build badge for GitHub Actions [[@anthonator](https://github.com/anthonator)]
+
+### Deprecated
+
+### Removed
+- Travis CI for CI workflow [[@anthonator](https://github.com/anthonator)]
+
+### Fixed
 
 - `Faker.Team` `creature/0` and `name/0` documentation examples fixed [[@yuriploc](https://github.com/yuriploc)]
-
+- Fix bidirectional formatting [[@MichalDolata](https://github.com/MichalDolata)]
+- Extra split for Virgin Islands in the country sampler [[intercaetera](https://github.com/intercaetera)]
 ### Security
 
 ## 0.16.0
@@ -35,6 +60,11 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 - `Faker.Aws.En.rds_action/0` [[@vboivin](https://github.com/vboivin)]
 - `Faker.Aws.En.ec2_action/0` [[@vboivin](https://github.com/vboivin)]
 - `Faker.Aws.En.s3_action/0` [[@vboivin](https://github.com/vboivin)]
+- `Faker.Aws.Fr.region_name/0` [[@vboivin](https://github.com/vboivin)
+- `Faker.Aws.PtPt.region_name/0` [[@rubenandre](https://github.com/rubenandre)]
+- `Faker.Phone.PtPt.number/0` [[@rubenandre](https://github.com/rubenandre)]
+- `Faker.Phone.PtPt.landline_number/0` [[@rubenandre](https://github.com/rubenandre)]
+- `Faker.Phone.PtPt.cell_number/0` [[@rubenandre](https://github.com/rubenandre)]
 - `Faker.Aws.Fr.region_name/0` [[@vboivin](https://github.com/vboivin)]
 - `Faker.String.naughty/0` [[@Cantido][https://github.com/Cantido]]
 - `Faker.Airports.icao/0` [[@brunohkbx](https://github.com/brunohkbx)]
@@ -91,6 +121,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 - `Faker.Gov.It` [[@neslinesli93](https://github.com/neslinesli93)]
 - `Faker.Vehicle.model/1` [[@daytonn](https://github.com/daytonn)]
 - `Faker.Person`[[@anthonator](https://github.com/anthonator)]
+- `Faker.Phone.PtBr`[[@netond](https://github.com/netond)]
 
 ### Changed
 - Fix `Faker.Code.Iban.iban` and `Faker.Gov.It.fiscal_id` doctests [[@vbrazo](https://github.com/vbrazo)]

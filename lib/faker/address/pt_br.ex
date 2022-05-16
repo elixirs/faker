@@ -4,7 +4,7 @@ defmodule Faker.Address.PtBr do
   alias Faker.Person.PtBr
 
   @moduledoc """
-  Functions for generating addresses in Spanish
+  Functions for generating addresses in Portuguese
   """
 
   @doc """

@@ -1,0 +1,343 @@
+name: ci
+
+on: [push, pull_request]
+
+jobs:
+  credo:
+    runs-on: ${{ matrix.os || 'ubuntu-latest' }}
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/cache@v2
+
+        with:
+          key: ${{ github.job }}-${{ matrix.elixir }}-${{ matrix.otp }}-${{ hashFiles('mix.lock') }}-1
+
+          path: _build
+
+      - uses: erlef/setup-beam@v1
+
+        with:
+          elixir-version: ${{ matrix.elixir }}
+
+          otp-version: ${{ matrix.otp }}
+
+      - run: mix deps.get
+
+      - run: mix credo --strict
+
+    strategy:
+      matrix:
+        include:
+          - elixir: 1.7.x
+
+            os: ubuntu-18.04
+
+            otp: 19.x
+
+          - elixir: 1.7.x
+
+            otp: 20.x
+
+          - elixir: 1.7.x
+
+            otp: 21.x
+
+          - elixir: 1.7.x
+
+            otp: 22.x
+
+          - elixir: 1.8.x
+
+            otp: 20.x
+
+          - elixir: 1.8.x
+
+            otp: 21.x
+
+          - elixir: 1.8.x
+
+            otp: 22.x
+
+          - elixir: 1.9.x
+
+            otp: 20.x
+
+          - elixir: 1.9.x
+
+            otp: 21.x
+
+          - elixir: 1.9.x
+
+            otp: 22.x
+
+          - elixir: 1.10.x
+
+            otp: 21.x
+
+          - elixir: 1.10.x
+
+            otp: 22.x
+
+          - elixir: 1.11.x
+
+            otp: 21.x
+
+          - elixir: 1.11.x
+
+            otp: 22.x
+
+          - elixir: 1.11.x
+
+            otp: 23.x
+
+          - elixir: 1.12.x
+
+            otp: 22.x
+
+          - elixir: 1.12.x
+
+            otp: 23.x
+
+          - elixir: 1.12.x
+
+            otp: 24.x
+
+          - elixir: v1.13.x
+
+            otp: 22.x
+
+          - elixir: v1.13.x
+
+            otp: 23.x
+
+          - elixir: v1.13.x
+
+            otp: 24.x
+
+  dialyzer:
+    runs-on: ${{ matrix.os || 'ubuntu-latest' }}
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/cache@v2
+
+        with:
+          key: ${{ github.job }}-${{ matrix.elixir }}-${{ matrix.otp }}-${{ hashFiles('mix.lock') }}-1
+
+          path: _build
+
+      - uses: erlef/setup-beam@v1
+
+        with:
+          elixir-version: ${{ matrix.elixir }}
+
+          otp-version: ${{ matrix.otp }}
+
+      - run: mix deps.get
+
+      - run: mix dialyzer --halt-exit-status
+
+    strategy:
+      matrix:
+        include:
+          - elixir: 1.7.x
+
+            os: ubuntu-18.04
+
+            otp: 19.x
+
+          - elixir: 1.7.x
+
+            otp: 20.x
+
+          - elixir: 1.7.x
+
+            otp: 21.x
+
+          - elixir: 1.7.x
+
+            otp: 22.x
+
+          - elixir: 1.8.x
+
+            otp: 20.x
+
+          - elixir: 1.8.x
+
+            otp: 21.x
+
+          - elixir: 1.8.x
+
+            otp: 22.x
+
+          - elixir: 1.9.x
+
+            otp: 20.x
+
+          - elixir: 1.9.x
+
+            otp: 21.x
+
+          - elixir: 1.9.x
+
+            otp: 22.x
+
+          - elixir: 1.10.x
+
+            otp: 21.x
+
+          - elixir: 1.10.x
+
+            otp: 22.x
+
+          - elixir: 1.11.x
+
+            otp: 21.x
+
+          - elixir: 1.11.x
+
+            otp: 22.x
+
+          - elixir: 1.11.x
+
+            otp: 23.x
+
+          - elixir: 1.12.x
+
+            otp: 22.x
+
+          - elixir: 1.12.x
+
+            otp: 23.x
+
+          - elixir: 1.12.x
+
+            otp: 24.x
+
+          - elixir: v1.13.x
+
+            otp: 22.x
+
+          - elixir: v1.13.x
+
+            otp: 23.x
+
+          - elixir: v1.13.x
+
+            otp: 24.x
+
+  test:
+    runs-on: ${{ matrix.os || 'ubuntu-latest' }}
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/cache@v2
+
+        with:
+          key: ${{ github.job }}-${{ matrix.elixir }}-${{ matrix.otp }}-${{ hashFiles('mix.lock') }}-1
+
+          path: _build
+
+      - uses: erlef/setup-beam@v1
+
+        with:
+          elixir-version: ${{ matrix.elixir }}
+
+          otp-version: ${{ matrix.otp }}
+
+      - run: mix deps.get
+
+      - run: mix test
+
+    strategy:
+      matrix:
+        include:
+          - elixir: 1.7.x
+
+            os: ubuntu-18.04
+
+            otp: 19.x
+
+          - elixir: 1.7.x
+
+            otp: 20.x
+
+          - elixir: 1.7.x
+
+            otp: 21.x
+
+          - elixir: 1.7.x
+
+            otp: 22.x
+
+          - elixir: 1.8.x
+
+            otp: 20.x
+
+          - elixir: 1.8.x
+
+            otp: 21.x
+
+          - elixir: 1.8.x
+
+            otp: 22.x
+
+          - elixir: 1.9.x
+
+            otp: 20.x
+
+          - elixir: 1.9.x
+
+            otp: 21.x
+
+          - elixir: 1.9.x
+
+            otp: 22.x
+
+          - elixir: 1.10.x
+
+            otp: 21.x
+
+          - elixir: 1.10.x
+
+            otp: 22.x
+
+          - elixir: 1.11.x
+
+            otp: 21.x
+
+          - elixir: 1.11.x
+
+            otp: 22.x
+
+          - elixir: 1.11.x
+
+            otp: 23.x
+
+          - elixir: 1.12.x
+
+            otp: 22.x
+
+          - elixir: 1.12.x
+
+            otp: 23.x
+
+          - elixir: 1.12.x
+
+            otp: 24.x
+
+          - elixir: v1.13.x
+
+            otp: 22.x
+
+          - elixir: v1.13.x
+
+            otp: 23.x
+
+          - elixir: v1.13.x
+
+            otp: 24.x
