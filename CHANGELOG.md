@@ -9,6 +9,8 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 ## Unreleased
 
 ### Added
+- `Faker.Tolkien` [[@mathisto](https://github.com/mathisto)]
+- `Faker.Tolkien.En` [[@mathisto](https://github.com/mathisto)]
 
 ### Changed
 - `Faker.Commerce.PtBr` - add more products in product_name_product [[@igorgbr](https://github.com/igorgbr)]
