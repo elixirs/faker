@@ -272,4 +272,12 @@ defmodule Faker.Util do
       _ -> raise "Rule #{rule_key} not found or not a function"
     end
   end
+
+  def transform_into_map(data) do
+    count = Enum.count(data)
+
+    mapped_data = data |> Enum.with_index() |> Enum.into(%{}, fn {k, v} -> {v, k} end)
+
+    {mapped_data, count}
+  end
 end

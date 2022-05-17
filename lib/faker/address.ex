@@ -94,6 +94,9 @@ defmodule Faker.Address do
   @spec country() :: String.t()
   localize(:country)
 
+  @spec country_test() :: String.t()
+  localize(:country_test)
+
   @doc """
   Return country code.
 

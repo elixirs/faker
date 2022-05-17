@@ -44,7 +44,9 @@ defmodule Faker.Mixfile do
       {:ex_doc, ">= 0.0.0", only: :dev, runtime: false},
       {:earmark, ">= 0.0.0", only: :dev, runtime: false},
       {:credo, ">= 0.0.0", only: [:dev, :test], runtime: false},
-      {:dialyxir, "~> 1.0", only: [:dev], runtime: false}
+      {:dialyxir, "~> 1.0", only: [:dev], runtime: false},
+      {:benchee, "~> 1.0", only: :dev, runtime: false},
+      {:benchee_html, "~> 1.0", only: :dev, runtime: false }
     ]
   end
 
@@ -61,9 +63,9 @@ defmodule Faker.Mixfile do
   defp package do
     %{
       maintainers: ["Anthony Smith", "Igor Kapkov", "Toby Hinloopen", "Vitor Oliveira"],
-      files: ["lib", "mix.exs", "mix.lock", "README.md", "LICENSE", "CHANGELOG.md"],
+      files: ["lib", "mix.exs", "mix.lock", "README.md", "LICENSE", "CHANGELOG.md", "priv/data"],
       licenses: ["MIT"],
-      links: %{"GitHub" => @source_url}
+      links: %{"GitHub" => @source_url},
     }
   end
 end

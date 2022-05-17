@@ -1,5 +1,5 @@
 defmodule Faker.Address.En do
-  import Faker, only: [sampler: 2]
+  import Faker, only: [sampler: 2, sampler_test: 2]
 
   alias Faker.Person
 
@@ -128,6 +128,10 @@ defmodule Faker.Address.En do
       iex> Faker.Address.En.country()
       "United Arab Emirates"
   """
+
+  @spec country_test() :: String.t()
+  sampler_test(:country_test, "priv/data/address/countries/en.txt")
+
   @spec country() :: String.t()
   sampler(:country, [
     "Afghanistan",

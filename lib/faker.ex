@@ -88,6 +88,11 @@ defmodule Faker do
     Application.get_env(:faker, :country)
   end
 
+  @spec country_test() :: atom
+  def country_test do
+    Application.get_env(:faker, :country_test)
+  end
+
   @doc """
   Sets application locale.
   """
@@ -147,6 +152,24 @@ defmodule Faker do
   end
 
   defmacro sampler(name, data) do
+    count = Enum.count(data)
+
+    mapped_data =
+      data |> Enum.with_index() |> Enum.into(%{}, fn {k, v} -> {v, k} end) |> Macro.escape()
+
+    quote do
+      def unquote(name)() do
+        unquote(mapped_data)
+        |> Map.get(Faker.random_between(0, unquote(count - 1)))
+      end
+    end
+  end
+
+  defmacro sampler_test(name, file) do
+    data =
+      File.read!(file)
+        |> String.split("\n")
+
     count = Enum.count(data)
 
     mapped_data =
