@@ -1,101 +1,95 @@
-defmodule Faker.Fruit.PtBr do
+defmodule Faker.Fruit.En do
   import Faker, only: [sampler: 2]
 
   @moduledoc """
-  Functions for fruit data in Brazilian Portuguese.
+  Functions for fruit data in English.
   """
 
   @doc """
   Returns a fruit.
   ## Examples
-      iex> Faker.Fruit.PtBr.fruit
-      "Fruta-do-conde"
-      iex> Faker.Fruit.PtBr.fruit
-      "Bergamota"
-      iex> Faker.Fruit.PtBr.fruit
-      "Quixaba"
-      iex> Faker.Fruit.PtBr.fruit
-      "Amora"
+      iex> Faker.Fruit.En.fruit
+      "Orange"
+      iex> Faker.Fruit.En.fruit
+      "Blackberry"
+      iex> Faker.Fruit.En.fruit
+      "Banana"
+      iex> Faker.Fruit.En.fruit
+      "Cherry"
   """
   @spec fruit() :: String.t()
   sampler(:fruit, [
-    "Abacaxi",
-    "Ananá",
-    "Amora",
-    "Açaí",
-    "Abacate",
-    "Acerola",
-    "Ameixa",
-    "Ackee",
-    "Araticum",
-    "Araçá",
+    "Apple",
+    "Apricot",
+    "Avocado",
     "Banana",
-    "Bergamota",
-    "Baru",
-    "Bacuri",
-    "Bacuripari",
-    "Babaçu",
-    "Butiá",
-    "Coco",
-    "Cereja",
-    "Caju",
-    "Caqui",
+    "Black currant",
+    "Blackberry",
+    "Blueberry",
     "Carambola",
-    "Cupuaçu",
-    "Ciriguela",
-    "Cacau",
-    "Damasco",
-    "Dendê",
-    "Esfregadinha",
-    "Escropari",
-    "Framboesa",
-    "Fruta-do-conde",
-    "Figo",
+    "Cashew apple",
+    "Cherry",
+    "Cloudberry",
+    "Coconut",
+    "Cranberry",
+    "Custard apple",
+    "Damson","Dates",
+    "Dragonfruit",
+    "Elderberry",
+    "Fig",
     "Feijoa",
-    "Fruta-pão",
-    "Goiaba",
-    "Graviola",
-    "Groselha",
-    "Guaraná",
-    "Guabiroba",
-    "Hilocéreo",
-    "Imbu",
-    "Jenipapo",
-    "Jabuticaba",
-    "Jaca",
-    "Jambo",
-    "Jamelão",
-    "Jatobá",
+    "Goji berry",
+    "Grapes",
+    "Grapefruit",
+    "Grewia",
+    "Guava",
+    "Hanepoot",
+    "Huckleberry",
+    "Jackfruit",
+    "Jamun",
+    "Jicama",
+    "Jujube",
+    "Kiwano",
     "Kiwi",
-    "Limão",
-    "Laranja",
-    "Lima",
-    "Mamão",
-    "Maçã",
-    "Manga",
-    "Morango",
-    "Mertilo",
-    "Maracujá",
-    "Melão",
-    "Melancia",
-    "Mexirica",
-    "Necatarina",
-    "Noz-pecã",
-    "Pera",
-    "Pêssego",
-    "Pitanga",
-    "Pitaia",
-    "Pitomba",
-    "Pequi",
-    "Quina",
-    "Quixaba",
-    "Romã",
-    "Seriguela",
-    "Tangerina",
-    "Tâmara",
-    "Tucumã",
-    "Uva",
-    "Xixá",
-    "Zimbro"
+    "Lemon",
+    "Longan",
+    "Loquat",
+    "Lychee",
+    "Mango",
+    "Malay apple",
+    "Melon",
+    "Monk fruit",
+    "Mulberry",
+    "Muskmelon",
+    "Nance",
+    "Olive",
+    "Orange",
+    "Palm fruit",
+    "Papaya",
+    "Passion fruit",
+    "Peach",
+    "Pear",
+    "Persimmon",
+    "Pineapple",
+    "Plum",
+    "Pomegranate",
+    "Prickly pear",
+    "Pumpkin",
+    "Quince",
+    "Raspberry",
+    "Red currant",
+    "Sapodilla",
+    "Satsuma",
+    "Shaddock",
+    "Soursop",
+    "Spanish cherry",
+    "Strawberry",
+    "Sugarcane",
+    "Surinam cherry",
+    "Sweet lemon",
+    "Tamarillo",
+    "Tamarind",
+    "Tangerine",
+    "Watermelon"
   ])
 end
