@@ -15,7 +15,7 @@ defmodule Faker.Fruit.En do
       iex> Faker.Fruit.En.fruit
       "Pineapple"
       iex> Faker.Fruit.En.fruit
-      "Cherry"
+      "Lemon"
   """
   @spec fruit() :: String.t()
   sampler(:fruit, [
