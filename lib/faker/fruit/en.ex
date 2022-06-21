@@ -33,7 +33,7 @@ defmodule Faker.Fruit.En do
     "Coconut",
     "Cranberry",
     "Custard apple",
-    "Damson","Dates",
+    "Damson",
     "Dragonfruit",
     "Elderberry",
     "Fig",
