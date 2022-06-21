@@ -197,9 +197,9 @@ defmodule Faker.Internet do
       iex> Faker.Internet.image_url()
       "https://placekitten.com/554/554"
       iex> Faker.Internet.image_url()
-      "https://placehold.it/936x936"
+      "https://picsum.photos/936"
       iex> Faker.Internet.image_url()
-      "https://placehold.it/541x541"
+      "https://picsum.photos/541"
   """
   @spec image_url() :: String.t()
   def image_url, do: image_url(Faker.random_between(0, 2))
@@ -211,7 +211,7 @@ defmodule Faker.Internet do
 
   defp image_url(1) do
     size = Faker.random_between(10, 1024)
-    "https://placehold.it/#{size}x#{size}"
+    "https://picsum.photos/#{size}"
   end
 
   defp image_url(2) do
