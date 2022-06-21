@@ -81,7 +81,7 @@ defmodule Faker.Fruit.PtBr do
     "Melão",
     "Melancia",
     "Mexirica",
-    "Necatarina",
+    "Nectarina",
     "Noz-pecã",
     "Pera",
     "Pêssego",
