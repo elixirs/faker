@@ -9,7 +9,7 @@ defmodule Faker.Fruit.En do
   Returns a fruit.
   ## Examples
       iex> Faker.Fruit.En.fruit
-      "Orange"
+      "Kiwano"
       iex> Faker.Fruit.En.fruit
       "Blackberry"
       iex> Faker.Fruit.En.fruit
