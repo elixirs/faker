@@ -13,7 +13,7 @@ defmodule Faker.Fruit.En do
       iex> Faker.Fruit.En.fruit
       "Sugarcane"
       iex> Faker.Fruit.En.fruit
-      "Banana"
+      "Pineapple"
       iex> Faker.Fruit.En.fruit
       "Cherry"
   """
