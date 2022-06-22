@@ -29,7 +29,7 @@ defmodule Faker.Vehicle.En do
     "Ford" => ["Mustang", "F-150", "Focus", "Fiesta"],
     "Dodge" => ["Ram", "Challenger", "Charger", "Durango"],
     "Lincoln" => ["Navigator", "MKZ", "MKX", "MKS"],
-    "Buick" => ["Enclave", "Regal", "LaCrosse", "Verano", "Encore", "Riveria"],
+    "Buick" => ["Enclave", "Regal", "LaCrosse", "Verano", "Encore", "Riviera"],
     "Honda" => ["Accord", "Civic", "CR-V", "Odyssey"],
     "Nissan" => ["Rogue", "Juke", "Cube", "Pathfinder", "Versa", "Altima"],
     "Mercedes-Benz" => ["AMG GLB 35", "B-Class Electric Drive", "G 550 4x4 Squared"],
