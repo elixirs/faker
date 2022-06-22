@@ -26,7 +26,7 @@ defmodule Faker.Vehicle.En do
     "Audi" => ["A4", "A5", "S5", "A7", "A8"],
     "Toyota" => ["Prius", "Camry", "Corolla"],
     "Chevrolet" => ["Camaro", "Silverado", "Malibu"],
-    "Ford" => ["Mustang", "F150", "Focus", "Fiesta"],
+    "Ford" => ["Mustang", "F-150", "Focus", "Fiesta"],
     "Dodge" => ["Ram", "Challenger", "Charger", "Durango"],
     "Lincoln" => ["Navigator", "MKZ", "MKX", "MKS"],
     "Buick" => ["Enclave", "Regal", "LaCrosse", "Verano", "Encore", "Riveria"],
