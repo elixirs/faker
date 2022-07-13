@@ -130,6 +130,20 @@ defmodule Faker do
     Application.get_env(:faker, :random_module).random_bytes(total)
   end
 
+  @doc """
+  Returns a random boolean.
+
+  ## Examples
+
+      iex> boolean()
+      true
+
+      iex> boolean()
+      false
+  """
+  @spec boolean() :: boolean()
+  def boolean, do: Enum.random([true, false])
+
   defmacro localize(function) do
     quote do
       def unquote(function)() do
