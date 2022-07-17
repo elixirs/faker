@@ -15,6 +15,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 - `Faker.Commerce.PtBr` - add more products in product_name_product [[@igorgbr](https://github.com/igorgbr)]
 - `Faker.Fruits.PtBr` - fix typo in nectarina [[@KevinDaSilvaS](https://github.com/KevinDaSilvaS)]
 - `Faker.Internet.image_url/0` - switched unresponsive placeholder.it with picsum.photos [[@almirsarajcic](https://github.com/almirsarajcic)]
+- `Faker.Vehicle.En` - fix spelling of some common makes/models [[@nskins](https://github.com/nskins)]
 
 ### Deprecated
 

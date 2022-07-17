@@ -10,7 +10,7 @@ defmodule Faker.Vehicle.En do
     "BMW",
     "Audi",
     "Toyota",
-    "Chevy",
+    "Chevrolet",
     "Ford",
     "Dodge",
     "Lincoln",
@@ -25,11 +25,11 @@ defmodule Faker.Vehicle.En do
     "BMW" => ["328i", "M3", "M5", "X1", "X3", "X5"],
     "Audi" => ["A4", "A5", "S5", "A7", "A8"],
     "Toyota" => ["Prius", "Camry", "Corolla"],
-    "Chevy" => ["Camero", "Silverado", "Malibu"],
-    "Ford" => ["Mustang", "F150", "Focus", "Fiesta"],
+    "Chevrolet" => ["Camaro", "Silverado", "Malibu"],
+    "Ford" => ["Mustang", "F-150", "Focus", "Fiesta"],
     "Dodge" => ["Ram", "Challenger", "Charger", "Durango"],
     "Lincoln" => ["Navigator", "MKZ", "MKX", "MKS"],
-    "Buick" => ["Enclave", "Regal", "LaCrosse", "Verano", "Encore", "Riveria"],
+    "Buick" => ["Enclave", "Regal", "LaCrosse", "Verano", "Encore", "Riviera"],
     "Honda" => ["Accord", "Civic", "CR-V", "Odyssey"],
     "Nissan" => ["Rogue", "Juke", "Cube", "Pathfinder", "Versa", "Altima"],
     "Mercedes-Benz" => ["AMG GLB 35", "B-Class Electric Drive", "G 550 4x4 Squared"],
@@ -352,7 +352,7 @@ defmodule Faker.Vehicle.En do
       iex> Faker.Vehicle.En.make()
       "Dodge"
       iex> Faker.Vehicle.En.make()
-      "Chevy"
+      "Chevrolet"
       iex> Faker.Vehicle.En.make()
       "Honda"
   """
@@ -369,7 +369,7 @@ defmodule Faker.Vehicle.En do
       iex> Faker.Vehicle.En.make_and_model()
       "Lincoln MKZ"
       iex> Faker.Vehicle.En.make_and_model()
-      "Chevy Malibu"
+      "Chevrolet Malibu"
       iex> Faker.Vehicle.En.make_and_model()
       "Ford Focus"
       iex> Faker.Vehicle.En.make_and_model()

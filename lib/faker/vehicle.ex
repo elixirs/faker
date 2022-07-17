@@ -65,7 +65,7 @@ defmodule Faker.Vehicle do
       iex> Faker.Vehicle.make()
       "Dodge"
       iex> Faker.Vehicle.make()
-      "Chevy"
+      "Chevrolet"
       iex> Faker.Vehicle.make()
       "Honda"
   """
@@ -80,7 +80,7 @@ defmodule Faker.Vehicle do
       iex> Faker.Vehicle.make_and_model()
       "Lincoln MKZ"
       iex> Faker.Vehicle.make_and_model()
-      "Chevy Malibu"
+      "Chevrolet Malibu"
       iex> Faker.Vehicle.make_and_model()
       "Ford Focus"
       iex> Faker.Vehicle.make_and_model()
