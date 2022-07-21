@@ -188,7 +188,7 @@ defmodule Faker.Currency do
     "ZAR",
     "ZAR",
     "ZAR",
-    "ZMK",
+    "ZMW",
     "ZWL"
   ])
 
