@@ -13,11 +13,11 @@ defmodule Faker.Currency do
       iex> Faker.Currency.code()
       "WST"
       iex> Faker.Currency.code()
-      "SYP"
+      "UYU"
       iex> Faker.Currency.code()
       "CRC"
       iex> Faker.Currency.code()
-      "ALL"
+      "DOP"
   """
   @spec code() :: String.t()
   sampler(:code, [
@@ -166,7 +166,7 @@ defmodule Faker.Currency do
     "UZS",
     "VEF",
     "VND",
-    "VUV",
+    "CRC",
     "WST",
     "XAF",
     "XAG",
