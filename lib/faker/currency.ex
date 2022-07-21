@@ -82,7 +82,6 @@ defmodule Faker.Currency do
     "IDR",
     "ILS",
     "INR",
-    "INR",
     "IQD",
     "IRR",
     "ISK",
@@ -185,8 +184,6 @@ defmodule Faker.Currency do
     "XPT",
     "XTS",
     "YER",
-    "ZAR",
-    "ZAR",
     "ZAR",
     "ZMW",
     "ZWL"
