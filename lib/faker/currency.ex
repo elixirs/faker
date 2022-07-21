@@ -43,7 +43,7 @@ defmodule Faker.Currency do
     "BRL",
     "BSD",
     "BWP",
-    "BYR",
+    "BYN",
     "BZD",
     "CAD",
     "CDF",
