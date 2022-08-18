@@ -8,4 +8,5 @@ defmodule Faker.AddressTest do
   doctest Faker.Address.It
   doctest Faker.Address.PtBr
   doctest Faker.Address.Ru
+  doctest Faker.Address.Uk
 end
