@@ -10,6 +10,8 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Added
 - `Faker.Fruits.En` - add english fruits [[@KevinDaSilvaS](https://github.com/KevinDaSilvaS)]
+- `Faker.Vine` - add vines [[@dominicbachmann](https://github.com/dominicbachmann)]
+- `Faker.Vine.En` - add english vines [[@dominicbachmann](https://github.com/dominicbachmann)]
 
 ### Changed
 - `Faker.Commerce.PtBr` - add more products in product_name_product [[@igorgbr](https://github.com/igorgbr)]
