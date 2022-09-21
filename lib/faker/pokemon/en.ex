@@ -984,7 +984,26 @@ defmodule Faker.Pokemon.En do
     "Togedemaru-totem",
     "Necrozma-dusk",
     "Necrozma-dawn",
-    "Necrozma-ultra"
+    "Necrozma-ultra",
+    "Rillaboom",
+    "Cinderace",
+    "Inteleon",
+    "Corviknight",
+    "Eldegoss",
+    "Wooloo",
+    "Dubwool",
+    "Drednaw",
+    "Cramorant",
+    "Grimmsnarl",
+    "Obstagoon",
+    "Sirfetch'd",
+    "Alcremie",
+    "Zarude",
+    "Regieleki",
+    "Urshifu",
+    "Zacian",
+    "Zamazenta",
+    "Dragapult"
   ])
 
   @doc """
