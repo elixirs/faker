@@ -272,4 +272,40 @@ defmodule Faker.Util do
       _ -> raise "Rule #{rule_key} not found or not a function"
     end
   end
+
+  @doc """
+  Uniquify a list of strings adding an index to each subsequent duplicate.
+
+  ## Examples
+
+      iex> Faker.Util.uniquify(["a", "b", "b", "b", "c", "d", "d", "b"])
+      ["a", "b", "b2", "b3", "c", "d", "d2", "b4"]
+
+  """
+  @spec uniquify(list) :: list
+  def uniquify(enumerable) when is_list(enumerable) do
+    uniq_list(enumerable, %{})
+  end
+
+  def uniquify(enumerable) do
+    raise("Expected a list of strings, received #{inspect(enumerable)}")
+  end
+
+  defp uniq_list([head | _tail] = list, _set) when not is_binary(head) do
+    raise("Expected a list of strings, received #{inspect(list)}")
+  end
+
+  defp uniq_list([head | tail], set) do
+    value = head
+
+    case set do
+      %{^value => count} ->
+        uniq_list(["#{value}#{count + 1}" | tail], Map.put(set, value, count + 1))
+
+      %{} ->
+        [head | uniq_list(tail, Map.put(set, value, 1))]
+    end
+  end
+
+  defp uniq_list([], _set), do: []
 end
