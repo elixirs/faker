@@ -13,9 +13,9 @@ defmodule Faker.Avatar do
       iex> Faker.Avatar.image_url()
       "https://robohash.org/set_set1/bgset_bg2/kQqaIfGqxsjFoNIT"
       iex> Faker.Avatar.image_url()
-      "https://robohash.org/set_set2/bgset_bg2/6"
+      "https://robohash.org/set_set1/bgset_bg2/6"
       iex> Faker.Avatar.image_url()
-      "https://robohash.org/set_set2/bgset_bg2/J"
+      "https://robohash.org/set_set1/bgset_bg2/J"
       iex> Faker.Avatar.image_url()
       "https://robohash.org/set_set3/bgset_bg1/JNth88PrhGDhwp4LNQMt"
   """
@@ -25,7 +25,14 @@ defmodule Faker.Avatar do
   end
 
   @doc """
-  Return avatar url for given `slug`.
+  Return avatar url for given `slug`, `set`, and `bg`, with size `width` x `height` pixels.
+  Valid parameters are:
+
+  - `slug: string()` - slug to generate avatar image for
+  - `set: integer() | :random` - set number from 1 to 5
+  - `bg: integer() | :random` - background number from 1 to 2
+  - `width: integer()` - image width
+  - `height: integer()` - image height (defaults to `width`)
 
   ## Examples
 
@@ -37,10 +44,32 @@ defmodule Faker.Avatar do
       "https://robohash.org/plug"
       iex> Faker.Avatar.image_url('ecto')
       "https://robohash.org/ecto"
+      iex> Faker.Avatar.image_url(%{slug: 'phoenix', width: 100, set: 5})
+      "https://robohash.org/set_set5/phoenix?size=100x100"
   """
-  @spec image_url(binary) :: String.t()
-  def image_url(slug) do
-    image_url_with_opts(slug: slug, ssl: false, raw: true)
+  @spec image_url(binary | charlist | %{
+          set: integer | :random,
+          bg: integer | :random,
+          width: integer,
+          height: integer,
+          slug: String.t()
+        }) :: String.t()
+  def image_url(%{} = params) do
+    set = Map.get(params, :set)
+    set = set && "/set_set#{set}"
+    set = set == :random && set() || set
+    bg = Map.get(params, :bg)
+    bg = bg && "/bgset_bg#{bg}"
+    bg = bg == :random && bg() || bg
+    width = Map.get(params, :width)
+    height = Map.get(params, :height) || width
+    size = width && "?size=#{width}x#{height}"
+    slug = Map.get(params, :slug) || Lorem.characters(1..20)
+
+    "https://robohash.org#{set}#{bg}/#{slug}#{size}"
+  end
+  def image_url(slug) when is_binary(slug) or is_list(slug) do
+    "https://robohash.org/#{slug}"
   end
 
   @doc """
@@ -50,13 +79,13 @@ defmodule Faker.Avatar do
   ## Examples
 
       iex> Faker.Avatar.image_url(200, 200)
-      "https://robohash.org/set_set2/bgset_bg2/ppkQqaIfGqx?size=200x200"
+      "https://robohash.org/set_set3/bgset_bg2/ppkQqaIfGqx?size=200x200"
       iex> Faker.Avatar.image_url(800, 600)
-      "https://robohash.org/set_set2/bgset_bg2/oNITNnu6?size=800x600"
+      "https://robohash.org/set_set1/bgset_bg2/oNITNnu6?size=800x600"
       iex> Faker.Avatar.image_url(32, 32)
       "https://robohash.org/set_set3/bgset_bg1/J?size=32x32"
       iex> Faker.Avatar.image_url(128, 128)
-      "https://robohash.org/set_set1/bgset_bg2/JNth88PrhGDhwp4LNQMt?size=128x128"
+      "https://robohash.org/set_set2/bgset_bg2/JNth88PrhGDhwp4LNQMt?size=128x128"
   """
   @spec image_url(integer, integer) :: String.t()
   def image_url(width, height)
@@ -208,6 +237,12 @@ defmodule Faker.Avatar do
   end
 
   defp set do
-    set_to_url(Faker.random_between(1, 3))
+    %{
+      0 => "/set_set1",
+      1 => "/set_set2",
+      2 => "/set_set3",
+      3 => "/set_set4",
+      4 => "/set_set5"
+    }[Faker.random_between(0, 4)]
   end
 end
