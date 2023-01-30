@@ -4,7 +4,7 @@ name: Credo Security Scan
 # The scheduled workflow runs every Thursday at 15:45 UTC.
 on:
   pull_request:
-    branches: [ "main" ]
+    branches: [ "master" ]
   workflow_dispatch:
 
 jobs:
