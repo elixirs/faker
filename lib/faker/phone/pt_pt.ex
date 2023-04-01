@@ -30,8 +30,7 @@ defmodule Faker.Phone.PtPt do
   end
 
   samplerp(:landline_number_format, [
-    "2########",
-    "3########"
+    "2########"
   ])
 
   @doc """
@@ -40,13 +39,13 @@ defmodule Faker.Phone.PtPt do
   ## Examples
 
       iex> Faker.Phone.PtPt.landline_number()
-      "299999999"
+      "253999999"
       iex> Faker.Phone.PtPt.landline_number()
-      "299999998"
+      "252999998"
       iex> Faker.Phone.PtPt.landline_number()
-      "399999999"
+      "261999997"
       iex> Faker.Phone.PtPt.landline_number()
-      "399999998"
+      "299999996"
   """
 
   @spec landline_number() :: String.t()
