@@ -10,6 +10,10 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Added
 - `Faker.Fruits.En` - add english fruits [[@KevinDaSilvaS](https://github.com/KevinDaSilvaS)]
+- `Faker.String.from_regex/1` - Adds the ability to generate a random string that conforms to given regex [[@apreifsteck](https://github.com/apreifsteck)]
+- `Faker.String.alpha/1` - Creates a random string with only alphabetical characters [[@apreifsteck](https://github.com/apreifsteck)]
+- `Faker.String.alphanumeric/1` - Creates a random string of the given length with only alphabetical or numerical characters [[@apreifsteck](https://github.com/apreifsteck)]
+- `Faker.String.numeric/1` - Creates a random string of the given length with only numerical characters [[@apreifsteck](https://github.com/apreifsteck)]
 
 ### Changed
 - `Faker.Commerce.PtBr` - add more products in product_name_product [[@igorgbr](https://github.com/igorgbr)]
