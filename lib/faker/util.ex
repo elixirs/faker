@@ -51,7 +51,7 @@ defmodule Faker.Util do
       iex> Faker.Util.sample_uniq(0, &Faker.Internet.email/0)
       ** (FunctionClauseError) no function clause matching in Faker.Util.sample_uniq/3
   """
-  @spec sample_uniq(pos_integer, (() -> any), MapSet.t()) :: [any]
+  @spec sample_uniq(pos_integer, (-> any), MapSet.t()) :: [any]
   def sample_uniq(count, sampler, acc \\ MapSet.new())
       when is_integer(count) and count > 0 and is_function(sampler, 0) do
     case MapSet.size(acc) do
@@ -84,7 +84,7 @@ defmodule Faker.Util do
     Enum.map(0..(n - 1), &fun.(&1))
   end
 
-  @spec list(integer, (() -> any)) :: [any]
+  @spec list(integer, (-> any)) :: [any]
   def list(n, fun) when is_function(fun, 0) do
     Enum.map(0..(n - 1), fn _ -> fun.() end)
   end
@@ -103,7 +103,7 @@ defmodule Faker.Util do
       iex> Faker.Util.join(2, " or ", &Faker.Color.name/0)
       "Purple or White"
   """
-  @spec join(integer, binary, (() -> binary)) :: binary
+  @spec join(integer, binary, (-> binary)) :: binary
   def join(n, joiner \\ "", fun) do
     Enum.join(list(n, fun), joiner)
   end

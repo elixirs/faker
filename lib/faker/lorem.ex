@@ -498,7 +498,7 @@ defmodule Faker.Lorem do
   end
 
   defp character do
-    alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
+    alphabet = ~c"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
     Enum.at(alphabet, Faker.random_between(0, Enum.count(alphabet) - 1))
   end
 end
