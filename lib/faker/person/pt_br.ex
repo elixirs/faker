@@ -11,22 +11,26 @@ defmodule Faker.Person.PtBr do
   ## Examples
 
       iex> Faker.Person.PtBr.name()
-      "Sra. Kaique Mendes Neto"
+      "Dr. Hélio Mendes Neto"
       iex> Faker.Person.PtBr.name()
-      "Roberta Garcês"
+      "Bernardo Mangueira"
       iex> Faker.Person.PtBr.name()
-      "Sr. Vitor Albuquerque"
+      "Sr. Arthur Santana Neto"
       iex> Faker.Person.PtBr.name()
-      "Maria Laura da Penha Jr."
+      "João Gabriel Resende"
   """
   @spec name() :: String.t()
-  def name, do: name(Faker.random_between(0, 9))
+  def name, do: name(Faker.random_between(0, 12))
   defp name(0), do: "#{male_prefix()} #{male_first_name()} #{last_name()} #{suffix()}"
   defp name(1), do: "#{male_prefix()} #{male_first_name()} #{last_name()}"
   defp name(2), do: "#{male_first_name()} #{last_name()} #{suffix()}"
   defp name(3), do: "#{male_first_name()} #{last_name()}"
-  defp name(4), do: "#{female_prefix()} #{female_first_name()} #{last_name()}"
-  defp name(5), do: "#{female_first_name()} #{last_name()}"
+
+  defp name(i) when i == 4 or i == 5,
+    do: "#{female_prefix()} #{female_first_name()} #{last_name()}"
+
+  defp name(i) when i == 6 or i == 7,
+    do: "#{female_first_name()} #{last_name()}"
 
   defp name(n) when is_integer(n) do
     "#{first_name()} #{last_name()}"
@@ -38,16 +42,16 @@ defmodule Faker.Person.PtBr do
   ## Examples
 
       iex> Faker.Person.PtBr.first_name()
-      "Augusto"
+      "Luiz Henrique"
       iex> Faker.Person.PtBr.first_name()
-      "Amanda"
+      "Suélen"
       iex> Faker.Person.PtBr.first_name()
-      "Kaique"
+      "Arthur Henrique"
       iex> Faker.Person.PtBr.first_name()
-      "Antonia"
+      "Bernardo"
   """
   @spec first_name() :: String.t()
-  def first_name, do: first_name(Faker.random_between(0, 1))
+  def first_name(), do: first_name(Faker.random_between(0, 1))
   defp first_name(0), do: "#{male_first_name()}"
   defp first_name(1), do: "#{female_first_name()}"
 
@@ -57,13 +61,13 @@ defmodule Faker.Person.PtBr do
   ## Examples
 
       iex> Faker.Person.PtBr.male_first_name()
-      "Augusto"
+      "Bruno"
       iex> Faker.Person.PtBr.male_first_name()
-      "Benjamin"
+      "Luiz Henrique"
       iex> Faker.Person.PtBr.male_first_name()
-      "Kaique"
+      "Hélio"
       iex> Faker.Person.PtBr.male_first_name()
-      "Frederico"
+      "Mathias"
   """
   @spec male_first_name() :: String.t()
   sampler(:male_first_name, [
@@ -215,13 +219,13 @@ defmodule Faker.Person.PtBr do
   ## Examples
 
       iex> Faker.Person.PtBr.female_first_name()
-      "Luna"
+      "Maria Helena"
       iex> Faker.Person.PtBr.female_first_name()
-      "Amanda"
+      "Alessandra"
       iex> Faker.Person.PtBr.female_first_name()
-      "Maria Isis"
+      "Ayla"
       iex> Faker.Person.PtBr.female_first_name()
-      "Antonia"
+      "Suélen"
   """
 
   @spec female_first_name() :: String.t()
