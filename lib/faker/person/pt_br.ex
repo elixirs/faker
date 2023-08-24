@@ -21,9 +21,12 @@ defmodule Faker.Person.PtBr do
   """
   @spec name() :: String.t()
   def name, do: name(Faker.random_between(0, 9))
-  defp name(0), do: "#{prefix()} #{first_name()} #{last_name()} #{suffix()}"
-  defp name(1), do: "#{prefix()} #{first_name()} #{last_name()}"
-  defp name(2), do: "#{first_name()} #{last_name()} #{suffix()}"
+  defp name(0), do: "#{male_prefix()} #{male_first_name()} #{last_name()} #{suffix()}"
+  defp name(1), do: "#{male_prefix()} #{male_first_name()} #{last_name()}"
+  defp name(2), do: "#{male_first_name()} #{last_name()} #{suffix()}"
+  defp name(3), do: "#{male_first_name()} #{last_name()}"
+  defp name(4), do: "#{female_prefix()} #{female_first_name()} #{last_name()}"
+  defp name(5), do: "#{female_first_name()} #{last_name()}"
 
   defp name(n) when is_integer(n) do
     "#{first_name()} #{last_name()}"
@@ -44,72 +47,210 @@ defmodule Faker.Person.PtBr do
       "Antonia"
   """
   @spec first_name() :: String.t()
-  sampler(:first_name, [
+  def first_name, do: first_name(Faker.random_between(0, 1))
+  defp first_name(0), do: "#{male_first_name()}"
+  defp first_name(1), do: "#{female_first_name()}"
+
+  @doc """
+  Returns a random male first name
+
+  ## Examples
+
+      iex> Faker.Person.PtBr.male_first_name()
+      "Augusto"
+      iex> Faker.Person.PtBr.male_first_name()
+      "Benjamin"
+      iex> Faker.Person.PtBr.male_first_name()
+      "Kaique"
+      iex> Faker.Person.PtBr.male_first_name()
+      "Frederico"
+  """
+  @spec male_first_name() :: String.t()
+  sampler(:male_first_name, [
     "Alessandro",
     "Alexandre",
-    "Alice",
-    "Alícia",
-    "Aline",
-    "Amanda",
-    "Ana",
     "Antônio",
     "Arthur",
-    "Beatriz",
     "Benício",
     "Benjamin",
     "Bernardo",
-    "Bianca",
     "Breno",
-    "Bruna",
     "Bryan",
     "Caio",
-    "Carla",
     "Carlos",
-    "Catarina",
-    "Cauã",
-    "Cecília",
-    "Célia",
     "César",
-    "Clara",
-    "Dalila",
     "Daniel",
     "Danilo",
     "Davi",
     "Deneval",
-    "Djalma",
-    "Eduarda",
     "Eduardo",
     "Elísio",
     "Emanuel",
     "Emanuelly",
     "Enrico",
     "Enzo",
-    "Esther",
     "Fabiano",
     "Fábio",
-    "Fabrícia",
     "Fabrício",
-    "Felícia",
     "Feliciano",
     "Felipe",
     "Félix",
-    "Fernanda",
     "Francisco",
     "Frederico",
     "Gabriel",
-    "Gabriela",
-    "Giovanna",
     "Gúbio",
     "Guilherme",
     "Gustavo",
     "Heitor",
-    "Helena",
     "Hélio",
-    "Heloísa",
     "Henrique",
     "Hugo",
     "Ígor",
     "Isaac",
+    "João",
+    "Joaquim",
+    "Júlio",
+    "Kléber",
+    "Leonardo",
+    "Lorenzo",
+    "Lucas",
+    "Lucca",
+    "Marcelo",
+    "Márcio",
+    "Marcos",
+    "Matheus",
+    "Miguel",
+    "Murilo",
+    "Nataniel",
+    "Nicolas",
+    "Nicole",
+    "Norberto",
+    "Pablo",
+    "Paulo",
+    "Pedro",
+    "Pietro",
+    "Rafael",
+    "Raul",
+    "Ricardo",
+    "Roberto",
+    "Salvador",
+    "Samuel",
+    "Silas",
+    "Sirineu",
+    "Tertuliano",
+    "Theo",
+    "Thiago",
+    "Thomas",
+    "Vicente",
+    "Víctor",
+    "Vinicius",
+    "Vitor",
+    "Warley",
+    "Washington",
+    "Yago",
+    "Yango",
+    "Yuri",
+    "André",
+    "Anthony",
+    "Arthur Gabriel",
+    "Arthur Henrique",
+    "Arthur Miguel",
+    "Augusto",
+    "Bento",
+    "Bruno",
+    "Carlos Eduardo",
+    "Davi Lucas",
+    "Davi Lucca",
+    "Davi Luiz",
+    "Davi Miguel",
+    "Enzo Gabriel",
+    "Enzo Miguel",
+    "Erick",
+    "Fernando",
+    "Gael",
+    "Henry",
+    "Ian",
+    "Igor",
+    "Joao",
+    "João Gabriel",
+    "João Guilherme",
+    "João Lucas",
+    "João Lucas",
+    "João Miguel",
+    "João Pedro",
+    "João Vitor",
+    "José",
+    "Kaique",
+    "Kauê",
+    "Levi",
+    "Luan",
+    "Lucas Gabriel",
+    "Luiz",
+    "Luiz Felipe",
+    "Luiz Gustavo",
+    "Luiz Henrique",
+    "Luiz Miguel",
+    "Luiz Otávio",
+    "Mathias",
+    "Nathan",
+    "Noah",
+    "Oliver",
+    "Otávio",
+    "Pedro Henrique",
+    "Pedro Henrique",
+    "Pedro Lucas",
+    "Pedro Miguel",
+    "Rodrigo",
+    "Ruan",
+    "Ryan",
+    "Tiago",
+    "Tomás",
+    "Vinícius",
+    "Vitor Hugo"
+  ])
+
+  @doc """
+  Returns a random female first name
+
+  ## Examples
+
+      iex> Faker.Person.PtBr.female_first_name()
+      "Luna"
+      iex> Faker.Person.PtBr.female_first_name()
+      "Amanda"
+      iex> Faker.Person.PtBr.female_first_name()
+      "Maria Isis"
+      iex> Faker.Person.PtBr.female_first_name()
+      "Antonia"
+  """
+
+  @spec female_first_name() :: String.t()
+  sampler(:female_first_name, [
+    "Alice",
+    "Alícia",
+    "Aline",
+    "Amanda",
+    "Ana",
+    "Beatriz",
+    "Bianca",
+    "Bruna",
+    "Carla",
+    "Catarina",
+    "Cauã",
+    "Cecília",
+    "Célia",
+    "Clara",
+    "Dalila",
+    "Djalma",
+    "Eduarda",
+    "Esther",
+    "Fabrícia",
+    "Felícia",
+    "Fernanda",
+    "Gabriela",
+    "Giovanna",
+    "Helena",
+    "Heloísa",
     "Isabel",
     "Isabela",
     "Isabella",
@@ -118,89 +259,46 @@ defmodule Faker.Person.PtBr do
     "Isis",
     "Janaína",
     "Joana",
-    "João",
-    "Joaquim",
     "Júlia",
-    "Júlio",
     "Karla",
-    "Kléber",
     "Ladislau",
     "Lara",
     "Larissa",
     "Laura",
     "Lavínia",
-    "Leonardo",
     "Letícia",
     "Lívia",
     "Lorena",
-    "Lorenzo",
     "Lorraine",
-    "Lucas",
-    "Lucca",
     "Luiza",
     "Manuela",
     "Marcela",
-    "Marcelo",
     "Márcia",
-    "Márcio",
-    "Marcos",
     "Margarida",
     "Maria",
     "Mariana",
     "Marina",
     "Marli",
-    "Matheus",
     "Meire",
     "Melissa",
     "Mércia",
-    "Miguel",
     "Morgana",
-    "Murilo",
     "Natália",
-    "Nataniel",
-    "Nicolas",
-    "Nicole",
-    "Norberto",
     "Núbia",
     "Ofélia",
-    "Pablo",
     "Paula",
-    "Paulo",
-    "Pedro",
-    "Pietro",
-    "Rafael",
     "Rafaela",
-    "Raul",
     "Rebeca",
-    "Ricardo",
     "Roberta",
-    "Roberto",
-    "Salvador",
-    "Samuel",
     "Sara",
     "Sarah",
-    "Silas",
     "Sílvia",
-    "Sirineu",
     "Sophia",
     "Suélen",
     "Talita",
-    "Tertuliano",
-    "Theo",
-    "Thiago",
-    "Thomas",
     "Valentina",
-    "Vicente",
-    "Víctor",
-    "Vinicius",
-    "Vitor",
     "Vitória",
-    "Warley",
-    "Washington",
-    "Yago",
-    "Yango",
     "Yasmin",
-    "Yuri",
     "Adriana",
     "Agatha",
     "Alessandra",
@@ -214,67 +312,26 @@ defmodule Faker.Person.PtBr do
     "Ana Luiza",
     "Ana Sophia",
     "Ana Vitória",
-    "André",
-    "Anthony",
     "Antonella",
     "Antonia",
-    "Arthur Gabriel",
-    "Arthur Henrique",
-    "Arthur Miguel",
-    "Augusto",
     "Aurora",
     "Ayla",
     "Bárbara",
-    "Bento",
-    "Bruno",
     "Calebe",
     "Camila",
-    "Carlos Eduardo",
     "Carolina",
     "Clarice",
-    "Davi Lucas",
-    "Davi Lucca",
-    "Davi Luiz",
-    "Davi Miguel",
     "Elisa",
     "Eloah",
     "Emilly",
-    "Enzo Gabriel",
-    "Enzo Miguel",
-    "Erick",
-    "Fernando",
     "Francisca",
     "Gabrielly",
-    "Gael",
     "Giulia",
-    "Henry",
-    "Ian",
-    "Igor",
-    "Joao",
-    "João Gabriel",
-    "João Guilherme",
-    "João Lucas",
-    "João Lucas",
-    "João Miguel",
-    "João Pedro",
-    "João Vitor",
-    "José",
     "Juliana",
-    "Kaique",
-    "Kauê",
     "Laís",
-    "Levi",
     "Liz",
     "Louise",
-    "Luan",
     "Luana",
-    "Lucas Gabriel",
-    "Luiz",
-    "Luiz Felipe",
-    "Luiz Gustavo",
-    "Luiz Henrique",
-    "Luiz Miguel",
-    "Luiz Otávio",
     "Luna",
     "Maitê",
     "Malu",
@@ -294,31 +351,15 @@ defmodule Faker.Person.PtBr do
     "Maria Valentina",
     "Maria Vitória",
     "Mariah",
-    "Mathias",
     "Maya",
     "Milena",
     "Mirella",
-    "Nathan",
-    "Noah",
-    "Oliver",
     "Olívia",
-    "Otávio",
     "Patricia",
-    "Pedro Henrique",
-    "Pedro Henrique",
-    "Pedro Lucas",
-    "Pedro Miguel",
     "Pérola",
     "Pietra",
-    "Rodrigo",
-    "Ruan",
-    "Ryan",
     "Sophie",
-    "Stella",
-    "Tiago",
-    "Tomás",
-    "Vinícius",
-    "Vitor Hugo"
+    "Stella"
   ])
 
   @doc """
@@ -601,25 +642,35 @@ defmodule Faker.Person.PtBr do
   ])
 
   @doc """
-  Returns a random prefix
+  Returns a random male prefix
 
   ## Examples
 
-      iex> Faker.Person.PtBr.prefix()
+      iex> Faker.Person.PtBr.male_prefix()
       "Sr."
-      iex> Faker.Person.PtBr.prefix()
+      iex> Faker.Person.PtBr.male_prefix()
+      "Dr."
+  """
+  @spec male_prefix() :: String.t()
+  sampler(:male_prefix, [
+    "Sr.",
+    "Dr."
+  ])
+
+  @doc """
+  Returns a random female_prefix
+
+  ## Examples
+
+      iex> Faker.Person.PtBr.female_prefix()
       "Sra."
-      iex> Faker.Person.PtBr.prefix()
-      "Sr."
-      iex> Faker.Person.PtBr.prefix()
+      iex> Faker.Person.PtBr.female_prefix()
       "Dra."
   """
-  @spec prefix() :: String.t()
-  sampler(:prefix, [
-    "Sr.",
+  @spec female_prefix() :: String.t()
+  sampler(:female_prefix, [
     "Sra.",
     "Srta.",
-    "Dr.",
     "Dra."
   ])
 
