@@ -6,25 +6,12 @@ on:
 
 jobs:
   credo:
-    runs-on: ${{ matrix.os || 'ubuntu-20.04' }}
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/cache@v2
-        with:
-          key: ${{ github.job }}-${{ matrix.elixir }}-${{ matrix.otp }}-${{ hashFiles('mix.lock') }}-1
-          path: _build
       - uses: erlef/setup-beam@v1
-        with:
-          elixir-version: ${{ matrix.elixir }}
-          otp-version: ${{ matrix.otp }}
       - run: mix deps.get
       - run: mix credo --strict
-
-    strategy:
-      matrix:
-        otp: ['21.x', '22.x', '23.x', '24.x', '25.x', '26.x']
-        elixir: ['1.11.x', '1.12.x', 'v1.13.x', 'v1.14.x', 'v1.15.x']
-        os: ['ubuntu-20.04', 'ubuntu-22.04']
 
   # dialyzer:
   #   runs-on: ${{ matrix.os || 'ubuntu-20.04' }}
