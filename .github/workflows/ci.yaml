@@ -22,148 +22,115 @@ jobs:
 
     strategy:
       matrix:
-        include:
-          - elixir: 1.12.x
-            otp: 24.x
+        otp: ['21.x', '22.x', '23.x', '24.x', '25.x', '26.x']
+        elixir: ['1.11.x', '1.12.x', 'v1.13.x', 'v1.14.x', 'v1.15.x']
+        os: ['ubuntu-20.04', 'ubuntu-22.04']
 
-          - elixir: 1.12.x
-            otp: 25.x
+  # dialyzer:
+  #   runs-on: ${{ matrix.os || 'ubuntu-20.04' }}
 
-          - elixir: 1.12.x
-            otp: 26.x
+  #   steps:
+  #     - uses: actions/checkout@v2
+  #     - uses: actions/cache@v2
+  #       with:
+  #         key: ${{ github.job }}-${{ matrix.elixir }}-${{ matrix.otp }}-${{ hashFiles('mix.lock') }}-1
+  #         path: _build
+  #     - uses: erlef/setup-beam@v1
+  #       with:
+  #         elixir-version: ${{ matrix.elixir }}
+  #         otp-version: ${{ matrix.otp }}
+  #     - run: mix deps.get
+  #     - run: mix dialyzer --halt-exit-status
 
-          - elixir: v1.13.x
-            otp: 24.x
+  #   strategy:
+  #     matrix:
+  #       include:
+  #         - elixir: 1.12.x
+  #           otp: 24.x
 
-          - elixir: v1.13.x
-            otp: 25.x
+  #         - elixir: 1.12.x
+  #           otp: 25.x
 
-          - elixir: v1.13.x
-            otp: 26.x
+  #         - elixir: 1.12.x
+  #           otp: 26.x
 
-          - elixir: v1.14.x
-            otp: 24.x
+  #         - elixir: v1.13.x
+  #           otp: 24.x
 
-          - elixir: v1.14.x
-            otp: 25.x
+  #         - elixir: v1.13.x
+  #           otp: 25.x
 
-          - elixir: v1.14.x
-            otp: 26.x
+  #         - elixir: v1.13.x
+  #           otp: 26.x
 
-          - elixir: v1.15.x
-            otp: 24.x
+  #         - elixir: v1.14.x
+  #           otp: 24.x
 
-          - elixir: v1.15.x
-            otp: 25.x
+  #         - elixir: v1.14.x
+  #           otp: 25.x
 
-          - elixir: v1.15.x
-            otp: 26.x
+  #         - elixir: v1.14.x
+  #           otp: 26.x
 
-  dialyzer:
-    runs-on: ${{ matrix.os || 'ubuntu-20.04' }}
+  #         - elixir: v1.15.x
+  #           otp: 24.x
 
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/cache@v2
-        with:
-          key: ${{ github.job }}-${{ matrix.elixir }}-${{ matrix.otp }}-${{ hashFiles('mix.lock') }}-1
-          path: _build
-      - uses: erlef/setup-beam@v1
-        with:
-          elixir-version: ${{ matrix.elixir }}
-          otp-version: ${{ matrix.otp }}
-      - run: mix deps.get
-      - run: mix dialyzer --halt-exit-status
+  #         - elixir: v1.15.x
+  #           otp: 25.x
 
-    strategy:
-      matrix:
-        include:
-          - elixir: 1.12.x
-            otp: 24.x
+  #         - elixir: v1.15.x
+  #           otp: 26.x
 
-          - elixir: 1.12.x
-            otp: 25.x
+  # test:
+  #   runs-on: ${{ matrix.os || 'ubuntu-20.04' }}
+  #   steps:
+  #     - uses: actions/checkout@v2
+  #     - uses: actions/cache@v2
+  #       with:
+  #         key: ${{ github.job }}-${{ matrix.elixir }}-${{ matrix.otp }}-${{ hashFiles('mix.lock') }}-1
+  #         path: _build
+  #     - uses: erlef/setup-beam@v1
+  #       with:
+  #         elixir-version: ${{ matrix.elixir }}
+  #         otp-version: ${{ matrix.otp }}
+  #     - run: mix deps.get
+  #     - run: mix test
 
-          - elixir: 1.12.x
-            otp: 26.x
+  #   strategy:
+  #     matrix:
+  #       include:
+  #         - elixir: 1.12.x
+  #           otp: 24.x
 
-          - elixir: v1.13.x
-            otp: 24.x
+  #         - elixir: 1.12.x
+  #           otp: 25.x
 
-          - elixir: v1.13.x
-            otp: 25.x
+  #         - elixir: 1.12.x
+  #           otp: 26.x
 
-          - elixir: v1.13.x
-            otp: 26.x
+  #         - elixir: v1.13.x
+  #           otp: 24.x
 
-          - elixir: v1.14.x
-            otp: 24.x
+  #         - elixir: v1.13.x
+  #           otp: 25.x
 
-          - elixir: v1.14.x
-            otp: 25.x
+  #         - elixir: v1.13.x
+  #           otp: 26.x
 
-          - elixir: v1.14.x
-            otp: 26.x
+  #         - elixir: v1.14.x
+  #           otp: 24.x
 
-          - elixir: v1.15.x
-            otp: 24.x
+  #         - elixir: v1.14.x
+  #           otp: 25.x
 
-          - elixir: v1.15.x
-            otp: 25.x
+  #         - elixir: v1.14.x
+  #           otp: 26.x
 
-          - elixir: v1.15.x
-            otp: 26.x
+  #         - elixir: v1.15.x
+  #           otp: 24.x
 
-  test:
-    runs-on: ${{ matrix.os || 'ubuntu-20.04' }}
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/cache@v2
-        with:
-          key: ${{ github.job }}-${{ matrix.elixir }}-${{ matrix.otp }}-${{ hashFiles('mix.lock') }}-1
-          path: _build
-      - uses: erlef/setup-beam@v1
-        with:
-          elixir-version: ${{ matrix.elixir }}
-          otp-version: ${{ matrix.otp }}
-      - run: mix deps.get
-      - run: mix test
+  #         - elixir: v1.15.x
+  #           otp: 25.x
 
-    strategy:
-      matrix:
-        include:
-          - elixir: 1.12.x
-            otp: 24.x
-
-          - elixir: 1.12.x
-            otp: 25.x
-
-          - elixir: 1.12.x
-            otp: 26.x
-
-          - elixir: v1.13.x
-            otp: 24.x
-
-          - elixir: v1.13.x
-            otp: 25.x
-
-          - elixir: v1.13.x
-            otp: 26.x
-
-          - elixir: v1.14.x
-            otp: 24.x
-
-          - elixir: v1.14.x
-            otp: 25.x
-
-          - elixir: v1.14.x
-            otp: 26.x
-
-          - elixir: v1.15.x
-            otp: 24.x
-
-          - elixir: v1.15.x
-            otp: 25.x
-
-          - elixir: v1.15.x
-            otp: 26.x
+  #         - elixir: v1.15.x
+  #           otp: 26.x
