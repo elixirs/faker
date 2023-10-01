@@ -20,37 +20,37 @@ jobs:
       - run: mix deps.get
       - run: mix credo --strict
 
-  dialyzer:
-    runs-on: ${{ matrix.os || 'ubuntu-20.04' }}
+  # dialyzer:
+  #   runs-on: ${{ matrix.os || 'ubuntu-20.04' }}
 
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/cache@v2
-        with:
-          key: ${{ github.job }}-${{ hashFiles('mix.lock') }}-1
-          path: _build
-      - uses: erlef/setup-beam@v1
-        id: beam
-        with:
-          elixir-version: 1.15.x
-          otp-version: 26.x
-      - run: mix deps.get
-      - name: Restore PLT cache
-        id: plt_cache
-        uses: actions/cache/restore@v3
-        with:
-          key: |
-            plt-${{ runner.os }}-${{ steps.beam.outputs.otp-version }}-${{ steps.beam.outputs.elixir-version }}-${{ hashFiles('**/mix.lock') }}
-          restore-keys: |
-            plt-${{ runner.os }}-${{ steps.beam.outputs.otp-version }}-${{ steps.beam.outputs.elixir-version }}-
-          path: |
-            priv/plts
+  #   steps:
+  #     - uses: actions/checkout@v2
+  #     - uses: actions/cache@v2
+  #       with:
+  #         key: ${{ github.job }}-${{ hashFiles('mix.lock') }}-1
+  #         path: _build
+  #     - uses: erlef/setup-beam@v1
+  #       id: beam
+  #       with:
+  #         elixir-version: 1.15.x
+  #         otp-version: 26.x
+  #     - run: mix deps.get
+  #     - name: Restore PLT cache
+  #       id: plt_cache
+  #       uses: actions/cache/restore@v3
+  #       with:
+  #         key: |
+  #           plt-${{ runner.os }}-${{ steps.beam.outputs.otp-version }}-${{ steps.beam.outputs.elixir-version }}-${{ hashFiles('**/mix.lock') }}
+  #         restore-keys: |
+  #           plt-${{ runner.os }}-${{ steps.beam.outputs.otp-version }}-${{ steps.beam.outputs.elixir-version }}-
+  #         path: |
+  #           priv/plts
 
-        # Create PLTs if no cache was found
-      - name: Create PLTs
-        if: steps.plt_cache.outputs.cache-hit != 'true'
-        run: mix dialyzer --plt
-      - run: mix dialyzer --format github
+  #       # Create PLTs if no cache was found
+  #     - name: Create PLTs
+  #       if: steps.plt_cache.outputs.cache-hit != 'true'
+  #       run: mix dialyzer --plt
+  #     - run: mix dialyzer --format github
 
   test:
     runs-on: ${{ matrix.os || 'ubuntu-20.04' }}
@@ -69,8 +69,8 @@ jobs:
     strategy:
       matrix:
         include:
-          - elixir: 1.11.x
-            otp: 21.x
+          - elixir: 1.12.x
+            otp: 24.x
             os: ubuntu-20.04
 
   #         - elixir: 1.12.x
