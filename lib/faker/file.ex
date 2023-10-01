@@ -39,13 +39,13 @@ defmodule Faker.File do
   ## Examples
 
       iex> Faker.File.file_extension()
-      "wav"
+      "txt"
       iex> Faker.File.file_extension()
-      "wav"
+      "html"
       iex> Faker.File.file_extension()
-      "doc"
+      "flac"
       iex> Faker.File.file_extension()
-      "mov"
+      "odt"
   """
   @spec file_extension() :: String.t()
   def file_extension do
@@ -84,11 +84,11 @@ defmodule Faker.File do
       iex> Faker.File.file_name()
       "aliquam.jpg"
       iex> Faker.File.file_name()
-      "deleniti.doc"
+      "deleniti.flac"
       iex> Faker.File.file_name()
       "qui.jpg"
       iex> Faker.File.file_name()
-      "quibusdam.csv"
+      "quibusdam.webm"
   """
   @spec file_name() :: String.t()
   def file_name do
@@ -121,13 +121,13 @@ defmodule Faker.File do
   ## Examples
 
       iex> Faker.File.mime_type()
-      "text/css"
+      "model/mesh"
       iex> Faker.File.mime_type()
-      "message/http"
+      "image/tiff"
       iex> Faker.File.mime_type()
-      "application/ogg"
+      "message/partial"
       iex> Faker.File.mime_type()
-      "model/x3d+xml"
+      "audio/webm"
   """
   @spec mime_type :: String.t()
   def mime_type do
