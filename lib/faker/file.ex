@@ -39,13 +39,13 @@ defmodule Faker.File do
   ## Examples
 
       iex> Faker.File.file_extension()
-      "txt"
+      "tiff"
       iex> Faker.File.file_extension()
       "html"
       iex> Faker.File.file_extension()
-      "flac"
+      "txt"
       iex> Faker.File.file_extension()
-      "odt"
+      "jpeg"
   """
   @spec file_extension() :: String.t()
   def file_extension do
@@ -65,9 +65,9 @@ defmodule Faker.File do
       iex> Faker.File.file_extension(:image)
       "tiff"
       iex> Faker.File.file_extension(:audio)
-      "flac"
+      "mp3"
       iex> Faker.File.file_extension(:office)
-      "xls"
+      "ppt"
   """
   @spec file_extension(atom) :: String.t()
   def file_extension(category) do
@@ -82,13 +82,13 @@ defmodule Faker.File do
   ## Examples
 
       iex> Faker.File.file_name()
-      "aliquam.jpg"
+      "et.mp3"
       iex> Faker.File.file_name()
-      "deleniti.flac"
+      "sequi.txt"
       iex> Faker.File.file_name()
-      "qui.jpg"
+      "corrupti.webm"
       iex> Faker.File.file_name()
-      "quibusdam.webm"
+      "veritatis.webm"
   """
   @spec file_name() :: String.t()
   def file_name do
@@ -102,13 +102,13 @@ defmodule Faker.File do
   ## Examples
 
       iex> Faker.File.file_name(:text)
-      "aliquam.txt"
+      "et.txt"
       iex> Faker.File.file_name(:video)
-      "sint.mp4"
+      "et.mp4"
       iex> Faker.File.file_name(:image)
-      "consequatur.bmp"
+      "aut.tiff"
       iex> Faker.File.file_name(:audio)
-      "qui.wav"
+      "corrupti.wav"
   """
   @spec file_name(atom) :: String.t()
   def file_name(category) do
@@ -121,13 +121,13 @@ defmodule Faker.File do
   ## Examples
 
       iex> Faker.File.mime_type()
-      "model/mesh"
-      iex> Faker.File.mime_type()
-      "image/tiff"
-      iex> Faker.File.mime_type()
-      "message/partial"
+      "model/x3d+xml"
       iex> Faker.File.mime_type()
       "audio/webm"
+      iex> Faker.File.mime_type()
+      "multipart/encrypted"
+      iex> Faker.File.mime_type()
+      "video/webm"
   """
   @spec mime_type :: String.t()
   def mime_type do
@@ -144,11 +144,11 @@ defmodule Faker.File do
   ## Examples
 
       iex> Faker.File.mime_type(:image)
-      "image/vnd.microsoft.icon"
+      "image/pjpeg"
       iex> Faker.File.mime_type(:audio)
-      "audio/mp4"
+      "audio/webm"
       iex> Faker.File.mime_type(:application)
-      "application/xop+xml"
+      "application/rss+xml"
       iex> Faker.File.mime_type(:video)
       "video/mpeg"
   """

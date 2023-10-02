@@ -1096,7 +1096,7 @@ defmodule Faker.Address.PtBr do
   ## Examples
 
       iex> Faker.Address.PtBr.street_prefix()
-      "Recanto"
+      "Loteamento"
       iex> Faker.Address.PtBr.street_prefix()
       "Estação"
       iex> Faker.Address.PtBr.street_prefix()

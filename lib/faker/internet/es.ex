@@ -28,7 +28,7 @@ defmodule Faker.Internet.Es do
   ## Examples
 
       iex> Faker.Internet.Es.domain_suffix()
-      "com"
+      "es"
       iex> Faker.Internet.Es.domain_suffix()
       "es"
       iex> Faker.Internet.Es.domain_suffix()

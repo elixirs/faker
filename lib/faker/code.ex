@@ -87,11 +87,11 @@ defmodule Faker.Code do
       iex> Faker.Code.iban("NL", ["ABNA"])
       "NL16ABNA0154264610"
       iex> Faker.Code.iban("MC", ["FOO", "BAR"])
-      "MC98FOOBAR83"
+      "MC87FOOBAR87"
       iex> Faker.Code.iban("SM", ["A"])
-      "SM86A2970523570AY38NWIVZ5XT"
+      "SM81A835246853054B1PZQC0M2F"
       iex> Faker.Code.iban("MC", ["FOO", "BAR"])
-      "MC40FOOBAR60"
+      "MC42FOOBAR24"
   """
   defdelegate iban(), to: Faker.Code.Iban
   defdelegate iban(country_code_or_codes), to: Faker.Code.Iban
