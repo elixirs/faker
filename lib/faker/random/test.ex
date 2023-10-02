@@ -20,7 +20,7 @@ defmodule Faker.Random.Test do
   end
 
   defp set_seed([]) do
-    :rand.seed(:exs1024, {1, 1, 1})
+    :rand.seed(:exsplus, {1, 1, 1})
     :ets.insert(:seed_registry, {self(), true})
   end
 
