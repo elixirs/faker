@@ -11,11 +11,11 @@ defmodule Faker.Code.Iban do
   ## Examples
 
       iex> Faker.Code.Iban.iban
-      "GB40RSEN51816878352468"
+      "GI88LRCE6SQ3CQJGP3UHAJD"
       iex> Faker.Code.Iban.iban("NL")
-      "NL66BFKT6311328440"
+      "NL26VYOC3032097337"
       iex> Faker.Code.Iban.iban(["NL", "BE"])
-      "BE75247216844230"
+      "NL74YRFX4598109960"
       iex> Faker.Code.Iban.iban(["NL", "BE"])
       "BE31198979502980"
   """
@@ -98,13 +98,13 @@ defmodule Faker.Code.Iban do
   ## Examples
 
       iex> Faker.Code.Iban.iban
-      "GB40RSEN51816878352468"
+      "GI88LRCE6SQ3CQJGP3UHAJD"
       iex> Faker.Code.Iban.iban
-      "CY2630963113QC0M2F8UZ4RA6C2K"
+      "BR0302030320973376033745981CB"
       iex> Faker.Code.Iban.iban
-      "HU95093988127422606786660319"
+      "BE98607198979502"
       iex> Faker.Code.Iban.iban
-      "SE3576273193418566753613"
+      "PT72807856869061130164499"
   """
   def iban, do: iban(Keyword.keys(@iso_iban_specs))
 
@@ -116,13 +116,13 @@ defmodule Faker.Code.Iban do
   ## Examples
 
       iex> Faker.Code.Iban.iban("FR")
-      "FR816706551816YJO7X82MYZ109"
+      "FR650154264610QJGP3UHAJDJ02"
       iex> Faker.Code.Iban.iban("BE")
-      "BE88631132844072"
+      "BE95030320973376"
       iex> Faker.Code.Iban.iban(["NL", "BE"])
-      "NL71XOZU8442309398"
+      "NL31RFXY5981099607"
       iex> Faker.Code.Iban.iban(["BE", "DE"])
-      "BE89127422606786"
+      "DE57989795029807856869"
   """
   def iban(country_code_or_codes), do: iban(country_code_or_codes, [])
 
@@ -133,13 +133,13 @@ defmodule Faker.Code.Iban do
   ## Examples
 
       iex> Faker.Code.Iban.iban("NL", ["ABNA"])
-      "NL88ABNA6706551816"
+      "NL16ABNA0154264610"
       iex> Faker.Code.Iban.iban("MC", ["FOO", "BAR"])
-      "MC87FOOBAR87"
+      "MC98FOOBAR83"
       iex> Faker.Code.Iban.iban("SM", ["A"])
-      "SM81A835246853054B1PZQC0M2F"
+      "SM86A2970523570AY38NWIVZ5XT"
       iex> Faker.Code.Iban.iban("MC", ["FOO", "BAR"])
-      "MC42FOOBAR24"
+      "MC40FOOBAR60"
   """
   @spec iban(atom | binary | [binary], [binary]) :: binary
   def iban(country_code, prefix_components) when is_binary(country_code),

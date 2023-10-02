@@ -9,7 +9,7 @@ defmodule Faker.Gov.Us do
   ## Examples
 
       iex> Faker.Gov.Us.ssn
-      "181-72-0614"
+      "838-84-5749"
       iex> Faker.Gov.Us.ssn
       "719-41-8674"
       iex> Faker.Gov.Us.ssn

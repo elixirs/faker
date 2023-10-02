@@ -269,7 +269,7 @@ defmodule Faker.Internet do
   ## Examples
 
       iex> Faker.Internet.mac_address()
-      "3e:69:dc:50:27:c5"
+      "d6:d9:8b:88:c8:66"
       iex> Faker.Internet.mac_address()
       "f4:96:db:d4:de:7b"
       iex> Faker.Internet.mac_address()
