@@ -18,7 +18,7 @@ jobs:
           elixir-version: 1.15.x
           otp-version: 26.x
       - run: mix deps.get
-      - run: mix credo --strict
+      - run: mix credo --strict --format=sarif
 
   # dialyzer:
   #   runs-on: ${{ matrix.os || 'ubuntu-20.04' }}
