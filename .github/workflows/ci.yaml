@@ -70,6 +70,10 @@ jobs:
       matrix:
         include:
           - elixir: 1.15.x
+            otp: 25.x
+            os: ubuntu-20.04
+
+          - elixir: 1.15.x
             otp: 26.x
             os: ubuntu-20.04
 
