@@ -69,7 +69,7 @@ jobs:
     strategy:
       matrix:
         include:
-          - elixir: 1.12.x
+          - elixir: 1.15.x
             otp: 25.x
             os: ubuntu-20.04
 
