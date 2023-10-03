@@ -8,12 +8,12 @@ jobs:
   credo:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/cache@v3
+      - uses: actions/checkout@v4.1.0
+      - uses: actions/cache@v3.3.2
         with:
           key: ${{ github.job }}-${{ hashFiles('mix.lock') }}-1
           path: _build
-      - uses: erlef/setup-beam@v1
+      - uses: erlef/setup-beam@v1.16.0
         with:
           elixir-version: 1.15.x
           otp-version: 26.x
@@ -24,12 +24,12 @@ jobs:
   #   runs-on: ${{ matrix.os || 'ubuntu-20.04' }}
 
   #   steps:
-  #     - uses: actions/checkout@v2
-  #     - uses: actions/cache@v2
+  #     - uses: actions/checkout@v4.1.0
+  #     - uses: actions/cache@v3.3.2
   #       with:
   #         key: ${{ github.job }}-${{ hashFiles('mix.lock') }}-1
   #         path: _build
-  #     - uses: erlef/setup-beam@v1
+  #     - uses: erlef/setup-beam@v1.16.0
   #       id: beam
   #       with:
   #         elixir-version: 1.15.x
@@ -37,7 +37,7 @@ jobs:
   #     - run: mix deps.get
   #     - name: Restore PLT cache
   #       id: plt_cache
-  #       uses: actions/cache/restore@v3
+  #       uses: actions/cache/restore@v3.3.2
   #       with:
   #         key: |
   #           plt-${{ runner.os }}-${{ steps.beam.outputs.otp-version }}-${{ steps.beam.outputs.elixir-version }}-${{ hashFiles('**/mix.lock') }}
@@ -55,12 +55,12 @@ jobs:
   test:
     runs-on: ${{ matrix.os || 'ubuntu-20.04' }}
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/cache@v3
+      - uses: actions/checkout@v4.1.0
+      - uses: actions/cache@v3.3.2
         with:
           key: ${{ github.job }}-${{ matrix.elixir }}-${{ matrix.otp }}-${{ hashFiles('mix.lock') }}-1
           path: _build
-      - uses: erlef/setup-beam@v1
+      - uses: erlef/setup-beam@v1.16.0
         with:
           elixir-version: ${{ matrix.elixir }}
           otp-version: ${{ matrix.otp }}
