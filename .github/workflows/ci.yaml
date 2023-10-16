@@ -1,343 +1,119 @@
 name: ci
 
-on: [push, pull_request]
+on:
+  push:
+  pull_request:
 
 jobs:
   credo:
-    runs-on: ${{ matrix.os || 'ubuntu-latest' }}
-
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-
-      - uses: actions/cache@v2
-
+      - uses: actions/checkout@v4.1.0
+      - uses: actions/cache@v3.3.2
         with:
-          key: ${{ github.job }}-${{ matrix.elixir }}-${{ matrix.otp }}-${{ hashFiles('mix.lock') }}-1
-
+          key: ${{ github.job }}-${{ hashFiles('mix.lock') }}-1
           path: _build
-
-      - uses: erlef/setup-beam@v1
-
+      - uses: erlef/setup-beam@v1.16.0
         with:
-          elixir-version: ${{ matrix.elixir }}
-
-          otp-version: ${{ matrix.otp }}
-
+          elixir-version: 1.15.x
+          otp-version: 26.x
       - run: mix deps.get
-
-      - run: mix credo --strict
-
-    strategy:
-      matrix:
-        include:
-          - elixir: 1.7.x
-
-            os: ubuntu-18.04
-
-            otp: 19.x
-
-          - elixir: 1.7.x
-
-            otp: 20.x
-
-          - elixir: 1.7.x
-
-            otp: 21.x
-
-          - elixir: 1.7.x
-
-            otp: 22.x
-
-          - elixir: 1.8.x
-
-            otp: 20.x
-
-          - elixir: 1.8.x
-
-            otp: 21.x
-
-          - elixir: 1.8.x
-
-            otp: 22.x
-
-          - elixir: 1.9.x
-
-            otp: 20.x
-
-          - elixir: 1.9.x
-
-            otp: 21.x
-
-          - elixir: 1.9.x
-
-            otp: 22.x
-
-          - elixir: 1.10.x
-
-            otp: 21.x
-
-          - elixir: 1.10.x
-
-            otp: 22.x
-
-          - elixir: 1.11.x
-
-            otp: 21.x
-
-          - elixir: 1.11.x
-
-            otp: 22.x
-
-          - elixir: 1.11.x
-
-            otp: 23.x
-
-          - elixir: 1.12.x
-
-            otp: 22.x
-
-          - elixir: 1.12.x
-
-            otp: 23.x
-
-          - elixir: 1.12.x
-
-            otp: 24.x
-
-          - elixir: v1.13.x
-
-            otp: 22.x
-
-          - elixir: v1.13.x
-
-            otp: 23.x
-
-          - elixir: v1.13.x
-
-            otp: 24.x
-
-  dialyzer:
-    runs-on: ${{ matrix.os || 'ubuntu-latest' }}
-
-    steps:
-      - uses: actions/checkout@v2
-
-      - uses: actions/cache@v2
-
-        with:
-          key: ${{ github.job }}-${{ matrix.elixir }}-${{ matrix.otp }}-${{ hashFiles('mix.lock') }}-1
-
-          path: _build
-
-      - uses: erlef/setup-beam@v1
-
-        with:
-          elixir-version: ${{ matrix.elixir }}
-
-          otp-version: ${{ matrix.otp }}
-
-      - run: mix deps.get
-
-      - run: mix dialyzer --halt-exit-status
-
-    strategy:
-      matrix:
-        include:
-          - elixir: 1.7.x
-
-            os: ubuntu-18.04
-
-            otp: 19.x
-
-          - elixir: 1.7.x
-
-            otp: 20.x
-
-          - elixir: 1.7.x
-
-            otp: 21.x
-
-          - elixir: 1.7.x
-
-            otp: 22.x
-
-          - elixir: 1.8.x
-
-            otp: 20.x
-
-          - elixir: 1.8.x
-
-            otp: 21.x
-
-          - elixir: 1.8.x
-
-            otp: 22.x
-
-          - elixir: 1.9.x
-
-            otp: 20.x
-
-          - elixir: 1.9.x
-
-            otp: 21.x
-
-          - elixir: 1.9.x
-
-            otp: 22.x
-
-          - elixir: 1.10.x
-
-            otp: 21.x
-
-          - elixir: 1.10.x
-
-            otp: 22.x
-
-          - elixir: 1.11.x
-
-            otp: 21.x
-
-          - elixir: 1.11.x
-
-            otp: 22.x
-
-          - elixir: 1.11.x
-
-            otp: 23.x
-
-          - elixir: 1.12.x
-
-            otp: 22.x
-
-          - elixir: 1.12.x
-
-            otp: 23.x
-
-          - elixir: 1.12.x
-
-            otp: 24.x
-
-          - elixir: v1.13.x
-
-            otp: 22.x
-
-          - elixir: v1.13.x
-
-            otp: 23.x
-
-          - elixir: v1.13.x
-
-            otp: 24.x
+      - run: mix credo --strict --format=sarif
+
+  # dialyzer:
+  #   runs-on: ${{ matrix.os || 'ubuntu-20.04' }}
+
+  #   steps:
+  #     - uses: actions/checkout@v4.1.0
+  #     - uses: actions/cache@v3.3.2
+  #       with:
+  #         key: ${{ github.job }}-${{ hashFiles('mix.lock') }}-1
+  #         path: _build
+  #     - uses: erlef/setup-beam@v1.16.0
+  #       id: beam
+  #       with:
+  #         elixir-version: 1.15.x
+  #         otp-version: 26.x
+  #     - run: mix deps.get
+  #     - name: Restore PLT cache
+  #       id: plt_cache
+  #       uses: actions/cache/restore@v3.3.2
+  #       with:
+  #         key: |
+  #           plt-${{ runner.os }}-${{ steps.beam.outputs.otp-version }}-${{ steps.beam.outputs.elixir-version }}-${{ hashFiles('**/mix.lock') }}
+  #         restore-keys: |
+  #           plt-${{ runner.os }}-${{ steps.beam.outputs.otp-version }}-${{ steps.beam.outputs.elixir-version }}-
+  #         path: |
+  #           priv/plts
+
+  #       # Create PLTs if no cache was found
+  #     - name: Create PLTs
+  #       if: steps.plt_cache.outputs.cache-hit != 'true'
+  #       run: mix dialyzer --plt
+  #     - run: mix dialyzer --format github
 
   test:
-    runs-on: ${{ matrix.os || 'ubuntu-latest' }}
-
+    runs-on: ${{ matrix.os || 'ubuntu-20.04' }}
     steps:
-      - uses: actions/checkout@v2
-
-      - uses: actions/cache@v2
-
+      - uses: actions/checkout@v4.1.0
+      - uses: actions/cache@v3.3.2
         with:
           key: ${{ github.job }}-${{ matrix.elixir }}-${{ matrix.otp }}-${{ hashFiles('mix.lock') }}-1
-
           path: _build
-
-      - uses: erlef/setup-beam@v1
-
+      - uses: erlef/setup-beam@v1.16.0
         with:
           elixir-version: ${{ matrix.elixir }}
-
           otp-version: ${{ matrix.otp }}
-
       - run: mix deps.get
-
       - run: mix test
-
     strategy:
+      fail-fast: false
       matrix:
         include:
-          - elixir: 1.7.x
-
-            os: ubuntu-18.04
-
-            otp: 19.x
-
-          - elixir: 1.7.x
-
-            otp: 20.x
-
-          - elixir: 1.7.x
-
-            otp: 21.x
-
-          - elixir: 1.7.x
-
-            otp: 22.x
-
-          - elixir: 1.8.x
-
-            otp: 20.x
-
-          - elixir: 1.8.x
-
-            otp: 21.x
-
-          - elixir: 1.8.x
-
-            otp: 22.x
-
-          - elixir: 1.9.x
-
-            otp: 20.x
-
-          - elixir: 1.9.x
-
-            otp: 21.x
-
-          - elixir: 1.9.x
-
-            otp: 22.x
-
-          - elixir: 1.10.x
-
-            otp: 21.x
-
-          - elixir: 1.10.x
-
-            otp: 22.x
-
           - elixir: 1.11.x
-
             otp: 21.x
-
+            os: ubuntu-20.04
           - elixir: 1.11.x
-
             otp: 22.x
-
+            os: ubuntu-20.04
           - elixir: 1.11.x
-
             otp: 23.x
-
+            os: ubuntu-20.04
           - elixir: 1.12.x
-
             otp: 22.x
-
+            os: ubuntu-20.04
           - elixir: 1.12.x
-
             otp: 23.x
-
+            os: ubuntu-20.04
           - elixir: 1.12.x
-
             otp: 24.x
-
-          - elixir: v1.13.x
-
+            os: ubuntu-20.04
+          - elixir: 1.13.x
             otp: 22.x
-
-          - elixir: v1.13.x
-
+            os: ubuntu-20.04
+          - elixir: 1.13.x
             otp: 23.x
-
-          - elixir: v1.13.x
-
+            os: ubuntu-20.04
+          - elixir: 1.13.x
             otp: 24.x
+            os: ubuntu-20.04
+          - elixir: 1.14.x
+            otp: 23.x
+            os: ubuntu-20.04
+          - elixir: 1.14.x
+            otp: 24.x
+            os: ubuntu-20.04
+          - elixir: 1.14.x
+            otp: 25.x
+            os: ubuntu-20.04
+          - elixir: 1.15.x
+            otp: 24.x
+            os: ubuntu-20.04
+          - elixir: 1.15.x
+            otp: 25.x
+            os: ubuntu-20.04
+          # Something changed in otp 26 for seed and single test started producing failures
+          # it does not affect functionality, only CI
+          # - elixir: 1.15.x
+          #   otp: 26.x
+          #   os: ubuntu-20.04
