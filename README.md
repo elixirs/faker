@@ -30,7 +30,9 @@ fake data.
 
     ```elixir
     defp deps do
-      [{:faker, "~> 0.17", only: :test}]
+      [
+        {:faker, "~> 0.17", only: :test},
+      ]
     end
     ```
 
