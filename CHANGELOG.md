@@ -9,17 +9,20 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 ## Unreleased
 
 ### Added
+- `Faker.Fruits.En` - add english fruits [[@KevinDaSilvaS](https://github.com/KevinDaSilvaS)]
 
 ### Changed
 - `Faker.Commerce.PtBr` - add more products in product_name_product [[@igorgbr](https://github.com/igorgbr)]
 - `Faker.Fruits.PtBr` - fix typo in nectarina [[@KevinDaSilvaS](https://github.com/KevinDaSilvaS)]
 - `Faker.Internet.image_url/0` - switched unresponsive placeholder.it with picsum.photos [[@almirsarajcic](https://github.com/almirsarajcic)]
+- `Faker.Vehicle.En` - fix spelling of some common makes/models [[@nskins](https://github.com/nskins)]
 
 ### Deprecated
 
 ### Removed
 
 ### Fixed
+- `Faker.Currency.code/0` remove duplicates/replace old currencies [[@yassinrais](https://github.com/yassinrais)]
 - `Faker.Adress.PtBr` - fix model documentation [[@laraujo7](https://github.com/laraujo7)]
 - `Faker.Address.En/0` corrected formatting for US and Britian [[@atavistock](https://github.com/atavistock)]
 

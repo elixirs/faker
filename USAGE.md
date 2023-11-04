@@ -55,6 +55,7 @@
 - [Faker.Food](lib/faker/food.ex)
 - [Faker.Food.En](lib/faker/food/en.ex)
 - [Faker.Food.Hy](lib/faker/food/hy.ex)
+- [Faker.Fruit.En](lib/faker/fruit/en.ex)
 - [Faker.Fruit.PtBr](lib/faker/fruit/pt_br.ex)
   <!-- G -->
 - [Faker.Gov.Us](lib/faker/gov/us.ex)
