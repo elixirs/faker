@@ -7,6 +7,7 @@
 - [Faker.Address.It](lib/faker/address/it.ex)
 - [Faker.Address.PtBr](lib/faker/address/pt_br.ex)
 - [Faker.Address.Ru](lib/faker/address/ru.ex)
+- [Faker.Address.Uk](lib/faker/address/uk.ex)
 - [Faker.Airports](lib/faker/airports.ex)
 - [Faker.Airports.En](lib/faker/airports/en.ex)
 - [Faker.Airports.PtBr](lib/faker/airports/pt_br.ex)
