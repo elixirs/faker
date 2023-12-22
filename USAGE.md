@@ -122,6 +122,8 @@
   <!-- V -->
 - [Faker.Vehicle](lib/faker/vehicle.ex)
 - [Faker.Vehicle.En](lib/faker/vehicle/en.ex)
+- [Faker.Vine](lib/faker/vine.ex)
+- [Faker.Vine.En](lib/faker/vine/en.ex)
   <!-- W -->
   <!-- X -->
   <!-- Y -->
