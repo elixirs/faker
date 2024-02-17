@@ -13,7 +13,7 @@ jobs:
         with:
           key: ${{ github.job }}-${{ hashFiles('mix.lock') }}-1
           path: _build
-      - uses: erlef/setup-beam@v1.17.2
+      - uses: erlef/setup-beam@v1.17.3
         with:
           elixir-version: 1.15.x
           otp-version: 26.x
@@ -60,7 +60,7 @@ jobs:
         with:
           key: ${{ github.job }}-${{ matrix.elixir }}-${{ matrix.otp }}-${{ hashFiles('mix.lock') }}-1
           path: _build
-      - uses: erlef/setup-beam@v1.17.2
+      - uses: erlef/setup-beam@v1.17.3
         with:
           elixir-version: ${{ matrix.elixir }}
           otp-version: ${{ matrix.otp }}
