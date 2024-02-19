@@ -9,6 +9,8 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 ## Unreleased
 
 ### Added
+- `Faker.Tolkien` Add tolkien legendarium [[@mathisto](https://github.com/mathisto)]
+- `Faker.Tolkien.En` Add tolkien legendarium [[@mathisto](https://github.com/mathisto)]
 - `Faker.Fruits.En` - add english fruits [[@KevinDaSilvaS](https://github.com/KevinDaSilvaS)]
 
 ### Changed

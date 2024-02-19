@@ -116,6 +116,8 @@
   <!-- T -->
 - [Faker.Team](lib/faker/team.ex)
 - [Faker.Team.En](lib/faker/team/en.ex)
+- [Faker.Tolkien](lib/faker/tolkien.ex)
+- [Faker.Tolkien.En](lib/faker/tolkien/en.ex)
   <!-- U -->
 - [Faker.Util](lib/faker/util.ex)
 - [Faker.UUID](lib/faker/uuid.ex)
