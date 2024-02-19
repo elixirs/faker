@@ -9,19 +9,27 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 ## Unreleased
 
 ### Added
+
 - `Faker.Fruits.En` - add english fruits [[@KevinDaSilvaS](https://github.com/KevinDaSilvaS)]
+- `Faker.Person.PtBr.female_first_name` - add Brazilian Portuguese female first name generator [[@FranciscoLira](https://github.com/FranciscoLira)]
+- `Faker.Person.PtBr.male_first_name` - add Brazilian Portuguese male first name generator [[@FranciscoLira](https://github.com/FranciscoLira)]
+- `Faker.Person.PtBr.female_prefix` - add Brazilian Portuguese female prefix generator [[@FranciscoLira](https://github.com/FranciscoLira)]
+- `Faker.Person.PtBr.male_prefix` - add Brazilian Portuguese male prefix generator [[@FranciscoLira](https://github.com/FranciscoLira)]
 
 ### Changed
+
 - `Faker.Commerce.PtBr` - add more products in product_name_product [[@igorgbr](https://github.com/igorgbr)]
 - `Faker.Fruits.PtBr` - fix typo in nectarina [[@KevinDaSilvaS](https://github.com/KevinDaSilvaS)]
 - `Faker.Internet.image_url/0` - switched unresponsive placeholder.it with picsum.photos [[@almirsarajcic](https://github.com/almirsarajcic)]
 - `Faker.Vehicle.En` - fix spelling of some common makes/models [[@nskins](https://github.com/nskins)]
+- `Faker.Person.PtBr.first_name` - separate male from female names. [[@FranciscoLira](https://github.com/FranciscoLira)]
 
 ### Deprecated
 
 ### Removed
 
 ### Fixed
+
 - `Faker.Currency.code/0` remove duplicates/replace old currencies [[@yassinrais](https://github.com/yassinrais)]
 - `Faker.Adress.PtBr` - fix model documentation [[@laraujo7](https://github.com/laraujo7)]
 - `Faker.Address.En/0` corrected formatting for US and Britian [[@atavistock](https://github.com/atavistock)]
@@ -31,6 +39,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 ## 0.17.0
 
 ### Added
+
 - `Faker.Internet.StatusCode` [[@emmetreza](https://github.com/emmetreza)]
 - CI workflow using GitHub Actions [[@anthonator](https://github.com/anthonator)]
 - `Faker.Cat.PtBr` [[@f-francine](https://github.com/f-francine)]
@@ -39,6 +48,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 - `Faker.Commerce.PtBr` [[@f-francine](https://github.com/f-francine)]
 
 ### Changed
+
 - `Faker.Vehicles` add makes and models that are multi-word, refactor existing fns [[jersearls](https://github.com/jersearls)]
 - `Faker.Avatar` switch to `https` to prevent redirect [[igas](https://github.com/igas)]
 - Updated build badge for GitHub Actions [[@anthonator](https://github.com/anthonator)]
@@ -46,6 +56,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 ### Deprecated
 
 ### Removed
+
 - Travis CI for CI workflow [[@anthonator](https://github.com/anthonator)]
 
 ### Fixed
@@ -53,6 +64,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 - `Faker.Team` `creature/0` and `name/0` documentation examples fixed [[@yuriploc](https://github.com/yuriploc)]
 - Fix bidirectional formatting [[@MichalDolata](https://github.com/MichalDolata)]
 - Extra split for Virgin Islands in the country sampler [[intercaetera](https://github.com/intercaetera)]
+
 ### Security
 
 ## 0.16.0
@@ -127,6 +139,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 - `Faker.Phone.PtBr`[[@netond](https://github.com/netond)]
 
 ### Changed
+
 - Fix `Faker.Code.Iban.iban` and `Faker.Gov.It.fiscal_id` doctests [[@vbrazo](https://github.com/vbrazo)]
 - `Faker.Address.Es` [[@emig](https://github.com/emig)]
 - Set minimum Elixir version to 1.6
@@ -145,6 +158,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 - Elixir 1.4 and 1.5 support
 
 ### Fixed
+
 - `Faker.Util.upper_letter/0` documentation examples [[@michaelfich](https://github.com/michaelfich)]
 
 ### Security

@@ -34,13 +34,13 @@ defmodule Faker.Address.PtBr do
   ## Examples
 
       iex> Faker.Address.PtBr.city()
-      "Senador Kaique Paulista"
+      "Senador Suélen das Pedras"
       iex> Faker.Address.PtBr.city()
-      "São Roberta dos Dourados"
+      "São Pedro Lucas do Sul"
       iex> Faker.Address.PtBr.city()
-      "Salto das Flores"
+      "Três Pedro Henrique"
       iex> Faker.Address.PtBr.city()
-      "Kléber"
+      "João Gabriel Alegre"
   """
   @spec city() :: String.t()
   def city do
@@ -1034,13 +1034,13 @@ defmodule Faker.Address.PtBr do
   ## Examples
 
       iex> Faker.Address.PtBr.street_address()
-      "Estação Kaique, 2"
+      "Estação Suélen, 646"
       iex> Faker.Address.PtBr.street_address()
-      "Lagoa Matheus, 0832"
+      "Recanto Arthur, 970"
       iex> Faker.Address.PtBr.street_address()
-      "Estrada Diegues, s/n"
+      "Trecho Júlia Viana, s/n"
       iex> Faker.Address.PtBr.street_address()
-      "Praia Limeira, 020"
+      "Passarela Morais, s/n"
   """
   @spec street_address() :: String.t()
   def street_address do
@@ -1053,13 +1053,13 @@ defmodule Faker.Address.PtBr do
   ## Examples
 
       iex> Faker.Address.PtBr.street_address(true)
-      "Estação Kaique, 2 Sala 461"
+      "Estação Suélen, 646 AP 083"
       iex> Faker.Address.PtBr.street_address(false)
-      "Conjunto Rodrigo, 970"
+      "Setor da Penha, s/n"
       iex> Faker.Address.PtBr.street_address(false)
-      "Trecho Davi Luiz Limeira, 020"
+      "Trecho Júlia Viana, s/n"
       iex> Faker.Address.PtBr.street_address(false)
-      "Sítio Maria Eduarda, 097"
+      "Passarela Morais, s/n"
   """
   @spec street_address(true | any) :: String.t()
   def street_address(true), do: street_address() <> " " <> secondary_address()
@@ -1071,13 +1071,13 @@ defmodule Faker.Address.PtBr do
   ## Examples
 
       iex> Faker.Address.PtBr.street_name()
-      "Estação Kaique"
+      "Estação Suélen"
       iex> Faker.Address.PtBr.street_name()
-      "Morro Louise Macieira"
+      "Colônia Macieira"
       iex> Faker.Address.PtBr.street_name()
-      "Loteamento Maria Alice Junqueira"
+      "Loteamento Emanuel Albuquerque"
       iex> Faker.Address.PtBr.street_name()
-      "Condomínio da Maia"
+      "Setor da Penha"
   """
   @spec street_name() :: String.t()
   def street_name do
