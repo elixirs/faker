@@ -11,6 +11,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 ### Added
 
 - `Faker.Fruits.En` - add english fruits [[@KevinDaSilvaS](https://github.com/KevinDaSilvaS)]
+- `Faker.Timezone` - add IANA tz database canonical and alias names [[@tajacks](https://github.com/tajacks)]
 
 ### Changed
 
