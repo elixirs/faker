@@ -18,10 +18,10 @@ defmodule Faker.Date do
 
     earliest_year = today.year - (age + 1)
 
-    {:ok, earliest_date} = Date.new(earliest_year, today.month, today.day)
+    {:ok, earliest_date} = safe_date(earliest_year, today.month, today.day)
     earliest_date = Date.add(earliest_date, 1)
 
-    {:ok, latest_date} = Date.new(earliest_year + 1, today.month, today.day)
+    {:ok, latest_date} = safe_date(earliest_year + 1, today.month, today.day)
 
     date_range = Date.range(earliest_date, latest_date)
 
@@ -71,5 +71,12 @@ defmodule Faker.Date do
     from
     |> Faker.DateTime.between(to)
     |> DateTime.to_date()
+  end
+
+  defp safe_date(year, month, day) do
+    case Date.new(year, month, day) do
+      {:ok, date} -> {:ok, date}
+      {:error, :invalid_date} -> safe_date(year, month, day - 1)
+    end
   end
 end
