@@ -1,5 +1,6 @@
 defmodule Faker.String do
   import Faker, only: [sampler: 2]
+  @default_len 8
 
   @moduledoc """
   Function for generating Strings
@@ -20,12 +21,108 @@ defmodule Faker.String do
       "KLJyZ7xbfJZPMy3J7dAsyfOB3vnZIqFGv4VQil8D/xh1C/Nj9K7xJk47zJtcKsy5mjpJk61Wt3jcJu3bfgwuScTmOOYt4ykzvDUl"
   """
   @spec base64(pos_integer) :: String.t()
-  def base64(length \\ 8) do
+  def base64(length \\ @default_len) do
     length
     |> Faker.random_bytes()
     |> Base.encode64()
     |> binary_part(0, length)
   end
+
+  @doc """
+  Returns a String that conforms to the given regex.
+
+  ## Examples
+
+      iex> Faker.String.from_regex(~r/a|b/)
+      "a"
+      iex> Faker.String.from_regex(~r/a|b/)
+      "b"
+      iex> Faker.String.from_regex(~r/[0-9]{3}-[0-9]{3}-[0-9]{4}/)
+      "240-614-2330"
+  """
+  @spec from_regex(regex :: Regex.t()) :: String.t()
+  def from_regex(regex) when is_struct(regex, Regex) do
+    regex
+    |> Randex.stream()
+    |> Enum.take(1)
+    |> hd()
+  end
+
+  def from_regex(arg),
+    do: raise(ArgumentError, "Must provide a Regex struct, got #{inspect(arg)}")
+
+  defguardp non_neg_int(value) when is_integer(value) and value > 0
+
+  @doc """
+  Returns a string of digits of the given length
+
+  ## Examples
+
+      iex> Faker.String.numeric()
+      "12345678"
+      iex> Faker.String.numeric()
+      "16820381"
+      iex> Faker.String.numeric(2)
+      "12"
+      iex> Faker.String.numeric(-2)
+      ** (ArgumentError) len must be greater than 0
+  """
+  @spec numeric(len :: pos_integer()) :: String.t()
+  def numeric(len \\ @default_len)
+
+  def numeric(len) when non_neg_int(len) do
+    from_regex(~r/[0-9]{#{len}}/)
+  end
+
+  def numeric(_), do: raise_len_too_small()
+
+  @doc """
+  Returns a string of letters and digits of the given length
+
+  ## Examples
+
+      iex> Faker.String.alphanumeric()
+      "12a45Hn8"
+      iex> Faker.String.alphanumeric()
+      "S6n2o3d1"
+      iex> Faker.String.alphanumeric(2)
+      "a1"
+      iex> Faker.String.alphanumeric(-2)
+      ** (ArgumentError) len must be an integer greater than 0
+  """
+  @spec alphanumeric(len :: pos_integer()) :: String.t()
+  def alphanumeric(len \\ @default_len)
+
+  def alphanumeric(len) when non_neg_int(len) do
+    from_regex(~r/[A-Za-z0-9]{#{len}}/)
+  end
+
+  def alphanumeric(_), do: raise_len_too_small()
+
+  @doc """
+  Returns a string of letters of the given length
+
+  ## Examples
+
+      iex> Faker.String.alphanumeric()
+      "aNiReSoa"
+      iex> Faker.String.alphanumeric()
+      "OrlaOhuo"
+      iex> Faker.String.alphanumeric(2)
+      "cB"
+      iex> Faker.String.alphanumeric(-2)
+      ** (ArgumentError) len must be an integer greater than 0
+  """
+  @spec alpha(len :: pos_integer()) :: String.t()
+  def alpha(len \\ @default_len)
+
+  def alpha(len) when non_neg_int(len) do
+    from_regex(~r/[A-Za-z]{#{len}}/)
+  end
+
+  def alpha(_len), do: raise_len_too_small()
+
+  defp raise_len_too_small(), do: raise(ArgumentError, "len must be an integer greater than 0")
 
   @doc """
   Returns a random string taken from the [Big List of Naughty Strings](https://github.com/minimaxir/big-list-of-naughty-strings).

@@ -41,6 +41,7 @@ defmodule Faker.Mixfile do
 
   defp deps do
     [
+      {:randex, "~> 0.4.0", runtime: false},
       {:ex_doc, ">= 0.0.0", only: :dev, runtime: false},
       {:earmark, ">= 0.0.0", only: :dev, runtime: false},
       {:credo, ">= 0.0.0", only: [:dev, :test], runtime: false},
