@@ -12,6 +12,20 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Added
 
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+## 0.18.0
+
+### Added
+
 - `Faker.Fruits.En` - add english fruits [[@KevinDaSilvaS](https://github.com/KevinDaSilvaS)]
 
 - `Faker.Avatar.image_url_with_opts/1` [[delmendo](https://github.com/delmendo)]
@@ -24,18 +38,12 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 - `Faker.Internet.image_url/0` - switched unresponsive placeholder.it with picsum.photos [[@almirsarajcic](https://github.com/almirsarajcic)]
 - `Faker.Vehicle.En` - fix spelling of some common makes/models [[@nskins](https://github.com/nskins)]
 
-### Deprecated
-
-### Removed
-
 ### Fixed
 
 - `Faker.date_of_birth` - fix invalid dates due to leap year [[igas](https://github.com/igas)]
 - `Faker.Currency.code/0` remove duplicates/replace old currencies [[@yassinrais](https://github.com/yassinrais)]
 - `Faker.Adress.PtBr` - fix model documentation [[@laraujo7](https://github.com/laraujo7)]
 - `Faker.Address.En/0` corrected formatting for US and Britian [[@atavistock](https://github.com/atavistock)]
-
-### Security
 
 ## 0.17.0
 
