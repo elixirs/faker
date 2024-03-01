@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4.1.1
-      - uses: actions/cache@v4.0.0
+      - uses: actions/cache@v4.0.1
         with:
           key: ${{ github.job }}-${{ hashFiles('mix.lock') }}-1
           path: _build
@@ -56,7 +56,7 @@ jobs:
     runs-on: ${{ matrix.os || 'ubuntu-20.04' }}
     steps:
       - uses: actions/checkout@v4.1.1
-      - uses: actions/cache@v4.0.0
+      - uses: actions/cache@v4.0.1
         with:
           key: ${{ github.job }}-${{ matrix.elixir }}-${{ matrix.otp }}-${{ hashFiles('mix.lock') }}-1
           path: _build
