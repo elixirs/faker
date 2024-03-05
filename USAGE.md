@@ -94,6 +94,7 @@
 - [Faker.Person.Hy](lib/faker/person/hy.ex)
 - [Faker.Person.It](lib/faker/person/it.ex)
 - [Faker.Person.PtBr](lib/faker/person/pt_br.ex)
+- [Faker.Person.Nl](lib/faker/person/nl.ex)
 - [Faker.Phone.EnUs](lib/faker/phone/en_us.ex)
 - [Faker.Phone.EnGb](lib/faker/phone/en_gb.ex)
 - [Faker.Phone.Hy](lib/faker/phone/hy.ex)
