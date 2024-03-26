@@ -12,6 +12,8 @@ defmodule Faker.AvatarTest do
   test "image_url/1" do
     assert String.starts_with?(image_url("myslug"), "https://robohash.org/")
     assert String.contains?(image_url("myslug"), "myslug")
+
+    assert image_url(%{slug: "myslug", set: 5}) == "https://robohash.org/set_set5/myslug"
   end
 
   test "image_url/2" do
