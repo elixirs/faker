@@ -10,6 +10,9 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Added
 - `Faker.Person.NlBe` flemish person faker [[@ChristofVerhoeven](https://github.com/ChristofVerhoeven)]
+- `Faker.Address.Nl` [[@MichaelVanDenBerg](https://github.com/MichaelVanDenBerg)]
+- `Faker.Person.Nl` [[@MichaelVanDenBerg](https://github.com/MichaelVanDenBerg)]
+- `Faker.Phone.Nl` [[@MichaelVanDenBerg](https://github.com/MichaelVanDenBerg)]
 
 ### Changed
 
@@ -26,9 +29,6 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 ### Added
 
 - `Faker.Fruits.En` - add english fruits [[@KevinDaSilvaS](https://github.com/KevinDaSilvaS)]
-- `Faker.Address.Nl` [[@MichaelVanDenBerg](https://github.com/MichaelVanDenBerg)]
-- `Faker.Person.Nl` [[@MichaelVanDenBerg](https://github.com/MichaelVanDenBerg)]
-- `Faker.Phone.Nl` [[@MichaelVanDenBerg](https://github.com/MichaelVanDenBerg)]
 
 ### Changed
 

@@ -8,6 +8,6 @@ defmodule Faker.PersonTest do
   doctest Faker.Person.Hy
   doctest Faker.Person.It
   doctest Faker.Person.Nl
-  doctest Faker.Person.PtBr
   doctest Faker.Person.NlBe
+  doctest Faker.Person.PtBr
 end
