@@ -3652,7 +3652,7 @@ defmodule Faker.Person.NlBe do
     "Zegers",
     "Zieverink",
     "Zijlmans",
-    "Zuidwijk",
+    "Zuidwijk"
   ])
 
   @doc """
@@ -3922,7 +3922,7 @@ defmodule Faker.Person.NlBe do
     "Zoete",
     "Zutter",
     "Zwaan",
-    "Zwart",
+    "Zwart"
   ])
 
   @doc """
