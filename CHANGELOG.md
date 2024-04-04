@@ -9,6 +9,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 ## Unreleased
 
 ### Added
+- `Faker.Person.NlBe` flemish person faker [[@ChristofVerhoeven](https://github.com/ChristofVerhoeven)]
 
 ### Changed
 
