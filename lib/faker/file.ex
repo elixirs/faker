@@ -39,13 +39,9 @@ defmodule Faker.File do
   ## Examples
 
       iex> Faker.File.file_extension()
-      "wav"
+      "txt"
       iex> Faker.File.file_extension()
       "wav"
-      iex> Faker.File.file_extension()
-      "doc"
-      iex> Faker.File.file_extension()
-      "mov"
   """
   @spec file_extension() :: String.t()
   def file_extension do

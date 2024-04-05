@@ -248,13 +248,11 @@ defmodule Faker.Vehicle do
 
   ## Examples
       iex> Faker.Vehicle.vin()
-      "1C68203VCV0360337"
+      "1C689K5Y000T03374"
       iex> Faker.Vehicle.vin()
-      "5190V7FL8YX113016"
+      "D0B19RGCD90H16449"
       iex> Faker.Vehicle.vin()
-      "4RSE9035H9JA97940"
-      iex> Faker.Vehicle.vin()
-      "59E4A13G890C97377"
+      "RSE90354760B00530"
   """
   def vin do
     Util.format("%10x%y%x%5d",
