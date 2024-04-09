@@ -9,6 +9,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 ## Unreleased
 
 ### Added
+- `Faker.Address.NlBe` flemish address faker [[@ChristofVerhoeven](https://github.com/ChristofVerhoeven)]
 - `Faker.Person.NlBe` flemish person faker [[@ChristofVerhoeven](https://github.com/ChristofVerhoeven)]
 - `Faker.Address.Nl` [[@MichaelVanDenBerg](https://github.com/MichaelVanDenBerg)]
 - `Faker.Person.Nl` [[@MichaelVanDenBerg](https://github.com/MichaelVanDenBerg)]

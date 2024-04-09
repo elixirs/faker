@@ -6,6 +6,7 @@
 - [Faker.Address.Hy](lib/faker/address/hy.ex)
 - [Faker.Address.It](lib/faker/address/it.ex)
 - [Faker.Address.Nl](lib/faker/address/nl.ex)
+- [Faker.Address.NlBe](lib/faker/address/nl_be.ex)
 - [Faker.Address.PtBr](lib/faker/address/pt_br.ex)
 - [Faker.Address.Ru](lib/faker/address/ru.ex)
 - [Faker.Airports](lib/faker/airports.ex)
