@@ -8,7 +8,7 @@ jobs:
   credo:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4.1.1
+      - uses: actions/checkout@v4.1.4
       - uses: actions/cache@v4.0.2
         with:
           key: ${{ github.job }}-${{ hashFiles('mix.lock') }}-1
@@ -55,7 +55,7 @@ jobs:
   test:
     runs-on: ${{ matrix.os || 'ubuntu-20.04' }}
     steps:
-      - uses: actions/checkout@v4.1.1
+      - uses: actions/checkout@v4.1.4
       - uses: actions/cache@v4.0.2
         with:
           key: ${{ github.job }}-${{ matrix.elixir }}-${{ matrix.otp }}-${{ hashFiles('mix.lock') }}-1
