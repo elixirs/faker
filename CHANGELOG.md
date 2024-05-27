@@ -9,28 +9,41 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 ## Unreleased
 
 ### Added
-- `Faker.Fruits.En` - add english fruits [[@KevinDaSilvaS](https://github.com/KevinDaSilvaS)]
 
 ### Changed
-- `Faker.Commerce.PtBr` - add more products in product_name_product [[@igorgbr](https://github.com/igorgbr)]
-- `Faker.Fruits.PtBr` - fix typo in nectarina [[@KevinDaSilvaS](https://github.com/KevinDaSilvaS)]
-- `Faker.Internet.image_url/0` - switched unresponsive placeholder.it with picsum.photos [[@almirsarajcic](https://github.com/almirsarajcic)]
-- `Faker.Vehicle.En` - fix spelling of some common makes/models [[@nskins](https://github.com/nskins)]
 
 ### Deprecated
 
 ### Removed
 
 ### Fixed
+
+### Security
+
+## 0.18.0
+
+### Added
+
+- `Faker.Fruits.En` - add english fruits [[@KevinDaSilvaS](https://github.com/KevinDaSilvaS)]
+
+### Changed
+
+- `Faker.Commerce.PtBr` - add more products in product_name_product [[@igorgbr](https://github.com/igorgbr)]
+- `Faker.Fruits.PtBr` - fix typo in nectarina [[@KevinDaSilvaS](https://github.com/KevinDaSilvaS)]
+- `Faker.Internet.image_url/0` - switched unresponsive placeholder.it with picsum.photos [[@almirsarajcic](https://github.com/almirsarajcic)]
+- `Faker.Vehicle.En` - fix spelling of some common makes/models [[@nskins](https://github.com/nskins)]
+
+### Fixed
+
+- `Faker.date_of_birth` - fix invalid dates due to leap year [[igas](https://github.com/igas)]
 - `Faker.Currency.code/0` remove duplicates/replace old currencies [[@yassinrais](https://github.com/yassinrais)]
 - `Faker.Adress.PtBr` - fix model documentation [[@laraujo7](https://github.com/laraujo7)]
 - `Faker.Address.En/0` corrected formatting for US and Britian [[@atavistock](https://github.com/atavistock)]
 
-### Security
-
 ## 0.17.0
 
 ### Added
+
 - `Faker.Internet.StatusCode` [[@emmetreza](https://github.com/emmetreza)]
 - CI workflow using GitHub Actions [[@anthonator](https://github.com/anthonator)]
 - `Faker.Cat.PtBr` [[@f-francine](https://github.com/f-francine)]
@@ -40,6 +53,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 - `Faker.Gov.PtBr.cpf/0` [[@rohlacanna](https://github.com/rohlacanna)]
 
 ### Changed
+
 - `Faker.Vehicles` add makes and models that are multi-word, refactor existing fns [[jersearls](https://github.com/jersearls)]
 - `Faker.Avatar` switch to `https` to prevent redirect [[igas](https://github.com/igas)]
 - Updated build badge for GitHub Actions [[@anthonator](https://github.com/anthonator)]
