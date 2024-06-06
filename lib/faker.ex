@@ -47,7 +47,7 @@ defmodule Faker do
     acc
   end
 
-  @alphabet 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
+  @alphabet ~c"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
   defp letter do
     Enum.at(@alphabet, random_between(0, Enum.count(@alphabet) - 1))
   end
