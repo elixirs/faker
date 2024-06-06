@@ -106,7 +106,7 @@ defmodule Faker do
   """
   @spec random_uniform() :: float
   def random_uniform do
-    Application.get_env(:faker, :random_module).random_uniform
+    Application.get_env(:faker, :random_module).random_uniform()
   end
 
   @doc """
