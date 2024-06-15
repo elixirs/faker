@@ -285,13 +285,13 @@ defmodule Faker.Lorem do
   ## Examples
 
       iex> Faker.Lorem.characters()
-      'ppkQqaIfGqxsjFoNITNnu6eXyJicLJNth88PrhGDhwp4LNQMt5pCFh7XGEZUiBOjqwcnSUTH94vu8a9XKUwNAs48lHzPITbFXSfTS0pHfBSmHkbj9kOsd7qRuGeXKTgCgI1idI3uwENwTqc'
+      ~c'ppkQqaIfGqxsjFoNITNnu6eXyJicLJNth88PrhGDhwp4LNQMt5pCFh7XGEZUiBOjqwcnSUTH94vu8a9XKUwNAs48lHzPITbFXSfTS0pHfBSmHkbj9kOsd7qRuGeXKTgCgI1idI3uwENwTqc'
       iex> Faker.Lorem.characters(3..5)
-      'EFbv'
+      ~c'EFbv'
       iex> Faker.Lorem.characters(2)
-      'vx'
+      ~c'vx'
       iex> Faker.Lorem.characters(7)
-      'jycADSd'
+      ~c'jycADSd'
   """
   @spec characters(integer | Range.t()) :: [char]
   def characters(range_or_length \\ 15..255)
@@ -498,7 +498,7 @@ defmodule Faker.Lorem do
   end
 
   defp character do
-    alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
+    alphabet = ~c"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
     Enum.at(alphabet, Faker.random_between(0, Enum.count(alphabet) - 1))
   end
 end
