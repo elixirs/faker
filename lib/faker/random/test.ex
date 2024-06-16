@@ -9,7 +9,7 @@ defmodule Faker.Random.Test do
   def random_bytes(total) do
     set_seed(:ets.lookup(:seed_registry, self()))
 
-    Stream.repeatedly(fn -> Enum.random(0..255) end)
+    Stream.repeatedly(fn -> random_between(0, 255) end)
     |> Enum.take(total)
     |> IO.iodata_to_binary()
   end
