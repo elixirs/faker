@@ -30,8 +30,8 @@ defmodule Faker.File do
       ~w(video/mpeg video/mp4 video/ogg video/quicktime video/webm video/x-matroska video/x-ms-wmv video/x-flv)
   }
 
-  @categories_extensions Map.keys(@extensions)
-  @categories_mimes Map.keys(@mimes)
+  @categories_extensions @extensions |> Map.keys() |> Enum.sort()
+  @categories_mimes @mimes |> Map.keys() |> Enum.sort()
 
   @doc """
   Returns a random file extension
