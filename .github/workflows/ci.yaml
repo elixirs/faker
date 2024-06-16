@@ -116,7 +116,7 @@ jobs:
             otp: 25.x
             os: ubuntu-20.04
           - elixir: 1.17.x
-            otp: 27.x
+            otp: 25.x
             os: ubuntu-22.04
           # Something changed in otp 26 for seed and single test started producing failures
           # it does not affect functionality, only CI
