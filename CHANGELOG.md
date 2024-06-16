@@ -18,7 +18,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ### Fixed
 
-- Fix runtime warning on Elixir 1.17 [[@ypconstante](https://github.com/ypconstante)]
+- Fix compile and runtime warnings on Elixir 1.17 [[@ypconstante](https://github.com/ypconstante)]
 
 ### Security
 

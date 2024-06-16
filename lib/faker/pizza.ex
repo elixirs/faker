@@ -44,17 +44,18 @@ defmodule Faker.Pizza do
         "Family with Clam, Cherry Tomatoes, Salmon, and Chicken"
       ]
   """
-  @spec pizzas(Range.t()) :: list(String.t())
+  @spec pizzas(integer | Range.t()) :: list(String.t())
   def pizzas(range \\ 2..5)
 
-  def pizzas(first..last) do
-    pizzas(Faker.random_between(first, last))
-  end
-
-  @spec pizzas(integer) :: list(String.t())
-  def pizzas(num) do
+  def pizzas(num) when is_integer(num) do
     stream = Stream.repeatedly(&pizza/0)
     Enum.take(stream, num)
+  end
+
+  def pizzas(range) do
+    range
+    |> Util.pick()
+    |> pizzas()
   end
 
   @doc """
@@ -99,17 +100,18 @@ defmodule Faker.Pizza do
       iex> Faker.Pizza.toppings(2..3)
       ["Shellfish", "Smoked Salmon"]
   """
-  @spec toppings(Range.t()) :: list(String.t())
+  @spec toppings(integer | Range.t()) :: list(String.t())
   def toppings(range \\ 2..5)
 
-  def toppings(first..last) do
-    toppings(Faker.random_between(first, last))
-  end
-
-  @spec toppings(integer) :: list(String.t())
-  def toppings(num) do
+  def toppings(num) when is_integer(num) do
     stream = Stream.repeatedly(&topping/0)
     Enum.take(stream, num)
+  end
+
+  def toppings(range) do
+    range
+    |> Util.pick()
+    |> toppings()
   end
 
   defp toppings_sentence(num) do
