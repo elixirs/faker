@@ -3,7 +3,7 @@ defmodule Faker.Random.Test do
 
   def random_between(left, right) do
     set_seed(:ets.lookup(:seed_registry, self()))
-    Enum.random(left..right)
+    left + :rand.uniform(right - left + 1) - 1
   end
 
   def random_bytes(total) do
