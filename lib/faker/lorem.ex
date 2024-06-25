@@ -285,27 +285,29 @@ defmodule Faker.Lorem do
   ## Examples
 
       iex> Faker.Lorem.characters()
-      'ppkQqaIfGqxsjFoNITNnu6eXyJicLJNth88PrhGDhwp4LNQMt5pCFh7XGEZUiBOjqwcnSUTH94vu8a9XKUwNAs48lHzPITbFXSfTS0pHfBSmHkbj9kOsd7qRuGeXKTgCgI1idI3uwENwTqc'
+      ~c'ppkQqaIfGqxsjFoNITNnu6eXyJicLJNth88PrhGDhwp4LNQMt5pCFh7XGEZUiBOjqwcnSUTH94vu8a9XKUwNAs48lHzPITbFXSfTS0pHfBSmHkbj9kOsd7qRuGeXKTgCgI1idI3uwENwTqc'
       iex> Faker.Lorem.characters(3..5)
-      'EFbv'
+      ~c'EFbv'
       iex> Faker.Lorem.characters(2)
-      'vx'
+      ~c'vx'
       iex> Faker.Lorem.characters(7)
-      'jycADSd'
+      ~c'jycADSd'
   """
   @spec characters(integer | Range.t()) :: [char]
   def characters(range_or_length \\ 15..255)
 
-  def characters(first..last) do
-    characters(Faker.random_between(first, last))
-  end
-
-  def characters(num) do
+  def characters(num) when is_integer(num) do
     char = &character/0
 
     char
     |> Stream.repeatedly()
     |> Enum.take(num)
+  end
+
+  def characters(range) do
+    range
+    |> Util.pick()
+    |> characters()
   end
 
   @doc """
@@ -330,12 +332,14 @@ defmodule Faker.Lorem do
   @spec paragraph(integer | Range.t()) :: String.t()
   def paragraph(range \\ 2..5)
 
-  def paragraph(first..last) do
-    paragraph(Faker.random_between(first, last))
+  def paragraph(num) when is_integer(num) do
+    Enum.join(sentences(num), " ")
   end
 
-  def paragraph(num) do
-    Enum.join(sentences(num), " ")
+  def paragraph(range) do
+    range
+    |> Util.pick()
+    |> paragraph()
   end
 
   @doc """
@@ -360,16 +364,18 @@ defmodule Faker.Lorem do
   @spec paragraphs(integer | Range.t()) :: list(String.t())
   def paragraphs(range \\ 2..5)
 
-  def paragraphs(first..last) do
-    paragraphs(Faker.random_between(first, last))
-  end
-
-  def paragraphs(num) do
+  def paragraphs(num) when is_integer(num) do
     paragraph = &paragraph/0
 
     paragraph
     |> Stream.repeatedly()
     |> Enum.take(num)
+  end
+
+  def paragraphs(range) do
+    range
+    |> Util.pick()
+    |> paragraphs()
   end
 
   @doc """
@@ -394,13 +400,14 @@ defmodule Faker.Lorem do
   @spec sentence(integer | Range.t()) :: String.t()
   def sentence(range \\ 4..10)
 
-  def sentence(first..last) do
-    Faker.random_between(first, last)
-    |> sentence(Util.pick([".", ".", ".", "!", "?"]))
+  def sentence(num) when is_integer(num) do
+    sentence(num, Util.pick([".", ".", ".", "!", "?"]))
   end
 
-  def sentence(num) do
-    sentence(num, Util.pick([".", ".", ".", "!", "?"]))
+  def sentence(range) do
+    range
+    |> Util.pick()
+    |> sentence()
   end
 
   @doc """
@@ -451,16 +458,18 @@ defmodule Faker.Lorem do
   @spec sentences(integer | Range.t()) :: [String.t()]
   def sentences(range \\ 2..5)
 
-  def sentences(first..last) do
-    sentences(Faker.random_between(first, last))
-  end
-
-  def sentences(num) do
+  def sentences(num) when is_integer(num) do
     sentence = &sentence/0
 
     sentence
     |> Stream.repeatedly()
     |> Enum.take(num)
+  end
+
+  def sentences(range) do
+    range
+    |> Util.pick()
+    |> sentences()
   end
 
   @doc """
@@ -485,11 +494,7 @@ defmodule Faker.Lorem do
   @spec words(integer | Range.t()) :: [String.t()]
   def words(range \\ 3..6)
 
-  def words(first..last) do
-    words(Faker.random_between(first, last))
-  end
-
-  def words(num) do
+  def words(num) when is_integer(num) do
     word = &word/0
 
     word
@@ -497,8 +502,14 @@ defmodule Faker.Lorem do
     |> Enum.take(num)
   end
 
+  def words(range) do
+    range
+    |> Util.pick()
+    |> words()
+  end
+
   defp character do
-    alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
+    alphabet = ~c"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
     Enum.at(alphabet, Faker.random_between(0, Enum.count(alphabet) - 1))
   end
 end
