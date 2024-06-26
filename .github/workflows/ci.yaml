@@ -21,7 +21,7 @@ jobs:
       - run: mix credo --strict --format=sarif
 
   # dialyzer:
-  #   runs-on: ${{ matrix.os || 'ubuntu-20.04' }}
+  #   runs-on: ${{ matrix.os || 'ubuntu-22.04' }}
 
   #   steps:
   #     - uses: actions/checkout@v4.1.0
@@ -53,7 +53,7 @@ jobs:
   #     - run: mix dialyzer --format github
 
   test:
-    runs-on: ${{ matrix.os || 'ubuntu-20.04' }}
+    runs-on: ${{ matrix.os || 'ubuntu-22.04' }}
     steps:
       - uses: actions/checkout@v4.1.7
       - uses: actions/cache@v4.0.2
@@ -70,57 +70,48 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - elixir: 1.11.x
-            otp: 21.x
-            os: ubuntu-20.04
-          - elixir: 1.11.x
-            otp: 22.x
-            os: ubuntu-20.04
-          - elixir: 1.11.x
-            otp: 23.x
-            os: ubuntu-20.04
-          - elixir: 1.12.x
-            otp: 22.x
-            os: ubuntu-20.04
-          - elixir: 1.12.x
-            otp: 23.x
-            os: ubuntu-20.04
-          - elixir: 1.12.x
-            otp: 24.x
-            os: ubuntu-20.04
           - elixir: 1.13.x
             otp: 22.x
-            os: ubuntu-20.04
+            os: ubuntu-22.04
           - elixir: 1.13.x
             otp: 23.x
-            os: ubuntu-20.04
+            os: ubuntu-22.04
           - elixir: 1.13.x
             otp: 24.x
-            os: ubuntu-20.04
+            os: ubuntu-22.04
+          - elixir: 1.13.x
+            otp: 25.x
+            os: ubuntu-22.04
           - elixir: 1.14.x
             otp: 23.x
-            os: ubuntu-20.04
+            os: ubuntu-22.04
           - elixir: 1.14.x
             otp: 24.x
-            os: ubuntu-20.04
+            os: ubuntu-22.04
           - elixir: 1.14.x
             otp: 25.x
-            os: ubuntu-20.04
+            os: ubuntu-22.04
+          - elixir: 1.14.x
+            otp: 26.x
+            os: ubuntu-22.04
           - elixir: 1.15.x
             otp: 24.x
-            os: ubuntu-20.04
+            os: ubuntu-22.04
           - elixir: 1.15.x
             otp: 25.x
-            os: ubuntu-20.04
+            os: ubuntu-22.04
+          - elixir: 1.15.x
+            otp: 26.x
+            os: ubuntu-22.04
           - elixir: 1.16.x
             otp: 24.x
-            os: ubuntu-20.04
+            os: ubuntu-22.04
           - elixir: 1.16.x
             otp: 25.x
-            os: ubuntu-20.04
+            os: ubuntu-22.04
           - elixir: 1.16.x
             otp: 26.x
-            os: ubuntu-20.04
+            os: ubuntu-22.04
           - elixir: 1.17.x
             otp: 25.x
             os: ubuntu-22.04
