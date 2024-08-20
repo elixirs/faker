@@ -313,7 +313,7 @@ defmodule Faker.Internet do
   @spec slug([String.t()], [String.t()]) :: String.t()
   def slug(words, glue) do
     words
-    |> Faker.shuffle()
+    |> Enum.take_random(length(words))
     |> Enum.join(pick(glue))
     |> String.downcase()
   end
