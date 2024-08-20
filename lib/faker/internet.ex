@@ -4,7 +4,7 @@ defmodule Faker.Internet do
   alias Faker.Util
 
   import Faker.Util, only: [pick: 1]
-  import Faker, only: [localize: 1, random_uniform: 0]
+  import Faker, only: [localize: 1]
 
   @moduledoc """
   Functions for generating internet related data
@@ -292,11 +292,11 @@ defmodule Faker.Internet do
   ## Examples
 
       iex> Faker.Internet.slug()
-      "ut-consequatur-sint-deleniti"
+      "sint.deleniti.consequatur.ut"
       iex> Faker.Internet.slug()
-      "expedita_aut_sit_cumque"
+      "expedita_est_necessitatibus_cumque_aut"
       iex> Faker.Internet.slug(["foo", "bar"])
-      "bar_foo"
+      "foo.bar"
       iex> Faker.Internet.slug(["foo", "bar"], ["."])
       "bar.foo"
   """
