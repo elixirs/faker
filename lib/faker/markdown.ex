@@ -1,5 +1,5 @@
 defmodule Faker.Markdown do
-  import Faker, only: [random_between: 2]
+  import Faker, only: [random_between: 2, random_uniform: 0]
 
   alias Faker.Lorem
   alias Faker.Util
@@ -191,13 +191,13 @@ defmodule Faker.Markdown do
   ## Examples
 
       iex> Faker.Markdown.markdown()
-      "`Aut expedita cumque est necessitatibus beatae ex sunt!`\n\n### Soluta\n\n```ruby\nVitae animi et id et vitae!\n```\n\n* Corporis quisquam ab harum ipsa sed veritatis.\n* Ut aut inventore eius!\n* Aut doloribus qui officia vel quaerat.\n* Et perspiciatis rerum nam repellendus inventore nihil dicta ipsum."
+      "## Aut\n\n```ruby\nBeatae ex sunt soluta possimus soluta asperiores qui vitae animi.\n```\n\n`Et vitae vitae ut quisquam corporis quisquam ab harum ipsa.`\n\n* Maxime ut aut inventore eius rerum beatae?\n* Qui officia vel quaerat expedita.\n* Perspiciatis rerum nam repellendus inventore nihil.\n* Sequi ducimus qui voluptates magni quisquam sed odio.\n* Vel error non impedit tempora minus.\n\nfugit | cupiditate | fuga | ab\n---- | ---- | ---- | ----\nconsectetur | harum | earum | possimus\ntotam | nobis | provident | quisquam\nmodi | accusantium | eligendi | numquam"
       iex> Faker.Markdown.markdown()
-      "* Impedit tempora minus voluptatem qui fugit cupiditate?\n* Consectetur harum earum possimus totam nobis provident quisquam?\n* Eligendi numquam illo voluptas quod blanditiis est!\n* Quibusdam qui omnis alias vel!\n* Dolores at ut delectus magni?\n* Beatae nulla labore voluptate laudantium?\n* Pariatur voluptatibus sed et enim ullam similique minima laudantium.\n\nEt praesentium quia sed? Ea vero repellat ~cumque!~\n\n`Rerum sed similique accusamus?`\n\n#### Suscipit"
+      "Odit dicta dolores at ut delectus magni atque eos? Labore voluptate laudantium ~qui.~ Voluptatibus sed et enim ullam?\n\n1. Repellat et praesentium quia sed nemo minus ea!\n2. Cumque nihil similique repudiandae corrupti!\n3. Similique accusamus suscipit perspiciatis cum.\n4. Dolore et ut earum possimus eos reprehenderit cupiditate omnis et.\n5. Sit delectus possimus quo et est culpa eum ex?\n6. Aut aut aut quisquam?\n7. Tenetur alias est provident esse dicta ea illo consequatur maiores?"
       iex> Faker.Markdown.markdown()
-      "* Et doloremque omnis sit delectus possimus quo.\n* Culpa eum ex et veniam aut aut aut quisquam.\n* Tenetur alias est provident esse dicta ea illo consequatur maiores?\n* Quia culpa sunt sit eius cumque porro ut eum porro.\n* Maxime dolorum animi fugit voluptas deserunt!\n* Eveniet asperiores consequatur voluptates quia numquam.\n\n```shell\nTempore unde iusto harum voluptas harum modi omnis quam dolor?\n```\n\n1. Et voluptas neque voluptas consequatur sed cupiditate?"
+      "* Porro est id maxime dolorum animi.\n* Deserunt ipsa consequuntur eveniet asperiores.\n* Quia numquam voluptas vitae repellat tempore.\n* Harum voluptas harum modi omnis quam dolor a aliquam officiis?\n* Neque voluptas consequatur sed cupiditate dolorum pariatur et.\n* Aut voluptatem natus amet eius eos non dolorum.\n* Pariatur ex illo aliquam rerum ab voluptatem exercitationem nobis enim.\n* Eos corporis unde ex enim dolore ut consequuntur.\n* Dicta eius totam nobis est a eveniet ab magni.\n* Consequatur unde dolorem et nihil laudantium ea veniam necessitatibus."
       iex> Faker.Markdown.markdown()
-      "`Dolorum quaerat dolores pariatur ex illo?`\n\n1. Voluptatem exercitationem nobis enim delectus.\n2. Corporis unde ex enim dolore ut consequuntur eaque!\n3. Eius totam nobis est.\n4. Ab magni rerum enim consequatur unde.\n5. Nihil laudantium ea veniam necessitatibus qui.\n6. Minus ad omnis quaerat quidem impedit sint.\n7. Id ut repellat qui repudiandae!\n8. Excepturi laudantium accusantium repellendus nihil sunt non consequatur.\n\n* Aperiam velit nostrum voluptatem est beatae delectus minus.\n* Dolorem aut omnis omnis iure enim sapiente.\n* Esse aut tenetur itaque voluptas ullam ratione et esse.\n\nSed dignissimos odit debitis **saepe** a illo ut! Quisquam omnis magni consequuntur molestiae expedita at necessitatibus? Est nulla repellat reiciendis est est veritatis sed."
+      "1. Repellat qui repudiandae quia cumque excepturi laudantium accusantium!\n2. Sunt non consequatur molestiae laboriosam sit aperiam.\n3. Voluptatem est beatae delectus minus qui molestiae dolorem aut.\n4. Iure enim sapiente quia voluptas esse!\n\n```go\nVoluptas ullam ratione et esse optio qui ut sed dignissimos!\n```\n\nsaepe | a | illo\n---- | ---- | ----\nut | eos | aliquid\nquisquam | omnis | magni\nconsequuntur | molestiae | expedita\n\n* Ducimus est nulla repellat reiciendis est est veritatis.\n* Quaerat assumenda ut reiciendis eaque in!\n* Aliquam quis sapiente facere?\n* Nihil suscipit pariatur qui."
   """
   @spec markdown() :: String.t()
   def markdown do
