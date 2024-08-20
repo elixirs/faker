@@ -1,10 +1,10 @@
 defmodule Faker.Markdown do
-  import Faker, only: [random_between: 2, random_uniform: 0]
+  import Faker, only: [random_between: 2]
 
   alias Faker.Lorem
   alias Faker.Util
 
-  @moduledoc """
+  @moduledoc ~S"""
   Functions for generating random markdown
   """
 
@@ -12,7 +12,7 @@ defmodule Faker.Markdown do
   @emphasis ["_", "~", "*", "**"]
   @langs ["elixir", "erlang", "ruby", "go", "shell"]
 
-  @doc """
+  @doc ~S"""
   Returns a random markdown header
 
   ## Examples
@@ -34,7 +34,7 @@ defmodule Faker.Markdown do
     "#{Util.pick(@headers)} #{header}"
   end
 
-  @doc """
+  @doc ~S"""
   Returns a random sentence with random emphasis word
 
   ## Examples
@@ -60,7 +60,7 @@ defmodule Faker.Markdown do
     |> Enum.join(" ")
   end
 
-  @doc """
+  @doc ~S"""
   Returns a random ordered list
 
   ## Examples
@@ -70,16 +70,16 @@ defmodule Faker.Markdown do
       iex> Faker.Markdown.ordered_list()
       "1. Aut expedita cumque est necessitatibus beatae ex sunt!"
       iex> Faker.Markdown.ordered_list()
-      "1. Asperiores qui vitae animi et id et vitae vitae.\\n2. Corporis quisquam ab harum ipsa sed veritatis.\\n3. Ut aut inventore eius!\\n4. Aut doloribus qui officia vel quaerat.\\n5. Et perspiciatis rerum nam repellendus inventore nihil dicta ipsum.\\n6. Qui voluptates magni quisquam sed odio accusamus et.\\n7. Non impedit tempora minus voluptatem qui fugit?\\n8. Ab consectetur harum earum possimus."
+      "1. Asperiores qui vitae animi et id et vitae vitae.\n2. Corporis quisquam ab harum ipsa sed veritatis.\n3. Ut aut inventore eius!\n4. Aut doloribus qui officia vel quaerat.\n5. Et perspiciatis rerum nam repellendus inventore nihil dicta ipsum.\n6. Qui voluptates magni quisquam sed odio accusamus et.\n7. Non impedit tempora minus voluptatem qui fugit?\n8. Ab consectetur harum earum possimus."
       iex> Faker.Markdown.ordered_list()
-      "1. Quisquam modi accusantium eligendi numquam.\\n2. Quod blanditiis est non id quibusdam qui omnis alias!\\n3. Dicta dolores at ut delectus magni atque eos beatae nulla.\\n4. Laudantium qui dolorem pariatur voluptatibus sed et enim?"
+      "1. Quisquam modi accusantium eligendi numquam.\n2. Quod blanditiis est non id quibusdam qui omnis alias!\n3. Dicta dolores at ut delectus magni atque eos beatae nulla.\n4. Laudantium qui dolorem pariatur voluptatibus sed et enim?"
   """
   @spec ordered_list() :: String.t()
   def ordered_list do
     list()
   end
 
-  @doc """
+  @doc ~S"""
   Returns a random unordered list
 
   ## Examples
@@ -89,9 +89,9 @@ defmodule Faker.Markdown do
       iex> Faker.Markdown.unordered_list()
       "* Aut expedita cumque est necessitatibus beatae ex sunt!"
       iex> Faker.Markdown.unordered_list()
-      "* Asperiores qui vitae animi et id et vitae vitae.\\n* Corporis quisquam ab harum ipsa sed veritatis.\\n* Ut aut inventore eius!\\n* Aut doloribus qui officia vel quaerat.\\n* Et perspiciatis rerum nam repellendus inventore nihil dicta ipsum.\\n* Qui voluptates magni quisquam sed odio accusamus et.\\n* Non impedit tempora minus voluptatem qui fugit?\\n* Ab consectetur harum earum possimus."
+      "* Asperiores qui vitae animi et id et vitae vitae.\n* Corporis quisquam ab harum ipsa sed veritatis.\n* Ut aut inventore eius!\n* Aut doloribus qui officia vel quaerat.\n* Et perspiciatis rerum nam repellendus inventore nihil dicta ipsum.\n* Qui voluptates magni quisquam sed odio accusamus et.\n* Non impedit tempora minus voluptatem qui fugit?\n* Ab consectetur harum earum possimus."
       iex> Faker.Markdown.unordered_list()
-      "* Quisquam modi accusantium eligendi numquam.\\n* Quod blanditiis est non id quibusdam qui omnis alias!\\n* Dicta dolores at ut delectus magni atque eos beatae nulla.\\n* Laudantium qui dolorem pariatur voluptatibus sed et enim?"
+      "* Quisquam modi accusantium eligendi numquam.\n* Quod blanditiis est non id quibusdam qui omnis alias!\n* Dicta dolores at ut delectus magni atque eos beatae nulla.\n* Laudantium qui dolorem pariatur voluptatibus sed et enim?"
   """
   @spec unordered_list() :: String.t()
   def unordered_list do
@@ -110,7 +110,7 @@ defmodule Faker.Markdown do
     |> Enum.join("\n")
   end
 
-  @doc """
+  @doc ~S"""
   Returns random inline code
 
   ## Examples
@@ -129,19 +129,19 @@ defmodule Faker.Markdown do
     "`#{Lorem.sentence()}`"
   end
 
-  @doc """
+  @doc ~S"""
   Returns random inline code
 
   ## Examples
 
       iex> Faker.Markdown.block_code()
-      "```elixir\\nDeleniti consequatur et qui vitae et.\\n```"
+      "```elixir\nDeleniti consequatur et qui vitae et.\n```"
       iex> Faker.Markdown.block_code()
-      "```elixir\\nAut expedita cumque est necessitatibus beatae ex sunt!\\n```"
+      "```elixir\nAut expedita cumque est necessitatibus beatae ex sunt!\n```"
       iex> Faker.Markdown.block_code()
-      "```ruby\\nAsperiores qui vitae animi et id et vitae vitae.\\n```"
+      "```ruby\nAsperiores qui vitae animi et id et vitae vitae.\n```"
       iex> Faker.Markdown.block_code()
-      "```go\\nQuisquam ab harum ipsa sed veritatis numquam.\\n```"
+      "```go\nQuisquam ab harum ipsa sed veritatis numquam.\n```"
   """
   @spec block_code() :: String.t()
   def block_code do
@@ -152,19 +152,19 @@ defmodule Faker.Markdown do
     """
   end
 
-  @doc """
+  @doc ~S"""
   Returns random markdown table
 
   ## Examples
 
       iex> Faker.Markdown.table()
-      "sint | deleniti | consequatur\\n---- | ---- | ----\\net | qui | vitae\\net | quibusdam | et\\nsit | aut | expedita\\ncumque | est | necessitatibus\\nbeatae | ex | sunt"
+      "sint | deleniti | consequatur\n---- | ---- | ----\net | qui | vitae\net | quibusdam | et\nsit | aut | expedita\ncumque | est | necessitatibus\nbeatae | ex | sunt"
       iex> Faker.Markdown.table()
-      "soluta | asperiores\\n---- | ----\\nqui | vitae\\nanimi | et\\nid | et\\nvitae | vitae\\nut | quisquam\\ncorporis | quisquam"
+      "soluta | asperiores\n---- | ----\nqui | vitae\nanimi | et\nid | et\nvitae | vitae\nut | quisquam\ncorporis | quisquam"
       iex> Faker.Markdown.table()
-      "ipsa | sed | veritatis | numquam | maxime\\n---- | ---- | ---- | ---- | ----\\nut | aut | inventore | eius | rerum\\nbeatae | aut | doloribus | qui | officia\\nvel | quaerat | expedita | ut | et\\nperspiciatis | rerum | nam | repellendus | inventore"
+      "ipsa | sed | veritatis | numquam | maxime\n---- | ---- | ---- | ---- | ----\nut | aut | inventore | eius | rerum\nbeatae | aut | doloribus | qui | officia\nvel | quaerat | expedita | ut | et\nperspiciatis | rerum | nam | repellendus | inventore"
       iex> Faker.Markdown.table()
-      "ipsum | sequi | ducimus | qui | voluptates\\n---- | ---- | ---- | ---- | ----\\nmagni | quisquam | sed | odio | accusamus\\net | vel | error | non | impedit\\ntempora | minus | voluptatem | qui | fugit"
+      "ipsum | sequi | ducimus | qui | voluptates\n---- | ---- | ---- | ---- | ----\nmagni | quisquam | sed | odio | accusamus\net | vel | error | non | impedit\ntempora | minus | voluptatem | qui | fugit"
   """
   @spec table() :: String.t()
   def table do
@@ -185,19 +185,19 @@ defmodule Faker.Markdown do
     |> Enum.join("\n")
   end
 
-  @doc """
+  @doc ~S"""
   Returns random markdown
 
   ## Examples
 
       iex> Faker.Markdown.markdown()
-      "## Aut\\n\\n```ruby\\nBeatae ex sunt soluta possimus soluta asperiores qui vitae animi.\\n```\\n\\n`Et vitae vitae ut quisquam corporis quisquam ab harum ipsa.`\\n\\n* Maxime ut aut inventore eius rerum beatae?\\n* Qui officia vel quaerat expedita.\\n* Perspiciatis rerum nam repellendus inventore nihil.\\n* Sequi ducimus qui voluptates magni quisquam sed odio.\\n* Vel error non impedit tempora minus.\\n\\nfugit | cupiditate | fuga | ab\\n---- | ---- | ---- | ----\\nconsectetur | harum | earum | possimus\\ntotam | nobis | provident | quisquam\\nmodi | accusantium | eligendi | numquam"
+      "`Aut expedita cumque est necessitatibus beatae ex sunt!`\n\n### Soluta\n\n```ruby\nVitae animi et id et vitae!\n```\n\n* Corporis quisquam ab harum ipsa sed veritatis.\n* Ut aut inventore eius!\n* Aut doloribus qui officia vel quaerat.\n* Et perspiciatis rerum nam repellendus inventore nihil dicta ipsum."
       iex> Faker.Markdown.markdown()
-      "Odit dicta dolores at ut delectus magni atque eos? Labore voluptate laudantium ~qui.~ Voluptatibus sed et enim ullam?\\n\\n1. Repellat et praesentium quia sed nemo minus ea!\\n2. Cumque nihil similique repudiandae corrupti!\\n3. Similique accusamus suscipit perspiciatis cum.\\n4. Dolore et ut earum possimus eos reprehenderit cupiditate omnis et.\\n5. Sit delectus possimus quo et est culpa eum ex?\\n6. Aut aut aut quisquam?\\n7. Tenetur alias est provident esse dicta ea illo consequatur maiores?"
+      "* Impedit tempora minus voluptatem qui fugit cupiditate?\n* Consectetur harum earum possimus totam nobis provident quisquam?\n* Eligendi numquam illo voluptas quod blanditiis est!\n* Quibusdam qui omnis alias vel!\n* Dolores at ut delectus magni?\n* Beatae nulla labore voluptate laudantium?\n* Pariatur voluptatibus sed et enim ullam similique minima laudantium.\n\nEt praesentium quia sed? Ea vero repellat ~cumque!~\n\n`Rerum sed similique accusamus?`\n\n#### Suscipit"
       iex> Faker.Markdown.markdown()
-      "* Porro est id maxime dolorum animi.\\n* Deserunt ipsa consequuntur eveniet asperiores.\\n* Quia numquam voluptas vitae repellat tempore.\\n* Harum voluptas harum modi omnis quam dolor a aliquam officiis?\\n* Neque voluptas consequatur sed cupiditate dolorum pariatur et.\\n* Aut voluptatem natus amet eius eos non dolorum.\\n* Pariatur ex illo aliquam rerum ab voluptatem exercitationem nobis enim.\\n* Eos corporis unde ex enim dolore ut consequuntur.\\n* Dicta eius totam nobis est a eveniet ab magni.\\n* Consequatur unde dolorem et nihil laudantium ea veniam necessitatibus."
+      "* Et doloremque omnis sit delectus possimus quo.\n* Culpa eum ex et veniam aut aut aut quisquam.\n* Tenetur alias est provident esse dicta ea illo consequatur maiores?\n* Quia culpa sunt sit eius cumque porro ut eum porro.\n* Maxime dolorum animi fugit voluptas deserunt!\n* Eveniet asperiores consequatur voluptates quia numquam.\n\n```shell\nTempore unde iusto harum voluptas harum modi omnis quam dolor?\n```\n\n1. Et voluptas neque voluptas consequatur sed cupiditate?"
       iex> Faker.Markdown.markdown()
-      "1. Repellat qui repudiandae quia cumque excepturi laudantium accusantium!\\n2. Sunt non consequatur molestiae laboriosam sit aperiam.\\n3. Voluptatem est beatae delectus minus qui molestiae dolorem aut.\\n4. Iure enim sapiente quia voluptas esse!\\n\\n```go\\nVoluptas ullam ratione et esse optio qui ut sed dignissimos!\\n```\\n\\nsaepe | a | illo\\n---- | ---- | ----\\nut | eos | aliquid\\nquisquam | omnis | magni\\nconsequuntur | molestiae | expedita\\n\\n* Ducimus est nulla repellat reiciendis est est veritatis.\\n* Quaerat assumenda ut reiciendis eaque in!\\n* Aliquam quis sapiente facere?\\n* Nihil suscipit pariatur qui."
+      "`Dolorum quaerat dolores pariatur ex illo?`\n\n1. Voluptatem exercitationem nobis enim delectus.\n2. Corporis unde ex enim dolore ut consequuntur eaque!\n3. Eius totam nobis est.\n4. Ab magni rerum enim consequatur unde.\n5. Nihil laudantium ea veniam necessitatibus qui.\n6. Minus ad omnis quaerat quidem impedit sint.\n7. Id ut repellat qui repudiandae!\n8. Excepturi laudantium accusantium repellendus nihil sunt non consequatur.\n\n* Aperiam velit nostrum voluptatem est beatae delectus minus.\n* Dolorem aut omnis omnis iure enim sapiente.\n* Esse aut tenetur itaque voluptas ullam ratione et esse.\n\nSed dignissimos odit debitis **saepe** a illo ut! Quisquam omnis magni consequuntur molestiae expedita at necessitatibus? Est nulla repellat reiciendis est est veritatis sed."
   """
   @spec markdown() :: String.t()
   def markdown do

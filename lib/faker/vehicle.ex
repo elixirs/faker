@@ -161,13 +161,13 @@ defmodule Faker.Vehicle do
   Returns a list of vehicle options()
 
   ## Examples
-      iex> Faker.Vehicle.options
+      iex> Faker.Vehicle.options()
       ["Power Steering", "A/C: Front", "Keyless Entry", "AM/FM Stereo", "Power Steering", "Antilock Brakes", "8-Track Player", "Leather Interior"]
-      iex> Faker.Vehicle.options
+      iex> Faker.Vehicle.options()
       ["MP3 (Multi Disc)", "A/C: Rear", "Fog Lights", "Power Windows", "Cruise Control", "Premium Sound", "A/C: Front"]
-      iex> Faker.Vehicle.options
+      iex> Faker.Vehicle.options()
       ["Tinted Glass", "MP3 (Single Disc)", "CD (Multi Disc)"]
-      iex> Faker.Vehicle.options
+      iex> Faker.Vehicle.options()
       ["Fog Lights", "Rear Window Wiper", "MP3 (Multi Disc)", "Navigation", "Airbag: Side", "Rear Window Defroster", "Premium Sound"]
   """
   @spec options(non_neg_integer()) :: list(String.t())
