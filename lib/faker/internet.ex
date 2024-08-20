@@ -4,7 +4,7 @@ defmodule Faker.Internet do
   alias Faker.Util
 
   import Faker.Util, only: [pick: 1]
-  import Faker, only: [localize: 1, random_uniform: 0]
+  import Faker, only: [localize: 1]
 
   @moduledoc """
   Functions for generating internet related data
@@ -292,13 +292,13 @@ defmodule Faker.Internet do
   ## Examples
 
       iex> Faker.Internet.slug()
-      "deleniti-sint-consequatur-ut"
+      "ut-consequatur-sint-deleniti"
       iex> Faker.Internet.slug()
-      "cumque_sit_aut_expedita"
+      "expedita_aut_sit_cumque"
       iex> Faker.Internet.slug(["foo", "bar"])
-      "foo_bar"
+      "bar_foo"
       iex> Faker.Internet.slug(["foo", "bar"], ["."])
-      "foo.bar"
+      "bar.foo"
   """
   @spec slug() :: String.t()
   def slug do
@@ -313,7 +313,7 @@ defmodule Faker.Internet do
   @spec slug([String.t()], [String.t()]) :: String.t()
   def slug(words, glue) do
     words
-    |> Enum.sort_by(fn _ -> random_uniform() end)
+    |> Faker.shuffle()
     |> Enum.join(pick(glue))
     |> String.downcase()
   end
