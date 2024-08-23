@@ -216,7 +216,7 @@ defmodule Faker.Util do
   def cycle(cycle_pid) do
     Agent.get_and_update(cycle_pid, fn
       {[], items} ->
-        [h | t] = Enum.shuffle(items)
+        [h | t] = Faker.shuffle(items)
         {h, {t, items}}
 
       {[h | t], items} ->

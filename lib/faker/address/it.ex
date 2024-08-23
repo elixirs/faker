@@ -13,13 +13,9 @@ defmodule Faker.Address.It do
   ## Examples
 
       iex> Faker.Address.It.building_number()
-      "154"
+      "465"
       iex> Faker.Address.It.building_number()
-      "64"
-      iex> Faker.Address.It.building_number()
-      "1"
-      iex> Faker.Address.It.building_number()
-      "832"
+      "164"
   """
   @spec building_number() :: String.t()
   def building_number do
@@ -34,13 +30,9 @@ defmodule Faker.Address.It do
   ## Examples
 
       iex> Faker.Address.It.city()
-      "Dionigi Marittima"
+      "Sanna"
       iex> Faker.Address.It.city()
-      "Quarto Gennaro"
-      iex> Faker.Address.It.city()
-      "Sesto Maurizia"
-      iex> Faker.Address.It.city()
-      "Case di Taffy"
+      "Immacolata di sotto"
   """
   @spec city() :: String.t()
   def city do
@@ -58,13 +50,9 @@ defmodule Faker.Address.It do
   ## Examples
 
       iex> Faker.Address.It.city_prefix()
-      "Quarto"
+      "Settimo"
       iex> Faker.Address.It.city_prefix()
-      "Castello"
-      iex> Faker.Address.It.city_prefix()
-      "Quarto"
-      iex> Faker.Address.It.city_prefix()
-      "Santa"
+      "Sesto"
   """
   @spec city_prefix() :: String.t()
   sampler(:city_prefix, [
@@ -91,16 +79,14 @@ defmodule Faker.Address.It do
       iex> Faker.Address.It.city_suffix()
       "di sotto"
       iex> Faker.Address.It.city_suffix()
-      "di sopra"
-      iex> Faker.Address.It.city_suffix()
-      "Marittima"
+      "di sotto"
   """
   @spec city_suffix() :: String.t()
   sampler(:city_suffix, [
     "al mare",
+    "Marittima",
     "di sopra",
-    "di sotto",
-    "Marittima"
+    "di sotto"
   ])
 
   @doc """
@@ -110,13 +96,9 @@ defmodule Faker.Address.It do
   ## Examples
 
       iex> Faker.Address.It.country()
-      "Etiopia"
+      "Estonia"
       iex> Faker.Address.It.country()
-      "Cipro"
-      iex> Faker.Address.It.country()
-      "Timor Leste"
-      iex> Faker.Address.It.country()
-      "Nicaragua"
+      "Bhutan"
   """
   @spec country() :: String.t()
   sampler(:country, [
@@ -377,9 +359,9 @@ defmodule Faker.Address.It do
   ## Examples
 
       iex> Faker.Address.It.country_code()
-      "CO"
+      "EE"
       iex> Faker.Address.It.country_code()
-      "LV"
+      "BY"
   """
   @spec country_code() :: String.t()
   sampler(:country_code, [
@@ -638,13 +620,9 @@ defmodule Faker.Address.It do
     ## Examples
 
       iex> Faker.Address.It.secondary_address()
-      "/A"
+      "Edificio 2"
       iex> Faker.Address.It.secondary_address()
-      "/B"
-      iex> Faker.Address.It.secondary_address()
-      "/A"
-      iex> Faker.Address.It.secondary_address()
-      "Edificio 26"
+      "Edificio 87"
   """
   @spec secondary_address() :: String.t()
   def secondary_address do
@@ -669,13 +647,9 @@ defmodule Faker.Address.It do
       ## Examples
 
       iex> Faker.Address.It.region()
-      "Molise"
+      "Liguria"
       iex> Faker.Address.It.region()
-      "Basilicata"
-      iex> Faker.Address.It.region()
-      "Toscana"
-      iex> Faker.Address.It.region()
-      "Emilia-Romagna"
+      "Lombardia"
   """
   @spec region() :: String.t()
   sampler(:region, [
@@ -718,13 +692,9 @@ defmodule Faker.Address.It do
       ## Examples
 
       iex> Faker.Address.It.province()
-      "Barletta-Andria-Trani"
+      "Nuoro"
       iex> Faker.Address.It.province()
-      "Trento"
-      iex> Faker.Address.It.province()
-      "Pavia"
-      iex> Faker.Address.It.province()
-      "Caserta"
+      "Genova"
   """
   @spec province() :: String.t()
   sampler(:province, [
@@ -848,13 +818,9 @@ defmodule Faker.Address.It do
     ## Examples
 
       iex> Faker.Address.It.province_abbr()
-      "BA"
+      "OR"
       iex> Faker.Address.It.province_abbr()
-      "TR"
-      iex> Faker.Address.It.province_abbr()
-      "PG"
-      iex> Faker.Address.It.province_abbr()
-      "CE"
+      "GE"
   """
   @spec province_abbr() :: String.t()
   sampler(:province_abbr, [
@@ -974,13 +940,9 @@ defmodule Faker.Address.It do
   ## Examples
 
       iex> Faker.Address.It.region_province_abbr()
-      ["Calabria", "Reggio di Calabria", "RC"]
+      ["Piemonte", "Cuneo", "CN"]
       iex> Faker.Address.It.region_province_abbr()
-      ["Trentino-Alto Adige/Südtirol", "Bolzano/Bozen", "BZ"]
-      iex> Faker.Address.It.region_province_abbr()
-      ["Puglia", "Bari", "BA"]
-      iex> Faker.Address.It.region_province_abbr()
-      ["Emilia-Romagna", "Piacenza", "PC"]
+      ["Liguria", "Savona", "SV"]
   """
   @spec region_province_abbr() :: [String.t()]
   sampler(:region_province_abbr, [
@@ -1099,13 +1061,9 @@ defmodule Faker.Address.It do
     ## Examples
 
       iex> Faker.Address.It.street_address()
-      "Corso Agave, 2"
+      "Viale Congo, 51"
       iex> Faker.Address.It.street_address()
-      "Viale Keith, 083"
-      iex> Faker.Address.It.street_address()
-      "Strada per Liguria, 523"
-      iex> Faker.Address.It.street_address()
-      "Viale De Rosa, 03"
+      "Via Privata Elvio Sorrentino, 883"
   """
   @spec street_address() :: String.t()
   def street_address do
@@ -1118,13 +1076,9 @@ defmodule Faker.Address.It do
     ## Examples
 
       iex> Faker.Address.It.street_address(true)
-      "Corso Agave, 2/B"
+      "Viale Congo, 51/C"
       iex> Faker.Address.It.street_address(false)
-      "Via per Piemonte, 832"
-      iex> Faker.Address.It.street_address(false)
-      "Vicolo Longo, 2"
-      iex> Faker.Address.It.street_address(false)
-      "Via Privata Galli, 2"
+      "Strada per Milano, 55"
   """
   @spec street_address(true | any) :: String.t()
   def street_address(true), do: street_address() <> secondary_address()
@@ -1136,13 +1090,9 @@ defmodule Faker.Address.It do
     ## Examples
 
       iex> Faker.Address.It.street_name()
-      "Corso Agave"
+      "Viale Congo"
       iex> Faker.Address.It.street_name()
-      "Via Privata Gennaro Mazza"
-      iex> Faker.Address.It.street_name()
-      "Vicolo Shaula Lombardi"
-      iex> Faker.Address.It.street_name()
-      "Strada per Giuliani"
+      "Corso Valle d'Aosta/Vallée d'Aoste"
   """
   @spec street_name() :: String.t()
   def street_name do
@@ -1165,13 +1115,9 @@ defmodule Faker.Address.It do
     ## Examples
 
       iex> Faker.Address.It.street_prefix()
-      "Vicolo"
+      "Strada per"
       iex> Faker.Address.It.street_prefix()
-      "Corso"
-      iex> Faker.Address.It.street_prefix()
-      "Piazzale"
-      iex> Faker.Address.It.street_prefix()
-      "Piazza"
+      "Viale"
   """
   @spec street_prefix() :: String.t()
   sampler(:street_prefix, [
@@ -1192,13 +1138,9 @@ defmodule Faker.Address.It do
     ## Examples
 
       iex> Faker.Address.It.time_zone()
-      "Australia/Sydney"
+      "Europa/Riga"
       iex> Faker.Address.It.time_zone()
-      "America/Guyana"
-      iex> Faker.Address.It.time_zone()
-      "Asia/Kathmandu"
-      iex> Faker.Address.It.time_zone()
-      "Europa/Vienna"
+      "Asia/Rangoon"
   """
   @spec time_zone() :: String.t()
   sampler(:time_zone, [
@@ -1335,13 +1277,9 @@ defmodule Faker.Address.It do
     ## Examples
 
       iex> Faker.Address.It.zip_code()
-      "01542"
+      "70879"
       iex> Faker.Address.It.zip_code()
-      "64610"
-      iex> Faker.Address.It.zip_code()
-      "83297"
-      iex> Faker.Address.It.zip_code()
-      "05235"
+      "90648"
   """
   @spec zip_code() :: String.t()
   def zip_code do
