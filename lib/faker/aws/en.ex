@@ -11,13 +11,9 @@ defmodule Faker.Aws.En do
   ## Examples
 
       iex> Faker.Aws.En.region_name()
-      "Asia Pacific (Tokyo)"
+      "Asia Pacific (Seoul)"
       iex> Faker.Aws.En.region_name()
-      "US East (Ohio)"
-      iex> Faker.Aws.En.region_name()
-      "Europe (Milan)"
-      iex> Faker.Aws.En.region_name()
-      "Africa (Cape Town)"
+      "Asia Pacific (Singapore)"
   """
   @spec region_name() :: String.t()
   sampler(:region_name, [
@@ -49,13 +45,9 @@ defmodule Faker.Aws.En do
   ## Examples
 
       iex> Faker.Aws.En.region_code()
-      "ap-northeast-1"
+      "ap-northeast-2"
       iex> Faker.Aws.En.region_code()
-      "us-east-2"
-      iex> Faker.Aws.En.region_code()
-      "eu-south-1"
-      iex> Faker.Aws.En.region_code()
-      "af-south-1"
+      "ap-southeast-1"
   """
   @spec region_code() :: String.t()
   sampler(:region_code, [
@@ -87,13 +79,9 @@ defmodule Faker.Aws.En do
   ## Examples
 
     iex> Faker.Aws.En.service()
-    "AWS Compute Optimizer"
+    "Systems Manager"
     iex> Faker.Aws.En.service()
-    "Ground Station"
-    iex> Faker.Aws.En.service()
-    "Neptune"
-    iex> Faker.Aws.En.service()
-    "DataSync"
+    "Device Farm"
   """
   @spec service() :: String.t()
   sampler(:service, [
@@ -248,13 +236,9 @@ defmodule Faker.Aws.En do
   ## Example
 
     iex> Faker.Aws.En.s3_action()
-    "DeleteBucketTagging"
+    "PutBucketAcl"
     iex> Faker.Aws.En.s3_action()
-    "DeleteObjects"
-    iex> Faker.Aws.En.s3_action()
-    "PutPublicAccessBlock"
-    iex> Faker.Aws.En.s3_action()
-    "PutBucketReplication"
+    "ListObjectsV2"
   """
   @spec s3_action() :: String.t()
   sampler(:s3_action, [
@@ -354,13 +338,9 @@ defmodule Faker.Aws.En do
   ## Example
 
     iex> Faker.Aws.En.rds_action()
-    "DeleteDBClusterEndpoint"
+    "DescribeDBParameters"
     iex> Faker.Aws.En.rds_action()
-    "CopyDBSnapshot"
-    iex> Faker.Aws.En.rds_action()
-    "ModifyDBParameterGroup"
-    iex> Faker.Aws.En.rds_action()
-    "DescribeDBClusterSnapshots"
+    "FailoverDBCluster"
   """
   @spec rds_action() :: String.t()
   sampler(:rds_action, [
@@ -502,13 +482,9 @@ defmodule Faker.Aws.En do
   ## Example
 
     iex> Faker.Aws.En.ec2_action()
-    "CreateVpcEndpoint"
+    "CreateLocalGatewayRouteTableVpcAssociation"
     iex> Faker.Aws.En.ec2_action()
-    "RevokeSecurityGroupEgress"
-    iex> Faker.Aws.En.ec2_action()
-    "GetTransitGatewayRouteTableAssociations"
-    iex> Faker.Aws.En.ec2_action()
-    "RunScheduledInstances"
+    "DescribeExportImageTasks"
   """
   @spec ec2_action() :: String.t()
   sampler(:ec2_action, [

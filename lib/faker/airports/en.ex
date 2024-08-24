@@ -11,13 +11,9 @@ defmodule Faker.Airports.En do
   ## Examples
 
       iex> Faker.Airports.En.name()
-      "Union Island International Airport"
+      "Rabat-Sale Airport"
       iex> Faker.Airports.En.name()
-      "St. John's International Airport"
-      iex> Faker.Airports.En.name()
-      "Jizan Regional Airport"
-      iex> Faker.Airports.En.name()
-      "Bisho Airport"
+      "Arrachart Airport"
   """
 
   @spec name() :: String.t()

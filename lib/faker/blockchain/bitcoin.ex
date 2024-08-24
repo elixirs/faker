@@ -11,13 +11,13 @@ defmodule Faker.Blockchain.Bitcoin do
   ## Examples
 
       iex> Faker.Blockchain.Bitcoin.address()
-      "1Lb2DM8vNXubePBWV7xmRnqJp5YT3BatcQ"
+      "16UZtfPcBYxawLfL2PBG1CnGPWKBZSExTr"
       iex> Faker.Blockchain.Bitcoin.address()
-      "1erV2PhPaR4ndbEvLWDD9KX8btdNJZXt5"
+      "1Q8X4neAgccJKPhBheQDoDsT1QYPeamr4B"
       iex> Faker.Blockchain.Bitcoin.address(:main)
-      "1Pn5NbAbT5hZocVWKSBtmqygdVbeVoheWk"
+      "1F84ppNY7ggA9uNr3SwkeRsqRjjN7mQ5eG"
       iex> Faker.Blockchain.Bitcoin.address(:testnet)
-      "mj1Vh7G8JZxg8gBtcQic2opTxtKUCQBBc5"
+      "muhc9kTak4P9KdThQyb7VPG4dYhP4v6bVj"
   """
   @spec address(atom) :: binary
   def address(:testnet) do

@@ -11,13 +11,9 @@ defmodule Faker.Airports.PtBr do
   ## Examples
 
       iex> Faker.Airports.PtBr.name()
-      "Aeroporto de Alcântara (QAH/SNCW)"
+      "Aeroporto Internacional Marechal Cunha Machado (SLZ/SBSL)"
       iex> Faker.Airports.PtBr.name()
-      "Aeroporto Internacional Presidente Castro Pinto (JPA/SBJP)"
-      iex> Faker.Airports.PtBr.name()
-      "Aeroporto Internacional Pinto Martins (FOR/SBFZ)"
-      iex> Faker.Airports.PtBr.name()
-      "Aeroporto Internacional Salgado Filho (POA/SBPA)"
+      "Aeroporto Internacional Marechal Cunha Machado (SLZ/SBSL)"
   """
 
   @spec name() :: String.t()

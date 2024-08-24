@@ -11,13 +11,9 @@ defmodule Faker.Beer do
   ## Examples
 
       iex> Faker.Beer.brand()
-      "Paulaner"
-      iex> Faker.Beer.brand()
-      "Pabst Blue Ribbon"
-      iex> Faker.Beer.brand()
-      "Kirin Inchiban"
-      iex> Faker.Beer.brand()
       "Birra Moretti"
+      iex> Faker.Beer.brand()
+      "Quimes"
   """
   @spec brand() :: String.t()
   localize(:brand)
@@ -28,13 +24,9 @@ defmodule Faker.Beer do
   ## Examples
 
       iex> Faker.Beer.name()
+      "Oak Aged Yeti Imperial Stout"
+      iex> Faker.Beer.name()
       "Duvel"
-      iex> Faker.Beer.name()
-      "Founders Kentucky Breakfast"
-      iex> Faker.Beer.name()
-      "Yeti Imperial Stout"
-      iex> Faker.Beer.name()
-      "Stone Imperial Russian Stout"
   """
   @spec name() :: String.t()
   localize(:name)
@@ -45,13 +37,9 @@ defmodule Faker.Beer do
   ## Examples
 
       iex> Faker.Beer.hop()
-      "Eroica"
+      "Mosaic"
       iex> Faker.Beer.hop()
-      "Bullion"
-      iex> Faker.Beer.hop()
-      "Mt. Rainier"
-      iex> Faker.Beer.hop()
-      "Citra"
+      "Chelan"
   """
   @spec hop() :: String.t()
   localize(:hop)
@@ -62,13 +50,9 @@ defmodule Faker.Beer do
   ## Examples
 
       iex> Faker.Beer.yeast()
-      "2206 - Bavarian Lager"
-      iex> Faker.Beer.yeast()
-      "3763 - Roeselare Ale Blend"
-      iex> Faker.Beer.yeast()
       "3711 - French Saison"
       iex> Faker.Beer.yeast()
-      "3944 - Belgian Witbier"
+      "1332 - Northwest Ale"
   """
   @spec yeast() :: String.t()
   localize(:yeast)
@@ -79,13 +63,9 @@ defmodule Faker.Beer do
   ## Examples
 
       iex> Faker.Beer.malt()
-      "Carapils"
+      "Chocolate malt"
       iex> Faker.Beer.malt()
-      "Pale"
-      iex> Faker.Beer.malt()
-      "Rye malt"
-      iex> Faker.Beer.malt()
-      "Munich"
+      "Special roast"
   """
   @spec malt() :: String.t()
   localize(:malt)
@@ -96,13 +76,9 @@ defmodule Faker.Beer do
   ## Examples
 
       iex> Faker.Beer.style()
-      "Stout"
+      "English Pale Ale"
       iex> Faker.Beer.style()
-      "European Amber Lager"
-      iex> Faker.Beer.style()
-      "Strong Ale"
-      iex> Faker.Beer.style()
-      "German Wheat And Rye Beer"
+      "Light Hybrid Beer"
   """
   @spec style() :: String.t()
   localize(:style)
@@ -113,13 +89,9 @@ defmodule Faker.Beer do
   ## Examples
 
       iex> Faker.Beer.ibu()
-      "59 IBU"
+      "65 IBU"
       iex> Faker.Beer.ibu()
-      "10 IBU"
-      iex> Faker.Beer.ibu()
-      "56 IBU"
-      iex> Faker.Beer.ibu()
-      "85 IBU"
+      "104 IBU"
   """
   @spec ibu :: String.t()
   def ibu do
@@ -132,13 +104,9 @@ defmodule Faker.Beer do
   ## Examples
 
       iex> Faker.Beer.alcohol()
-      "10.1%"
+      "60.3%"
       iex> Faker.Beer.alcohol()
-      "35.4%"
-      iex> Faker.Beer.alcohol()
-      "92.6%"
-      iex> Faker.Beer.alcohol()
-      "64.6%"
+      "34.5%"
   """
   @spec alcohol :: String.t()
   def alcohol do
@@ -151,13 +119,9 @@ defmodule Faker.Beer do
   ## Examples
 
       iex> Faker.Beer.blg()
-      "10.1°Blg"
+      "60.3°Blg"
       iex> Faker.Beer.blg()
-      "35.4°Blg"
-      iex> Faker.Beer.blg()
-      "92.6°Blg"
-      iex> Faker.Beer.blg()
-      "64.6°Blg"
+      "34.5°Blg"
   """
   @spec blg :: String.t()
   def blg do

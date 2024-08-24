@@ -11,13 +11,9 @@ defmodule Faker.Cannabis.En do
   ## Examples
 
       iex> Faker.Cannabis.En.strain()
-      "Critical Kush"
+      "Lemon Skunk"
       iex> Faker.Cannabis.En.strain()
-      "Blue Dream"
-      iex> Faker.Cannabis.En.strain()
-      "Mr. Nice Guy"
-      iex> Faker.Cannabis.En.strain()
-      "Gorilla Glue"
+      "Sonoma Glue"
   """
   @spec strain() :: String.t()
   sampler(:strain, [
@@ -146,13 +142,9 @@ defmodule Faker.Cannabis.En do
   ## Examples
 
       iex> Faker.Cannabis.En.cannabinoid()
-      "Cannabinol"
-      iex> Faker.Cannabis.En.cannabinoid()
-      "Cannabigerolic Acid"
-      iex> Faker.Cannabis.En.cannabinoid()
       "Cannabinolic Acid"
       iex> Faker.Cannabis.En.cannabinoid()
-      "Cannabicyclol"
+      "Cannabidivarin"
   """
   @spec cannabinoid() :: String.t()
   sampler(:cannabinoid, [
@@ -178,11 +170,7 @@ defmodule Faker.Cannabis.En do
   ## Examples
 
       iex> Faker.Cannabis.En.cannabinoid_abbreviation()
-      "THCa"
-      iex> Faker.Cannabis.En.cannabinoid_abbreviation()
-      "THCv"
-      iex> Faker.Cannabis.En.cannabinoid_abbreviation()
-      "CBC"
+      "CBDa"
       iex> Faker.Cannabis.En.cannabinoid_abbreviation()
       "CBG"
   """
@@ -213,13 +201,9 @@ defmodule Faker.Cannabis.En do
   ## Examples
 
       iex> Faker.Cannabis.En.terpene()
-      "Camphor"
+      "(-)-Isopulegol"
       iex> Faker.Cannabis.En.terpene()
-      "Camphene"
-      iex> Faker.Cannabis.En.terpene()
-      "α Pinene"
-      iex> Faker.Cannabis.En.terpene()
-      "Sabinene"
+      "R-(+)-Pulegone"
   """
   @spec terpene() :: String.t()
   sampler(:terpene, [
@@ -266,13 +250,9 @@ defmodule Faker.Cannabis.En do
   ## Examples
 
       iex> Faker.Cannabis.En.medical_use()
-      "analgesic"
+      "anti-histamine"
       iex> Faker.Cannabis.En.medical_use()
-      "anti-cancer"
-      iex> Faker.Cannabis.En.medical_use()
-      "anti-cancer"
-      iex> Faker.Cannabis.En.medical_use()
-      "anti-fungal"
+      "anti-oxidant"
   """
   @spec medical_use() :: String.t()
   sampler(:medical_use, [
@@ -315,13 +295,9 @@ defmodule Faker.Cannabis.En do
   ## Examples
 
       iex> Faker.Cannabis.En.health_benefit()
-      "relieves pain"
+      "treats allergy symptoms"
       iex> Faker.Cannabis.En.health_benefit()
-      "inhibits cell growth in tumors/cancer cells"
-      iex> Faker.Cannabis.En.health_benefit()
-      "inhibits cell growth in tumors/cancer cells"
-      iex> Faker.Cannabis.En.health_benefit()
-      "treats fungal infection"
+      "cell protectant"
   """
   @spec health_benefit() :: String.t()
   sampler(:health_benefit, [
@@ -364,13 +340,9 @@ defmodule Faker.Cannabis.En do
   ## Examples
 
       iex> Faker.Cannabis.En.category()
-      "flower"
+      "ice hash"
       iex> Faker.Cannabis.En.category()
-      "medical"
-      iex> Faker.Cannabis.En.category()
-      "seeds & clones"
-      iex> Faker.Cannabis.En.category()
-      "live resin"
+      "shatter"
   """
   @spec category() :: String.t()
   sampler(:category, [
@@ -400,11 +372,7 @@ defmodule Faker.Cannabis.En do
       iex> Faker.Cannabis.En.type()
       "hybrid"
       iex> Faker.Cannabis.En.type()
-      "sativa"
-      iex> Faker.Cannabis.En.type()
       "hybrid"
-      iex> Faker.Cannabis.En.type()
-      "sativa"
   """
   @spec type() :: String.t()
   sampler(:type, ["hybrid", "indica", "sativa"])
@@ -415,13 +383,9 @@ defmodule Faker.Cannabis.En do
   ## Examples
 
       iex> Faker.Cannabis.En.buzzword()
-      "toke"
+      "weed"
       iex> Faker.Cannabis.En.buzzword()
-      "cbd"
-      iex> Faker.Cannabis.En.buzzword()
-      "stoned"
-      iex> Faker.Cannabis.En.buzzword()
-      "stoned"
+      "gram"
   """
   @spec buzzword() :: String.t()
   sampler(:buzzword, [
@@ -462,13 +426,9 @@ defmodule Faker.Cannabis.En do
   ## Examples
 
       iex> Faker.Cannabis.En.brand()
-      "Evolab"
+      "Lord Jones"
       iex> Faker.Cannabis.En.brand()
-      "CI Wholesale"
-      iex> Faker.Cannabis.En.brand()
-      "Muy"
-      iex> Faker.Cannabis.En.brand()
-      "Chong's Choice"
+      "Caviar Gold"
   """
   @spec brand() :: String.t()
   sampler(:brand, [
