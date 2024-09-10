@@ -10,10 +10,14 @@ defmodule Faker.Code.Iban do
 
   ## Examples
 
-      iex> Faker.Code.Iban.iban()
+      iex> Faker.Code.Iban.iban
       "GI88LRCE6SQ3CQJGP3UHAJD"
       iex> Faker.Code.Iban.iban("NL")
       "NL26VYOC3032097337"
+      iex> Faker.Code.Iban.iban(["NL", "BE"])
+      "NL74YRFX4598109960"
+      iex> Faker.Code.Iban.iban(["NL", "BE"])
+      "BE31198979502980"
   """
 
   @alpha ~w(A B C D E F G H I J K L M N O P Q R S T U V W X Y Z)
@@ -93,8 +97,14 @@ defmodule Faker.Code.Iban do
 
   ## Examples
 
-      iex> Faker.Code.Iban.iban()
+      iex> Faker.Code.Iban.iban
       "GI88LRCE6SQ3CQJGP3UHAJD"
+      iex> Faker.Code.Iban.iban
+      "BR0302030320973376033745981CB"
+      iex> Faker.Code.Iban.iban
+      "BE98607198979502"
+      iex> Faker.Code.Iban.iban
+      "PT72807856869061130164499"
   """
   def iban, do: iban(Keyword.keys(@iso_iban_specs))
 
@@ -109,6 +119,10 @@ defmodule Faker.Code.Iban do
       "FR650154264610QJGP3UHAJDJ02"
       iex> Faker.Code.Iban.iban("BE")
       "BE95030320973376"
+      iex> Faker.Code.Iban.iban(["NL", "BE"])
+      "NL31RFXY5981099607"
+      iex> Faker.Code.Iban.iban(["BE", "DE"])
+      "DE57989795029807856869"
   """
   def iban(country_code_or_codes), do: iban(country_code_or_codes, [])
 
