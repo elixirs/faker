@@ -11,7 +11,13 @@ defmodule Faker.Cannabis do
   ## Examples
 
       iex> Faker.Cannabis.strain()
-      "Lemon Skunk"
+      "Critical Kush"
+      iex> Faker.Cannabis.strain()
+      "Blue Dream"
+      iex> Faker.Cannabis.strain()
+      "Mr. Nice Guy"
+      iex> Faker.Cannabis.strain()
+      "Gorilla Glue"
   """
   @spec strain() :: String.t()
   localize(:strain)
@@ -22,7 +28,13 @@ defmodule Faker.Cannabis do
   ## Examples
 
       iex> Faker.Cannabis.cannabinoid()
+      "Cannabinol"
+      iex> Faker.Cannabis.cannabinoid()
+      "Cannabigerolic Acid"
+      iex> Faker.Cannabis.cannabinoid()
       "Cannabinolic Acid"
+      iex> Faker.Cannabis.cannabinoid()
+      "Cannabicyclol"
   """
   @spec cannabinoid() :: String.t()
   localize(:cannabinoid)
@@ -33,7 +45,13 @@ defmodule Faker.Cannabis do
   ## Examples
 
       iex> Faker.Cannabis.cannabinoid_abbreviation()
-      "CBDa"
+      "THCa"
+      iex> Faker.Cannabis.cannabinoid_abbreviation()
+      "THCv"
+      iex> Faker.Cannabis.cannabinoid_abbreviation()
+      "CBC"
+      iex> Faker.Cannabis.cannabinoid_abbreviation()
+      "CBG"
   """
   @spec cannabinoid_abbreviation() :: String.t()
   localize(:cannabinoid_abbreviation)
@@ -44,7 +62,13 @@ defmodule Faker.Cannabis do
   ## Examples
 
       iex> Faker.Cannabis.terpene()
-      "(-)-Isopulegol"
+      "Camphor"
+      iex> Faker.Cannabis.terpene()
+      "Camphene"
+      iex> Faker.Cannabis.terpene()
+      "α Pinene"
+      iex> Faker.Cannabis.terpene()
+      "Sabinene"
   """
   @spec terpene() :: String.t()
   localize(:terpene)
@@ -55,7 +79,13 @@ defmodule Faker.Cannabis do
   ## Examples
 
       iex> Faker.Cannabis.medical_use()
-      "anti-histamine"
+      "analgesic"
+      iex> Faker.Cannabis.medical_use()
+      "anti-cancer"
+      iex> Faker.Cannabis.medical_use()
+      "anti-cancer"
+      iex> Faker.Cannabis.medical_use()
+      "anti-fungal"
   """
   @spec medical_use() :: String.t()
   localize(:medical_use)
@@ -66,7 +96,13 @@ defmodule Faker.Cannabis do
   ## Examples
 
       iex> Faker.Cannabis.health_benefit()
-      "treats allergy symptoms"
+      "relieves pain"
+      iex> Faker.Cannabis.health_benefit()
+      "inhibits cell growth in tumors/cancer cells"
+      iex> Faker.Cannabis.health_benefit()
+      "inhibits cell growth in tumors/cancer cells"
+      iex> Faker.Cannabis.health_benefit()
+      "treats fungal infection"
   """
   @spec health_benefit() :: String.t()
   localize(:health_benefit)
@@ -77,7 +113,13 @@ defmodule Faker.Cannabis do
   ## Examples
 
       iex> Faker.Cannabis.category()
-      "ice hash"
+      "flower"
+      iex> Faker.Cannabis.category()
+      "medical"
+      iex> Faker.Cannabis.category()
+      "seeds & clones"
+      iex> Faker.Cannabis.category()
+      "live resin"
   """
   @spec category() :: String.t()
   localize(:category)
@@ -89,6 +131,12 @@ defmodule Faker.Cannabis do
 
       iex> Faker.Cannabis.type()
       "hybrid"
+      iex> Faker.Cannabis.type()
+      "sativa"
+      iex> Faker.Cannabis.type()
+      "hybrid"
+      iex> Faker.Cannabis.type()
+      "sativa"
   """
   @spec type() :: String.t()
   localize(:type)
@@ -99,7 +147,13 @@ defmodule Faker.Cannabis do
   ## Examples
 
       iex> Faker.Cannabis.buzzword()
-      "weed"
+      "toke"
+      iex> Faker.Cannabis.buzzword()
+      "cbd"
+      iex> Faker.Cannabis.buzzword()
+      "stoned"
+      iex> Faker.Cannabis.buzzword()
+      "stoned"
   """
   @spec buzzword() :: String.t()
   localize(:buzzword)
@@ -110,7 +164,13 @@ defmodule Faker.Cannabis do
   ## Examples
 
       iex> Faker.Cannabis.En.brand()
-      "Lord Jones"
+      "Evolab"
+      iex> Faker.Cannabis.En.brand()
+      "CI Wholesale"
+      iex> Faker.Cannabis.En.brand()
+      "Muy"
+      iex> Faker.Cannabis.En.brand()
+      "Chong's Choice"
   """
   @spec brand() :: String.t()
   localize(:brand)
@@ -121,7 +181,13 @@ defmodule Faker.Cannabis do
   ## Examples
 
       iex> Faker.Cannabis.thc()
-      "28.9%"
+      "18.1%"
+      iex> Faker.Cannabis.thc()
+      "30.4%"
+      iex> Faker.Cannabis.thc()
+      "28.6%"
+      iex> Faker.Cannabis.thc()
+      "40.6%"
   """
   @spec thc :: String.t()
   def thc do
