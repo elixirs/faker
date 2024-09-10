@@ -11,7 +11,13 @@ defmodule Faker.Cannabis.En do
   ## Examples
 
       iex> Faker.Cannabis.En.strain()
-      "Lemon Skunk"
+      "Critical Kush"
+      iex> Faker.Cannabis.En.strain()
+      "Blue Dream"
+      iex> Faker.Cannabis.En.strain()
+      "Mr. Nice Guy"
+      iex> Faker.Cannabis.En.strain()
+      "Gorilla Glue"
   """
   @spec strain() :: String.t()
   sampler(:strain, [
@@ -140,7 +146,13 @@ defmodule Faker.Cannabis.En do
   ## Examples
 
       iex> Faker.Cannabis.En.cannabinoid()
+      "Cannabinol"
+      iex> Faker.Cannabis.En.cannabinoid()
+      "Cannabigerolic Acid"
+      iex> Faker.Cannabis.En.cannabinoid()
       "Cannabinolic Acid"
+      iex> Faker.Cannabis.En.cannabinoid()
+      "Cannabicyclol"
   """
   @spec cannabinoid() :: String.t()
   sampler(:cannabinoid, [
@@ -166,7 +178,13 @@ defmodule Faker.Cannabis.En do
   ## Examples
 
       iex> Faker.Cannabis.En.cannabinoid_abbreviation()
-      "CBDa"
+      "THCa"
+      iex> Faker.Cannabis.En.cannabinoid_abbreviation()
+      "THCv"
+      iex> Faker.Cannabis.En.cannabinoid_abbreviation()
+      "CBC"
+      iex> Faker.Cannabis.En.cannabinoid_abbreviation()
+      "CBG"
   """
   @spec cannabinoid_abbreviation() :: String.t()
   sampler(:cannabinoid_abbreviation, [
@@ -195,7 +213,13 @@ defmodule Faker.Cannabis.En do
   ## Examples
 
       iex> Faker.Cannabis.En.terpene()
-      "(-)-Isopulegol"
+      "Camphor"
+      iex> Faker.Cannabis.En.terpene()
+      "Camphene"
+      iex> Faker.Cannabis.En.terpene()
+      "α Pinene"
+      iex> Faker.Cannabis.En.terpene()
+      "Sabinene"
   """
   @spec terpene() :: String.t()
   sampler(:terpene, [
@@ -242,7 +266,13 @@ defmodule Faker.Cannabis.En do
   ## Examples
 
       iex> Faker.Cannabis.En.medical_use()
-      "anti-histamine"
+      "analgesic"
+      iex> Faker.Cannabis.En.medical_use()
+      "anti-cancer"
+      iex> Faker.Cannabis.En.medical_use()
+      "anti-cancer"
+      iex> Faker.Cannabis.En.medical_use()
+      "anti-fungal"
   """
   @spec medical_use() :: String.t()
   sampler(:medical_use, [
@@ -285,7 +315,13 @@ defmodule Faker.Cannabis.En do
   ## Examples
 
       iex> Faker.Cannabis.En.health_benefit()
-      "treats allergy symptoms"
+      "relieves pain"
+      iex> Faker.Cannabis.En.health_benefit()
+      "inhibits cell growth in tumors/cancer cells"
+      iex> Faker.Cannabis.En.health_benefit()
+      "inhibits cell growth in tumors/cancer cells"
+      iex> Faker.Cannabis.En.health_benefit()
+      "treats fungal infection"
   """
   @spec health_benefit() :: String.t()
   sampler(:health_benefit, [
@@ -328,7 +364,13 @@ defmodule Faker.Cannabis.En do
   ## Examples
 
       iex> Faker.Cannabis.En.category()
-      "ice hash"
+      "flower"
+      iex> Faker.Cannabis.En.category()
+      "medical"
+      iex> Faker.Cannabis.En.category()
+      "seeds & clones"
+      iex> Faker.Cannabis.En.category()
+      "live resin"
   """
   @spec category() :: String.t()
   sampler(:category, [
@@ -357,6 +399,12 @@ defmodule Faker.Cannabis.En do
 
       iex> Faker.Cannabis.En.type()
       "hybrid"
+      iex> Faker.Cannabis.En.type()
+      "sativa"
+      iex> Faker.Cannabis.En.type()
+      "hybrid"
+      iex> Faker.Cannabis.En.type()
+      "sativa"
   """
   @spec type() :: String.t()
   sampler(:type, ["hybrid", "indica", "sativa"])
@@ -367,7 +415,13 @@ defmodule Faker.Cannabis.En do
   ## Examples
 
       iex> Faker.Cannabis.En.buzzword()
-      "weed"
+      "toke"
+      iex> Faker.Cannabis.En.buzzword()
+      "cbd"
+      iex> Faker.Cannabis.En.buzzword()
+      "stoned"
+      iex> Faker.Cannabis.En.buzzword()
+      "stoned"
   """
   @spec buzzword() :: String.t()
   sampler(:buzzword, [
@@ -408,7 +462,13 @@ defmodule Faker.Cannabis.En do
   ## Examples
 
       iex> Faker.Cannabis.En.brand()
-      "Lord Jones"
+      "Evolab"
+      iex> Faker.Cannabis.En.brand()
+      "CI Wholesale"
+      iex> Faker.Cannabis.En.brand()
+      "Muy"
+      iex> Faker.Cannabis.En.brand()
+      "Chong's Choice"
   """
   @spec brand() :: String.t()
   sampler(:brand, [
