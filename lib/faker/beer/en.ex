@@ -11,6 +11,12 @@ defmodule Faker.Beer.En do
   ## Examples
 
       iex> Faker.Beer.En.brand()
+      "Paulaner"
+      iex> Faker.Beer.En.brand()
+      "Pabst Blue Ribbon"
+      iex> Faker.Beer.En.brand()
+      "Kirin Inchiban"
+      iex> Faker.Beer.En.brand()
       "Birra Moretti"
   """
   @spec brand() :: String.t()
@@ -57,7 +63,13 @@ defmodule Faker.Beer.En do
   ## Examples
 
       iex> Faker.Beer.En.name()
-      "Oak Aged Yeti Imperial Stout"
+      "Duvel"
+      iex> Faker.Beer.En.name()
+      "Founders Kentucky Breakfast"
+      iex> Faker.Beer.En.name()
+      "Yeti Imperial Stout"
+      iex> Faker.Beer.En.name()
+      "Stone Imperial Russian Stout"
   """
   @spec name() :: String.t()
   sampler(:name, [
@@ -119,7 +131,13 @@ defmodule Faker.Beer.En do
   ## Examples
 
       iex> Faker.Beer.En.hop()
-      "Mosaic"
+      "Eroica"
+      iex> Faker.Beer.En.hop()
+      "Bullion"
+      iex> Faker.Beer.En.hop()
+      "Mt. Rainier"
+      iex> Faker.Beer.En.hop()
+      "Citra"
   """
   @spec hop() :: String.t()
   sampler(:hop, [
@@ -182,7 +200,13 @@ defmodule Faker.Beer.En do
   ## Examples
 
       iex> Faker.Beer.En.yeast()
+      "2206 - Bavarian Lager"
+      iex> Faker.Beer.En.yeast()
+      "3763 - Roeselare Ale Blend"
+      iex> Faker.Beer.En.yeast()
       "3711 - French Saison"
+      iex> Faker.Beer.En.yeast()
+      "3944 - Belgian Witbier"
   """
   @spec yeast() :: String.t()
   sampler(:yeast, [
@@ -243,7 +267,13 @@ defmodule Faker.Beer.En do
   ## Examples
 
       iex> Faker.Beer.En.malt()
-      "Chocolate malt"
+      "Carapils"
+      iex> Faker.Beer.En.malt()
+      "Pale"
+      iex> Faker.Beer.En.malt()
+      "Rye malt"
+      iex> Faker.Beer.En.malt()
+      "Munich"
   """
   @spec malt() :: String.t()
   sampler(:malt, [
@@ -271,7 +301,13 @@ defmodule Faker.Beer.En do
   ## Examples
 
       iex> Faker.Beer.En.style()
-      "English Pale Ale"
+      "Stout"
+      iex> Faker.Beer.En.style()
+      "European Amber Lager"
+      iex> Faker.Beer.En.style()
+      "Strong Ale"
+      iex> Faker.Beer.En.style()
+      "German Wheat And Rye Beer"
   """
   @spec style() :: String.t()
   sampler(:style, [
