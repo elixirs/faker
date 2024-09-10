@@ -12,6 +12,12 @@ defmodule Faker.Color.Es do
 
       iex> Faker.Color.Es.name()
       "Rojo"
+      iex> Faker.Color.Es.name()
+      "Verde"
+      iex> Faker.Color.Es.name()
+      "Marrón"
+      iex> Faker.Color.Es.name()
+      "Rosa"
   """
   @spec name() :: String.t()
   sampler(:name, [
