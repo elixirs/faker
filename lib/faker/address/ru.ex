@@ -12,6 +12,12 @@ defmodule Faker.Address.Ru do
 
       iex> Faker.Address.Ru.country()
       "Белоруссия"
+      iex> Faker.Address.Ru.country()
+      "Австрия"
+      iex> Faker.Address.Ru.country()
+      "Ирландия"
+      iex> Faker.Address.Ru.country()
+      "Тринидад и Тобаго"
   """
   @spec country() :: String.t()
   sampler(:country, [
@@ -217,7 +223,13 @@ defmodule Faker.Address.Ru do
   ## Examples
 
       iex> Faker.Address.Ru.state()
-      "Псковская область"
+      "Самарская область"
+      iex> Faker.Address.Ru.state()
+      "Орловская область"
+      iex> Faker.Address.Ru.state()
+      "Рязанская область"
+      iex> Faker.Address.Ru.state()
+      "Волгоградская область"
   """
   @spec state() :: String.t()
   sampler(:state, [
