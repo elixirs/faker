@@ -11,7 +11,13 @@ defmodule Faker.Currency do
   ## Examples
 
       iex> Faker.Currency.code()
-      "INR"
+      "WST"
+      iex> Faker.Currency.code()
+      "UYU"
+      iex> Faker.Currency.code()
+      "CRC"
+      iex> Faker.Currency.code()
+      "DOP"
   """
   @spec code() :: String.t()
   sampler(:code, [
@@ -189,7 +195,13 @@ defmodule Faker.Currency do
   ## Examples
 
       iex> Faker.Currency.symbol()
-      "PhP"
+      "£"
+      iex> Faker.Currency.symbol()
+      "฿"
+      iex> Faker.Currency.symbol()
+      "ƒ"
+      iex> Faker.Currency.symbol()
+      "Rp"
   """
   @spec symbol() :: String.t()
   sampler(:symbol, [
