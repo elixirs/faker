@@ -11,13 +11,7 @@ defmodule Faker.Cat.PtBr do
   ## Examples
 
       iex> Faker.Cat.PtBr.female_name()
-      "Samy"
-      iex> Faker.Cat.PtBr.female_name()
-      "Linda"
-      iex> Faker.Cat.PtBr.female_name()
-      "Úrsula"
-      iex> Faker.Cat.PtBr.female_name()
-      "Florinda"
+      "Nala"
   """
   @spec female_name() :: String.t()
   sampler(:female_name, [
@@ -109,13 +103,7 @@ defmodule Faker.Cat.PtBr do
   ## Examples
 
       iex> Faker.Cat.PtBr.male_name()
-      "Soneca"
-      iex> Faker.Cat.PtBr.male_name()
-      "Loui"
-      iex> Faker.Cat.PtBr.male_name()
-      "Ton"
-      iex> Faker.Cat.PtBr.male_name()
-      "Dante"
+      "Platão"
   """
   @spec male_name() :: String.t()
   sampler(
@@ -210,13 +198,7 @@ defmodule Faker.Cat.PtBr do
   ## Examples
 
       iex> Faker.Cat.PtBr.breed()
-      "Angorá Turco"
-      iex> Faker.Cat.PtBr.breed()
-      "Azul Russo"
-      iex> Faker.Cat.PtBr.breed()
-      "Pelo Curto Brasileiro"
-      iex> Faker.Cat.PtBr.breed()
-      "Pelo Curto Americano"
+      "Persa"
   """
   @spec breed() :: String.t()
   sampler(:breed, [

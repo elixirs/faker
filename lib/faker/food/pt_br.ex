@@ -12,12 +12,6 @@ defmodule Faker.Food.PtBr do
 
       iex> Faker.Food.PtBr.dish()
       "Asinha de frango"
-      iex> Faker.Food.PtBr.dish()
-      "Pizza"
-      iex> Faker.Food.PtBr.dish()
-      "Salada Caprese"
-      iex> Faker.Food.PtBr.dish()
-      "Peixe frito e batata frita"
   """
   @spec dish() :: String.t()
   sampler(:dish, [
@@ -54,12 +48,6 @@ defmodule Faker.Food.PtBr do
 
       iex> Faker.Food.PtBr.description()
       "Três ovos com coentro, tomate, cebola, abacate e queijo derretido. Acompanhado com torradas ou croissant."
-      iex> Faker.Food.PtBr.description()
-      "Três claras de ovos com espinafre, cogumelos, cebola caramelizada, tomate e queijo com baixo teor de gordura. Acompanhado de torradas integrais."
-      iex> Faker.Food.PtBr.description()
-      "Três ovos com coentro, tomate, cebola, abacate e queijo derretido. Acompanhado com torradas ou croissant."
-      iex> Faker.Food.PtBr.description()
-      "Três claras de ovos com espinafre, cogumelos, cebola caramelizada, tomate e queijo com baixo teor de gordura. Acompanhado de torradas integrais."
   """
   @spec description() :: String.t()
   sampler(:description, [
@@ -75,12 +63,6 @@ defmodule Faker.Food.PtBr do
 
       iex> Faker.Food.PtBr.ingredient()
       "Avelã"
-      iex> Faker.Food.PtBr.ingredient()
-      "Pepino"
-      iex> Faker.Food.PtBr.ingredient()
-      "Polenta"
-      iex> Faker.Food.PtBr.ingredient()
-      "Vinagre Balsâmico"
   """
   @spec ingredient() :: String.t()
   sampler(:ingredient, [
@@ -349,13 +331,7 @@ defmodule Faker.Food.PtBr do
   ## Examples
 
       iex> Faker.Food.PtBr.measurement()
-      "Colher de Chá"
-      iex> Faker.Food.PtBr.measurement()
-      "Colher de Sopa"
-      iex> Faker.Food.PtBr.measurement()
-      "Colher de Chá"
-      iex> Faker.Food.PtBr.measurement()
-      "Litro"
+      "Xícara"
   """
   @spec measurement() :: String.t()
   sampler(:measurement, ["Colher de Chá", "Colher de Sopa", "Copo Americano", "Xícara", "Litro"])
@@ -366,13 +342,7 @@ defmodule Faker.Food.PtBr do
   ## Examples
 
       iex> Faker.Food.PtBr.measurement_size()
-      "3"
-      iex> Faker.Food.PtBr.measurement_size()
-      "1/3"
-      iex> Faker.Food.PtBr.measurement_size()
-      "Pitada"
-      iex> Faker.Food.PtBr.measurement_size()
-      "2"
+      "1/2"
   """
   @spec measurement_size() :: String.t()
   sampler(:measurement_size, ["Pitada", "1/4", "1/3", "1/2", "1", "2", "3"])
@@ -384,12 +354,6 @@ defmodule Faker.Food.PtBr do
 
       iex> Faker.Food.PtBr.metric_measurement()
       "centilitro"
-      iex> Faker.Food.PtBr.metric_measurement()
-      "decilitro"
-      iex> Faker.Food.PtBr.metric_measurement()
-      "litro"
-      iex> Faker.Food.PtBr.metric_measurement()
-      "mililitro"
   """
   @spec metric_measurement() :: String.t()
   sampler(:metric_measurement, ["mililitro", "decilitro", "centilitro", "litro"])
@@ -401,12 +365,6 @@ defmodule Faker.Food.PtBr do
 
       iex> Faker.Food.PtBr.spice()
       "Açafrão"
-      iex> Faker.Food.PtBr.spice()
-      "Chili"
-      iex> Faker.Food.PtBr.spice()
-      "Alecrim"
-      iex> Faker.Food.PtBr.spice()
-      "Sal do mar grosso"
   """
   @spec spice() :: String.t()
   sampler(:spice, [

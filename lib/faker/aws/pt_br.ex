@@ -11,9 +11,7 @@ defmodule Faker.Aws.PtBr do
   ## Examples
 
       iex> Faker.Aws.PtBr.region_name()
-      "Ásia-Pacífico (Osaka)"
-      iex> Faker.Aws.PtBr.region_name()
-      "Ásia-Pacífico (Osaka)"
+      "Ásia-Pacífico (Mumbai)"
   """
   @spec region_name() :: String.t()
   sampler(:region_name, [

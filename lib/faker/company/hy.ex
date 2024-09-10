@@ -14,12 +14,6 @@ defmodule Faker.Company.Hy do
 
       iex> Faker.Company.Hy.bs()
       "առավելագույնի հասցնել նորարարական հարաբերություններ"
-      iex> Faker.Company.Hy.bs()
-      "ակտիվացնել վիրտուալ օգտագործողներ"
-      iex> Faker.Company.Hy.bs()
-      "առաքել գլոբալ կառուցվածքներ"
-      iex> Faker.Company.Hy.bs()
-      "առաքել հարուստ փորձառություններ"
   """
   @spec bs() :: String.t()
   def bs, do: "#{bullshit_prefix()} #{bullshit()} #{bullshit_suffix()}"
@@ -31,12 +25,6 @@ defmodule Faker.Company.Hy do
 
       iex> Faker.Company.Hy.bullshit()
       "ազդեցիկ"
-      iex> Faker.Company.Hy.bullshit()
-      "նորարարական"
-      iex> Faker.Company.Hy.bullshit()
-      "ժամանակակից"
-      iex> Faker.Company.Hy.bullshit()
-      "ժամանակակից"
   """
   @spec bullshit() :: String.t()
   sampler(:bullshit, [
@@ -78,12 +66,6 @@ defmodule Faker.Company.Hy do
 
       iex> Faker.Company.Hy.bullshit_prefix()
       "առավելագույնի հասցնել"
-      iex> Faker.Company.Hy.bullshit_prefix()
-      "պատկերացնել"
-      iex> Faker.Company.Hy.bullshit_prefix()
-      "ընդլայնել"
-      iex> Faker.Company.Hy.bullshit_prefix()
-      "ակտիվացնել"
   """
   @spec bullshit_prefix() :: String.t()
   sampler(:bullshit_prefix, [
@@ -128,12 +110,6 @@ defmodule Faker.Company.Hy do
 
       iex> Faker.Company.Hy.bullshit_suffix()
       "հարաբերություններ"
-      iex> Faker.Company.Hy.bullshit_suffix()
-      "շուկաներ"
-      iex> Faker.Company.Hy.bullshit_suffix()
-      "հարաբերություններ"
-      iex> Faker.Company.Hy.bullshit_suffix()
-      "նախաձեռնություններ"
   """
   @spec bullshit_suffix() :: String.t()
   sampler(:bullshit_suffix, [
@@ -171,12 +147,6 @@ defmodule Faker.Company.Hy do
 
       iex> Faker.Company.Hy.buzzword()
       "ուղղորդիչ"
-      iex> Faker.Company.Hy.buzzword()
-      "լոգիստիկ"
-      iex> Faker.Company.Hy.buzzword()
-      "երրորդական"
-      iex> Faker.Company.Hy.buzzword()
-      "բացահայտ"
   """
   @spec buzzword() :: String.t()
   sampler(:buzzword, [
@@ -234,13 +204,7 @@ defmodule Faker.Company.Hy do
   ## Examples
 
       iex> Faker.Company.Hy.buzzword_prefix()
-      "Բազմուղի"
-      iex> Faker.Company.Hy.buzzword_prefix()
-      "Կարգավորելի"
-      iex> Faker.Company.Hy.buzzword_prefix()
-      "Փոխարկելի"
-      iex> Faker.Company.Hy.buzzword_prefix()
-      "Ծրագրավորելի"
+      "Բաց կոդով"
   """
   @spec buzzword_prefix() :: String.t()
   sampler(:buzzword_prefix, [
@@ -308,12 +272,6 @@ defmodule Faker.Company.Hy do
 
       iex> Faker.Company.Hy.buzzword_suffix()
       "ինտերֆեյս"
-      iex> Faker.Company.Hy.buzzword_suffix()
-      "համախմբվածություն"
-      iex> Faker.Company.Hy.buzzword_suffix()
-      "տեղական ցանց"
-      iex> Faker.Company.Hy.buzzword_suffix()
-      "գնային կառուցվածք"
   """
   @spec buzzword_suffix() :: String.t()
   sampler(:buzzword_suffix, [
@@ -392,12 +350,6 @@ defmodule Faker.Company.Hy do
 
       iex> Faker.Company.Hy.catch_phrase()
       "Բազմուղի լոգիստիկ տեղական ցանց"
-      iex> Faker.Company.Hy.catch_phrase()
-      "Ծրագրավորելի 3-րդ սերնդի արտադրողականություն"
-      iex> Faker.Company.Hy.catch_phrase()
-      "Հեշտացված ուղղորդիչ ալգորիթմ"
-      iex> Faker.Company.Hy.catch_phrase()
-      "Դիմացկուն չեզոք տվյալների պահեստ"
   """
   @spec catch_phrase() :: String.t()
   def catch_phrase, do: "#{buzzword_prefix()} #{buzzword()} #{buzzword_suffix()}"
@@ -408,13 +360,7 @@ defmodule Faker.Company.Hy do
   ## Examples
 
       iex> Faker.Company.Hy.name()
-      "Մարալիկ ԲԲԸ"
-      iex> Faker.Company.Hy.name()
-      "Վանյան, Կարագյան և Ամիրբեկյան ՓԲԸ"
-      iex> Faker.Company.Hy.name()
-      "Հովիվյան ՓԲԸ"
-      iex> Faker.Company.Hy.name()
-      "Միլենա և Աշոտ ԲԲԸ"
+      "Կարեն և Հայկուհի ՀՁ"
   """
   @spec name() :: String.t()
   def name, do: name(Faker.random_between(0, 4))
@@ -434,12 +380,6 @@ defmodule Faker.Company.Hy do
 
       iex> Faker.Company.Hy.suffix()
       "ՍՊԸ"
-      iex> Faker.Company.Hy.suffix()
-      "Հոլդինգ"
-      iex> Faker.Company.Hy.suffix()
-      "ԲԲԸ"
-      iex> Faker.Company.Hy.suffix()
-      "ՓԲԸ"
   """
   @spec suffix() :: String.t()
   sampler(:suffix, [

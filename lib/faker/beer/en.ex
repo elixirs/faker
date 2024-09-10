@@ -12,8 +12,6 @@ defmodule Faker.Beer.En do
 
       iex> Faker.Beer.En.brand()
       "Birra Moretti"
-      iex> Faker.Beer.En.brand()
-      "Quimes"
   """
   @spec brand() :: String.t()
   sampler(:brand, [
@@ -60,8 +58,6 @@ defmodule Faker.Beer.En do
 
       iex> Faker.Beer.En.name()
       "Oak Aged Yeti Imperial Stout"
-      iex> Faker.Beer.En.name()
-      "Duvel"
   """
   @spec name() :: String.t()
   sampler(:name, [
@@ -124,8 +120,6 @@ defmodule Faker.Beer.En do
 
       iex> Faker.Beer.En.hop()
       "Mosaic"
-      iex> Faker.Beer.En.hop()
-      "Chelan"
   """
   @spec hop() :: String.t()
   sampler(:hop, [
@@ -189,8 +183,6 @@ defmodule Faker.Beer.En do
 
       iex> Faker.Beer.En.yeast()
       "3711 - French Saison"
-      iex> Faker.Beer.En.yeast()
-      "1332 - Northwest Ale"
   """
   @spec yeast() :: String.t()
   sampler(:yeast, [
@@ -252,8 +244,6 @@ defmodule Faker.Beer.En do
 
       iex> Faker.Beer.En.malt()
       "Chocolate malt"
-      iex> Faker.Beer.En.malt()
-      "Special roast"
   """
   @spec malt() :: String.t()
   sampler(:malt, [
@@ -282,8 +272,6 @@ defmodule Faker.Beer.En do
 
       iex> Faker.Beer.En.style()
       "English Pale Ale"
-      iex> Faker.Beer.En.style()
-      "Light Hybrid Beer"
   """
   @spec style() :: String.t()
   sampler(:style, [

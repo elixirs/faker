@@ -74,12 +74,6 @@ defmodule Faker.Lorem.Shakespeare.En do
 
       iex> Faker.Lorem.Shakespeare.En.king_richard_iii()
       "The king's name is a tower of strength."
-      iex> Faker.Lorem.Shakespeare.En.king_richard_iii()
-      "A horse! a horse! my kingdom for a horse!"
-      iex> Faker.Lorem.Shakespeare.En.king_richard_iii()
-      "So wise so young, they say, do never live long."
-      iex> Faker.Lorem.Shakespeare.En.king_richard_iii()
-      "Now is the winter of our discontent."
   """
   @spec king_richard_iii() :: String.t()
   sampler(:king_richard_iii, [
@@ -100,12 +94,6 @@ defmodule Faker.Lorem.Shakespeare.En do
 
       iex> Faker.Lorem.Shakespeare.En.romeo_and_juliet()
       "What's in a name? That which we call a rose by any other name would smell as sweet."
-      iex> Faker.Lorem.Shakespeare.En.romeo_and_juliet()
-      "For you and I are past our dancing days."
-      iex> Faker.Lorem.Shakespeare.En.romeo_and_juliet()
-      "For you and I are past our dancing days."
-      iex> Faker.Lorem.Shakespeare.En.romeo_and_juliet()
-      "For you and I are past our dancing days."
   """
   @spec romeo_and_juliet() :: String.t()
   sampler(:romeo_and_juliet, [

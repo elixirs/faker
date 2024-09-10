@@ -15,8 +15,6 @@ defmodule Faker.App do
 
       iex> Faker.App.version()
       "2.4"
-      iex> Faker.App.version()
-      "7.9"
   """
   @spec version() :: String.t()
   def version do
@@ -39,8 +37,6 @@ defmodule Faker.App do
 
       iex> Faker.App.semver()
       "2.10.14"
-      iex> Faker.App.semver()
-      "4.37.24"
   """
   @spec semver(Keyword.t()) :: String.t()
   def semver(opts \\ []) do
@@ -97,9 +93,7 @@ defmodule Faker.App do
   ## Examples
 
       iex> Faker.App.name()
-      "Duobam"
-      iex> Faker.App.name()
-      "Greenlam"
+      "Redhold"
   """
   @spec name() :: String.t()
   sampler(:name, [
@@ -174,8 +168,6 @@ defmodule Faker.App do
 
       iex> Faker.App.author()
       "Aglae Rempel"
-      iex> Faker.App.author()
-      "Therese Predovic"
   """
   @spec author() :: String.t()
   def author, do: author(Faker.random_between(0, 1))

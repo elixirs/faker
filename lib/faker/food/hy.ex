@@ -12,12 +12,6 @@ defmodule Faker.Food.Hy do
 
       iex> Faker.Food.Hy.dish()
       "ձու շոտլանդական ձևով"
-      iex> Faker.Food.Hy.dish()
-      "պիցցա"
-      iex> Faker.Food.Hy.dish()
-      "խորոված կողիկներ"
-      iex> Faker.Food.Hy.dish()
-      "սաղմոն նիգիրի"
   """
   @spec dish() :: String.t()
   sampler(:dish, [
@@ -64,13 +58,7 @@ defmodule Faker.Food.Hy do
   ## Examples
 
       iex> Faker.Food.Hy.description()
-      "Տապակած հավ վաֆլիների հետ: Մատուցվում է թխկիի օշարակով:"
-      iex> Faker.Food.Hy.description()
-      "Երեք ձվի օմլետ ռոքֆոր պանրով, մանր սոխ և խոզապուխտ: Կողքը ավելացրեք խորոված կարտոֆիլ և ֆրանսիական տոստ:"
-      iex> Faker.Food.Hy.description()
-      "Ապխտած սաղմոն, խոզապուխտով ձու, կարմիր սոխ և լոլիկի սոուս բուլկիի վրա: Կողքը ավելացրեք խորոված կարտոֆիլ:"
-      iex> Faker.Food.Hy.description()
-      "Երեք ձու, համեմ, լոլիկ, սոխ, ավոկադո և հալած պանիր: Կողքը ավելացրեք խորոված կարտոֆիլ և ֆրանսիական տոստ:"
+      "Թարմ նորվեգական սաղմոն, թեթևորեն խառնված մանանեխի սոուսով: Մատուցվում է բրնձի և խաշած բանջարեղենի հետ:"
   """
   @spec description() :: String.t()
   sampler(:description, [
@@ -90,13 +78,7 @@ defmodule Faker.Food.Hy do
   ## Examples
 
       iex> Faker.Food.Hy.ingredient()
-      "ոսպ"
-      iex> Faker.Food.Hy.ingredient()
-      "մշկընկույզ"
-      iex> Faker.Food.Hy.ingredient()
-      "ընկույզ"
-      iex> Faker.Food.Hy.ingredient()
-      "սամիթ"
+      "եգիպտացորենի ձեթ"
   """
   @spec ingredient() :: String.t()
   sampler(:ingredient, [
@@ -284,13 +266,7 @@ defmodule Faker.Food.Hy do
   ## Examples
 
       iex> Faker.Food.Hy.measurement()
-      "թեյի գդալ"
-      iex> Faker.Food.Hy.measurement()
-      "գալոն"
-      iex> Faker.Food.Hy.measurement()
       "պինտա"
-      iex> Faker.Food.Hy.measurement()
-      "բաժակ"
   """
   @spec measurement() :: String.t()
   sampler(:measurement, ["թեյի գդալ", "ճաշի գդալ", "բաժակ", "պինտա", "կվարտա", "գալոն"])
@@ -301,13 +277,7 @@ defmodule Faker.Food.Hy do
   ## Examples
 
       iex> Faker.Food.Hy.measurement_size()
-      "1/4"
-      iex> Faker.Food.Hy.measurement_size()
-      "3"
-      iex> Faker.Food.Hy.measurement_size()
       "1"
-      iex> Faker.Food.Hy.measurement_size()
-      "1/2"
   """
   @spec measurement_size() :: String.t()
   sampler(:measurement_size, ["1/4", "1/3", "1/2", "1", "2", "3"])
@@ -318,13 +288,7 @@ defmodule Faker.Food.Hy do
   ## Examples
 
       iex> Faker.Food.Hy.metric_measurement()
-      "սանտիլիտր"
-      iex> Faker.Food.Hy.metric_measurement()
-      "դեցիլիտր"
-      iex> Faker.Food.Hy.metric_measurement()
       "լիտր"
-      iex> Faker.Food.Hy.metric_measurement()
-      "միլիլիտր"
   """
   @spec metric_measurement() :: String.t()
   sampler(:metric_measurement, ["միլիլիտր", "դեցիլիտր", "սանտիլիտր", "լիտր"])
@@ -335,13 +299,7 @@ defmodule Faker.Food.Hy do
   ## Examples
 
       iex> Faker.Food.Hy.spice()
-      "կայնեյան պղպեղ"
-      iex> Faker.Food.Hy.spice()
-      "պիրի պիրի համեմունք"
-      iex> Faker.Food.Hy.spice()
-      "կարամ մասալա"
-      iex> Faker.Food.Hy.spice()
-      "մանանեխ"
+      "կոճապղպեղ"
   """
   @spec spice() :: String.t()
   sampler(:spice, [

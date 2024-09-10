@@ -11,9 +11,7 @@ defmodule Faker.Aws.En do
   ## Examples
 
       iex> Faker.Aws.En.region_name()
-      "Asia Pacific (Seoul)"
-      iex> Faker.Aws.En.region_name()
-      "Asia Pacific (Singapore)"
+      "Asia Pacific (Tokyo)"
   """
   @spec region_name() :: String.t()
   sampler(:region_name, [
@@ -45,9 +43,7 @@ defmodule Faker.Aws.En do
   ## Examples
 
       iex> Faker.Aws.En.region_code()
-      "ap-northeast-2"
-      iex> Faker.Aws.En.region_code()
-      "ap-southeast-1"
+      "ap-northeast-1"
   """
   @spec region_code() :: String.t()
   sampler(:region_code, [
@@ -79,9 +75,7 @@ defmodule Faker.Aws.En do
   ## Examples
 
     iex> Faker.Aws.En.service()
-    "Systems Manager"
-    iex> Faker.Aws.En.service()
-    "Device Farm"
+    "AWS Compute Optimizer"
   """
   @spec service() :: String.t()
   sampler(:service, [
@@ -236,9 +230,7 @@ defmodule Faker.Aws.En do
   ## Example
 
     iex> Faker.Aws.En.s3_action()
-    "PutBucketAcl"
-    iex> Faker.Aws.En.s3_action()
-    "ListObjectsV2"
+    "DeleteBucketTagging"
   """
   @spec s3_action() :: String.t()
   sampler(:s3_action, [
@@ -338,9 +330,7 @@ defmodule Faker.Aws.En do
   ## Example
 
     iex> Faker.Aws.En.rds_action()
-    "DescribeDBParameters"
-    iex> Faker.Aws.En.rds_action()
-    "FailoverDBCluster"
+    "DeleteDBClusterEndpoint"
   """
   @spec rds_action() :: String.t()
   sampler(:rds_action, [
@@ -482,9 +472,7 @@ defmodule Faker.Aws.En do
   ## Example
 
     iex> Faker.Aws.En.ec2_action()
-    "CreateLocalGatewayRouteTableVpcAssociation"
-    iex> Faker.Aws.En.ec2_action()
-    "DescribeExportImageTasks"
+    "CreateVpcEndpoint"
   """
   @spec ec2_action() :: String.t()
   sampler(:ec2_action, [

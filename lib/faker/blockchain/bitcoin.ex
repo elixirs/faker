@@ -12,8 +12,6 @@ defmodule Faker.Blockchain.Bitcoin do
 
       iex> Faker.Blockchain.Bitcoin.address()
       "16UZtfPcBYxawLfL2PBG1CnGPWKBZSExTr"
-      iex> Faker.Blockchain.Bitcoin.address()
-      "1Q8X4neAgccJKPhBheQDoDsT1QYPeamr4B"
       iex> Faker.Blockchain.Bitcoin.address(:main)
       "1F84ppNY7ggA9uNr3SwkeRsqRjjN7mQ5eG"
       iex> Faker.Blockchain.Bitcoin.address(:testnet)

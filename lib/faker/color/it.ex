@@ -12,12 +12,6 @@ defmodule Faker.Color.It do
 
       iex> Faker.Color.It.name()
       "Rosso"
-      iex> Faker.Color.It.name()
-      "Verde"
-      iex> Faker.Color.It.name()
-      "Marrone"
-      iex> Faker.Color.It.name()
-      "Rosa"
   """
   @spec name() :: String.t()
   sampler(:name, [

@@ -11,9 +11,7 @@ defmodule Faker.Avatar do
   ## Examples
 
       iex> Faker.Avatar.image_url()
-      "https://robohash.org/set_set1/bgset_bg1/j5m"
-      iex> Faker.Avatar.image_url()
-      "https://robohash.org/set_set2/bgset_bg2/jfBR3"
+      "https://robohash.org/set_set1/bgset_bg2/kQqaIfGqxsjFoNIT"
   """
   @spec image_url() :: String.t()
   def image_url do

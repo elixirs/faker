@@ -12,12 +12,6 @@ defmodule Faker.Commerce.En do
 
       iex> Faker.Commerce.En.color()
       "red"
-      iex> Faker.Commerce.En.color()
-      "sky blue"
-      iex> Faker.Commerce.En.color()
-      "lavender"
-      iex> Faker.Commerce.En.color()
-      "grey"
   """
   @spec color() :: String.t()
   sampler(:color, [
@@ -61,13 +55,7 @@ defmodule Faker.Commerce.En do
   ## Examples
 
       iex> Faker.Commerce.En.department()
-      "Home, Garden & Tools"
-      iex> Faker.Commerce.En.department()
-      "Electronics & Computers"
-      iex> Faker.Commerce.En.department()
-      "Clothing, Shoes & Jewelery"
-      iex> Faker.Commerce.En.department()
-      "Toys, Kids & Baby"
+      "Sports & Outdoors"
   """
   @spec department() :: String.t()
   sampler(:department, [
@@ -90,12 +78,6 @@ defmodule Faker.Commerce.En do
 
       iex> Faker.Commerce.En.product_name()
       "Ergonomic Steel Shirt"
-      iex> Faker.Commerce.En.product_name()
-      "Fantastic Car"
-      iex> Faker.Commerce.En.product_name()
-      "Granite Gloves"
-      iex> Faker.Commerce.En.product_name()
-      "Plastic Shoes"
   """
   @spec product_name() :: String.t()
   def product_name, do: product_name(Faker.random_between(0, 2))
@@ -114,12 +96,6 @@ defmodule Faker.Commerce.En do
 
       iex> Faker.Commerce.En.product_name_adjective()
       "Small"
-      iex> Faker.Commerce.En.product_name_adjective()
-      "Ergonomic"
-      iex> Faker.Commerce.En.product_name_adjective()
-      "Incredible"
-      iex> Faker.Commerce.En.product_name_adjective()
-      "Gorgeous"
   """
   @spec product_name_adjective() :: String.t()
   sampler(:product_name_adjective, [
@@ -141,13 +117,7 @@ defmodule Faker.Commerce.En do
   ## Examples
 
       iex> Faker.Commerce.En.product_name_material()
-      "Rubber"
-      iex> Faker.Commerce.En.product_name_material()
-      "Concrete"
-      iex> Faker.Commerce.En.product_name_material()
-      "Steel"
-      iex> Faker.Commerce.En.product_name_material()
-      "Granite"
+      "Plastic"
   """
   @spec product_name_material() :: String.t()
   sampler(:product_name_material, [
@@ -167,12 +137,6 @@ defmodule Faker.Commerce.En do
 
       iex> Faker.Commerce.En.product_name_product()
       "Gloves"
-      iex> Faker.Commerce.En.product_name_product()
-      "Computer"
-      iex> Faker.Commerce.En.product_name_product()
-      "Table"
-      iex> Faker.Commerce.En.product_name_product()
-      "Shirt"
   """
   @spec product_name_product() :: String.t()
   sampler(:product_name_product, [

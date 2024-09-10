@@ -12,8 +12,6 @@ defmodule Faker.Airports.PtBr do
 
       iex> Faker.Airports.PtBr.name()
       "Aeroporto Internacional Marechal Cunha Machado (SLZ/SBSL)"
-      iex> Faker.Airports.PtBr.name()
-      "Aeroporto Internacional Marechal Cunha Machado (SLZ/SBSL)"
   """
 
   @spec name() :: String.t()

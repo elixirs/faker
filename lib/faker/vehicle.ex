@@ -11,6 +11,7 @@ defmodule Faker.Vehicle do
   Returns a vehicle body style string
 
   ## Examples
+
       iex> Faker.Vehicle.body_style()
       "Minivan"
       iex> Faker.Vehicle.body_style()
@@ -27,6 +28,7 @@ defmodule Faker.Vehicle do
   Returns a vehicle drivetrain string
 
   ## Examples
+
       iex> Faker.Vehicle.drivetrain()
       "4x2/2-wheel drive"
       iex> Faker.Vehicle.drivetrain()
@@ -43,6 +45,7 @@ defmodule Faker.Vehicle do
   Returns a vehicle fuel type string
 
   ## Examples
+
       iex> Faker.Vehicle.fuel_type()
       "Ethanol"
       iex> Faker.Vehicle.fuel_type()
@@ -128,6 +131,7 @@ defmodule Faker.Vehicle do
   Returns a vehicle option string
 
   ## Examples
+
       iex> Faker.Vehicle.option()
       "Premium Sound"
       iex> Faker.Vehicle.option()
@@ -161,6 +165,7 @@ defmodule Faker.Vehicle do
   Returns a list of vehicle options()
 
   ## Examples
+
       iex> Faker.Vehicle.options()
       ["Power Steering", "A/C: Front", "Keyless Entry", "AM/FM Stereo", "Power Steering", "Antilock Brakes", "8-Track Player", "Leather Interior"]
       iex> Faker.Vehicle.options()
@@ -179,6 +184,7 @@ defmodule Faker.Vehicle do
   Returns a vehicle standard option string
 
   ## Examples
+
       iex> Faker.Vehicle.standard_spec()
       "Tire pressure monitoring system (TPMS)"
       iex> Faker.Vehicle.standard_spec()
@@ -195,6 +201,7 @@ defmodule Faker.Vehicle do
   Returns a list of vehicle standard specs
 
   ## Examples
+
       iex> Faker.Vehicle.standard_specs()
       ["20\\" x 9.0\\" front & 20\\" x 10.0\\" rear aluminum wheels", "Deluxe insulation group", "Torsion beam rear suspension w/stabilizer bar", "High performance suspension", "200mm front axle", "Traveler/mini trip computer", "P235/50R18 all-season tires", "Front door tinted glass"]
       iex> Faker.Vehicle.standard_specs()
@@ -213,6 +220,7 @@ defmodule Faker.Vehicle do
   Returns a list of vehicle standard specs of the given length
 
   ## Examples
+
       iex> Faker.Vehicle.En.standard_specs(3)
       ["Tire pressure monitoring system (TPMS)", "20\\" x 9.0\\" front & 20\\" x 10.0\\" rear aluminum wheels", "Deluxe insulation group"]
       iex> Faker.Vehicle.En.standard_specs(3)
@@ -231,14 +239,9 @@ defmodule Faker.Vehicle do
   Returns a vehicle transmission string
 
   ## Examples
-      iex> Faker.Vehicle.transmission()
-      "CVT"
-      iex> Faker.Vehicle.transmission()
-      "Automatic"
+
       iex> Faker.Vehicle.transmission()
       "Manual"
-      iex> Faker.Vehicle.transmission()
-      "Automanual"
   """
   @spec transmission() :: String.t()
   localize(:transmission)
@@ -247,6 +250,7 @@ defmodule Faker.Vehicle do
   Returns a vehicle identification number string
 
   ## Examples
+
       iex> Faker.Vehicle.vin()
       "1C689K5Y000T03374"
       iex> Faker.Vehicle.vin()

@@ -12,8 +12,6 @@ defmodule Faker.Airports.En do
 
       iex> Faker.Airports.En.name()
       "Rabat-Sale Airport"
-      iex> Faker.Airports.En.name()
-      "Arrachart Airport"
   """
 
   @spec name() :: String.t()

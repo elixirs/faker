@@ -1,13 +1,11 @@
 defmodule Faker.Random.Test do
   @moduledoc false
-  @behaviour Faker.Random
+
+  use Faker.Random
 
   def random_between(left, right) do
     set_seed(:ets.lookup(:seed_registry, self()))
-
-    left..right
-    |> shuffle()
-    |> hd()
+    Enum.random(left..right)
   end
 
   def random_bytes(total) do

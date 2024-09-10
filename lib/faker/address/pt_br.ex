@@ -13,9 +13,7 @@ defmodule Faker.Address.PtBr do
   ## Examples
 
       iex> Faker.Address.PtBr.building_number()
-      "24"
-      iex> Faker.Address.PtBr.building_number()
-      "79"
+      "s/n"
   """
   @spec building_number() :: String.t()
   def building_number do
@@ -30,9 +28,7 @@ defmodule Faker.Address.PtBr do
   ## Examples
 
       iex> Faker.Address.PtBr.city()
-      "Giovanna"
-      iex> Faker.Address.PtBr.city()
-      "Milena Paulista"
+      "Senador Kaique Paulista"
   """
   @spec city() :: String.t()
   def city do
@@ -54,8 +50,6 @@ defmodule Faker.Address.PtBr do
 
       iex> Faker.Address.PtBr.city_suffixes()
       "de Goiás"
-      iex> Faker.Address.PtBr.city_suffixes()
-      "da Mata"
   """
   @spec city_suffixes() :: String.t()
   sampler(:city_suffixes, [
@@ -86,9 +80,7 @@ defmodule Faker.Address.PtBr do
   ## Examples
 
       iex> Faker.Address.PtBr.city_prefix()
-      "Bento"
-      iex> Faker.Address.PtBr.city_prefix()
-      "Alta"
+      "Santo"
   """
   @spec city_prefix() :: String.t()
   sampler(:city_prefix, [
@@ -122,9 +114,7 @@ defmodule Faker.Address.PtBr do
   ## Examples
 
       iex> Faker.Address.PtBr.country()
-      "Cuba"
-      iex> Faker.Address.PtBr.country()
-      "Ashmore and Cartier Islands"
+      "Ilhas Virgens Britânicas"
   """
   @spec country() :: String.t()
   sampler(:country, [
@@ -402,9 +392,7 @@ defmodule Faker.Address.PtBr do
   ## Examples
 
       iex> Faker.Address.PtBr.secondary_address()
-      "Sala 576"
-      iex> Faker.Address.PtBr.secondary_address()
-      "AP 386"
+      "Sala 154"
   """
   @spec secondary_address() :: String.t()
   def secondary_address do
@@ -420,8 +408,6 @@ defmodule Faker.Address.PtBr do
 
       iex> Faker.Address.PtBr.state()
       "Espírito Santo"
-      iex> Faker.Address.PtBr.state()
-      "Alagoas"
   """
   @spec state() :: String.t()
   sampler(:state, [
@@ -461,8 +447,6 @@ defmodule Faker.Address.PtBr do
 
       iex> Faker.Address.PtBr.neighborhood()
       "Candelaria"
-      iex> Faker.Address.PtBr.neighborhood()
-      "Ernesto Nascimento"
   """
 
   @spec neighborhood() :: String.t()
@@ -958,8 +942,6 @@ defmodule Faker.Address.PtBr do
 
       iex> Faker.Address.PtBr.state_abbr()
       "ES"
-      iex> Faker.Address.PtBr.state_abbr()
-      "AL"
   """
   @spec state_abbr() :: String.t()
   sampler(:state_abbr, [
@@ -998,9 +980,7 @@ defmodule Faker.Address.PtBr do
   ## Examples
 
       iex> Faker.Address.PtBr.street_address()
-      "Passarela Bernardo, 2584"
-      iex> Faker.Address.PtBr.street_address()
-      "Avenida Moura, 07"
+      "Estação Kaique, 2"
   """
   @spec street_address() :: String.t()
   def street_address do
@@ -1013,7 +993,7 @@ defmodule Faker.Address.PtBr do
   ## Examples
 
       iex> Faker.Address.PtBr.street_address(true)
-      "Passarela Bernardo, 2584 AP 494"
+      "Estação Kaique, 2 Sala 461"
       iex> Faker.Address.PtBr.street_address(false)
       "Trecho Vicente Videira, 449"
   """
@@ -1027,9 +1007,7 @@ defmodule Faker.Address.PtBr do
   ## Examples
 
       iex> Faker.Address.PtBr.street_name()
-      "Passarela Bernardo"
-      iex> Faker.Address.PtBr.street_name()
-      "Travessa Rios"
+      "Estação Kaique"
   """
   @spec street_name() :: String.t()
   def street_name do
@@ -1048,9 +1026,7 @@ defmodule Faker.Address.PtBr do
   ## Examples
 
       iex> Faker.Address.PtBr.street_prefix()
-      "Praia"
-      iex> Faker.Address.PtBr.street_prefix()
-      "Feira"
+      "Recanto"
   """
   @spec street_prefix() :: String.t()
   sampler(:street_prefix, [
@@ -1107,9 +1083,7 @@ defmodule Faker.Address.PtBr do
   ## Examples
 
       iex> Faker.Address.PtBr.time_zone()
-      "Europa/Riga"
-      iex> Faker.Address.PtBr.time_zone()
-      "Asia/Rangoon"
+      "Australia/Sydney"
   """
   @spec time_zone() :: String.t()
   sampler(:time_zone, [
@@ -1246,9 +1220,7 @@ defmodule Faker.Address.PtBr do
   ## Examples
 
       iex> Faker.Address.PtBr.zip_code()
-      "46549723"
-      iex> Faker.Address.PtBr.zip_code()
-      "72.490-898"
+      "15426461"
   """
   @spec zip_code() :: String.t()
   def zip_code do

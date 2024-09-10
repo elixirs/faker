@@ -12,8 +12,6 @@ defmodule Faker.Cannabis.En do
 
       iex> Faker.Cannabis.En.strain()
       "Lemon Skunk"
-      iex> Faker.Cannabis.En.strain()
-      "Sonoma Glue"
   """
   @spec strain() :: String.t()
   sampler(:strain, [
@@ -143,8 +141,6 @@ defmodule Faker.Cannabis.En do
 
       iex> Faker.Cannabis.En.cannabinoid()
       "Cannabinolic Acid"
-      iex> Faker.Cannabis.En.cannabinoid()
-      "Cannabidivarin"
   """
   @spec cannabinoid() :: String.t()
   sampler(:cannabinoid, [
@@ -171,8 +167,6 @@ defmodule Faker.Cannabis.En do
 
       iex> Faker.Cannabis.En.cannabinoid_abbreviation()
       "CBDa"
-      iex> Faker.Cannabis.En.cannabinoid_abbreviation()
-      "CBG"
   """
   @spec cannabinoid_abbreviation() :: String.t()
   sampler(:cannabinoid_abbreviation, [
@@ -202,8 +196,6 @@ defmodule Faker.Cannabis.En do
 
       iex> Faker.Cannabis.En.terpene()
       "(-)-Isopulegol"
-      iex> Faker.Cannabis.En.terpene()
-      "R-(+)-Pulegone"
   """
   @spec terpene() :: String.t()
   sampler(:terpene, [
@@ -251,8 +243,6 @@ defmodule Faker.Cannabis.En do
 
       iex> Faker.Cannabis.En.medical_use()
       "anti-histamine"
-      iex> Faker.Cannabis.En.medical_use()
-      "anti-oxidant"
   """
   @spec medical_use() :: String.t()
   sampler(:medical_use, [
@@ -296,8 +286,6 @@ defmodule Faker.Cannabis.En do
 
       iex> Faker.Cannabis.En.health_benefit()
       "treats allergy symptoms"
-      iex> Faker.Cannabis.En.health_benefit()
-      "cell protectant"
   """
   @spec health_benefit() :: String.t()
   sampler(:health_benefit, [
@@ -341,8 +329,6 @@ defmodule Faker.Cannabis.En do
 
       iex> Faker.Cannabis.En.category()
       "ice hash"
-      iex> Faker.Cannabis.En.category()
-      "shatter"
   """
   @spec category() :: String.t()
   sampler(:category, [
@@ -371,8 +357,6 @@ defmodule Faker.Cannabis.En do
 
       iex> Faker.Cannabis.En.type()
       "hybrid"
-      iex> Faker.Cannabis.En.type()
-      "hybrid"
   """
   @spec type() :: String.t()
   sampler(:type, ["hybrid", "indica", "sativa"])
@@ -384,8 +368,6 @@ defmodule Faker.Cannabis.En do
 
       iex> Faker.Cannabis.En.buzzword()
       "weed"
-      iex> Faker.Cannabis.En.buzzword()
-      "gram"
   """
   @spec buzzword() :: String.t()
   sampler(:buzzword, [
@@ -427,8 +409,6 @@ defmodule Faker.Cannabis.En do
 
       iex> Faker.Cannabis.En.brand()
       "Lord Jones"
-      iex> Faker.Cannabis.En.brand()
-      "Caviar Gold"
   """
   @spec brand() :: String.t()
   sampler(:brand, [

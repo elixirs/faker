@@ -12,12 +12,6 @@ defmodule Faker.Cat.En do
 
       iex> Faker.Cat.En.name()
       "Daisy"
-      iex> Faker.Cat.En.name()
-      "Lily"
-      iex> Faker.Cat.En.name()
-      "Felix"
-      iex> Faker.Cat.En.name()
-      "Max"
   """
   @spec name() :: String.t()
   sampler(:name, [
@@ -58,12 +52,6 @@ defmodule Faker.Cat.En do
 
       iex> Faker.Cat.En.breed()
       "Mekong Bobtail"
-      iex> Faker.Cat.En.breed()
-      "Suphalak"
-      iex> Faker.Cat.En.breed()
-      "Russian White, Black and Tabby"
-      iex> Faker.Cat.En.breed()
-      "Asian Semi-longhair"
   """
   @spec breed() :: String.t()
   sampler(:breed, [
@@ -172,12 +160,6 @@ defmodule Faker.Cat.En do
 
       iex> Faker.Cat.En.registry()
       "Cat Aficionado Association"
-      iex> Faker.Cat.En.registry()
-      "Fédération Internationale Féline"
-      iex> Faker.Cat.En.registry()
-      "Fédération Internationale Féline"
-      iex> Faker.Cat.En.registry()
-      "Fédération Internationale Féline"
   """
   @spec registry() :: String.t()
   sampler(:registry, [

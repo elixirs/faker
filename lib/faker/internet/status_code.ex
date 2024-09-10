@@ -11,13 +11,7 @@ defmodule Faker.Internet.StatusCode do
   ## Examples
 
       iex> Faker.Internet.StatusCode.information()
-      102
-      iex> Faker.Internet.StatusCode.information()
-      101
-      iex> Faker.Internet.StatusCode.information()
       103
-      iex> Faker.Internet.StatusCode.information()
-      100
   """
   @spec information :: 100..103
   sampler(:information, [100, 101, 102, 103])

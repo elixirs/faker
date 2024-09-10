@@ -11,13 +11,7 @@ defmodule Faker.Food.En do
   ## Examples
 
       iex> Faker.Food.En.dish()
-      "Vegetable Soup"
-      iex> Faker.Food.En.dish()
-      "Fish and chips"
-      iex> Faker.Food.En.dish()
-      "Pork belly buns"
-      iex> Faker.Food.En.dish()
-      "Pasta Carbonara"
+      "Ricotta stuffed Ravioli"
   """
   @spec dish() :: String.t()
   sampler(:dish, [
@@ -67,12 +61,6 @@ defmodule Faker.Food.En do
 
       iex> Faker.Food.En.description()
       "Two buttermilk waffles, topped with whipped cream and maple syrup, a side of two eggs served any style, and your choice of smoked bacon or smoked ham."
-      iex> Faker.Food.En.description()
-      "28-day aged 300g USDA Certified Prime Ribeye, rosemary-thyme garlic butter, with choice of two sides."
-      iex> Faker.Food.En.description()
-      "Breaded fried chicken with waffles, and a side of maple syrup."
-      iex> Faker.Food.En.description()
-      "Creamy mascarpone cheese and custard layered between espresso and rum soaked house-made ladyfingers, topped with Valrhona cocoa powder."
   """
   @spec description() :: String.t()
   sampler(:description, [
@@ -98,13 +86,7 @@ defmodule Faker.Food.En do
   ## Examples
 
       iex> Faker.Food.En.ingredient()
-      "Tomatoes"
-      iex> Faker.Food.En.ingredient()
-      "Albacore Tuna"
-      iex> Faker.Food.En.ingredient()
-      "Potatoes"
-      iex> Faker.Food.En.ingredient()
-      "Tinned"
+      "Bocconcini"
   """
   @spec ingredient() :: String.t()
   sampler(:ingredient, [
@@ -609,13 +591,7 @@ defmodule Faker.Food.En do
   ## Examples
 
       iex> Faker.Food.En.measurement()
-      "teaspoon"
-      iex> Faker.Food.En.measurement()
-      "gallon"
-      iex> Faker.Food.En.measurement()
       "pint"
-      iex> Faker.Food.En.measurement()
-      "cup"
   """
   @spec measurement() :: String.t()
   sampler(:measurement, ["teaspoon", "tablespoon", "cup", "pint", "quart", "gallon"])
@@ -626,13 +602,7 @@ defmodule Faker.Food.En do
   ## Examples
 
       iex> Faker.Food.En.measurement_size()
-      "1/4"
-      iex> Faker.Food.En.measurement_size()
-      "3"
-      iex> Faker.Food.En.measurement_size()
       "1"
-      iex> Faker.Food.En.measurement_size()
-      "1/2"
   """
   @spec measurement_size() :: String.t()
   sampler(:measurement_size, ["1/4", "1/3", "1/2", "1", "2", "3"])
@@ -644,12 +614,6 @@ defmodule Faker.Food.En do
 
       iex> Faker.Food.En.metric_measurement()
       "centiliter"
-      iex> Faker.Food.En.metric_measurement()
-      "deciliter"
-      iex> Faker.Food.En.metric_measurement()
-      "liter"
-      iex> Faker.Food.En.metric_measurement()
-      "milliliter"
   """
   @spec metric_measurement() :: String.t()
   sampler(:metric_measurement, ["milliliter", "deciliter", "centiliter", "liter"])
@@ -660,13 +624,7 @@ defmodule Faker.Food.En do
   ## Examples
 
       iex> Faker.Food.En.spice()
-      "Garlic Salt"
-      iex> Faker.Food.En.spice()
-      "Ras-el-Hanout"
-      iex> Faker.Food.En.spice()
-      "Curry Hot"
-      iex> Faker.Food.En.spice()
-      "Peppercorns Mixed"
+      "Curry Mild"
   """
   @spec spice() :: String.t()
   sampler(:spice, [
@@ -862,12 +820,6 @@ defmodule Faker.Food.En do
 
       iex> Faker.Food.En.sushi()
       "Whitespotted conger"
-      iex> Faker.Food.En.sushi()
-      "Japanese horse mackerel"
-      iex> Faker.Food.En.sushi()
-      "Salmon"
-      iex> Faker.Food.En.sushi()
-      "Octopus"
   """
   @spec sushi() :: String.t()
   sampler(:sushi, [
