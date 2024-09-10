@@ -12,6 +12,12 @@ defmodule Faker.Color.En do
 
       iex> Faker.Color.En.name()
       "Red"
+      iex> Faker.Color.En.name()
+      "Green"
+      iex> Faker.Color.En.name()
+      "Brown"
+      iex> Faker.Color.En.name()
+      "Pink"
   """
   @spec name() :: String.t()
   sampler(:name, [
@@ -34,6 +40,12 @@ defmodule Faker.Color.En do
 
       iex> Faker.Color.En.fancy_name()
       "Tawny"
+      iex> Faker.Color.En.fancy_name()
+      "Citrine"
+      iex> Faker.Color.En.fancy_name()
+      "Greige"
+      iex> Faker.Color.En.fancy_name()
+      "Cesious"
   """
   @spec fancy_name() :: String.t()
   sampler(:fancy_name, [
