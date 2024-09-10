@@ -12,6 +12,12 @@ defmodule Faker.Aws.PtPt do
 
       iex> Faker.Aws.PtPt.region_name()
       "Asia Pacifico (Tóquio)"
+      iex> Faker.Aws.PtPt.region_name()
+      "EUA Este (Ohio)"
+      iex> Faker.Aws.PtPt.region_name()
+      "Europa (Milão)"
+      iex> Faker.Aws.PtPt.region_name()
+      "Africa (Cape Town)"
   """
   @spec region_name() :: String.t()
   sampler(:region_name, [
