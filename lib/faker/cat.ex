@@ -11,7 +11,13 @@ defmodule Faker.Cat do
   ## Examples
 
       iex> Faker.Cat.name()
+      "Daisy"
+      iex> Faker.Cat.name()
+      "Lily"
+      iex> Faker.Cat.name()
       "Felix"
+      iex> Faker.Cat.name()
+      "Max"
   """
   @spec name() :: String.t()
   localize(:name)
@@ -23,6 +29,12 @@ defmodule Faker.Cat do
 
       iex> Faker.Cat.breed()
       "Mekong Bobtail"
+      iex> Faker.Cat.breed()
+      "Suphalak"
+      iex> Faker.Cat.breed()
+      "Russian White, Black and Tabby"
+      iex> Faker.Cat.breed()
+      "Asian Semi-longhair"
   """
   @spec breed() :: String.t()
   localize(:breed)
@@ -33,7 +45,13 @@ defmodule Faker.Cat do
   ## Examples
 
       iex> Faker.Cat.registry()
-      "Felis Britannica"
+      "Cat Aficionado Association"
+      iex> Faker.Cat.registry()
+      "Fédération Internationale Féline"
+      iex> Faker.Cat.registry()
+      "Fédération Internationale Féline"
+      iex> Faker.Cat.registry()
+      "Fédération Internationale Féline"
   """
   @spec registry() :: String.t()
   localize(:registry)
