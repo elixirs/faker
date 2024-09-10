@@ -12,6 +12,12 @@ defmodule Faker.Color.Hy do
 
       iex> Faker.Color.Hy.name()
       "մոխրագույն"
+      iex> Faker.Color.Hy.name()
+      "կանաչ"
+      iex> Faker.Color.Hy.name()
+      "երկնագույն"
+      iex> Faker.Color.Hy.name()
+      "մանուշակագույն"
   """
   @spec name() :: String.t()
   sampler(:name, [
