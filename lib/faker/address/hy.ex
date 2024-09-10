@@ -11,7 +11,13 @@ defmodule Faker.Address.Hy do
   ## Examples
 
       iex> Faker.Address.Hy.building_number()
+      "1"
+      iex> Faker.Address.Hy.building_number()
       "4"
+      iex> Faker.Address.Hy.building_number()
+      "64"
+      iex> Faker.Address.Hy.building_number()
+      "108"
   """
   @spec building_number() :: String.t()
   def building_number do
@@ -27,6 +33,12 @@ defmodule Faker.Address.Hy do
 
       iex> Faker.Address.Hy.city()
       "Ստեփանավան"
+      iex> Faker.Address.Hy.city()
+      "Մարալիկ"
+      iex> Faker.Address.Hy.city()
+      "Ճամբարակ"
+      iex> Faker.Address.Hy.city()
+      "Մեղրի"
   """
 
   @spec city() :: String.t()
@@ -102,7 +114,13 @@ defmodule Faker.Address.Hy do
   ## Examples
 
       iex> Faker.Address.Hy.country()
-      "Սալվադոր"
+      "Ֆրանսիա"
+      iex> Faker.Address.Hy.country()
+      "Նիդերլանդներ"
+      iex> Faker.Address.Hy.country()
+      "Ղազախստան"
+      iex> Faker.Address.Hy.country()
+      "Թուրքմենստան"
   """
   @spec country() :: String.t()
   sampler(:country, [
@@ -345,7 +363,13 @@ defmodule Faker.Address.Hy do
   ## Examples
 
       iex> Faker.Address.Hy.secondary_address()
+      "բն. 1"
+      iex> Faker.Address.Hy.secondary_address()
       "բն. 4"
+      iex> Faker.Address.Hy.secondary_address()
+      "բն. 64"
+      iex> Faker.Address.Hy.secondary_address()
+      "բն. 110"
   """
 
   @spec secondary_address() :: String.t()
@@ -363,6 +387,12 @@ defmodule Faker.Address.Hy do
 
       iex> Faker.Address.Hy.state()
       "Արագածոտն"
+      iex> Faker.Address.Hy.state()
+      "Արարատ"
+      iex> Faker.Address.Hy.state()
+      "Կոտայք"
+      iex> Faker.Address.Hy.state()
+      "Լոռի"
   """
   @spec state() :: String.t()
   sampler(:state, [
@@ -385,6 +415,12 @@ defmodule Faker.Address.Hy do
 
       iex> Faker.Address.Hy.state_abbr()
       "ԱԳ"
+      iex> Faker.Address.Hy.state_abbr()
+      "ԱՐ"
+      iex> Faker.Address.Hy.state_abbr()
+      "ԿՏ"
+      iex> Faker.Address.Hy.state_abbr()
+      "ԼՌ"
   """
   @spec state_abbr() :: String.t()
   sampler(:state_abbr, [
@@ -406,7 +442,13 @@ defmodule Faker.Address.Hy do
   ## Examples
 
       iex> Faker.Address.Hy.street_address()
-      "Թորամանյան 09"
+      "Սուրբ Հովհաննեսի 542"
+      iex> Faker.Address.Hy.street_address()
+      "Բուռնազյան 61"
+      iex> Faker.Address.Hy.street_address()
+      "Լամբրոնի 329"
+      iex> Faker.Address.Hy.street_address()
+      "Հանրապետության 5"
   """
   @spec street_address() :: String.t()
   def street_address do
@@ -419,9 +461,13 @@ defmodule Faker.Address.Hy do
   ## Examples
 
       iex> Faker.Address.Hy.street_address(true)
-      "Թորամանյան 09 բն. 58"
+      "Սուրբ Հովհաննեսի 542 բն. 4"
       iex> Faker.Address.Hy.street_address(false)
-      "Իսահակյան 28"
+      "Գյուլբենկյան 0"
+      iex> Faker.Address.Hy.street_address(true)
+      "Պուշկինի 29 բն. 0"
+      iex> Faker.Address.Hy.street_address(false)
+      "Տիգրան Մեծի 35"
   """
   @spec street_address(true | any) :: String.t()
   def street_address(true), do: street_address() <> " " <> secondary_address()
@@ -433,7 +479,13 @@ defmodule Faker.Address.Hy do
   ## Examples
 
       iex> Faker.Address.Hy.street_name()
-      "Թորամանյան"
+      "Սուրբ Հովհաննեսի"
+      iex> Faker.Address.Hy.street_name()
+      "Մոսկովյան"
+      iex> Faker.Address.Hy.street_name()
+      "Սերգեյ Փարաջանովի"
+      iex> Faker.Address.Hy.street_name()
+      "Պրահայի"
   """
   @spec street_name() :: String.t()
   sampler(:street_name, [
@@ -609,6 +661,12 @@ defmodule Faker.Address.Hy do
 
       iex> Faker.Address.Hy.street_suffix()
       "նրբանցք"
+      iex> Faker.Address.Hy.street_suffix()
+      "պողոտա"
+      iex> Faker.Address.Hy.street_suffix()
+      "փակուղի"
+      iex> Faker.Address.Hy.street_suffix()
+      "փողոց"
   """
   @spec street_suffix() :: String.t()
   sampler(:street_suffix, [
@@ -625,6 +683,12 @@ defmodule Faker.Address.Hy do
 
       iex> Faker.Address.Hy.zip_code()
       "0154"
+      iex> Faker.Address.Hy.zip_code()
+      "2646"
+      iex> Faker.Address.Hy.zip_code()
+      "1083"
+      iex> Faker.Address.Hy.zip_code()
+      "2970"
   """
   @spec zip_code() :: String.t()
   def zip_code do
