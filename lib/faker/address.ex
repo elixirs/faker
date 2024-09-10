@@ -15,9 +15,13 @@ defmodule Faker.Address do
   ## Examples
 
       iex> Faker.Address.building_number()
-      "24"
+      "15426"
       iex> Faker.Address.building_number()
-      "79"
+      "6"
+      iex> Faker.Address.building_number()
+      "0832"
+      iex> Faker.Address.building_number()
+      "7"
   """
   @spec building_number() :: String.t()
   localize(:building_number)
@@ -28,9 +32,13 @@ defmodule Faker.Address do
   ## Examples
 
       iex> Faker.Address.city()
-      "Carter"
+      "Elizabeth"
       iex> Faker.Address.city()
-      "South Lesley"
+      "Rolfson"
+      iex> Faker.Address.city()
+      "West Conor"
+      iex> Faker.Address.city()
+      "Hardy"
   """
   @spec city() :: String.t()
   localize(:city)
@@ -41,9 +49,13 @@ defmodule Faker.Address do
   ## Examples
 
       iex> Faker.Address.city_prefix()
-      "South"
+      "Port"
+      iex> Faker.Address.city_prefix()
+      "West"
       iex> Faker.Address.city_prefix()
       "North"
+      iex> Faker.Address.city_prefix()
+      "Lake"
   """
   @spec city_prefix() :: String.t()
   localize(:city_prefix)
@@ -54,9 +66,13 @@ defmodule Faker.Address do
   ## Examples
 
       iex> Faker.Address.city_suffix()
-      "bury"
+      "burgh"
       iex> Faker.Address.city_suffix()
-      "port"
+      "mouth"
+      iex> Faker.Address.city_suffix()
+      "burgh"
+      iex> Faker.Address.city_suffix()
+      "view"
   """
   @spec city_suffix() :: String.t()
   localize(:city_suffix)
@@ -67,9 +83,13 @@ defmodule Faker.Address do
   ## Examples
 
       iex> Faker.Address.En.country()
-      "Dominican Republic"
+      "Guinea-Bissau"
       iex> Faker.Address.En.country()
-      "Bosnia and Herzegovina"
+      "Tuvalu"
+      iex> Faker.Address.En.country()
+      "Portugal"
+      iex> Faker.Address.En.country()
+      "United Arab Emirates"
   """
   @spec country() :: String.t()
   localize(:country)
@@ -80,9 +100,13 @@ defmodule Faker.Address do
   ## Examples
 
       iex> Faker.Address.country_code()
-      "DM"
+      "IT"
       iex> Faker.Address.country_code()
-      "BG"
+      "MR"
+      iex> Faker.Address.country_code()
+      "GM"
+      iex> Faker.Address.country_code()
+      "CX"
   """
   @spec country_code() :: String.t()
   localize(:country_code)
@@ -93,9 +117,13 @@ defmodule Faker.Address do
   ## Examples
 
       iex> Faker.Address.geohash()
-      "1kgw0gzrzz"
+      "1kgw0"
       iex> Faker.Address.geohash()
-      "jhkfxu2v"
+      "575152tr612btt"
+      iex> Faker.Address.geohash()
+      "20kxxzd9k22m6jedp"
+      iex> Faker.Address.geohash()
+      "06kjmd2wtwjp2px"
   """
   @spec geohash() :: binary
   def geohash do
@@ -150,6 +178,10 @@ defmodule Faker.Address do
       -62.20459142744528
       iex> Faker.Address.latitude()
       -59.39243543011051
+      iex> Faker.Address.latitude()
+      15.346881460762518
+      iex> Faker.Address.latitude()
+      -72.94522080668256
   """
   @spec latitude() :: float
   def latitude do
@@ -165,6 +197,10 @@ defmodule Faker.Address do
       -124.40918285489056
       iex> Faker.Address.longitude()
       -118.78487086022102
+      iex> Faker.Address.longitude()
+      30.693762921525035
+      iex> Faker.Address.longitude()
+      -145.8904416133651
   """
   @spec longitude() :: float
   def longitude do
@@ -177,9 +213,13 @@ defmodule Faker.Address do
   ## Examples
 
       iex> Faker.Address.postcode()
-      "70879"
+      "01542"
       iex> Faker.Address.postcode()
-      "90648"
+      "64610"
+      iex> Faker.Address.postcode()
+      "83297"
+      iex> Faker.Address.postcode()
+      "05235"
   """
   @spec postcode() :: String.t()
   defdelegate postcode, to: __MODULE__, as: :zip_code
@@ -190,9 +230,13 @@ defmodule Faker.Address do
   ## Examples
 
       iex> Faker.Address.secondary_address()
-      "Apt. 576"
+      "Apt. 154"
       iex> Faker.Address.secondary_address()
-      "Suite 386"
+      "Apt. 646"
+      iex> Faker.Address.secondary_address()
+      "Suite 083"
+      iex> Faker.Address.secondary_address()
+      "Apt. 970"
   """
   @spec secondary_address() :: String.t()
   localize(:secondary_address)
@@ -203,9 +247,13 @@ defmodule Faker.Address do
   ## Examples
 
       iex> Faker.Address.state()
-      "New Hampshire"
-      iex> Faker.Address.state()
       "Hawaii"
+      iex> Faker.Address.state()
+      "Alaska"
+      iex> Faker.Address.state()
+      "Oklahoma"
+      iex> Faker.Address.state()
+      "California"
   """
   @spec state() :: String.t()
   localize(:state)
@@ -216,9 +264,13 @@ defmodule Faker.Address do
   ## Examples
 
       iex> Faker.Address.state_abbr()
-      "NH"
-      iex> Faker.Address.state_abbr()
       "HI"
+      iex> Faker.Address.state_abbr()
+      "AK"
+      iex> Faker.Address.state_abbr()
+      "OK"
+      iex> Faker.Address.state_abbr()
+      "CA"
   """
   @spec state_abbr() :: String.t()
   localize(:state_abbr)
@@ -229,9 +281,13 @@ defmodule Faker.Address do
   ## Examples
 
       iex> Faker.Address.street_address()
-      "24 Adelle Place"
+      "15426 Aniya Mews"
       iex> Faker.Address.street_address()
-      "26258 Winston Pass"
+      "83297 Jana Spring"
+      iex> Faker.Address.street_address()
+      "57 Helene Mission"
+      iex> Faker.Address.street_address()
+      "03 Izaiah Land"
   """
   @spec street_address() :: String.t()
   def street_address do
@@ -244,9 +300,13 @@ defmodule Faker.Address do
   ## Examples
 
       iex> Faker.Address.street_address(true)
-      "24 Adelle Place Apt. 515"
-      iex> Faker.Address.street_address(false)
-      "3 Stiedemann Locks"
+      "15426 Aniya Mews Apt. 832"
+      iex> Faker.Address.street_address(true)
+      "7 Jana Spring Suite 570"
+      iex> Faker.Address.street_address(true)
+      "030 Kozey Knoll Suite 733"
+      iex> Faker.Address.street_address(true)
+      "603 Homenick Shore Suite 981"
   """
   @spec street_address(true | any) :: String.t()
   def street_address(true), do: street_address() <> " " <> secondary_address()
@@ -258,9 +318,13 @@ defmodule Faker.Address do
   ## Examples
 
       iex> Faker.Address.street_name()
-      "Aimee Roads"
+      "Elizabeth Freeway"
       iex> Faker.Address.street_name()
-      "Glover Springs"
+      "Reese Plaza"
+      iex> Faker.Address.street_name()
+      "Aniya Mews"
+      iex> Faker.Address.street_name()
+      "Bianka Heights"
   """
   @spec street_name() :: String.t()
   def street_name do
@@ -276,9 +340,13 @@ defmodule Faker.Address do
   ## Examples
 
       iex> Faker.Address.street_suffix()
+      "View"
+      iex> Faker.Address.street_suffix()
+      "Locks"
+      iex> Faker.Address.street_suffix()
       "Freeway"
       iex> Faker.Address.street_suffix()
-      "Falls"
+      "Lodge"
   """
   @spec street_suffix() :: String.t()
   localize(:street_suffix)
@@ -289,9 +357,13 @@ defmodule Faker.Address do
   ## Examples
 
       iex> Faker.Address.time_zone()
-      "Europe/Bucharest"
+      "Europe/Istanbul"
       iex> Faker.Address.time_zone()
-      "Australia/Hobart"
+      "Europe/Copenhagen"
+      iex> Faker.Address.time_zone()
+      "America/Indiana/Indianapolis"
+      iex> Faker.Address.time_zone()
+      "America/Guyana"
   """
   @spec time_zone() :: String.t()
   localize(:time_zone)
@@ -302,9 +374,13 @@ defmodule Faker.Address do
   ## Examples
 
       iex> Faker.Address.zip()
-      "70879"
+      "01542"
       iex> Faker.Address.zip()
-      "90648"
+      "64610"
+      iex> Faker.Address.zip()
+      "83297"
+      iex> Faker.Address.zip()
+      "05235"
   """
   @spec zip() :: String.t()
   defdelegate zip, to: __MODULE__, as: :zip_code
@@ -315,9 +391,13 @@ defmodule Faker.Address do
   ## Examples
 
       iex> Faker.Address.zip_code()
-      "70879"
+      "01542"
       iex> Faker.Address.zip_code()
-      "90648"
+      "64610"
+      iex> Faker.Address.zip_code()
+      "83297"
+      iex> Faker.Address.zip_code()
+      "05235"
   """
   @spec zip_code() :: String.t()
   localize(:zip_code)
