@@ -11,7 +11,13 @@ defmodule Faker.Dog.PtBr do
   ## Examples
 
       iex> Faker.Dog.PtBr.name()
+      "Simba"
+      iex> Faker.Dog.PtBr.name()
+      "Max"
+      iex> Faker.Dog.PtBr.name()
       "Malu"
+      iex> Faker.Dog.PtBr.name()
+      "Mike"
   """
   @spec name() :: String.t()
   sampler(:name, [
@@ -72,7 +78,13 @@ defmodule Faker.Dog.PtBr do
   ## Examples
 
       iex> Faker.Dog.PtBr.breed()
-      "Maltês"
+      "Boxer"
+      iex> Faker.Dog.PtBr.breed()
+      "Schnauzer"
+      iex> Faker.Dog.PtBr.breed()
+      "Lhasa apso"
+      iex> Faker.Dog.PtBr.breed()
+      "Fila brasileiro"
   """
   @spec breed() :: String.t()
   sampler(:breed, [
@@ -131,7 +143,13 @@ defmodule Faker.Dog.PtBr do
   ## Examples
 
       iex> Faker.Dog.PtBr.characteristic()
-      "Brincalhão, energético e esperto"
+      "Atlético, protetor e amável"
+      iex> Faker.Dog.PtBr.characteristic()
+      "Independente, reservado e inteligente"
+      iex> Faker.Dog.PtBr.characteristic()
+      "Amigável, trabalhador e extrovertido"
+      iex> Faker.Dog.PtBr.characteristic()
+      "Calmo, leal e orgulhoso"
   """
   @spec characteristic() :: String.t()
   sampler(:characteristic, [
