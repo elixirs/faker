@@ -11,6 +11,12 @@ defmodule Faker.Aws.Fr do
   ## Examples
   iex> Faker.Aws.Fr.region_name()
   "Asie Pacifique (Tokyo)"
+  iex> Faker.Aws.Fr.region_name()
+  "USA Est (Ohio)"
+  iex> Faker.Aws.Fr.region_name()
+  "Europe (Milan)"
+  iex> Faker.Aws.Fr.region_name()
+  "Afrique (Le Cap)"
   """
   @spec region_name() :: String.t()
   sampler(:region_name, [
