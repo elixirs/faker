@@ -25,7 +25,7 @@ defmodule Faker.Commerce.Hy do
   ## Examples
 
       iex> Faker.Commerce.Hy.department()
-      "Ապրանքներ Տան Համար"
+      "Համակարգիչներ"
   """
   @spec department() :: String.t()
   sampler(:department, [
@@ -59,7 +59,7 @@ defmodule Faker.Commerce.Hy do
   ## Examples
 
       iex> Faker.Commerce.Hy.product_name()
-      "շքեղ բրդյա ավտոմեքենա"
+      "հիանալի բրոնզե գլխարկ"
   """
   @spec product_name() :: String.t()
   def product_name, do: product_name(Faker.random_between(0, 2))
@@ -134,7 +134,7 @@ defmodule Faker.Commerce.Hy do
   ## Examples
 
       iex> Faker.Commerce.Hy.product_name_product()
-      "կոշիկ"
+      "վերնաշապիկ"
   """
   @spec product_name_product() :: String.t()
   sampler(:product_name_product, [

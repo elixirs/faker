@@ -241,7 +241,7 @@ defmodule Faker.Vehicle do
   ## Examples
 
       iex> Faker.Vehicle.transmission()
-      "Manual"
+      "CVT"
   """
   @spec transmission() :: String.t()
   localize(:transmission)

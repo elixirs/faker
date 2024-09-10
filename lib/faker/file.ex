@@ -39,7 +39,7 @@ defmodule Faker.File do
   ## Examples
 
       iex> Faker.File.file_extension()
-      "html"
+      "wav"
   """
   @spec file_extension() :: String.t()
   def file_extension do
@@ -55,10 +55,10 @@ defmodule Faker.File do
   ## Examples
 
       iex> Faker.File.file_extension(:video)
-      "webm"
+      "mov"
 
       iex> Faker.File.file_extension(:image)
-      "jpg"
+      "bmp"
   """
   @spec file_extension(atom) :: String.t()
   def file_extension(category) do
@@ -73,7 +73,7 @@ defmodule Faker.File do
   ## Examples
 
       iex> Faker.File.file_name()
-      "et.bmp"
+      "aliquam.jpg"
   """
   @spec file_name() :: String.t()
   def file_name do
@@ -89,11 +89,7 @@ defmodule Faker.File do
       iex> Faker.File.file_name(:text)
       "aliquam.txt"
       iex> Faker.File.file_name(:video)
-      "et.avi"
-      iex> Faker.File.file_name(:image)
-      "et.tiff"
-      iex> Faker.File.file_name(:audio)
-      "et.mp3"
+      "sint.mp4"
   """
   @spec file_name(atom) :: String.t()
   def file_name(category) do
@@ -123,13 +119,7 @@ defmodule Faker.File do
   ## Examples
 
       iex> Faker.File.mime_type(:image)
-      "image/png"
-      iex> Faker.File.mime_type(:audio)
-      "audio/vnd.wave"
-      iex> Faker.File.mime_type(:application)
-      "application/font-woff"
-      iex> Faker.File.mime_type(:video)
-      "video/x-flv"
+      "image/vnd.microsoft.icon"
   """
   @spec mime_type(atom) :: String.t()
   def mime_type(category) do

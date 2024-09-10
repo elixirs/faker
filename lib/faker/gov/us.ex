@@ -39,6 +39,12 @@ defmodule Faker.Gov.Us do
 
       iex> Faker.Gov.Us.ein()
       "04-0389586"
+      iex> Faker.Gov.Us.ein()
+      "07-8027034"
+      iex> Faker.Gov.Us.ein()
+      "41-6859447"
+      iex> Faker.Gov.Us.ein()
+      "83-6106581"
   """
   @spec ein() :: String.t()
   def ein do

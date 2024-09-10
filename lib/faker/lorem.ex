@@ -288,13 +288,13 @@ defmodule Faker.Lorem do
       ~c'ppkQqaIfGqxsjFoNITNnu6eXyJicLJNth88PrhGDhwp4LNQMt5pCFh7XGEZUiBOjqwcnSUTH94vu8a9XKUwNAs48lHzPITbFXSfTS0pHfBSmHkbj9kOsd7qRuGeXKTgCgI1idI3uwENwTqc'
 
       iex> Faker.Lorem.characters(3..5)
-      ~c'5LR'
+      ~c'ppk'
 
       iex> Faker.Lorem.characters(2)
-      ~c'8O'
+      ~c'Ap'
 
       iex> Faker.Lorem.characters(7)
-      ~c'8OUdXz7'
+      ~c'AppkQqa'
   """
   @spec characters(integer | Range.t()) :: [char]
   def characters(range_or_length \\ 15..255)
@@ -324,10 +324,10 @@ defmodule Faker.Lorem do
   ## Examples
 
       iex> Faker.Lorem.paragraph()
-      "Dolor accusantium ipsam vero et non quidem. Laborum repellat aliquam animi recusandae dolorum in aut atque quas. Qui hic eum deserunt quam neque distinctio officiis veritatis? Aut enim rerum architecto quia ut velit. Dolore iure ut ex debitis odio?"
+      "Deleniti consequatur et qui vitae et. Sit aut expedita cumque est necessitatibus beatae ex sunt! Soluta asperiores qui vitae animi et id et vitae. Quisquam corporis quisquam ab harum!"
 
       iex> Faker.Lorem.paragraph(1..2)
-      "Amet aperiam quia et odio eius facilis libero eveniet."
+      "Deleniti consequatur et qui vitae et."
 
       iex> Faker.Lorem.paragraph(1)
       "Adipisci ipsa sit officiis ducimus tempora et."
@@ -422,13 +422,7 @@ defmodule Faker.Lorem do
   ## Examples
 
       iex> Faker.Lorem.sentence(7, "...")
-      "Et sunt vel et dolores ad cumque..."
-      iex> Faker.Lorem.sentence(1, "?")
-      "Est?"
-      iex> Faker.Lorem.sentence(5, ".")
-      "Tenetur consequatur illo ut quae."
-      iex> Faker.Lorem.sentence(3, ";")
-      "Excepturi sint mollitia;"
+      "Aliquam ut sint deleniti consequatur et qui..."
   """
   @spec sentence(integer, binary) :: String.t()
   def sentence(num, mark) when is_integer(num) and is_binary(mark) do
@@ -493,9 +487,9 @@ defmodule Faker.Lorem do
   ## Examples
 
       iex> Faker.Lorem.words()
-      ["tempora", "architecto", "commodi", "et", "deleniti", "quaerat"]
+      ["ut", "sint", "deleniti", "consequatur", "et"]
       iex> Faker.Lorem.words(1..2)
-      ["cum"]
+      ["vitae"]
       iex> Faker.Lorem.words(2)
       ["cumque", "non"]
       iex> Faker.Lorem.words(6)

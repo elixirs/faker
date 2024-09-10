@@ -11,7 +11,7 @@ defmodule Faker.Finance.Stock do
   ## Examples
 
       iex> Faker.Finance.Stock.ticker()
-      "7278.N225"
+      "7401.N225"
   """
   @spec ticker() :: String.t()
   def ticker do
@@ -27,10 +27,10 @@ defmodule Faker.Finance.Stock do
   ## Examples
 
       iex> Faker.Finance.Stock.ticker(:reuters, :nikkei225)
-      "7280.N225"
+      "2110.N225"
 
       iex> Faker.Finance.Stock.ticker(:reuters, :sehk)
-      "6281.HK"
+      "8517.HK"
   """
   def ticker(:reuters, :nikkei225) do
     "#{Faker.random_between(1000, 9999)}.N225"

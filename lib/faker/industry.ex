@@ -30,6 +30,12 @@ defmodule Faker.Industry do
 
       iex> Faker.Industry.super_sector()
       "Automobiles & Parts"
+      iex> Faker.Industry.super_sector()
+      "Banks"
+      iex> Faker.Industry.super_sector()
+      "Automobiles & Parts"
+      iex> Faker.Industry.super_sector()
+      "Health Care"
   """
   @spec super_sector() :: String.t()
   localize(:super_sector)
@@ -41,6 +47,12 @@ defmodule Faker.Industry do
 
       iex> Faker.Industry.sector()
       "Food & Drug Retailers"
+      iex> Faker.Industry.sector()
+      "Banks"
+      iex> Faker.Industry.sector()
+      "Software & Computer Services"
+      iex> Faker.Industry.sector()
+      "Media"
   """
   @spec sector() :: String.t()
   localize(:sector)
@@ -52,6 +64,12 @@ defmodule Faker.Industry do
 
       iex> Faker.Industry.sub_sector()
       "Electrical Components & Equipment"
+      iex> Faker.Industry.sub_sector()
+      "Publishing"
+      iex> Faker.Industry.sub_sector()
+      "Alternative Electricity"
+      iex> Faker.Industry.sub_sector()
+      "Forestry"
   """
   @spec sub_sector() :: String.t()
   localize(:sub_sector)

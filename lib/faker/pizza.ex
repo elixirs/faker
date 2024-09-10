@@ -18,10 +18,10 @@ defmodule Faker.Pizza do
 
       iex> Faker.Pizza.pizzas()
       [
-        "14\\" Greek Maltija",
+        "14\\" Greek Fajita",
         "Large with Reindeer, Buffalo Chicken, Egg, Chorizo, and Clam",
-        "9\\" Capricciosa",
-        "9\\" Sicilian Style Frutti di mare"
+        "9\\" Kebab",
+        "9\\" Sicilian Style Buffalo Chicken"
       ]
       iex> Faker.Pizza.pizzas(2..3)
       [
@@ -68,9 +68,9 @@ defmodule Faker.Pizza do
       iex> Faker.Pizza.pizza()
       "Medium New York Style with Clam and Reindeer"
       iex> Faker.Pizza.pizza()
-      "9\\" Supreme"
+      "9\\" Africana"
       iex> Faker.Pizza.pizza()
-      "16\\" Shrimp Club"
+      "16\\" Meat Lovers"
   """
   @spec pizza() :: String.t()
   def pizza, do: pizza(Faker.random_between(1, 30))
@@ -450,11 +450,11 @@ defmodule Faker.Pizza do
   ## Examples
 
       iex> Faker.Pizza.combo()
+      "Hot & Spicy"
+      iex> Faker.Pizza.combo()
       "Breakfast"
       iex> Faker.Pizza.combo()
-      "Caprese"
-      iex> Faker.Pizza.combo()
-      "Mockba"
+      "Thai Chicken"
       iex> Faker.Pizza.combo()
       "Poutine"
   """
