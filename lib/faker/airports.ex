@@ -11,7 +11,13 @@ defmodule Faker.Airports do
   ## Examples
 
       iex> Faker.Airports.icao()
-      "YGIA"
+      "SNOS"
+      iex> Faker.Airports.icao()
+      "UNBG"
+      iex> Faker.Airports.icao()
+      "KLOM"
+      iex> Faker.Airports.icao()
+      "HCME"
   """
   @spec icao() :: String.t()
   sampler(:icao, [
@@ -1023,7 +1029,13 @@ defmodule Faker.Airports do
   ## Examples
 
       iex> Faker.Airports.iata()
-      "HVD"
+      "BFU"
+      iex> Faker.Airports.iata()
+      "FMM"
+      iex> Faker.Airports.iata()
+      "YUS"
+      iex> Faker.Airports.iata()
+      "YPH"
   """
   @spec iata() :: String.t()
   sampler(:iata, [
