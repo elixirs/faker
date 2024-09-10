@@ -10,8 +10,14 @@ defmodule Faker.Code do
 
   ## Examples
 
-      iex> Faker.Code.isbn()
+      iex> Faker.Code.isbn
       "015426461X"
+      iex> Faker.Code.isbn
+      "0832970522"
+      iex> Faker.Code.isbn
+      "3570203034"
+      iex> Faker.Code.isbn
+      "2097337600"
   """
   defdelegate isbn, to: Faker.Code, as: :isbn10
 
@@ -20,8 +26,14 @@ defmodule Faker.Code do
 
   ## Examples
 
-      iex> Faker.Code.isbn10()
+      iex> Faker.Code.isbn10
       "015426461X"
+      iex> Faker.Code.isbn10
+      "0832970522"
+      iex> Faker.Code.isbn10
+      "3570203034"
+      iex> Faker.Code.isbn10
+      "2097337600"
   """
   def isbn10 do
     sequence = Faker.format("#########")
@@ -33,8 +45,14 @@ defmodule Faker.Code do
 
   ## Examples
 
-      iex> Faker.Code.isbn13()
+      iex> Faker.Code.isbn13
       "9781542646109"
+      iex> Faker.Code.isbn13
+      "9783297052358"
+      iex> Faker.Code.isbn13
+      "9790203032090"
+      iex> Faker.Code.isbn13
+      "9793376033741"
   """
   def isbn13 do
     sequence = Util.pick(["978", "979"]) <> Faker.format("#########")
@@ -46,8 +64,14 @@ defmodule Faker.Code do
 
   ## Examples
 
-      iex> Faker.Code.issn()
+      iex> Faker.Code.issn
       "01542648"
+      iex> Faker.Code.issn
+      "61083291"
+      iex> Faker.Code.issn
+      "70523576"
+      iex> Faker.Code.issn
+      "02030322"
   """
   def issn do
     sequence = Faker.format("#######")
@@ -66,6 +90,8 @@ defmodule Faker.Code do
       "MC98FOOBAR83"
       iex> Faker.Code.iban("SM", ["A"])
       "SM86A2970523570AY38NWIVZ5XT"
+      iex> Faker.Code.iban("MC", ["FOO", "BAR"])
+      "MC40FOOBAR60"
   """
   defdelegate iban(), to: Faker.Code.Iban
   defdelegate iban(country_code_or_codes), to: Faker.Code.Iban
