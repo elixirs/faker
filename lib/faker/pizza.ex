@@ -25,19 +25,19 @@ defmodule Faker.Pizza do
       ]
       iex> Faker.Pizza.pizzas(2..3)
       [
-        "12\\" Fajita",
-        "Medium Fajita"
+        "12\\" Quattro Formaggio",
+        "Medium Pesto Chicken"
       ]
       iex> Faker.Pizza.pizzas(3..4)
       [
         "Large Gluten-Free Corn with Oysters, Bacon, and Steak",
-        "10\\" Flatbread Grilled Vegetarian",
-        "30\\" Thai Chicken",
+        "10\\" Flatbread Pesto Chicken",
+        "30\\" Funghi",
         "Small with Sauerkraut"
       ]
       iex> Faker.Pizza.pizzas(5)
       [
-        "Large Quattro Formaggio",
+        "Large Cheese",
         "Small Sweet Potato Crust with Mackerel, Jalapeños, Smoked Mozzarella, and Smoked Salmon",
         "30\\" with Pickled Ginger, Meatballs, Goat Cheese, Prosciutto, and Pineapple",
         "9\\" Detroit-style with Steak",
