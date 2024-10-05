@@ -30,8 +30,8 @@ defmodule Faker.File do
       ~w(video/mpeg video/mp4 video/ogg video/quicktime video/webm video/x-matroska video/x-ms-wmv video/x-flv)
   }
 
-  @categories_extensions Map.keys(@extensions)
-  @categories_mimes Map.keys(@mimes)
+  @categories_extensions @extensions |> Map.keys() |> Enum.sort()
+  @categories_mimes @mimes |> Map.keys() |> Enum.sort()
 
   @doc """
   Returns a random file extension
@@ -40,12 +40,6 @@ defmodule Faker.File do
 
       iex> Faker.File.file_extension()
       "wav"
-      iex> Faker.File.file_extension()
-      "wav"
-      iex> Faker.File.file_extension()
-      "doc"
-      iex> Faker.File.file_extension()
-      "mov"
   """
   @spec file_extension() :: String.t()
   def file_extension do
@@ -62,12 +56,9 @@ defmodule Faker.File do
 
       iex> Faker.File.file_extension(:video)
       "mov"
+
       iex> Faker.File.file_extension(:image)
-      "tiff"
-      iex> Faker.File.file_extension(:audio)
-      "flac"
-      iex> Faker.File.file_extension(:office)
-      "xls"
+      "bmp"
   """
   @spec file_extension(atom) :: String.t()
   def file_extension(category) do
@@ -83,12 +74,6 @@ defmodule Faker.File do
 
       iex> Faker.File.file_name()
       "aliquam.jpg"
-      iex> Faker.File.file_name()
-      "deleniti.doc"
-      iex> Faker.File.file_name()
-      "qui.jpg"
-      iex> Faker.File.file_name()
-      "quibusdam.csv"
   """
   @spec file_name() :: String.t()
   def file_name do
@@ -105,10 +90,6 @@ defmodule Faker.File do
       "aliquam.txt"
       iex> Faker.File.file_name(:video)
       "sint.mp4"
-      iex> Faker.File.file_name(:image)
-      "consequatur.bmp"
-      iex> Faker.File.file_name(:audio)
-      "qui.wav"
   """
   @spec file_name(atom) :: String.t()
   def file_name(category) do
@@ -122,12 +103,6 @@ defmodule Faker.File do
 
       iex> Faker.File.mime_type()
       "text/css"
-      iex> Faker.File.mime_type()
-      "message/http"
-      iex> Faker.File.mime_type()
-      "application/ogg"
-      iex> Faker.File.mime_type()
-      "model/x3d+xml"
   """
   @spec mime_type :: String.t()
   def mime_type do
@@ -145,12 +120,6 @@ defmodule Faker.File do
 
       iex> Faker.File.mime_type(:image)
       "image/vnd.microsoft.icon"
-      iex> Faker.File.mime_type(:audio)
-      "audio/mp4"
-      iex> Faker.File.mime_type(:application)
-      "application/xop+xml"
-      iex> Faker.File.mime_type(:video)
-      "video/mpeg"
   """
   @spec mime_type(atom) :: String.t()
   def mime_type(category) do

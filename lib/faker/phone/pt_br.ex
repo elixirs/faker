@@ -30,6 +30,7 @@ defmodule Faker.Phone.PtBr do
   Replace 'xx' for a random region number picked.
 
   ## Examples
+
       iex> Faker.Phone.PtBr.number_with_region("(xx) 9 1542-6461")
       "(92) 9 1542-6461"
       iex> Faker.Phone.PtBr.number_with_region("(xx) 4329-7052")
@@ -51,6 +52,7 @@ defmodule Faker.Phone.PtBr do
   Pick a random region code from list
 
   ## Examples
+
       iex> Faker.Phone.PtBr.generate_region_code()
       "92"
       iex> Faker.Phone.PtBr.generate_region_code()
