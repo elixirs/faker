@@ -51,4 +51,26 @@ defmodule Faker.UtilTest do
       assert Enum.sort(generated_value) == list
     end)
   end
+
+  describe "uniquify/1" do
+    test "list of strings is properly uniquified" do
+      assert uniquify(["a", "b", "b", "c"]) == ["a", "b", "b2", "c"]
+    end
+
+    test "list of integers raises an error" do
+      enumerable = [1, 2, 3, 4]
+
+      assert_raise RuntimeError,
+                   "Expected a list of strings, received #{inspect(enumerable)}",
+                   fn -> uniquify(enumerable) end
+    end
+
+    test "non-list as input raises an error" do
+      enumerable = %{invalid: "map"}
+
+      assert_raise RuntimeError,
+                   "Expected a list of strings, received #{inspect(enumerable)}",
+                   fn -> uniquify(enumerable) end
+    end
+  end
 end
