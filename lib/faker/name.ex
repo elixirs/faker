@@ -12,6 +12,12 @@ defmodule Faker.Name do
 
       iex> Faker.Name.name()
       "Mrs. Abe Rolfson MD"
+      iex> Faker.Name.name()
+      "Conor Padberg"
+      iex> Faker.Name.name()
+      "Mr. Bianka Ryan"
+      iex> Faker.Name.name()
+      "Ally Rau MD"
   """
   @deprecated "Use Faker.Person.name/0 instead."
   @spec name() :: String.t()
@@ -24,6 +30,12 @@ defmodule Faker.Name do
 
       iex> Faker.Name.first_name()
       "Joany"
+      iex> Faker.Name.first_name()
+      "Elizabeth"
+      iex> Faker.Name.first_name()
+      "Abe"
+      iex> Faker.Name.first_name()
+      "Ozella"
   """
   @deprecated "Use Faker.Person.first_name/0 instead."
   @spec first_name() :: String.t()
@@ -36,6 +48,12 @@ defmodule Faker.Name do
 
       iex> Faker.Name.last_name()
       "Blick"
+      iex> Faker.Name.last_name()
+      "Hayes"
+      iex> Faker.Name.last_name()
+      "Schumm"
+      iex> Faker.Name.last_name()
+      "Rolfson"
   """
   @deprecated "Use Faker.Person.last_name/0 instead."
   @spec last_name() :: String.t()
@@ -48,6 +66,12 @@ defmodule Faker.Name do
 
       iex> Faker.Name.title()
       "Dynamic Identity Administrator"
+      iex> Faker.Name.title()
+      "Product Communications Technician"
+      iex> Faker.Name.title()
+      "Legacy Accountability Architect"
+      iex> Faker.Name.title()
+      "Customer Data Representative"
   """
   @deprecated "Use Faker.Person.title/0 instead."
   @spec title() :: String.t()
@@ -60,6 +84,12 @@ defmodule Faker.Name do
 
       iex> Faker.Name.suffix()
       "II"
+      iex> Faker.Name.suffix()
+      "V"
+      iex> Faker.Name.suffix()
+      "V"
+      iex> Faker.Name.suffix()
+      "V"
   """
   @deprecated "Use Faker.Person.suffix/0 instead."
   @spec suffix() :: String.t()
@@ -72,6 +102,12 @@ defmodule Faker.Name do
 
       iex> Faker.Name.prefix()
       "Mr."
+      iex> Faker.Name.prefix()
+      "Mrs."
+      iex> Faker.Name.prefix()
+      "Mr."
+      iex> Faker.Name.prefix()
+      "Dr."
   """
   @deprecated "Use Faker.Person.prefix/0 instead."
   @spec prefix() :: String.t()
