@@ -12,6 +12,12 @@ defmodule Faker.Internet.It do
 
       iex> Faker.Internet.It.free_email_service()
       "virgilio.it"
+      iex> Faker.Internet.It.free_email_service()
+      "yahoo.it"
+      iex> Faker.Internet.It.free_email_service()
+      "aruba.it"
+      iex> Faker.Internet.It.free_email_service()
+      "gmail.com"
   """
   @spec free_email_service() :: String.t()
   sampler(:free_email_service, [
@@ -32,6 +38,12 @@ defmodule Faker.Internet.It do
 
       iex> Faker.Internet.It.domain_suffix()
       "com"
+      iex> Faker.Internet.It.domain_suffix()
+      "it"
+      iex> Faker.Internet.It.domain_suffix()
+      "com"
+      iex> Faker.Internet.It.domain_suffix()
+      "biz"
   """
   @spec domain_suffix() :: String.t()
   sampler(:domain_suffix, ["com", "it", "info", "org", "biz"])
