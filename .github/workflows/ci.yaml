@@ -8,12 +8,12 @@ jobs:
   credo:
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4.1.7
-      - uses: actions/cache@v4.0.2
+      - uses: actions/checkout@v4.2.2
+      - uses: actions/cache@v4.2.0
         with:
           key: ${{ github.job }}-${{ hashFiles('mix.lock') }}-1
           path: _build
-      - uses: erlef/setup-beam@v1.18.0
+      - uses: erlef/setup-beam@v1.18.2
         with:
           otp-version: 26.2
           elixir-version: 1.17.3
@@ -60,12 +60,12 @@ jobs:
   test:
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4.1.7
-      - uses: actions/cache@v4.0.2
+      - uses: actions/checkout@v4.2.2
+      - uses: actions/cache@v4.2.0
         with:
           key: ${{ github.job }}-${{ matrix.elixir }}-${{ hashFiles('mix.lock') }}-1
           path: _build
-      - uses: erlef/setup-beam@v1.18.0
+      - uses: erlef/setup-beam@v1.18.2
         with:
           elixir-version: ${{ matrix.elixir }}
           otp-version: 26.x
