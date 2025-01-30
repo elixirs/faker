@@ -9,6 +9,8 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 ## Unreleased
 
 ### Added
+- `Faker.Dwelling` [[@winescout](https://github.com/winescout)]
+- `Faker.Dwelling.En` [[@winescout](https://github.com/winescout)]
 
 - Test with Elixir 1.16 and 1.17 on CI [[@ypconstante](https://github.com/ypconstante)]
 - Test with OTP 26 and 27 on CI [[@ypconstante](https://github.com/ypconstante)]
