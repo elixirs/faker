@@ -269,13 +269,13 @@ defmodule Faker.Vehicle do
   def vin do
     Util.format("%10x%y%x%5d",
       x: fn ->
-        Util.pick([Util.upper_letter(), "#{Util.digit()}"], ["I", "O", "Q"])
+        Util.pick([Util.upper_letter(), Util.digit()], ["I", "O", "Q"])
       end,
       y: fn ->
         Util.pick([Util.upper_letter(), "0"], ["I", "O", "Q"])
       end,
       d: fn ->
-        "#{Util.digit()}"
+        Util.digit()
       end
     )
   end
