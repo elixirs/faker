@@ -130,6 +130,14 @@ defmodule Faker do
     Application.get_env(:faker, :random_module).random_bytes(total)
   end
 
+  @doc """
+  Returns a shuffled enum.
+  """
+  @spec shuffle(Enum.t()) :: list()
+  def shuffle(enum) do
+    Application.get_env(:faker, :random_module).shuffle(enum)
+  end
+
   defmacro localize(function) do
     quote do
       def unquote(function)() do
