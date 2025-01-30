@@ -292,13 +292,13 @@ defmodule Faker.Internet do
   ## Examples
 
       iex> Faker.Internet.slug()
-      "sint-deleniti-consequatur-ut"
+      "sint.deleniti.consequatur.ut"
       iex> Faker.Internet.slug()
-      "sit_et"
+      "expedita_est_necessitatibus_cumque_aut"
       iex> Faker.Internet.slug(["foo", "bar"])
-      "foo-bar"
-      iex> Faker.Internet.slug(["foo", "bar"], ["."])
       "foo.bar"
+      iex> Faker.Internet.slug(["foo", "bar"], ["."])
+      "bar.foo"
   """
   @spec slug() :: String.t()
   def slug do

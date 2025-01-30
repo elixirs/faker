@@ -15,18 +15,18 @@ jobs:
           path: _build
       - uses: erlef/setup-beam@v1.18.2
         with:
-          otp-version: 26.2
           elixir-version: 1.17.3
+          otp-version: 26.x
       - run: mix deps.get
-      - run: mix credo --format=sarif --mute-exit-status > credo_output.sarif
+      - run: mix compile
+      - run: mix credo suggest --format=sarif --mute-exit-status > credo.sarif
       - name: Upload SARIF
         uses: github/codeql-action/upload-sarif@v3.28.8
         with:
-          # Path to SARIF file relative to the root of the repository
-          sarif_file: credo_output.sarif
+          sarif_file: credo.sarif
 
   # dialyzer:
-  #   runs-on: ${{ matrix.os || 'ubuntu-22.04' }}
+  #   runs-on: ${{ matrix.os || 'ubuntu-24.04' }}
 
   #   steps:
   #     - uses: actions/checkout@v4.1.0
@@ -58,24 +58,24 @@ jobs:
   #     - run: mix dialyzer --format github
 
   test:
-    runs-on: ubuntu-24.04
+    runs-on: ${{ matrix.os || 'ubuntu-24.04' }}
     steps:
       - uses: actions/checkout@v4.2.2
       - uses: actions/cache@v4.2.0
         with:
-          key: ${{ github.job }}-${{ matrix.elixir }}-${{ hashFiles('mix.lock') }}-1
+          key: ${{ github.job }}-${{ matrix.elixir }}-${{ matrix.otp }}-${{ hashFiles('mix.lock') }}-1
           path: _build
       - uses: erlef/setup-beam@v1.18.2
         with:
           elixir-version: ${{ matrix.elixir }}
-          otp-version: 26.x
+          otp-version: ${{ matrix.otp }}
       - run: mix deps.get
       - run: mix test
     strategy:
       fail-fast: false
       matrix:
         include:
-          - elixir: 1.15.x
-          - elixir: 1.16.x
           - elixir: 1.17.x
+            otp: 27.x
           - elixir: 1.18.x
+            otp: 27.x
