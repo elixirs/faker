@@ -47,7 +47,7 @@ defmodule Faker.Mixfile do
       {:ex_doc, "== 0.36.1", only: :dev, runtime: false},
       {:earmark, "== 1.4.47", only: :dev, runtime: false},
       {:credo, "== 1.7.11", only: [:dev, :test], runtime: false},
-      {:dialyxir, "== 1.4.3", only: [:dev], runtime: false},
+      {:dialyxir, "== 1.4.5", only: [:dev], runtime: false},
       {:mix_test_watch, "~> 1.0", only: [:dev, :test], runtime: false}
     ]
   end
