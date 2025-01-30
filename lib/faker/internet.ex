@@ -292,11 +292,11 @@ defmodule Faker.Internet do
   ## Examples
 
       iex> Faker.Internet.slug()
-      "sint-deleniti-consequatur-ut"
+      "deleniti-sint-consequatur-ut"
       iex> Faker.Internet.slug()
-      "sit_et"
+      "cumque_sit_aut_expedita"
       iex> Faker.Internet.slug(["foo", "bar"])
-      "foo-bar"
+      "foo_bar"
       iex> Faker.Internet.slug(["foo", "bar"], ["."])
       "foo.bar"
   """
@@ -313,7 +313,7 @@ defmodule Faker.Internet do
   @spec slug([String.t()], [String.t()]) :: String.t()
   def slug(words, glue) do
     words
-    |> Enum.take_random(length(words))
+    |> Faker.shuffle()
     |> Enum.join(pick(glue))
     |> String.downcase()
   end
