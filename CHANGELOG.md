@@ -41,6 +41,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 - `Faker.Currency.code/0` remove duplicates/replace old currencies [[@yassinrais](https://github.com/yassinrais)]
 - `Faker.Adress.PtBr` - fix model documentation [[@laraujo7](https://github.com/laraujo7)]
 - `Faker.Address.En/0` corrected formatting for US and Britian [[@atavistock](https://github.com/atavistock)]
+- `Faker.Gov.It.fiscal_code/0` - fix fiscal code generation [[@CostantiniMatteo](https://github.com/CostantiniMatteo)]
 
 ## 0.17.0
 

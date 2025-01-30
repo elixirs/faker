@@ -8,83 +8,103 @@ defmodule Faker.Gov.It do
 
   alias Faker.Util
 
+  @consonants ~w(B C D F G H L M N P Q R S T V Z)
+
   @doc """
   Returns a random Italian fiscal code
 
   ## Examples
 
       iex> Faker.Gov.It.fiscal_id
-      "ELRCEA64C50A918F"
+      "LPRNNL58T70A252Z"
       iex> Faker.Gov.It.fiscal_id
-      "ZSLNKH22M34H480J"
+      "RGTZDP01A68H333X"
       iex> Faker.Gov.It.fiscal_id
-      "OCPCVO90M50F353I"
+      "DDMSRS32S63F160O"
       iex> Faker.Gov.It.fiscal_id
-      "PQYRFX94R54C681K"
+      "TBSPFC28T71C158N"
   """
   @spec fiscal_id() :: binary()
   def fiscal_id do
     surname()
     |> Kernel.<>(name())
-    |> Kernel.<>(birth_year())
-    |> Kernel.<>(birth_month())
-    |> Kernel.<>(birth_day())
-    |> Kernel.<>(town_code_letter())
-    |> Kernel.<>(town_code_numbers())
+    |> Kernel.<>(birth_date())
+    |> Kernel.<>(town_code())
     |> (&Kernel.<>(&1, cin(&1))).()
   end
 
   defp surname do
-    Util.join(3, &Util.upper_letter/0)
+    Util.join(3, fn -> Util.pick(@consonants) end)
   end
 
   defp name do
-    Util.join(3, &Util.upper_letter/0)
+    Util.join(3, fn -> Util.pick(@consonants) end)
   end
 
-  defp birth_year do
-    0
-    |> Faker.random_between(99)
-    |> Integer.to_string()
-    |> String.pad_leading(2, "0")
+  defp birth_date do
+    date_of_birth = Faker.Date.date_of_birth(0..99)
+    male? = Util.pick([true, false])
+
+    year = date_of_birth.year |> Integer.to_string() |> String.slice(2, 2)
+    month = month_code(date_of_birth.month)
+
+    day =
+      if male?,
+        do: date_of_birth.day |> Integer.to_string() |> String.pad_leading(2, "0"),
+        else: (date_of_birth.day + 40) |> Integer.to_string() |> String.pad_leading(2, "0")
+
+    "#{year}#{month}#{day}"
   end
 
-  defp birth_month do
-    Util.pick(~w(A B C D E H L M P R S T))
+  defp month_code(month) do
+    case month do
+      1 -> "A"
+      2 -> "B"
+      3 -> "C"
+      4 -> "D"
+      5 -> "E"
+      6 -> "H"
+      7 -> "L"
+      8 -> "M"
+      9 -> "P"
+      10 -> "R"
+      11 -> "S"
+      12 -> "T"
+    end
   end
 
-  defp birth_day do
-    1..71
-    |> Util.pick()
-    |> Integer.to_string()
-    |> String.pad_leading(2, "0")
+  defp town_code do
+    case Util.pick(~w(A B C D E F G H I L M Z)) do
+      "Z" ->
+        "Z#{Faker.random_between(100, 999)}"
+
+      town_letter ->
+        town_number =
+          Faker.random_between(1, 999)
+          |> Integer.to_string()
+          |> String.pad_leading(3, "0")
+
+        "#{town_letter}#{town_number}"
+    end
   end
 
-  defp town_code_letter do
-    Util.pick(~w(A B C D E F G H I L M Z))
-  end
-
-  defp town_code_numbers do
-    Faker.random_between(0, 999)
-    |> Integer.to_string()
-    |> String.pad_leading(3, "0")
-  end
-
+  # See https://it.wikipedia.org/wiki/Codice_fiscale#Generazione_del_codice_fiscale
   defp cin(input) do
-    {left, right} =
+    sum =
       input
       |> String.codepoints()
       |> Enum.with_index()
-      |> Enum.reduce({0, 0}, fn {letter, index}, {acc_even, acc_odd} ->
-        case Integer.is_even(index) do
-          true -> {acc_even + cin_even(letter), acc_odd}
-          false -> {acc_even, acc_odd + cin_odd(letter)}
+      |> Enum.reduce(0, fn {char, index}, acc ->
+        # iterazion is 1-based
+        case Integer.is_even(index + 1) do
+          true -> acc + cin_even(char)
+          false -> acc + cin_odd(char)
         end
       end)
 
     Enum.at(
       ~w(A B C D E F G H I J K L M N O P Q R S T U V W X Y Z),
-      Integer.mod(left + right, 26)
+      Integer.mod(sum, 26)
     )
   end
 
