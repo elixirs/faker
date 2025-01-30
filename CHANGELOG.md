@@ -8,10 +8,15 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
 ## Unreleased
 
+
+
 ### Added
 
 - Test with Elixir 1.16 and 1.17 on CI [[@ypconstante](https://github.com/ypconstante)]
 - Test with OTP 26 and 27 on CI [[@ypconstante](https://github.com/ypconstante)]
+
+- `Faker.Avatar.image_url_with_opts/1` [[delmendo](https://github.com/delmendo)]
+
 
 ### Changed
 
