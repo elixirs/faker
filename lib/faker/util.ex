@@ -41,17 +41,25 @@ defmodule Faker.Util do
 
       iex> Faker.Util.sample_uniq(2, &Faker.Internet.email/0)
       ["conor2058@schiller.com", "elizabeth2056@rolfson.net"]
-
       iex> Faker.Util.sample_uniq(10, fn -> Faker.String.base64(4) end)
-      ["1tmL", "29Te", "Byiy", "Kfp7", "Z7xb", "lk8z", "pI0P", "yGb0", "ye3Q", "yfOB"]
-
+      [
+        "0CzJ",
+        "3nuk",
+        "D1Ip",
+        "IqFG",
+        "My3J",
+        "W3yW",
+        "e/kH",
+        "gd75",
+        "hVCK",
+        "snJn"
+      ]
       iex> Faker.Util.sample_uniq(1, &Faker.Phone.EnUs.area_code/0)
-      ["825"]
-
+      ["508"]
       iex> Faker.Util.sample_uniq(0, &Faker.Internet.email/0)
       ** (FunctionClauseError) no function clause matching in Faker.Util.sample_uniq/3
   """
-  @spec sample_uniq(pos_integer, (() -> any), MapSet.t()) :: [any]
+  @spec sample_uniq(pos_integer, (-> any), MapSet.t()) :: [any]
   def sample_uniq(count, sampler, acc \\ MapSet.new())
       when is_integer(count) and count > 0 and is_function(sampler, 0) do
     case MapSet.size(acc) do
@@ -84,7 +92,7 @@ defmodule Faker.Util do
     Enum.map(0..(n - 1), &fun.(&1))
   end
 
-  @spec list(integer, (() -> any)) :: [any]
+  @spec list(integer, (-> any)) :: [any]
   def list(n, fun) when is_function(fun, 0) do
     Enum.map(0..(n - 1), fn _ -> fun.() end)
   end
@@ -103,7 +111,7 @@ defmodule Faker.Util do
       iex> Faker.Util.join(2, " or ", &Faker.Color.name/0)
       "Purple or White"
   """
-  @spec join(integer, binary, (() -> binary)) :: binary
+  @spec join(integer, binary, (-> binary)) :: binary
   def join(n, joiner \\ "", fun) do
     Enum.join(list(n, fun), joiner)
   end
@@ -216,7 +224,7 @@ defmodule Faker.Util do
   def cycle(cycle_pid) do
     Agent.get_and_update(cycle_pid, fn
       {[], items} ->
-        [h | t] = Enum.shuffle(items)
+        [h | t] = Faker.shuffle(items)
         {h, {t, items}}
 
       {[h | t], items} ->

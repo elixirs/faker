@@ -18,43 +18,44 @@ defmodule Faker.Pizza do
 
       iex> Faker.Pizza.pizzas()
       [
-        "14\\" Greek Maltija",
+        "14\\" Greek Fajita",
         "Large with Reindeer, Buffalo Chicken, Egg, Chorizo, and Clam",
-        "9\\" Capricciosa",
-        "9\\" Sicilian Style Frutti di mare"
+        "9\\" Kebab",
+        "9\\" Sicilian Style Buffalo Chicken"
       ]
       iex> Faker.Pizza.pizzas(2..3)
       [
-        "12\\" Fajita",
-        "Medium Fajita"
+        "12\\" Quattro Formaggio",
+        "Medium Pesto Chicken"
       ]
       iex> Faker.Pizza.pizzas(3..4)
       [
         "Large Gluten-Free Corn with Oysters, Bacon, and Steak",
-        "10\\" Flatbread Grilled Vegetarian",
-        "30\\" Thai Chicken",
+        "10\\" Flatbread Pesto Chicken",
+        "30\\" Funghi",
         "Small with Sauerkraut"
       ]
       iex> Faker.Pizza.pizzas(5)
       [
-        "Large Quattro Formaggio",
+        "Large Cheese",
         "Small Sweet Potato Crust with Mackerel, Jalapeños, Smoked Mozzarella, and Smoked Salmon",
         "30\\" with Pickled Ginger, Meatballs, Goat Cheese, Prosciutto, and Pineapple",
         "9\\" Detroit-style with Steak",
         "Family with Clam, Cherry Tomatoes, Salmon, and Chicken"
       ]
   """
-  @spec pizzas(Range.t()) :: list(String.t())
+  @spec pizzas(integer | Range.t()) :: list(String.t())
   def pizzas(range \\ 2..5)
 
-  def pizzas(first..last) do
-    pizzas(Faker.random_between(first, last))
-  end
-
-  @spec pizzas(integer) :: list(String.t())
-  def pizzas(num) do
+  def pizzas(num) when is_integer(num) do
     stream = Stream.repeatedly(&pizza/0)
     Enum.take(stream, num)
+  end
+
+  def pizzas(range) do
+    range
+    |> Util.pick()
+    |> pizzas()
   end
 
   @doc """
@@ -67,9 +68,9 @@ defmodule Faker.Pizza do
       iex> Faker.Pizza.pizza()
       "Medium New York Style with Clam and Reindeer"
       iex> Faker.Pizza.pizza()
-      "9\\" Supreme"
+      "9\\" Africana"
       iex> Faker.Pizza.pizza()
-      "16\\" Shrimp Club"
+      "16\\" Meat Lovers"
   """
   @spec pizza() :: String.t()
   def pizza, do: pizza(Faker.random_between(1, 30))
@@ -99,17 +100,18 @@ defmodule Faker.Pizza do
       iex> Faker.Pizza.toppings(2..3)
       ["Shellfish", "Smoked Salmon"]
   """
-  @spec toppings(Range.t()) :: list(String.t())
+  @spec toppings(integer | Range.t()) :: list(String.t())
   def toppings(range \\ 2..5)
 
-  def toppings(first..last) do
-    toppings(Faker.random_between(first, last))
-  end
-
-  @spec toppings(integer) :: list(String.t())
-  def toppings(num) do
+  def toppings(num) when is_integer(num) do
     stream = Stream.repeatedly(&topping/0)
     Enum.take(stream, num)
+  end
+
+  def toppings(range) do
+    range
+    |> Util.pick()
+    |> toppings()
   end
 
   defp toppings_sentence(num) do
@@ -448,11 +450,11 @@ defmodule Faker.Pizza do
   ## Examples
 
       iex> Faker.Pizza.combo()
+      "Hot & Spicy"
+      iex> Faker.Pizza.combo()
       "Breakfast"
       iex> Faker.Pizza.combo()
-      "Caprese"
-      iex> Faker.Pizza.combo()
-      "Mockba"
+      "Thai Chicken"
       iex> Faker.Pizza.combo()
       "Poutine"
   """
@@ -460,16 +462,15 @@ defmodule Faker.Pizza do
   sampler(:combo, [
     "Africana",
     "All Dressed",
-    "Bacon Cheeseburger ",
+    "Bacon Cheeseburger",
     "BBQ Chicken",
-    "Bianca ",
+    "Bianca",
     "Bolognese",
     "Breakfast",
     "Buffalo Chicken",
     "Canadian",
     "Caprese",
     "Capricciosa",
-    "Capricciosa ",
     "Cheese",
     "Chicken Pesto",
     "Ciao-ciao",
@@ -492,7 +493,7 @@ defmodule Faker.Pizza do
     "Margherita",
     "Meat Feast",
     "Meat Lovers",
-    "Meatball ",
+    "Meatball",
     "Mockba",
     "Onion & Gorgonzola",
     "Pepperoni & Mushroom",

@@ -10,13 +10,13 @@ defmodule Faker.Industry.Hy do
 
   ## Examples
 
-      iex> Faker.Industry.Hy.industry
+      iex> Faker.Industry.Hy.industry()
       "Հյուրընկալություն"
-      iex> Faker.Industry.Hy.industry
+      iex> Faker.Industry.Hy.industry()
       "Բժշկական Գործունեություն"
-      iex> Faker.Industry.Hy.industry
+      iex> Faker.Industry.Hy.industry()
       "Վենչուրային և Մասնավոր Կապիտալ"
-      iex> Faker.Industry.Hy.industry
+      iex> Faker.Industry.Hy.industry()
       "Էներգետիկա"
   """
   @spec industry() :: String.t()

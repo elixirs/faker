@@ -3,7 +3,7 @@ defmodule Faker.Address do
 
   alias Faker.Person
 
-  @geobase32 '0123456789bcdefghjkmnpqrstuvwxyz'
+  @geobase32 ~c"0123456789bcdefghjkmnpqrstuvwxyz"
 
   @moduledoc """
   Functions for generating addresses.
