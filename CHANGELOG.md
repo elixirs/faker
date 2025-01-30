@@ -9,6 +9,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 ## Unreleased
 
 ### Added
+- `Faker.Job.En` - [[@gabrielmiller](https://github.com/gabrielmiller)]
 
 - Test with Elixir 1.16 and 1.17 on CI [[@ypconstante](https://github.com/ypconstante)]
 - Test with OTP 26 and 27 on CI [[@ypconstante](https://github.com/ypconstante)]
