@@ -407,6 +407,10 @@ defmodule Faker.Lorem do
       "Sint deleniti consequatur et qui vitae et quibusdam et sit."
       iex> Faker.Lorem.sentence(2..3)
       "Cumque est?"
+      iex> Faker.Lorem.sentence(3)
+      "Beatae ex sunt."
+      iex> Faker.Lorem.sentence(5)
+      "Possimus soluta asperiores qui vitae."
   """
   @spec sentence(integer | Range.t()) :: String.t()
   def sentence(range \\ 4..10)
@@ -429,6 +433,12 @@ defmodule Faker.Lorem do
 
       iex> Faker.Lorem.sentence(7, "...")
       "Aliquam ut sint deleniti consequatur et qui..."
+      iex> Faker.Lorem.sentence(1, "?")
+      "Vitae?"
+      iex> Faker.Lorem.sentence(5, ".")
+      "Et quibusdam et sit aut."
+      iex> Faker.Lorem.sentence(3, ";")
+      "Expedita cumque est;"
   """
   @spec sentence(integer, binary) :: String.t()
   def sentence(num, mark) when is_integer(num) and is_binary(mark) do

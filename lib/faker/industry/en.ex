@@ -136,6 +136,12 @@ defmodule Faker.Industry.En do
 
       iex> Faker.Industry.En.sub_sector()
       "Electrical Components & Equipment"
+      iex> Faker.Industry.En.sub_sector()
+      "Publishing"
+      iex> Faker.Industry.En.sub_sector()
+      "Alternative Electricity"
+      iex> Faker.Industry.En.sub_sector()
+      "Forestry"
   """
   @spec sub_sector() :: String.t()
   sampler(:sub_sector, [

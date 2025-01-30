@@ -123,6 +123,12 @@ defmodule Faker.Util do
 
       iex> Faker.Util.digit()
       "0"
+      iex> Faker.Util.digit()
+      "1"
+      iex> Faker.Util.digit()
+      "5"
+      iex> Faker.Util.digit()
+      "4"
   """
   @spec digit() :: binary
   localize(:digit)
@@ -153,6 +159,14 @@ defmodule Faker.Util do
 
       iex> Faker.Util.letter()
       "E"
+      iex> Faker.Util.letter()
+      "L"
+      iex> Faker.Util.letter()
+      "R"
+      iex> Faker.Util.letter()
+      "C"
+      iex> Faker.Util.letter()
+      "e"
   """
   @spec letter() :: binary
   localize(:letter)
@@ -164,6 +178,12 @@ defmodule Faker.Util do
 
       iex> Faker.Util.lower_letter()
       "e"
+      iex> Faker.Util.lower_letter()
+      "l"
+      iex> Faker.Util.lower_letter()
+      "r"
+      iex> Faker.Util.lower_letter()
+      "c"
   """
   @spec lower_letter() :: binary
   localize(:lower_letter)
@@ -175,6 +195,12 @@ defmodule Faker.Util do
 
       iex> Faker.Util.upper_letter()
       "E"
+      iex> Faker.Util.upper_letter()
+      "L"
+      iex> Faker.Util.upper_letter()
+      "R"
+      iex> Faker.Util.upper_letter()
+      "C"
   """
   @spec upper_letter() :: binary
   localize(:upper_letter)
