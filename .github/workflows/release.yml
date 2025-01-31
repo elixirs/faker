@@ -13,7 +13,8 @@ jobs:
   test:
     uses: ./.github/workflows/ci.yaml
     permissions:
-      contents: write
+      contents: read
+      security-events: write
 
   release:
     needs: test
