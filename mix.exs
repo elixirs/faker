@@ -14,6 +14,8 @@ defmodule Faker.Mixfile do
       name: "Faker",
       deps: deps(),
       docs: docs(),
+      source_url: @source_url,
+      homepage_url: @source_url,
       preferred_cli_env: [
         "test.watch": :test
       ],
@@ -63,11 +65,11 @@ defmodule Faker.Mixfile do
   end
 
   defp package do
-    %{
+    [
       maintainers: ["Anthony Smith", "Igor Kapkov", "Toby Hinloopen", "Vitor Oliveira"],
       files: ["lib", "mix.exs", "mix.lock", "README.md", "LICENSE", "CHANGELOG.md"],
       licenses: ["MIT"],
       links: %{"GitHub" => @source_url}
-    }
+    ]
   end
 end

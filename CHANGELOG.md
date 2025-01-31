@@ -1,4 +1,4 @@
-# Change Log
+# Changelog
 
 All notable changes to this project will be documented in this file.
 
@@ -66,6 +66,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 ### Deprecated
 
 ### Removed
+
 - Travis CI for CI workflow [[@anthonator](https://github.com/anthonator)]
 
 ### Fixed
@@ -73,6 +74,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 - `Faker.Team` `creature/0` and `name/0` documentation examples fixed [[@yuriploc](https://github.com/yuriploc)]
 - Fix bidirectional formatting [[@MichalDolata](https://github.com/MichalDolata)]
 - Extra split for Virgin Islands in the country sampler [[intercaetera](https://github.com/intercaetera)]
+
 ### Security
 
 ## 0.16.0
@@ -147,6 +149,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 - `Faker.Phone.PtBr`[[@netond](https://github.com/netond)]
 
 ### Changed
+
 - Fix `Faker.Code.Iban.iban` and `Faker.Gov.It.fiscal_id` doctests [[@vbrazo](https://github.com/vbrazo)]
 - `Faker.Address.Es` [[@emig](https://github.com/emig)]
 - Set minimum Elixir version to 1.6
@@ -165,6 +168,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 - Elixir 1.4 and 1.5 support
 
 ### Fixed
+
 - `Faker.Util.upper_letter/0` documentation examples [[@michaelfich](https://github.com/michaelfich)]
 
 ### Security
