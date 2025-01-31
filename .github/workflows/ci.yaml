@@ -7,6 +7,9 @@ on:
 jobs:
   credo:
     runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+      security-events: write
     steps:
       - uses: actions/checkout@v4.2.2
       - uses: actions/cache@v4.2.0
