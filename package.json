@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "clean": "rm -rf _build deps node_modules erl_crash.dump .elixir_ls"
+  },
   "devDependencies": {
     "@semantic-release/changelog": "6.0.3",
     "@semantic-release/commit-analyzer": "13.0.1",
