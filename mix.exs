@@ -31,7 +31,8 @@ defmodule Faker.Mixfile do
 
   def application do
     [
-      applications: [:crypto],
+      # mod: {Faker.Application, []},
+      extra_applications: [:crypto, :makeup],
       env: env()
     ]
   end
