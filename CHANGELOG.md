@@ -1,4 +1,23 @@
-# Change Log
+# Changelog
+
+## [0.19.0-alpha.1](https://github.com/elixirs/faker/compare/v0.18.0...v0.19.0-alpha.1) (2025-02-01)
+
+### Features
+
+* add release automation ([#581](https://github.com/elixirs/faker/issues/581)) ([0d08ed2](https://github.com/elixirs/faker/commit/0d08ed231c742b247e692f0b9a3773a4ce2e172b))
+
+### Bug Fixes
+
+* **deps:** add missing @semantic-release/exec ([#584](https://github.com/elixirs/faker/issues/584)) ([bfea5c4](https://github.com/elixirs/faker/commit/bfea5c430bb518e04fd1d508266ccb2c72c07cfd))
+* **ci:** add workflow_call ([#586](https://github.com/elixirs/faker/issues/586)) ([c25f43e](https://github.com/elixirs/faker/commit/c25f43efa234d349a6adab22e60df58fcaf61db1))
+* **ci:** allow write ([#590](https://github.com/elixirs/faker/issues/590)) ([d49419a](https://github.com/elixirs/faker/commit/d49419acdb81228ce0a5cfdfa8120fa427a892ad))
+* docs generation ([#594](https://github.com/elixirs/faker/issues/594)) ([572dfb4](https://github.com/elixirs/faker/commit/572dfb4060a7d2a266da2edc3bde9111a8bd6c66))
+* elixir 17 & 18 compatibility ([#565](https://github.com/elixirs/faker/issues/565)) ([f3d4808](https://github.com/elixirs/faker/commit/f3d480885b12fba632ff21cb3f3b74845c362cb4))
+* elixir deprecations ([#571](https://github.com/elixirs/faker/issues/571)) ([b7e4af0](https://github.com/elixirs/faker/commit/b7e4af033b3d5e1630cf642af96c5d7c03100c6f))
+* makeup packages ([#592](https://github.com/elixirs/faker/issues/592)) ([3f8cbc1](https://github.com/elixirs/faker/commit/3f8cbc143184344d09ef53e1740eff0c49379181))
+* **ci:** permissions ([#591](https://github.com/elixirs/faker/issues/591)) ([d78c8f1](https://github.com/elixirs/faker/commit/d78c8f1abf683cf9b36908338b20e7dd064fe330))
+* remove nil option for Airports IATA ([#492](https://github.com/elixirs/faker/issues/492)) ([59951ec](https://github.com/elixirs/faker/commit/59951ec3a72babae936fff22883b5e821971b8b6))
+* **ci:** typo in workflow path ([#585](https://github.com/elixirs/faker/issues/585)) ([8ed49eb](https://github.com/elixirs/faker/commit/8ed49eba4096eac5b12b6913e4775cb2f69785c4))
 
 All notable changes to this project will be documented in this file.
 
@@ -56,6 +75,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 - `Faker.Aws.PtBr.region_name/0` [[@f-francine](https://github.com/f-francine)]
 - `Faker.Fruit.PtBr` [[@f-francine](https://github.com/f-francine)]
 - `Faker.Commerce.PtBr` [[@f-francine](https://github.com/f-francine)]
+- `Faker.Gov.PtBr.cpf/0` [[@rohlacanna](https://github.com/rohlacanna)]
 
 ### Changed
 
@@ -66,6 +86,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 ### Deprecated
 
 ### Removed
+
 - Travis CI for CI workflow [[@anthonator](https://github.com/anthonator)]
 
 ### Fixed
@@ -73,6 +94,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 - `Faker.Team` `creature/0` and `name/0` documentation examples fixed [[@yuriploc](https://github.com/yuriploc)]
 - Fix bidirectional formatting [[@MichalDolata](https://github.com/MichalDolata)]
 - Extra split for Virgin Islands in the country sampler [[intercaetera](https://github.com/intercaetera)]
+
 ### Security
 
 ## 0.16.0
@@ -147,6 +169,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 - `Faker.Phone.PtBr`[[@netond](https://github.com/netond)]
 
 ### Changed
+
 - Fix `Faker.Code.Iban.iban` and `Faker.Gov.It.fiscal_id` doctests [[@vbrazo](https://github.com/vbrazo)]
 - `Faker.Address.Es` [[@emig](https://github.com/emig)]
 - Set minimum Elixir version to 1.6
@@ -165,6 +188,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 - Elixir 1.4 and 1.5 support
 
 ### Fixed
+
 - `Faker.Util.upper_letter/0` documentation examples [[@michaelfich](https://github.com/michaelfich)]
 
 ### Security

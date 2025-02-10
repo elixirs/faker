@@ -1,0 +1,70 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - master
+      - dev
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    uses: ./.github/workflows/ci.yaml
+    permissions:
+      contents: read
+      security-events: write
+
+  release:
+    needs: test
+
+    runs-on: ubuntu-24.04
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4.2.2
+        with:
+          persist-credentials: false
+
+      - name: Set up Elixir
+        id: setup-beam
+        uses: erlef/setup-beam@v1.18.2
+        with:
+          version-type: strict
+          version-file: .tool-versions
+
+      - name: Restore dependencies cache
+        uses: actions/cache@v4.2.0
+        env:
+          cache-key: deps
+        with:
+          key: ${{ env.cache-key }}-${{ runner.os }}-${{ steps.setup-beam.outputs.otp-version }}-${{ steps.setup-beam.outputs.elixir-version }}-${{ hashFiles('**/mix.lock') }}-git-${{ github.sha }}
+          restore-keys: |
+            ${{ env.cache-key }}-${{ runner.os }}-${{ steps.setup-beam.outputs.otp-version }}-${{ steps.setup-beam.outputs.elixir-version }}-${{ hashFiles('**/mix.lock') }}
+            ${{ env.cache-key }}-${{ runner.os }}-${{ steps.setup-beam.outputs.otp-version }}-${{ steps.setup-beam.outputs.elixir-version }}
+          path: |
+            deps
+            _build
+
+      - name: Install dependencies
+        run: |
+          mix local.hex --force
+          mix do deps.get, deps.compile
+
+      - name: Use Node.js LTS
+        uses: actions/setup-node@v4.2.0
+        with:
+          node-version-file: ".tool-versions"
+
+      - name: Install packages
+        run: npm ci
+
+      - name: Audit npm signatures
+        run: npm audit signatures
+
+      - name: Run Semantic Release
+        run: npx semantic-release
+        env:
+          GITHUB_TOKEN: ${{ secrets.CI_GITHUB_TOKEN }}
+          HEX_API_KEY: ${{ secrets.HEX_API_KEY }}
