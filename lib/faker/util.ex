@@ -87,13 +87,17 @@ defmodule Faker.Util do
       iex> Faker.Util.list(3, &(to_string(&1)))
       ["0", "1", "2"]
   """
-  @spec list(integer, (integer -> any)) :: [any]
-  def list(n, fun) when is_function(fun, 1) do
+  @spec list(non_neg_integer, (integer -> any)) :: [any]
+  def list(0, _) do
+    []
+  end
+
+  def list(n, fun) when is_function(fun, 1) and n > 0 do
     Enum.map(0..(n - 1), &fun.(&1))
   end
 
-  @spec list(integer, (-> any)) :: [any]
-  def list(n, fun) when is_function(fun, 0) do
+  @spec list(non_neg_integer, (-> any)) :: [any]
+  def list(n, fun) when is_function(fun, 0) and n > 0 do
     Enum.map(0..(n - 1), fn _ -> fun.() end)
   end
 
