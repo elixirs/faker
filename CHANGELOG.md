@@ -15,6 +15,9 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 - `Faker.Person.Nl` [[@MichaelVanDenBerg](https://github.com/MichaelVanDenBerg)]
 - `Faker.Phone.Nl` [[@MichaelVanDenBerg](https://github.com/MichaelVanDenBerg)]
 
+- Test with Elixir 1.16 and 1.17 on CI [[@ypconstante](https://github.com/ypconstante)]
+- Test with OTP 26 and 27 on CI [[@ypconstante](https://github.com/ypconstante)]
+
 ### Changed
 
 ### Deprecated
@@ -24,6 +27,7 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 ### Fixed
 
 - Fix compile and runtime warnings on Elixir 1.17 [[@ypconstante](https://github.com/ypconstante)]
+- `Faker.Internet.slug` and `Faker.Markdown.markdown/0` results won't change between Elixir versions [[@ypconstante](https://github.com/ypconstante)]
 
 ### Security
 

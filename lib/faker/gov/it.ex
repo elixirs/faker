@@ -13,13 +13,13 @@ defmodule Faker.Gov.It do
 
   ## Examples
 
-      iex> Faker.Gov.It.fiscal_id
+      iex> Faker.Gov.It.fiscal_id()
       "ELRCEA64C50A918F"
-      iex> Faker.Gov.It.fiscal_id
+      iex> Faker.Gov.It.fiscal_id()
       "ZSLNKH22M34H480J"
-      iex> Faker.Gov.It.fiscal_id
+      iex> Faker.Gov.It.fiscal_id()
       "OCPCVO90M50F353I"
-      iex> Faker.Gov.It.fiscal_id
+      iex> Faker.Gov.It.fiscal_id()
       "PQYRFX94R54C681K"
   """
   @spec fiscal_id() :: binary()

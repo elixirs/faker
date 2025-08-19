@@ -277,6 +277,7 @@ defmodule Faker.Vehicle.En do
   Returns a vehicle body style string
 
   ## Examples
+
       iex> Faker.Vehicle.En.body_style()
       "Minivan"
       iex> Faker.Vehicle.En.body_style()
@@ -306,6 +307,7 @@ defmodule Faker.Vehicle.En do
   Returns a vehicle drivetrain string
 
   ## Examples
+
       iex> Faker.Vehicle.En.drivetrain()
       "4x2/2-wheel drive"
       iex> Faker.Vehicle.En.drivetrain()
@@ -322,6 +324,7 @@ defmodule Faker.Vehicle.En do
   Returns a vehicle fuel type string
 
   ## Examples
+
       iex> Faker.Vehicle.En.fuel_type()
       "Ethanol"
       iex> Faker.Vehicle.En.fuel_type()
@@ -424,6 +427,7 @@ defmodule Faker.Vehicle.En do
   Returns a vehicle option string
 
   ## Examples
+
       iex> Faker.Vehicle.En.option()
       "Premium Sound"
       iex> Faker.Vehicle.En.option()
@@ -442,13 +446,14 @@ defmodule Faker.Vehicle.En do
   Returns a list of vehicle options()
 
   ## Examples
-      iex> Faker.Vehicle.En.options
+
+      iex> Faker.Vehicle.En.options()
       ["Power Steering", "A/C: Front", "Keyless Entry", "AM/FM Stereo", "Power Steering", "Antilock Brakes", "8-Track Player", "Leather Interior"]
-      iex> Faker.Vehicle.En.options
+      iex> Faker.Vehicle.En.options()
       ["MP3 (Multi Disc)", "A/C: Rear", "Fog Lights", "Power Windows", "Cruise Control", "Premium Sound", "A/C: Front"]
-      iex> Faker.Vehicle.En.options
+      iex> Faker.Vehicle.En.options()
       ["Tinted Glass", "MP3 (Single Disc)", "CD (Multi Disc)"]
-      iex> Faker.Vehicle.En.options
+      iex> Faker.Vehicle.En.options()
       ["Fog Lights", "Rear Window Wiper", "MP3 (Multi Disc)", "Navigation", "Airbag: Side", "Rear Window Defroster", "Premium Sound"]
   """
   @spec options() :: list(String.t())
@@ -460,6 +465,7 @@ defmodule Faker.Vehicle.En do
   Returns a list of vehicle options of the given length
 
   ## Examples
+
       iex> Faker.Vehicle.En.options(3)
       ["Premium Sound", "Power Steering", "A/C: Front"]
       iex> Faker.Vehicle.En.options(3)
@@ -478,6 +484,7 @@ defmodule Faker.Vehicle.En do
   Reterns a vehicle standard option string
 
   ## Examples
+
       iex> Faker.Vehicle.En.standard_spec()
       "Tire pressure monitoring system (TPMS)"
       iex> Faker.Vehicle.En.standard_spec()
@@ -496,6 +503,7 @@ defmodule Faker.Vehicle.En do
   Returns a list of vehicle standard specs
 
   ## Examples
+
       iex> Faker.Vehicle.En.standard_specs()
       ["20\\" x 9.0\\" front & 20\\" x 10.0\\" rear aluminum wheels", "Deluxe insulation group", "Torsion beam rear suspension w/stabilizer bar", "High performance suspension", "200mm front axle", "Traveler/mini trip computer", "P235/50R18 all-season tires", "Front door tinted glass"]
       iex> Faker.Vehicle.En.standard_specs()
@@ -514,6 +522,7 @@ defmodule Faker.Vehicle.En do
   Returns a list of vehicle standard specs of the given length
 
   ## Examples
+
       iex> Faker.Vehicle.En.standard_specs(3)
       ["Tire pressure monitoring system (TPMS)", "20\\" x 9.0\\" front & 20\\" x 10.0\\" rear aluminum wheels", "Deluxe insulation group"]
       iex> Faker.Vehicle.En.standard_specs(3)
@@ -532,6 +541,7 @@ defmodule Faker.Vehicle.En do
   Returns a vehicle transmission string
 
   ## Examples
+
       iex> Faker.Vehicle.En.transmission()
       "CVT"
       iex> Faker.Vehicle.En.transmission()

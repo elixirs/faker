@@ -6,22 +6,27 @@ on:
 
 jobs:
   credo:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4.2.0
-      - uses: actions/cache@v4.1.0
+      - uses: actions/checkout@v4.2.2
+      - uses: actions/cache@v4.2.0
         with:
           key: ${{ github.job }}-${{ hashFiles('mix.lock') }}-1
           path: _build
       - uses: erlef/setup-beam@v1.18.2
         with:
-          elixir-version: 1.15.x
+          elixir-version: 1.17.3
           otp-version: 26.x
       - run: mix deps.get
-      - run: mix credo --strict --format=sarif
+      - run: mix compile
+      - run: mix credo suggest --format=sarif --mute-exit-status > credo.sarif
+      - name: Upload SARIF
+        uses: github/codeql-action/upload-sarif@v3.28.8
+        with:
+          sarif_file: credo.sarif
 
   # dialyzer:
-  #   runs-on: ${{ matrix.os || 'ubuntu-20.04' }}
+  #   runs-on: ${{ matrix.os || 'ubuntu-24.04' }}
 
   #   steps:
   #     - uses: actions/checkout@v4.1.0
@@ -53,10 +58,10 @@ jobs:
   #     - run: mix dialyzer --format github
 
   test:
-    runs-on: ${{ matrix.os || 'ubuntu-20.04' }}
+    runs-on: ${{ matrix.os || 'ubuntu-24.04' }}
     steps:
-      - uses: actions/checkout@v4.2.0
-      - uses: actions/cache@v4.1.0
+      - uses: actions/checkout@v4.2.2
+      - uses: actions/cache@v4.2.0
         with:
           key: ${{ github.job }}-${{ matrix.elixir }}-${{ matrix.otp }}-${{ hashFiles('mix.lock') }}-1
           path: _build
@@ -70,50 +75,9 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - elixir: 1.11.x
-            otp: 21.x
-            os: ubuntu-20.04
-          - elixir: 1.11.x
-            otp: 22.x
-            os: ubuntu-20.04
-          - elixir: 1.11.x
-            otp: 23.x
-            os: ubuntu-20.04
-          - elixir: 1.12.x
-            otp: 22.x
-            os: ubuntu-20.04
-          - elixir: 1.12.x
-            otp: 23.x
-            os: ubuntu-20.04
-          - elixir: 1.12.x
-            otp: 24.x
-            os: ubuntu-20.04
-          - elixir: 1.13.x
-            otp: 22.x
-            os: ubuntu-20.04
-          - elixir: 1.13.x
-            otp: 23.x
-            os: ubuntu-20.04
-          - elixir: 1.13.x
-            otp: 24.x
-            os: ubuntu-20.04
-          - elixir: 1.14.x
-            otp: 23.x
-            os: ubuntu-20.04
-          - elixir: 1.14.x
-            otp: 24.x
-            os: ubuntu-20.04
-          - elixir: 1.14.x
-            otp: 25.x
-            os: ubuntu-20.04
-          - elixir: 1.15.x
-            otp: 24.x
-            os: ubuntu-20.04
-          - elixir: 1.15.x
-            otp: 25.x
-            os: ubuntu-20.04
-          # Something changed in otp 26 for seed and single test started producing failures
-          # it does not affect functionality, only CI
-          # - elixir: 1.15.x
-          #   otp: 26.x
-          #   os: ubuntu-20.04
+          - elixir: 1.16.x
+            otp: 26.x
+          - elixir: 1.17.x
+            otp: 27.x
+          - elixir: 1.18.x
+            otp: 27.x

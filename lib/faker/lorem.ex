@@ -286,12 +286,15 @@ defmodule Faker.Lorem do
 
       iex> Faker.Lorem.characters()
       ~c'ppkQqaIfGqxsjFoNITNnu6eXyJicLJNth88PrhGDhwp4LNQMt5pCFh7XGEZUiBOjqwcnSUTH94vu8a9XKUwNAs48lHzPITbFXSfTS0pHfBSmHkbj9kOsd7qRuGeXKTgCgI1idI3uwENwTqc'
+
       iex> Faker.Lorem.characters(3..5)
-      ~c'EFbv'
+      ~c'ppk'
+
       iex> Faker.Lorem.characters(2)
-      ~c'vx'
+      ~c'Ap'
+
       iex> Faker.Lorem.characters(7)
-      ~c'jycADSd'
+      ~c'AppkQqa'
   """
   @spec characters(integer | Range.t()) :: [char]
   def characters(range_or_length \\ 15..255)
@@ -353,13 +356,25 @@ defmodule Faker.Lorem do
   ## Examples
 
       iex> Faker.Lorem.paragraphs()
-      ["Consequatur et qui vitae? Et sit aut expedita cumque est necessitatibus beatae ex. Possimus soluta asperiores qui vitae.", "Et vitae vitae ut quisquam corporis quisquam ab harum ipsa. Numquam maxime ut aut inventore eius rerum beatae. Qui officia vel quaerat expedita. Perspiciatis rerum nam repellendus inventore nihil. Sequi ducimus qui voluptates magni quisquam sed odio.", "Error non impedit tempora minus voluptatem qui fugit. Ab consectetur harum earum possimus. Provident quisquam modi accusantium eligendi numquam illo voluptas. Est non id quibusdam qui omnis?", "Dicta dolores at ut delectus magni atque eos beatae nulla. Laudantium qui dolorem pariatur voluptatibus sed et enim?"]
+      [
+        "Consequatur et qui vitae? Et sit aut expedita cumque est necessitatibus beatae ex. Possimus soluta asperiores qui vitae.",
+        "Et vitae vitae ut quisquam corporis quisquam ab harum ipsa. Numquam maxime ut aut inventore eius rerum beatae. Qui officia vel quaerat expedita. Perspiciatis rerum nam repellendus inventore nihil. Sequi ducimus qui voluptates magni quisquam sed odio.",
+        "Error non impedit tempora minus voluptatem qui fugit. Ab consectetur harum earum possimus. Provident quisquam modi accusantium eligendi numquam illo voluptas. Est non id quibusdam qui omnis?",
+        "Dicta dolores at ut delectus magni atque eos beatae nulla. Laudantium qui dolorem pariatur voluptatibus sed et enim?"
+      ]
       iex> Faker.Lorem.paragraphs(2..3)
-      ["Voluptate reiciendis repellat et praesentium quia sed nemo. Vero repellat cumque nihil similique repudiandae corrupti rerum? Accusamus suscipit perspiciatis cum et sint dolore et ut. Eos reprehenderit cupiditate omnis et doloremque omnis.", "Quo et est culpa eum ex et veniam aut aut! Labore fuga tenetur alias est provident?", "Illo consequatur maiores illum et quia culpa sunt! Cumque porro ut eum porro est id maxime dolorum animi. Deserunt ipsa consequuntur eveniet asperiores. Quia numquam voluptas vitae repellat tempore."]
+      [
+        "Voluptate reiciendis repellat et praesentium quia sed nemo. Vero repellat cumque nihil similique repudiandae corrupti rerum? Accusamus suscipit perspiciatis cum et sint dolore et ut. Eos reprehenderit cupiditate omnis et doloremque omnis.",
+        "Quo et est culpa eum ex et veniam aut aut! Labore fuga tenetur alias est provident?",
+        "Illo consequatur maiores illum et quia culpa sunt! Cumque porro ut eum porro est id maxime dolorum animi. Deserunt ipsa consequuntur eveniet asperiores. Quia numquam voluptas vitae repellat tempore."
+      ]
       iex> Faker.Lorem.paragraphs(1)
       ["Voluptas harum modi omnis quam dolor a aliquam officiis. Neque voluptas consequatur sed cupiditate dolorum pariatur et."]
       iex> Faker.Lorem.paragraphs(2)
-      ["Voluptatem natus amet eius eos non dolorum quaerat dolores pariatur. Aliquam rerum ab voluptatem exercitationem nobis enim delectus tempore eos. Ex enim dolore ut consequuntur eaque expedita dicta eius totam. A eveniet ab magni rerum enim consequatur.", "Nihil laudantium ea veniam necessitatibus qui. Minus ad omnis quaerat quidem impedit sint. Id ut repellat qui repudiandae!"]
+      [
+        "Voluptatem natus amet eius eos non dolorum quaerat dolores pariatur. Aliquam rerum ab voluptatem exercitationem nobis enim delectus tempore eos. Ex enim dolore ut consequuntur eaque expedita dicta eius totam. A eveniet ab magni rerum enim consequatur.",
+        "Nihil laudantium ea veniam necessitatibus qui. Minus ad omnis quaerat quidem impedit sint. Id ut repellat qui repudiandae!"
+      ]
   """
   @spec paragraphs(integer | Range.t()) :: list(String.t())
   def paragraphs(range \\ 2..5)
@@ -447,13 +462,32 @@ defmodule Faker.Lorem do
   ## Examples
 
       iex> Faker.Lorem.sentences()
-      ["Deleniti consequatur et qui vitae et.", "Sit aut expedita cumque est necessitatibus beatae ex sunt!", "Soluta asperiores qui vitae animi et id et vitae.", "Quisquam corporis quisquam ab harum!"]
+      [
+        "Deleniti consequatur et qui vitae et.",
+        "Sit aut expedita cumque est necessitatibus beatae ex sunt!",
+        "Soluta asperiores qui vitae animi et id et vitae.",
+        "Quisquam corporis quisquam ab harum!"
+      ]
       iex> Faker.Lorem.sentences(3..4)
-      ["Numquam maxime ut aut inventore eius rerum beatae.", "Qui officia vel quaerat expedita.", "Perspiciatis rerum nam repellendus inventore nihil.", "Sequi ducimus qui voluptates magni quisquam sed odio."]
+      [
+        "Numquam maxime ut aut inventore eius rerum beatae.",
+        "Qui officia vel quaerat expedita.",
+        "Perspiciatis rerum nam repellendus inventore nihil.",
+        "Sequi ducimus qui voluptates magni quisquam sed odio."
+      ]
       iex> Faker.Lorem.sentences(4)
-      ["Vel error non impedit tempora minus.", "Fugit cupiditate fuga ab consectetur harum earum possimus totam.", "Quisquam modi accusantium eligendi numquam.", "Quod blanditiis est non id quibusdam qui omnis alias!"]
+      [
+        "Vel error non impedit tempora minus.",
+        "Fugit cupiditate fuga ab consectetur harum earum possimus totam.",
+        "Quisquam modi accusantium eligendi numquam.",
+        "Quod blanditiis est non id quibusdam qui omnis alias!"
+      ]
       iex> Faker.Lorem.sentences(3)
-      ["Dicta dolores at ut delectus magni atque eos beatae nulla.", "Laudantium qui dolorem pariatur voluptatibus sed et enim?", "Minima laudantium voluptate reiciendis repellat."]
+      [
+        "Dicta dolores at ut delectus magni atque eos beatae nulla.",
+        "Laudantium qui dolorem pariatur voluptatibus sed et enim?",
+        "Minima laudantium voluptate reiciendis repellat."
+      ]
   """
   @spec sentences(integer | Range.t()) :: [String.t()]
   def sentences(range \\ 2..5)

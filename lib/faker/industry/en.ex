@@ -10,13 +10,13 @@ defmodule Faker.Industry.En do
 
   ## Examples
 
-      iex> Faker.Industry.En.industry
+      iex> Faker.Industry.En.industry()
       "Oil & Gas"
-      iex> Faker.Industry.En.industry
+      iex> Faker.Industry.En.industry()
       "Basic Materials"
-      iex> Faker.Industry.En.industry
+      iex> Faker.Industry.En.industry()
       "Consumer Services"
-      iex> Faker.Industry.En.industry
+      iex> Faker.Industry.En.industry()
       "Health Care"
   """
   @spec industry() :: String.t()
@@ -38,13 +38,13 @@ defmodule Faker.Industry.En do
 
   ## Examples
 
-      iex> Faker.Industry.En.super_sector
+      iex> Faker.Industry.En.super_sector()
       "Automobiles & Parts"
-      iex> Faker.Industry.En.super_sector
+      iex> Faker.Industry.En.super_sector()
       "Banks"
-      iex> Faker.Industry.En.super_sector
+      iex> Faker.Industry.En.super_sector()
       "Automobiles & Parts"
-      iex> Faker.Industry.En.super_sector
+      iex> Faker.Industry.En.super_sector()
       "Health Care"
   """
   @spec super_sector() :: String.t()
@@ -75,13 +75,13 @@ defmodule Faker.Industry.En do
 
   ## Examples
 
-      iex> Faker.Industry.En.sector
+      iex> Faker.Industry.En.sector()
       "Food & Drug Retailers"
-      iex> Faker.Industry.En.sector
+      iex> Faker.Industry.En.sector()
       "Banks"
-      iex> Faker.Industry.En.sector
+      iex> Faker.Industry.En.sector()
       "Software & Computer Services"
-      iex> Faker.Industry.En.sector
+      iex> Faker.Industry.En.sector()
       "Media"
   """
   @spec sector() :: String.t()

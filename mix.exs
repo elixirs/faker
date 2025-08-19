@@ -14,6 +14,9 @@ defmodule Faker.Mixfile do
       name: "Faker",
       deps: deps(),
       docs: docs(),
+      preferred_cli_env: [
+        "test.watch": :test
+      ],
       dialyzer: [
         flags: [
           :error_handling,
@@ -41,10 +44,11 @@ defmodule Faker.Mixfile do
 
   defp deps do
     [
-      {:ex_doc, "== 0.33.0", only: :dev, runtime: false},
-      {:earmark, "1.4.46", only: :dev, runtime: false},
-      {:credo, "== 1.7.5", only: [:dev, :test], runtime: false},
-      {:dialyxir, "== 1.4.3", only: [:dev], runtime: false}
+      {:ex_doc, "== 0.36.1", only: :dev, runtime: false},
+      {:earmark, "== 1.4.47", only: :dev, runtime: false},
+      {:credo, "== 1.7.11", only: [:dev, :test], runtime: false},
+      {:dialyxir, "== 1.4.5", only: [:dev], runtime: false},
+      {:mix_test_watch, "~> 1.0", only: [:dev, :test], runtime: false}
     ]
   end
 

@@ -8,13 +8,13 @@ defmodule Faker.Fruit.En do
   @doc """
   Returns a fruit.
   ## Examples
-      iex> Faker.Fruit.En.fruit
+      iex> Faker.Fruit.En.fruit()
       "Kiwano"
-      iex> Faker.Fruit.En.fruit
+      iex> Faker.Fruit.En.fruit()
       "Sugarcane"
-      iex> Faker.Fruit.En.fruit
+      iex> Faker.Fruit.En.fruit()
       "Pineapple"
-      iex> Faker.Fruit.En.fruit
+      iex> Faker.Fruit.En.fruit()
       "Lemon"
   """
   @spec fruit() :: String.t()

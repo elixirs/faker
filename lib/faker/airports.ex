@@ -1368,7 +1368,6 @@ defmodule Faker.Airports do
     "HTZ",
     "BGW",
     "TCU",
-    nil,
     "PZO",
     "MDI",
     "BRU",
