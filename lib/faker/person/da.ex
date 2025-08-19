@@ -1,4 +1,4 @@
-defmodule Faker.Person.Dk do
+defmodule Faker.Person.Da do
   import Faker, only: [sampler: 2]
 
   @moduledoc """
@@ -10,13 +10,13 @@ defmodule Faker.Person.Dk do
 
   ## Examples
 
-      iex> Faker.Person.Dk.name()
+      iex> Faker.Person.Da.name()
       "Jonathan Jacobsen"
-      iex> Faker.Person.Dk.name()
+      iex> Faker.Person.Da.name()
       "Victor Knudsen"
-      iex> Faker.Person.Dk.name()
+      iex> Faker.Person.Da.name()
       "Naja Henriksen"
-      iex> Faker.Person.Dk.name()
+      iex> Faker.Person.Da.name()
       "Josefine Poulsen"
   """
   @spec name() :: String.t()
@@ -27,13 +27,13 @@ defmodule Faker.Person.Dk do
 
   ## Examples
 
-      iex> Faker.Person.Dk.first_name()
+      iex> Faker.Person.Da.first_name()
       "Jonathan"
-      iex> Faker.Person.Dk.first_name()
+      iex> Faker.Person.Da.first_name()
       "Liam"
-      iex> Faker.Person.Dk.first_name()
+      iex> Faker.Person.Da.first_name()
       "Victor"
-      iex> Faker.Person.Dk.first_name()
+      iex> Faker.Person.Da.first_name()
       "Freja"
   """
   @spec first_name() :: String.t()
@@ -106,13 +106,13 @@ defmodule Faker.Person.Dk do
 
   ## Examples
 
-      iex> Faker.Person.Dk.last_name()
+      iex> Faker.Person.Da.last_name()
       "Thomsen"
-      iex> Faker.Person.Dk.last_name()
+      iex> Faker.Person.Da.last_name()
       "Jacobsen"
-      iex> Faker.Person.Dk.last_name()
+      iex> Faker.Person.Da.last_name()
       "Mikkelsen"
-      iex> Faker.Person.Dk.last_name()
+      iex> Faker.Person.Da.last_name()
       "Knudsen"
   """
   @spec last_name() :: String.t()
@@ -161,13 +161,13 @@ defmodule Faker.Person.Dk do
 
   ## Examples
 
-      iex> Faker.Person.Dk.title()
+      iex> Faker.Person.Da.title()
       "Konsulent"
-      iex> Faker.Person.Dk.title()
+      iex> Faker.Person.Da.title()
       "Manager"
-      iex> Faker.Person.Dk.title()
+      iex> Faker.Person.Da.title()
       "Projektleder"
-      iex> Faker.Person.Dk.title()
+      iex> Faker.Person.Da.title()
       "Leder"
   """
   @spec title() :: String.t()
@@ -195,13 +195,13 @@ defmodule Faker.Person.Dk do
 
   ## Examples
 
-      iex> Faker.Person.Dk.prefix()
+      iex> Faker.Person.Da.prefix()
       "Frk."
-      iex> Faker.Person.Dk.prefix()
+      iex> Faker.Person.Da.prefix()
       "Fru"
-      iex> Faker.Person.Dk.prefix()
+      iex> Faker.Person.Da.prefix()
       "Dr."
-      iex> Faker.Person.Dk.prefix()
+      iex> Faker.Person.Da.prefix()
       "Hr."
   """
   @spec prefix() :: String.t()

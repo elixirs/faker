@@ -4,5 +4,5 @@ defmodule Faker.CompanyTest do
   doctest Faker.Company
   doctest Faker.Company.En
   doctest Faker.Company.Hy
-  doctest Faker.Company.Dk
+  doctest Faker.Company.Da
 end

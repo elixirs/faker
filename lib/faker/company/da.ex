@@ -1,7 +1,7 @@
-defmodule Faker.Company.Dk do
+defmodule Faker.Company.Da do
   import Faker, only: [sampler: 2]
 
-  alias Faker.Person.Dk, as: Person
+  alias Faker.Person.Da, as: Person
 
   @moduledoc """
   Functions for company data in Danish
@@ -12,13 +12,13 @@ defmodule Faker.Company.Dk do
 
   ## Examples
 
-      iex> Faker.Company.Dk.bs()
+      iex> Faker.Company.Da.bs()
       "beskytte lokale løsninger"
-      iex> Faker.Company.Dk.bs()
+      iex> Faker.Company.Da.bs()
       "etablere skalerbare frameworks"
-      iex> Faker.Company.Dk.bs()
+      iex> Faker.Company.Da.bs()
       "verificere intelligente partnerskaber"
-      iex> Faker.Company.Dk.bs()
+      iex> Faker.Company.Da.bs()
       "synkronisere cloud-baserede interfaces"
   """
   @spec bs() :: String.t()
@@ -29,13 +29,13 @@ defmodule Faker.Company.Dk do
 
   ## Examples
 
-      iex> Faker.Company.Dk.bullshit()
+      iex> Faker.Company.Da.bullshit()
       "databaserede"
-      iex> Faker.Company.Dk.bullshit()
+      iex> Faker.Company.Da.bullshit()
       "lokale"
-      iex> Faker.Company.Dk.bullshit()
+      iex> Faker.Company.Da.bullshit()
       "innovative"
-      iex> Faker.Company.Dk.bullshit()
+      iex> Faker.Company.Da.bullshit()
       "AI-drevne"
   """
   @spec bullshit() :: String.t()
@@ -82,13 +82,13 @@ defmodule Faker.Company.Dk do
 
   ## Examples
 
-      iex> Faker.Company.Dk.bullshit_prefix()
+      iex> Faker.Company.Da.bullshit_prefix()
       "beskytte"
-      iex> Faker.Company.Dk.bullshit_prefix()
+      iex> Faker.Company.Da.bullshit_prefix()
       "sikre"
-      iex> Faker.Company.Dk.bullshit_prefix()
+      iex> Faker.Company.Da.bullshit_prefix()
       "accelerere"
-      iex> Faker.Company.Dk.bullshit_prefix()
+      iex> Faker.Company.Da.bullshit_prefix()
       "etablere"
   """
   @spec bullshit_prefix() :: String.t()
@@ -136,13 +136,13 @@ defmodule Faker.Company.Dk do
 
   ## Examples
 
-      iex> Faker.Company.Dk.bullshit_suffix()
+      iex> Faker.Company.Da.bullshit_suffix()
       "strategier"
-      iex> Faker.Company.Dk.bullshit_suffix()
+      iex> Faker.Company.Da.bullshit_suffix()
       "frameworks"
-      iex> Faker.Company.Dk.bullshit_suffix()
+      iex> Faker.Company.Da.bullshit_suffix()
       "løsninger"
-      iex> Faker.Company.Dk.bullshit_suffix()
+      iex> Faker.Company.Da.bullshit_suffix()
       "metodologier"
   """
   @spec bullshit_suffix() :: String.t()
@@ -189,13 +189,13 @@ defmodule Faker.Company.Dk do
 
   ## Examples
 
-      iex> Faker.Company.Dk.buzzword()
+      iex> Faker.Company.Da.buzzword()
       "fremtidssikret"
-      iex> Faker.Company.Dk.buzzword()
+      iex> Faker.Company.Da.buzzword()
       "digital"
-      iex> Faker.Company.Dk.buzzword()
+      iex> Faker.Company.Da.buzzword()
       "intuitive"
-      iex> Faker.Company.Dk.buzzword()
+      iex> Faker.Company.Da.buzzword()
       "personaliseret"
   """
   @spec buzzword() :: String.t()
@@ -247,13 +247,13 @@ defmodule Faker.Company.Dk do
 
   ## Examples
 
-      iex> Faker.Company.Dk.buzzword_prefix()
+      iex> Faker.Company.Da.buzzword_prefix()
       "Centraliseret"
-      iex> Faker.Company.Dk.buzzword_prefix()
+      iex> Faker.Company.Da.buzzword_prefix()
       "Kundefokuseret"
-      iex> Faker.Company.Dk.buzzword_prefix()
+      iex> Faker.Company.Da.buzzword_prefix()
       "Optimeret"
-      iex> Faker.Company.Dk.buzzword_prefix()
+      iex> Faker.Company.Da.buzzword_prefix()
       "Programmerbar"
   """
   @spec buzzword_prefix() :: String.t()
@@ -321,13 +321,13 @@ defmodule Faker.Company.Dk do
 
   ## Examples
 
-      iex> Faker.Company.Dk.buzzword_suffix()
+      iex> Faker.Company.Da.buzzword_suffix()
       "lokalt netværk"
-      iex> Faker.Company.Dk.buzzword_suffix()
+      iex> Faker.Company.Da.buzzword_suffix()
       "taskforce"
-      iex> Faker.Company.Dk.buzzword_suffix()
+      iex> Faker.Company.Da.buzzword_suffix()
       "projektion"
-      iex> Faker.Company.Dk.buzzword_suffix()
+      iex> Faker.Company.Da.buzzword_suffix()
       "arkitektur"
   """
   @spec buzzword_suffix() :: String.t()
@@ -435,13 +435,13 @@ defmodule Faker.Company.Dk do
 
   ## Examples
 
-      iex> Faker.Company.Dk.catch_phrase()
+      iex> Faker.Company.Da.catch_phrase()
       "Centraliseret digital projektion"
-      iex> Faker.Company.Dk.catch_phrase()
+      iex> Faker.Company.Da.catch_phrase()
       "Programmerbar social applikation"
-      iex> Faker.Company.Dk.catch_phrase()
+      iex> Faker.Company.Da.catch_phrase()
       "Overvåget intelligent definition"
-      iex> Faker.Company.Dk.catch_phrase()
+      iex> Faker.Company.Da.catch_phrase()
       "Distribueret stabil tidsramme"
   """
   @spec catch_phrase() :: String.t()
@@ -452,13 +452,13 @@ defmodule Faker.Company.Dk do
 
   ## Examples
 
-      iex> Faker.Company.Dk.name()
+      iex> Faker.Company.Da.name()
       "Jacobsen og Sønner"
-      iex> Faker.Company.Dk.name()
+      iex> Faker.Company.Da.name()
       "Kristensen, Henriksen og Jørgensen"
-      iex> Faker.Company.Dk.name()
+      iex> Faker.Company.Da.name()
       "Schmidt, Møller og Olsen"
-      iex> Faker.Company.Dk.name()
+      iex> Faker.Company.Da.name()
       "Sørensen-Hansen"
   """
   @spec name() :: String.t()
@@ -475,13 +475,13 @@ defmodule Faker.Company.Dk do
 
   ## Examples
 
-      iex> Faker.Company.Dk.suffix()
+      iex> Faker.Company.Da.suffix()
       "Holding"
-      iex> Faker.Company.Dk.suffix()
+      iex> Faker.Company.Da.suffix()
       "ApS"
-      iex> Faker.Company.Dk.suffix()
+      iex> Faker.Company.Da.suffix()
       "og Sønner"
-      iex> Faker.Company.Dk.suffix()
+      iex> Faker.Company.Da.suffix()
       "A/S"
   """
   @spec suffix() :: String.t()

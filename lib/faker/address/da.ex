@@ -1,4 +1,4 @@
-defmodule Faker.Address.Dk do
+defmodule Faker.Address.Da do
   import Faker, only: [sampler: 2]
 
   @moduledoc """
@@ -10,13 +10,13 @@ defmodule Faker.Address.Dk do
 
   ## Examples
 
-      iex> Faker.Address.Dk.building_number()
+      iex> Faker.Address.Da.building_number()
       "115"
-      iex> Faker.Address.Dk.building_number()
+      iex> Faker.Address.Da.building_number()
       "126"
-      iex> Faker.Address.Dk.building_number()
+      iex> Faker.Address.Da.building_number()
       "161"
-      iex> Faker.Address.Dk.building_number()
+      iex> Faker.Address.Da.building_number()
       "183"
   """
   @spec building_number() :: String.t()
@@ -31,13 +31,13 @@ defmodule Faker.Address.Dk do
 
   ## Examples
 
-      iex> Faker.Address.Dk.city()
+      iex> Faker.Address.Da.city()
       "Lillerød"
-      iex> Faker.Address.Dk.city()
+      iex> Faker.Address.Da.city()
       "Ringsted"
-      iex> Faker.Address.Dk.city()
+      iex> Faker.Address.Da.city()
       "Haderslev"
-      iex> Faker.Address.Dk.city()
+      iex> Faker.Address.Da.city()
       "Skanderborg"
   """
   @spec city() :: String.t()
@@ -98,13 +98,13 @@ defmodule Faker.Address.Dk do
 
   ## Examples
 
-      iex> Faker.Address.Dk.country()
+      iex> Faker.Address.Da.country()
       "Saudi-Arabien"
-      iex> Faker.Address.Dk.country()
+      iex> Faker.Address.Da.country()
       "Tyskland"
-      iex> Faker.Address.Dk.country()
+      iex> Faker.Address.Da.country()
       "Saudi-Arabien"
-      iex> Faker.Address.Dk.country()
+      iex> Faker.Address.Da.country()
       "Grønland"
   """
   @spec country() :: String.t()
@@ -191,13 +191,13 @@ defmodule Faker.Address.Dk do
 
   ## Examples
 
-      iex> Faker.Address.Dk.secondary_address()
+      iex> Faker.Address.Da.secondary_address()
       "1. sal tv"
-      iex> Faker.Address.Dk.secondary_address()
+      iex> Faker.Address.Da.secondary_address()
       "4. tv"
-      iex> Faker.Address.Dk.secondary_address()
+      iex> Faker.Address.Da.secondary_address()
       "6. sal th"
-      iex> Faker.Address.Dk.secondary_address()
+      iex> Faker.Address.Da.secondary_address()
       "st. th"
   """
   @spec secondary_address() :: String.t()
@@ -222,13 +222,13 @@ defmodule Faker.Address.Dk do
 
   ## Examples
 
-      iex> Faker.Address.Dk.street_name()
+      iex> Faker.Address.Da.street_name()
       "Marie Johansens Vej"
-      iex> Faker.Address.Dk.street_name()
+      iex> Faker.Address.Da.street_name()
       "Søndergade"
-      iex> Faker.Address.Dk.street_name()
+      iex> Faker.Address.Da.street_name()
       "Christians Alle"
-      iex> Faker.Address.Dk.street_name()
+      iex> Faker.Address.Da.street_name()
       "Hovedgaden"
   """
   @spec street_name() :: String.t()
@@ -290,13 +290,13 @@ defmodule Faker.Address.Dk do
 
   ## Examples
 
-      iex> Faker.Address.Dk.street_address()
+      iex> Faker.Address.Da.street_address()
       "Søndergade 14"
-      iex> Faker.Address.Dk.street_address()
+      iex> Faker.Address.Da.street_address()
       "Bredgade 161a"
-      iex> Faker.Address.Dk.street_address()
+      iex> Faker.Address.Da.street_address()
       "Kirketorv 197, 5. sal tv"
-      iex> Faker.Address.Dk.street_address()
+      iex> Faker.Address.Da.street_address()
       "Kirketorv 17c"
   """
   @spec street_address() :: String.t()
@@ -318,13 +318,13 @@ defmodule Faker.Address.Dk do
 
   ## Examples
 
-      iex> Faker.Address.Dk.zip_code()
+      iex> Faker.Address.Da.zip_code()
       "0154"
-      iex> Faker.Address.Dk.zip_code()
+      iex> Faker.Address.Da.zip_code()
       "2646"
-      iex> Faker.Address.Dk.zip_code()
+      iex> Faker.Address.Da.zip_code()
       "1083"
-      iex> Faker.Address.Dk.zip_code()
+      iex> Faker.Address.Da.zip_code()
       "2970"
   """
   @spec zip_code() :: String.t()

@@ -1,4 +1,4 @@
-defmodule Faker.Phone.Dk do
+defmodule Faker.Phone.Da do
   import Faker, only: [sampler: 2]
 
   @moduledoc """
@@ -16,13 +16,13 @@ defmodule Faker.Phone.Dk do
 
   ## Examples
 
-      iex> Faker.Phone.Dk.number()
+      iex> Faker.Phone.Da.number()
       "31 54 26 46"
-      iex> Faker.Phone.Dk.number()
+      iex> Faker.Phone.Da.number()
       "94 83 29 70"
-      iex> Faker.Phone.Dk.number()
+      iex> Faker.Phone.Da.number()
       "89 35 70 20"
-      iex> Faker.Phone.Dk.number()
+      iex> Faker.Phone.Da.number()
       "87 32 09 73"
   """
   @spec number() :: String.t()
@@ -39,13 +39,13 @@ defmodule Faker.Phone.Dk do
 
   ## Examples
 
-      iex> Faker.Phone.Dk.mobile_number()
+      iex> Faker.Phone.Da.mobile_number()
       "24 15 42 64"
-      iex> Faker.Phone.Dk.mobile_number()
+      iex> Faker.Phone.Da.mobile_number()
       "26 10 83 29"
-      iex> Faker.Phone.Dk.mobile_number()
+      iex> Faker.Phone.Da.mobile_number()
       "41 05 23 57"
-      iex> Faker.Phone.Dk.mobile_number()
+      iex> Faker.Phone.Da.mobile_number()
       "92 20 30 32"
   """
   @spec mobile_number() :: String.t()
@@ -60,13 +60,13 @@ defmodule Faker.Phone.Dk do
 
   ## Examples
 
-      iex> Faker.Phone.Dk.cell_number()
+      iex> Faker.Phone.Da.cell_number()
       "24 15 42 64"
-      iex> Faker.Phone.Dk.cell_number()
+      iex> Faker.Phone.Da.cell_number()
       "26 10 83 29"
-      iex> Faker.Phone.Dk.cell_number()
+      iex> Faker.Phone.Da.cell_number()
       "41 05 23 57"
-      iex> Faker.Phone.Dk.cell_number()
+      iex> Faker.Phone.Da.cell_number()
       "92 20 30 32"
   """
   @spec cell_number() :: String.t()
@@ -77,13 +77,13 @@ defmodule Faker.Phone.Dk do
 
   ## Examples
 
-      iex> Faker.Phone.Dk.landline_number()
+      iex> Faker.Phone.Da.landline_number()
       "94 15 42 64"
-      iex> Faker.Phone.Dk.landline_number()
+      iex> Faker.Phone.Da.landline_number()
       "43 10 83 29"
-      iex> Faker.Phone.Dk.landline_number()
+      iex> Faker.Phone.Da.landline_number()
       "62 05 23 57"
-      iex> Faker.Phone.Dk.landline_number()
+      iex> Faker.Phone.Da.landline_number()
       "43 20 30 32"
   """
   @spec landline_number() :: String.t()
@@ -98,13 +98,13 @@ defmodule Faker.Phone.Dk do
 
   ## Examples
 
-      iex> Faker.Phone.Dk.international_number()
+      iex> Faker.Phone.Da.international_number()
       "+45 31 54 26 46"
-      iex> Faker.Phone.Dk.international_number()
+      iex> Faker.Phone.Da.international_number()
       "+45 94 83 29 70"
-      iex> Faker.Phone.Dk.international_number()
+      iex> Faker.Phone.Da.international_number()
       "+45 89 35 70 20"
-      iex> Faker.Phone.Dk.international_number()
+      iex> Faker.Phone.Da.international_number()
       "+45 87 32 09 73"
   """
   @spec international_number() :: String.t()
