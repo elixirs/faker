@@ -1029,13 +1029,13 @@ defmodule Faker.Airports do
   ## Examples
 
       iex> Faker.Airports.iata()
-      "BFU"
+      "UBJ"
       iex> Faker.Airports.iata()
-      "FMM"
+      "CKB"
       iex> Faker.Airports.iata()
-      "YUS"
+      "JAL"
       iex> Faker.Airports.iata()
-      "YPH"
+      "PES"
   """
   @spec iata() :: String.t()
   sampler(:iata, [
