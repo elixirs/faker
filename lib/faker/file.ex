@@ -50,8 +50,8 @@ defmodule Faker.File do
   @spec file_extension() :: String.t()
   def file_extension do
     @categories_extensions
-    |> pick
-    |> file_extension
+    |> pick()
+    |> file_extension()
   end
 
   @doc """
@@ -132,8 +132,8 @@ defmodule Faker.File do
   @spec mime_type :: String.t()
   def mime_type do
     @categories_mimes
-    |> pick
-    |> mime_type
+    |> pick()
+    |> mime_type()
   end
 
   @doc """

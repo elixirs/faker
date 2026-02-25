@@ -36,7 +36,7 @@ defmodule Faker.DateTime do
   def forward(days) do
     sign = if days < 0, do: -1, else: 1
 
-    today = DateTime.utc_now() |> to_timestamp
+    today = DateTime.utc_now() |> to_timestamp()
     # add or subtract extra day to avoid returning today
     from = today + sign * @microseconds_per_day
     to = from + @microseconds_per_day * days
