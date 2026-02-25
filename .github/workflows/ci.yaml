@@ -1,12 +1,15 @@
 name: ci
 
 on:
-  push:
   pull_request:
+  workflow_call:
 
 jobs:
   credo:
     runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+      security-events: write
     steps:
       - uses: actions/checkout@v4.2.2
       - uses: actions/cache@v4.2.0
@@ -15,8 +18,8 @@ jobs:
           path: _build
       - uses: erlef/setup-beam@v1.18.2
         with:
-          elixir-version: 1.17.3
-          otp-version: 26.x
+          elixir-version: 1.19.x
+          otp-version: 28.x
       - run: mix deps.get
       - run: mix compile
       - run: mix credo suggest --format=sarif --mute-exit-status > credo.sarif
@@ -75,9 +78,9 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - elixir: 1.16.x
-            otp: 26.x
           - elixir: 1.17.x
             otp: 27.x
           - elixir: 1.18.x
             otp: 27.x
+          - elixir: 1.19.x
+            otp: 28.x

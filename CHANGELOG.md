@@ -1,28 +1,40 @@
-# Change Log
+# Changelog
 
 All notable changes to this project will be documented in this file.
 
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
+Changelog itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 
-## Unreleased
+## 0.19.0
 
 ### Added
+- `Faker.Address.NlBe` flemish address faker [[@ChristofVerhoeven](https://github.com/ChristofVerhoeven)]
+- `Faker.Person.NlBe` flemish person faker [[@ChristofVerhoeven](https://github.com/ChristofVerhoeven)]
+- `Faker.Address.Nl` [[@MichaelVanDenBerg](https://github.com/MichaelVanDenBerg)]
+- `Faker.Person.Nl` [[@MichaelVanDenBerg](https://github.com/MichaelVanDenBerg)]
+- `Faker.Phone.Nl` [[@MichaelVanDenBerg](https://github.com/MichaelVanDenBerg)]
 
 - Test with Elixir 1.16 and 1.17 on CI [[@ypconstante](https://github.com/ypconstante)]
 - Test with OTP 26 and 27 on CI [[@ypconstante](https://github.com/ypconstante)]
 
 ### Changed
 
+- dependency changes for elixir 1.19
+- mix format --migrate
+
 ### Deprecated
 
 ### Removed
+
+- renovate.json
 
 ### Fixed
 
 - Fix compile and runtime warnings on Elixir 1.17 [[@ypconstante](https://github.com/ypconstante)]
 - `Faker.Internet.slug` and `Faker.Markdown.markdown/0` results won't change between Elixir versions [[@ypconstante](https://github.com/ypconstante)]
+- warning fixes for elixir 1.19
+- fixes for tests
 
 ### Security
 
