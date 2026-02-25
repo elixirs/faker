@@ -35,7 +35,7 @@ defmodule Faker.Blockchain.Bitcoin do
     |> Enum.with_index()
     |> Enum.map(fn {v, i} -> round(v * :math.pow(256, i)) end)
     |> Enum.sum()
-    |> ret
+    |> ret()
     |> String.reverse()
     |> npad(hash)
   end

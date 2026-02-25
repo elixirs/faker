@@ -1,22 +1,19 @@
 defmodule Faker.Mixfile do
   use Mix.Project
 
-  @source_url "https://github.com/elixirs/faker"
-  @version "0.18.0"
+  @source_url "https://github.com/ChristofVerhoeven/faker"
+  @version "0.19.0"
 
   def project do
     [
       app: :faker,
       version: @version,
-      elixir: "~> 1.6",
+      elixir: "~> 1.17",
       description: "Faker is a pure Elixir library for generating fake data.",
       package: package(),
       name: "Faker",
       deps: deps(),
       docs: docs(),
-      preferred_cli_env: [
-        "test.watch": :test
-      ],
       dialyzer: [
         flags: [
           :error_handling,
@@ -44,11 +41,10 @@ defmodule Faker.Mixfile do
 
   defp deps do
     [
-      {:ex_doc, "== 0.36.1", only: :dev, runtime: false},
-      {:earmark, "== 1.4.47", only: :dev, runtime: false},
-      {:credo, "== 1.7.11", only: [:dev, :test], runtime: false},
-      {:dialyxir, "== 1.4.5", only: [:dev], runtime: false},
-      {:mix_test_watch, "~> 1.0", only: [:dev, :test], runtime: false}
+      {:ex_doc, "~> 0.40", only: :dev, runtime: false},
+      {:earmark, "~> 1.4", only: :dev, runtime: false},
+      {:credo, "~> 1.7", only: [:dev, :test], runtime: false},
+      {:dialyxir, "~> 1.4", only: [:dev], runtime: false}
     ]
   end
 
@@ -64,7 +60,7 @@ defmodule Faker.Mixfile do
 
   defp package do
     %{
-      maintainers: ["Anthony Smith", "Igor Kapkov", "Toby Hinloopen", "Vitor Oliveira"],
+      maintainers: ["Christof Verhoeven"],
       files: ["lib", "mix.exs", "mix.lock", "README.md", "LICENSE", "CHANGELOG.md"],
       licenses: ["MIT"],
       links: %{"GitHub" => @source_url}

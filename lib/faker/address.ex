@@ -144,7 +144,7 @@ defmodule Faker.Address do
 
   defp to_geobase32(bits) do
     chars = for <<c::5 <- bits>>, do: Enum.fetch!(@geobase32, c)
-    chars |> to_string
+    chars |> to_string()
   end
 
   defp lon_to_bits(lon, position) do

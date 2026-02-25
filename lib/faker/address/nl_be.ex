@@ -41,12 +41,12 @@ defmodule Faker.Address.NlBe do
       iex> Faker.Address.NlBe.city()
       "Bakkelbergen"
   """
-  def city() do
+  def city do
     start = city_prefix()
     "#{start}#{city_suffix(start)}"
   end
 
-  defp city_prefix() do
+  defp city_prefix do
     String.capitalize("#{consonant()}#{vowel()}#{culled_consonant()}")
   end
 
@@ -189,7 +189,7 @@ defmodule Faker.Address.NlBe do
   end
 
   # Avoiding composed last names here
-  defp last_name_for_street_names(), do: last_name_for_street_names(Faker.random_between(0, 3))
+  defp last_name_for_street_names, do: last_name_for_street_names(Faker.random_between(0, 3))
   defp last_name_for_street_names(0), do: "Van #{Person.last_name_after_van()}"
   defp last_name_for_street_names(1), do: "De #{Person.last_name_after_de()}"
   defp last_name_for_street_names(_), do: Person.last_name_standalone()
