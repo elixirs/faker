@@ -3,6 +3,18 @@ defmodule Faker.Random.Test do
 
   use Faker.Random
 
+  @doc """
+  Manually seeds the random number generator for the current process.
+
+  When ExUnit is running, the ExUnit seed is automatically used, so calling
+  this function is typically not necessary. Use it only if you need to override
+  the seed for a specific test.
+  """
+  @spec seed(integer()) :: true
+  def seed(seed) when is_integer(seed) do
+    :ets.insert(:seed_registry, {self(), {:pending, seed}})
+  end
+
   def random_between(left, right) do
     set_seed(:ets.lookup(:seed_registry, self()))
     Enum.random(left..right)
@@ -102,11 +114,29 @@ defmodule Faker.Random.Test do
 
   defp take_every_list([], _counter, _to_drop), do: []
 
+  defp set_seed([{_pid, {:pending, seed}}]) do
+    :rand.seed(:exsplus, {seed, seed, seed})
+    :ets.insert(:seed_registry, {self(), true})
+  end
+
   defp set_seed([]) do
-    :rand.seed(:exsplus, {1, 1, 1})
+    seed = configured_seed() || exunit_seed() || 1
+    :rand.seed(:exsplus, {seed, seed, seed})
     :ets.insert(:seed_registry, {self(), true})
   end
 
   defp set_seed(_) do
+  end
+
+  defp configured_seed do
+    Application.get_env(:faker, :seed)
+  end
+
+  defp exunit_seed do
+    if Code.ensure_loaded?(ExUnit) do
+      ExUnit.configuration()[:seed]
+    end
+  rescue
+    _ -> nil
   end
 end

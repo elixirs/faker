@@ -16,6 +16,7 @@ fake data.
   - [Quickstart](#quickstart)
   - [Requirements](#requirements)
   - [Usage](#usage)
+  - [Deterministic Testing](#deterministic-testing)
   - [Troubleshooting](#troubleshooting)
   - [Tools](#tools)
   - [Templating](#contributing)
@@ -59,6 +60,33 @@ fake data.
 ## Usage
 
 See [documentation](http://hexdocs.pm/faker/) and [usage examples](https://github.com/elixirs/faker/blob/master/USAGE.md).
+
+## Deterministic Testing
+
+Faker can produce deterministic output tied to ExUnit's seed, making test failures
+reproducible by re-running with the same `--seed` value.
+
+Add the following to `test/test_helper.exs`:
+
+```elixir
+:ets.new(:seed_registry, [:named_table, :public])
+Application.put_env(:faker, :random_module, Faker.Random.Test)
+ExUnit.start()
+```
+
+That's it. Faker will automatically pick up ExUnit's seed. Running
+`mix test --seed 12345` will produce the same Faker values every time, and
+ExUnit always prints its seed (`Randomized with seed 12345`) so you can
+reproduce any test run by re-using that seed.
+
+To override the seed for a specific test, use `Faker.Random.Test.seed/1`:
+
+```elixir
+setup do
+  Faker.Random.Test.seed(42)
+  :ok
+end
+```
 
 ## Troubleshooting
 
