@@ -202,9 +202,7 @@ defmodule Faker.Phone.Da do
 
   # Generate remaining digits
   defp generate_suffix(length) do
-    1..length
-    |> Enum.map(fn _ -> Faker.random_between(0, 9) end)
-    |> Enum.join()
+    Enum.map_join(1..length, fn _ -> Faker.random_between(0, 9) end)
   end
 
   # Format the 8-digit number as XX XX XX XX
