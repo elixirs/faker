@@ -18,8 +18,8 @@ jobs:
           path: _build
       - uses: erlef/setup-beam@v1.18.2
         with:
-          elixir-version: 1.17.3
-          otp-version: 26.x
+          elixir-version: 1.20.0
+          otp-version: 29.0.1
       - run: mix deps.get
       - run: mix compile
       - run: mix credo suggest --format=sarif --mute-exit-status > credo.sarif
@@ -84,3 +84,5 @@ jobs:
             otp: 27.x
           - elixir: 1.18.x
             otp: 27.x
+          - elixir: 1.20.0
+            otp: 29.0.1
