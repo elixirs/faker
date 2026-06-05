@@ -47,7 +47,7 @@ defmodule Faker.Mixfile do
 
   defp deps do
     [
-      {:credo, "== 1.7.11", only: [:dev, :test], runtime: false},
+      {:credo, "== 1.7.19", only: [:dev, :test], runtime: false},
       {:dialyxir, "== 1.4.5", only: [:dev], runtime: false},
       {:earmark, "== 1.4.47", only: :dev, runtime: false},
       {:ex_doc, "== 0.37.0", only: :dev, runtime: false},
