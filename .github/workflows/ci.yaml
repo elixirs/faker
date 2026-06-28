@@ -84,3 +84,7 @@ jobs:
             otp: 27.x
           - elixir: 1.18.x
             otp: 27.x
+          - elixir: 1.19.x
+            otp: 28.x
+          - elixir: 1.20.x
+            otp: 29.x
