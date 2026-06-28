@@ -35,7 +35,7 @@ jobs:
           version-file: .tool-versions
 
       - name: Restore dependencies cache
-        uses: actions/cache@v4.2.0
+        uses: actions/cache@v4.3.0
         env:
           cache-key: deps
         with:
