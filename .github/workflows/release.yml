@@ -53,7 +53,7 @@ jobs:
           mix do deps.get, deps.compile
 
       - name: Use Node.js LTS
-        uses: actions/setup-node@v4.4.0
+        uses: actions/setup-node@v6.4.0
         with:
           node-version-file: ".tool-versions"
 
