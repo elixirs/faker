@@ -78,6 +78,10 @@ defmodule Faker.Util do
 
   ## Examples
 
+      iex> Faker.Util.list(0, &(&1))
+      []
+      iex> Faker.Util.list(1, &(&1))
+      [0]
       iex> Faker.Util.list(3, &(&1))
       [0, 1, 2]
       iex> Faker.Util.list(3, &(&1 + 1))
@@ -88,6 +92,10 @@ defmodule Faker.Util do
       ["0", "1", "2"]
   """
   @spec list(integer, (integer -> any)) :: [any]
+  def list(0, _fun) do
+    []
+  end
+
   def list(n, fun) when is_function(fun, 1) do
     Enum.map(0..(n - 1), &fun.(&1))
   end
