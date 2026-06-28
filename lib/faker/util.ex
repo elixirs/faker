@@ -78,6 +78,10 @@ defmodule Faker.Util do
 
   ## Examples
 
+      iex> Faker.Util.list(0, &(&1))
+      []
+      iex> Faker.Util.list(1, &(&1))
+      [0]
       iex> Faker.Util.list(3, &(&1))
       [0, 1, 2]
       iex> Faker.Util.list(3, &(&1 + 1))

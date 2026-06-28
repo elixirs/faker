@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.19.0-alpha.3](https://github.com/elixirs/faker/compare/v0.19.0-alpha.2...v0.19.0-alpha.3) (2026-06-28)
+
+## [0.19.0-alpha.2](https://github.com/elixirs/faker/compare/v0.19.0-alpha.1...v0.19.0-alpha.2) (2026-06-28)
+
+### Bug Fixes
+
+* elixir version compatibilities ([#644](https://github.com/elixirs/faker/issues/644)) ([e5f5db1](https://github.com/elixirs/faker/commit/e5f5db13fd0553a39fb171f512698c782d3a5b10))
+* **ci:** use correct key for github app id ([#650](https://github.com/elixirs/faker/issues/650)) ([aa649c5](https://github.com/elixirs/faker/commit/aa649c5a0e61867e1847b88dff9fa95aa1206a30))
+
 ## [0.19.0-alpha.1](https://github.com/elixirs/faker/compare/v0.18.0...v0.19.0-alpha.1) (2025-02-01)
 
 ### Features
