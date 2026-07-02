@@ -24,7 +24,7 @@ jobs:
       - run: mix compile
       - run: mix credo suggest --format=sarif --mute-exit-status > credo.sarif
       - name: Upload SARIF
-        uses: github/codeql-action/upload-sarif@v4.36.2
+        uses: github/codeql-action/upload-sarif@v4.36.3
         with:
           sarif_file: credo.sarif
           category: credo
