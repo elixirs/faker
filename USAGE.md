@@ -96,6 +96,7 @@
 - [Faker.Person.PtBr](lib/faker/person/pt_br.ex)
 - [Faker.Phone.EnUs](lib/faker/phone/en_us.ex)
 - [Faker.Phone.EnGb](lib/faker/phone/en_gb.ex)
+- [Faker.Phone.EnZa](lib/faker/phone/en_za.ex)
 - [Faker.Phone.Hy](lib/faker/phone/hy.ex)
 - [Faker.Phone.PtBr](lib/faker/phone/pt_br.ex)
 - [Faker.Pizza](lib/faker/pizza.ex)
