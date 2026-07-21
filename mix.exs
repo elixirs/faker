@@ -29,7 +29,7 @@ defmodule Faker.Mixfile do
   def application do
     [
       # mod: {Faker.Application, []},
-      extra_applications: [:crypto, :makeup],
+      extra_applications: [:crypto],
       env: env()
     ]
   end
@@ -46,9 +46,7 @@ defmodule Faker.Mixfile do
     [
       {:credo, "== 1.7.19", only: [:dev, :test], runtime: false},
       {:dialyxir, "== 1.4.7", only: [:dev], runtime: false},
-      {:ex_doc, "== 0.40.3", only: :dev, runtime: false},
-      {:makeup, "== 1.2.2"},
-      {:makeup_elixir, "== 1.0.1"}
+      {:ex_doc, "== 0.40.3", only: :dev, runtime: false}
     ]
   end
 
