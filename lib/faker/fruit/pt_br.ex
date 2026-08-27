@@ -10,13 +10,13 @@ defmodule Faker.Fruit.PtBr do
 
   ## Examples
 
-      iex> Faker.Fruit.PtBr.fruit
+      iex> Faker.Fruit.PtBr.fruit()
       "Fruta-do-conde"
-      iex> Faker.Fruit.PtBr.fruit
+      iex> Faker.Fruit.PtBr.fruit()
       "Bergamota"
-      iex> Faker.Fruit.PtBr.fruit
+      iex> Faker.Fruit.PtBr.fruit()
       "Quixaba"
-      iex> Faker.Fruit.PtBr.fruit
+      iex> Faker.Fruit.PtBr.fruit()
       "Amora"
   """
   @spec fruit() :: String.t()

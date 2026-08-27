@@ -2,7 +2,7 @@ defmodule Faker.Mixfile do
   use Mix.Project
 
   @source_url "https://github.com/elixirs/faker"
-  @version "0.18.0"
+  @version "0.19.0"
 
   def project do
     [
@@ -14,6 +14,8 @@ defmodule Faker.Mixfile do
       name: "Faker",
       deps: deps(),
       docs: docs(),
+      source_url: @source_url,
+      homepage_url: @source_url,
       dialyzer: [
         flags: [
           :error_handling,
@@ -26,7 +28,8 @@ defmodule Faker.Mixfile do
 
   def application do
     [
-      applications: [:crypto],
+      # mod: {Faker.Application, []},
+      extra_applications: [:crypto, :makeup],
       env: env()
     ]
   end
@@ -41,10 +44,11 @@ defmodule Faker.Mixfile do
 
   defp deps do
     [
-      {:ex_doc, "== 0.33.0", only: :dev, runtime: false},
-      {:earmark, "1.4.46", only: :dev, runtime: false},
-      {:credo, "== 1.7.5", only: [:dev, :test], runtime: false},
-      {:dialyxir, "== 1.4.3", only: [:dev], runtime: false}
+      {:credo, "== 1.7.19", only: [:dev, :test], runtime: false},
+      {:dialyxir, "== 1.4.7", only: [:dev], runtime: false},
+      {:ex_doc, "== 0.40.3", only: :dev, runtime: false},
+      {:makeup, "== 1.2.1"},
+      {:makeup_elixir, "== 1.0.1"}
     ]
   end
 
@@ -59,11 +63,11 @@ defmodule Faker.Mixfile do
   end
 
   defp package do
-    %{
+    [
       maintainers: ["Anthony Smith", "Igor Kapkov", "Toby Hinloopen", "Vitor Oliveira"],
       files: ["lib", "mix.exs", "mix.lock", "README.md", "LICENSE", "CHANGELOG.md"],
       licenses: ["MIT"],
       links: %{"GitHub" => @source_url}
-    }
+    ]
   end
 end
