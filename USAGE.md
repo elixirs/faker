@@ -74,6 +74,7 @@
 - [Faker.Internet.StatusCode](lib/faker/internet/status_code.ex)
 - [Faker.Internet.UserAgent](lib/faker/internet/user_agent.ex)
   <!-- J -->
+- [Faker.Job.En](lib/faker/job/en.ex)
   <!-- K -->
   <!-- L -->
 - [Faker.Lorem](lib/faker/lorem.ex)
