@@ -2,6 +2,7 @@ defmodule Faker.PersonTest do
   use ExUnit.Case, async: true
 
   doctest Faker.Person
+  doctest Faker.Person.Da
   doctest Faker.Person.En
   doctest Faker.Person.Es
   doctest Faker.Person.Fr
