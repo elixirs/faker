@@ -47,7 +47,7 @@ defmodule Faker do
     acc
   end
 
-  @alphabet 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
+  @alphabet ~c"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
   defp letter do
     Enum.at(@alphabet, random_between(0, Enum.count(@alphabet) - 1))
   end
@@ -105,8 +105,8 @@ defmodule Faker do
       true
   """
   @spec random_uniform() :: float
-  def random_uniform do
-    Application.get_env(:faker, :random_module).random_uniform
+  def random_uniform() do
+    Application.get_env(:faker, :random_module).random_uniform()
   end
 
   @doc """
@@ -128,6 +128,14 @@ defmodule Faker do
   @spec random_bytes(pos_integer) :: binary
   def random_bytes(total) do
     Application.get_env(:faker, :random_module).random_bytes(total)
+  end
+
+  @doc """
+  Returns a shuffled enum.
+  """
+  @spec shuffle(Enum.t()) :: list()
+  def shuffle(enum) do
+    Application.get_env(:faker, :random_module).shuffle(enum)
   end
 
   defmacro localize(function) do

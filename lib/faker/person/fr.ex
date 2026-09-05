@@ -32,7 +32,7 @@ defmodule Faker.Person.Fr do
   Returns a random first name
 
   ## Examples
-    
+
       iex> Faker.Person.Fr.first_name()
       "Damien"
       iex> Faker.Person.Fr.first_name()
@@ -292,7 +292,7 @@ defmodule Faker.Person.Fr do
   Returns a random prefix
 
   ## Examples
-      
+
       iex> Faker.Person.Fr.prefix()
       "Docteur"
       iex> Faker.Person.Fr.prefix()
@@ -333,5 +333,3 @@ defmodule Faker.Person.Fr do
     "PhD"
   ])
 end
-
-# Faker.Person.Fr

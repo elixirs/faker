@@ -3,9 +3,10 @@ defmodule Faker.Random do
   Behaviour that defines randomisation in faker.
   """
 
-  @callback random_between(integer, integer) :: integer
-  @callback random_bytes(pos_integer) :: binary
-  @callback random_uniform() :: float
+  @callback random_between(integer(), integer()) :: integer()
+  @callback random_bytes(pos_integer()) :: binary()
+  @callback random_uniform() :: float()
+  @callback shuffle(Enum.t()) :: list()
 
   defmacro __using__(_) do
     quote do
@@ -23,7 +24,11 @@ defmodule Faker.Random do
         :rand.uniform()
       end
 
-      defoverridable random_between: 2, random_bytes: 1, random_uniform: 0
+      def shuffle(enum) do
+        Enum.shuffle(enum)
+      end
+
+      defoverridable random_between: 2, random_bytes: 1, random_uniform: 0, shuffle: 1
     end
   end
 end

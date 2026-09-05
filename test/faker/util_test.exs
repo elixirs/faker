@@ -51,4 +51,12 @@ defmodule Faker.UtilTest do
       assert Enum.sort(generated_value) == list
     end)
   end
+
+  test "list/2" do
+    assert [0, 1, 2] = Faker.Util.list(3, & &1)
+  end
+
+  test "emtpty list/2" do
+    assert [] = Faker.Util.list(0, fn -> raise "not called" end)
+  end
 end

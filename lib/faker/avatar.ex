@@ -29,13 +29,13 @@ defmodule Faker.Avatar do
 
   ## Examples
 
-      iex> Faker.Avatar.image_url('faker')
+      iex> Faker.Avatar.image_url("faker")
       "https://robohash.org/faker"
-      iex> Faker.Avatar.image_url('elixir')
+      iex> Faker.Avatar.image_url("elixir")
       "https://robohash.org/elixir"
-      iex> Faker.Avatar.image_url('plug')
+      iex> Faker.Avatar.image_url("plug")
       "https://robohash.org/plug"
-      iex> Faker.Avatar.image_url('ecto')
+      iex> Faker.Avatar.image_url("ecto")
       "https://robohash.org/ecto"
   """
   @spec image_url(binary) :: String.t()
@@ -70,13 +70,13 @@ defmodule Faker.Avatar do
 
   ## Examples
 
-      iex> Faker.Avatar.image_url('phoenix', 100, 100)
+      iex> Faker.Avatar.image_url("phoenix", 100, 100)
       "https://robohash.org/phoenix?size=100x100"
-      iex> Faker.Avatar.image_url('haskell', 200, 200)
+      iex> Faker.Avatar.image_url("haskell", 200, 200)
       "https://robohash.org/haskell?size=200x200"
-      iex> Faker.Avatar.image_url('ocaml', 300, 300)
+      iex> Faker.Avatar.image_url("ocaml", 300, 300)
       "https://robohash.org/ocaml?size=300x300"
-      iex> Faker.Avatar.image_url('idris', 400, 400)
+      iex> Faker.Avatar.image_url("idris", 400, 400)
       "https://robohash.org/idris?size=400x400"
   """
   @spec image_url(binary, integer, integer) :: String.t()

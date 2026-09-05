@@ -285,27 +285,32 @@ defmodule Faker.Lorem do
   ## Examples
 
       iex> Faker.Lorem.characters()
-      'ppkQqaIfGqxsjFoNITNnu6eXyJicLJNth88PrhGDhwp4LNQMt5pCFh7XGEZUiBOjqwcnSUTH94vu8a9XKUwNAs48lHzPITbFXSfTS0pHfBSmHkbj9kOsd7qRuGeXKTgCgI1idI3uwENwTqc'
+      ~c'ppkQqaIfGqxsjFoNITNnu6eXyJicLJNth88PrhGDhwp4LNQMt5pCFh7XGEZUiBOjqwcnSUTH94vu8a9XKUwNAs48lHzPITbFXSfTS0pHfBSmHkbj9kOsd7qRuGeXKTgCgI1idI3uwENwTqc'
+
       iex> Faker.Lorem.characters(3..5)
-      'EFbv'
+      ~c'ppk'
+
       iex> Faker.Lorem.characters(2)
-      'vx'
+      ~c'Ap'
+
       iex> Faker.Lorem.characters(7)
-      'jycADSd'
+      ~c'AppkQqa'
   """
   @spec characters(integer | Range.t()) :: [char]
   def characters(range_or_length \\ 15..255)
 
-  def characters(first..last) do
-    characters(Faker.random_between(first, last))
-  end
-
-  def characters(num) do
+  def characters(num) when is_integer(num) do
     char = &character/0
 
     char
     |> Stream.repeatedly()
     |> Enum.take(num)
+  end
+
+  def characters(range) do
+    range
+    |> Util.pick()
+    |> characters()
   end
 
   @doc """
@@ -330,12 +335,14 @@ defmodule Faker.Lorem do
   @spec paragraph(integer | Range.t()) :: String.t()
   def paragraph(range \\ 2..5)
 
-  def paragraph(first..last) do
-    paragraph(Faker.random_between(first, last))
+  def paragraph(num) when is_integer(num) do
+    Enum.join(sentences(num), " ")
   end
 
-  def paragraph(num) do
-    Enum.join(sentences(num), " ")
+  def paragraph(range) do
+    range
+    |> Util.pick()
+    |> paragraph()
   end
 
   @doc """
@@ -349,27 +356,41 @@ defmodule Faker.Lorem do
   ## Examples
 
       iex> Faker.Lorem.paragraphs()
-      ["Consequatur et qui vitae? Et sit aut expedita cumque est necessitatibus beatae ex. Possimus soluta asperiores qui vitae.", "Et vitae vitae ut quisquam corporis quisquam ab harum ipsa. Numquam maxime ut aut inventore eius rerum beatae. Qui officia vel quaerat expedita. Perspiciatis rerum nam repellendus inventore nihil. Sequi ducimus qui voluptates magni quisquam sed odio.", "Error non impedit tempora minus voluptatem qui fugit. Ab consectetur harum earum possimus. Provident quisquam modi accusantium eligendi numquam illo voluptas. Est non id quibusdam qui omnis?", "Dicta dolores at ut delectus magni atque eos beatae nulla. Laudantium qui dolorem pariatur voluptatibus sed et enim?"]
+      [
+        "Consequatur et qui vitae? Et sit aut expedita cumque est necessitatibus beatae ex. Possimus soluta asperiores qui vitae.",
+        "Et vitae vitae ut quisquam corporis quisquam ab harum ipsa. Numquam maxime ut aut inventore eius rerum beatae. Qui officia vel quaerat expedita. Perspiciatis rerum nam repellendus inventore nihil. Sequi ducimus qui voluptates magni quisquam sed odio.",
+        "Error non impedit tempora minus voluptatem qui fugit. Ab consectetur harum earum possimus. Provident quisquam modi accusantium eligendi numquam illo voluptas. Est non id quibusdam qui omnis?",
+        "Dicta dolores at ut delectus magni atque eos beatae nulla. Laudantium qui dolorem pariatur voluptatibus sed et enim?"
+      ]
       iex> Faker.Lorem.paragraphs(2..3)
-      ["Voluptate reiciendis repellat et praesentium quia sed nemo. Vero repellat cumque nihil similique repudiandae corrupti rerum? Accusamus suscipit perspiciatis cum et sint dolore et ut. Eos reprehenderit cupiditate omnis et doloremque omnis.", "Quo et est culpa eum ex et veniam aut aut! Labore fuga tenetur alias est provident?", "Illo consequatur maiores illum et quia culpa sunt! Cumque porro ut eum porro est id maxime dolorum animi. Deserunt ipsa consequuntur eveniet asperiores. Quia numquam voluptas vitae repellat tempore."]
+      [
+        "Voluptate reiciendis repellat et praesentium quia sed nemo. Vero repellat cumque nihil similique repudiandae corrupti rerum? Accusamus suscipit perspiciatis cum et sint dolore et ut. Eos reprehenderit cupiditate omnis et doloremque omnis.",
+        "Quo et est culpa eum ex et veniam aut aut! Labore fuga tenetur alias est provident?",
+        "Illo consequatur maiores illum et quia culpa sunt! Cumque porro ut eum porro est id maxime dolorum animi. Deserunt ipsa consequuntur eveniet asperiores. Quia numquam voluptas vitae repellat tempore."
+      ]
       iex> Faker.Lorem.paragraphs(1)
       ["Voluptas harum modi omnis quam dolor a aliquam officiis. Neque voluptas consequatur sed cupiditate dolorum pariatur et."]
       iex> Faker.Lorem.paragraphs(2)
-      ["Voluptatem natus amet eius eos non dolorum quaerat dolores pariatur. Aliquam rerum ab voluptatem exercitationem nobis enim delectus tempore eos. Ex enim dolore ut consequuntur eaque expedita dicta eius totam. A eveniet ab magni rerum enim consequatur.", "Nihil laudantium ea veniam necessitatibus qui. Minus ad omnis quaerat quidem impedit sint. Id ut repellat qui repudiandae!"]
+      [
+        "Voluptatem natus amet eius eos non dolorum quaerat dolores pariatur. Aliquam rerum ab voluptatem exercitationem nobis enim delectus tempore eos. Ex enim dolore ut consequuntur eaque expedita dicta eius totam. A eveniet ab magni rerum enim consequatur.",
+        "Nihil laudantium ea veniam necessitatibus qui. Minus ad omnis quaerat quidem impedit sint. Id ut repellat qui repudiandae!"
+      ]
   """
   @spec paragraphs(integer | Range.t()) :: list(String.t())
   def paragraphs(range \\ 2..5)
 
-  def paragraphs(first..last) do
-    paragraphs(Faker.random_between(first, last))
-  end
-
-  def paragraphs(num) do
+  def paragraphs(num) when is_integer(num) do
     paragraph = &paragraph/0
 
     paragraph
     |> Stream.repeatedly()
     |> Enum.take(num)
+  end
+
+  def paragraphs(range) do
+    range
+    |> Util.pick()
+    |> paragraphs()
   end
 
   @doc """
@@ -394,13 +415,14 @@ defmodule Faker.Lorem do
   @spec sentence(integer | Range.t()) :: String.t()
   def sentence(range \\ 4..10)
 
-  def sentence(first..last) do
-    Faker.random_between(first, last)
-    |> sentence(Util.pick([".", ".", ".", "!", "?"]))
+  def sentence(num) when is_integer(num) do
+    sentence(num, Util.pick([".", ".", ".", "!", "?"]))
   end
 
-  def sentence(num) do
-    sentence(num, Util.pick([".", ".", ".", "!", "?"]))
+  def sentence(range) do
+    range
+    |> Util.pick()
+    |> sentence()
   end
 
   @doc """
@@ -440,27 +462,48 @@ defmodule Faker.Lorem do
   ## Examples
 
       iex> Faker.Lorem.sentences()
-      ["Deleniti consequatur et qui vitae et.", "Sit aut expedita cumque est necessitatibus beatae ex sunt!", "Soluta asperiores qui vitae animi et id et vitae.", "Quisquam corporis quisquam ab harum!"]
+      [
+        "Deleniti consequatur et qui vitae et.",
+        "Sit aut expedita cumque est necessitatibus beatae ex sunt!",
+        "Soluta asperiores qui vitae animi et id et vitae.",
+        "Quisquam corporis quisquam ab harum!"
+      ]
       iex> Faker.Lorem.sentences(3..4)
-      ["Numquam maxime ut aut inventore eius rerum beatae.", "Qui officia vel quaerat expedita.", "Perspiciatis rerum nam repellendus inventore nihil.", "Sequi ducimus qui voluptates magni quisquam sed odio."]
+      [
+        "Numquam maxime ut aut inventore eius rerum beatae.",
+        "Qui officia vel quaerat expedita.",
+        "Perspiciatis rerum nam repellendus inventore nihil.",
+        "Sequi ducimus qui voluptates magni quisquam sed odio."
+      ]
       iex> Faker.Lorem.sentences(4)
-      ["Vel error non impedit tempora minus.", "Fugit cupiditate fuga ab consectetur harum earum possimus totam.", "Quisquam modi accusantium eligendi numquam.", "Quod blanditiis est non id quibusdam qui omnis alias!"]
+      [
+        "Vel error non impedit tempora minus.",
+        "Fugit cupiditate fuga ab consectetur harum earum possimus totam.",
+        "Quisquam modi accusantium eligendi numquam.",
+        "Quod blanditiis est non id quibusdam qui omnis alias!"
+      ]
       iex> Faker.Lorem.sentences(3)
-      ["Dicta dolores at ut delectus magni atque eos beatae nulla.", "Laudantium qui dolorem pariatur voluptatibus sed et enim?", "Minima laudantium voluptate reiciendis repellat."]
+      [
+        "Dicta dolores at ut delectus magni atque eos beatae nulla.",
+        "Laudantium qui dolorem pariatur voluptatibus sed et enim?",
+        "Minima laudantium voluptate reiciendis repellat."
+      ]
   """
   @spec sentences(integer | Range.t()) :: [String.t()]
   def sentences(range \\ 2..5)
 
-  def sentences(first..last) do
-    sentences(Faker.random_between(first, last))
-  end
-
-  def sentences(num) do
+  def sentences(num) when is_integer(num) do
     sentence = &sentence/0
 
     sentence
     |> Stream.repeatedly()
     |> Enum.take(num)
+  end
+
+  def sentences(range) do
+    range
+    |> Util.pick()
+    |> sentences()
   end
 
   @doc """
@@ -485,11 +528,7 @@ defmodule Faker.Lorem do
   @spec words(integer | Range.t()) :: [String.t()]
   def words(range \\ 3..6)
 
-  def words(first..last) do
-    words(Faker.random_between(first, last))
-  end
-
-  def words(num) do
+  def words(num) when is_integer(num) do
     word = &word/0
 
     word
@@ -497,8 +536,14 @@ defmodule Faker.Lorem do
     |> Enum.take(num)
   end
 
+  def words(range) do
+    range
+    |> Util.pick()
+    |> words()
+  end
+
   defp character do
-    alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
+    alphabet = ~c"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
     Enum.at(alphabet, Faker.random_between(0, Enum.count(alphabet) - 1))
   end
 end
