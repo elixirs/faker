@@ -41,9 +41,16 @@ Change log itself follows [Keep a CHANGELOG](http://keepachangelog.com) format.
 ## Unreleased
 
 ### Added
+<<<<<<< HEAD
+- `Faker.Fruits.En` - add english fruits [[@KevinDaSilvaS](https://github.com/KevinDaSilvaS)]
+- `Faker.Address.Nl` [[@MichaelVanDenBerg](https://github.com/MichaelVanDenBerg)]
+- `Faker.Person.Nl` [[@MichaelVanDenBerg](https://github.com/MichaelVanDenBerg)]
+- `Faker.Phone.Nl` [[@MichaelVanDenBerg](https://github.com/MichaelVanDenBerg)]
+=======
 
 - Test with Elixir 1.16 and 1.17 on CI [[@ypconstante](https://github.com/ypconstante)]
 - Test with OTP 26 and 27 on CI [[@ypconstante](https://github.com/ypconstante)]
+>>>>>>> upstream/master
 
 ### Changed
 
