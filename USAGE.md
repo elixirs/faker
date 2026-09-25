@@ -1,6 +1,7 @@
 <!-- A -->
 
 - [Faker.Address](lib/faker/address.ex)
+- [Faker.Address.Da](lib/faker/address/da.ex)
 - [Faker.Address.En](lib/faker/address/en.ex)
 - [Faker.Address.Es](lib/faker/address/es.ex)
 - [Faker.Address.Hy](lib/faker/address/hy.ex)
@@ -40,6 +41,7 @@
 - [Faker.Commerce.Hy](lib/faker/commerce/hy.ex)
 - [Faker.Commerce.PtBr](lib/faker/commerce/pt_br.ex)
 - [Faker.Company](lib/faker/company.ex)
+- [Faker.Company.Da](lib/faker/company/da.ex)
 - [Faker.Company.En](lib/faker/company/en.ex)
 - [Faker.Company.Hy](lib/faker/company/hy.ex)
 - [Faker.Currency](lib/faker/currency.ex)
@@ -88,12 +90,14 @@
   <!-- O -->
   <!-- P -->
 - [Faker.Person](lib/faker/person.ex)
+- [Faker.Person.Da](lib/faker/person/da.ex)
 - [Faker.Person.En](lib/faker/person/en.ex)
 - [Faker.Person.Es](lib/faker/person/es.ex)
 - [Faker.Person.Fr](lib/faker/person/fr.ex)
 - [Faker.Person.Hy](lib/faker/person/hy.ex)
 - [Faker.Person.It](lib/faker/person/it.ex)
 - [Faker.Person.PtBr](lib/faker/person/pt_br.ex)
+- [Faker.Phone.Da](lib/faker/phone/da.ex)
 - [Faker.Phone.EnUs](lib/faker/phone/en_us.ex)
 - [Faker.Phone.EnGb](lib/faker/phone/en_gb.ex)
 - [Faker.Phone.Hy](lib/faker/phone/hy.ex)
