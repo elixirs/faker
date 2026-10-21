@@ -1,20 +1,25 @@
-defmodule Faker.Gov.PtBr do
+defmodule Faker.Gov.Br do
   @moduledoc """
-  Generating BR Taxpayer Identification numbers
+  Functions for data created/released by the Brazilian government.
   """
 
   @doc """
-  Returns a random BR CPF number
+  Returns a random Brazilian CPF (Cadastro de Pessoas Físicas) number.
+
+  The CPF is Brazil's individual taxpayer identification number. It contains
+  nine base digits and two check digits, formatted as `XXX.XXX.XXX-XX`.
+  Generated numbers have valid check digits but are not verified against
+  government records and may match a real person's CPF.
 
   ## Examples
 
-      iex> Faker.Gov.PtBr.cpf()
+      iex> Faker.Gov.Br.cpf()
       "156.433.110-54"
-      iex> Faker.Gov.PtBr.cpf()
+      iex> Faker.Gov.Br.cpf()
       "939.261.401-27"
-      iex> Faker.Gov.PtBr.cpf()
+      iex> Faker.Gov.Br.cpf()
       "388.029.835-18"
-      iex> Faker.Gov.PtBr.cpf()
+      iex> Faker.Gov.Br.cpf()
       "567.079.304-86"
   """
   @spec cpf() :: String.t()
