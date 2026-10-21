@@ -8,36 +8,30 @@ defmodule Faker.Gov.PtBr do
 
   ## Examples
 
-      iex> Faker.Gov.PtBr.cpf
-      "396.517.511-55"
-      iex> Faker.Gov.PtBr.cpf
-      "457.899.570-88"
-      iex> Faker.Gov.PtBr.cpf
-      "283.058.997-33"
-      iex> Faker.Gov.PtBr.cpf
-      "294.304.877-66"
+      iex> Faker.Gov.PtBr.cpf()
+      "156.433.110-54"
+      iex> Faker.Gov.PtBr.cpf()
+      "939.261.401-27"
+      iex> Faker.Gov.PtBr.cpf()
+      "388.029.835-18"
+      iex> Faker.Gov.PtBr.cpf()
+      "567.079.304-86"
   """
   @spec cpf() :: String.t()
   def cpf do
-    "#{area()}.#{group()}.#{serial()}-#{check_digits()}"
-    |> String.replace(~r/(\d{3})(\d{3})(\d{3})(\d{2})/, "\\1.\\2.\\3-\\4")
+    number = Faker.random_between(0, 999_999_999)
+
+    if rem(number, 111_111_111) == 0 do
+      cpf()
+    else
+      base = number |> Integer.to_string() |> String.pad_leading(9, "0")
+
+      "#{base}#{check_digits(base)}"
+      |> String.replace(~r/(\d{3})(\d{3})(\d{3})(\d{2})/, "\\1.\\2.\\3-\\4")
+    end
   end
 
-  defp area do
-    "#{Faker.random_between(0, 999)}" |> String.pad_leading(3, "0")
-  end
-
-  defp group do
-    "#{Faker.random_between(0, 999)}" |> String.pad_leading(3, "0")
-  end
-
-  defp serial do
-    "#{Faker.random_between(0, 999)}" |> String.pad_leading(3, "0")
-  end
-
-  defp check_digits do
-    base = "#{area()}#{group()}#{serial()}"
-
+  defp check_digits(base) do
     first_check_digit = calculate_cpf_check_digit(base)
     second_check_digit = calculate_cpf_check_digit("#{base}#{first_check_digit}")
 
@@ -48,7 +42,7 @@ defmodule Faker.Gov.PtBr do
     digits = base |> String.graphemes() |> Enum.map(&String.to_integer/1)
 
     sum =
-      Enum.zip(digits, [10, 9, 8, 7, 6, 5, 4, 3, 2])
+      Enum.zip(digits, (length(digits) + 1)..2)
       |> Enum.map(fn {digit, weight} -> digit * weight end)
       |> Enum.reduce(&+/2)
 
