@@ -1,5 +1,7 @@
 # Changelog
 
+## [0.19.0-alpha.5](https://github.com/elixirs/faker/compare/v0.19.0-alpha.4...v0.19.0-alpha.5) (2026-07-22)
+
 ## [0.19.0-alpha.4](https://github.com/elixirs/faker/compare/v0.19.0-alpha.3...v0.19.0-alpha.4) (2026-06-28)
 
 ## [0.19.0-alpha.3](https://github.com/elixirs/faker/compare/v0.19.0-alpha.2...v0.19.0-alpha.3) (2026-06-28)

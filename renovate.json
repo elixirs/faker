@@ -1,5 +1,9 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:recommended"],
-  "lockFileMaintenance": { "enabled": true }
+  "lockFileMaintenance": { "enabled": true },
+  "constraints": {
+    "erlang": "^29",
+    "elixir": "^1.20"
+  }
 }

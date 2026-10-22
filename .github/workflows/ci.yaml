@@ -6,17 +6,17 @@ on:
 
 jobs:
   credo:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     permissions:
       contents: read
       security-events: write
     steps:
-      - uses: actions/checkout@v7.0.0
+      - uses: actions/checkout@v7.0.1
       - uses: actions/cache@v6.1.0
         with:
           key: ${{ github.job }}-${{ hashFiles('mix.lock') }}-1
           path: _build
-      - uses: erlef/setup-beam@v1.24.0
+      - uses: erlef/setup-beam@v1.24.1
         with:
           elixir-version: 1.17.3
           otp-version: 26.x
@@ -24,7 +24,7 @@ jobs:
       - run: mix compile
       - run: mix credo suggest --format=sarif --mute-exit-status > credo.sarif
       - name: Upload SARIF
-        uses: github/codeql-action/upload-sarif@v4.36.2
+        uses: github/codeql-action/upload-sarif@v4.38.2
         with:
           sarif_file: credo.sarif
           category: credo
@@ -64,12 +64,12 @@ jobs:
   test:
     runs-on: ${{ matrix.os || 'ubuntu-24.04' }}
     steps:
-      - uses: actions/checkout@v7.0.0
+      - uses: actions/checkout@v7.0.1
       - uses: actions/cache@v6.1.0
         with:
           key: ${{ github.job }}-${{ matrix.elixir }}-${{ matrix.otp }}-${{ hashFiles('mix.lock') }}-1
           path: _build
-      - uses: erlef/setup-beam@v1.24.0
+      - uses: erlef/setup-beam@v1.24.1
         with:
           elixir-version: ${{ matrix.elixir }}
           otp-version: ${{ matrix.otp }}

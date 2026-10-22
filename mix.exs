@@ -2,7 +2,7 @@ defmodule Faker.Mixfile do
   use Mix.Project
 
   @source_url "https://github.com/elixirs/faker"
-  @version "0.19.0-alpha.4"
+  @version "0.19.0-alpha.5"
 
   def project do
     [
@@ -29,7 +29,7 @@ defmodule Faker.Mixfile do
   def application do
     [
       # mod: {Faker.Application, []},
-      extra_applications: [:crypto, :makeup],
+      extra_applications: [:crypto],
       env: env()
     ]
   end
@@ -45,10 +45,8 @@ defmodule Faker.Mixfile do
   defp deps do
     [
       {:credo, "== 1.7.19", only: [:dev, :test], runtime: false},
-      {:dialyxir, "== 1.4.7", only: [:dev], runtime: false},
-      {:ex_doc, "== 0.40.3", only: :dev, runtime: false},
-      {:makeup, "== 1.2.1"},
-      {:makeup_elixir, "== 1.0.1"}
+      {:dialyxir, "== 1.4.8", only: [:dev], runtime: false},
+      {:ex_doc, "== 0.40.4", only: :dev, runtime: false}
     ]
   end
 
