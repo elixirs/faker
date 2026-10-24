@@ -60,6 +60,7 @@
   <!-- G -->
 - [Faker.Gov.Us](lib/faker/gov/us.ex)
 - [Faker.Gov.It](lib/faker/gov/it.ex)
+- [Faker.Gov.Br](lib/faker/gov/br.ex)
   <!-- H -->
   <!-- I -->
 - [Faker.Industry](lib/faker/industry.ex)
