@@ -5,5 +5,20 @@
   "constraints": {
     "erlang": "^29",
     "elixir": "^1.20"
-  }
+  },
+  "packageRules": [
+    {
+      "description": "The credo job in ci.yaml pins Elixir 1.17 with OTP 26; keep both within that compatible pair",
+      "matchManagers": ["github-actions"],
+      "matchFileNames": [".github/workflows/ci.yaml"],
+      "matchPackageNames": ["erlang/otp"],
+      "allowedVersions": "/^26\\./"
+    },
+    {
+      "matchManagers": ["github-actions"],
+      "matchFileNames": [".github/workflows/ci.yaml"],
+      "matchPackageNames": ["elixir-lang/elixir"],
+      "allowedVersions": "/^v?1\\.17\\./"
+    }
+  ]
 }
